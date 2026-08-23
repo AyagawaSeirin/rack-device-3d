@@ -1,0 +1,34 @@
+# Reproducible dependency and virtual-environment caches
+**/node_modules/
+**/.venv/
+**/.imagegen-venv/
+**/venv/
+**/__pycache__/
+*.py[cod]
+
+# Browser automation state and transient captures
+.playwright-cli/
+**/.playwright-cli/
+**/output/playwright/
+**/qa/chrome-profile*/
+**/qa/browser-profile*/
+
+# Reproducible temporary QA tool dependencies/workspaces
+**/qa/work/python-deps/
+**/qa/work/*-venv/
+**/qa/tmp/
+**/qa/work/
+**/qa/extracted/
+**/qa/imagegen-raw/
+**/qa/imagegen-alpha/
+**/qa/imagegen-keyed/
+**/qa/model-textures/
+**/qa/textures/
+**/qa/repairs/
+**/repair-*/
+**/source/pdf-pages/
+**/output/
+
+# Platform/editor noise
+.DS_Store
+Thumbs.db
