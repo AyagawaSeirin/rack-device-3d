@@ -1,0 +1,31 @@
+### Result
+[{"view":"front","width":1600,"height":288,"screenshot":"/root/Project/rack-device-3d/Dell-R7515-2.5inch/qa/renders/comparison-standard/front.png","screenshotBytes":289627},{"view":"rear","width":1600,"height":320,"screenshot":"/root/Project/rack-device-3d/Dell-R7515-2.5inch/qa/renders/comparison-standard/rear.png","screenshotBytes":362313},{"view":"left","width":1600,"height":194,"screenshot":"/root/Project/rack-device-3d/Dell-R7515-2.5inch/qa/renders/comparison-standard/left.png","screenshotBytes":224586},{"view":"right","width":1600,"height":194,"screenshot":"/root/Project/rack-device-3d/Dell-R7515-2.5inch/qa/renders/comparison-standard/right.png","screenshotBytes":210369},{"view":"top","width":700,"height":1043,"screenshot":"/root/Project/rack-device-3d/Dell-R7515-2.5inch/qa/renders/comparison-standard/top.png","screenshotBytes":393059},{"view":"bottom","width":700,"height":1043,"screenshot":"/root/Project/rack-device-3d/Dell-R7515-2.5inch/qa/renders/comparison-standard/bottom.png","screenshotBytes":409636}]
+### Ran Playwright code
+```js
+await (async page => {
+  const entries = [
+    ['front',1600,288],['rear',1600,320],['left',1600,194],
+    ['right',1600,194],['top',700,1043],['bottom',700,1043]
+  ];
+  await page.setViewportSize({width:1600,height:288});
+  await page.goto('http://127.0.0.1:8790/qa/viewers/threejs.html?model=standard&view=front&run=comparison&raw=1',{waitUntil:'domcontentloaded',timeout:60000});
+  await page.waitForFunction(()=>window.__qa?.ready===true && !!window.__qaThree,null,{timeout:120000});
+  const results=[];
+  for(const [view,width,height] of entries){
+    await page.setViewportSize({width,height});
+    await page.evaluate((view)=>{const q=window.__qaThree;q.renderer.setSize(q.stage.clientWidth,q.stage.clientHeight,false);q.fitCamera(q.root,q.directions[view]);q.renderer.render(q.scene,q.camera);window.__qa={...window.__qa,view};},view);
+    await page.waitForTimeout(250);
+    const screenshot=`/root/Project/rack-device-3d/Dell-R7515-2.5inch/qa/renders/comparison-standard/${view}.png`;
+    const image=await page.screenshot({path:screenshot,fullPage:true,timeout:120000});
+    results.push({view,width,height,screenshot,screenshotBytes:image.length});
+  }
+  return results;
+}
+)(page);
+```
+### Page
+- Page URL: http://127.0.0.1:8790/qa/viewers/threejs.html?model=standard&view=front&run=comparison&raw=1
+- Page Title: R7515 Three.js GLTFLoader QA
+- Console: 0 errors, 4 warnings
+### Events
+- New console entries: .playwright-cli/console-2026-08-23T16-28-55-896Z.log#L1-L4

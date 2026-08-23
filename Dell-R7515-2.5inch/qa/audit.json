@@ -1,0 +1,191 @@
+{
+  "status": "PASS_WITH_BOTTOM_FALLBACK",
+  "product": "Dell PowerEdge R7515 2.5-inch",
+  "configuration": "24 x 2.5-inch SFF; security bezel; no rear-drive cage; Riser 1B; dual EPP 750 W AC PSU",
+  "models": [
+    {
+      "flavor": "standard",
+      "path": "model/Dell-R7515-2.5inch.glb",
+      "bytes": 17680308,
+      "sha256": "1d6614f4f869c3daefd59f13655a85435deb935f19c1949aad43af5faea51c78"
+    },
+    {
+      "flavor": "web",
+      "path": "model/Dell-R7515-2.5inch-web.glb",
+      "bytes": 8114260,
+      "sha256": "2c01f2405f0562b86ad2d78b3849e01723748e3816aa59f056697d797e62cb54"
+    }
+  ],
+  "bounds_mm": [
+    482.0,
+    87.1,
+    717.805
+  ],
+  "topology": {
+    "nodes": 118,
+    "meshes": 118,
+    "triangles": 2614,
+    "vertices": 1526
+  },
+  "face_evidence": [
+    {
+      "face": "front",
+      "production_mode": "SOURCE_LOCKED_GENERATION",
+      "primary_source_path": "source/third-party/itcreations-r7515-front-bezel.png",
+      "primary_source_sha256_recorded": "87298d553858c5e539915197c83431380da2fdeedddb37040fd2b1008f7bf530",
+      "primary_source_sha256_actual": "87298d553858c5e539915197c83431380da2fdeedddb37040fd2b1008f7bf530",
+      "final_output_path": "views/front.png",
+      "final_output_bytes": 2538610,
+      "final_output_sha256": "86e1640b918083087d256622c83de888d991d588dde74543e2e9433744fb7267"
+    },
+    {
+      "face": "rear",
+      "production_mode": "SOURCE_LOCKED_GENERATION",
+      "primary_source_path": "source/third-party/bytestock-r7515-24sff-gallery-4.jpg",
+      "primary_source_sha256_recorded": "bac9f2b22b268700b7e93423c4d88321d4e23b35c6c3f3f29138d1a5e1e87694",
+      "primary_source_sha256_actual": "bac9f2b22b268700b7e93423c4d88321d4e23b35c6c3f3f29138d1a5e1e87694",
+      "final_output_path": "views/rear.png",
+      "final_output_bytes": 3634709,
+      "final_output_sha256": "9ed00405e7a5187d6d887a8ec75d71ec58a6671dc7f3d9c20af7107ce14c1dc6"
+    },
+    {
+      "face": "right",
+      "production_mode": "MULTI_REFERENCE_RECONSTRUCTION",
+      "primary_source_path": "source/third-party/bytestock-r7515-24sff-gallery-2.jpg",
+      "primary_source_sha256_recorded": "8d14cb4b1583a51265951c2b32db913ad8a8c830c884d677a9e90124c67cb1a4",
+      "primary_source_sha256_actual": "8d14cb4b1583a51265951c2b32db913ad8a8c830c884d677a9e90124c67cb1a4",
+      "final_output_path": "views/right.png",
+      "final_output_bytes": 2064703,
+      "final_output_sha256": "52809f6636e017f577f8c6d66f0912bbf557821e24046628fcb946697d3773b3"
+    },
+    {
+      "face": "left",
+      "production_mode": "MULTI_REFERENCE_RECONSTRUCTION",
+      "primary_source_path": "source/third-party/bytestock-r7515-24sff-gallery-6.jpg",
+      "primary_source_sha256_recorded": "119f989b13e22328b708527fa465aac364825d7aab2a8483f0a5192d9a252ef7",
+      "primary_source_sha256_actual": "119f989b13e22328b708527fa465aac364825d7aab2a8483f0a5192d9a252ef7",
+      "final_output_path": "views/left.png",
+      "final_output_bytes": 2192045,
+      "final_output_sha256": "c93244f3a9c136da2056954c72bf46a22787bca7da40cd2d17a9f7885363d818"
+    },
+    {
+      "face": "top",
+      "production_mode": "MULTI_REFERENCE_RECONSTRUCTION",
+      "primary_source_path": "source/third-party/bytestock-r7515-24sff-gallery-1.jpg",
+      "primary_source_sha256_recorded": "c1f34519461008e5a419866f69b36af5459ecf8e87751ae50b6dc0c90e88b5c7",
+      "primary_source_sha256_actual": "c1f34519461008e5a419866f69b36af5459ecf8e87751ae50b6dc0c90e88b5c7",
+      "final_output_path": "views/top.png",
+      "final_output_bytes": 4494225,
+      "final_output_sha256": "87c337d809bb62664706007ae4c4c8420c0c4a5c9bb0dd2b44549712ca96fd40"
+    },
+    {
+      "face": "bottom",
+      "production_mode": "GENERIC_BOTTOM_FALLBACK",
+      "primary_source_path": "source/third-party/bytestock-r7515-24sff-gallery-2.jpg",
+      "primary_source_sha256_recorded": "8d14cb4b1583a51265951c2b32db913ad8a8c830c884d677a9e90124c67cb1a4",
+      "primary_source_sha256_actual": "8d14cb4b1583a51265951c2b32db913ad8a8c830c884d677a9e90124c67cb1a4",
+      "final_output_path": "views/bottom.png",
+      "final_output_bytes": 6170294,
+      "final_output_sha256": "4da2f3204986bdcb86b7e7a24c7270af60d3030e32b37740f39a658f07d32b38"
+    }
+  ],
+  "webgl": {
+    "capture_count": 40,
+    "expected_capture_count": 40,
+    "all_runtime_ready": true,
+    "all_model_viewer_visible": true,
+    "all_screenshots_nonempty": true,
+    "counts_by_viewer_and_model": {
+      "model-viewer/standard": 10,
+      "model-viewer/web": 10,
+      "threejs/standard": 10,
+      "threejs/web": 10
+    },
+    "threejs_webgl_version": [
+      "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+    ],
+    "threejs_meshes": [
+      118
+    ],
+    "threejs_triangles": [
+      2614
+    ]
+  },
+  "checks": {
+    "exact_identity_and_configuration": {
+      "status": "PASS",
+      "identity_status": "VERIFIED"
+    },
+    "six_independent_source_locked_faces": {
+      "status": "PASS",
+      "count": 6
+    },
+    "bottom_evidence": {
+      "status": "PASS_WITH_BOTTOM_FALLBACK",
+      "mode": "GENERIC_BOTTOM_FALLBACK"
+    },
+    "official_exact_3d_search": {
+      "status": "PASS",
+      "exact_public_asset_found": false
+    },
+    "views_structural_audit": {
+      "status": "PASS",
+      "error_count": 0,
+      "warning_count": 6,
+      "warning_disposition": "anti-aliased silhouette pixels visually verified on checkerboard backgrounds"
+    },
+    "standard_glb_structural_audit": {
+      "status": "PASS",
+      "error_count": 0,
+      "warning_count": 0
+    },
+    "web_glb_structural_audit": {
+      "status": "PASS",
+      "error_count": 0,
+      "warning_count": 0
+    },
+    "standard_web_structural_parity": {
+      "status": "PASS"
+    },
+    "model_viewer_real_loads": {
+      "status": "PASS",
+      "capture_count": 20
+    },
+    "threejs_real_loads": {
+      "status": "PASS",
+      "capture_count": 20
+    },
+    "orthogonal_and_oblique_visual_review": {
+      "status": "PASS",
+      "orthogonal_views_per_build_per_viewer": 6,
+      "oblique_views_per_build_per_viewer": 4,
+      "comparison_contact_sheet": "qa/comparisons/orthographic-comparison-contact.png"
+    },
+    "branding_preserved": {
+      "status": "PASS",
+      "visible_marks": [
+        "DELL EMC",
+        "Dell PowerEdge R7515"
+      ]
+    },
+    "installed_power_configuration": {
+      "status": "PASS",
+      "power_supply_units": 2,
+      "type": "EPP 750 W AC"
+    },
+    "no_unverified_mirrored_or_front_ear_holes": {
+      "status": "PASS"
+    },
+    "no_external_glb_resources": {
+      "status": "PASS"
+    },
+    "no_git_commit_or_push": {
+      "status": "PASS"
+    }
+  },
+  "warnings_and_residual_risks": [
+    "Exact underside imagery was not obtainable after documented exhaustive search; bottom is the controlled generic fallback.",
+    "The exact Dell resources/3dguides endpoint returned public CDN access denial and no indexed exact public 3D asset was found."
+  ],
+  "required_final_status": "PASS_WITH_BOTTOM_FALLBACK"
+}

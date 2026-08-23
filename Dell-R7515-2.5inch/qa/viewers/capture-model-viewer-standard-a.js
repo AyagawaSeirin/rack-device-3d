@@ -1,0 +1,6 @@
+async page => {
+  const model = 'standard'; const entries=[['front','0deg 90deg 0.95m'],['rear','180deg 90deg 0.95m'],['left','-90deg 90deg 1.45m'],['right','90deg 90deg 1.45m'],['top','0deg 0.01deg 1.45m']];
+  await page.goto('http://127.0.0.1:8790/qa/viewers/model-viewer.html?model=standard&view=front&run=final-a',{waitUntil:'domcontentloaded',timeout:60000}); await page.waitForFunction(()=>window.__qa?.ready===true,null,{timeout:120000}); const results=[];
+  for(const [view,orbit] of entries){ await page.evaluate(({view,orbit,model})=>{const v=document.querySelector('#viewer');v.setAttribute('camera-orbit',orbit);v.jumpCameraToGoal();const c=v.shadowRoot?.querySelectorAll('canvas').length||0;document.querySelector('#status').textContent=`LOADED · ${model} · ${view} · canvas ${c}`;window.__qa={...window.__qa,view,run:`model-viewer-final-a-${view}`,canvasCount:c,modelIsVisible:v.modelIsVisible};},{view,orbit,model}); await page.waitForTimeout(650); const qa=await page.evaluate(()=>window.__qa); const screenshot=`/root/Project/rack-device-3d/Dell-R7515-2.5inch/qa/renders/model-viewer/${model}/${view}.png`; const image=await page.screenshot({path:screenshot,fullPage:true,timeout:120000}); results.push({...qa,screenshot,screenshotBytes:image.length}); }
+  return results;
+}

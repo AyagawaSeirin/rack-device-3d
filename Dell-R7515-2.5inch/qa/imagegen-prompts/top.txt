@@ -1,0 +1,25 @@
+Use case: product-mockup
+Asset type: exact Dell PowerEdge R7515 installed top orthographic texture for GLB
+Production mode: MULTI_REFERENCE_RECONSTRUCTION
+Input images: Image 1 is the PRIMARY BINDING high front/top real photograph of the exact 24-SFF R7515. Images 2-5 are exact front-right, rear-right, rear-left and front-left photographs of the same chassis and bind every perimeter, seam, cover step, vent row, label patch and latch.
+Primary request: reconstruct a new perfectly orthographic top view of the exact closed Dell PowerEdge R7515 24-SFF chassis with the installed front security bezel and exact rear protrusions.
+Scene/backdrop: perfectly flat solid #ff00ff chroma-key background; no floor, cast shadow, gradient, reflection or texture; no #ff00ff on device.
+Style/medium: preserve the same real galvanized metal grain, mild wear, imperfect highlights and label character as the exact photos; not a clean CGI/CAD render.
+Composition/framing: front at image bottom and rear at image top, perfectly top-down, no visible sides, physical overall ratio 482:717.595 with rack-ear/bezel and rear protrusions, generous padding.
+Verified invariants: front black/graphite security-bezel strip; front drive-backplane cover occupying about the front quarter with two long stamped channels and three source-matched instruction/service label patches; separate large removable main cover behind it; centered black release latch close to the cover's front edge; narrow longitudinal perforation rows near both upper side edges; real perimeter folds; rear PSU handle/connector protrusions.
+Constraints: preserve asymmetry and real label locations; keep only verified readable `Dell PowerEdge R7515` identity within the factory model label; no invented vents, fans, holes, feet, rails, badges or decorative lines; product opaque; no seller background, watermark, callout or detached part.
+Avoid: mirrored or copied bottom, R7525, LFF substitution, CGI cleanup, smoothing, denoising, vector/toon shading.
+
+Repair audit (2026-08-23): the selected built-in imagegen face was retained as the
+base asset, but its small front-right factory label header contained generated
+pseudo-text instead of the verified model identifier. A single built-in
+source-locked precise-object-edit attempt was made with the original top face as
+the edit target, Bytestock gallery 1 as the primary exact-device photographic
+reference, and the exact physical-left model label as supporting text evidence.
+That candidate was rejected because it still rendered the model string as
+`R?S15`; it remains only under `qa/work/` and is not used by the GLBs. The final
+repair changes only the existing black label-header pixels to the verified exact
+text `Dell PowerEdge R7515`; all other pixels, orientation, materials, physical
+ratio and transparent silhouette remain from the selected independent imagegen
+top face. The pre-repair face is retained as
+`qa/work/top-before-label-repair.png`.
