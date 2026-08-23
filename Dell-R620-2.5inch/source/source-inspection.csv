@@ -1,0 +1,48 @@
+path,visual_origin,claimed_configuration,face_or_angle,inspection_result,intended_role
+source/originals/user-config-lock-screenshot.png,real-ui-screenshot,"requested catalog row",front+rear thumbnails,"row 4 proves 10 carriers and 3-slot/quad-RJ45/dual-AC rear; low resolution",binding configuration lock
+source/user-lock/row-4-r620-front-enlarged.png,processed-user-screenshot,"requested catalog row",front,"10 carriers clearly countable; not a texture source",binding configuration lock
+source/user-lock/row-4-r620-rear-enlarged.png,processed-user-screenshot,"requested catalog row",rear,"three LP slots; four RJ45-like same ports; twin IEC/fan PSU faces; not a texture source",binding configuration lock
+source/pdf-pages/dell-poweredge-r620-technical-guide-p11.png,official-render-and-text,"R620 8- and 10-drive",front,"official Figure 2 proves exact 10-drive face; Figure 1 separately proves excluded 8-drive face",binding geometry support
+source/pdf-pages/dell-poweredge-r620-technical-guide-p12.png,official-render-and-text,"R620 8-drive",rear+internal,"8-drive only and explicitly excluded from configuration lock; useful family material only",excluded variant support
+source/pdf-pages/dell-poweredge-r620-technical-guide-p13.png,official-document,"R620 family",feature table,"proves 10-drive mini USB/diagnostic LED and up-to-three PCIe",binding configuration support
+source/pdf-pages/dell-poweredge-r620-technical-guide-p14.png,official-document,"R620 family",controls,"proves 10-drive LED panel identity and 8-drive LCD distinction",binding front support
+source/pdf-pages/dell-poweredge-r620-technical-guide-p30.png,official-document,"R620 10-drive",PCIe,"proves three-slot rear is sole 10-drive option",binding rear support
+source/pdf-pages/dell-poweredge-r620-technical-guide-p31.png,official-document,"R620 family",NIC table,"proves Intel I350 4×1Gb Base-T option",binding rear support
+source/pdf-pages/dell-poweredge-r620-technical-guide-p35.png,official-photo-and-table,"R620 family dual 750W AC",rear PSU angle,"proves 750W AC face/handles and dual-redundant support",binding PSU support
+source/pdf-pages/dell-poweredge-r620-technical-guide-p51.png,official-diagram,"R620 10-drive",top+side dimensions,"proves 482.4/434.0/42.8/731.0/752.1 mm and no 8-drive interchange",binding dimension support
+source/pdf-pages/dell-poweredge-r620-technical-guide-p52.png,official-table,"R620 family",PSU specifications,"proves 750W AC variants and AC input",binding PSU support
+source/pdf-pages/dell-poweredge-r620-owners-manual-en-us-p07.png,official-diagram,"R620 8-drive",front,"excluded 8-drive face; visibly different control strip",excluded variant support
+source/pdf-pages/dell-poweredge-r620-owners-manual-en-us-p14.png,official-diagram,"R620 8-drive 2-slot",rear,"excluded two-slot rear",excluded variant support
+source/pdf-pages/dell-poweredge-r620-owners-manual-en-us-p15.png,official-diagram,"R620 10-drive and 8-drive 3-slot",rear,"binding order for 3-slot rear I/O",binding rear support
+source/pdf-pages/dell-poweredge-r620-owners-manual-en-us-p16.png,official-diagram,"R620 family",NIC/PSU,"proves two PSUs and RJ45 indicator geometry",binding rear support
+source/pdf-pages/dell-poweredge-r620-owners-manual-en-us-p17.png,official-diagram,"R620 AC/DC PSU",PSU,"distinguishes AC translucent handle from excluded DC status design",binding PSU support
+source/pdf-pages/dell-poweredge-r620-owners-manual-en-us-p35.png,official-diagram,"R620 family",bezel,"bezel optional and absent in target",exclusion support
+source/pdf-pages/dell-poweredge-r620-owners-manual-en-us-p36.png,official-diagram,"R620 family",top cover,"proves latch and separate removable cover",binding top geometry support
+source/pdf-pages/dell-poweredge-r620-owners-manual-en-us-p73.png,official-diagram,"R620 AC PSU",PSU,"proves AC PSU body/latch/handle",binding PSU geometry support
+source/pdf-pages/dell-poweredge-r620-owners-manual-en-us-p74.png,official-document,"R620 AC/DC PSU",PSU,"proves matching-pair requirement and AC installation",binding PSU configuration support
+source/third-party/cloudninjas-r620-10sff-1.jpg,real-photograph,"R620 10SFF",front,"near-straight exact front; seller caption outside product; 10 populated carriers; Dell/PowerEdge marks",primary front identity/style
+source/third-party/cloudninjas-r620-10sff-2.jpg,real-photograph,"R620 10SFF",front-top,"exact closed top; real scratches; latch/vent/labels",primary top identity/style
+source/third-party/cloudninjas-r620-10sff-4.jpg,real-photograph,"R620 10SFF",front-right-top,"exact right wall and top; seller caption outside product",primary right reference
+source/third-party/cloudninjas-r620-10sff-7.jpg,real-photograph,"R620 10SFF",open-top,"exact 10SFF internal length/layout; cover absent so not top texture",geometry support only
+source/third-party/cloudninjas-r620-10sff-8.jpg,real-photograph,"R620 10SFF 3-slot; mixed 2SFP+2RJ45; dual 750W AC",rear,"wrong RNDC for screenshot; otherwise exact chassis/PSU geometry",excluded NIC variant support
+source/third-party/pcsp-r620-10sff-i350-2.jpg,real-photograph,"R620 10SFF empty bays",front-right-top,"right side and top proof; bays empty so not front identity source",right/top support
+source/third-party/pcsp-r620-10sff-i350-3.png,real-photograph,"R620 10SFF",front,"near-straight face; only two carriers and eight blanks but same 10-bay structure",front geometry support
+source/third-party/pcsp-r620-10sff-i350-5.jpg,real-photograph,"R620 10SFF; 3-slot; I350 4RJ45; dual 750W AC",rear-top,"exact requested rear; seller cable straps excluded from final",primary rear identity/style
+source/third-party/itcreations-r620-10sff-0.jpg,real-photograph,"R620 10SFF with bezel",front-top,"exact top but target bezel state differs; watermark/background excluded",top support
+source/third-party/itcreations-r620-10sff-1.jpg,real-photograph,"R620 10SFF empty bays",front-top,"exact chassis; target carriers absent; watermark excluded",geometry support only
+source/third-party/itcreations-r620-10sff-2.jpg,real-photograph,"R620 10SFF empty bays",front-left-top,"exact left wall; watermark/background excluded",primary left reference
+source/third-party/itcreations-r620-10sff-3.jpg,real-photograph,"R620 10SFF; quad RJ45; one PSU plus blanks",rear-top,"correct NIC/slot geometry but wrong PSU occupancy",rear/top support only
+source/third-party/itcreations-r620-10sff-4.jpg,real-photograph,"R620 10SFF",front-left close-up,"Dell and PowerEdge R620 factory marks/control strip; watermark excluded",brand/control support
+source/third-party/usedservers-r620-10sff-rear.jpg,real-photograph,"R620 10SFF; 3-slot; quad RJ45; dual 750W AC",rear-top,"low resolution but independently corroborates exact requested rear",rear cross-check
+source/third-party/cloudninjas-r620-8sff-1.jpg,real-photograph,"R620 8SFF",front,"wrong shorter front variant",excluded variant
+source/third-party/cloudninjas-r620-8sff-3.jpg,real-photograph,"R620 8SFF",front-top,"wrong shorter variant",excluded variant
+source/third-party/cloudninjas-r620-8sff-4.jpg,real-photograph,"R620 8SFF",front-right-top,"wrong shorter variant",excluded variant
+source/third-party/cloudninjas-r620-8sff-5.jpg,real-photograph,"R620 8SFF",open-top,"wrong shorter variant",excluded variant
+source/third-party/cloudninjas-r620-8sff-6.jpg,real-photograph,"R620 8SFF mixed RNDC",rear,"wrong drive/NIC variant",excluded variant
+source/third-party/ecs-r620-angle.jpg,official-reseller-composite,"R620 family with bezel",front-top,"bezel and family composite; not exact target front",excluded/lead
+source/third-party/ecs-r620-front-back.jpg,official-reseller-composite,"R620 mixed family variants",front+rear,"contains 8 and 10 face rows but composited; not primary",variant cross-check only
+source/third-party/ecs-r620-internal.jpg,official-reseller-composite,"R620 8-drive",open-top,"wrong shorter internal",excluded variant
+source/third-party/pios-r620-8sff-front.jpg,real-photograph,"R620 8SFF",front+rear composite,"wrong shorter variant",excluded variant
+source/third-party/pios-r620-8sff-rear-or-angle.jpg,real-photograph,"R620 8SFF",front+rear composite,"wrong shorter variant",excluded variant
+source/originals/dell-video-express-service-tag-still.jpg,official-video-frame,"R620 8-drive",front-top,"official but visibly 8-drive VGA/LCD arrangement",excluded variant/top-family lead
+source/third-party/dell-r210ii-1u-underside-fallback.jpg,real-photograph,"Dell R210 II 1U",bottom,"same-vendor/same-U underside; exact R620 details deliberately not copied",generic-bottom material/edge reference only

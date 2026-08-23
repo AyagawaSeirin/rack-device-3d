@@ -1,0 +1,3794 @@
+
+
+===== PAGE 1 =====
+
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PowerEdge R620 
+Technical Guide 
+This hyper-dense,  
+two-socket, 1U rack 
+server has a large 
+memory footprint and 
+impressive I/O options 
+that make it exceptional 
+for space-sensitive 
+environments. 
+
+
+===== PAGE 2 =====
+
+ 
+ 
+ii    PowerEdge R620 Technical Guide 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+This document is for informational purposes only. Dell reserves the right to make changes without further 
+notice to any products herein. The content provided is as is and without express or implied warranties of any 
+kind.  
+Dell, the DELL logo, PowerEdge, EqualLogic, PowerVault, OpenManage, KACE, and ReadyRails are trademarks 
+of Dell, Inc. Intel and Xeon are registered trademarks of Intel Corporation in the U.S. and other countries. 
+Microsoft, Windows, Windows Server, BitLocker, ActiveX, Internet Explorer, and Hyper-V are either registered 
+trademarks or trademarks of Microsoft Corporation in the United States and/or other countries. Novell and 
+SUSE are registered trademarks of Novell, Inc. in the United States and other countries. IBM, Tivoli, and 
+Netcool are registered trademarks of IBM in the United States. AMD, ATI, FirePro, and combinations thereof, 
+are trademarks of Advanced Micro Devices, Inc. Other trademarks and trade names may be used in this 
+document to refer to either the entities claiming the marks and names or their products. Dell disclaims 
+proprietary interest in the marks and names of others. 
+©Copyright 2013 Dell Inc. All rights reserved. Reproduction or translation of any part of this work beyond that 
+permitted by U.S. copyright laws without the written permission of Dell Inc. is unlawful and strictly forbidden. 
+December 2013  |  Version 5.0 
+
+
+===== PAGE 3 =====
+
+ 
+ 
+iii    PowerEdge R620 Technical Guide 
+Table of contents 
+1 System overview ................................................................................................................................................................. 6 
+Introduction ........................................................................................................................................................................ 6 
+Key technologies ................................................................................................................................................................ 7 
+2 System features .................................................................................................................................................................. 8 
+Comparison of PowerEdge systems .............................................................................................................................. 8 
+Specifications ..................................................................................................................................................................... 9 
+3 Chassis views and features .............................................................................................................................................. 11 
+Chassis views ..................................................................................................................................................................... 11 
+Chassis features ................................................................................................................................................................ 13 
+4 Processor ............................................................................................................................................................................ 16 
+Processor features ............................................................................................................................................................ 16 
+Supported processors ...................................................................................................................................................... 16 
+GPU support ......................................................................................................................................................................18 
+Chipset ................................................................................................................................................................................18 
+5 Memory ............................................................................................................................................................................... 19 
+Supported memory .......................................................................................................................................................... 19 
+Memory configurations .................................................................................................................................................. 20 
+Memory speed ................................................................................................................................................................. 20 
+Memory RAS features....................................................................................................................................................... 21 
+6 Storage ............................................................................................................................................................................... 23 
+Internal storage ................................................................................................................................................................ 23 
+External storage ............................................................................................................................................................... 24 
+Storage controllers .......................................................................................................................................................... 25 
+Optical drive ..................................................................................................................................................................... 27 
+Tape drive .......................................................................................................................................................................... 27 
+7 Networking and PCIe ...................................................................................................................................................... 28 
+Select Network Adapter.................................................................................................................................................. 28 
+PCIe expansion ................................................................................................................................................................ 30 
+8 Power, thermal and acoustics ....................................................................................................................................... 33 
+Power consumption and energy efficiency ................................................................................................................ 33 
+Power supply units .......................................................................................................................................................... 34 
+Thermal and acoustics.................................................................................................................................................... 35 
+9 Rack rails and cable management ................................................................................................................................ 38 
+Sliding and static rail systems ........................................................................................................................................ 38 
+Cable management arm................................................................................................................................................. 40 
+10 Operating systems and virtualization ............................................................................................................................41 
+Supported operating systems .........................................................................................................................................41 
+Supported virtualization ................................................................................................................................................. 42 
+11 Dell OpenManage systems management .................................................................................................................... 43 
+Systems management solutions ................................................................................................................................... 43 
+OpenManage systems management ........................................................................................................................... 44 
+Dell server management operations ............................................................................................................................ 48 
+Appendix A. 
+Additional specifications ........................................................................................................................... 51 
+Chassis dimensions .......................................................................................................................................................... 51 
+Chassis weight................................................................................................................................................................... 51 
+Power supply specifications .......................................................................................................................................... 52 
+Environmental specifications ........................................................................................................................................ 52 
+Video specifications ........................................................................................................................................................ 53 
+Rack rail specifications ................................................................................................................................................... 54 
+USB peripherals ................................................................................................................................................................ 54 
+
+
+===== PAGE 4 =====
+
+ 
+ 
+iv    PowerEdge R620 Technical Guide 
+PCIe card dimensions ..................................................................................................................................................... 54 
+Appendix B. 
+Standards compliance ............................................................................................................................. 55 
+Appendix C. 
+Additional resources ................................................................................................................................. 56 
+Appendix D. 
+System board block diagram .................................................................................................................. 58 
+ 
+Tables 
+Table 1. 
+Key technologies ................................................................................................................................................... 7 
+Table 2. 
+Comparing the PowerEdge R610 to PowerEdge R620 ................................................................................ 8 
+Table 3. 
+Technical specifications ...................................................................................................................................... 9 
+Table 4. 
+Chassis features ................................................................................................................................................... 13 
+Table 5. 
+Security features .................................................................................................................................................. 15 
+Table 6. 
+Supported processors ........................................................................................................................................ 17 
+Table 7. 
+GPU cards supported .........................................................................................................................................18 
+Table 8. 
+Memory technologies supported ..................................................................................................................... 19 
+Table 9. 
+DIMMs supported ............................................................................................................................................... 20 
+Table 10. Memory speed capabilities ................................................................................................................................ 21 
+Table 11. Memory RAS features ......................................................................................................................................... 21 
+Table 12. Supported hard drives ....................................................................................................................................... 23 
+Table 13. External storage device types .......................................................................................................................... 24 
+Table 14. External storage options ................................................................................................................................... 25 
+Table 15. Supported RAID controllers.............................................................................................................................. 26 
+Table 16. Hard-drive backplane options ......................................................................................................................... 27 
+Table 17. Supported Select Network Adapter options and features .......................................................................... 29 
+Table 18. PCIe slot options ................................................................................................................................................ 30 
+Table 19. Supported NICs and HBAs ................................................................................................................................. 31 
+Table 20. Additional supported PCIe expansion cards ................................................................................................. 32 
+Table 21. Power tools and technologies ......................................................................................................................... 33 
+Table 22. Power supply efficiency .................................................................................................................................... 35 
+Table 23. Acoustical performance .................................................................................................................................... 37 
+Table 24. Supported rack rail system ............................................................................................................................... 39 
+Table 25. Primary operating system support ...................................................................................................................41 
+Table 26. Virtual guest operating system support ......................................................................................................... 42 
+Table 27. Virtualization support ........................................................................................................................................ 42 
+Table 28. iDRAC7 with Lifecycle Controller functions and benefits ........................................................................... 44 
+Table 29. Feature comparison for iDRAC7 Express and Enterprise ............................................................................ 45 
+Table 30. One-to-one and one-to-many operations .................................................................................................. 49 
+Table 31. Chassis weight ..................................................................................................................................................... 51 
+Table 32. Power supply specifications ............................................................................................................................. 52 
+Table 33. Environmental specifications ........................................................................................................................... 52 
+Table 34. Supported video modes .................................................................................................................................... 53 
+Table 35. Rail adjustability range ....................................................................................................................................... 54 
+Table 36. PCIe card dimensions ........................................................................................................................................ 54 
+Table 37. Industry standard documents .......................................................................................................................... 55 
+Table 38. Additional resources .......................................................................................................................................... 56 
+Figures 
+Figure 1. Eight-drive bay chassis front view without bezel .......................................................................................... 11 
+Figure 2. 10-drive bay chassis front view without bezel ............................................................................................... 11 
+Figure 3. Eight-drive bay chassis front view with bezel ................................................................................................ 11 
+Figure 4. Eight-drive bay chassis back view .................................................................................................................... 12 
+Figure 5. Eight-drive bay chassis internal view ............................................................................................................... 12 
+Figure 6. LCD control panel for 8-drive bay chassis .....................................................................................................14 
+Figure 7. QRL code inside chassis cover .........................................................................................................................14 
+Figure 8. Rack network daughter card (NDC) ................................................................................................................ 28 
+
+
+===== PAGE 5 =====
+
+ 
+ 
+v    PowerEdge R620 Technical Guide 
+Figure 9. 750W power supply unit ................................................................................................................................... 35 
+Figure 10. Sliding rails with optional CMA ........................................................................................................................ 38 
+Figure 11. Static rails ............................................................................................................................................................. 39 
+Figure 12. Dell systems management solutions .............................................................................................................. 43 
+Figure 13. Systems management server lifecycle ........................................................................................................... 49 
+Figure 14. System dimensions ............................................................................................................................................. 51 
+Figure 15. R620 system board block diagram ................................................................................................................. 58 
+
+
+===== PAGE 6 =====
+
+ 
+ 
+1 System overview 
+Introduction 
+Designed for extraordinary performance on a wide range of applications, the Dell™ PowerEdge™ 
+R620 rack server is an impressive general-purpose platform that is perfect for data centers with 
+space constraints. With its hyper-dense memory — up to 768GB in a 1U form factor — and powered 
+by the Intel® Xeon® processor E5-2600 and E5-2600 v2 product families, the R620 shines when 
+handling virtualization, high-performance computing (HPC), and workgroup collaboration 
+applications. 
+Accomplish more 
+Pack more computing power into a space-challenged data center with the PowerEdge R620, which 
+offers an exceptionally large memory footprint along with balanced, scalable I/O capabilities, 
+including integrated PCI Express® (PCIe) 3.0 capable expansion slots. With reliability, availability and 
+serviceability (RAS) features like hot-pluggable fans, drives, power supply units (PSUs) and even 
+redundant failsafe hypervisors, the R620 keeps your data center running with rock-steady reliability. 
+Dense design for demanding workloads 
+Virtualization environments demand high memory capacity to maximize the number of virtual 
+machines per server, and the PowerEdge R620 was designed specifically with these environments in 
+mind. The R620 also offers outstanding computational density for HPC application clusters by 
+providing powerful processing capabilities in a compact form factor.  
+Tailor your network fabric 
+The R620’s network features allow you to tailor your network throughput to match your application 
+needs, enabling added I/O performance. Dell Select Network Adapters, our flexible NIC technology, 
+let you choose the right network fabric without using up a valuable PCI slot. You can pick speed, 
+technology, vendor, plus other options such as switch independent NIC partitioning, which lets you 
+share and manage bandwidth on 10GbE connections. 
+Simplified systems management, without compromise  
+The Dell OpenManage™ systems management portfolio includes Integrated Dell Remote Access 
+Controller 7 (iDRAC7) with Lifecycle Controller. This embedded feature helps IT administrators 
+manage Dell servers in physical, virtual, local and remote environments, operating in-band or 
+out-of-band, with or without a systems management software agent installed. 
+OpenManage iDRAC with Lifecycle Controller integrates and connects to leading third-party 
+systems management solutions (such as those from Microsoft, VMware and BMC Software), so users 
+can maintain a single point of control and capitalize on an existing systems management investment. 
+OpenManage simplifies the lifecycle of deploying, updating, monitoring and maintaining Dell 
+PowerEdge servers. 
+ 
+ 
+ 
+
+
+===== PAGE 7 =====
+
+ 
+ 
+7    PowerEdge R620 Technical Guide 
+Key technologies 
+Table 1 summarizes the newest technologies used in the R620 rack server. 
+Table 1. 
+Key technologies 
+New technology 
+Detailed description 
+Intel Xeon processor  
+E5-2600 and E5-2600 v2 
+product families 
+Intel Xeon processor E5-2600 and E-2600 v2 product families have advanced  
+features that deliver exceptional performance and value. See the Processor 
+section for details. 
+Intel C600 series chipset 
+The Intel Platform Controller Hub (PCH) chip is implemented on the R620 
+server. 
+1866MT/s DDR3 memory 
+The Intel Xeon processor E5-2600 v2 product family supports 1866MT/s 
+memory. The R620 supports two DIMMs per channel at 1866MT/s with these 
+processors. See the Memory section for details. 
+LRDIMM 
+This memory option, load reduced DIMM (LRDIMM), is designed with a buffer 
+chip (or chips) to replace the register to help minimize loading. LRDIMMs can 
+increase overall server system memory capacity and speed. See the Memory 
+section for more information. 
+Flexible LOM 
+Dell’s Select Network Adapter options allow you to customize your LAN port 
+combinations from your choice of controller vendors. See the Networking and 
+PCIe section for details.  
+Next-generation PERC 
+options 
+The R620 supports the new PERC controller cards with improved functionality 
+and faster performance. See the Storage section for details. 
+PERC S110 software RAID 
+Solution 
+This new software RAID solution supports RAID 0, 1, 5 and 10; supports 
+maximum of four hot-plug SATA hard drives or SATA solid-state drives. See the 
+Storage section for details. 
+Express Flash drives 
+Dell Express Flash PCIe solid-state drives provide fast performance without 
+requiring processor resources or capturing DRAM. The R620 supports up to two 
+Express Flash drives. See the Storage section for details. 
+iDRAC7 with Lifecycle 
+Controller 
+The new embedded system management solution for Dell servers features 
+hardware and firmware inventory and alerting, in-depth memory alerting, faster 
+performance, a dedicated gigabit port and many more features. See the Dell 
+OpenManage systems management section for details. 
+Internal GPU support 
+The R620 supports internal graphics processing units (GPUs) for extreme 
+computing power to solve HPC needs. See the Processor section for details. 
+DC power supply 
+A new 1100W DC power supply option is available for the R620. 
+Advanced power 
+management 
+The R620 supports advanced power monitoring and power capping tools that 
+can help manage power consumption. 
+Fresh Air cooling 
+Dell has tested and validated an integrated data center solution that enables you 
+to operate at higher temperatures or even chiller-less. See the Power, thermal 
+and acoustics section for details. 
+Failsafe hypervisors 
+The internal dual SD module enables Dell's unique Failsafe Virtualization 
+architecture, ensuring uptime by providing failover capability for embedded 
+hypervisors, such as VMware® vSphere® ESXi™. See the Supported virtualization 
+section for details. 
+
+
+===== PAGE 8 =====
+
+ 
+ 
+8    PowerEdge R620 Technical Guide 
+2 System features 
+Compared to the previous generation of Dell PowerEdge servers, the R620 has more drive bay 
+options, more PCIe slots, PCIe 3.0, a larger memory footprint, flexible I/O, Express Flash PCIe 
+solid-state drives and advanced system management. 
+Comparison of PowerEdge systems 
+The PowerEdge R620 is a direct replacement for the predecessor R610. Table 2 compares some of 
+the features of the R620 to the R610. 
+Table 2. 
+Comparing the PowerEdge R610 to PowerEdge R620 
+Feature 
+PowerEdge R610  
+PowerEdge R620 
+Chassis 
+1U rack 
+1U rack 
+Processors  
+Intel Xeon processors 5500 and 
+5600 series  
+Intel Xeon processor  
+E5-2600 and E5-2600 v2 product families 
+Internal interconnect 
+Intel QuickPath Interconnect  
+Intel QuickPath Interconnect  
+Memory1  
+12 x DDR3 RDIMM and UDIMM  
+Up to 192GB  
+24 x DDR3 RDIMM, UDIMM, and LRDIMM  
+Up to 768GB 
+Hard drive bays  
+(hot plug) 
+6 x 2.5” 
+10 x 2.5” 
+RAID controller 
+PERC 6/i, SAS 6/iR, PERC 6/E, 
+H200, H700, H800 
+PERC S110, H310, H710, H710P, H810 
+Express Flash drives  
+N/A  
+Up to 2 Express Flash PCIe SSDs 
+PCI slots  
+2 PCIe 2.0  
+3 PCIe 3.0  
+Embedded NICs  
+4 x 1Gb with optional TOE  
+Select Network Adapter: minimum 
+configuration of 4 x 1Gb, 10Gb (optional) 
+Power supplies  
+Hot-plug, redundant power 
+supply units: 502W, 717W  
+Hot-plug, redundant power supply units: 
+495W, 750W, 1100W, 1100W DC 
+Dell OpenManage 
+Systems Management 
+Dell OpenManage 
+Lifecycle Controller 1.x  
+iDRAC6 (Express or Enterprise) 
+with 
+Lifecycle Controller 1.x 
+OpenManage Essentials  
+OMSA Agent 
+OpenManage Power Center (requires iDRAC7 
+Enterprise with Lifecycle Controller) 
+OpenManage Integrations and Connections 
+iDRAC7 Express with Lifecycle Controller 
+(standard option) 
+Support for internal GPU 
+No  
+Yes (available through CFI or field upgrade 
+only) 
+Power efficiency  
+Gold 
+Titanium 
+Availability 
+Hot-plug drives 
+Hot-plug redundant cooling 
+Hot-plug redundant power 
+supply units 
+Internal SD module 
+Hot-plug drives 
+Hot-plug redundant cooling 
+Hot-plug redundant power supply units 
+Internal dual SD module 
+1GB means 1 billion bytes and TB equals 1 trillion bytes; actual capacity varies with preloaded material and operating 
+environment and will be less.  
+ 
+
+
+===== PAGE 9 =====
+
+ 
+ 
+9    PowerEdge R620 Technical Guide 
+Specifications 
+Table 3 summarizes the specifications for each of the PowerEdge R620 features. For the latest 
+information on supported features for the PowerEdge R620, visit Dell.com/PowerEdge. 
+Table 3. 
+Technical specifications 
+Feature 
+PowerEdge R620 technical specification 
+Form factor 
+1U rack 
+Processors 
+Intel Xeon processor E5-2600 and E5-2600 v2 product families 
+Processor sockets 
+2 sockets 
+Internal interconnect 
+2 Intel Quick Path Interconnect (QPI) links: 6.4GT/s, 7.2GT/s, 8.0GT/s 
+Cache 
+2.5MB per core; core options: 4, 6, 8, 10, 12 
+Chipset 
+Intel C602 
+Memory1 
+Up to 768GB (24 DIMM slots): 2GB/4GB/8GB/16GB/32GB DDR3 up to 1866MT/s 
+PCIe slots  
+3 PCIe slots: (10-drive bay configuration is available only with this option) 
+ 
+Two x16 slots with x16 bandwidth, half-height, half-length 
+ 
+One x16 slot with x8 bandwidth, half-height, half-length  
+or 
+2 PCIe slots:  
+ 
+One x16 slot with x16 bandwidth, full-height, 3/4 length 
+ 
+One x16 slot with x16 bandwidth (or x8 with one processor only), half-height, 
+half-length 
+RAID controller  
+Internal controllers: 
+PERC S110 (SW RAID) 
+PERC H310 
+PERC H710 
+PERC H710P 
+External HBAs (RAID):  
+PERC H810 
+External HBAs (non-RAID):  
+6Gbps SAS HBA 
+LSI SAS 9207-8i 6Gb/s SAS 
+Hard drives 
+(hot-plug) 
+Drive bay options: 
+ 
+Up to 4 x 2.5” or 
+ 
+Up to 8 x 2.5” or 
+ 
+Up to 10 x 2.5” or 
+ 
+Up to 4 x 2.5” + 2 x Express 
+Flash 
+Hard drive options: 
+2.5" SSD, SAS HDD 
+3.5" SAS HDD, Nearline SAS HDD, SATA HDD 
+Self-encrypting drives available 
+Embedded NIC 
+Select Network Adapter options: 
+Broadcom® 5720 4x1Gb Base-T (default) 
+Intel I350 quad-port 1GbE Base-T (no TOE or iSCSI offload) 
+Intel X540 dual-port 10GbE Base-T with 2 x 1GbE (FCoE capability on 10GbE ports) 
+Broadcom 57800S 2x1Gb + 2x10Gb Base-T  
+Broadcom 57800S 2x1Gb + 2x10Gb SFP+ 
+Mellanox® ConnectX®-3 dual-port 40GbE QSFP+ network adapter 
+Mellanox ConnectX-3 dual-port 10GbE DA/SFP+ network adapter 
+Power supply  
+Titanium efficiency 750W AC power supply; auto-ranging Platinum efficiency 495W, 
+750W or 1100W AC power supply; 1100W DC power supply 
+
+
+===== PAGE 10 =====
+
+ 
+ 
+10    PowerEdge R620 Technical Guide 
+Feature 
+PowerEdge R620 technical specification 
+Availability 
+High-efficiency, hot-plug, redundant power supplies; hot-plug hard drives; TPM; dual 
+internal SD support; hot-plug redundant fans; optional bezel; information tag; ECC 
+memory; interactive LCD screen; extended thermal support; ENERGY STAR® 
+compliant; switch independent partitioning 
+Dell OpenManage 
+Systems Management 
+(Agent-free or with 
+OpenManage Server 
+Administrator [OMSA] 
+Agent) 
+ 
+OpenManage Essentials  
+ 
+OMSA Agent 
+ 
+OpenManage Power Center (requires iDRAC7 Enterprise with Lifecycle 
+Controller) 
+ 
+OpenManage Integrations and Connections: 
+> 
+OpenManage Integration Suite for Microsoft® System Center 
+> 
+OpenManage Integration for VMware vCenter 
+> 
+Connections for HP® Operations Manager, IBM® Tivoli® Netcool® and CA 
+Network and Systems Management 
+ 
+iDRAC7 Express with Lifecycle Controller (standard option) 
+> 
+Upgrade to iDRAC7 Enterprise with Lifecycle Controller    
+> 
+Upgrade to 8GB vFlash media or 16GB vFlash media for iDRAC7 
+Enterprise with Lifecycle Controller   
+> 
+Trial evaluation available for IDRAC7 Enterprise with Lifecycle Controller 
+Rack support  
+ReadyRails™ sliding rails for tool-less mounting in 4-post racks with square or 
+unthreaded round holes or tooled mounting in 4-post threaded hole racks, with 
+support for optional tool-less cable management arm 
+ReadyRails static rails for tool-less mounting in 4-post racks with square or 
+unthreaded round holes or tooled mounting in 4-post threaded and 2-post (Telco) 
+racks 
+Operating systems 
+Microsoft® Windows Server® 2012 R2 (includes Hyper-V®)  
+Microsoft Windows Server 2012  
+Microsoft Windows Server 2008 R2 SP1, x64 (includes Hyper-V)  
+Microsoft Windows® HPC Server 2008  
+Microsoft Windows Small Business Server 2011 
+Novell® SUSE® Linux® Enterprise Server 
+Red Hat® Enterprise Linux 
+ 
+Virtualization options: 
+Citrix® XenServer® 
+VMware vSphere ESXi 
+Red Hat Enterprise Virtualization® 
+For more information on the specific versions and additions, visit 
+Dell.com/OSsupport. 
+1GB means 1 billion bytes and TB equals 1 trillion bytes; actual capacity varies with preloaded material and operating 
+environment and will be less. 
+
+
+===== PAGE 11 =====
+
+ 
+ 
+11    PowerEdge R620 Technical Guide 
+3 Chassis views and features 
+The Dell PowerEdge R620 is a 1U rack system with an 8-drive bay or 10-drive bay chassis design. 
+Like the R610, the R620 chassis provides an optional diagnostic LCD, a lockable bezel, a pull-out 
+tray to record system information, and embedded NIC/iDRAC MAC address labels. In response to 
+customer feedback, the vFlash media reader is now accessible on the front of the 8-drive bay 
+chassis for easy access; the vFlash media reader on the 10-drive bay chassis is located on the hard 
+drive backplane. 
+Chassis views 
+The R620 has two chassis options: an 8-drive bay option or a 10-drive bay option. A chassis cannot 
+be reconfigured or upgraded after point of purchase.  
+Figure 1 shows the front view of the 8-drive bay chassis with eight 2.5-inch hard drives. Other 
+features on the front panel include an interactive LCD control panel, two USB connectors, a video 
+connector and a vFlash media card slot. 
+Figure 1. 
+Eight-drive bay chassis front view without bezel 
+ 
+Figure 2 shows the front view of the 10-drive bay chassis with ten 2.5-inch hard drives. Other 
+features on the front panel include an LED control panel, mini USB connector and power button. 
+Figure 2. 
+10-drive bay chassis front view without bezel 
+ 
+ 
+Figure 3 shows the optional bezel on the front of an 8-drive bay chassis. The bezel for the 10-drive 
+bay chassis is different than the bezel for the 8-drive bay chassis. 
+Figure 3. 
+Eight-drive bay chassis front view with bezel 
+ 
+ 
+ 
+
+
+===== PAGE 12 =====
+
+ 
+ 
+12    PowerEdge R620 Technical Guide 
+Figure 4 shows the R620 back panel of the 8-drive bay chassis. Features on the back panel include 
+the system identification light and button, iDRAC7 Enterprise port (activated only when iDRAC7 
+Enterprise is enabled), serial connector, video connector, USB connectors, Ethernet connectors, 
+PCIe slots and power supplies. (Not shown is the chassis configuration with three PCIe slots.) 
+Figure 4. 
+Eight-drive bay chassis back view 
+ 
+Figure 5 is an internal view of the R620 8-drive bay system including fans, DIMMs, power supplies, 
+system board and hard drive bays. 
+Figure 5. 
+Eight-drive bay chassis internal view 
+ 
+ 
+For additional system views, see the Dell PowerEdge R620 Owner’s Manual on 
+Dell.com/Support/Manuals. 
+ 
+ 
+ 
+
+
+===== PAGE 13 =====
+
+ 
+ 
+13    PowerEdge R620 Technical Guide 
+Chassis features 
+Table 4 lists the features for the R620 chassis. For additional information, see the Dell PowerEdge 
+R620 Owner’s Manual on Dell.com/Support/Manuals. 
+ 
+Table 4. 
+Chassis features 
+Feature 
+Description 
+Power button 
+ACPI-complaint power button with an integrated green power LED 
+Front bezel  
+Covers the system’s front-loading hard drives; can be locked to prevent hard 
+drives from being removed 
+NMI button 
+Recessed non-maskable interrupt (NMI) button used to troubleshoot 
+software and device driver errors; use only if directed to do so by qualified 
+support personnel or by the operating system's documentation 
+System identification button 
+Buttons on the back and front of a system to help identify the unit in a data 
+center environment 
+Hard drive activity LED 
+Indicates the status and activity 
+Hard drives 
+Up to ten 2.5-inch drives 
+USB connectors 
+8-drive bay chassis: 2 on front, 2 on back, 1 internal 
+10-drive bay chassis: 1 mini on front, 2 on back, 1 internal  
+vFlash media reader 
+Activated when iDRAC7 Enterprise is enabled; located on 8-drive bay front 
+panel and inside the 10-drive bay chassis on the hard drive backplane 
+Information tag 
+Slide-out label panel for recording system information 
+Video connector 
+Connects a monitor to the system 
+LCD control panel 
+8-drive bay chassis only; displays system ID, status information, and system 
+error messages; two navigation buttons to scroll through the menu on the 
+LCD and one select button 
+Diagnostic LED  
+10-drive bay chassis only; displays error status during system startup 
+Optical drive  
+Optional ultra-slim (9.5mm) SATA DVD drive or DVD+RW drive 
+Tape drive  
+Optional external tape drive through the SAS 6Gbps HBA 
+Power supply units 
+Supplies power to the system 
+Power supply indicators 
+Indicates whether system has power 
+NIC indicators 
+Indicates network activity and status 
+PCIe expansion card slots 
+Connects up to three PCIe expansion cards 
+Ethernet connectors 
+Choices of network connectors through the Select Network Adapter 
+Serial connector 
+Connects system to serial device and for console redirect 
+iDRAC7 Enterprise port 
+Dedicated management port for optional iDRAC7 Enterprise  
+Quick Resource Locator 
+(QRL) 
+This code on the chassis can be scanned by a smartphone application to 
+access additional information and resources for the server, including videos, 
+reference materials, service tag information and Dell contact information. 
+ 
+
+
+===== PAGE 14 =====
+
+ 
+ 
+14    PowerEdge R620 Technical Guide 
+Front control panels 
+Eight-drive bay chassis 
+The R620 LCD control panel is located on the front of the eight-drive bay chassis as shown in Figure 
+6. For more information about the LCD control panel, see the Dell PowerEdge R620 Owner’s 
+Manual on Dell.com/Support/Manuals. 
+Figure 6. 
+LCD control panel for 8-drive bay chassis 
+ 
+10-drive bay chassis 
+The LED panel for the 10-drive bay chassis includes the power button, NMI button, system ID light, 
+mini USB connector and a diagnostic LED. For more information on the diagnostic LEDs, see the 
+Dell PowerEdge R620 Owner’s Manual on Dell.com/Support/Manuals. 
+Quick Resource Locator 
+Dell PowerEdge 12th generation servers offers a Quick Resource Locator (QRL) — a model-specific 
+Quick Response (QR) code that is located inside the R620 chassis cover (see Figure 7). Use your 
+smartphone to access the Dell QRL app to learn more about the server.  
+Figure 7. 
+QRL code inside chassis cover 
+ 
+This QRL code allows you to: 
+ 
+View step-by-step videos, including overviews of system internals and externals, as well as 
+detailed, concise, task-oriented videos and installation wizards 
+ 
+Locate reference materials, including searchable owner’s manual content, LCD diagnostics, and 
+an electrical overview 
+ 
+Look up your service tag so you can quickly gain access to your specific hardware configuration 
+info and warranty information 
+ 
+Contact Dell directly (by link) to get in touch with technical support and sales teams and provide 
+feedback to Dell 
+These codes provide an easy way to retrieve the critical support information you need when you 
+need it, making you more efficient and effective in managing your hardware. 
+
+
+===== PAGE 15 =====
+
+ 
+ 
+15    PowerEdge R620 Technical Guide 
+Security features 
+The latest generation of PowerEdge servers has the features listed in Table 5 to help ensure the 
+security of your data center. 
+Table 5. 
+Security features 
+Security feature 
+Description 
+Cover latch  
+A tooled latch is integrated in the side cover to secure it to the rack chassis. 
+Bezel  
+An option metal bezel is mounted to the chassis front to provide the Dell ID. A 
+lock on the bezel is used to protect un-authorized access to hard drives.  System 
+status is viewable on the LCD screen when the bezel is installed. 
+TPM 
+The Trusted Platform Module (TPM) is used to generate/store keys, 
+protect/authenticate passwords, and create/store digital certificates. It also 
+supports the Intel Xeon TXT functionality. TPM can also be used to enable the 
+BitLocker™ hard drive encryption feature in Windows Server 2008. TPM 1.2 is 
+supported. No TPM version is available for China or Russia.  
+Power-off security 
+BIOS has the ability to disable the power button function. 
+Intrusion alert 
+An internal switch is used to detect chassis intrusion. 
+Secure mode 
+BIOS has the ability to enter a secure boot mode through system setup. This 
+mode includes the option to lock out the power and NMI switches on the 
+control panel or set up a system password. 
+
+
+===== PAGE 16 =====
+
+ 
+ 
+16    PowerEdge R620 Technical Guide 
+4 Processor 
+The Dell PowerEdge R620 server features the exceptional performance, value and power efficiency 
+of the Intel Xeon processor E5-2600 v2 product family. With up to 12 cores and 30MB cache, 
+E5-2600 v2 processors have the capacity to deliver performance gains of up to 40% over previous-
+generation E5-2600 processors. No matter your constraint — floor space, power or budget — 
+E5-2600 v2 processors can help you achieve more computational horsepower, in the same 
+footprint, with better security and power efficiency.  
+Processor features 
+The Intel Xeon processor E5-2600 v2 product family has powerful new features and improves upon 
+many of the capabilities of the predecessor Intel Xeon processor E5-2600 series:  
+ 
+With up to four additional cores, 10MB more cache and a 17% increase in memory speeds, 
+E5-2600 v2 processors may boost performance by up to 40% in Dell PowerEdge server 
+platforms. 
+ 
+Support for DDR3 1866MT/s memory provides faster connections throughout the system. 
+ 
+Up to 24 DIMM slots and support for up to 32GB DIMMs enable memory capacity of 768GB. 
+Dell’s exclusive Fault Resilient Memory technology provides a protected memory zone for a 
+hypervisor without consuming half of the total RAM in the system.  
+ 
+In combination with Fault Resilient Memory, E5-2600 v2 processors offer Failsafe Virtualization 
+for unsurpassed industry protection for virtual machines.  
+ 
+Intel Secure Key and Intel OS Guard deliver faster and more secure encryption.  
+ 
+Advanced Programmable Interrupt Controller virtualization (APICv) improves virtualization 
+performance by reducing virtual machine (VM) exits, thereby reducing overhead required to 
+service every APIC interrupt. 
+ 
+Intel Integrated PCI Express 3.0 provides up to 40 lanes per socket. 
+ 
+Intel Turbo Boost Technology 2.0 delivers up to double the boost of the previous generation 
+turbo technology. 
+ 
+Dell Processor Acceleration Technology (DPAT), enabled through the BIOS, minimizes transition 
+duration when the processor functions in turbo mode, thereby decreasing jitter and allowing for 
+lesser latency. 
+ 
+Intel Data Direct I/O (DDIO) allows I/O traffic to skip the main system memory and be directed 
+straight to the processor cache, which can provide a significant reduction in latency as well as 
+allowing memory to remain in a low-power state. 
+ 
+Intel Advanced Vector Extensions offer up to double the floating point operations per clock 
+cycle by doubling the length of registers, which can be useful in the large-number calculations 
+that are integral to many technical, financial and scientific computing problems. 
+For more information on Intel Xeon processor E5-2600 and E5-2600 v2 product families, visit 
+Intel.com. 
+Supported processors 
+The R620 supports up to two processors with up to 12 cores per processor. Table 6Table 6 lists the 
+Intel Xeon processors supported by the PowerEdge R620. For the latest information on supported 
+processors, visit Dell.com/PowerEdge. 
+
+
+===== PAGE 17 =====
+
+ 
+ 
+17    PowerEdge R620 Technical Guide 
+Table 6. 
+Supported processors 
+Model 
+Speed 
+Cache 
+QPI 
+Cores 
+Turbo 
+TDP 
+E5-2697 v2 
+2.7Ghz 
+30M 
+8.0GT/s 
+12 
+Yes 
+130W 
+E5-2695 v2 
+2.4Ghz 
+30M 
+8.0GT/s 
+12 
+Yes 
+115W 
+E5-26901 
+2.9GHz 
+20M 
+8.0GT/s 
+8 
+Yes 
+135W 
+E5-2690 v21 
+3.0GHz 
+20M 
+8.0GT/s 
+10 
+Yes 
+130W 
+E5-2680 
+2.7GHz 
+20M 
+8.0GT/s 
+8 
+Yes 
+130W 
+E5-2680 v2 
+2.8GHz 
+25M 
+8.0GT/s 
+10 
+Yes 
+115W 
+E5-26701 
+2.6GHz 
+20M 
+8.0GT/s 
+8 
+Yes 
+115W 
+E5-2670 v2 
+2.5GHz 
+25M 
+8.0GT/s 
+10 
+Yes 
+115W 
+E5-2665 
+2.4GHz 
+20M 
+8.0GT/s 
+8 
+Yes 
+115W 
+E5-2667 
+2.6GHz 
+15M 
+8.0GT/s 
+6 
+Yes 
+130W 
+E5-2667 v2 
+3.0GHz 
+20M 
+8.0GT/s 
+8 
+Yes 
+130W 
+E5-26601 
+2.2GHz 
+20M 
+8.0GT/s 
+8 
+Yes 
+95W 
+E5-2660 v2 
+2.2GHz 
+25M 
+8.0GT/s 
+10 
+Yes 
+95W 
+E5-2650L 
+1.8GHz 
+20M 
+7.2GT/s 
+8 
+Yes 
+70W 
+E5-2650L v2 
+1.7GHz 
+25M 
+8.0GT/s 
+10 
+Yes 
+60W 
+E5-2650 
+2.0GHz 
+20M 
+8.0GT/s 
+8 
+Yes 
+95W 
+E5-2650 v2 
+2.6GHz 
+20M 
+8.0GT/s 
+8 
+Yes 
+95W 
+E5-2643 
+3.3Ghz 
+10M 
+8.0GT/s 
+4 
+Yes 
+130W 
+E5-2643 v2 
+3.3GHz 
+15M 
+8.0GT/s 
+6 
+Yes 
+130W 
+E5-26401 
+2.5GHz 
+15M 
+7.2GT/s 
+6 
+Yes 
+95W 
+E5-2640 v2 
+2.0GHz 
+20M 
+7.2GT/s 
+8 
+Yes 
+95W 
+E5-2637 
+3.0GHz 
+5M 
+8.0GT/s 
+2 
+Yes 
+80W 
+E5-2637 v2 
+3.5GHz 
+10M 
+8.0GT/s 
+4 
+Yes 
+130W 
+E5-2630 
+2.3GHz 
+15M 
+7.2GT/s 
+6 
+Yes 
+95W 
+E5-2630 v2 
+2.6GHz 
+20M 
+7.2GT/s 
+6 
+Yes 
+80W 
+E5-2630L1 
+2.0GHz 
+15M 
+7.2GT/s 
+6 
+Yes 
+60W 
+E5-2630L v2 
+2.4GHz 
+15M 
+7.2GT/s 
+6 
+Yes 
+60W 
+E5-26201 
+2.0GHz 
+15M 
+7.2GT/s 
+6 
+Yes 
+95W 
+E5-2620 v2 
+2.1GHz 
+15M 
+7.2GT/s 
+6 
+Yes 
+80W 
+E5-26091 
+2.4GHz 
+10M 
+6.4GT/s 
+4 
+No 
+80W 
+E5-2609 v2 
+2.5GHz 
+10M 
+6.4GT/s 
+4 
+No 
+80W 
+
+
+===== PAGE 18 =====
+
+ 
+ 
+18    PowerEdge R620 Technical Guide 
+Model 
+Speed 
+Cache 
+QPI 
+Cores 
+Turbo 
+TDP 
+E5-2603 
+1.8GHz 
+10M 
+6.4GT/s 
+4 
+No 
+80W 
+E5-2603 v2 
+1.8GHz 
+10M 
+6.4GT/s 
+4 
+No 
+80W 
+1Model available for the life of the system. 
+For information on processor installation and configuration, see the Dell PowerEdge R620 Owner’s 
+Manual on Dell.com/Support/Manuals.  
+GPU support 
+The R620 supports graphics processing unit (GPU) technology, which can provide accelerated 
+performance for a variety of applications, including virtual desktop infrastructure (VDI) and HPC 
+implementations.  
+Internal GPU support 
+The R620 supports a 75W GPU card. The GPU card can support up to 1GB of dedicated GDDR5 
+memory and is actively cooled. An internal GPU is available through certified factory installation (CFI) 
+or field upgrade only. For a list of supported GPUs, see Table 7.  
+Table 7. 
+GPU cards supported 
+GPU card 
+Width 
+Power consumption 
+NVIDIA® Quadro® 2000 
+Single 
+62W 
+NVIDIA Quadro 600 
+Single 
+39W 
+ATI™ FirePro™ V5800 
+Single 
+75W 
+Note: With an internal GPU or a ¾ length PCIe card, the R620 cannot support a 10Gb Dell Select 
+Network Adapter (NDC) or any mini-type PERC. An adapter-type PERC is required with an internal 
+GPU configuration. 
+External GPU support 
+The R620 can connect to the PowerEdge C410x through an iPass cable. The NVIDIA HIC requires 
+one x16 PCIe slot.  
+Operating system support for GPUs 
+Some operating systems have not been validated to support GPUs. See Table 25 and Table 26 for 
+more information on operating system support of GPUs. 
+Chipset 
+The Intel C602 chipset is implemented on the PowerEdge R620. For more information, visit 
+Intel.com. 
+ 
+
+
+===== PAGE 19 =====
+
+ 
+ 
+19    PowerEdge R620 Technical Guide 
+5 Memory 
+More memory options are available than ever before with the Dell PowerEdge R620 — greater 
+capacities, higher frequencies and more flexibility. The R620 supports up to 768GB of memory  
+(24 DIMMs) and speeds up to 1866MT/s, providing high performance in a variety of applications. 
+High memory density means there is no compromise when it comes to virtualization.  
+Increase your uptime and reduce data loss due to Dell’s focus on reliability, availability and 
+serviceability (RAS) features. RAS aids in the rapid and accurate diagnosis of faults which require 
+service, increasing your memory reliability. System uptime is reinforced with RAS features like 
+memory mirroring, sparing and many others. 
+In addition to supporting existing unbuffered DIMMs (UDIMM) and registered DIMMs (RDIMM), the 
+R620 supports load-reduced DIMMs (LRDIMMs), which use a buffer to reduce memory loading and 
+provide greater density, allowing for the maximum platform memory capacity. 
+Supported memory 
+Table 8 lists the memory technologies supported by the R620. 
+Table 8. 
+Memory technologies supported 
+ Feature 
+UDIMM 
+RDIMM 
+LRDIMM 
+Register  
+No 
+Yes 
+Yes 
+Buffer 
+No 
+No 
+Yes 
+Frequencies* 
+1600MT/s 
+1333, 1600 or 1866MT/s 
+1600 or 1866MT/s 
+Ranks supported 
+1  
+1, 2 or 4 
+4 
+Capacity per DIMM 
+4GB 
+4, 8, 16, or 32GB 
+32GB 
+Maximum DIMMs per channel 
+2 
+3 
+3 
+DRAM technology 
+x8 
+x4 or x8 
+x4 
+Temperature sensor 
+Yes 
+Yes 
+Yes 
+Error Correction Code (ECC) 
+Yes 
+Yes 
+Yes 
+Single Device Disable Code 
+(SDDC) 
+Yes (with advanced 
+ECC mode) 
+Yes 
+Yes 
+Address parity 
+Yes 
+Yes 
+Yes 
+*Although the R720 and R720xd support DIMM speeds lower than 1600MT/s, you can only purchase these systems 
+with DIMM speeds of 1600MT/s and 1866MT/s on Dell.com/PowerEdge. 
+ 
+ 
+
+
+===== PAGE 20 =====
+
+ 
+ 
+20    PowerEdge R620 Technical Guide 
+Table 9 lists the DIMMs supported by the R620. For the latest information on supported memory, 
+visit Dell.com/PowerEdge. 
+Table 9. 
+DIMMs supported 
+Capacity 
+(GB) 
+Speed 
+(MT/s) 
+Type 
+Ranks 
+per 
+DIMM 
+Data 
+width 
+SDDC support 
+Voltage 
+4 
+1866 
+RDIMM 
+1 
+X8 
+Advanced ECC  
+1.5 
+4 
+1600 
+RDIMM 
+1 
+x8 
+Advanced ECC  
+1.35 
+4 
+1600 
+UDIMM 
+1 
+X8 
+Advanced ECC 
+1.35 
+8 
+1866 
+RDIMM 
+1 
+x4 
+All modes 
+1.5 
+8 
+1600 
+RDIMM 
+1 
+x4 
+All modes 
+1.35 
+16 
+1866 
+RDIMM 
+2 
+x4 
+All modes 
+1.5 
+16 
+1600 
+RDIMM 
+2 
+x4 
+All modes 
+1.35 
+32 
+1866 
+LRDIMM 
+4 
+x4 
+All modes 
+1.5 
+32 
+1600 
+LRDIMM 
+4 
+x4 
+All modes 
+1.35 
+32 
+1333 
+RDIMM 
+4 
+x4 
+All modes 
+1.35 
+ 
+Memory configurations 
+The R620 server supports flexible memory configurations ranging from capacities of 4GB to 768GB. 
+The system supports up to 12 DIMMs per processor (up to 24 DIMMs in a dual-processor 
+configuration). The R620 has four memory channels per processor, with each channel supporting 
+up to three DIMMs.   
+The R620 supports a flexible memory configuration, according to these basic rules: 
+ 
+Speed: If DIMMs of different speeds are mixed, all channels across all processors operate at the 
+slowest DIMM’s common frequency. 
+ 
+DIMM type: Only one type of DIMM is allowed per system: UDIMM, RDIMM or LRDIMM. These 
+types cannot be mixed.  
+The following additional memory population guidelines apply to the R620: 
+ 
+Up to two quad-rank (QR) DIMMs and up to three dual-rank (DR) or single-rank (SR) DIMMs may 
+be populated per channel. Although an LRDIMM is physically a QR DIMM, logic on the LRDIMM 
+can make it appear as a DR DIMM to the system, allowing up to three LDRIMMs per channel. 
+ 
+DIMMs must be installed in each channel, starting with the DIMM farthest from the processor.  
+ 
+DIMMs should be installed with largest rank count to smallest. For example, if DR DIMMS are 
+mixed with SR DIMMs, DR DIMMS should be placed in the lowest DIMM slots, followed by the SR 
+DIMMs. 
+For more information on memory configuration, see the Dell PowerEdge R620 Owner’s Manual on 
+Dell.com/Support/Manuals.  
+Memory speed 
+The R620 supports memory speeds of up to 1866MT/s, depending on the DIMM types installed and 
+the configuration. The loading within a channel significantly affects memory speed.  
+
+
+===== PAGE 21 =====
+
+ 
+ 
+21    PowerEdge R620 Technical Guide 
+ 
+Table 10 illustrates the maximum achievable speed of the Intel Xeon processor E5-2600 and        
+E5-2600 v2 product families based on memory loads. 
+ 
+Green boxes are defaults for performance per watt  
+ 
+White boxes (with lower voltage) can save power but will run at slower speeds 
+ 
+White boxes (with higher voltage) can be custom configured in the bios 
+Table 10. 
+Memory speed capabilities 
+DIMM  
+type 
+DIMM  
+rank  
+Intel Xeon processor E5-2600 and E5-2600 v2 
+product families  
+DIMMs per channel (DPC) 
+1 DPC  
+2 DPC 
+3 DPC 
+1.35V 
+1.5V 
+1.35V 
+1.5V 
+1.35V 
+1.5V 
+RDIMM 
+1R/2R 
+1866 
+1866 
+ 
+1333 
+RDIMM 
+1R/2R 
+1600 
+1600 
+1600 
+1600 
+1066 
+1333 
+UDIMM 
+1R/2R 
+1600 
+1600 
+1600 
+1600 
+ 
+ 
+RDIMM 
+4R 
+1066 
+1333 
+1066 
+1066 
+ 
+ 
+LRDIMM 
+4R 
+1866 
+1600 
+ 
+1333* 
+LRDIMM 
+4R 
+1600 
+1600 
+1600 
+1600 
+1066 
+1333* 
+*For PowerEdge T620, the speed will clock down to 1066MT/s. 
+ 
+Memory RAS features 
+Reliability, availability and serviceability (RAS) features help keep the system online and operational 
+without significant impact to performance, and can decrease data loss and crashing due to errors. 
+RAS aids in rapid, accurate diagnosis of faults which require service. Table 11 describes the RAS 
+features supported on the R620. 
+Table 11. 
+Memory RAS features 
+Feature 
+Description 
+Dense configuration 
+optimized profile 
+Increased memory reliability can result from this selectable platform profile, which 
+adjusts parameters to reduce faults regarding refresh rates, speed, temperature 
+and voltage. 
+Memory demand and 
+patrol scrubbing 
+Demand scrubbing is the ability to write corrected data back to the memory once 
+a correctable error is detected on a read transaction. 
+Patrol scrubbing proactively searches the system memory, repairing correctable 
+errors. 
+Recovery from single 
+DRAM device failure 
+Recovery from Single DRAM Device Failure (SDDC) provides error checking and 
+correction that protects against any single memory chip failure as well as multi-bit 
+errors from any portion of a single memory chip. 
+Failed DIMM isolation 
+This feature provides the ability to identify a specific failing DIMM channel pair, 
+thereby enabling the user to replace only the failed DIMM pair. 
+
+
+===== PAGE 22 =====
+
+ 
+ 
+22    PowerEdge R620 Technical Guide 
+Feature 
+Description 
+Memory mirroring: 
+intra-socket 
+Memory mirroring is a method of keeping a duplicate (secondary or mirrored) 
+copy of the contents of memory as a redundant backup for use if the primary 
+memory fails. The mirrored copy of the memory is stored in memory of the same 
+processor socket. 
+Memory address parity 
+protection 
+This feature provides the ability to detect transient errors on the address lines of 
+the DDR channel. 
+Memory sparing (rank) 
+Memory sparing allocates one rank per channel as a spare. If excessive correctable 
+errors occur in a rank or channel, it is moved to the spare area while the operating 
+system is running to prevent the error from causing an uncorrectable failure. 
+Memory thermal 
+throttling 
+This feature helps to optimize power/performance and can also be used to 
+prevent DIMMs from overheating. 
+ 
+For information on memory mirroring and sparing configurations, see the Dell PowerEdge R620 
+Owner’s Manual on Dell.com/Support/Manuals. 
+ 
+
+
+===== PAGE 23 =====
+
+ 
+ 
+23    PowerEdge R620 Technical Guide 
+6 Storage 
+With comprehensive storage options, the Dell PowerEdge R620 offers a choice of drive types, 
+internal and external storage controllers, and different chassis and backplane options for a varied 
+numbers of drives. 
+Features such as Express Flash PCIe solid-state drives and CacheCade provide accelerated 
+performance over previous technologies. Express Flash drives use PCIe lanes to connect directly to 
+the processor and chipset, and are easily accessible through the hot-plug drive bay. CacheCade 
+uses Dell PERC storage controllers to accelerate performance over hard drives or traditional 
+solid-state drives (SSDs). 
+Internal storage  
+With the 8-drive bay or 10-drive bay chassis options, the R620 supports four different internal 
+storage options: 
+ 
+4 x 2.5-inch drives  
+ 
+4 x 2.5-inch drives plus 2 x 2.5-inch Express Flash PCIe SSDs 
+ 
+8 x 2.5-inch drives  
+ 
+10 x 2.5-inch drives  
+Note: A system cannot be upgraded or reconfigured after point of purchase. 
+Supported hard drives  
+The R620 supports up to ten 2.5-inch hard drives or solid state drives. Table 12 lists more 
+information about these drives. For additional information, see Dell.com/PowerEdge. 
+Table 12. 
+Supported hard drives 
+Form  
+factor 
+Type 
+Speed  
+(rpm) 
+Capacities 
+2.5” 
+SATA  
+7.2K 
+250GB, 500GB, 1TB 
+Nearline SAS 
+7.2K 
+500GB, 1TB* 
+SAS  
+10K 
+300GB, 600GB, 900GB*, 1.2TB 
+SAS  
+15K 
+146GB, 300GB* 
+SAS SSD  
+N/A 
+200GB, 400GB  
+SATA SSD  
+N/A 
+100GB,  200GB, 400GB,  
+PCIe SSD  
+N/A 
+175GB, 350GB, 700GB, 1.4TB 
+*SED available 
+ 
+ 
+
+
+===== PAGE 24 =====
+
+ 
+ 
+24    PowerEdge R620 Technical Guide 
+Express Flash drives 
+Express Flash drives use PCIe and SSD technologies to provide performance, scalability and optimal 
+serviceability. Accelerated performance with high IOPs is made possible without requiring processor 
+resources or capturing DRAM. Express Flash drives also use a standardized 2.5-inch hot-plug form 
+factor that saves critical PCIe slot space by moving drives from the back to the front of the system 
+and allows a common management process for all drives. 
+The PowerEdge R620 has an option to support up to two 2.5-inch, hot-plug Express Flash drives 
+with capacities of 175GB or 350GB.  
+External storage 
+The R620 supports the external storage devices types listed in Table 13. For more information, see 
+Dell.com/Storage. 
+Table 13. 
+External storage device types 
+Device type 
+Description 
+External tape 
+Supports connection to external USB tape products (supports boot 
+from PowerVault™ RD1000) 
+Supports connection to external SAS tape products 
+Supports connection to external FC tape products 
+Supports connection to external SCSI* tape products (legacy support 
+only) 
+Supports connection to external iSCSI tape products 
+NAS/IDM appliance 
+software 
+Supports the NAS software stack 
+PowerVault NAS 
+Supports connection to current PowerVault NAS products 
+PowerVault DAS 
+Supports connection to current PowerVault DAS (including JBOD 
+and RBOD enclosures) products 
+PowerVault SAN 
+Supports connection to current PowerVault SAN (including 
+EqualLogic™ iSCSI, Dell|EMC arrays, and JBOD disk enclosures) 
+products 
+PowerVault IDM 
+Supports connection to current PowerVault IDM (archive solutions, 
+deduplication, B2D and data protection appliances) products 
+*No SCSI HBA support for R620 
+ 
+ 
+
+
+===== PAGE 25 =====
+
+ 
+ 
+25    PowerEdge R620 Technical Guide 
+Table 14 lists the external storage options for the R620. For more information, see Dell.com/Storage. 
+Table 14. 
+External storage options 
+Device type 
+Description 
+Disk storage options 
+Dell EqualLogic PS6000 Series 
+Dell EqualLogic PS5000 Series 
+Dell EqualLogic PS4000 Series  
+Dell PowerVault RD1000 disk-based backup system 
+Dell PowerVault MD3200 Modular Disk Storage Array 
+Dell PowerVault MD3200i iSCSI Disk Storage Array 
+Dell PowerVault MD1120 SAS external storage system 
+Dell|EMC products 
+Dell|EMC AX4-5  
+Dell|EMC CX4-120  
+Dell|EMC CX4-240  
+Dell|EMC CX4-480  
+Dell|EMC CX4-960  
+Dell|EMC NX4 
+Dell|EMC NS120 
+Dell|EMC NS480 
+Dell|EMC DD140 
+Dell|EMC DD610 
+Dell|EMC DD640 
+PowerVault NAS 
+PowerVault NX300  
+PowerVault NX3000  
+PowerVault NX3100 
+PowerVault IDM  
+PowerVault DL2200  
+PowerVault DX Platform 
+Storage controllers 
+Dell provides highly capable RAID options for you to ensure that your data remains safe. Dell’s RAID 
+controller options offer impressive performance improvements, including the following features:  
+ 
+FastPath™ I/O: This feature can help accelerate performance when operating on SSDs.  
+ 
+Split mirror: This function allows you to break mirrored disk connection in order to quickly 
+replace a drive.  
+ 
+Physical disk power management (Dimmer Switch™): This feature allows for power control of 
+spare or idle drives, which can save energy and operating expenses. 
+Supported RAID controllers 
+The newest line of PERC (PowerEdge RAID Controller) cards offer high I/O performance for 
+database applications and streaming digital media environments. The R620 supports the new  
+PERC 8 family of controllers with improved functionality and faster performance. The internal RAID 
+controllers have a dedicated connection to the system board. 
+The default PERC for the R620 is a mini-type PERC. However, for a system with an internal GPU 
+card or a card between half-length and ¾-length, the adapter-type PERC is required. The R620 also 
+
+
+===== PAGE 26 =====
+
+ 
+ 
+26    PowerEdge R620 Technical Guide 
+supports the new software RAID solution that supports RAID 0, 1, 5 and 10. The R620 supports the 
+PERC cards listed in Table 15. For more information about the latest PERC offerings, see 
+Dell.com/PERC. 
+Table 15. 
+Supported RAID controllers 
+Controller 
+Description 
+Features 
+RAID 
+modes 
+supported 
+Form factor 
+Usage 
+model 
+PERC H810 
+External 
+Eight-port, external and 
+6Gp/s PCIe RAID controller 
+that supports up to 192 
+SATA and SAS hard drives 
+or SSDs 
+Includes 1GB NV DDR3 
+cache, premium 
+performance and feature 
+set, security SED/EKMS, 
+and SSD as cache 
+0, 1, 10, 5, 
+50, 6, 60 
+Adapter 
+Premium 
+performance 
+PERC H710P 
+Internal 
+Eight-port, internal 6Gb/s 
+PCIe RAID controller that 
+supports up to 32 SATA 
+and SAS hard drives or 
+SSDs 
+Includes 1GB NV DDR3 
+cache, premium 
+performance and feature 
+set, security SED/EKMS, 
+and SSD as cache 
+0, 1, 10, 5, 
+50, 6, 60 
+Integrated 
+mini-type1 
+and adapter-
+type2 
+Premium 
+performance 
+PERC H710 
+Internal 
+Eight-port, internal 6Gb/s 
+PCIe RAID controller that 
+supports up to 32 SATA 
+and SAS hard drives or 
+SSDs 
+Includes 512MB DDR3 
+cache, advanced feature 
+set, security SED/EKMS 
+0, 1, 10, 5, 
+50, 6, 60 
+Integrated 
+mini-type1 
+and adapter-
+type2 
+Performance 
+PERC H310 
+Internal 
+Eight-port, internal 6Gb/s 
+PCIe RAID that supports up 
+to 32 SATA and SAS hard 
+drives or SSDs 
+Supports hot-plug drives, 
+expansion, pass-through 
+0, 1, 10, 5, 
+50 
+Integrated 
+mini-type1 
+and adapter-
+type2 
+Value 
+PERC S110  
+Software 
+RAID 
+3Gb/s SATA software RAID 
+controller that supports up 
+to 4 physical disks or 8 
+virtual disks 
+Supports hot-plug SATA 
+drives (4 drive 
+maximum); no 
+expansion; Microsoft 
+Windows only 
+0, 1, 5, 10 
+System 
+board-
+embedded 
+SATA 
+Entry-level 
+1Mini-type PERCs are not supported with an internal GPU or a ¾ length PCIe card  
+2Adapter-type required with the two-PCIe slot chassis and required when configuring an internal GPU or ¾-length PCIe card 
+ 
+ 
+
+
+===== PAGE 27 =====
+
+ 
+ 
+27    PowerEdge R620 Technical Guide 
+Table 16 lists the R620 backplane options for supported Dell PERC cards. 
+Table 16. 
+Hard-drive backplane options 
+Backplane options 
+Controller 
+Drive types 
+4 x 2.5”1 
+PERC S110, H310, H710, H710P 
+SATA HDD/SSD 
+SAS HDD/SSD 
+8 x 2.5"1 
+PERC H310, H710, H710P 
+SATA HDD/SSD 
+SAS HDD/SSD 
+10 x 2.5"2 
+PERC H310, H710, H710P 
+SATA HDD/SSD 
+SAS HDD/SSD 
+4 x 2.5” + 2 PCIe SSDs3 
+PCIe SSD interface card + PERC H310, H710, H710P 
+Express Flash PCIe SSD 
+1Mini-type and adapter-type PERC available; adapter-type is available with the two-PCIe slot chassis and required when 
+configuring internal GPU or 3/4 length PCIe card. 
+210-drive bay chassis supports only the mini-type PERC. 
+3Express Flash PCIe SSD configurations support only the mini-type PERC. 
+CacheCade 
+CacheCade provides automated storage tiering on SSDs with the PERC H810 and H710P. It works by 
+detecting the most often accessed data and copying it over time to the CacheCade SSD(s) where 
+that cached data is accessed directly, instead of accessing the hard disk drives. This can dramatically 
+increase how your applications respond when they are under peak traffic times and how they 
+perform when response time is critical. 
+CacheCade provides cost-effective performance scaling for database-type applications that 
+perform lots of random reads, and saves the cost of adding extra drives. 
+Optical drive 
+The R620 supports one ultra-slim, 9.5mm, internal optical drive (4-, 6-, or 8-drive bay options) on 
+the system board embedded SATA. The R620 10-drive bay chassis, however, does not support an 
+internal optical drive due to space limitation; an external USB optical drive is an option for the 
+10-drive bay chassis. The R620 supports DVD-ROM and DVD+/-RW. An optical drive cable is 
+included. 
+Tape drive 
+The R620 supports an external tape drive only through the SAS 6Gbps HBA. The R620 does not 
+support internal tape drives. 
+
+
+===== PAGE 28 =====
+
+ 
+ 
+28    PowerEdge R620 Technical Guide 
+7 Networking and PCIe 
+The Dell PowerEdge R620 offers balanced, scalable I/O capabilities, including integrated PCIe 3.0 
+capable expansion slots. Dell Select Network Adapters, Dell’s network daughtercards, let you choose 
+the right network fabric without using up a valuable PCI slot. Pick the speed, technology, vendor and 
+other options such as switch independent partitioning, which lets you share and manage bandwidth 
+on 10GbE connections. 
+Select Network Adapter 
+The Select Network Adapter family includes flexible LAN on motherboard (LOM) card options for the 
+Dell PowerEdge 12th generation servers. The Select Network Adapter form factor delivers the value 
+of LOM integration with the system, including BIOS integration and shared port for manageability, 
+while providing the flexibility of a modular card. 
+The R620 supports one custom rack network daughter card (NDC), as part of the Select Network 
+Adapter family, to house the complete LOM subsystem. The rack NDC options supported on the 
+R620 include a selection of 1GbE and 10GbE port cards, such as 1000 Base-T, 10Gb Base-T, and 
+10Gb SFP+. 
+Figure 8. 
+Rack network daughter card (NDC) 
+ 
+ 
+ 
+
+
+===== PAGE 29 =====
+
+ 
+ 
+29    PowerEdge R620 Technical Guide 
+Table 17 lists the available Select Network Adapter options and supported features for the R620. 
+Table 17. 
+Supported Select Network Adapter options and features 
+Features 
+Broadcom 
+5720 Base-T 
+(default) 
+Intel I350 
+Base-T 
+Broadcom 
+57800S 
+SFP+1 
+Broadcom 
+57800S  
+Base-T1 
+Intel X540 
+Base-T 1 
+Intel 
+I350/X520 
+SFP+ 1 
+Ports x link 
+speed 
+4 x 1Gb 
+4 x 1Gb 
+2 x 1Gb +  
+2 x 10Gb2 
+2 x 1Gb +  
+2 x 10Gb2 
+2 x 1Gb +  
+2 x 10Gb2 
+2 x 1Gb +  
+2 x 10Gb2 
+Supported  
+speed 
+1Gb/s 
+1Gb/s 
+1Gb/s and 
+10Gb/s 
+1Gb/s and 
+10Gb/s 
+1Gb/s and 
+10Gb/s 
+1Gb/s and 
+10Gb/s 
+SR-IOV 
+Not 
+supported 
+Not 
+supported Supported3 Supported3 Supported3 Supported3 
+ISCSI HBA 
+Not 
+supported 
+Not 
+supported Supported3 Supported3 Not  
+supported 
+Not  
+supported 
+EEE 
+Supported 
+Supported Not  
+supported 
+Not  
+supported 
+Not  
+supported 
+Not  
+supported 
+FCoE 
+Not 
+supported 
+Not 
+supported Supported4 Supported4 Supported4 Supported4 
+Switch 
+independent 
+partitioning 
+Not 
+supported 
+Not 
+supported Supported5 Supported5 Not  
+supported 
+Not  
+supported 
+DCB 
+Not 
+supported 
+Not 
+supported Supported6 Supported6 Supported6 Supported6 
+iSCSI TLV 
+Not 
+supported 
+Not 
+supported Supported7 Supported7 Supported7 Supported7 
+1These cards have two chipsets that offer the choice of either 10GbE or 1GbE.  
+210Gb NDCs are not supported with an internal GPU or a ¾ length PCIe card.  
+3Applies to only 10Gb ports. (For switch independent partitioning support, the maximum number of partitions supported is 
+four, two partitions per 10Gb port).  
+System management integration 
+With R620, the job of deploying, updating, monitoring and maintaining the Select Network Adapters 
+is fast and easy. System management integration features include the following: 
+ 
+Pre-boot: Using the Dell Lifecycle Controller graphical user interface (GUI) to set configuration 
+such as bandwidth allocation or firmware revision level 
+ 
+Post-boot: Agent-free out-of-band or high-speed in-band connection over LOM through the 
+Operating System/BMC pass-thru feature for sensory information 
+ 
+Automation of firmware and driver version deployment upon component replacement 
+ 
+Automatic monitoring of NIC status and notification on SNMP traps 
+ 
+Local or remote re-configuration of any NIC, physical or virtual 
+ 
+PXE boot enabled on all LOM and NDCs for ease of use 
+
+
+===== PAGE 30 =====
+
+ 
+ 
+30    PowerEdge R620 Technical Guide 
+ 
+Boot from SAN (iSCSI, FCoE) configuration for networking devices through the USC 
+PCIe expansion 
+PCIe slots 
+PCIe connectivity is integrated with the processor in that the number of processors in a system 
+impacts the number of PCIe slots and the bandwidth of each PCIe slot. The PowerEdge R620 offers 
+a two-slot option (available with the 4-, 6-, or 8-drive bay chassis only) and a three-slot option (this 
+is the only option on the 10-drive bay chassis, but available also with the 4-, 6-, and 8-drive bay 
+chassis). 
+For an R620 system with one processor, one two-slot option is available:  
+ 
+Two PCIe x16 slots with one x16 bandwidth and one x8 bandwidth 
+For an R620 system with two processors, two slot options are available: 
+ 
+Two PCIe x16 slots, both slots with x16 bandwidth 
+ 
+Three PCIe x16 slots with two x16 bandwidth and one x8 bandwidth 
+ 
+Table 18 lists the details of the PCIe slot options. 
+Table 18. 
+PCIe slot options 
+ 
+Three PCIe slots with two 
+processors1 
+Two PCIe slots with two 
+processors2 
+Two PCIe slots with one 
+processor 
+PCIe slot 1 
+PCIe x16 connector with x8 
+bandwidth; half-length, 
+half-height 
+PCIe x16 connector with 
+x16 bandwidth; half-length, 
+half-height 
+PCIe x16 connector with x8 
+bandwidth; half-length, 
+half-height 
+PCIe slot 2 
+PCIe x16 connector with 
+x16 bandwidth; half-length, 
+half-height 
+PCIe x16 connector with 
+x16 bandwidth; 3/4 length3, 
+full-height 
+PCIe x16 connector with 
+x16 bandwidth; 3/4 length3, 
+full-height 
+PCIe slot 3 
+PCIe x16 connector with 
+x16 bandwidth; half-length, 
+half-height 
+N/A 
+N/A 
+Available with 
+4-, 6-, 8- or 10-drive bay 
+chassis 
+4-, 6-, or 8-drive bay 
+chassis 
+4-, 6-, or 8-drive bay 
+chassis 
+1Slot 1 and slot 2 require a second processor. 
+2Slot 1 requires a second processor. 
+310Gb NDCs are not supported with a ¾ length PCIe card. 
+ 
+ 
+
+
+===== PAGE 31 =====
+
+ 
+ 
+31    PowerEdge R620 Technical Guide 
+PCIe expansion cards 
+The R620 supports a variety of PCIe expansion cards. Table 19 lists the supported add-in NICs and 
+HBAs.  
+Table 19. 
+Supported NICs and HBAs 
+Type 
+Adapter 
+1Gb/10Gb NICs 
+Broadcom 5720 2x1Gb Base-T 
+Broadcom 5719 4x1Gb Base-T 
+Intel I350 2x1Gb Base-T 
+Intel I350 4x1Gb Base-T 
+Broadcom 57810S 2x10Gb SFP+ 
+Broadcom 57810S 2x10Gb Base-T 
+Intel X520 2x10Gb SFP+  
+Intel X540 2x10Gb Base-T  
+QLogic® QLE8262 2x10Gb SFP+ 
+Brocade® BR1020 2x10Gb SFP+ 
+Mellanox ConnectX-3 dual-port 40GbE QSFP+ 
+network adapter 
+Mellanox ConnectX-3 dual-port 10GbE DA/SFP+ 
+network adapter 
+FC4/FC8/F16 HBAs  
+QLogic QLE2460 4Gb 
+QLogic QLE2462 4Gb 
+QLogic QLE2560 8Gb 
+QLogic QLE2562 8Gb 
+QLogic QLE2660 16Gb 
+QLogic QLE2662 16Gb 
+Emulex LPe12000 8Gb 
+Emulex LPe12002 8Gb 
+Brocade BR815 8Gb 
+Brocade BR825 8Gb 
+ 
+ 
+ 
+
+
+===== PAGE 32 =====
+
+ 
+ 
+32    PowerEdge R620 Technical Guide 
+Table 20 lists additional supported PCIe expansion cards for the R620. 
+ 
+Table 20. 
+Additional supported PCIe expansion cards 
+Type 
+Adapter 
+PCIe SSD 
+Fusion-io® IoDrive® 640GB V1 
+Fusion-io PCIe SSD V2 
+PCIe bridge 
+PCIe bridge adapter for front-accessible, hot-plug 
+Express Flash PCIe SSDs 
+ 
+For the latest information on all supported add-in PCIe expansion cards for the R620, visit 
+Dell.com/PowerEdge. For PCIe card dimensions, see Table 36 in Appendix A. 
+
+
+===== PAGE 33 =====
+
+ 
+ 
+33    PowerEdge R620 Technical Guide 
+8 Power, thermal and acoustics 
+Lower overall system-level power draw is a result of Dell’s breakthrough system design. The R620 
+PowerEdge server maximizes performance per watt through a combination of power and cooling, 
+energy efficient technologies, and tools. Additionally, the PowerEdge R620 has an extensive 
+collection of sensors that automatically track thermal activity, which helps regulate temperature 
+thereby reducing server noise and power consumption.  
+Power consumption and energy efficiency 
+With the rise in the cost of energy coupled with increasing data center density, Dell provides tools 
+and technologies to help you realize greater performance with less energy cost and waste. More 
+efficient data center usage can reduce costs by slowing the need for additional center space.  
+Table 21 lists the tools and technologies Dell offers to help you achieve your data center goals by 
+lowering power consumption and increasing energy efficiency. 
+Table 21. 
+Power tools and technologies 
+Feature 
+Description 
+Power supply units (PSU) 
+portfolio 
+Dell’s PSU portfolio includes intelligent features such as dynamically 
+optimizing efficiency while maintaining availability and redundancy. Find 
+additional information in the Power supply units section. 
+Tools for right-sizing 
+Energy Smart Solution Advisor (ESSA) is a tool that helps you determine the 
+most efficient configuration possible. With ESSA, you can calculate the 
+power consumption of your hardware, power infrastructure, and storage. 
+ESSA can help you determine exactly how much power your server will use 
+at a given workload, and the PSU Advisor can help you choose the best, 
+most efficient PSU for your workload. Learn more at Dell.com/ESSA. 
+Industry compliance 
+Dell’s servers are compliant with all relevant industry certifications and 
+guidelines, including 80 PLUS, Climate Savers, and ENERGY STAR. 
+Power monitoring 
+accuracy 
+PSU power monitoring improvements include:  
+ 
+Power monitoring accuracy of 1%, whereas the industry standard is 5% 
+ 
+More accurate reporting of power 
+ 
+Better performance under a power cap 
+Power capping 
+Use Dell’s systems management to set the power cap limit for your systems 
+to limit the output of a PSU and reduce system power consumption. Dell is 
+the first hardware vendor to leverage Intel Node Manager for circuit-breaker 
+fast capping. 
+Systems management 
+iDRAC7 Enterprise provides server-level management that monitors, reports 
+and controls power consumption at the processor, memory and system 
+level. 
+Dell OpenManage Power Center delivers group power management at the 
+rack, row and data center level for servers, power distribution units and 
+uninterruptible power supplies. 
+
+
+===== PAGE 34 =====
+
+ 
+ 
+34    PowerEdge R620 Technical Guide 
+Feature 
+Description 
+Active power management 
+Intel Node Manager is an embedded technology that provides individual 
+server-level power reporting and power limiting functionality. Dell offers a 
+complete power management solution comprised of Intel Node Manager 
+accessed through Dell iDRAC Enterprise and OpenManage Power Center 
+that allows policy-based management of power and thermals at the 
+individual server, rack and data center level. 
+Hot spare reduces power consumption of redundant power supplies. 
+Thermal control of fan speed optimizes the thermal settings for your 
+environment to reduce fan consumption and lower system power 
+consumption. 
+Idle power enables Dell servers to run as efficiently when idle as when at full 
+workload. 
+Fresh Air cooling 
+ 
+With the thermal design and reliability of Dell products, certain 
+configurations have the capability to operate at excursion-based 
+temperatures beyond the industry standard of 35°C (95°F) up to 45°C (113°F) 
+for excursionary periods of time and up to a 26°C dew point at 90% relative 
+humidity; without impacting your availability model. Find additional 
+information at Dell.com/FreshAir. 
+Rack infrastructure 
+Dell offers some of the industry’s highest-efficiency power infrastructure 
+solutions, including: 
+ 
+Power distribution units 
+ 
+Uninterruptible power supplies 
+ 
+Energy Smart containment rack enclosures 
+Find additional information at Dell.com/us/en/enterprise/ 
+power-and-cooling-technologies-components-rack-infrastructure.aspx. 
+Find additional information at Dell.com/PowerAndCooling and Power.com/PowerCenter. 
+Power supply units 
+Energy Smart power supplies have intelligent features, such as the ability to dynamically optimize 
+efficiency while maintaining availability and redundancy. Also featured are enhanced 
+power-consumption reduction technologies, such as high-efficiency power conversion and 
+advanced thermal-management techniques, and embedded power-management features, 
+including high-accuracy power monitoring. 
+The following power supply unit options are available for the R620: 
+ 
+495W AC 
+ 
+750W AC 
+ 
+1100W AC 
+ 
+1100W DC 
+ 
+ 
+
+
+===== PAGE 35 =====
+
+ 
+ 
+35    PowerEdge R620 Technical Guide 
+Figure 9 shows a 750W power supply unit extended from the R620 chassis. 
+Figure 9. 
+750W power supply unit 
+ 
+The PowerEdge R620 supports up to two AC or DC power supplies with 1 + 1 redundancy, 
+auto-sensing, and auto-switching capability.  
+Dell power supplies have achieved Titanium efficiency levels as shown in Table 22. 
+Table 22. 
+Power supply efficiency 
+Form factor 
+Output 
+Class 
+Efficiency targets by load 
+10%  
+20%  
+50%  
+100%  
+Redundant 86mm  
+495W AC 
+Platinum  
+82.0%  
+90.0%  
+94.0%  
+91.0%  
+750W AC 
+Titanium 
+90.0%  
+94.0%  
+96.0%  
+91.0%  
+750W AC 
+Platinum  
+82.0% 
+90.0% 
+94.0% 
+91.0% 
+1100W AC 
+Platinum  
+89.0%  
+93.0%  
+94.5%  
+92.0%  
+1100W DC 
+N/A 
+80.0%  
+88.0%  
+91.0%  
+88.0%  
+ 
+Thermal and acoustics 
+Optimized thermal management makes the PowerEdge R620 cool and quiet. Benefiting from smart 
+cooling fan speed control, the R620 can keep both high performance and good acoustics across a 
+wide range of ambient temperatures from 10°C to 35°C (50°F to 95°F) and to extended ambient 
+temperature ranges (see Table 33). Operating environments for the R620 can vary from the data 
+center to general-use spaces. In typical and minimum configurations, the R620 is quiet enough to 
+be used in an office environment. 
+Thermal design  
+The thermal design of the PowerEdge R620 reflects the following: 
+ 
+Multiple sensors are monitored for thermal feedback control: The PowerEdge R620 
+dynamically controls system cooling fan speed based on responses from all component 
+temperature sensors, including processors, hard disk drives, DIMMs, storage cards and the inlet 
+ambient temperature. Thermal control detects and responds to hardware configuration. Thermal 
+
+
+===== PAGE 36 =====
+
+ 
+ 
+36    PowerEdge R620 Technical Guide 
+management adjusts cooling according to what the system really needs, and draws lower fan 
+power draw and generates lower acoustical noise levels than servers without such controls. 
+ 
+User-configurable settings: An R620 thermal control design target is to minimize the 
+contribution of fan power to overall system power. However, with the understanding and 
+realization that every customer has a unique set of circumstances or expectations of the system, 
+in this generation of servers, we are introducing limited user-configurable settings in the iDRAC7 
+BIOS setup screen. For more information, see the Dell PowerEdge R620 Owner’s Manual on 
+Dell.com/Support/Manuals and “Advanced Thermal Control: Optimizing across Environments 
+and Power Goals” on Dell.com. 
+ 
+Cooling redundancy: The R620 allows continuous operation with a fan failure in the system. 
+ 
+Environmental specifications: The optimized thermal management makes the R620 reliable 
+under a wide range of operating environments as shown in the environmental specifications in 
+Table 33. Many configurations are also compliant under expanded operating temperature 
+environments, but a few are not. 
+Acoustical design  
+The acoustical design of the PowerEdge R620 reflects the following: 
+ 
+Versatility: The PowerEdge R620 saves you power draw in the data center, but it also is quiet 
+enough for the office environment in typical and minimum configurations. Compare the values 
+for LpA in Table 23 for these configurations and note that they are lower than ambient 
+measurements of typical office environments. 
+ 
+Adherence to Dell’s high sound quality standards: Sound quality is different from sound power 
+level and sound pressure level in that it describes how humans respond to annoyances in sound, 
+like whistles and hums. One of the sound quality metrics in the Dell specification is prominence 
+ratio of a tone, which is listed in Table 23. 
+ 
+Noise ramp and descent during bootup from power off: Fan speeds and noise levels ramp 
+during the boot process (from power off to power on) in order to add a layer of protection for 
+component cooling in the case that the system were not to boot properly. To keep bootup as 
+quiet as possible, the fan speed reached during bootup is limited to about half of full speed. 
+ 
+Noise level dependencies: If acoustics is important to you, you may want to make the following 
+configuration choices and settings for the PowerEdge R620 because they result in quieter 
+operation: 
+— iDRAC7 BIOS settings: Performance Per Watt (DAPC or OS) may be quieter than Performance 
+or Dense Configuration (iDRAC Settings > Thermal > Max. Exhaust Temperature or Fan speed 
+offset). 
+— Hot spare feature of power supply unit: In the system default setting, the Hot Spare Feature is 
+disabled; acoustical output from the power supplies is lowest in this setting. 
+— Hard drive noise is highly dependent on spindle speed; a 7.2K RPM SATA hard drive has the 
+quietest hard drive operation and a 15K RPM SAS hard drive has the loudest. 
+However, some components cause significant but not necessarily intuitive increases in loudness 
+when they are installed in the R620. Contributors to acoustical output can include: 
+— PCIe SSD cards (such as Fusion-io) 
+— GPUs 
+— Express Flash PCIe SSDs 
+— 10Gb NIC 
+— Number of installed processors  
+— Number of installed PCIe cards 
+
+
+===== PAGE 37 =====
+
+ 
+ 
+37    PowerEdge R620 Technical Guide 
+Table 23 details the acoustical performance for the R620. 
+Table 23. 
+Acoustical performance 
+Configuration 
+(23 ± 2°C 
+ambient) 
+CPUs 
+Hard 
+drives 
+Power 
+supply 
+unit 
+Memory 
+PCI 
+card/HDD 
+controller 
+Operating 
+mode 
+LWA-UL1 
+(bels) 
+LpA
+2
+ 
+(dBA) 
+Prominent 
+tones3 
+Minimum 
+1 
+1 x 
+250G
+B 
+SATA 
+(7.2K) 
+1 x 
+495W 
+1 x 2GB 
+1333Hz 
+1 x PERC 
+H310 
+Idle4 
+3.9 
+24 
+None 
+Stress5 
+3.9 
+24 
+None 
+Typical 
+2 
+4 x 
+300G
+B SAS 
+(10K) 
+2 x 
+750W 
+8 x 8GB 
+1600Hz 
+1 x PERC 
+H710  
+1 x Gb NIC 
+Idle4 
+4.4 
+31 
+None 
+Stress5 
+5.1 
+39 
+None 
+1LWA-UL is the upper limit sound power levels (LWA) calculated per section 4.4.1 of ISO 9296 (1988) and measured in 
+accordance to ISO 7779 (2010). 
+2LpA is the average A-weighted sound pressure level from the four bystander positions calculated per section 4.3 of 
+ISO9296 (1988) and measured in accordance with ISO 7779 (2010). The system is placed in a half rack enclosure (base of 
+system is 25 cm above reflective floor). 
+3Prominent tone: Criteria of D.6 and D.11 of ECMA-74 11th ed. (2010) are followed to determine if discrete tones are 
+prominent. The system is placed in a half rack enclosure (base of system is 75 cm above reflective floor) and acoustic 
+transducer is at front bystander position, ref ISO 7779 (2010 Section 8.6.2). 
+4Idle: Reference ISO 7779 (2010) definition 3.1.7; system is running in its operating system but no other specific activity. 
+5Stressed processor: An operating mode per ISO 7779 (2010) definition 3.1.6. The software SPECPower at 50% loading is 
+activated to stress the processors. 
+For more information on Dell’s acoustical design, see the Dell Enterprise Acoustics white paper.  
+
+
+===== PAGE 38 =====
+
+ 
+ 
+38    PowerEdge R620 Technical Guide 
+9 Rack rails and cable management 
+The rack rail systems for the Dell PowerEdge R620 provide tool-less support for 4-post racks with 
+square or unthreaded round mounting holes. Compared to the R610 sliding rails, which required the 
+use of adapter brackets, the sliding rails for the R620 now offer support for threaded-hole racks with 
+the ReadyRails II mounting interface. The optional cable management arm (CMA) can be mounted 
+on either the left or right side of the sliding rails without the use of tools for fast and easy 
+deployment. 
+Sliding and static rail systems 
+The R620 supports both sliding rails and static rails. Both rails have a new slim-rail design that 
+supports the wide system chassis. The rails ship in the tool-less mounting configuration but can be 
+converted to the tooled configuration very quickly and easily. 
+The sliding rails for the R620 also include a self-adjusting mechanism that accommodates both 
+chassis depths. The sliding rail system allows you to fully extend the server out the rack for easy 
+access for service. The sliding rails are available with or without the optional CMA. Figure 10 shows 
+the sliding rails with the CMA. 
+Figure 10. Sliding rails with optional CMA 
+ 
+ 
+ 
+
+
+===== PAGE 39 =====
+
+ 
+ 
+39    PowerEdge R620 Technical Guide 
+The static rails (shown in Figure 11) support a wider variety of racks than the sliding rails but do not 
+support serviceability in the rack and are therefore are not compatible with the CMA.  
+Figure 11. Static rails 
+ 
+One key factor in selecting the proper rails is identifying the type of rack in which they will be 
+installed. Both the sliding rails and the static rails support tool-less mounting in 19”-wide, EIA-310-E 
+compliant square hole and unthreaded round hole 4-post racks. Both also support tooled mounting 
+in threaded-hole 4-post racks, but only the static rails, as the more universal solution, support 
+mounting in 2-post (Telco) racks. 
+Table 24 lists the rack rail systems that the R620 supports. The R620 is not compatible with any 
+other Dell rails or CMAs, including previous generation rails. 
+Table 24. 
+Supported rack rail system 
+Product 
+Rail 
+Identifier 
+Mounting Interface 
+Rail Type 
+Rack Types Supported 
+4-Post 
+2-Post 
+Square 
+Round 
+Thread 
+Flush 
+Center 
+R620 
+A7 
+ReadyRails II 
+Sliding 
+ 
+ 
+ 
+X 
+X 
+A8 
+ReadyRails 
+Static 
+ 
+ 
+ 
+ 
+ 
+Other key factors governing proper rail selection include the spacing between the front and rear 
+mounting flanges of the rack, the type and location of any equipment mounted in the back of the 
+rack, such as power distribution units, and the overall depth of the rack. Due to their reduced 
+complexity and lack of need for CMA support, the static rails offer a greater adjustability range and a 
+smaller overall mounting footprint than the sliding rails. 
+For detailed information about static and sliding rails, see the Rack rail specifications section in 
+Appendix A. For more information on installing the R620 in a rack, see the Rack Installation 
+Instructions on Dell.com/Support/Manuals. 
+ 
+ 
+ 
+
+
+===== PAGE 40 =====
+
+ 
+ 
+40    PowerEdge R620 Technical Guide 
+Cable management arm 
+The optional CMA organizes and secures the cords and cables exiting the back of the server and 
+unfolds to allow the server to extend out of the rack without having to detach the cables. Some key 
+features of the R620 CMA include: 
+ 
+Large U-shaped baskets to support dense cable loads 
+ 
+Open vent pattern for optimal airflow 
+ 
+Ability to be mounted on either side 
+ 
+Use of hook-and-loop straps rather than plastic tie wraps to eliminate the risk of cable damage 
+during cycling 
+ 
+Low-profile fixed tray to both support and retain the CMA in its fully closed position 
+ 
+Ability to mount the CMA and tray without the use of tools, due to snap-in designs 
+ 
+ 
+
+
+===== PAGE 41 =====
+
+ 
+ 
+41    PowerEdge R620 Technical Guide 
+10 Operating systems and virtualization 
+The Dell PowerEdge R620 supports a wide range of industry-standard operating systems and 
+virtualization software. 
+Supported operating systems 
+Table 25 lists the primary operating systems supported on the R620. For the latest information on 
+supported operating systems, see Dell.com/OSsupport. 
+Table 25. 
+Primary operating system support 
+Operating System 
+Platform 
+Edition 
+Red Hat Enterprise Linux 5.81 
+x32 
+x64 
+N/A 
+Red Hat Enterprise Linux 6.32 
+x64 
+N/A 
+Red Hat Enterprise Linux for HPC 
+x64 
+N/A 
+SUSE Linux Enterprise Server 11 SP2 
+x64 
+N/A 
+SUSE Linux Enterprise Server 11 SP3 
+x64 
+N/A 
+SUSE Linux Enterprise Server 10 SP4 
+x64 
+N/A 
+Microsoft Windows Server 2012 R2 
+x64 
+N/A 
+Microsoft Windows Server 2012 
+x64 
+Standard 
+Data center 
+Microsoft Windows Small Business Server 20113 
+x64 
+Standard 
+Premium Add-on  
+Microsoft Windows Server 2008 R2 with SP1   
+ 
+x64 
+(with Hyper-V 
+role enabled) 
+Web 
+Standard 
+Enterprise 
+Data center 
+HPC 
+1RHEL 5.7 is the minimum supported version. Current drop in box option is RHEL 5.8. 
+2RHEL 6.1 is the minimum supported version. Current factory install is RHEL 6.3. 
+3Not validated for use with GPUs. 
+ 
+ 
+ 
+
+
+===== PAGE 42 =====
+
+ 
+ 
+42    PowerEdge R620 Technical Guide 
+Support of the operating systems listed in Table 26 is limited to a virtual environment as a guest 
+operating system. Please contact the software vendor for additional support or questions about 
+running the operating system in a virtualized environment. 
+Table 26. 
+Virtual guest operating system support 
+Operating System 
+Platform 
+Edition 
+Microsoft Windows 20031 
+x86 
+Web 
+Microsoft Windows 2003 R2 with SP21 
+x86 
+Standard 
+Enterprise 
+x64 
+Standard 
+Enterprise 
+Data center 
+1Not validated for use with AMD GPUs 
+Supported virtualization  
+One of the key features for virtualization on the PowerEdge R620 is the support for a fail-safe 
+hypervisor. By running a hypervisor on an optional SD card and installing a backup copy on the 
+other mirrored SD card, you can protect against hardware failure and maximize virtualization uptime. 
+Table 27 highlights the virtualization support for the R620. 
+Table 27. 
+Virtualization support 
+Operating systems 
+Install version 
+Factory 
+options 
+Internal dual 
+SD module 
+install support 
+ VMware 
+vSphere v5.0 
+ESXi 
+DIB 
+Yes 
+vSphere v5.0 U1 
+ESXi 
+DIB 
+Yes 
+vSphere v5.1 
+ESXi  
+DIB 
+Yes 
+vSphere v5.5 
+ESXi  
+DIB 
+Yes 
+Citrix 
+XenServer 6.1 
+N/A 
+DIB  
+No 
+Red Hat2 
+Enterprise Virtualization 3.1 
+N/A 
+DIB 
+No 
+FI = factory install; DIB = drop in box 
+1No OpenManage support; drop-in-box license registration card only 
+ 
+
+
+===== PAGE 43 =====
+
+ 
+ 
+43    PowerEdge R620 Technical Guide 
+11 Dell OpenManage systems management 
+Whether your IT environment consists of a few servers or a few thousand servers,  
+Dell OpenManage systems management solutions provide comprehensive management for 
+evolving IT environments. OpenManage is based on open standards and provides agent-based and 
+agent-free server lifecycle management functionality for Dell PowerEdge servers. OpenManage 
+solutions help you automate and streamline essential hardware management tasks.    
+The advanced management capabilities of Dell OpenManage also integrate with offerings from 
+other popular systems management solutions that you may already use, making Dell platforms easy 
+to manage and deploy in any IT environment. This ensures your IT services are available when your 
+business needs them. If you have already standardized on offerings from industry leaders, such as 
+BMC Software, Microsoft, Symantec™, VMware, or other vendors, you can leverage OpenManage 
+integration and connections developed for use with your existing systems management framework 
+to efficiently manage Dell servers, storage, business-client PCs, and network devices. 
+Start with a firm foundation for efficient hardware management using OpenManage tools, utilities, 
+and management consoles. OpenManage systems management solutions consist of embedded 
+management features and software products that help you automate and simplify the entire server 
+lifecycle: deploy, update, monitor, and maintain. OpenManage solutions are innovatively designed 
+for simplicity and ease of use to help you reduce complexity, save time, achieve efficiency, control 
+costs and empower productivity. 
+Systems management solutions 
+Dell systems management solutions include a wide variety of tools, products and services that 
+enable you to leverage an existing systems management framework. As shown in Figure 12, Dell 
+systems management solutions are centered around OpenManage server management, featuring 
+iDRAC7 with Lifecycle Controller. 
+Figure 12. Dell systems management solutions 
+ 
+
+
+===== PAGE 44 =====
+
+ 
+ 
+44    PowerEdge R620 Technical Guide 
+OpenManage systems management 
+The Dell OpenManage systems management portfolio includes powerful hardware and software 
+management tools and consoles. OpenManage simplifies the lifecycle of deploying, updating, 
+monitoring and maintaining your Dell PowerEdge servers. 
+iDRAC7 with Lifecycle Controller 
+The Integrated Dell Remote Access Controller 7 (iDRAC7) with Lifecycle Controller is the heart of 
+Dell’s second generation of Dell PowerEdge server embedded management functionality. In 
+addition to enabling agent-free management, iDRAC7 with Lifecycle Controller provides remote 
+access to the system — whether or not there is a functioning operating system running on the 
+server. These embedded features improve all aspects of a typical server lifecycle. Table 28 describes 
+the functions and benefits of iDRAC7 with Lifecycle Controller. 
+Table 28. 
+iDRAC7 with Lifecycle Controller functions and benefits 
+Feature 
+Function 
+Benefit 
+Out of band 
+(OOB) 
+iDRAC7 offers real-time OOB 
+discovery, inventory, deployment 
+monitoring,  alerting  and updates for 
+servers and internal storage 
+Manage servers  independent of the OS type 
+or status — even if an OS is not installed 
+Single code base 
+All server types have the same 
+embedded management hardware 
+and firmware 
+Simplified and consistent maintenance 
+across server platforms 
+Dedicated  
+GigE port 
+(PowerEdge  
+rack and tower 
+systems) 
+Gigabit Ethernet replaces 10/100 on 
+predecessor iDRAC6 
+Fast throughput for better performance; 
+compatibility with setup for switches 
+Email alerts 
+Simplified, more informative, and 
+expanded coverage than previous 
+versions of iDRAC 
+More detail allows IT administrators to be 
+more efficient in diagnosing and remediating 
+an issue; alerts include a direct, embedded 
+URL in the email notification to further speed 
+resolution 
+vFlash media 
+Enabled with iDRAC7 Enterprise 
+Allows for use of a non-Dell SD card 
+Enhanced power 
+management 
+Integration with Intel Node Manager 
+provides data center level power 
+monitoring and capping  
+(requires iDRAC7 Enterprise) 
+Fine tune data center power policies, 
+capping, and usage; report on historical 
+power usage by rack, row or room using 
+Power Center Manager (new) 
+
+
+===== PAGE 45 =====
+
+ 
+ 
+45    PowerEdge R620 Technical Guide 
+Feature 
+Function 
+Benefit 
+Electronic 
+licensing 
+Upgrades to iDRAC7 Express or 
+iDRAC7 Enterprise by software 
+licensing key and license portal (may 
+require installation of hardware option 
+for 300-500 series servers) 
+Digital license installed in factory; free 30-
+day trial versions are available; uses a license 
+management portal versus paper-based 
+licenses and simplifies license management. 
+For most server models, embedded server 
+management and electronic licensing 
+enables feature enhancements that do not 
+require installation of additional hardware or 
+system downtime.   
+ 
+iDRAC7 feature comparison 
+iDRAC7 Enterprise is available for the PowerEdge R620, and Dell also offers an option of iDRAC7 
+Express. Table 29 shows a detailed feature comparison for iDRAC7 Enterprise and iDRAC7. 
+Table 29. 
+Feature comparison for iDRAC7 Express and Enterprise 
+Feature (function) 
+iDRAC7      
+Enterprise 
+iDRAC7       
+Express 
+Local configuration with USC 
+∞ 
+∞ 
+IPMI 2.0 
+∞ 
+∞ 
+Embedded diagnostics 
+∞ 
+∞ 
+Local OS install 
+∞ 
+∞ 
+Local updates 
+∞ 
+∞ 
+Driver pack 
+∞ 
+∞ 
+Shared NIC (LOM) 
+∞ 
+∞ 
+Remote update 
+∞ 
+∞ 
+Power control 
+∞ 
+∞ 
+Encryption 
+∞ 
+∞ 
+Crash screen capture1 
+∞ 
+∞ 
+IPv6 
+∞ 
+∞ 
+Auto-discovery 
+∞ 
+∞ 
+Auto-recovery 
+∞ 
+∞ 
+Web GUI 
+∞ 
+∞ 
+Remote CLI 
+∞ 
+∞ 
+Local/SSH CLI 
+∞ 
+∞ 
+Serial redirection 
+∞ 
+∞ 
+Remote configuration 
+∞ 
+∞ 
+Email alerts 
+∞ 
+∞ 
+SNMP alerts 
+∞ 
+∞ 
+
+
+===== PAGE 46 =====
+
+ 
+ 
+46    PowerEdge R620 Technical Guide 
+Feature (function) 
+iDRAC7      
+Enterprise 
+iDRAC7       
+Express 
+Power monitoring 
+∞ 
+∞ 
+Comprehensive monitoring 
+∞ 
+∞ 
+Dedicated NIC 1Gbps (100MB in iDRAC6) 
+∞ 
+ 
+Part replacement 
+∞ 
+ 
+Backup and restore configurations 
+∞ 
+ 
+Virtual console (4 user) 
+∞ 
+ 
+Virtual console chat 
+∞ 
+ 
+Support for customer-supplied SD cards for vFlash 
+∞ 
+ 
+Virtual flash partitions 
+∞ 
+ 
+Virtual media 
+∞ 
+ 
+Virtual folders 
+∞ 
+ 
+Remote file share 
+∞ 
+ 
+Crash video playback 
+∞ 
+ 
+Boot record/playback 
+∞ 
+ 
+Power capping 
+∞ 
+ 
+Enterprise group power management 
+∞ 
+ 
+Directory services (AD, LDAP) 
+∞ 
+ 
+PK authentication 
+∞ 
+ 
+Two-factor authentication2 
+∞ 
+ 
+1Requires OMSA agent on target server 
+2Uses Microsoft ActiveX® on Internet Explorer® only 
+Agent-based management 
+Most systems management solutions require pieces of software, called agents, to be installed on 
+each node in order to be managed within the IT environment. Additionally, the same agent is often 
+used as a local interface into the hardware health and may be accessed remotely as a management 
+interface, typically referred to as a one-to-one interface. For customers that continue to use agent 
+based solutions, Dell provides OpenManage Server Administrator. 
+OpenManage Server Administrator 
+The Dell OpenManage Server Administrator (OMSA) agent gives you a comprehensive, one-to-one 
+systems management solution for both local and remote servers and their storage. OMSA can help 
+simplify single-server monitoring with a secure command-line interface (CLI) or Web-based 
+management graphical user interface (GUI). It can also be used to view system configuration, 
+inventory, health, and performance. 
+Agent-free management 
+Because Dell PowerEdge servers have embedded server lifecycle management, in many cases there 
+is no need to install an OpenManage systems management software agent into the operating 
+system of a Dell PowerEdge server. This greatly simplifies and streamlines the management footprint. 
+
+
+===== PAGE 47 =====
+
+ 
+ 
+47    PowerEdge R620 Technical Guide 
+Dell consoles 
+The central console in a systems management solution is often referred to as the one-to-many 
+console. The central console provides a rapid view and insight into the overall health of all systems 
+in the IT environment. The Dell systems management portfolio includes several powerful consoles, 
+depending upon your needs, including the following: 
+ 
+Dell OpenManage Essentials: OpenManage Essentials (OME) is a recently released systems 
+management console that provides a comprehensive view of Dell systems, devices and 
+components in an enterprise network. It is used to monitor Dell PowerEdge servers, EqualLogic 
+and PowerVault storage, and Dell Networking switches; to update and configure Dell servers; 
+and to create asset reports. OpenManage Essentials also communicates health-status alerts for 
+Dell servers, storage, and network devices to the KACE™ K1000 service desk. OpenManage 
+Essentials is available as a no-charge software download from Dell.com/Support. 
+OpenManage systems management tools and utilities 
+Dell OpenManage systems management tools and utilities consist of the following: 
+ 
+Dell Repository Manager: The Dell Repository Manager (RM) is a standalone GUI-based 
+productivity tool that helps simplify the process of managing downloads and baseline BIOS, 
+firmware and driver updates. Repository Manager can create deployment disks as well as create 
+and manage customized repositories. 
+ 
+Dell OpenManage Server Update Utility: The Dell Server Update Utility (SUU) is a DVD-based 
+application for identifying and applying BIOS and firmware updates to your Dell PowerEdge 
+servers.  
+ 
+Dell OpenManage Systems Build and Update Utility: The Dell System Build and Update Utility 
+(SBUU) provides one-to-one and one-to-many deployment and single-server update 
+capabilities in the pre-operating system environment. 
+ 
+Dell Update Packages:The Dell Update Packages (DUP) is a self-contained executable in a 
+standard package format that updates a software element on a Dell server such as the BIOS,  
+a driver, firmware and other software updates.  
+ 
+Dell OpenManage Deployment Toolkit: The Dell OpenManage Deployment Toolkit (DTK) is a 
+CLI-based tool that includes a set of utilities for configuring and deploying Dell PowerEdge 
+systems, and can be used to build scripted, unattended OS installations to deploy large numbers 
+of servers in a reliable fashion. 
+ 
+RACADM: The RACADM command-line utility provides a scriptable interface that allows you to 
+locally or remotely configure iDRAC7.  
+ 
+IPMITool: IPMITool includes scriptable console application programs used to control and 
+manage remote systems using the IPMI version 1.5 and later protocol. 
+Integration with third-party consoles  
+Dell OpenManage easily integrates with several leading third-party consoles, including: 
+ 
+Dell Server Management Pack Suite for Microsoft System Center Operations  
+Manager (SCOM): This suite of server management packs enables several functions through 
+System Center Operations Manager, including in-band discovery and monitoring of racks and 
+towers, out-of-band discovery and monitoring through iDRAC7 with Lifecycle Controller, as well 
+as performance and advanced monitoring. 
+ 
+Dell Lifecycle Controller Integration (DLCI) for Microsoft System Center Configuration 
+Manager (SCCM): This pack contains Dell Lifecycle Controller Integration (DLCI), which 
+
+
+===== PAGE 48 =====
+
+ 
+ 
+48    PowerEdge R620 Technical Guide 
+integrates OpenManage functions in SCCM to manage the Dell PowerEdge servers, including 
+auto-discovery, operating system deployment and configuration of hardware elements, (RAID, 
+NIC, BIOS, iDRAC7), OS and hypervisor agnostic updates, firmware management, and system 
+viewer utilities. 
+ 
+Dell Server PRO Management Pack for Microsoft System Center Virtual Machine  
+Manager (SCVMM):This pack manages Dell physical servers and hosts of virtual machines (VMs) 
+by using Microsoft System Center Operations Manager/System Center Essentials (SCOM/SCE) 
+and System Center Virtual Machine Manager (SCVMM). It provides guidance for remedial actions 
+based on alerts to best manage virtual machines and handle the impacts appropriately. 
+ 
+OpenMange Integration for VMware vCenter: This plug-in allows IT administrators to monitor, 
+provision and manage the physical PowerEdge server hardware and firmware from a dedicated 
+Dell menu accessed through the VMware vCenter console using the same role-based access 
+control model as vCenter, combining physical server management. 
+ 
+BMC Software: Dell and BMC Software work together to simplify IT by ensuring tight integration 
+between Dell server, storage, and network management functionality and the BMC Software 
+process and data center automation products. 
+OpenManage connections with third-party consoles 
+Dell OpenManage provides connections with many third-party consoles, including: 
+ 
+Dell OpenManage Connection for Computer Associates Network and Systems Management: 
+This connection allows you to monitor PowerEdge servers and PowerVault storage arrays from 
+within the Computer Associates Network and Systems Management (CANSM) console.  
+ 
+Dell OpenManage Connection for HP Operations Manager: This connection enables several 
+functions through HP Operations Manager, including auto-grouping, SNMP trap reception, 
+global health monitoring and a context-sensitive launch of OpenManage Server Administrator. 
+ 
+Dell OpenManage Connection for IBM Tivoli Netcool/OMNIBus: This connection provides 
+event monitoring capabilities to monitor Dell PowerEdge servers and Dell EqualLogic systems. It 
+allows event monitoring, automatic event correlation and launching device consoles from the 
+Netcool/OMNIbus console.  
+Dell server management operations 
+Dell OpenManage systems management is centered on automating the server management 
+lifecycle — deploy, update, monitor and maintain. To manage an infrastructure properly and 
+efficiently, you must perform all of these functions easily and quickly. iDRAC7 with Lifecycle 
+Controller technology provides you with these intelligent capabilities embedded within the server 
+infrastructure. This allows you to invest more time and energy on business improvements and less 
+on maintenance. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+===== PAGE 49 =====
+
+ 
+ 
+49    PowerEdge R620 Technical Guide 
+Figure 13 illustrates the various operations that can be performed during the server’s lifecycle. 
+ 
+Figure 13. Systems management server lifecycle 
+ 
+ 
+Table 30 lists the products that are available for one-to-one and one-to-many operations, and 
+when they are used in the server’s lifecycle. 
+Table 30. 
+One-to-one and one-to-many operations 
+Operation 
+One-to-one 
+One-to-many 
+Deploy 
+ 
+iDRAC7 with LifeCycle 
+Controller GUI 
+ 
+DTK 
+ 
+SBUU 
+ 
+Symantec Deployment 
+Server 
+ 
+OpenManage Integration  
+for VMware vCenter 
+ 
+KACE K1000 Appliance 
+ 
+Lifecycle Controller Remote 
+Services 
+ 
+BMC BladeLogic Integration 
+with Lifecycle Controller 
+ 
+Dell Server Deployment Pack 
+(DSDP) for Microsoft System 
+Center Configuration Manager 
+and Dell Lifecycle Controller 
+Integration (DLCI) for Microsoft 
+System Center Configuration 
+Manager  
+Update 
+ 
+iDRAC7 with LifeCycle 
+Controller GUI 
+ 
+Repository Manager  
+ 
+DUP 
+ 
+SUU 
+ 
+SBUU 
+ 
+OpenManage 
+Integration  for 
+VMware vCenter 
+ 
+Dell OpenManage Essentials 
+ 
+Lifecycle Controller Remote 
+Services 
+ 
+Dell Update Catalogs for 
+Microsoft System Center 
+Configuration Manager 
+ 
+Dell Lifecycle Controller 
+Integration (DLCI) for Microsoft 
+System Center Configuration 
+Manager 
+
+
+===== PAGE 50 =====
+
+ 
+ 
+50    PowerEdge R620 Technical Guide 
+Operation 
+One-to-one 
+One-to-many 
+Monitor 
+ 
+iDRAC7 with LifeCycle 
+Controller GUI 
+ 
+OMSA 
+ 
+Dell OpenManage Essentials 
+ 
+BMC ProactiveNet 
+Performance Management 
+Integration with Lifecycle 
+Controller 
+ 
+Dell OpenManage Power 
+Center 
+ 
+ 
+OpenManage Integration  for 
+VMware vCenter 
+ 
+BMC ProactiveNet Performance 
+Management Integration with 
+Lifecycle Controller 
+ 
+Dell Server Management Pack 
+Suite for Microsoft System Center 
+Operations Manager (SCOM) 
+Maintain 
+ 
+iDRAC7 with Lifecycle 
+Controller GUI 
+ 
+Lifecycle Controller Remote 
+Services 
+Remediate:  
+ 
+Dell Server PRO Management 
+Pack for Microsoft System Center 
+Virtual Machine Manager 
+(SCVMM) 
+Replace parts:  
+ 
+Dell Lifecycle Controller 
+Integration (DLCI) for Microsoft 
+System Center Configuration 
+Manager 
+For additional detailed information on Dell’s systems management portfolio, see the Dell 
+OpenManage Systems Management Overview Guide on Dell.com/Support/Manuals. 
+ 
+ 
+
+
+===== PAGE 51 =====
+
+ 
+ 
+51    PowerEdge R620 Technical Guide 
+Appendix A. Additional specifications  
+Chassis dimensions 
+Figure 14 details the dimensions of the Dell PowerEdge R620 chassis. 
+Figure 14. System dimensions 
+ 
+Chassis 
+configuration 
+Xa 
+Xb 
+Y 
+Za with 
+bezel 
+Za without 
+bezel 
+Zb 
+Zc 
+8-drive bay 
+chassis 
+482.4mm 
+434.0mm 
+42.8mm 
+35.0mm 
+20.4mm 
+682.7mm 
+701.3mm 
+10-drive bay 
+chassis 
+482.4mm 
+434.0mm 
+42.8mm 
+35.0mm 
+20.4mm 
+731.0mm 
+752.1mm 
+ 
+Chassis weight 
+Table 31 lists the weight of the R620 chassis at maximum configuration as well as empty of any 
+hardware. 
+Table 31. 
+Chassis weight 
+Configuration 
+8-drive bay chassis 
+10-drive bay chassis 
+Maximum  
+18.6Kg (40.96lb) 
+19.8Kg (43.56lb) 
+Empty chassis  
+8.z6Kg (18.92lb) 
+9.4Kg (20.66lb) 
+ 
+
+
+===== PAGE 52 =====
+
+ 
+ 
+52    PowerEdge R620 Technical Guide 
+Power supply specifications 
+Table 32 lists power supply specifications for the PowerEdge R620. 
+Table 32. 
+Power supply specifications 
+Specification 
+1100W DC 
+1100W AC 
+750W AC 
+Titanium 
+750W AC 
+Platinum 
+495W AC 
+Current 
+consumption 
+32A 
+12A–6.5A 
+10A–5A 
+10A–5A 
+6.5A–3A 
+Supply voltage 
+-48V to -60V DC 
+100–240VAC1 
+200–240VAC 
+100–240VAC1 
+100–240VAC1 
+Frequency 
+N/A 
+50/60Hz 
+50/60Hz 
+50/60Hz 
+50/60Hz 
+Heat dissipation 
+(BTU/hr max) 
+4416 
+4100 
+2843 
+2891 
+1908 
+Maximum inrush 
+current2 
+55A 
+55A 
+55A 
+55A 
+55A 
+1Auto-ranging 
+2Under typical line conditions and over the entire system ambient operating range, the inrush current may reach 55A per 
+power supply for 10ms or less. 
+ 
+Environmental specifications 
+Table 33 details the environmental specifications for the R620. For additional information about 
+environmental measurements for specific system configurations, see 
+Dell.com/environmental_datasheets.  
+Table 33. 
+Environmental specifications 
+Fresh Air: temperature, humidity, altitude de-rating 
+Continuous 
+operation 
+10°C to 35°C (50°F to 95°F) at 10% to 80% relative humidity with 26°C (78.8°F) maximum 
+dew point (maximum wet bulb temperature). De-rate maximum allowable dry bulb 
+temperature at 1°C per 300m above 950m (1°F per 547 ft above 3117 ft). 
+Expanded 
+operation 
+When operating in the expanded temperature range, system performance may be impacted, 
+and ambient temperature warnings may be reported on the LCD and in the System Event 
+Log. 
+≤ 10% of annual operating hours: 5°C to 10°C and 35°C to 40°C (with no direct sunlight on 
+the equipment) at 5% to 85% relative humidity with 26°C dew point (maximum wet bulb 
+temperature). Outside the standard operating temperature (10°C to 35°C), the system can 
+operate down to 5°C or up to 40°C for a maximum of 10% of its annual operating hours. For 
+temperatures between 35°C and 40°C (95°F to 104°F), de-rate maximum allowable dry bulb 
+temperature by 1°C per 175m above 950m (1°F per 319 ft above 3117 ft). 
+≤ 1% of annual operating hours: –5°C to 5°C and 40°C to 45°C (with no direct sunlight on 
+the equipment) at 5% to 90% relative humidity with 26°C dew point (maximum wet bulb 
+temperature). Outside the standard operating temperature (10°C to 35°C), the system can 
+operate down to –5°C or up to 45°C for a maximum of 1% of its annual operating hours. For 
+temperatures between 40°C and 45°C (104°F to 113°F), de-rate maximum allowable dry bulb 
+temperature by 1°C per 125m above 950m (1°F per 228 ft above 3117 ft). 
+Expanded operation restrictions: 
+ 
+No cold startup below 5°C 
+ 
+Maximum altitude for the operating temperature must be 3050m (10,000ft) 
+ 
+Redundant power supplies required 
+
+
+===== PAGE 53 =====
+
+ 
+ 
+53    PowerEdge R620 Technical Guide 
+ 
+Not supported:  
+> 
+Express Flash PCIe SSD 
+> 
+GPU 
+> 
+LRDIMM 
+> 
+130W 4-core and 135W processors 
+> 
+Peripheral cards not qualified by Dell 
+> 
+Peripheral cards greater than 25W 
+Temperature 
+Operating 
+See Fresh Air for temperature information 
+Storage 
+–40oC to 65oC (-40oF to 149oF) with a maximum temperature gradation of 20oC per hour 
+Relative humidity 
+Operating 
+See Fresh Air for relative humidity information 
+Storage 
+5% to 95% at a maximum wet bulb temperature of 33°C (91°F); atmosphere must  be non-
+condensing at all times 
+Maximum vibration 
+Operating 
+0.26 Grms at 5Hz to 350Hz in all orientations 
+Storage 
+1.87 Grms at 10Hz to 500Hz for 15 minutes (all six sides tested) 
+Maximum shock 
+Operating 
+Half sine shock in all operational orientations of 31G +/– 5% with a pulse duration of 2.6ms 
++/– 10% 
+Storage 
+Half sine shock on all six sides of 71G +/– 5% with a pulse duration of 2ms +/–10%; square 
+wave shock on all six sides of 27G with velocity change at 235 in/sec or greater 
+Altitude 
+Operating 
+–15.2m to 3048m (–50 ft to 10,000 ft) 
+Storage 
+–15.2m to 12,000m (–50 ft to 39,370 ft) 
+Airborne contaminant level 
+Class G1 or lower as defined by ISA-S71.04-1985 
+Video specifications 
+The Dell PowerEdge R620 iDRAC incorporates an integrated video subsystem. The graphics 
+controller is the 2D Matrox G200. The video frame buffer (16MB) is contained within the iDRAC RAM 
+(256MB) device. Front access video is not available on the 10-drive bay chassis due to space 
+limitation. 
+The R620 system supports the 2D graphics video modes listed in Table 34. 
+Table 34. 
+Supported video modes 
+Resolution 
+Refresh Rate (Hz)  
+Color Depth (bit) 
+640 x 480 
+60, 70 
+8, 16, 32 
+800 x 600 
+60, 75, 85 
+8, 16, 32 
+1024 x 768 
+60, 75, 85 
+8, 16, 32 
+1152 x 864 
+60, 75, 85 
+8, 16, 32 
+1280 x 1024 
+60, 75 
+8, 16, 32 
+1440 x 900 
+60 
+8, 16, 32 
+
+
+===== PAGE 54 =====
+
+ 
+ 
+54    PowerEdge R620 Technical Guide 
+Rack rail specifications 
+Table 35 lists the spacing dimensions for the R620 sliding and statics rails.  
+Table 35. 
+Rail adjustability range 
+Product 
+Rail 
+identifier 
+Rail type 
+Rail adjustability range (mm) 
+Rail depth (mm) 
+Square 
+Round 
+Threaded 
+without 
+CMA 
+with 
+CMA 
+Min 
+Max 
+Min 
+Max 
+Min 
+Max 
+R620 
+A7 
+Sliding 
+681 
+868 
+667 
+861 
+681 
+883 
+7201 
+7702 
+8451 
+8952 
+A8 
+Static 
+608 
+879 
+594 
+872 
+604 
+890 
+622 
+— 
+1For 8-drive bay chassis 
+2For 10-drive bay chassis 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The adjustment range of the rails is a function of the type of rack in which they are being mounted. 
+The min-max values listed above represent the allowable distance between the front and rear 
+mounting flanges in the rack. Rail depth without the CMA represents the minimum depth of the rails 
+with the outer CMA brackets removed (if applicable) as measured from the front mounting flanges 
+of the rack. 
+The rail depth changes based on which version of the R620 is being installed. Although the 10-drive 
+bay system is 50 mm deeper than the 8-drive bay system, both are able to share the same rails 
+through a new self-adjusting feature included on the rails. 
+USB peripherals 
+USB peripherals are supported through the front and back USB ports on the R620. These ports are 
+USB 2.0 compliant. 
+PCIe card dimensions 
+Table 36 provides the dimensions of the PCIe cards supported by the R620.  
+Table 36. 
+PCIe card dimensions 
+Type 
+Height 
+Length 
+Full-height, half-length card 
+111.15 mm (4.376 inches) max 
+167.65 mm (6.600 inches) max 
+Full-height, full-length card 
+111.15 mm (4.376 inches) max 
+312.00 mm (12.283 inches) max 
+Low-profile, half-height card 
+68.90 mm (2.731 inches) max 
+167.65 mm (6.600 inches) max 
+Note: ¾-length is 234mm (9.213 inches) 
+
+
+===== PAGE 55 =====
+
+ 
+ 
+55    PowerEdge R620 Technical Guide 
+Appendix B. Standards compliance 
+The Dell PowerEdge R620 conforms to the industry standards listed in Table 37. 
+Table 37. 
+  Industry standard documents 
+Standard 
+URL for information and specifications 
+ACPI 
+Advance Configuration and Power 
+Interface Specification, v2.0c 
+acpi.info 
+Ethernet  
+IEEE 802.3-2005 
+standards.ieee.org/getieee802/802.3.html  
+HDG 
+Hardware Design Guide Version 
+3.0 for Microsoft Windows Server 
+microsoft.com/whdc/system/platform/pcdesign/desguide/serverdg.mspx 
+IPMI 
+Intelligent Platform Management 
+Interface, v2.0 
+intel.com/design/servers/ipmi 
+DDR3 Memory 
+DDR3 SDRAM Specification, 
+Rev. 3A 
+jedec.org/download/search/JESD79-3C.pdf 
+LPC 
+Low Pin Count Interface 
+Specification, Rev. 1.1 
+developer.intel.com/design/chipsets/industry/lpc.htm  
+PCI Express 
+PCI Express Base Specification 
+Rev. 2.0 and 3.0 
+pcisig.com/specifications/pciexpress  
+PMBus 
+Power System Management 
+Protocol Specification, v1.2 
+pmbus.info/specs.html  
+SAS 
+Serial Attached SCSI, v1.1 
+t10.org 
+SATA 
+Serial ATA Rev. 2.6; SATA II, SATA 
+1.0a Extensions, Rev. 1.2 
+sata-io.org 
+SMBIOS 
+System Management BIOS 
+Reference Specification, v2.7 
+dmtf.org/standards/smbios 
+TPM 
+Trusted Platform Module 
+Specification, v1.2 
+trustedcomputinggroup.org  
+UEFI 
+Unified Extensible Firmware 
+Interface Specification, v2.1 
+uefi.org/specs  
+USB 
+Universal Serial Bus Specification, 
+Rev. 2.0  
+usb.org/developers/docs  
+Windows Logo 
+Windows Logo Program System 
+and Device Requirements, v3.10 
+microsoft.com/whdc/winlogo/hwrequirements.mspx  
+ 
+ 
+
+
+===== PAGE 56 =====
+
+ 
+ 
+56    PowerEdge R620 Technical Guide 
+Appendix C. Additional resources 
+Table 38 provides a list of documents and websites that provide for more information on the Dell 
+PowerEdge R620. 
+Table 38. 
+Additional resources 
+Resource 
+Description of contents 
+Location 
+PowerEdge R620 
+Owner’s Manual 
+This manual, available in PDF format,  provides the 
+following information: 
+ 
+Chassis features 
+ 
+System Setup program 
+ 
+System messages 
+ 
+System codes and indicators 
+ 
+System BIOS 
+ 
+Remove and replace procedures 
+ 
+Troubleshooting  
+ 
+Diagnostics 
+ 
+Jumpers and connectors 
+Dell.com/Support/Manuals 
+PowerEdge R620 
+Getting Started 
+Guide 
+This guide ships with the system, and is also available in 
+PDF format. This guide provides the following 
+information: 
+ 
+Initial setup steps 
+ 
+Key system features 
+ 
+Technical specifications 
+Dell.com/Support/Manuals 
+Rack Installation 
+Instructions 
+This document  ships with the rack kits, and provides 
+instructions for installing a server in a rack. 
+Dell.com/Support/Manuals 
+Cable 
+Management Arm 
+Installation 
+Instructions 
+This document ships with the rack kits, and provides 
+instructions for installing a cable management arm on a 
+rack. 
+Dell.com/Support/Manuals 
+Information 
+Update 
+This document ships with the system, is also available in 
+PDF format online, and provides information on system 
+updates. 
+Dell.com/Support/Manuals 
+System 
+Information Label  
+The system information label documents the system 
+board layout and system jumper settings. Text is 
+minimized due to space limitations and translation 
+considerations. The label size is standardized across 
+platforms. 
+Inside the system chassis 
+cover 
+Quick Resource 
+Locator (QRL) 
+This code on the chassis can be scanned by a phone 
+application to access additional information and 
+resources for the server, including videos, reference 
+materials, service tag information, and Dell contact 
+information. 
+Inside the system chassis 
+cover  
+
+
+===== PAGE 57 =====
+
+ 
+ 
+57    PowerEdge R620 Technical Guide 
+Resource 
+Description of contents 
+Location 
+Energy Smart 
+Solution Advisor 
+The Dell online Energy Smart Solution Advisor (ESSA) 
+enables easier and more meaningful estimates to help 
+you determine the most efficient configuration possible. 
+Use ESSA to calculate the power consumption of your 
+hardware, power infrastructure, and storage. 
+Dell.com/ESSA 
+Power and 
+cooling 
+technologies 
+Provides details for improving energy efficiency in the 
+data center. 
+Dell.com/PNC 
+Energy 
+management 
+Provides information on Dell’s Fresh Air cooling solutions. 
+Dell.com/FreshAir 
+Operating system 
+matrix for Dell 
+PowerEdge 
+systems 
+Provides updated information on which operating 
+systems are available on which PowerEdge systems. 
+Dell.com/OSsupport 
+Processor and 
+chipset 
+Provides more information about the R620 processors 
+and chipset. 
+Intel.com 
+Dell PowerEdge 
+RAID controllers 
+Provides more information on Dell PowerEdge RAID 
+controllers (PERC). 
+Dell.com/PERC 
+Power distribution 
+unit 
+Provides help selecting a rack-based power distribution 
+unit (rPDU). 
+DellPDU.com 
+Uninterruptible 
+power supply 
+Provides help selecting a  UPS model. 
+DellUPS.com 
+Volatility 
+information 
+Contact your Dell sales representative. 
+Dell.com 
+Dell Enterprise 
+Acoustics 
+White paper that explores the mechanisms of, people’s 
+reaction to, language of, and Dell’s work to control noise 
+from Enterprise products. 
+Dell.com/downloads/global/
+products/pedge/en/acoustic
+al-education-dell-
+enterprise-white-paper.pdf 
+ 
+
+
+===== PAGE 58 =====
+
+ 
+ 
+58    PowerEdge R620 Technical Guide 
+Appendix D. System board block diagram  
+Figure 15. R620 system board block diagram 
+ 
