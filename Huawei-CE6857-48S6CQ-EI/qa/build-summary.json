@@ -1,0 +1,156 @@
+{
+  "identity": "Huawei CloudEngine CE6857-48S6CQ-EI / 02352CHS",
+  "coordinate_convention": {
+    "+X": "device right from port side",
+    "+Y": "up",
+    "+Z": "port side/front"
+  },
+  "dimensions_mm": {
+    "width": 442.0,
+    "height": 43.6,
+    "body_depth": 420.0,
+    "overall_depth_with_rear_u_brackets": 457.9
+  },
+  "official_mesh_imported": false,
+  "visible_part_count": 399,
+  "category_counts": {
+    "chassis": 1,
+    "canonical_face": 6,
+    "port_frame": 16,
+    "front_port": 57,
+    "front_vent": 192,
+    "management_port": 3,
+    "rear_fastener": 1,
+    "fan_module": 20,
+    "fan_handle": 4,
+    "power_supply": 10,
+    "power_handle": 2,
+    "power_inlet": 8,
+    "side_fastener": 20,
+    "side_vent": 20,
+    "equipotential": 3,
+    "rack_ear": 8,
+    "bottom_stamping": 16,
+    "bottom_fastener": 12
+  },
+  "texture_derivatives": {
+    "front": {
+      "source": "views/front.png",
+      "standard": "qa/work/textures-standard/front.png",
+      "standard_size_px": [
+        3072,
+        296
+      ],
+      "web": "qa/work/textures-web/front.jpg",
+      "web_size_px": [
+        2048,
+        197
+      ],
+      "physical_mapping_mm": [
+        442.0,
+        43.6
+      ]
+    },
+    "rear": {
+      "source": "views/rear.png",
+      "standard": "qa/work/textures-standard/rear.png",
+      "standard_size_px": [
+        3072,
+        308
+      ],
+      "web": "qa/work/textures-web/rear.jpg",
+      "web_size_px": [
+        2048,
+        205
+      ],
+      "physical_mapping_mm": [
+        442.0,
+        43.6
+      ]
+    },
+    "left": {
+      "source": "views/left.png",
+      "standard": "qa/work/textures-standard/left.png",
+      "standard_size_px": [
+        2902,
+        287
+      ],
+      "web": "qa/work/textures-web/left.jpg",
+      "web_size_px": [
+        2048,
+        203
+      ],
+      "physical_mapping_mm": [
+        420.0,
+        43.6
+      ]
+    },
+    "right": {
+      "source": "views/right.png",
+      "standard": "qa/work/textures-standard/right.png",
+      "standard_size_px": [
+        2897,
+        287
+      ],
+      "web": "qa/work/textures-web/right.jpg",
+      "web_size_px": [
+        2048,
+        203
+      ],
+      "physical_mapping_mm": [
+        420.0,
+        43.6
+      ]
+    },
+    "top": {
+      "source": "views/top.png",
+      "standard": "qa/work/textures-standard/top.png",
+      "standard_size_px": [
+        2048,
+        1991
+      ],
+      "web": "qa/work/textures-web/top.jpg",
+      "web_size_px": [
+        1600,
+        1555
+      ],
+      "physical_mapping_mm": [
+        442.0,
+        420.0
+      ]
+    },
+    "bottom": {
+      "source": "views/bottom.png",
+      "standard": "qa/work/textures-standard/bottom.png",
+      "standard_size_px": [
+        2048,
+        1960
+      ],
+      "web": "qa/work/textures-web/bottom.jpg",
+      "web_size_px": [
+        1600,
+        1531
+      ],
+      "physical_mapping_mm": [
+        442.0,
+        420.0
+      ]
+    }
+  },
+  "variants": {
+    "standard": {
+      "nodes": 399,
+      "meshes": 399,
+      "materials": 16,
+      "textures": 6,
+      "images": 6
+    },
+    "web": {
+      "nodes": 399,
+      "meshes": 399,
+      "materials": 16,
+      "textures": 6,
+      "images": 6
+    }
+  }
+}

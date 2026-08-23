@@ -1,0 +1,1072 @@
+{
+  "identity": "Huawei CloudEngine CE6857-48S6CQ-EI / 02352CHS / port-side exhaust / four blue FAN-031A-F / two 600 W AC",
+  "status": "PASS",
+  "official_optional_glb": {
+    "path": "source/optional-3d/CE6857-48S6CQ-EI-PARM6039-official.glb",
+    "sha256": "028500da34c65d5a2004b3b72d8ca2dde733778952c71d4afb028c431fa1992c",
+    "unchanged": true,
+    "used_as_authored_mesh": false
+  },
+  "authored_glbs": {
+    "standard": {
+      "path": "model/Huawei-CE6857-48S6CQ-EI.glb",
+      "bytes": 11287912,
+      "sha256": "0060e73351e81431a7afc11fb3525ad5e14f035fb9abe63cc370a617be386edf",
+      "audit": "PASS"
+    },
+    "web": {
+      "path": "model/Huawei-CE6857-48S6CQ-EI-web.glb",
+      "bytes": 1958128,
+      "sha256": "e8b4e5d40c743a854c03a4b2f04cec871af1103e331222c088b0270a76788803",
+      "audit": "PASS"
+    },
+    "geometry_payloads_identical": true
+  },
+  "canonical_faces": {
+    "views_dir": "/root/Project/rack-device-3d/Huawei-CE6857-48S6CQ-EI/views",
+    "ratio_tolerance_percent": 3.0,
+    "validation_alpha_threshold": 8,
+    "thresholds": [
+      1,
+      8,
+      128,
+      224,
+      250,
+      254,
+      255
+    ],
+    "faces": {
+      "front": {
+        "path": "/root/Project/rack-device-3d/Huawei-CE6857-48S6CQ-EI/views/front.png",
+        "canvas_px": [
+          3088,
+          312
+        ],
+        "mode": "RGBA",
+        "physical_scope": "442 mm body width / 43.6 mm height",
+        "expected_ratio": 10.137615,
+        "threshold_measurements": {
+          "1": {
+            "bbox_px": [
+              8,
+              8,
+              3080,
+              304
+            ],
+            "content_px": [
+              3072,
+              296
+            ],
+            "ratio": 10.378378,
+            "ratio_error_percent": 2.375
+          },
+          "8": {
+            "bbox_px": [
+              8,
+              8,
+              3080,
+              304
+            ],
+            "content_px": [
+              3072,
+              296
+            ],
+            "ratio": 10.378378,
+            "ratio_error_percent": 2.375
+          },
+          "128": {
+            "bbox_px": [
+              8,
+              9,
+              3079,
+              304
+            ],
+            "content_px": [
+              3071,
+              295
+            ],
+            "ratio": 10.410169,
+            "ratio_error_percent": 2.6885
+          },
+          "224": {
+            "bbox_px": [
+              10,
+              10,
+              3078,
+              302
+            ],
+            "content_px": [
+              3068,
+              292
+            ],
+            "ratio": 10.506849,
+            "ratio_error_percent": 3.6422
+          },
+          "250": {
+            "bbox_px": [
+              10,
+              10,
+              3078,
+              302
+            ],
+            "content_px": [
+              3068,
+              292
+            ],
+            "ratio": 10.506849,
+            "ratio_error_percent": 3.6422
+          },
+          "254": {
+            "bbox_px": [
+              10,
+              11,
+              3078,
+              301
+            ],
+            "content_px": [
+              3068,
+              290
+            ],
+            "ratio": 10.57931,
+            "ratio_error_percent": 4.357
+          },
+          "255": {
+            "bbox_px": [
+              10,
+              11,
+              3077,
+              301
+            ],
+            "content_px": [
+              3067,
+              290
+            ],
+            "ratio": 10.575862,
+            "ratio_error_percent": 4.323
+          }
+        },
+        "selected_ratio_error_percent": 2.375,
+        "core_alpha_below_250_percent": 0.0,
+        "errors": [],
+        "status": "PASS"
+      },
+      "rear": {
+        "path": "/root/Project/rack-device-3d/Huawei-CE6857-48S6CQ-EI/views/rear.png",
+        "canvas_px": [
+          3088,
+          324
+        ],
+        "mode": "RGBA",
+        "physical_scope": "442 mm body width / 43.6 mm height",
+        "expected_ratio": 10.137615,
+        "threshold_measurements": {
+          "1": {
+            "bbox_px": [
+              8,
+              8,
+              3080,
+              316
+            ],
+            "content_px": [
+              3072,
+              308
+            ],
+            "ratio": 9.974026,
+            "ratio_error_percent": -1.6137
+          },
+          "8": {
+            "bbox_px": [
+              8,
+              8,
+              3080,
+              316
+            ],
+            "content_px": [
+              3072,
+              308
+            ],
+            "ratio": 9.974026,
+            "ratio_error_percent": -1.6137
+          },
+          "128": {
+            "bbox_px": [
+              10,
+              8,
+              3080,
+              314
+            ],
+            "content_px": [
+              3070,
+              306
+            ],
+            "ratio": 10.03268,
+            "ratio_error_percent": -1.0351
+          },
+          "224": {
+            "bbox_px": [
+              11,
+              10,
+              3079,
+              313
+            ],
+            "content_px": [
+              3068,
+              303
+            ],
+            "ratio": 10.125413,
+            "ratio_error_percent": -0.1204
+          },
+          "250": {
+            "bbox_px": [
+              11,
+              11,
+              3078,
+              312
+            ],
+            "content_px": [
+              3067,
+              301
+            ],
+            "ratio": 10.189369,
+            "ratio_error_percent": 0.5105
+          },
+          "254": {
+            "bbox_px": [
+              12,
+              11,
+              3077,
+              312
+            ],
+            "content_px": [
+              3065,
+              301
+            ],
+            "ratio": 10.182724,
+            "ratio_error_percent": 0.445
+          },
+          "255": {
+            "bbox_px": [
+              12,
+              11,
+              3077,
+              312
+            ],
+            "content_px": [
+              3065,
+              301
+            ],
+            "ratio": 10.182724,
+            "ratio_error_percent": 0.445
+          }
+        },
+        "selected_ratio_error_percent": -1.6137,
+        "core_alpha_below_250_percent": 0.0,
+        "errors": [],
+        "status": "PASS"
+      },
+      "left": {
+        "path": "/root/Project/rack-device-3d/Huawei-CE6857-48S6CQ-EI/views/left.png",
+        "canvas_px": [
+          3088,
+          309
+        ],
+        "mode": "RGBA",
+        "physical_scope": "457.9 mm total depth including rear U bracket / 43.6 mm height",
+        "expected_ratio": 10.502294,
+        "threshold_measurements": {
+          "1": {
+            "bbox_px": [
+              8,
+              8,
+              3080,
+              301
+            ],
+            "content_px": [
+              3072,
+              293
+            ],
+            "ratio": 10.484642,
+            "ratio_error_percent": -0.1681
+          },
+          "8": {
+            "bbox_px": [
+              8,
+              8,
+              3079,
+              301
+            ],
+            "content_px": [
+              3071,
+              293
+            ],
+            "ratio": 10.481229,
+            "ratio_error_percent": -0.2006
+          },
+          "128": {
+            "bbox_px": [
+              12,
+              10,
+              3078,
+              299
+            ],
+            "content_px": [
+              3066,
+              289
+            ],
+            "ratio": 10.608997,
+            "ratio_error_percent": 1.016
+          },
+          "224": {
+            "bbox_px": [
+              13,
+              11,
+              3077,
+              298
+            ],
+            "content_px": [
+              3064,
+              287
+            ],
+            "ratio": 10.675958,
+            "ratio_error_percent": 1.6536
+          },
+          "250": {
+            "bbox_px": [
+              14,
+              11,
+              3076,
+              298
+            ],
+            "content_px": [
+              3062,
+              287
+            ],
+            "ratio": 10.66899,
+            "ratio_error_percent": 1.5872
+          },
+          "254": {
+            "bbox_px": [
+              14,
+              12,
+              3076,
+              297
+            ],
+            "content_px": [
+              3062,
+              285
+            ],
+            "ratio": 10.74386,
+            "ratio_error_percent": 2.3001
+          },
+          "255": {
+            "bbox_px": [
+              14,
+              12,
+              3076,
+              297
+            ],
+            "content_px": [
+              3062,
+              285
+            ],
+            "ratio": 10.74386,
+            "ratio_error_percent": 2.3001
+          }
+        },
+        "selected_ratio_error_percent": -0.2006,
+        "core_alpha_below_250_percent": 0.0,
+        "errors": [],
+        "status": "PASS"
+      },
+      "right": {
+        "path": "/root/Project/rack-device-3d/Huawei-CE6857-48S6CQ-EI/views/right.png",
+        "canvas_px": [
+          3088,
+          309
+        ],
+        "mode": "RGBA",
+        "physical_scope": "457.9 mm total depth including rear U bracket / 43.6 mm height",
+        "expected_ratio": 10.502294,
+        "threshold_measurements": {
+          "1": {
+            "bbox_px": [
+              8,
+              8,
+              3080,
+              301
+            ],
+            "content_px": [
+              3072,
+              293
+            ],
+            "ratio": 10.484642,
+            "ratio_error_percent": -0.1681
+          },
+          "8": {
+            "bbox_px": [
+              8,
+              8,
+              3080,
+              300
+            ],
+            "content_px": [
+              3072,
+              292
+            ],
+            "ratio": 10.520548,
+            "ratio_error_percent": 0.1738
+          },
+          "128": {
+            "bbox_px": [
+              12,
+              8,
+              3078,
+              299
+            ],
+            "content_px": [
+              3066,
+              291
+            ],
+            "ratio": 10.536082,
+            "ratio_error_percent": 0.3217
+          },
+          "224": {
+            "bbox_px": [
+              14,
+              10,
+              3077,
+              297
+            ],
+            "content_px": [
+              3063,
+              287
+            ],
+            "ratio": 10.672474,
+            "ratio_error_percent": 1.6204
+          },
+          "250": {
+            "bbox_px": [
+              14,
+              11,
+              3076,
+              296
+            ],
+            "content_px": [
+              3062,
+              285
+            ],
+            "ratio": 10.74386,
+            "ratio_error_percent": 2.3001
+          },
+          "254": {
+            "bbox_px": [
+              15,
+              11,
+              3076,
+              295
+            ],
+            "content_px": [
+              3061,
+              284
+            ],
+            "ratio": 10.778169,
+            "ratio_error_percent": 2.6268
+          },
+          "255": {
+            "bbox_px": [
+              15,
+              12,
+              3076,
+              295
+            ],
+            "content_px": [
+              3061,
+              283
+            ],
+            "ratio": 10.816254,
+            "ratio_error_percent": 2.9895
+          }
+        },
+        "selected_ratio_error_percent": 0.1738,
+        "core_alpha_below_250_percent": 0.0,
+        "errors": [],
+        "status": "PASS"
+      },
+      "top": {
+        "path": "/root/Project/rack-device-3d/Huawei-CE6857-48S6CQ-EI/views/top.png",
+        "canvas_px": [
+          2064,
+          2007
+        ],
+        "mode": "RGBA",
+        "physical_scope": "442 mm body width / 420 mm body depth",
+        "expected_ratio": 1.052381,
+        "threshold_measurements": {
+          "1": {
+            "bbox_px": [
+              8,
+              8,
+              2056,
+              1999
+            ],
+            "content_px": [
+              2048,
+              1991
+            ],
+            "ratio": 1.028629,
+            "ratio_error_percent": -2.257
+          },
+          "8": {
+            "bbox_px": [
+              8,
+              8,
+              2056,
+              1999
+            ],
+            "content_px": [
+              2048,
+              1991
+            ],
+            "ratio": 1.028629,
+            "ratio_error_percent": -2.257
+          },
+          "128": {
+            "bbox_px": [
+              10,
+              9,
+              2056,
+              1998
+            ],
+            "content_px": [
+              2046,
+              1989
+            ],
+            "ratio": 1.028658,
+            "ratio_error_percent": -2.2543
+          },
+          "224": {
+            "bbox_px": [
+              10,
+              10,
+              2054,
+              1997
+            ],
+            "content_px": [
+              2044,
+              1987
+            ],
+            "ratio": 1.028686,
+            "ratio_error_percent": -2.2515
+          },
+          "250": {
+            "bbox_px": [
+              11,
+              11,
+              2053,
+              1996
+            ],
+            "content_px": [
+              2042,
+              1985
+            ],
+            "ratio": 1.028715,
+            "ratio_error_percent": -2.2488
+          },
+          "254": {
+            "bbox_px": [
+              11,
+              11,
+              2053,
+              1996
+            ],
+            "content_px": [
+              2042,
+              1985
+            ],
+            "ratio": 1.028715,
+            "ratio_error_percent": -2.2488
+          },
+          "255": {
+            "bbox_px": [
+              11,
+              11,
+              2053,
+              1996
+            ],
+            "content_px": [
+              2042,
+              1985
+            ],
+            "ratio": 1.028715,
+            "ratio_error_percent": -2.2488
+          }
+        },
+        "selected_ratio_error_percent": -2.257,
+        "core_alpha_below_250_percent": 0.0,
+        "errors": [],
+        "status": "PASS"
+      },
+      "bottom": {
+        "path": "/root/Project/rack-device-3d/Huawei-CE6857-48S6CQ-EI/views/bottom.png",
+        "canvas_px": [
+          2064,
+          1976
+        ],
+        "mode": "RGBA",
+        "physical_scope": "442 mm body width / 420 mm body depth",
+        "expected_ratio": 1.052381,
+        "threshold_measurements": {
+          "1": {
+            "bbox_px": [
+              8,
+              8,
+              2056,
+              1968
+            ],
+            "content_px": [
+              2048,
+              1960
+            ],
+            "ratio": 1.044898,
+            "ratio_error_percent": -0.7111
+          },
+          "8": {
+            "bbox_px": [
+              8,
+              8,
+              2056,
+              1968
+            ],
+            "content_px": [
+              2048,
+              1960
+            ],
+            "ratio": 1.044898,
+            "ratio_error_percent": -0.7111
+          },
+          "128": {
+            "bbox_px": [
+              10,
+              8,
+              2055,
+              1966
+            ],
+            "content_px": [
+              2045,
+              1958
+            ],
+            "ratio": 1.044433,
+            "ratio_error_percent": -0.7552
+          },
+          "224": {
+            "bbox_px": [
+              11,
+              8,
+              2054,
+              1965
+            ],
+            "content_px": [
+              2043,
+              1957
+            ],
+            "ratio": 1.043945,
+            "ratio_error_percent": -0.8016
+          },
+          "250": {
+            "bbox_px": [
+              11,
+              8,
+              2053,
+              1965
+            ],
+            "content_px": [
+              2042,
+              1957
+            ],
+            "ratio": 1.043434,
+            "ratio_error_percent": -0.8502
+          },
+          "254": {
+            "bbox_px": [
+              11,
+              8,
+              2053,
+              1965
+            ],
+            "content_px": [
+              2042,
+              1957
+            ],
+            "ratio": 1.043434,
+            "ratio_error_percent": -0.8502
+          },
+          "255": {
+            "bbox_px": [
+              11,
+              8,
+              2053,
+              1965
+            ],
+            "content_px": [
+              2042,
+              1957
+            ],
+            "ratio": 1.043434,
+            "ratio_error_percent": -0.8502
+          }
+        },
+        "selected_ratio_error_percent": -0.7111,
+        "core_alpha_below_250_percent": 0.0,
+        "errors": [],
+        "status": "PASS"
+      }
+    },
+    "errors": [],
+    "error_count": 0,
+    "status": "PASS"
+  },
+  "visible_geometry_counts": {
+    "canonical_faces": 6,
+    "sfpplus_cages": 48,
+    "qsfp28_cages": 6,
+    "fan_modules": 4,
+    "fan_blue_handles": 4,
+    "ac_psu_modules": 2,
+    "psu_blue_handles": 2,
+    "iec_inlet_groups": 2,
+    "rear_u_bracket_parts": 8,
+    "management_ports": 3,
+    "bottom_stamped_groups": 8,
+    "visible_nodes_total": 399
+  },
+  "render_matrix": {
+    "three": {
+      "standard": [
+        "front",
+        "rear",
+        "left",
+        "right",
+        "top",
+        "bottom",
+        "front-left",
+        "front-right",
+        "rear-left",
+        "rear-right"
+      ],
+      "web": [
+        "front",
+        "rear",
+        "left",
+        "right",
+        "top",
+        "bottom",
+        "front-left",
+        "front-right",
+        "rear-left",
+        "rear-right"
+      ]
+    },
+    "babylon": {
+      "standard": [
+        "front",
+        "rear",
+        "left",
+        "right",
+        "top",
+        "bottom",
+        "front-left",
+        "front-right",
+        "rear-left",
+        "rear-right"
+      ],
+      "web": [
+        "front",
+        "rear",
+        "left",
+        "right",
+        "top",
+        "bottom",
+        "front-left",
+        "front-right",
+        "rear-left",
+        "rear-right"
+      ]
+    }
+  },
+  "missing_renders": [],
+  "standard_vs_web": {
+    "three": {
+      "front": {
+        "mae_0_to_255": 0.264008,
+        "p95_0_to_255": 1.0,
+        "max_0_to_255": 44
+      },
+      "rear": {
+        "mae_0_to_255": 0.421399,
+        "p95_0_to_255": 3.0,
+        "max_0_to_255": 38
+      },
+      "left": {
+        "mae_0_to_255": 0.117339,
+        "p95_0_to_255": 1.0,
+        "max_0_to_255": 21
+      },
+      "right": {
+        "mae_0_to_255": 0.103074,
+        "p95_0_to_255": 1.0,
+        "max_0_to_255": 28
+      },
+      "top": {
+        "mae_0_to_255": 0.30969,
+        "p95_0_to_255": 1.0,
+        "max_0_to_255": 37
+      },
+      "bottom": {
+        "mae_0_to_255": 0.316396,
+        "p95_0_to_255": 1.0,
+        "max_0_to_255": 38
+      },
+      "front-left": {
+        "mae_0_to_255": 0.142856,
+        "p95_0_to_255": 0.0,
+        "max_0_to_255": 82
+      },
+      "front-right": {
+        "mae_0_to_255": 0.095424,
+        "p95_0_to_255": 0.0,
+        "max_0_to_255": 93
+      },
+      "rear-left": {
+        "mae_0_to_255": 0.103196,
+        "p95_0_to_255": 0.0,
+        "max_0_to_255": 69
+      },
+      "rear-right": {
+        "mae_0_to_255": 0.099572,
+        "p95_0_to_255": 0.0,
+        "max_0_to_255": 70
+      }
+    },
+    "babylon": {
+      "front": {
+        "mae_0_to_255": 0.251873,
+        "p95_0_to_255": 1.0,
+        "max_0_to_255": 42
+      },
+      "rear": {
+        "mae_0_to_255": 0.405809,
+        "p95_0_to_255": 2.0,
+        "max_0_to_255": 36
+      },
+      "left": {
+        "mae_0_to_255": 0.108189,
+        "p95_0_to_255": 1.0,
+        "max_0_to_255": 23
+      },
+      "right": {
+        "mae_0_to_255": 0.093164,
+        "p95_0_to_255": 1.0,
+        "max_0_to_255": 25
+      },
+      "top": {
+        "mae_0_to_255": 0.282949,
+        "p95_0_to_255": 1.0,
+        "max_0_to_255": 33
+      },
+      "bottom": {
+        "mae_0_to_255": 0.31374,
+        "p95_0_to_255": 1.0,
+        "max_0_to_255": 35
+      },
+      "front-left": {
+        "mae_0_to_255": 0.063815,
+        "p95_0_to_255": 0.0,
+        "max_0_to_255": 43
+      },
+      "front-right": {
+        "mae_0_to_255": 0.060837,
+        "p95_0_to_255": 0.0,
+        "max_0_to_255": 49
+      },
+      "rear-left": {
+        "mae_0_to_255": 0.096086,
+        "p95_0_to_255": 0.0,
+        "max_0_to_255": 52
+      },
+      "rear-right": {
+        "mae_0_to_255": 0.081297,
+        "p95_0_to_255": 0.0,
+        "max_0_to_255": 58
+      }
+    }
+  },
+  "viewer_crosscheck": {
+    "standard": {
+      "front": {
+        "mae_0_to_255": 0.426565,
+        "p95_0_to_255": 4.0,
+        "max_0_to_255": 12
+      },
+      "rear": {
+        "mae_0_to_255": 0.400711,
+        "p95_0_to_255": 2.0,
+        "max_0_to_255": 41
+      },
+      "left": {
+        "mae_0_to_255": 0.608776,
+        "p95_0_to_255": 4.0,
+        "max_0_to_255": 23
+      },
+      "right": {
+        "mae_0_to_255": 0.632297,
+        "p95_0_to_255": 5.0,
+        "max_0_to_255": 9
+      },
+      "top": {
+        "mae_0_to_255": 0.960396,
+        "p95_0_to_255": 3.0,
+        "max_0_to_255": 125
+      },
+      "bottom": {
+        "mae_0_to_255": 0.569894,
+        "p95_0_to_255": 2.0,
+        "max_0_to_255": 74
+      },
+      "front-left": {
+        "mae_0_to_255": 0.574021,
+        "p95_0_to_255": 2.0,
+        "max_0_to_255": 179
+      },
+      "front-right": {
+        "mae_0_to_255": 0.756864,
+        "p95_0_to_255": 2.0,
+        "max_0_to_255": 190
+      },
+      "rear-left": {
+        "mae_0_to_255": 0.635719,
+        "p95_0_to_255": 2.0,
+        "max_0_to_255": 228
+      },
+      "rear-right": {
+        "mae_0_to_255": 0.623349,
+        "p95_0_to_255": 2.0,
+        "max_0_to_255": 210
+      }
+    },
+    "web": {
+      "front": {
+        "mae_0_to_255": 0.434609,
+        "p95_0_to_255": 4.0,
+        "max_0_to_255": 12
+      },
+      "rear": {
+        "mae_0_to_255": 0.408852,
+        "p95_0_to_255": 2.0,
+        "max_0_to_255": 41
+      },
+      "left": {
+        "mae_0_to_255": 0.611675,
+        "p95_0_to_255": 4.0,
+        "max_0_to_255": 23
+      },
+      "right": {
+        "mae_0_to_255": 0.633277,
+        "p95_0_to_255": 5.0,
+        "max_0_to_255": 9
+      },
+      "top": {
+        "mae_0_to_255": 0.957063,
+        "p95_0_to_255": 3.0,
+        "max_0_to_255": 125
+      },
+      "bottom": {
+        "mae_0_to_255": 0.566972,
+        "p95_0_to_255": 2.0,
+        "max_0_to_255": 74
+      },
+      "front-left": {
+        "mae_0_to_255": 0.580414,
+        "p95_0_to_255": 2.0,
+        "max_0_to_255": 184
+      },
+      "front-right": {
+        "mae_0_to_255": 0.754983,
+        "p95_0_to_255": 2.0,
+        "max_0_to_255": 190
+      },
+      "rear-left": {
+        "mae_0_to_255": 0.64352,
+        "p95_0_to_255": 2.0,
+        "max_0_to_255": 228
+      },
+      "rear-right": {
+        "mae_0_to_255": 0.618299,
+        "p95_0_to_255": 2.0,
+        "max_0_to_255": 209
+      }
+    }
+  },
+  "official_comparisons": {
+    "front": {
+      "mae_0_to_255": 9.60733,
+      "p95_0_to_255": 74.0,
+      "max_0_to_255": 242
+    },
+    "rear": {
+      "mae_0_to_255": 8.427571,
+      "p95_0_to_255": 66.0,
+      "max_0_to_255": 236
+    },
+    "left": {
+      "mae_0_to_255": 5.557163,
+      "p95_0_to_255": 27.0,
+      "max_0_to_255": 235
+    },
+    "right": {
+      "mae_0_to_255": 3.896384,
+      "p95_0_to_255": 11.0,
+      "max_0_to_255": 236
+    },
+    "top": {
+      "mae_0_to_255": 17.90902,
+      "p95_0_to_255": 43.0,
+      "max_0_to_255": 226
+    },
+    "bottom": {
+      "mae_0_to_255": 7.043016,
+      "p95_0_to_255": 34.0,
+      "max_0_to_255": 236
+    },
+    "front-left": {
+      "mae_0_to_255": 3.277079,
+      "p95_0_to_255": 30.0,
+      "max_0_to_255": 238
+    },
+    "front-right": {
+      "mae_0_to_255": 2.061085,
+      "p95_0_to_255": 10.0,
+      "max_0_to_255": 234
+    },
+    "rear-left": {
+      "mae_0_to_255": 2.433713,
+      "p95_0_to_255": 14.0,
+      "max_0_to_255": 252
+    },
+    "rear-right": {
+      "mae_0_to_255": 2.959894,
+      "p95_0_to_255": 25.0,
+      "max_0_to_255": 234
+    }
+  },
+  "dark_checker_alpha_evidence": [
+    "qa/renders/alpha-dark/three-front.png",
+    "qa/renders/alpha-dark/three-rear.png",
+    "qa/renders/alpha-dark/babylon-front.png",
+    "qa/renders/alpha-dark/babylon-rear.png"
+  ],
+  "browser_runtime": {
+    "model_load_errors": 0,
+    "notes": "all 40 final captures reached window.__READY; console noise was limited to favicon 404 and software-WebGL readback warnings"
+  },
+  "failures": []
+}

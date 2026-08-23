@@ -1,0 +1,909 @@
+
+===== PAGE 1 =====
+Huawei CloudEngine 6850 
+Switch Datasheet 
+Huawei CloudEngine 6850 series switches have advanced 
+hardware architecture with 40GE/100GE uplink ports and high-
+density 10GE access ports. 
+ 
+ 
+CloudEngine 6850 series provide 
+high-density 10GE access to help 
+enterprises and carriers build a 
+scalable data center network 
+platform in the cloud computing 
+era. They can also be used as 
+aggregation or core switches for 
+enterprise campus networks. 
+ 
+Contact Us
+Skype: wendycisco
+WhatsAPP: 852-57008326
+E-mail: wendy@donewin.com.hk
+Website：https://www.uritprice.com
+https://www.uritprice.com
+
+===== PAGE 2 =====
+ 
+ 
+Huawei CloudEngine 6850 Switch Datasheet 
+2 
+ 
+Product Overview 
+Huawei CloudEngine 6850 series switches are next-generation 10G Ethernet switches designed for data centers and high-end 
+campus networks, providing high-performance, high-density 10GE ports, and low latency. The CE6850 series uses an advanced 
+hardware architecture with 40GE uplink ports and high density 10GE access ports. 
+Using the Huawei VRP8 software platform, CE6850 series provide extensive data center service features and high stacking 
+capability. In addition, the airflow direction (front-to-back or back-to-front) can be changed. 
+CE6850 series can work with CloudEngine 16800 or CloudEngine 12800 switches to build an elastic, virtualized, high-quality 
+fabric that meets the requirements of cloud-computing data centers. 
+CE6850 series provide high-density 10GE access to help enterprises and carriers build a scalable data center network platform 
+in the cloud computing era. They can also be used as aggregation or core switches for enterprise campus networks. 
+Product Appearance 
+CloudEngine 6856-48T6Q-HI switches provide 48 x 10GE Base-T ports, 6 x 40GE QSFP+ ports. 
+ 
+CloudEngine 6857-48S6CQ-EI switches provide 48 x 10GE SFP+ ports, 6 x 100GE QSFP28 ports or  6 x 40GE QSFP+ ports. 
+ 
+Product Characteristics 
+High-Density 10GE Access 
+ 
+CloudEngine 6850 series provide 48 x 10GE ports, high-density 10GE ports among 1 U ToR switches, allowing for high-
+density 10GE server access. 
+ 
+CloudEngie 6850 series have a maximum of six 100GE QSFP 28 or 40GE QSFP+ ports. Each QSFP28 or QSFP+ port 
+can be used as four 10GE SFP+ ports, providing flexibility in networking. The uplink QSFP28 or 40GE QSFP+ ports can be 
+connected to CloudEngine 16800 or CloudEngine 12800 switches to build a non-blocking network platform. 
+Inter-device Link Aggregation, High Efficiency and Reliability 
+ 
+CloudEngine 6850 series support multichassis link aggregation group (M-LAG), which enables links of multiple switches to 
+aggregate into one to implement device-level link backup. 
+ 
+Switches in an M-LAG system all work in active state to share traffic and back up each other, enhancing system reliability. 
+ 
+Switches in an M-LAG system can be upgraded independently. During the upgrade, other switches in the system take over 
+traffic forwarding to ensure uninterrupted services. 
+ 
+M-LAG supports dual-homing to Ethernet, VXLAN, and IP networks, allowing for flexible networking. 
+https://www.uritprice.com
+
+===== PAGE 3 =====
+ 
+ 
+Huawei CloudEngine 6850 Switch Datasheet 
+3 
+ 
+ 
+With comprehensive inter-device link aggregation technology, the device networking coupling relationship evolves from 
+stacking at the control plane to the use of M-LAG and then finally to coupling-free M-LAG Lite. This achieves active-active 
+server access and zero interruption of services when upgrading switches. 
+Virtualized Hardware Gateway, Enabling Quick Deployment 
+ 
+CloudEngine 6850 series can work with the industry's mainstream virtualization platforms and acts a hardware gateway on 
+an overlay network (VXLAN). The virtualization function protects investments by ensuring services can be deployed quickly 
+without requiring network changes. 
+ 
+CloudEngine 6850 series can connect to a cloud platform through open APIs, facilitating the unified management of virtual 
+and physical networks. 
+ 
+The hardware gateway deployment enables fast service deployment without changing the customer network, providing 
+investment protection. 
+ 
+CloudEngine 6850 series support Border Gateway Protocol - Ethernet VPN (BGP-EVPN), which can run as the VXLAN 
+control plane to simplify VXLAN configuration within and between data centers. 
+Standard Interfaces, Enabling Openness and Interoperability 
+ 
+CloudEngine 6850 series support NETCONF and can work with Huawei iMaster NCE-Fabric. 
+ 
+CloudEngine 6850 series support Ansible-based automatic configuration and open-source module release, expanding 
+network functions and simplifying device management and maintenance. 
+ 
+CloudEngine 6850 series can be integrated into mainstream SDN and cloud computing platforms flexibly and quickly. 
+ZTP, Implementing Automatic O&M 
+ 
+CloudEngine 6850 series support Zero Touch Provisioning (ZTP). ZTP enables the CloudEngine 6850 series to 
+automatically obtain and load version files from a USB flash drive or file server, freeing network engineers from onsite 
+configuration and deployment. ZTP reduces labor costs and improves device deployment efficiency. 
+ 
+ZTP provides built-in scripts through open APIs. Data center personnel can use a programming language they are familiar 
+with, such as Python, to centrally configure network devices. 
+ 
+ZTP decouples the configuration time of new devices from the device quantity and area distribution, which improves 
+service provisioning efficiency. 
+FabricInsight-based Intelligent O&M 
+ 
+The CloudEngine 6850 provides telemetry technology to collect device data in real time and send the data to Huawei data 
+center network analyzer iMaster NCE-FabricInsight. The iMaster NCE-FabricInsight analyzes network data based on the 
+intelligent fault identification algorithm, accurately displays the real-time network status, effectively demarcates and locates 
+faults in a timely manner, and identifies network problems that affect user experience, accurately guaranteeing user experience. 
+iMaster NCE-based Simplified Network Deployment 
+ 
+CloudEngine 6850 series switches can interconnect with iMaster NCE-Fabric through standard protocols such as NetConf 
+and SNMP to implement network automatic management and control, providing more efficient and intelligent operation methods, 
+simplifying network management, and reducing the OPEX. 
+Flexible Airflow Design, Improving Energy Efficiency 
+Flexible front-to-back/back-to-front airflow design 
+ 
+CloudEngine 6850 series use a strict front-to-back/back-to-front airflow design that isolates cold air channels from hot air 
+channels. This design improves heat dissipation efficiency and meets design requirements of data center equipment rooms. 
+ 
+Air can flow from front to back or back to front depending on the fans and power modules that are used. 
+ 
+Redundant power modules and fans can be configured to ensure service continuity. 
+Innovative energy-saving technologies 
+ 
+CloudEngine 6850 series have innovative energy-saving chips and can measure system power consumption in real time. 
+The fan speed can be adjusted dynamically based on system consumption. These energy-saving technologies reduce O&M 
+costs and contribute to a greener data center. 
+https://www.uritprice.com
+
+===== PAGE 4 =====
+ 
+ 
+Huawei CloudEngine 6850 Switch Datasheet 
+4 
+ 
+Clear Indicators, Simplifying Maintenance 
+Clear indicators 
+ 
+Port indicators clearly show the port status and port rate. The 40GE/100GE port indicators can show the states of all ports 
+derived from the 40GE/100GE ports. 
+ 
+State and stack indicators on both the front and rear panels enable users to maintain the switch from either side. 
+ 
+CloudEngine 6850 series support remote positioning. Remote positioning indicators enable users to easily identify the 
+switches they want to maintain in an equipment room full of devices. 
+Simple maintenance 
+ 
+The management port, fans, and power modules are on the front panel, which facilitates device maintenance. 
+ 
+Data ports are located at the rear, facing servers. This simplifies cabling. 
+Licensing 
+CloudEngine 6850 supports both the traditional feature based licensing mode and the latest Huawei IDN One Software (N1 
+Huawei IDN One Software (N1 mode for short) licensing mode. The CloudFabric N1 business model combines the NCE 
+controller, analyzer, and CloudEngine switch software for use in a range of common scenarios. This simplifies transactions, 
+provides customers with more functions and value, and protects their software investment with Software License Portability. 
+Product 
+Feature 
+N1 Mandatory Software Packages 
+N1 Add-
+on 
+Software 
+Packages 
+CloudEngine 6850 
+Series Switch 
+ 
+Foundation 
+Advanced 
+Premium 
+Multi-cloud 
+Multi-DC 
+Value-
+added 
+Package 
+Basic software 
+√ 
+√ 
+√ 
+ 
+IPv6 
+√ 
+√ 
+√ 
+ 
+VXLAN 
+√ 
+√ 
+√ 
+ 
+Lossless upgrade 
+√ 
+√ 
+√ 
+ 
+Telemetry 
+√ 
+√ 
+√ 
+ 
+MPLS 
+ 
+√ 
+√ 
+ 
+iMaster NCE-Fabric 
+controller 
+SDN automation 
+√ 
+√ 
+√ 
+ 
+Basic intent 
+functions 
+(simulation and 
+verification, and 
+network-wide 
+configuration 
+rollback) 
+ 
+ 
+√ 
+ 
+Multi-cloud multi-DC 
+function 
+ 
+ 
+ 
+√ 
+iMaster NCE-
+FabricInsight analyzer 
+Basic network 
+analysis functions of 
+telemetry 
+√ 
+√ 
+√ 
+ 
+Network health ("1-
+3-5" intelligent 
+ 
+√ 
+√ 
+ 
+https://www.uritprice.com
+
+===== PAGE 5 =====
+ 
+ 
+Huawei CloudEngine 6850 Switch Datasheet 
+5 
+ 
+Product 
+Feature 
+N1 Mandatory Software Packages 
+N1 Add-
+on 
+Software 
+Packages 
+O&M) 
+Value-added 
+functions for 
+network traffic 
+analysis (managing 
+100 VMs) 
+ 
+ 
+√ 
+ 
+Version mapping 
+Select one from three options. The Advanced software 
+package contains functions of the Foundation software 
+package, and the Premium software package contains 
+functions of the Advanced software package. 
+It is used 
+with the 
+Foundation, 
+Advanced, 
+or Premium 
+software 
+package. 
+For details about product function differences, refer to the product documentation. 
+Product Specifications
+Note: This content is applicable only to regions outside mainland China. Huawei reserves the right to interpret this content.
+Functions and Features
+Item 
+CloudEngine 6856-48T6Q-HI 
+CloudEngine 6857-48S6CQ-EI
+Device virtualization 
+iStack
+M-LAG
+Network virtualization 
+VXLAN in routing and bridging modes
+BGP-EVPN
+QinQ access VXLAN
+Data center interconnect 
+VXLAN mapping, implementing interconnection between multiple DCI networks at Layer 2
+SDN 
+iMaster NCE-Fabric
+Network
+convergence
+DCBX, PFC, ETS 
+RDMA and RoCE (RoCEv1 and RoCEv2) 
+Programmability 
+OPS 
+Ansible-based automatic configuration and open-source module release 
+Traffic analysis 
+NetStream 
+sFlow 
+VLAN 
+Adding access, trunk, and hybrid interfaces to VLANs 
+Default VLAN 
+https://www.uritprice.com
+
+===== PAGE 6 =====
+ 
+ 
+Huawei CloudEngine 6850 Switch Datasheet 
+6 
+ 
+Item 
+CloudEngine 6856-48T6Q-HI 
+CloudEngine 6857-48S6CQ-EI 
+QinQ 
+MUX VLAN 
+GVRP 
+MAC address table 
+Dynamic learning and aging of MAC address entries 
+Static, dynamic, and blackhole MAC address entries 
+Packet filtering based on source MAC addresses 
+MAC address limiting based on ports and VLANs 
+IP routing 
+IPv4 routing protocols, such as RIP, OSPF, IS-IS, and BGP 
+IPv6 routing protocols, such as RIPng, OSPFv3, IS-ISv6, and BGP4+ 
+IPv6 
+IPv6 Neighbor Discovery (ND) 
+Path MTU Discovery (PMTU) 
+TCP6, IPv6 ping, IPv6 tracert, IPv6 socket, UDP6, and Raw IP6 
+Multicast 
+Multicast routing protocols such as IGMP, PIM-SM, PIM-DM, MSDP, and MBGP 
+IGMP snooping 
+IGMP proxy 
+Fast leaving of multicast member interfaces 
+Multicast traffic suppression 
+Multicast VLAN 
+Reliability 
+Link Aggregation Control Protocol (LACP) 
+STP, RSTP, VBST, and MSTP 
+BPDU protection, root protection, and loop prevention 
+Smart Link and multi-instance 
+Device Link Detection Protocol (DLDP) 
+ERPS (G.8032) 
+Hardware-based Bidirectional Forwarding Detection (BFD) 
+VRRP, VRRP load balancing, and BFD for VRRP 
+BFD for BGP/IS-IS/OSPF/Static route 
+BFD for VXLAN 
+QoS 
+Traffic classification based on Layer 2, Layer 3, Layer 4, and priority information 
+ACL, CAR, re-marking, and scheduling 
+Queue scheduling algorithms, including PQ, WRR, DRR, PQ+WRR, and PQ+DRR 
+Congestion avoidance mechanisms, including WRED and tail drop 
+Traffic shaping 
+O&M 
+Network-wide path detection 
+https://www.uritprice.com
+
+===== PAGE 7 =====
+ 
+ 
+Huawei CloudEngine 6850 Switch Datasheet 
+7 
+ 
+Item 
+CloudEngine 6856-48T6Q-HI 
+CloudEngine 6857-48S6CQ-EI 
+Telemetry 
+Statistics on the buffer microburst status 
+VXLAN OAM: VXLAN ping and VXLAN tracert 
+Configuration and 
+maintenance 
+Console, Telnet, and SSH terminals 
+Network management protocols, such as SNMPv1/v2/v3 
+File upload and download through FTP and TFTP 
+BootROM upgrade and remote upgrade 
+Hot patches 
+User operation logs 
+Zero Touch Provisioning (ZTP) 
+Security and management 
+Command line authority control based on user levels, preventing unauthorized users from using 
+commands 
+Defense against DoS address attacks, ARP storms, and ICMP attacks 
+Port isolation, port security, and sticky MAC 
+Binding of the IP address, MAC address, port number, and VLAN ID 
+Authentication methods, including AAA, RADIUS, and HWTACACS 
+Remote Network Monitoring (RMON) 
+Performance and Scalability 
+Item 
+CloudEngine 6856-48T6Q-HI 
+CloudEngine 6857-48S6CQ-EI 
+Maximum number of MAC address 
+entries 
+288K 
+Maximum number of routes (FIB IPv4/ 
+IPv6) 
+256K/128K 
+380K/256K 
+ARP size 
+128K 
+168K 
+Maximum number of VRFs 
+4096 
+IPv6 ND (Neighbor Discovery) table 
+size 
+48K 
+64K 
+Maximum Number of multicast routes 
+(Multicast FIB IPv4/IPv6) 
+8K/2K 
+Maximum VRRP groups 
+256 
+1K 
+Maximum number of ECMP paths 
+128 
+Maximum Number of broadcast 
+domains 
+8K 
+16K 
+Maximum number of BDIF interfaces 
+4K 
+8K 
+Maximum number of virtual tunnel 
+endpoints (VTEP) 
+2K 
+Maximum number of LAGs 
+1024/512/256/128/64 
+https://www.uritprice.com
+
+===== PAGE 8 =====
+ 
+ 
+Huawei CloudEngine 6850 Switch Datasheet 
+8 
+ 
+Item 
+CloudEngine 6856-48T6Q-HI 
+CloudEngine 6857-48S6CQ-EI 
+Maximum number of links in a LAG 
+2/4/8/16/32 
+Maximum number of MSTIs 
+64 
+Maximum number of VLANs where 
+VBST can be configured 
+500 
+Note: This specification may vary between different scenarios. Please contact Huawei for details. 
+Hardware Specifications 
+Item 
+CloudEngine 6856-48T6Q-HI 
+CloudEngine 6857-
+48S6CQ-EI 
+Physical Features 
+Dimensions (W x D x H) 
+442 mm x 600 mm x 43.6 mm 
+442 mm x 420 mm x 43.6 mm 
+Weight (excluding optical 
+transceivers, power 
+modules, and fan 
+assemblies/ including AC 
+power modules and fan 
+assemblies, excluding 
+optical transceivers, kg) 
+8.8/12.6 
+5.3/7.6 
+Switching capacity (Tbps) 
+1.44 
+2.16 
+Forwarding performance 
+(Mpps) 
+1080 
+1000 
+10GE SFP+ ports 
+0 
+48 
+10GE BASE-T 
+48 
+0 
+40GE QSFP+ ports 
+6 
+0 
+40/100GE QSFP28 ports 
+0 
+6 
+Management 
+interface 
+Out-of-band management 
+port 
+2*GE RJ45 & SFP (combo) 
+management interfaces 
+1*GE management interface 
+Console port 
+1*RJ45 + 1*MiniUSB (multiplexing) 
+1*RJ45 
+USB port 
+1 
+CPU 
+Main frequency (GHz) 
+1.2 
+1.4 
+Number of cores 
+4 
+Storage 
+RAM 
+4 GB 
+NOR flash 
+16 MB 
+64 MB 
+NAND flash 
+1 GB 
+2 GB 
+System 
+System buffer 
+16 MB 
+32 MB 
+Power Supply 
+System 
+Power modules 
+AC: 600 W AC 
+HDC: 600 W 380 V 
+DC: 1200 W -48 V 
+AC: 600 W AC 
+DC: 350 W -48 V DC 
+Rated voltage range (V) 
+AC: 100 V to 240 V 
+DC 380 V HVDC: 240 V to 380 V 
+DC: -48 V to -60 V 
+AC: 100 V to 240 V 
+DC: -48 V to -60 V 
+https://www.uritprice.com
+
+===== PAGE 9 =====
+ 
+ 
+Huawei CloudEngine 6850 Switch Datasheet 
+9 
+ 
+Item 
+CloudEngine 6856-48T6Q-HI 
+CloudEngine 6857-
+48S6CQ-EI 
+Maximum voltage range (V) 
+AC: 90 V to 290 V 
+240 V HVDC: 188 V to 290 V 
+DC 380 V HVDC: 188 V to 400 V 
+DC: -38.4 V to -72 V 
+AC: 90 V to 290 V 
+DC:-38.4 V to -72 V 
+Maximum input current 
+600 W AC power module: 
+100 V to 240 V 8A 
+600 W 240 VDC power module: 
+240 V 4A 
+600 W 380 VDC power module: 
+240 V to 380V 4 A 
+1200 W -48 V power module: -48 
+V to 60 V 38A 
+600 W AC power module: 
+100 V to 240 V 8A 
+350 W DC power module: 
+-48 V to -60 V 11A 
+Typical power 
+219 W (100% traffic load, 3 m 
+network cable and copper cable, 
+normal temperature, dual power 
+modules) 
+224 W (100% traffic load, 3 m 
+network cable, short-distance 
+optical transceivers, normal 
+temperature, dual power modules) 
+152 W (100% traffic load, copper 
+cable, normal temperature, dual 
+power modules) 195 W (100% 
+traffic load, shortdistance optical 
+modules, normal temperature, 
+dual power modules) 
+Maximum power 
+346 W 
+287 W 
+Frequency (AC, Hz) 
+50/60 
+Heat Dissipation 
+Heat dissipation mode 
+Air cooling 
+Number of fan trays 
+2 
+4 
+Heat dissipation airflow 
+Front-to-back or back-to-front airflow 
+Maximum heat consumption 
+(BTU/hr) 
+1181 
+979 
+Environment 
+specifications 
+Long-term operating 
+temperature (°C) 
+0°C to 40°C (0-1800 m) 
+The temperature decreases by 1°C each time the altitude increases by 
+220 m. 
+Storage temperature (°C) 
+-40°C to +70°C 
+Relative humidity 
+5% to 95% 
+Operating altitude (m) 
+Up to 5000 
+Sound power at 27°C (dBA) 
+Front-to-back airflow: < 64 
+Back-to-front airflow: < 64 
+Frontto-back airflow: < 63 dBA 
+Backto-front airflow: < 63 dBA 
+Sound power at 40°C (dBA) 
+Front-to-back airflow: < 80 
+Back-to-front airflow: < 84 
+Frontto-back airflow: < 84 dBA 
+Backto-front airflow: < 82 dBA 
+Sound pressure at 27°C 
+(dBA) 
+Front-to-back airflow: 48 in 
+average (maximum: 53) 
+Back-to-front airflow: 58 in average 
+(maximum: 53) 
+Frontto-back airflow: 48 dBA in 
+average (maximum: 52 dBA) 
+Backto-front airflow: 49 dBA in 
+average (maximum: 53 dBA) 
+Surge protection 
+AC power supply protection: 6 kV in common mode and 6 kV in 
+https://www.uritprice.com
+
+===== PAGE 10 =====
+ 
+ 
+Huawei CloudEngine 6850 Switch Datasheet 
+10 
+ 
+Item 
+CloudEngine 6856-48T6Q-HI 
+CloudEngine 6857-
+48S6CQ-EI 
+differential mode 
+DC power supply protection: 4 kV in common mode and 2 kV in 
+differential mode 
+Reliability 
+MTBF (year) 
+54.48 
+45.3 
+MTTR (hour) 
+1.81 
+1.68 
+Availability 
+0.99999620929 
+0.99999576002 
+Safety and Regulatory Compliance
+The following table lists the safety and regulatory compliance of CloudEngine switches.
+Certification Category 
+Description
+Safety 
+ 
+EN 60950-1
+ 
+EN 60825-1
+ 
+EN 60825-2
+ 
+UL 60950-1
+ 
+CSA-C22.2 No. 60950-1
+ 
+IEC 60950-1
+ 
+AS/NZS 60950-1
+ 
+GB4943
+Electromagnetic Compatibility
+(EMC)
+ 
+EN 300386 
+ 
+EN 55032: CLASS A 
+ 
+EN 55024 
+ 
+IEC/EN 61000-3-2 
+ 
+IEC/EN 61000-3-3 
+ 
+FCC 47CFR Part15 CLASS A 
+ 
+ICES-003: CLASS A 
+ 
+CISPR 32: CLASS A 
+ 
+CISPR 24 
+ 
+AS/NZS CISPR32 
+ 
+VCCI- CISPR32: CLASS A 
+ 
+GB9254 CLASS A 
+Environment 
+ 
+2011/65/EU EN 50581 
+ 
+2012/19/EU EN 50419 
+ 
+(EC) No.1907/2006 
+ 
+GB/T 26572 
+ 
+ETSI EN 300 019-1-1 
+ 
+ETSI EN 300 019-1-2 
+ 
+ETSI EN 300 019-1-3 
+ 
+ETSI EN 300 753 GR63 
+Note 
+https://www.uritprice.com
+
+===== PAGE 11 =====
+ 
+ 
+Huawei CloudEngine 6850 Switch Datasheet 
+11 
+ 
+EMC: electromagnetic compatibility
+CISPR: International Special Committee on Radio Interference
+EN: European Standard
+ETSI: European Telecommunications Standards Institute
+CFR: Code of Federal Regulations
+FCC: Federal Communication Commission
+IEC: International Electrotechnical Commission
+AS/NZS: Australian/New Zealand Standard
+VCCI: Voluntary Control Council for Interference
+UL: Underwriters Laboratories
+CSA: Canadian Standards Association
+Supported MIBs
+Optical Transceivers and Cable
+Ordering Information
+Mainframe
+CE6856-48T6Q-HI 
+CE6856-48T6Q-HI Switch (48-Port 10GE RJ45, 6-Port 40GE QSFP+, 2*FAN Box, Without Fan and
+Power Module)
+CE6856-HI-B-B00 
+CE6856-48T6Q-HI Switch (48-Port 10GE RJ45, 6-Port 40GE QSFP+, 2*AC Power Module, 2*FAN
+Box, Port-side Intake)
+CE6856-HI-F-B00 
+CE6856-48T6Q-HI Switch (48-Port 10GE RJ45, 6-Port 40GE QSFP+, 2*AC Power Module, 2*FAN
+Box, Port-side Exhaust)
+CE6857-48S6CQ-EI 
+CE6857-48S6CQ-EISwitch (48-Port 10GE SFP+, 6*100GE QSFP28, Without Fan and Power
+Module)
+CE6857-EI-F-B0B 
+CE6857-48S6CQ-EISwitch (48*10GE SFP+, 6*100GE QSFP28, 2*AC Power Module, 2*FAN Box,
+Port-side Exhaust)
+CE6857-EI-B-B0B 
+CE6857-48S6CQ-EI Switch (48*10GE SFP+, 6*100GE QSFP28, 2*AC Power Module, 2*FAN Box,
+Port-side Intake)
+Fan Tray 
+Model 
+Description 
+Applicable Product 
+FAN-060A-F 
+Fan box (F, FAN panel side intake) 
+CE6856-48T6Q-HI 
+FAN-060A-B 
+Fan box (B, FAN panel side exhaust) 
+CE6856-48T6Q-HI 
+FAN-031A-F 
+FAN-031A-F, Fan box (F, FAN panel side intake ) 
+CE6857-48S6CQ-EI 
+https://www.uritprice.com
+
+===== PAGE 12 =====
+ 
+ 
+Huawei CloudEngine 6850 Switch Datasheet 
+12 
+ 
+Model 
+Description 
+Applicable Product 
+FAN-031A-B 
+Fan box (B, FAN panel side exhaust) 
+CE6857-48S6CQ-EI 
+Power 
+Model 
+Description 
+Applicable Product 
+PDC-1K2WA-F 
+1200W DC Power Module (Front to Back, Power 
+panel side intake) 
+CE6856-48T6Q-HI 
+PDC-1K2WA-B 
+1200W DC Power Module (Back to Front, Power 
+panel side exhaust) 
+CE6856-48T6Q-HI 
+PAC-600WB-F 
+600W AC&240V DC Power Module (Power panel 
+side intake) 
+CE6856-48T6Q-HI,CE6857-48S6CQ-EI 
+PAC-600WB-B 
+600W AC&240V DC Power Module (Power panel 
+side exhaust) 
+CE6856-48T6Q-HI,CE6857-48S6CQ-EI 
+PHD-600WA-F 
+600W HVDC Power Module (Power panel side 
+intake) 
+CE6856-48T6Q-HI 
+PHD-600WA-B 
+600W HVDC Power Module (Power panel side 
+exhaust) 
+CE6856-48T6Q-HI 
+PDC-350WA-F 
+350W DC Power Module (Front to Back, Power 
+panel side intake) 
+CE6857-48S6CQ-EI 
+PDC-350WA-B 
+350W DC Power Module (Back to Front, Power 
+panel side exhaust) 
+CE6857-48S6CQ-EI 
+ 
+Software 
+CE68-LIC-BUN01 
+CE6800 Function License Bundle 1 
+CE68-LIC-VXLAN 
+CloudEngine 6800 VXLAN Function 
+CE68-LIC-TLM 
+CE6800 Telemetry Function 
+N1-CE68LIC-CFFD 
+N1-CloudFabric Foundation SW License for CloudEngine 6800 
+N1-CE68CFFD-SnS1Y 
+N1-CloudFabric Foundation SW License for CloudEngine 6800-SnS-Year 
+N1-CE68LIC-CFAD 
+N1-CloudFabric Advanced SW License for CloudEngine 6800 
+N1-CE68CFAD-SnS1Y 
+N1-CloudFabric Advanced SW License for CloudEngine -SnS - Year 
+N1-CE68LIC-CFPM 
+N1-CloudFabric Premium SW License for CloudEngine 6800 
+N1-CE68CFPM-SnS1Y 
+N1-CloudFabric Premium SW License for CloudEngine 6800 -SnS-Year 
+N1-CE-F-LIC-MDCA 
+N1-CloudEngine Data Center Switch Multi-cloud Multi-DC Value-added Package - Fixed 
+N1-CEFMDCA -SnS1Y 
+N1-CloudEngine Data Center Switch Multi-cloud Multi-DC Value-added Package, Per Fixed 
+device -SnS-Year 
+https://www.uritprice.com
+
+===== PAGE 13 =====
+ 
+ 
+Huawei CloudEngine 6850 Switch Datasheet 
+13 
+ 
+Networking and Application 
+Data Center Applications 
+On a typical data center network, CloudEngine 6850 series switches work as TOR switches and connect to CloudEngine16800, 
+CloudEngine 12800 or CloudEngine 8800 core switches using 40GE/100GE ports, building an end-to-end 40GE/100GE full-
+mesh network. The core and TOR switches use fabric technologies such as VXLAN to build a non-blocking large Layer 2 
+network, which allows for large-scale VM migration and flexible service deployment. 
+ 
+Note: VXLAN can also be used on campus networks to support flexible service deployment in different service areas. 
+https://www.uritprice.com
+
+===== PAGE 14 =====
+ 
+ 
+Huawei CloudEngine 6850 Switch Datasheet 
+14 
+ 
+ 
+Copyright © Huawei Technologies Co., Ltd. 2021. All rights reserved. 
+No part of this document may be reproduced or transmitted in any form or by any means without prior written consent of 
+Huawei Technologies Co., Ltd. 
+ 
+Trademarks and Permissions 
+ and other Huawei trademarks are trademarks of Huawei Technologies Co., Ltd. 
+All other trademarks and trade names mentioned in this document are the property of their respective holders. 
+ 
+Notice 
+The purchased products, services and features are stipulated by the contract made between Huawei and the customer. All or 
+part of the products, services and features described in this document may not be within the purchase scope or the usage 
+scope. Unless otherwise specified in the contract, all statements, information, and recommendations in this document are 
+provided "AS IS" without warranties, guarantees or representations of any kind, either express or implied. 
+The information in this document is subject to change without notice. Every effort has been made in the preparation of this 
+document to ensure accuracy of the contents, but all statements, information, and recommendations in this document do not 
+constitute a warranty of any kind, express or implied. 
+ Huawei Technologies Co., Ltd.
+ 
+Contact Us
+Skype: wendycisco
+WhatsAPP: 852-57008326
+E-mail: wendy@donewin.com.hk
+Website：https://www.uritprice.com

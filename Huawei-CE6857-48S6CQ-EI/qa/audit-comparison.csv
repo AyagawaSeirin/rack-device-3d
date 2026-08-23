@@ -1,0 +1,82 @@
+category,item,expected_or_reference,observed,metric,status,evidence
+identity,frozen assembly,CE6857-48S6CQ-EI / 02352CHS / 4 FAN-031A-F / 2x600W AC,VERIFIED,manifest,PASS,source/identity-manifest.md
+lineage,official PARM6039 unchanged,028500da34c65d5a2004b3b72d8ca2dde733778952c71d4afb028c431fa1992c,028500da34c65d5a2004b3b72d8ca2dde733778952c71d4afb028c431fa1992c,SHA-256,PASS,source/optional-3d/CE6857-48S6CQ-EI-PARM6039-official.glb
+lineage,official mesh excluded from authored build,false,false,boolean,PASS,qa/build-summary.json
+canonical-face,front,442 mm body width / 43.6 mm height,ratio error 2.375%,alpha>=8 content ratio,PASS,qa/views-physical-audit.json
+canonical-face,rear,442 mm body width / 43.6 mm height,ratio error -1.6137%,alpha>=8 content ratio,PASS,qa/views-physical-audit.json
+canonical-face,left,457.9 mm total depth including rear U bracket / 43.6 mm height,ratio error -0.2006%,alpha>=8 content ratio,PASS,qa/views-physical-audit.json
+canonical-face,right,457.9 mm total depth including rear U bracket / 43.6 mm height,ratio error 0.1738%,alpha>=8 content ratio,PASS,qa/views-physical-audit.json
+canonical-face,top,442 mm body width / 420 mm body depth,ratio error -2.257%,alpha>=8 content ratio,PASS,qa/views-physical-audit.json
+canonical-face,bottom,442 mm body width / 420 mm body depth,ratio error -0.7111%,alpha>=8 content ratio,PASS,qa/views-physical-audit.json
+glb-structure,standard,PASS / 0 errors / 0 warnings,PASS / 0 / 0,audit status,PASS,qa/glb-standard-audit.json
+glb-bounds,standard,442 x 43.6 x 457.9 mm envelope,"[442.79998779296875, 43.60000038146973, 458.25498962402344]",nonuniform error 0.0947%,PASS,qa/glb-standard-audit.json
+glb-file,standard,self-contained GLB,11287912 bytes; sha256 0060e73351e81431a7afc11fb3525ad5e14f035fb9abe63cc370a617be386edf,bytes/hash,PASS,model/Huawei-CE6857-48S6CQ-EI.glb
+glb-structure,web,PASS / 0 errors / 0 warnings,PASS / 0 / 0,audit status,PASS,qa/glb-web-audit.json
+glb-bounds,web,442 x 43.6 x 457.9 mm envelope,"[442.79998779296875, 43.60000038146973, 458.25498962402344]",nonuniform error 0.0947%,PASS,qa/glb-web-audit.json
+glb-file,web,self-contained GLB,1958128 bytes; sha256 e8b4e5d40c743a854c03a4b2f04cec871af1103e331222c088b0270a76788803,bytes/hash,PASS,model/Huawei-CE6857-48S6CQ-EI-web.glb
+geometry,standard/web external geometry,identical position/normal/UV/index payloads,true,mesh payload SHA-256,PASS,model/*.glb
+visible-geometry,canonical_faces,6,6,independent node/group count,PASS,qa/geometry-manifest.csv
+visible-geometry,sfpplus_cages,48,48,independent node/group count,PASS,qa/geometry-manifest.csv
+visible-geometry,qsfp28_cages,6,6,independent node/group count,PASS,qa/geometry-manifest.csv
+visible-geometry,fan_modules,4,4,independent node/group count,PASS,qa/geometry-manifest.csv
+visible-geometry,fan_blue_handles,4,4,independent node/group count,PASS,qa/geometry-manifest.csv
+visible-geometry,ac_psu_modules,2,2,independent node/group count,PASS,qa/geometry-manifest.csv
+visible-geometry,psu_blue_handles,2,2,independent node/group count,PASS,qa/geometry-manifest.csv
+visible-geometry,iec_inlet_groups,2,2,independent node/group count,PASS,qa/geometry-manifest.csv
+visible-geometry,rear_u_bracket_parts,8,8,independent node/group count,PASS,qa/geometry-manifest.csv
+visible-geometry,management_ports,3,3,independent node/group count,PASS,qa/geometry-manifest.csv
+visible-geometry,bottom_stamped_groups,8,8,independent node/group count,PASS,qa/geometry-manifest.csv
+render-matrix,three-standard,10 views at 1600x900,10,render count,PASS,qa/renders/three-standard/
+render-matrix,three-web,10 views at 1600x900,10,render count,PASS,qa/renders/three-web/
+render-matrix,babylon-standard,10 views at 1600x900,10,render count,PASS,qa/renders/babylon-standard/
+render-matrix,babylon-web,10 views at 1600x900,10,render count,PASS,qa/renders/babylon-web/
+standard-vs-web,three-front,same visible exterior,"{'mae_0_to_255': 0.264008, 'p95_0_to_255': 1.0, 'max_0_to_255': 44}",RGB pixel difference,PASS,qa/renders/three-standard/front.png | qa/renders/three-web/front.png
+standard-vs-web,three-rear,same visible exterior,"{'mae_0_to_255': 0.421399, 'p95_0_to_255': 3.0, 'max_0_to_255': 38}",RGB pixel difference,PASS,qa/renders/three-standard/rear.png | qa/renders/three-web/rear.png
+standard-vs-web,three-left,same visible exterior,"{'mae_0_to_255': 0.117339, 'p95_0_to_255': 1.0, 'max_0_to_255': 21}",RGB pixel difference,PASS,qa/renders/three-standard/left.png | qa/renders/three-web/left.png
+standard-vs-web,three-right,same visible exterior,"{'mae_0_to_255': 0.103074, 'p95_0_to_255': 1.0, 'max_0_to_255': 28}",RGB pixel difference,PASS,qa/renders/three-standard/right.png | qa/renders/three-web/right.png
+standard-vs-web,three-top,same visible exterior,"{'mae_0_to_255': 0.30969, 'p95_0_to_255': 1.0, 'max_0_to_255': 37}",RGB pixel difference,PASS,qa/renders/three-standard/top.png | qa/renders/three-web/top.png
+standard-vs-web,three-bottom,same visible exterior,"{'mae_0_to_255': 0.316396, 'p95_0_to_255': 1.0, 'max_0_to_255': 38}",RGB pixel difference,PASS,qa/renders/three-standard/bottom.png | qa/renders/three-web/bottom.png
+standard-vs-web,three-front-left,same visible exterior,"{'mae_0_to_255': 0.142856, 'p95_0_to_255': 0.0, 'max_0_to_255': 82}",RGB pixel difference,PASS,qa/renders/three-standard/front-left.png | qa/renders/three-web/front-left.png
+standard-vs-web,three-front-right,same visible exterior,"{'mae_0_to_255': 0.095424, 'p95_0_to_255': 0.0, 'max_0_to_255': 93}",RGB pixel difference,PASS,qa/renders/three-standard/front-right.png | qa/renders/three-web/front-right.png
+standard-vs-web,three-rear-left,same visible exterior,"{'mae_0_to_255': 0.103196, 'p95_0_to_255': 0.0, 'max_0_to_255': 69}",RGB pixel difference,PASS,qa/renders/three-standard/rear-left.png | qa/renders/three-web/rear-left.png
+standard-vs-web,three-rear-right,same visible exterior,"{'mae_0_to_255': 0.099572, 'p95_0_to_255': 0.0, 'max_0_to_255': 70}",RGB pixel difference,PASS,qa/renders/three-standard/rear-right.png | qa/renders/three-web/rear-right.png
+standard-vs-web,babylon-front,same visible exterior,"{'mae_0_to_255': 0.251873, 'p95_0_to_255': 1.0, 'max_0_to_255': 42}",RGB pixel difference,PASS,qa/renders/babylon-standard/front.png | qa/renders/babylon-web/front.png
+standard-vs-web,babylon-rear,same visible exterior,"{'mae_0_to_255': 0.405809, 'p95_0_to_255': 2.0, 'max_0_to_255': 36}",RGB pixel difference,PASS,qa/renders/babylon-standard/rear.png | qa/renders/babylon-web/rear.png
+standard-vs-web,babylon-left,same visible exterior,"{'mae_0_to_255': 0.108189, 'p95_0_to_255': 1.0, 'max_0_to_255': 23}",RGB pixel difference,PASS,qa/renders/babylon-standard/left.png | qa/renders/babylon-web/left.png
+standard-vs-web,babylon-right,same visible exterior,"{'mae_0_to_255': 0.093164, 'p95_0_to_255': 1.0, 'max_0_to_255': 25}",RGB pixel difference,PASS,qa/renders/babylon-standard/right.png | qa/renders/babylon-web/right.png
+standard-vs-web,babylon-top,same visible exterior,"{'mae_0_to_255': 0.282949, 'p95_0_to_255': 1.0, 'max_0_to_255': 33}",RGB pixel difference,PASS,qa/renders/babylon-standard/top.png | qa/renders/babylon-web/top.png
+standard-vs-web,babylon-bottom,same visible exterior,"{'mae_0_to_255': 0.31374, 'p95_0_to_255': 1.0, 'max_0_to_255': 35}",RGB pixel difference,PASS,qa/renders/babylon-standard/bottom.png | qa/renders/babylon-web/bottom.png
+standard-vs-web,babylon-front-left,same visible exterior,"{'mae_0_to_255': 0.063815, 'p95_0_to_255': 0.0, 'max_0_to_255': 43}",RGB pixel difference,PASS,qa/renders/babylon-standard/front-left.png | qa/renders/babylon-web/front-left.png
+standard-vs-web,babylon-front-right,same visible exterior,"{'mae_0_to_255': 0.060837, 'p95_0_to_255': 0.0, 'max_0_to_255': 49}",RGB pixel difference,PASS,qa/renders/babylon-standard/front-right.png | qa/renders/babylon-web/front-right.png
+standard-vs-web,babylon-rear-left,same visible exterior,"{'mae_0_to_255': 0.096086, 'p95_0_to_255': 0.0, 'max_0_to_255': 52}",RGB pixel difference,PASS,qa/renders/babylon-standard/rear-left.png | qa/renders/babylon-web/rear-left.png
+standard-vs-web,babylon-rear-right,same visible exterior,"{'mae_0_to_255': 0.081297, 'p95_0_to_255': 0.0, 'max_0_to_255': 58}",RGB pixel difference,PASS,qa/renders/babylon-standard/rear-right.png | qa/renders/babylon-web/rear-right.png
+viewer-crosscheck,standard-front,same orientation/opacity/silhouette,"{'mae_0_to_255': 0.426565, 'p95_0_to_255': 4.0, 'max_0_to_255': 12}",RGB pixel difference (lighting may differ),PASS,qa/renders/three-standard/front.png | qa/renders/babylon-standard/front.png
+viewer-crosscheck,standard-rear,same orientation/opacity/silhouette,"{'mae_0_to_255': 0.400711, 'p95_0_to_255': 2.0, 'max_0_to_255': 41}",RGB pixel difference (lighting may differ),PASS,qa/renders/three-standard/rear.png | qa/renders/babylon-standard/rear.png
+viewer-crosscheck,standard-left,same orientation/opacity/silhouette,"{'mae_0_to_255': 0.608776, 'p95_0_to_255': 4.0, 'max_0_to_255': 23}",RGB pixel difference (lighting may differ),PASS,qa/renders/three-standard/left.png | qa/renders/babylon-standard/left.png
+viewer-crosscheck,standard-right,same orientation/opacity/silhouette,"{'mae_0_to_255': 0.632297, 'p95_0_to_255': 5.0, 'max_0_to_255': 9}",RGB pixel difference (lighting may differ),PASS,qa/renders/three-standard/right.png | qa/renders/babylon-standard/right.png
+viewer-crosscheck,standard-top,same orientation/opacity/silhouette,"{'mae_0_to_255': 0.960396, 'p95_0_to_255': 3.0, 'max_0_to_255': 125}",RGB pixel difference (lighting may differ),PASS,qa/renders/three-standard/top.png | qa/renders/babylon-standard/top.png
+viewer-crosscheck,standard-bottom,same orientation/opacity/silhouette,"{'mae_0_to_255': 0.569894, 'p95_0_to_255': 2.0, 'max_0_to_255': 74}",RGB pixel difference (lighting may differ),PASS,qa/renders/three-standard/bottom.png | qa/renders/babylon-standard/bottom.png
+viewer-crosscheck,standard-front-left,same orientation/opacity/silhouette,"{'mae_0_to_255': 0.574021, 'p95_0_to_255': 2.0, 'max_0_to_255': 179}",RGB pixel difference (lighting may differ),PASS,qa/renders/three-standard/front-left.png | qa/renders/babylon-standard/front-left.png
+viewer-crosscheck,standard-front-right,same orientation/opacity/silhouette,"{'mae_0_to_255': 0.756864, 'p95_0_to_255': 2.0, 'max_0_to_255': 190}",RGB pixel difference (lighting may differ),PASS,qa/renders/three-standard/front-right.png | qa/renders/babylon-standard/front-right.png
+viewer-crosscheck,standard-rear-left,same orientation/opacity/silhouette,"{'mae_0_to_255': 0.635719, 'p95_0_to_255': 2.0, 'max_0_to_255': 228}",RGB pixel difference (lighting may differ),PASS,qa/renders/three-standard/rear-left.png | qa/renders/babylon-standard/rear-left.png
+viewer-crosscheck,standard-rear-right,same orientation/opacity/silhouette,"{'mae_0_to_255': 0.623349, 'p95_0_to_255': 2.0, 'max_0_to_255': 210}",RGB pixel difference (lighting may differ),PASS,qa/renders/three-standard/rear-right.png | qa/renders/babylon-standard/rear-right.png
+viewer-crosscheck,web-front,same orientation/opacity/silhouette,"{'mae_0_to_255': 0.434609, 'p95_0_to_255': 4.0, 'max_0_to_255': 12}",RGB pixel difference (lighting may differ),PASS,qa/renders/three-web/front.png | qa/renders/babylon-web/front.png
+viewer-crosscheck,web-rear,same orientation/opacity/silhouette,"{'mae_0_to_255': 0.408852, 'p95_0_to_255': 2.0, 'max_0_to_255': 41}",RGB pixel difference (lighting may differ),PASS,qa/renders/three-web/rear.png | qa/renders/babylon-web/rear.png
+viewer-crosscheck,web-left,same orientation/opacity/silhouette,"{'mae_0_to_255': 0.611675, 'p95_0_to_255': 4.0, 'max_0_to_255': 23}",RGB pixel difference (lighting may differ),PASS,qa/renders/three-web/left.png | qa/renders/babylon-web/left.png
+viewer-crosscheck,web-right,same orientation/opacity/silhouette,"{'mae_0_to_255': 0.633277, 'p95_0_to_255': 5.0, 'max_0_to_255': 9}",RGB pixel difference (lighting may differ),PASS,qa/renders/three-web/right.png | qa/renders/babylon-web/right.png
+viewer-crosscheck,web-top,same orientation/opacity/silhouette,"{'mae_0_to_255': 0.957063, 'p95_0_to_255': 3.0, 'max_0_to_255': 125}",RGB pixel difference (lighting may differ),PASS,qa/renders/three-web/top.png | qa/renders/babylon-web/top.png
+viewer-crosscheck,web-bottom,same orientation/opacity/silhouette,"{'mae_0_to_255': 0.566972, 'p95_0_to_255': 2.0, 'max_0_to_255': 74}",RGB pixel difference (lighting may differ),PASS,qa/renders/three-web/bottom.png | qa/renders/babylon-web/bottom.png
+viewer-crosscheck,web-front-left,same orientation/opacity/silhouette,"{'mae_0_to_255': 0.580414, 'p95_0_to_255': 2.0, 'max_0_to_255': 184}",RGB pixel difference (lighting may differ),PASS,qa/renders/three-web/front-left.png | qa/renders/babylon-web/front-left.png
+viewer-crosscheck,web-front-right,same orientation/opacity/silhouette,"{'mae_0_to_255': 0.754983, 'p95_0_to_255': 2.0, 'max_0_to_255': 190}",RGB pixel difference (lighting may differ),PASS,qa/renders/three-web/front-right.png | qa/renders/babylon-web/front-right.png
+viewer-crosscheck,web-rear-left,same orientation/opacity/silhouette,"{'mae_0_to_255': 0.64352, 'p95_0_to_255': 2.0, 'max_0_to_255': 228}",RGB pixel difference (lighting may differ),PASS,qa/renders/three-web/rear-left.png | qa/renders/babylon-web/rear-left.png
+viewer-crosscheck,web-rear-right,same orientation/opacity/silhouette,"{'mae_0_to_255': 0.618299, 'p95_0_to_255': 2.0, 'max_0_to_255': 209}",RGB pixel difference (lighting may differ),PASS,qa/renders/three-web/rear-right.png | qa/renders/babylon-web/rear-right.png
+official-comparison,front,qa/reference/official-orthographic/front.png,"{'mae_0_to_255': 9.60733, 'p95_0_to_255': 74.0, 'max_0_to_255': 242}",diagnostic RGB difference + feature review,PASS,qa/comparisons/official-orthographic/front.png
+official-comparison,rear,qa/reference/official-orthographic/rear.png,"{'mae_0_to_255': 8.427571, 'p95_0_to_255': 66.0, 'max_0_to_255': 236}",diagnostic RGB difference + feature review,PASS,qa/comparisons/official-orthographic/rear.png
+official-comparison,left,qa/reference/official-orthographic/left.png,"{'mae_0_to_255': 5.557163, 'p95_0_to_255': 27.0, 'max_0_to_255': 235}",diagnostic RGB difference + feature review,PASS,qa/comparisons/official-orthographic/left.png
+official-comparison,right,qa/reference/official-orthographic/right.png,"{'mae_0_to_255': 3.896384, 'p95_0_to_255': 11.0, 'max_0_to_255': 236}",diagnostic RGB difference + feature review,PASS,qa/comparisons/official-orthographic/right.png
+official-comparison,top,qa/reference/official-orthographic/top.png,"{'mae_0_to_255': 17.90902, 'p95_0_to_255': 43.0, 'max_0_to_255': 226}",diagnostic RGB difference + feature review,PASS,qa/comparisons/official-orthographic/top.png
+official-comparison,bottom,qa/reference/official-orthographic/bottom.png,"{'mae_0_to_255': 7.043016, 'p95_0_to_255': 34.0, 'max_0_to_255': 236}",diagnostic RGB difference + feature review,PASS,qa/comparisons/official-orthographic/bottom.png
+official-comparison,front-left,qa/reference/official-three-quarter/front-left.png,"{'mae_0_to_255': 3.277079, 'p95_0_to_255': 30.0, 'max_0_to_255': 238}",diagnostic RGB difference + feature review,PASS,qa/comparisons/official-three-quarter/front-left.png
+official-comparison,front-right,qa/reference/official-three-quarter/front-right.png,"{'mae_0_to_255': 2.061085, 'p95_0_to_255': 10.0, 'max_0_to_255': 234}",diagnostic RGB difference + feature review,PASS,qa/comparisons/official-three-quarter/front-right.png
+official-comparison,rear-left,qa/reference/official-three-quarter/rear-left.png,"{'mae_0_to_255': 2.433713, 'p95_0_to_255': 14.0, 'max_0_to_255': 252}",diagnostic RGB difference + feature review,PASS,qa/comparisons/official-three-quarter/rear-left.png
+official-comparison,rear-right,qa/reference/official-three-quarter/rear-right.png,"{'mae_0_to_255': 2.959894, 'p95_0_to_255': 25.0, 'max_0_to_255': 234}",diagnostic RGB difference + feature review,PASS,qa/comparisons/official-three-quarter/rear-right.png
