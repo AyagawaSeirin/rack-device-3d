@@ -1,0 +1,34 @@
+{
+  "model": "Fortinet FortiGate FG-1500D",
+  "delivery_subject": "user-locked 2U dual-AC complete appliance",
+  "status": "PASS_WITH_BOTTOM_FALLBACK",
+  "glbs": [
+    {
+      "path": "model/Fortinet-FG1500D.glb",
+      "bytes": 12648812,
+      "sha256": "23db204ad7fe973ddcd007b01e6a05d4d62d2c206ea9f4e3c524b310f51602ee",
+      "status": "PASS"
+    },
+    {
+      "path": "model/Fortinet-FG1500D-web.glb",
+      "bytes": 2132016,
+      "sha256": "2005bc62304731e6eb0c68dadb0ca4b799200a0d1afff0482afe84915d969d03",
+      "status": "PASS"
+    }
+  ],
+  "expected_dimensions_mm": [438, 89, 554],
+  "audited_bounds_mm": [438.38, 89.16, 555.87],
+  "view_audit": "PASS",
+  "standard_glb_audit": "PASS",
+  "web_glb_audit": "PASS",
+  "identity_manifest": "VERIFIED",
+  "imagegen_faces": 6,
+  "bottom_mode": "GENERIC_BOTTOM_FALLBACK",
+  "webgl_viewers": 2,
+  "actual_glb_render_count": 40,
+  "official_exact_3d_found": false,
+  "optional_non_official_3d": "source/optional-3d/3D-Warehouse-Fortigate-1500D.usdz",
+  "blocking_gates": [],
+  "git_commit_created": false,
+  "git_push_performed": false
+}

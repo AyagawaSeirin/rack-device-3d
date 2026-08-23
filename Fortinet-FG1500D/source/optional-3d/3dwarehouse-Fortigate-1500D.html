@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="3D Warehouse is a website of searchable, pre-made 3D models that works seamlessly with SketchUp."
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <!-- TODO: figure out how to programatically load these otherwise we're getting errors -->
+    <!-- <link rel="preload" href="/images/hero-img.webp" as="image" />
+    <link rel="preload" href="/images/hero-img-dark.webp" as="image" /> -->
+    <link rel="preload" href="/assets/open-sans-300-CH0tTALE.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/open-sans-regular-795kxNcv.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/open-sans-italic-V2N-v-0n.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/open-sans-600-D-OfaXiT.woff2" as="font" type="font/woff2" crossorigin />
+    <link
+      rel="preload"
+      href="/assets/open-sans-700-normal-228e563b3-BIGoPpRJ.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/assets/open-sans-700-italic-7b3897ce8-B4ZBaTpu.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>3D Warehouse</title>
+    <style>
+      @keyframes app-loading-spinner {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    <style>
+      .hide-spinner {
+        display: none;
+      }
+
+      .show-spinner {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .animation {
+        height: 33vh;
+        width: 28.6vh;
+        animation: app-loading-spinner 6s linear infinite;
+      }
+    </style>
+    <!--
+      IAB TCF stub: must be the first script on the page, before gpt.js/GTM/any
+      third-party tag, so window.__tcfapi is never undefined when those scripts
+      (or our own ad slot components) check for it. See:
+      https://developer.onetrust.com/onetrust/docs/using-tcf-with-header-bidding
+    -->
+    <script src="https://cdn.cookielaw.org/consent/tcf.stub.js" type="text/javascript" charset="UTF-8"></script>
+    <style>
+      /*
+        Hidden by default so OneTrust's script can load (and populate __tcfapi)
+        regardless of the ONETRUST_CONSENT feature toggle, without letting the
+        banner become visible/interactive until CookieConsent.vue mounts.
+      */
+      #onetrust-consent-sdk {
+        display: none !important;
+      }
+
+      html.onetrust-enabled #onetrust-consent-sdk {
+        display: revert !important;
+      }
+    </style>
+    <script>
+      function OptanonWrapper() {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'OneTrustGroupsUpdated' });
+      }
+
+      (function () {
+        // Matches the EMBED route (`/embed/:id?`, `/embed.html`) from src/router/index.ts.
+        // The Vue router isn't available yet at this point in the page load, so
+        // check the path directly instead.
+        if (window.location.pathname.startsWith('/embed')) return;
+
+        // Per-environment OneTrust data-domain-script IDs (defined here — this
+        // is the source of truth). Hostname patterns must match
+        // src/utils/environment.ts (isDevEnv/isStageEnv/isProdEnv).
+        var DEV_COOKIE_CONSENT_ID = '7de9306f-7fc7-47f0-907b-95ebc390de97';
+        var STG_COOKIE_CONSENT_ID = 'd08838de-e35e-4c2d-a598-712a02e962fe';
+        var PROD_COOKIE_CONSENT_ID = 'dbf5e348-ba11-40b1-b147-93cad7cc09b9';
+
+        var host = window.location.hostname.toLowerCase();
+        var domainScriptId;
+        if (
+          /^((local.)|(next.)|(embed-))*dev-3dwarehouse.sketchup.com/.test(host) ||
+          host === 'localdev.sketchup.com'
+        ) {
+          domainScriptId = DEV_COOKIE_CONSENT_ID;
+        } else if (/^((next.)|(embed-))*stg-3dwarehouse.sketchup.com/.test(host)) {
+          domainScriptId = STG_COOKIE_CONSENT_ID;
+        } else if (/^((next.)|(embed-))*3dwarehouse.sketchup.com/.test(host)) {
+          domainScriptId = PROD_COOKIE_CONSENT_ID;
+        }
+
+        if (!domainScriptId) return;
+
+        var autoBlock = document.createElement('script');
+        autoBlock.src = 'https://cdn.cookielaw.org/consent/' + domainScriptId + '/OtAutoBlock.js';
+        document.head.appendChild(autoBlock);
+
+        var sdkStub = document.createElement('script');
+        sdkStub.src = 'https://cdn.cookielaw.org/scripttemplates/otSDKStub.js';
+        sdkStub.charset = 'UTF-8';
+        sdkStub.setAttribute('data-domain-script', domainScriptId);
+        document.head.appendChild(sdkStub);
+      })();
+    </script>
+    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+    <script>
+      window.googletag = window.googletag || { cmd: [] };
+      window.googletag.cmd.push(function() {
+        window.googletag.setConfig({ disableInitialLoad: true });
+        // Called once here (not per ad slot component) so multiple slots on the
+        // same page get batched into a single request via GPT's Single Request
+        // Architecture, instead of each slot firing its own separate request.
+        window.googletag.enableServices();
+      });
+    </script>
+    <script>
+      if (window.location.pathname === '/index.html') {
+        // The client may be trying to reach /index.html, which doesn't exist.  Keep any query params intact.
+        let redirect = window.location.href.replace('/index.html', '/');
+        window.location.href = redirect;
+      }
+    </script>
+    <script>
+      if (isSketchupClient(navigator.userAgent)) {
+        const clientVersion = parseSketchUpVersion(navigator.userAgent);
+        if (clientVersion.major < lowestSupportedMajorVersion()) {
+          const redirect = window.location.origin + '/deprecated-client';
+          window.location.href = redirect;
+        }
+      }
+
+      function isSketchupClient(userAgent) {
+        let agent = userAgent.toLowerCase();
+        return agent.indexOf('sketchup') >= 0 && !(agent.indexOf('mxr mobile sketchup') >= 0);
+      }
+
+      function parseSketchUpVersion(userAgent) {
+        let version = {
+          major: undefined,
+          minor: undefined,
+        };
+
+        // Before 2017, the version string looked like 'SketchUp/14.0'. 2017 and
+        // later use 'SketchUp Pro/17.0' on Windows. We added a 'Pro' or 'Make'
+        // string after SketchUp. NOTE: The Mac might use the old or the new
+        // style.
+        let pattern = /SketchUp (Pro|Make)\/\d+\.\d+/i;
+        let matches = userAgent.match(pattern);
+
+        if (!matches || matches.length === 0) {
+          pattern = /SketchUp\/\d+\.\d+/i;
+          matches = userAgent.match(pattern);
+        }
+        if (matches && matches.length > 0) {
+          const suString = matches[0];
+          const versionString = suString.substring(suString.indexOf('/') + 1);
+          const versionParts = versionString.split('.');
+          let value = parseInt(versionParts[0], 10);
+          version.major = isNaN(value) ? undefined : value;
+          value = parseInt(versionParts[1], 10);
+          version.minor = isNaN(value) ? undefined : value;
+        }
+
+        return version;
+      }
+
+      function lowestSupportedMajorVersion() {
+        const today = new Date();
+        const baseYear = today.getFullYear() % 100;
+        const month = today.getMonth();
+
+        let supportedVersion = baseYear - (month < 1 ? 3 : 2);
+        if (supportedVersion < 0) {
+          supportedVersion += 100;
+        }
+        return supportedVersion;
+      }
+    </script>
+    <script type="module" crossorigin src="/assets/index-BSdrKvbm.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-DAXXjFlN.js">
+    <link rel="modulepreload" crossorigin href="/assets/group-home-DTgcwyWO.js">
+    <link rel="modulepreload" crossorigin href="/assets/_getTag-Bd0xf2tc.js">
+    <link rel="stylesheet" crossorigin href="/assets/group-home-CL5psJbB.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-oMJMtaaz.css">
+  </head>
+  <body>
+    <div id="app">
+      <!-- Everything inside #app is replaced when Vue loads.
+           Logo size is 100x115.42, so height is 1.1542xwidth.
+       -->
+      <div id="spinner" class="hide-spinner">
+        <div class="animation">
+          <img src="/images/3dw-logo.svg" />
+        </div>
+      </div>
+    </div>
+
+    <noscript>3DWarehouse requires Javascript to be enabled.</noscript>
+  </body>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function (event) {
+      document.getElementById('spinner').className = 'show-spinner';
+    });
+
+    window.__earlyPostMessages = [];
+    window.__earlyMessageListener = function (event) {
+      if (window.__earlyPostMessages) {
+        window.__earlyPostMessages.push(event.data);
+      }
+    };
+    window.addEventListener('message', window.__earlyMessageListener);
+  </script>
+
+</html>
