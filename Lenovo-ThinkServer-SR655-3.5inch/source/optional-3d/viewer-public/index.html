@@ -1,0 +1,833 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+	<head>
+		<title>Thinksystem SR655</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable = no">
+		<script type="text/javascript" src="js/browserDetect.js" ></script>
+        <script type="text/javascript" src="model_gl/ctm.js"></script>
+		<script type="text/javascript" src="model_gl/lzma.js"></script>
+        <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="model_gl/SSE.js"></script>
+        <script type="text/javascript" src="js/gl_script.js"></script>
+        <script type="text/javascript" src="js/ui.js"></script>
+        <script type="text/javascript" src="js/sb.js"></script>
+		<script type="text/javascript" src="InfinityRT_Navigation.js"></script>
+        
+<!--		<script type="text/javascript" src="RT_Navigation_Extension.js"></script>-->
+<!--		<script type="text/javascript" src="RT_Analytics.js"></script>-->
+<!--        <script type="text/javascript" src="js/jquery-ui-1.8.24.custom.min.js"></script>-->
+		<script type="text/javascript" src="model_gl/draco_decoder.js"></script>
+		<script type="text/javascript" src="model_gl/draco_wasm_wrapper.js"></script>
+<!--		<script type="text/javascript" src="js/imageSlider.js"></script>-->
+		
+	   <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	
+	  <link type="text/css" href="css/jquery-ui-1.10.3.custom.css" rel="stylesheet" />
+		<!--<link type="text/css" href="css/jquery-ui-1.8.24.custom.css" rel="stylesheet" />-->
+		<link href="css/sb.css" rel="stylesheet" type="text/css">
+		<link href="css/liteaccordion.css" rel="stylesheet" type="text/css">
+			<style>
+			.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+				color: white;
+				opacity: 0.7;
+				font-size: 14px;
+				cursor: pointer;
+				display: block;
+				background: #4a4a4b;
+				font-family: 'Gotham-Book';
+			}
+			.ui-accordion .ui-accordion-icons {
+				padding-top: 11px;
+				padding-bottom: 0px;
+				padding-left: 25px;
+				text-align: left;
+				height: 27px;
+				border: 1px solid #AEADAB;
+				cursor: pointer !important;
+			}
+			.ui-accordion .ui-accordion-icons {
+    			border: none;
+    			border-top: 1px solid #c0c0c0 !important;
+			}
+			
+			.ui-widget-content {
+				border: 1px solid #dfdfe4;
+				background-color: #dfdfe4;
+				color: #333333;
+			}
+
+			.menuitems,  .menuitems1 {
+			/*width: 190px;height: 39px;background-color: black;color: white;opacity: 0.7; border-top: 1px solid #c0c0c0;font-size: 14px;cursor: pointer;display: block;background: #4a4a4b;*/
+			}
+			.menuitemsBase {
+			     width: 190px;height: 39px;/*background-color: black;*/color: white;/*opacity: 0.7; */border-top: 0px solid #c0c0c0;font-size: 14px;cursor: pointer;background-color: #eb140a;
+			}
+			.active{
+			     background-color: #eb140a;opacity: 1;border-top: 1px solid #c0c0c0;
+			}
+			.menuitems:hover, .menuitems1:hover{
+			background-color: #eb140a;opacity: 1;
+			}
+			.menuitemsBase:hover{
+			background-color: #eb140a;opacity: 1;
+			}
+            #rightSideController .menuitems:hover{
+                    background-color: #dfdfe4;opacity: 1;
+            }         
+			.menuText{
+		/*	margin-left: 10px;
+			margin-top: 10px;
+			position: absolute;  */
+			}
+			#panel{
+			display: none;
+			}
+			
+		</style>	
+	</head>
+	<body>
+		<div id="superblaze" style="z-index:2;position:absolute;height:100%;width: 0.1px;">
+			<div id="loader">
+				<image src="./images_gl/loaderblock.jpg"/>
+			</div>
+			<div id="loader1">
+				<image width=1286; height=723; src="./images_gl/loader_011.png"/>
+			</div>
+			<div id="loader2">
+				<div id="loaderbar">
+					<image src="./images_gl/loaderbar.png"/>
+				</div>
+			</div>
+			<div id="transPatch2" style="width:1286px;height:723px;position:absolute;z-index:3030;background-color: #ffffff; opacity:0;">
+                    <div id="loaderDfr">
+                        <image src="" width="70" height="70"/>
+                    </div> 
+			</div>
+			<div id="transPatch5" style="width:1286px;height:723px;position:absolute;z-index:0;">
+			</div>
+			<div id="transPatchDiv" style="width:1286px;height:723px;position:absolute;z-index:1;">
+			</div>
+            
+<!--
+            <div id="point12text2" class="point12click" style="display:none;"></div>
+            <div id="point12text3" class="point12click" style="display:none;"></div>
+            <div id="point12text4" class="point12click" style="display:none;"></div>
+-->
+            
+			<div id="firstSlideheadWrapper">
+				<div id="cpHeading" class="cptextWrapper">ThinkSystem SR655</div>
+			</div>
+            
+     <div id="onloadCopy" style="text-align:left;line-height:20px;">         
+        <p class="point1text1"></p>
+			   <p id="point1image2" class="bodyText"><img width="90px" src=""></p>
+     </div>
+            
+            
+			<div class="noselect productName"><img style="width:158px;height:44px;position: absolute;top:19px;left: 34px;"src="images_gl/ThinkSystem_Logo.svg" /><span>SR655</span></div>
+			<!--  <div id="topheading" class="transbox noselect headingtext">
+				<p></p>
+				</div>-->
+           
+
+			<div id="scenediv">
+			<div id="firstSlideWrapper">
+
+				</div>
+				
+			<div id="accordion" style=" left: 0px; top: 134px; padding: 0; position: absolute; width: 235px; height: 49%; z-index: 2;visibility:hidden;">
+			   <h3 id="autoPlays" class="menuitems1 playAll"><span class="menuText">Play All</span><span id="pauseplayImg"><img style="height:14px;" src=""/></span><span id="pauseplayImg2"><img style="height:14px;" src=""/></span></h3>
+			   <div> </div>
+			   <h3 id="menu2" class="menuitems"><span class="menuText">Overview</span></h3>
+			   <div> </div>
+			   <h3 id="menu3" class="menuitems"><span class="menuText">Models</span></h3>
+                <div> </div>
+			   <h3 id="menu4" class="menuitems"><span class="menuText">3.5-inch Drive Configuration</span></h3>
+			   <div>
+				 <div id="rightSideController">
+                       <div id="menu13" style="margin-bottom: 0;" class="menuitems animPlayBtns1">
+                           <div class="greyOutBox redOutBox"></div>
+                            <span>Mid-chassis drive cage</span>
+                       </div>
+                </div>
+				   
+                <div id="rightSideController">
+                       <div id="menu5" class="menuitems animPlayBtns1">
+                           <div class="greyOutBox redOutBox"></div>
+                            <span>Rear</span>
+                       </div>
+                </div>
+               </div>   
+			   <h3 id="menu6" class="menuitems"><span class="menuText">PCIe-Rich Configuration</span></h3>
+			   <div>    
+                <div id="rightSideController">
+                       <div id="menu7" class="menuitems animPlayBtns1">
+                           <div class="greyOutBox redOutBox"></div>
+                            <span>Rear</span>
+                       </div>
+                </div>
+               </div> 
+			   <h3 id="menu8" class="menuitems"><span class="menuText">Storage-Rich Configuration</span></h3>
+			   <div>
+				<div id="rightSideController">
+                       <div id="menu14" style="margin-bottom: 0;" class="menuitems animPlayBtns1">
+                           <div class="greyOutBox redOutBox"></div>
+                            <span>Mid-chassis drive cage</span>
+                       </div>
+                </div>   
+                <div id="rightSideController">
+                       <div id="menu9" class="menuitems animPlayBtns1">
+                           <div class="greyOutBox redOutBox"></div>
+                            <span>Rear</span>
+                       </div>
+                </div>
+               </div>
+				<h3 id="menu10" class="menuitems"><span class="menuText">CPU</span></h3>
+			   <div></div>
+                
+<!--				<h3 id="menu11" class="menuitems"><span class="menuText">Management</span></h3>-->
+<!--			   <div></div>-->
+                
+                <h3 id="menu11" class="menuitems"><span class="menuText">Services</span></h3>
+			   <div></div>    
+
+		</div>
+				
+<!--
+				<div id="rightAnim" style="display:none;">
+					<img style="width:279px;height:283px;" src="">
+					<div id="right_txt">
+						<ul id="righttxt1">
+							<li>Rotate</li>
+							<li>Zoom</li>
+							<li>Move</li>
+						</ul>
+						<ul id="righttxt2">
+							<li style="position:absolute;text-align: center;left: 82px;top: -1px;">Touch Control</li>
+							<li style="position:absolute;text-align: center;left: 166px;top: -2px;">Mouse Control</li>
+						</ul>
+					</div>
+				</div>
+-->
+				<div id="lenovo_logo"><img style="width:40px;height:120px;" src=""></div>
+				<div id="pointtext1" class="transbox noselect pointcontent2" style="display: none;">
+					<div id="Cp_text_01"></div>
+					<div id="Cp_text_02"></div>
+					<ul id="list_X" class="Cp_textul" style="opacity: 1;padding:6px" >
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div id="Cp_text_03"></div>
+					<div id="Cp_text_04"></div>
+					<div id="Cp_text_05"></div>
+					<div id="Cp_text_06"></div>
+					<div id="networkSet">
+						<div id="Cp_text_07"></div>
+						<div id="Cp_text_08"></div>
+						<div id="Cp_text_09"></div>
+					</div>
+					<div id="Cp_text_10" class="cpNodetext"></div>
+					<div id="Cp_text_11" class="cpNodetext"></div>
+					<div id="Cp_text_12" class="cpNodetext"></div>
+				</div>
+                
+<div id="point2text" class="transbox noselect" style="display:none;">                 
+
+</div>
+   
+                
+<div id="point3text" class="" style="display: none;">
+<div id='point3images'>  
+    <div id="point3img1">
+        <img src=''/>
+    </div>  
+    <div id="point3img2">
+        <img src=''/>
+    </div>  
+    <div id="point3img3">
+        <img src=''/>
+    </div>  
+    <div id="point3img4">
+        <img src=''/>
+    </div>
+
+</div>
+    
+<div id='point3imagestext'>
+    <p  id='point3imgtxt1'></p>
+	<p  id='point3imgtxt2'></p>
+    <p  id='point3imgtxt3'></p>
+    <p  id='point3imgtxt4'></p>
+    <p  id='point3imgtxt5'></p>
+	<p  id='point3imgtxt6'></p>
+</div>
+    
+</div> 
+
+				
+<div id="point4text" class="" style="display: none;">
+        <p class="point4text1 bodyText"></p>
+        
+        <div id="hotspot1" class="cur" style="display: block;">
+            <p id="hot1" class="hotspot"></p>
+            <img id="hotspot1plus" class="plus" src="">&nbsp;
+        </div>
+    
+         <div id="hotspot2" class="cur" style="display: block;">
+            <p id="hot2" class="hotspot"></p>
+            <img id="hotspot2plus" class="plus" src="">&nbsp;
+        </div>
+    
+         <div id="hotspot3" class="cur" style="display: block;">
+            <p id="hot3" class="hotspot"></p>
+            <img id="hotspot3plus" class="plus" src="">&nbsp;
+        </div>
+    
+         <div id="hotspot4" class="cur" style="display: block;">
+            <p id="hot4" class="hotspot"></p>
+            <img id="hotspot4plus" class="plus" src="">&nbsp;
+        </div>
+    
+</div>		
+				
+                
+<div id="point5text" class="transbox noselect" style="display: none;">
+<!--
+<div id="point5list">
+	<div id="point5listheading">Rear I/O:</div>
+   <ol>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   </ol>
+</div>
+-->
+<!--	point5text hotspot-->
+	<div id="hotspot17" class="cur" style="display: block;">
+		<p id="hot17" class="hotspot"></p>
+		<img id="hotspot17plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot18" class="cur" style="display: block;">
+		<p id="hot18" class="hotspot"></p>
+		<img id="hotspot18plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot19" class="cur" style="display: block;">
+		<p id="hot19" class="hotspot"></p>
+		<img id="hotspot19plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot20" class="cur" style="display: block;">
+		<p id="hot20" class="hotspot"></p>
+		<img id="hotspot20plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot21" class="cur" style="display: block;">
+		<p id="hot21" class="hotspot"></p>
+		<img id="hotspot21plus" class="plus" src="">&nbsp;
+	</div>
+<!--
+	<div id="hotspot22" class="cur" style="display: block;">
+		<p id="hot22" class="hotspot"></p>
+		<img id="hotspot22plus" class="plus" src="">&nbsp;
+	</div>
+-->
+	<div id="hotspot211" class="cur" style="display: block;">
+		<p id="hot211" class="hotspot"></p>
+		<img id="hotspot211plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot212" class="cur" style="display: block;">
+		<p id="hot212" class="hotspot"></p>
+		<img id="hotspot212plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot213" class="cur" style="display: block;">
+		<p id="hot213" class="hotspot"></p>
+		<img id="hotspot213plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot214" class="cur" style="display: block;">
+		<p id="hot214" class="hotspot"></p>
+		<img id="hotspot214plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot215" class="cur" style="display: block;">
+		<p id="hot215" class="hotspot"></p>
+		<img id="hotspot215plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot216" class="cur" style="display: block;">
+		<p id="hot216" class="hotspot"></p>
+		<img id="hotspot216plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot217" class="cur" style="display: block;">
+		<p id="hot217" class="hotspot"></p>
+		<img id="hotspot217plus" class="plus" src="">&nbsp;
+	</div>
+	
+<!--	point5text img-->	
+<!--
+	<div id="point5img1">
+        <img style="width: 95px;"src='images_gl/PNG/01/1.png'/>
+    </div>
+    <div id="point5img2">
+        <img style="width: 95px;" src='images_gl/PNG/01/2.png'/>
+    </div>
+    <div id="point5img3">
+        <img style="width: 95px;" src='images_gl/PNG/01/3.png'/>
+    </div>
+    <div id="point5img4">
+        <img style="width: 95px;" src='images_gl/PNG/01/4.png'/>
+    </div>
+    <div id="point5img5">
+        <img style="width: 95px;" src='images_gl/PNG/01/5.png'/>
+    </div>
+    <div id="point5img6">
+        <img style="width: 95px;" src='images_gl/PNG/01/6.png'/>
+    </div>
+-->
+</div>
+  
+				
+<div id="point6text" style="display: none; top: 40px; left: 30px;">		
+    
+    <div id="hotspot5" class="cur" style="display: block;">
+        <p id="hot5"></p>
+        <img id="hotspot5plus" class="plus" src="">&nbsp;
+     </div>
+    <div id="hotspot6" class="cur" style="display: block;">
+        <p id="hot6"></p>
+        <img id="hotspot6plus" class="plus" src="">&nbsp;
+     </div>
+    <div id="hotspot7" class="cur" style="display: block;">
+        <p id="hot7"></p>
+        <img id="hotspot7plus" class="plus" src="">&nbsp;
+     </div>
+    <div id="hotspot8" class="cur" style="display: block;">
+        <p id="hot8"></p>
+        <img id="hotspot8plus" class="plus" src="">&nbsp;
+     </div>
+    <div id="hotspot9" class="cur" style="display: block;">
+        <p id="hot9"></p>
+        <img id="hotspot9plus" class="plus" src="">&nbsp;
+     </div>
+    <div id="hotspot10" class="cur" style="display: block;">
+        <p id="hot10"></p>
+        <img id="hotspot10plus" class="plus" src="">&nbsp;
+     </div>
+    <div id="hotspot11" class="cur" style="display: block;">
+        <p id="hot11"></p>
+        <img id="hotspot11plus" class="plus" src="">&nbsp;
+     </div>
+	<div id="hotspot111" class="cur" style="display: block;">
+        <p id="hot111"></p>
+        <img id="hotspot111plus" class="plus" src="">&nbsp;
+     </div>
+</div>                       
+        
+                
+<div id="point7text" class="transbox noselect" style="">
+    
+<!--
+   <div id="point7list">
+   <div id="point7listheading">Rear I/O:</div>
+   <ol>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   </ol>
+    </div>
+-->
+	<!--	point7text hotspot-->
+	<div id="hotspot23" class="cur" style="display: block;">
+		<p id="hot23" class="hotspot"></p>
+		<img id="hotspot23plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot24" class="cur" style="display: block;">
+		<p id="hot24" class="hotspot"></p>
+		<img id="hotspot24plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot25" class="cur" style="display: block;">
+		<p id="hot25" class="hotspot"></p>
+		<img id="hotspot25plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot26" class="cur" style="display: block;">
+		<p id="hot26" class="hotspot"></p>
+		<img id="hotspot26plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot27" class="cur" style="display: block;">
+		<p id="hot27" class="hotspot"></p>
+		<img id="hotspot27plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot28" class="cur" style="display: block;">
+		<p id="hot28" class="hotspot"></p>
+		<img id="hotspot28plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot29" class="cur" style="display: block;">
+		<p id="hot29" class="hotspot"></p>
+		<img id="hotspot29plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot30" class="cur" style="display: block;">
+		<p id="hot30" class="hotspot"></p>
+		<img id="hotspot30plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot31" class="cur" style="display: block;">
+		<p id="hot31" class="hotspot"></p>
+		<img id="hotspot31plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot32" class="cur" style="display: block;">
+		<p id="hot32" class="hotspot"></p>
+		<img id="hotspot32plus" class="plus" src="">&nbsp;
+	</div>
+<!--
+	<div id="hotspot33" class="cur" style="display: block;">
+		<p id="hot33" class="hotspot"></p>
+		<img id="hotspot33plus" class="plus" src="">&nbsp;
+	</div>
+-->
+	
+	
+	<div id="hotspot411" class="cur" style="display: block;">
+		<p id="hot411" class="hotspot"></p>
+		<img id="hotspot411plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot412" class="cur" style="display: block;">
+		<p id="hot412" class="hotspot"></p>
+		<img id="hotspot412plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot413" class="cur" style="display: block;">
+		<p id="hot413" class="hotspot"></p>
+		<img id="hotspot413plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot414" class="cur" style="display: block;">
+		<p id="hot414" class="hotspot"></p>
+		<img id="hotspot414plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot415" class="cur" style="display: block;">
+		<p id="hot415" class="hotspot"></p>
+		<img id="hotspot415plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot416" class="cur" style="display: block;">
+		<p id="hot416" class="hotspot"></p>
+		<img id="hotspot416plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot417" class="cur" style="display: block;">
+		<p id="hot417" class="hotspot"></p>
+		<img id="hotspot417plus" class="plus" src="">&nbsp;
+	</div>
+	
+	<!--	point7text img-->
+<!--
+	<div id="point7img1">
+        <img style="width: 95px;"src='images_gl/PNG/02/1.png'/>
+    </div>
+    <div id="point7img2">
+        <img style="width: 95px;" src='images_gl/PNG/02/2.png'/>
+    </div>
+    <div id="point7img3">
+        <img style="width: 95px;" src='images_gl/PNG/02/3.png'/>
+    </div>
+    <div id="point7img4">
+        <img style="width: 95px;" src='images_gl/PNG/02/4.png'/>
+    </div>
+    <div id="point7img5">
+        <img style="width: 95px;" src='images_gl/PNG/02/5.png'/>
+    </div>
+    <div id="point7img6">
+        <img style="width: 95px;" src='images_gl/PNG/02/6.png'/>
+    </div>
+    <div id="point7img7">
+        <img style="width: 95px;" src='images_gl/PNG/02/7.png'/>
+    </div> 
+    <div id="point7img8">
+        <img style="width: 95px;" src='images_gl/PNG/02/8.png'/>
+    </div> 
+    <div id="point7img9">
+        <img style="width: 95px;" src='images_gl/PNG/02/9.png'/>
+    </div> 
+    <div id="point7img10">
+        <img style="width: 95px;" src='images_gl/PNG/02/10.png'/>
+    </div> 
+    <div id="point7img11">
+        <img style="width: 95px;" src='images_gl/PNG/02/11.png'/>
+    </div>     
+-->
+</div>
+                
+    
+				
+<div id="point8text" style="display:none;">
+    
+    <p class="point8text1 bodyText"></p>
+    
+   <div id="hotspot12" class="cur" style="display: block;">
+        <p id="hot12"></p>
+        <img id="hotspot12plus" class="plus" src="">&nbsp;
+     </div>
+    <div id="hotspot13" class="cur" style="display: block;">
+        <p id="hot13"></p>
+        <img id="hotspot13plus" class="plus" src="">&nbsp;
+     </div>
+    <div id="hotspot14" class="cur" style="display: block;">
+        <p id="hot14"></p>
+        <img id="hotspot14plus" class="plus" src="">&nbsp;
+     </div>
+    <div id="hotspot15" class="cur" style="display: block;">
+        <p id="hot15"></p>
+        <img id="hotspot15plus" class="plus" src="">&nbsp;
+     </div>
+    <div id="hotspot16" class="cur" style="display: block;">
+        <p id="hot16"></p>
+        <img id="hotspot16plus" class="plus" src="">&nbsp;
+     </div>
+	<div id="hotspot114" class="cur" style="display: block;">
+        <p id="hot114"></p>
+        <img id="hotspot114plus" class="plus" src="">&nbsp;
+     </div>
+</div>
+                
+                           
+<div id="point9text" style="display:none;">
+<!--
+   <div id="point9list">
+   <div id="point9listheading">Rear I/O:</div>   
+   <ol>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   <li></li>
+   </ol>
+    </div>
+-->
+	<!--	point9text hotspot-->
+	<div id="hotspot34" class="cur" style="display: block;">
+		<p id="hot34" class="hotspot"></p>
+		<img id="hotspot34plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot35" class="cur" style="display: block;">
+		<p id="hot35" class="hotspot"></p>
+		<img id="hotspot35plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot36" class="cur" style="display: block;">
+		<p id="hot36" class="hotspot"></p>
+		<img id="hotspot36plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot37" class="cur" style="display: block;">
+		<p id="hot37" class="hotspot"></p>
+		<img id="hotspot37plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot38" class="cur" style="display: block;">
+		<p id="hot38" class="hotspot"></p>
+		<img id="hotspot38plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot39" class="cur" style="display: block;">
+		<p id="hot39" class="hotspot"></p>
+		<img id="hotspot39plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot40" class="cur" style="display: block;">
+		<p id="hot40" class="hotspot"></p>
+		<img id="hotspot40plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot41" class="cur" style="display: block;">
+		<p id="hot41" class="hotspot"></p>
+		<img id="hotspot41plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot42" class="cur" style="display: block;">
+		<p id="hot42" class="hotspot"></p>
+		<img id="hotspot42plus" class="plus" src="">&nbsp;
+	</div>
+<!--
+	<div id="hotspot43" class="cur" style="display: block;">
+		<p id="hot43" class="hotspot"></p>
+		<img id="hotspot43plus" class="plus" src="">&nbsp;
+	</div>
+-->
+	<div id="hotspot311" class="cur" style="display: block;">
+		<p id="hot311" class="hotspot"></p>
+		<img id="hotspot311plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot312" class="cur" style="display: block;">
+		<p id="hot312" class="hotspot"></p>
+		<img id="hotspot312plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot313" class="cur" style="display: block;">
+		<p id="hot313" class="hotspot"></p>
+		<img id="hotspot313plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot314" class="cur" style="display: block;">
+		<p id="hot314" class="hotspot"></p>
+		<img id="hotspot314plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot315" class="cur" style="display: block;">
+		<p id="hot315" class="hotspot"></p>
+		<img id="hotspot315plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot316" class="cur" style="display: block;">
+		<p id="hot316" class="hotspot"></p>
+		<img id="hotspot316plus" class="plus" src="">&nbsp;
+	</div>
+	<div id="hotspot317" class="cur" style="display: block;">
+		<p id="hot317" class="hotspot"></p>
+		<img id="hotspot317plus" class="plus" src="">&nbsp;
+	</div>
+	
+	<!--	point9text img-->
+<!--
+	<div id="point9img1">
+        <img style="width: 95px;"src='images_gl/PNG/03/1.png'/>
+    </div>
+    <div id="point9img2">
+        <img style="width: 95px;" src='images_gl/PNG/03/2.png'/>
+    </div>
+    <div id="point9img3">
+        <img style="width: 95px;" src='images_gl/PNG/03/3.png'/>
+    </div>
+    <div id="point9img4">
+        <img style="width: 95px;" src='images_gl/PNG/03/4.png'/>
+    </div>
+    <div id="point9img5">
+        <img style="width: 95px;" src='images_gl/PNG/03/5.png'/>
+    </div>
+    <div id="point9img6">
+        <img style="width: 95px;" src='images_gl/PNG/03/6.png'/>
+    </div>
+	<div id="point9img7">
+        <img style="width: 95px;" src='images_gl/PNG/03/7.png'/>
+    </div>
+	<div id="point9img8">
+        <img style="width: 95px;" src='images_gl/PNG/03/8.png'/>
+    </div>
+	<div id="point9img9">
+        <img style="width: 95px;" src='images_gl/PNG/03/9.png'/>
+    </div>
+	<div id="point9img10">
+        <img style="width: 95px;" src='images_gl/PNG/03/10.png'/>
+    </div>
+-->
+	
+</div> 
+                
+<div id="point10text" class="noselect pointcontent">
+        
+       <div id="point10text1"> </div>   
+    
+        <div class="point10textimg">
+           <img width="150px" src=''>
+        </div>
+
+</div>    
+  
+<div id="point12text" class="noselect pointcontent" style="display:none;">
+	        <div id="point12text2" class="point12click" style="display:none;"></div>
+            <div id="point12text3" class="point12click" style="display:none;"></div>
+            <div id="point12text4" class="point12click" style="display:none;"></div>
+<!--            <div id="point12text7" class="point12click" style="display:none;"></div>-->
+    
+<!--            slide1-->
+            
+    <div id="point12text1" style="display:none;"></div>
+            
+    <div id="point12image1" class="bodyText"><img src="" style="display:none;"></div>
+    
+    <div id="point12image1_1" class="bodyText"><img src="" style="display:none;width:250px;height:529px;"></div>
+            
+    <div id="point12image1_2" class="bodyText"><img src="" style="display:none;width:250px;height:529px;"></div>
+            
+    <div id="point12image1_3" class="bodyText"><img src="" style="display:none;width:250px;height:529px;"></div>
+    
+<!--    <div id="point12image1_4" class="bodyText"><img src="" style="display:none;width:250px;height:529px;"></div>-->
+            
+<!--            slide2-->
+            
+            <div id="point12text5" style="display:none;"></div>
+            <div id="point12text6" style="display:none;">
+                <ul id="point12li1">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+<!--            <div id="point12text7" style="display:none;"></div>-->
+<!--            <div id="point12text8" style="display:none;"></div>-->
+            
+            <div id="point12image2" class="bodyText"><img src="" style="display:none;"></div>
+            
+<!--            slide3-->
+            
+<!--            <div id="point12text9" style="display:none;"></div>-->
+            <div id="point12text10" style="display:none;"></div>
+            <div id="point12text11" style="display:none;">
+                <ul id="point12li2">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+<!--            <div id="point12text12" style="display:none;"></div>-->
+            
+            <div id="point12image3" class="bodyText"><img src="" style="display:none;"></div>
+            
+<!--            slide4-->
+            
+<!--            <div id="point12text13" style="display:none;"></div>-->
+<!--            <div id="point12text14" style="display:none;"></div>-->
+            <div id="point12text15" style="display:none;">
+                <ul id="point12li3">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        
+            <div id="point12image4" class="bodyText"><img src="" style="display:none;"></div>
+  <!--            slide5-->  
+          <div id="point12image5" class="bodyText"><img src="" style="display:none;"></div>
+          <div id="point12text12" style="display:none;">
+                <ul id="point12li4">
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+</div> 
+<div id="point13text" style="display:none;">
+       <div id="point13text1"> </div> 
+</div>
+<div id="point14text" style="display:none;">
+       <div id="point14text1"> </div> 
+</div>			
+                
+                <div id="home" class="" >
+              <img src="../../superblaze_demo_images/reset.png">
+            </div>
+	       
+<!--
+				<div id="fullScreen" onclick="launchFullscreen(window.parent.document.documentElement);"class="fullScreenBox" style="display:block"><img src="./images_gl/Fullscreen_01.png"/> </div>
+				<div id="fullScreenOff" onclick="exitFullscreen(window.parent.document.documentElement);"class="fullScreenBox" style="display:none">
+					<p style="font-family: 'Gotham-Book';color: #757577; font-size: 13px;   position: absolute;left: -46px;top: -5px;">Close</p>
+					<img src="./images_gl/white_close.png"  width="32px"/> 
+				</div>
+-->
+<!--
+				<div id="reset" class="btn2">
+					<div id="resetBtn" class="btn2"><img style="width:40px;height:40px;" src=""/></div>
+				</div>
+-->
+				<div id="maincanvasContainer">
+					<canvas style="margin-top: 0px;" id="dummy-canvas" width="1286" height="723"/>
+				</div>
+			</div>
+		</div>
+		<div id="canvasContainer" style="position:absolute;z-index:1;visibility:hidden">
+			<canvas style="margin:0px" id="superblaze-canvas" width="1920" height="1080" />
+		</div>
+	<script type="text/javascript" src="/js/tour_lp_integration-min.js"></script>
+</body>
+</html>

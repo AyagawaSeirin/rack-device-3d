@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "bottom_status": "EXACT_OFFICIAL_VIEWER_EVIDENCE",
+  "identity": {
+    "manufacturer": "Lenovo",
+    "product": "ThinkSystem SR655 original generation",
+    "machine_types": ["7Y00", "7Z01"],
+    "front": "B5VK AUR9 12x3.5-inch SAS/SATA",
+    "rear": "8-slot PCIe-rich, no rear drives, two-port OCP 3.0",
+    "power": "2x750W AC hot-swap, C14",
+    "status": "VERIFIED",
+    "remaining_non_bottom_evidence_gaps": []
+  },
+  "views": {
+    "audit_file": "qa/views-audit.json",
+    "status": "PASS",
+    "errors": 0,
+    "warnings": 6,
+    "warning_resolution": "Only anti-aliased external silhouette pixels; every face reports zero partially transparent or transparent core pixels.",
+    "built_in_imagegen_calls": 6,
+    "calls_per_face": 1
+  },
+  "standard_glb": {
+    "path": "model/Lenovo-ThinkServer-SR655-3.5inch.glb",
+    "bytes": 11101288,
+    "sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+    "audit_file": "qa/glb-audit-standard.json",
+    "status": "PASS"
+  },
+  "web_glb": {
+    "path": "model/Lenovo-ThinkServer-SR655-3.5inch-web.glb",
+    "bytes": 7904740,
+    "sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+    "audit_file": "qa/glb-audit-web.json",
+    "status": "PASS"
+  },
+  "structure": {
+    "nodes": 189,
+    "meshes": 189,
+    "primitives": 189,
+    "materials": 16,
+    "textures": 6,
+    "images": 6,
+    "mirrored_nodes": 0,
+    "external_resources": 0,
+    "extensions_used": ["KHR_materials_unlit"],
+    "unlit_photo_materials": 6,
+    "bounds_mm": [481.99999, 86.499996, 764.85997]
+  },
+  "viewer_validation": {
+    "paths": ["Three.js 0.180 GLTFLoader", "Babylon.js glTF loader"],
+    "models_in_each_viewer": ["standard", "web"],
+    "views_per_model_per_viewer": 8,
+    "total_final_renders": 32,
+    "status": "PASS"
+  },
+  "comparisons": {
+    "orthographic": ["front", "rear", "right", "left", "top", "bottom"],
+    "authoritative_three_quarter": ["frontRight", "rearRight"],
+    "comparison_png_count": 22,
+    "manual_feature_review": "PASS"
+  },
+  "official_optional_3d": {
+    "viewer": "https://lenovopress.lenovo.com/3dtours/sr655/",
+    "format": "InfinityRT XML/RAW/Draco/JPG/PNG/JS/WASM public viewer package",
+    "archive": "source/optional-3d/Lenovo-ThinkSystem-SR655-official-viewer-original-files.tar.gz",
+    "archive_bytes": 16590938,
+    "archive_sha256": "2d99c8fe4bc86f0ed28575421e76630a356cb69360e1dcb09b44c2c81af24a3e",
+    "used_as_main_model": false
+  }
+}
