@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "completed_local_date": "2026-08-24",
+  "actual_glb_loads": 46,
+  "required_matrix_loads": 40,
+  "orthographic_comparison_loads": 6,
+  "required_views": [
+    "front",
+    "rear",
+    "left",
+    "right",
+    "top",
+    "bottom",
+    "front-left",
+    "front-right",
+    "rear-left",
+    "rear-right"
+  ],
+  "matrix": [
+    {
+      "renderer": "Three.js r185",
+      "viewer": "qa/viewers/three-viewer.html",
+      "variant": "standard",
+      "model": "model/Dell-R720-2.5inch.glb",
+      "loads": 10,
+      "screenshots": "qa/renders/three/standard"
+    },
+    {
+      "renderer": "Three.js r185",
+      "viewer": "qa/viewers/three-viewer.html",
+      "variant": "web",
+      "model": "model/Dell-R720-2.5inch-web.glb",
+      "loads": 10,
+      "screenshots": "qa/renders/three/web"
+    },
+    {
+      "renderer": "Babylon.js 9.22.1",
+      "viewer": "qa/viewers/babylon-viewer.html",
+      "variant": "standard",
+      "model": "model/Dell-R720-2.5inch.glb",
+      "loads": 10,
+      "screenshots": "qa/renders/babylon/standard"
+    },
+    {
+      "renderer": "Babylon.js 9.22.1",
+      "viewer": "qa/viewers/babylon-viewer.html",
+      "variant": "web",
+      "model": "model/Dell-R720-2.5inch-web.glb",
+      "loads": 10,
+      "screenshots": "qa/renders/babylon/web"
+    }
+  ],
+  "comparison_pass": {
+    "renderer": "Three.js r185",
+    "variant": "standard",
+    "views": ["front", "rear", "left", "right", "top", "bottom"],
+    "loads": 6,
+    "screenshots": "qa/renders/three/standard-solid"
+  },
+  "observed_for_every_required_load": {
+    "webgl": "WebGL2",
+    "mesh_count": 331,
+    "bounds_min_m": [-0.2412, -0.04365, -0.363],
+    "bounds_max_m": [0.2412, 0.04365, 0.36],
+    "bounds_size_m": [0.4824, 0.0873, 0.723],
+    "render_size_px": [1400, 900],
+    "model_path_matched_requested_variant": true,
+    "load_errors": 0
+  },
+  "orientation_gate": {
+    "three": "PASS",
+    "babylon_right_handed_scene": "PASS",
+    "physical_left_front_at_screen_right": true,
+    "physical_right_front_at_screen_left": true,
+    "mirrored_face_detected": false
+  },
+  "contact_sheets": [
+    "qa/comparisons/contact-three-standard.png",
+    "qa/comparisons/contact-three-web.png",
+    "qa/comparisons/contact-babylon-standard.png",
+    "qa/comparisons/contact-babylon-web.png"
+  ],
+  "counting_note": "Only the ten named required views in each renderer/variant directory are counted in the 40-load matrix. Preserved debugging captures such as front-late.png are excluded."
+}

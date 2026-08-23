@@ -1,0 +1,51 @@
+path,visual_origin,face_or_angle,inspection_result,intended_role
+source/originals/user-config-lock.png,real-photograph-composite,front+rear row 2,"Exact user authority: R720 16-SFF no bezel; sixteen carriers; all-slot-blank R720 rear; 4xRJ45; dual AC PSU",configuration-lock
+qa/reference/user-lock-front-row2.png,derived-crop,front,"Low-resolution crop confirms one horizontal row of sixteen vertical carriers and Dell R720 control zone",binding-support
+qa/reference/user-lock-rear-row2.png,derived-crop,rear,"Low-resolution crop confirms seven blank slots, legacy/management I/O, 4xRJ45 and dual PSU",binding-support
+source/originals/official-front-sff-low.jpg,technical-diagram,front,"Exact R720 2.5-inch chassis line art; labels 16 drives and control features; not color authority",geometry-support
+source/originals/official-rear-low.jpg,technical-diagram,rear,"Exact R720 rear line art; distinguishes R720 from R720xd",geometry-support
+source/pdf-pages/technical-guide-p01.png,official-document-render,front,"Page 13 exact R720 16-SFF with/without bezel; inspected at original detail",identity-color-support
+source/pdf-pages/technical-guide-p02.png,official-document-render,rear,"Page 14 exact R720 rear official photograph; 7 slots, 4 RJ45, dual 750W",primary-source-parent
+source/pdf-pages/technical-guide-p03.png,official-document-render,top-open,"Page 15 exact R720 internal view and R720xd comparison; inspected",geometry-support
+source/pdf-pages/technical-guide-p04.png,official-document-render,top-open,"Page 16 R720xd/internal continuation; inspected and rejected for requested identity where R720xd",variant-exclusion
+source/pdf-pages/technical-guide-dimensions-p01.png,official-document-render,top+side-dimension,"Page 56 exact dimension diagram and values",dimension-authority
+qa/reference/official-tech-guide-front-crop.png,derived-crop,front,"Exact official R720 no-bezel 16-SFF figure; no adjacent variant content",binding-support
+qa/reference/official-tech-guide-rear-crop.png,derived-crop,rear,"Exact official R720 rear product image; four RJ45, dual 750W, all blank plates",primary-binding-official-render
+qa/reference/official-dimensions-crop.png,derived-crop,top+side-dimension,"Exact official dimensions; conservative bottom ratio source",dimension-and-bottom-support
+source/pdf-pages/owners-manual-p01.png,official-document-render,indicator-page,"Inspected; no exterior image used",rejected-nonvisual
+source/pdf-pages/owners-manual-p02.png,official-document-render,drive-carrier-detail,"Hard-drive indicator/carrier head geometry inspected",front-detail-support
+source/pdf-pages/owners-manual-p03.png,official-document-render,rear,"Exact R720 and R720xd annotated rear diagrams; R720 row retained",rear-geometry-support
+source/pdf-pages/owners-manual-p04.png,official-document-render,rear-table,"Exact connector/slot/PSU count table inspected",rear-feature-support
+source/pdf-pages/owners-manual-p05.png,official-document-render,AC-PSU,"AC translucent handle and DC contrast inspected",psu-geometry-support
+source/pdf-pages/owners-manual-p06.png,official-document-render,PSU-text,"AC/DC mixing prohibition and matched PSU caution inspected",configuration-support
+source/pdf-pages/owners-manual-cover-p01.png,official-document-render,memory-page,"Inspected; mistakenly rendered page, not used",rejected
+source/pdf-pages/owners-manual-cover-p02.png,official-document-render,memory-page,"Inspected; mistakenly rendered page, not used",rejected
+source/pdf-pages/owners-manual-cover-p03.png,official-document-render,memory-page,"Inspected; mistakenly rendered page, not used",rejected
+source/pdf-pages/owners-manual-cover-p04.png,official-document-render,memory-page,"Inspected; mistakenly rendered page, not used",rejected
+source/pdf-pages/owners-manual-system-cover-p01.png,official-document-render,front-side diagram,"Exact R720 bezel-removal perspective; chassis edge support, bezel excluded",side-support
+source/pdf-pages/owners-manual-system-cover-p02.png,official-document-render,top+side,"Exact R720 cover/latch and both chassis edge perspective; inspected",top-left-right-geometry-support
+source/pdf-pages/owners-manual-system-cover-p03.png,official-document-render,top-open,"Exact R720 internal/riser/fan arrangement; inspected",geometry-support
+source/pdf-pages/readyrails-b6-p01.png,official-document-render,both-sides,"B6 ReadyRails page shows four J-slot engagements per side",side-mechanical-support
+source/pdf-pages/readyrails-b6-p02.png,official-document-render,both-sides,"B6 removal page confirms independent left/right engagement",side-mechanical-support
+source/third-party/ebay-r720-16sff-front.jpg,real-photograph,front+top,"Duplicate lower-resolution exact 16-SFF populated chassis view; inspected",support
+source/third-party/ebay394100550218-01-front-top.jpg,real-photograph,front+top,"Exact 16-SFF populated R720; full cover, latch, stamp and real material character",front-and-top-primary
+source/third-party/ebay394100550218-02-front.jpg,real-photograph,front-left-close,"Dell logo, PowerEdge R720 text, controls, DVD, vFlash/USB/grille and carrier construction",front-detail-support
+source/third-party/ebay394100550218-03-front-rear.jpg,real-photograph,front-right-close,"Carrier handles/head indicators and right ear; Intel sticker excluded by user lock",front-detail-support
+source/third-party/ebay394100550218-04-internal.jpg,real-photograph,rear-top-open,"Exact R720 16-SFF chassis edges, cover underside relationship and rear risers",left-side-multi-reference-primary
+source/third-party/ebay394100550218-05-rear.jpg,real-photograph,rear+top,"R720 material and rear depth; 2xSFP NDC and 1100W differ, so not configuration authority",rear-material-support-only
+source/third-party/ebay394100550218-06-psu.jpg,real-photograph,rear-PSU-close,"AC PSU inlet/latch/handle/fan geometry; 1100W label differs",psu-geometry-support-only
+source/third-party/itinstock-r720-16sff-view1.jpg,real-photograph,front+top,"Exact 16-SFF cage and top silhouette; drives absent and rails present",geometry-support-only
+source/third-party/itinstock-r720-16sff-view2.jpg,real-photograph,front+top,"Exact 16-SFF cage/control close view; drives absent",geometry-support-only
+source/third-party/itinstock-r720-16sff-rear.jpg,real-photograph,rear,"R720 dual 750W and 4xRJ45; low-profile add-in card differs from lock",material-support-only
+source/third-party/suredone-r720-rear.jpg,real-photograph,rear+top,"R720 rear metal/slot/PSU character; missing plate and seller label excluded",material-support-only
+source/third-party/walmart-r720-side-angle.jpg,real-photograph,right,"Direct right-side profile; front at screen left; cover seam, rivets and black ear visible",right-primary
+source/third-party/grays-r720-top-angle.jpg,real-photograph,front-top-right,"R720 top cover/latch/material; bezel/auction context excluded",top-support
+source/third-party/serverlama-01-r720-16sff.jpg,real-photograph,front+top,"Exact 16-SFF populated R720, no bezel; moderate resolution",front-top-support
+source/third-party/serverlama-02-r720.jpg,real-photograph,front+top,"Bezel-installed/other front state; rejected for configuration",variant-exclusion
+source/third-party/serverlama-03-r720-datacenter.jpg,real-photograph,context,"Rack marketing image with people/other equipment; rejected",rejected
+source/third-party/serverlama-04-r720-inside.jpg,real-photograph,internal-close,"CPU/memory close-up only; no exterior role",rejected-nonexterior
+source/third-party/serverlama-05-r720.jpg,real-photograph,front-control-close,"Exact R720 Dell/PowerEdge control branding and real black-plastic texture",front-detail-support
+source/third-party/serverlama-06-r720-internals.jpg,real-photograph,top-open,"Exact R720 internal top-down; side-edge and riser placement",side-top-support
+source/third-party/serverlama-07-r720-internals04.jpg,real-photograph,top-open,"Exact R720 internal top-down from opposite orientation; independent edges",left-right-support
+source/third-party/serverlama-08-r720-overview.jpg,real-photograph,front-top-right,"R720 right-side three-quarter and cover geometry; bezel front excluded",right-top-support
+source/third-party/serverlama-09-r720.jpg,real-photograph,front-top-right,"R720 right-side three-quarter; front configuration differs",right-support-only

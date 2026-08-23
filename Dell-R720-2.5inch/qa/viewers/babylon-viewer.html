@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Babylon.js · Dell PowerEdge R720 GLB QA</title>
+  <style>
+    html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#dfe4ea;font:14px system-ui,sans-serif;color:#12202c}
+    #stage{position:absolute;inset:0;background-color:#eef1f5;background-image:linear-gradient(45deg,#dfe5eb 25%,transparent 25%),linear-gradient(-45deg,#dfe5eb 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#dfe5eb 75%),linear-gradient(-45deg,transparent 75%,#dfe5eb 75%);background-size:32px 32px;background-position:0 0,0 16px,16px -16px,-16px 0}
+    canvas{display:block;width:100%;height:100%;touch-action:none}
+    #badge{position:absolute;left:18px;top:16px;padding:9px 12px;border-radius:8px;background:#ffffffdf;box-shadow:0 3px 18px #0002;font-weight:700}
+    #status{position:absolute;left:18px;bottom:16px;padding:7px 10px;border-radius:7px;background:#0a1721df;color:#dff7e7;font-size:12px}
+  </style>
+</head>
+<body>
+  <div id="stage"><canvas id="renderCanvas"></canvas></div><div id="badge"></div><div id="status">Loading actual GLB…</div>
+  <script src="./node_modules/babylonjs/babylon.js"></script>
+  <script src="./node_modules/babylonjs-loaders/babylonjs.loaders.min.js"></script>
+  <script>
+    const q=new URLSearchParams(location.search),flavor=q.get("model")==="web"?"web":"standard",view=q.get("view")||"front";
+    const modelURL=flavor==="web"?"../../model/Dell-R720-2.5inch-web.glb":"../../model/Dell-R720-2.5inch.glb";
+    const directions={front:[0,0,1],rear:[0,0,-1],left:[-1,0,0],right:[1,0,0],top:[0,1,0],bottom:[0,-1,0],"front-left":[-1,.58,1],"front-right":[1,.58,1],"rear-left":[-1,.58,-1],"rear-right":[1,.58,-1]};
+    const canvas=document.querySelector("#renderCanvas"),badge=document.querySelector("#badge"),status=document.querySelector("#status");badge.textContent=`Babylon.js ${BABYLON.Engine.Version} · ${flavor} · ${view}`;
+    const engine=new BABYLON.Engine(canvas,true,{preserveDrawingBuffer:true,stencil:true,premultipliedAlpha:false});
+    engine.loadingScreen={displayLoadingUI(){},hideLoadingUI(){}};
+    const scene=new BABYLON.Scene(engine);scene.useRightHandedSystem=true;scene.clearColor=new BABYLON.Color4(0,0,0,0);scene.autoClear=true;
+    addEventListener("pagehide",()=>{engine.stopRenderLoop();scene.dispose();engine.dispose();},{once:true});
+    const camera=new BABYLON.FreeCamera("qa-camera",new BABYLON.Vector3(0,0,2),scene);camera.mode=BABYLON.Camera.ORTHOGRAPHIC_CAMERA;camera.minZ=.01;camera.maxZ=10;
+    function fit(){
+      let min=new BABYLON.Vector3(Infinity,Infinity,Infinity),max=new BABYLON.Vector3(-Infinity,-Infinity,-Infinity),count=0;
+      for(const m of scene.meshes){if(!m.getTotalVertices())continue;const b=m.getBoundingInfo().boundingBox;min=BABYLON.Vector3.Minimize(min,b.minimumWorld);max=BABYLON.Vector3.Maximize(max,b.maximumWorld);count++;}
+      const center=min.add(max).scale(.5),size=max.subtract(min),d=directions[view]||directions.front,dir=new BABYLON.Vector3(...d).normalize();camera.position=center.add(dir.scale(2));camera.upVector=new BABYLON.Vector3(0,1,0);if(view==="top")camera.upVector=new BABYLON.Vector3(0,0,-1);if(view==="bottom")camera.upVector=new BABYLON.Vector3(0,0,1);camera.setTarget(center);camera.computeWorldMatrix(true);
+      const vm=camera.getViewMatrix(true);let maxX=0,maxY=0;for(const x of [min.x,max.x])for(const y of [min.y,max.y])for(const z of [min.z,max.z]){const p=BABYLON.Vector3.TransformCoordinates(new BABYLON.Vector3(x,y,z),vm);maxX=Math.max(maxX,Math.abs(p.x));maxY=Math.max(maxY,Math.abs(p.y));}
+      const aspect=engine.getRenderWidth()/engine.getRenderHeight(),halfH=Math.max(maxY,maxX/aspect)*1.13,halfW=halfH*aspect;camera.orthoLeft=-halfW;camera.orthoRight=halfW;camera.orthoTop=halfH;camera.orthoBottom=-halfH;
+      return {min:min.asArray(),max:max.asArray(),size:size.asArray(),camera:camera.position.asArray(),meshCount:count};
+    }
+    BABYLON.SceneLoader.AppendAsync("",modelURL,scene).then(()=>{engine.hideLoadingUI();const bounds=fit();scene.render();status.textContent=`PASS · actual ${flavor} GLB · ${bounds.meshCount} meshes · ${view}`;window.viewerInfo={renderer:`Babylon.js ${BABYLON.Engine.Version}`,model:modelURL,flavor,view,bounds,meshCount:bounds.meshCount,webgl:engine.webGLVersion===2?"WebGL2":"WebGL1"};window.__RENDER_DONE__=true;engine.runRenderLoop(()=>scene.render());}).catch(e=>{console.error(e);status.textContent=`ERROR · ${e.message}`;window.__RENDER_DONE__="error";});
+  </script>
+</body>
+</html>

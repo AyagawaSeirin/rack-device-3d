@@ -1,0 +1,67 @@
+{
+  "product": "Dell PowerEdge R720",
+  "configuration": "2U, 16x2.5-inch SFF, no bezel, seven PCIe blanks, four-RJ45 NDC, dual matched 750W AC PSU",
+  "coordinate_convention": "+X device right from front, +Y up, +Z front",
+  "dimensions_mm": {
+    "overall_width": 482.4,
+    "body_width": 444.0,
+    "height": 87.3,
+    "flange_to_rear_body": 684.0,
+    "overall_depth": 723.0
+  },
+  "builder": "model/build_model.mjs",
+  "newly_constructed": true,
+  "official_mesh_imported": false,
+  "models": {
+    "standard": {
+      "path": "model/Dell-R720-2.5inch.glb",
+      "bytes": 11721868,
+      "sha256": "9ddcb84c29ef9c30cf1537389b0a6d84136fc72f2639049c17f59d7fbe413650",
+      "texture_directory": "model/textures/standard",
+      "embedded_texture_sizes_px": {
+        "front": [2400, 427],
+        "rear": [2400, 478],
+        "left": [2400, 290],
+        "right": [2400, 283],
+        "top": [1490, 2400],
+        "bottom": [1463, 2400]
+      }
+    },
+    "web": {
+      "path": "model/Dell-R720-2.5inch-web.glb",
+      "bytes": 6032448,
+      "sha256": "e716ea7193259aedf361bdb15afa6a4c0143de181ca792989b38b874b3d35aaf",
+      "texture_directory": "model/textures/web",
+      "embedded_texture_sizes_px": {
+        "front": [1600, 285],
+        "rear": [1600, 319],
+        "left": [1600, 193],
+        "right": [1600, 189],
+        "top": [993, 1600],
+        "bottom": [975, 1600]
+      }
+    }
+  },
+  "gltf": {
+    "nodes": 331,
+    "meshes": 331,
+    "primitives": 331,
+    "materials": 15,
+    "textures": 6,
+    "images": 6,
+    "extensions_used": ["KHR_materials_unlit"],
+    "external_buffers": [],
+    "mirrored_nodes": []
+  },
+  "visible_geometry": {
+    "sff_carriers": 16,
+    "rack_ears": 2,
+    "true_rack_ear_holes": 4,
+    "pcie_blanks": 7,
+    "ndc_rj45": 4,
+    "ac_psus": 2,
+    "central_rear_handle": 1,
+    "independent_side_hooks": 8
+  },
+  "bottom_evidence": "GENERIC_BOTTOM_FALLBACK"
+}
