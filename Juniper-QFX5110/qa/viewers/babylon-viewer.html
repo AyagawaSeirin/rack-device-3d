@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QFX5110 Babylon.js QA Viewer</title>
+  <style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#eef1f4}canvas{display:block;width:100%;height:100%;touch-action:none}</style>
+  <script src="https://cdn.babylonjs.com/babylon.js"></script>
+  <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+</head>
+<body>
+<canvas id="renderCanvas"></canvas>
+<script>
+(async function(){
+  const params = new URLSearchParams(location.search);
+  const view = params.get('view') || 'front-right';
+  const file = params.get('model') || 'Juniper-QFX5110.glb';
+  const dark = params.get('bg') === 'dark';
+  const canvas = document.getElementById('renderCanvas');
+  const engine = new BABYLON.Engine(canvas, true, {preserveDrawingBuffer:true, stencil:true, antialias:true});
+  const scene = new BABYLON.Scene(engine);
+  scene.clearColor = dark ? new BABYLON.Color4(0.145,0.157,0.173,1) : new BABYLON.Color4(0.933,0.945,0.957,1);
+  scene.imageProcessingConfiguration.toneMappingEnabled = false;
+  scene.imageProcessingConfiguration.contrast = 1.0;
+  scene.imageProcessingConfiguration.exposure = 1.0;
+  new BABYLON.HemisphericLight('hemi', new BABYLON.Vector3(0,1,0), scene).intensity = 1.4;
+  const light = new BABYLON.DirectionalLight('key', new BABYLON.Vector3(-0.5,-0.7,-1), scene); light.intensity=1.8;
+  const imported = await BABYLON.SceneLoader.ImportMeshAsync('', '../../model/', file, scene);
+  const meshes = imported.meshes.filter(m => m.getTotalVertices && m.getTotalVertices() > 0);
+  let min = new BABYLON.Vector3(Number.POSITIVE_INFINITY,Number.POSITIVE_INFINITY,Number.POSITIVE_INFINITY);
+  let max = new BABYLON.Vector3(Number.NEGATIVE_INFINITY,Number.NEGATIVE_INFINITY,Number.NEGATIVE_INFINITY);
+  meshes.forEach(m => { const b=m.getBoundingInfo().boundingBox; min=BABYLON.Vector3.Minimize(min,b.minimumWorld); max=BABYLON.Vector3.Maximize(max,b.maximumWorld); });
+  const center = min.add(max).scale(0.5); const size=max.subtract(min);
+  const dirs={front:[0,0,1],rear:[0,0,-1],left:[-1,0,0],right:[1,0,0],top:[0,1,0],bottom:[0,-1,0],
+    'front-left':[-1,0.55,1],'front-right':[1,0.55,1],'rear-left':[-1,0.55,-1],'rear-right':[1,0.55,-1]};
+  const d=BABYLON.Vector3.FromArray(dirs[view]).normalize();
+  const camera=new BABYLON.FreeCamera('camera',center.add(d.scale(2.0)),scene);
+  camera.mode=BABYLON.Camera.ORTHOGRAPHIC_CAMERA;
+  camera.upVector = view==='top' ? new BABYLON.Vector3(0,0,-1) : (view==='bottom' ? new BABYLON.Vector3(0,0,1) : new BABYLON.Vector3(0,1,0));
+  camera.setTarget(center);
+  const aspect=engine.getRenderWidth()/engine.getRenderHeight();
+  let axes;
+  if(view==='front'||view==='rear') axes=[size.x,size.y];
+  else if(view==='left'||view==='right') axes=[size.z,size.y];
+  else if(view==='top'||view==='bottom') axes=[size.x,size.z];
+  else axes=[Math.hypot(size.x,size.z),Math.max(size.y,Math.hypot(size.x,size.z)*0.72)];
+  let halfW=axes[0]*0.55, halfH=axes[1]*0.58;
+  if(halfW/halfH<aspect) halfW=halfH*aspect; else halfH=halfW/aspect;
+  camera.orthoLeft=-halfW; camera.orthoRight=halfW; camera.orthoTop=halfH; camera.orthoBottom=-halfH;
+  scene.activeCamera=camera;
+  scene.render();
+  window.__READY=true; window.__VIEW=view;
+  engine.runRenderLoop(()=>scene.render());
+  addEventListener('resize',()=>engine.resize());
+})().catch(e=>{window.__ERROR=String(e)});
+</script>
+</body>
+</html>
