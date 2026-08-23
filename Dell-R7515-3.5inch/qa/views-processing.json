@@ -1,0 +1,157 @@
+{
+  "method": "built-in image_gen; magenta chroma removal; no anisotropic resize",
+  "long_edge_px": 3072,
+  "padding_px": 8,
+  "faces": {
+    "front": {
+      "source": "qa/work/imagegen-keyed/front.png",
+      "source_sha256": "d51837a700a36cc891a8b9e0b821715a2f20bc8e8c21f71f2a54cfe1833151b8",
+      "operation": "crop x53:1666 y289:580",
+      "cropped_size": [
+        1613,
+        291
+      ],
+      "output_size": [
+        3088,
+        570
+      ],
+      "alpha_bbox": [
+        8,
+        8,
+        3080,
+        562
+      ],
+      "content_ratio": 5.5451263537906135,
+      "transparent_pixels": 58272,
+      "partial_alpha_pixels": 0,
+      "opaque_pixels": 1701888,
+      "output": "views/front.png",
+      "output_sha256": "58e90bbddc81df5c82d3cd55d24a93ed75bc314748d49516e7f1d6ae04b7caf5"
+    },
+    "rear": {
+      "source": "qa/work/imagegen-keyed/rear.png",
+      "source_sha256": "d77e5212dfc8d363058cd02e25f5d4a6ffd9dbf608fc05b28e57ef2b3c1c7a1e",
+      "operation": "crop x35:1744 y256:598",
+      "cropped_size": [
+        1709,
+        342
+      ],
+      "output_size": [
+        3088,
+        631
+      ],
+      "alpha_bbox": [
+        8,
+        8,
+        3080,
+        623
+      ],
+      "content_ratio": 4.995121951219512,
+      "transparent_pixels": 59248,
+      "partial_alpha_pixels": 0,
+      "opaque_pixels": 1889280,
+      "output": "views/rear.png",
+      "output_sha256": "24386e26cb8518b1eb59efcabe8cf4b3e11f8b2c78c0bc067db7690f9aa57314"
+    },
+    "left": {
+      "source": "qa/work/imagegen-keyed/left.png",
+      "source_sha256": "d1ed59b15c72f58609b994b4fb091fe669a9b0948638888a662e456a30a2afb1",
+      "operation": "crop x62:1859 y329:550",
+      "cropped_size": [
+        1797,
+        221
+      ],
+      "output_size": [
+        3088,
+        394
+      ],
+      "alpha_bbox": [
+        8,
+        8,
+        3080,
+        386
+      ],
+      "content_ratio": 8.126984126984127,
+      "transparent_pixels": 71200,
+      "partial_alpha_pixels": 16507,
+      "opaque_pixels": 1128965,
+      "output": "views/left.png",
+      "output_sha256": "d04b4466152637a22e1d670bf954613c39032c4703ae8a2caf7ce593ec474c0d"
+    },
+    "right": {
+      "source": "qa/work/imagegen-keyed/right.png",
+      "source_sha256": "232fd3dd59148f16b30ebf4e719c95840945867a097b3e3917346fa4e4bd63d7",
+      "operation": "crop x69:1915 y287:515",
+      "cropped_size": [
+        1846,
+        228
+      ],
+      "output_size": [
+        3088,
+        395
+      ],
+      "alpha_bbox": [
+        8,
+        8,
+        3080,
+        387
+      ],
+      "content_ratio": 8.105540897097626,
+      "transparent_pixels": 66218,
+      "partial_alpha_pixels": 3140,
+      "opaque_pixels": 1150402,
+      "output": "views/right.png",
+      "output_sha256": "abbcfc9dd1856df4475c2c7193f692e0b8aa63653fde2cecbf8a8fdac3714981"
+    },
+    "top": {
+      "source": "qa/work/imagegen-keyed/top.png",
+      "source_sha256": "4d1863e34f83b6f07e0b28fa346a1261173678cd990683286ab62752cdb60b89",
+      "operation": "crop body x114:896 y140:1377; remove plain deck band y945:1016",
+      "cropped_size": [
+        782,
+        1166
+      ],
+      "output_size": [
+        2076,
+        3088
+      ],
+      "alpha_bbox": [
+        8,
+        8,
+        2068,
+        3080
+      ],
+      "content_ratio": 0.6705729166666666,
+      "transparent_pixels": 82368,
+      "partial_alpha_pixels": 0,
+      "opaque_pixels": 6328320,
+      "output": "views/top.png",
+      "output_sha256": "326581c3a725fe518d55f33b1a4d064179324696816cab46e1d24b1d65f05080"
+    },
+    "bottom": {
+      "source": "qa/work/imagegen-keyed/bottom.png",
+      "source_sha256": "cbd380591e029124c6237deef4c464ce73d112c2d316e6e2932d3732ca542e1d",
+      "operation": "crop body x50:973 y63:1471; remove plain center band y687:719",
+      "cropped_size": [
+        923,
+        1376
+      ],
+      "output_size": [
+        2077,
+        3088
+      ],
+      "alpha_bbox": [
+        8,
+        8,
+        2069,
+        3080
+      ],
+      "content_ratio": 0.6708984375,
+      "transparent_pixels": 82384,
+      "partial_alpha_pixels": 0,
+      "opaque_pixels": 6331392,
+      "output": "views/bottom.png",
+      "output_sha256": "a99275aff12138c24cf35a797aa4f7102101c4215ec442e0318ac310e27057b2"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+# Assembly identity manifest
+
+- manufacturer: Dell Technologies / Dell EMC
+- requested_product_id: PowerEdge R7515
+- regulatory_model: E46S Series
+- regulatory_type: E46S003
+- delivery_subject: complete-appliance
+- host_enclosure_model: PowerEdge R7515 2U rack chassis
+- installed_module_model: not applicable
+- installed_module_count: not applicable
+- installed_module_positions: not applicable
+- front_backplane_or_drive_configuration: 12 x 3.5-inch SAS/SATA LFF front-accessible slots 0-11; all twelve Dell LFF carriers fitted in the 3-row x 4-column arrangement shown in the user row-10 lock
+- rear_io_or_controller_configuration: no rear-drive cage; Riser 1B slots 2 and 3 plus PCIe slots 4 and 5; system serial/VGA/USB/iDRAC/Gb1-Gb2/optional LOM-OCP area exactly as the official no-rear-drive figure and the row-10 lock
+- bezel_and_blanking_panel_state: security/front bezel absent; drive carriers exposed; unused PCIe positions use the photographed perforated factory filler brackets
+- power_and_fan_configuration: two hot-plug EPP 750 W AC PSUs fitted, stacked vertically; six internal system fans required by Dell; PSU exhaust fans visible at rear
+- u_height: 2U
+- body_width_mm: 434
+- rack_ear_overall_width_mm: 482
+- height_mm: 86.8
+- chassis_depth_from_mounting_plane_mm: 647.07
+- rear_outermost_depth_from_mounting_plane_mm: 681.755
+- front_projection_without_bezel_mm: 22
+- fully_installed_front_to_rear_outermost_mm: 703.755
+- branding_state: retain the physical Dell/PowerEdge R7515 marks proven by the front information tag and sources; do not invent a center bezel logo because the locked bezel state is open
+- ac_dc_lock: AC only; no DC/HVDC connector geometry
+- screenshot_lock: source/originals/user-row10-lock.png
+- screenshot_sha256: 346f17c583fc2ca3dd0ba560574ff574913f02f5f2c6df0df21cb5b7232242e2
+- front_primary: source/third-party/serverlama-r7515-front.jpg
+- rear_primary: source/third-party/serverlama-r7515-back.jpg
+- evidence_urls:
+  - https://www.dell.com/support/manuals/en-us/poweredge-r7515/per7515_ism_pub/front-view-of-the-system?guid=guid-71b577eb-97f9-411e-b540-32506130e0bc&lang=en-us
+  - https://www.dell.com/support/manuals/en-us/poweredge-r7515/per7515_ism_pub/rear-view-of-the-system?guid=guid-ece33925-e823-441f-b2be-65a868938bb4&lang=en-us
+  - https://www.dell.com/support/manuals/en-uk/poweredge-r7515/per7515_ts_pub/system-dimensions?guid=guid-df3a2af4-e49c-4510-867a-ff62232ca974&lang=en-us
+  - https://serverlama.com/en/products/dell-r7515-12x-lff
+  - https://www.serversstorages.com/sale-38159649-dell-poweredge-r7515-rack-dell-emc-storage-server-2-8ghz-amd-processor.html
+- rejected_variants:
+  - PowerEdge R7525 of every front/rear option
+  - PowerEdge R7515 24 x 2.5-inch/SFF fronts
+  - PowerEdge R7515 8 x 3.5-inch front
+  - PowerEdge R7515 rear 2 x 3.5-inch drive-cage configuration
+  - any DC or HVDC PSU connector
+- status: VERIFIED
+

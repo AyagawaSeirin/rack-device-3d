@@ -1,0 +1,197 @@
+{
+  "modelKey": "Dell-R7515-3.5inch",
+  "generatedAt": "2026-08-23T18:13:34.974589+00:00",
+  "status": "PASS_WITH_BOTTOM_FALLBACK",
+  "failed_gate_count": 0,
+  "checks": [
+    {
+      "gate": "model_build_manifest_and_exact_bounds",
+      "status": "PASS",
+      "details": {
+        "models": {
+          "standard": {
+            "path": "model/Dell-R7515-3.5inch.glb",
+            "bytes": 18850044,
+            "sha256": "06b20f03ccc702fddb0dec854f37f60f4a4c14761488b3b58591bc7824b90f55"
+          },
+          "web": {
+            "path": "model/Dell-R7515-3.5inch-web.glb",
+            "bytes": 10604860,
+            "sha256": "692020e5444f1f071f340a6f3b4908d8e4eef60ee570471bd1f3103496ec1f76"
+          }
+        },
+        "dimensions_mm": [
+          482.0,
+          86.8,
+          703.755
+        ]
+      }
+    },
+    {
+      "gate": "standard_and_web_glb_structural_audit",
+      "status": "PASS",
+      "details": {
+        "standard": {
+          "status": "PASS",
+          "errors": 0,
+          "warnings": 0,
+          "counts": {
+            "scenes": 1,
+            "nodes": 163,
+            "meshes": 163,
+            "primitives": 163,
+            "materials": 13,
+            "textures": 6,
+            "images": 6,
+            "unique_basecolor_images": 6
+          },
+          "dimensions_xyz_m": [
+            0.4819999933242798,
+            0.0868000015616417,
+            0.7037550210952759
+          ],
+          "mirrored_nodes": [],
+          "external_buffers": []
+        },
+        "web": {
+          "status": "PASS",
+          "errors": 0,
+          "warnings": 0,
+          "counts": {
+            "scenes": 1,
+            "nodes": 163,
+            "meshes": 163,
+            "primitives": 163,
+            "materials": 13,
+            "textures": 6,
+            "images": 6,
+            "unique_basecolor_images": 6
+          },
+          "dimensions_xyz_m": [
+            0.4819999933242798,
+            0.0868000015616417,
+            0.7037550210952759
+          ],
+          "mirrored_nodes": [],
+          "external_buffers": []
+        }
+      }
+    },
+    {
+      "gate": "six_production_views",
+      "status": "PASS",
+      "details": {
+        "status": "PASS",
+        "errors": 0,
+        "warnings": 2,
+        "resolved_warnings": {
+          "left": "RESOLVED_EXPECTED: partial/transparent pixels are confined to the external silhouette around the separately modeled front wing and rear PSU projections; the inset chassis core is 100% opaque.",
+          "right": "RESOLVED_EXPECTED: partial/transparent pixels are confined to the external silhouette around the separately modeled front wing and rear PSU projections; the inset chassis core is 100% opaque."
+        },
+        "face_ratios": {
+          "front": 0.1417,
+          "rear": 0.0976,
+          "left": 0.2369,
+          "right": 0.0276,
+          "top": 0.0213,
+          "bottom": 0.0272
+        }
+      }
+    },
+    {
+      "gate": "six_independent_source_locked_imagegen_faces",
+      "status": "PASS",
+      "details": {
+        "face_modes": {
+          "front": "SOURCE_LOCKED_GENERATION",
+          "rear": "SOURCE_LOCKED_GENERATION",
+          "left": "SOURCE_LOCKED_GENERATION",
+          "right": "MULTI_REFERENCE_RECONSTRUCTION",
+          "top": "MULTI_REFERENCE_RECONSTRUCTION",
+          "bottom": "GENERIC_BOTTOM_FALLBACK"
+        },
+        "independent_calls": 6,
+        "left_right_final_hashes_differ": true,
+        "all_raw_keyed_final_hashes_match": true
+      }
+    },
+    {
+      "gate": "two_independent_webgl_viewers_48_live_loads",
+      "status": "PASS",
+      "details": {
+        "count": 48,
+        "matrix": "2 viewers x 2 GLBs x (6 orthographic + 4 oblique + 2 close-ups)",
+        "viewers": [
+          "babylon",
+          "three"
+        ],
+        "models": [
+          "standard",
+          "web"
+        ],
+        "unique_qa_ids": 48,
+        "server_hashes_match": true,
+        "server_bytes_match": true,
+        "viewer_bounds_match": true,
+        "first_server_received_at": "2026-08-23T17:55:21.604315+00:00",
+        "last_server_received_at": "2026-08-23T18:03:24.344304+00:00"
+      }
+    },
+    {
+      "gate": "render_and_same_camera_comparison_artifacts",
+      "status": "PASS",
+      "details": {
+        "render_count": 48,
+        "render_size_px": [
+          1280,
+          720
+        ],
+        "comparison_count": 24
+      }
+    },
+    {
+      "gate": "exact_variant_identity_and_uniform_ac_lock",
+      "status": "PASS",
+      "details": {
+        "variant": "Dell PowerEdge R7515 12x3.5 LFF; no bezel; no rear drives; dual EPP 750W AC",
+        "identity_status": "VERIFIED"
+      }
+    },
+    {
+      "gate": "official_exact_3d_search_and_optional_backup",
+      "status": "PASS",
+      "details": {
+        "official_exact_public_3d": "NOT_FOUND_PUBLIC_EXACT",
+        "optional_3d_record": "source/optional-3d/README.md",
+        "substitute_model_used": false
+      }
+    },
+    {
+      "gate": "bottom_search_exhaustion_and_controlled_fallback",
+      "status": "PASS",
+      "details": {
+        "bottom_mode": "GENERIC_BOTTOM_FALLBACK",
+        "final_status_ceiling": "PASS_WITH_BOTTOM_FALLBACK"
+      }
+    }
+  ],
+  "models": {
+    "standard": {
+      "path": "model/Dell-R7515-3.5inch.glb",
+      "bytes": 18850044,
+      "sha256": "06b20f03ccc702fddb0dec854f37f60f4a4c14761488b3b58591bc7824b90f55"
+    },
+    "web": {
+      "path": "model/Dell-R7515-3.5inch-web.glb",
+      "bytes": 10604860,
+      "sha256": "692020e5444f1f071f340a6f3b4908d8e4eef60ee570471bd1f3103496ec1f76"
+    }
+  },
+  "source_raster_count": 115,
+  "remaining_risks": [
+    "Exact R7515 underside imagery remains unavailable; bottom is a conservative non-identifying fallback.",
+    "Surface textures are source-locked imagegen reconstructions rather than photogrammetry; minute fastener, finish and very small label details may differ although binding counts/layout/identity were checked.",
+    "This is an exterior web replica, not Dell engineering CAD; internal geometry and manufacturing tolerances are intentionally out of scope.",
+    "The official Dell product/3D routes were blocked by Akamai and no indexed exact public binary was found; absence cannot prove no non-public asset exists."
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "views_dir": "views",
+  "dimensions_mm": {
+    "body_width": 434.0,
+    "front_overall_width": 482.0,
+    "height": 86.8,
+    "body_depth": 647.07,
+    "front_projection": 22.0,
+    "rear_outermost_from_mounting_plane": 681.755,
+    "installed_front_to_rear_outermost": 703.755
+  },
+  "note": "The upstream helper accepts one depth for both side silhouettes and top/bottom body faces. This exact-variant audit uses the dimension ledger's installed side depth and body-only top/bottom depth separately.",
+  "faces": {
+    "front": {
+      "path": "/root/Project/rack-device-3d/Dell-R7515-3.5inch/views/front.png",
+      "errors": [],
+      "warnings": [],
+      "mode": "RGBA",
+      "canvas_px": [
+        3088,
+        570
+      ],
+      "content_bbox_px": [
+        8,
+        8,
+        3080,
+        562
+      ],
+      "content_px": [
+        3072,
+        554
+      ],
+      "actual_ratio": 5.545126,
+      "expected_ratio": 5.552995,
+      "ratio_error_percent": 0.1417,
+      "core_alpha_below_250_percent": 0.0,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 0.0
+    },
+    "rear": {
+      "path": "/root/Project/rack-device-3d/Dell-R7515-3.5inch/views/rear.png",
+      "errors": [],
+      "warnings": [],
+      "mode": "RGBA",
+      "canvas_px": [
+        3088,
+        631
+      ],
+      "content_bbox_px": [
+        8,
+        8,
+        3080,
+        623
+      ],
+      "content_px": [
+        3072,
+        615
+      ],
+      "actual_ratio": 4.995122,
+      "expected_ratio": 5.0,
+      "ratio_error_percent": 0.0976,
+      "core_alpha_below_250_percent": 0.0,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 0.0
+    },
+    "left": {
+      "path": "/root/Project/rack-device-3d/Dell-R7515-3.5inch/views/left.png",
+      "errors": [],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        3088,
+        394
+      ],
+      "content_bbox_px": [
+        8,
+        8,
+        3080,
+        386
+      ],
+      "content_px": [
+        3072,
+        378
+      ],
+      "actual_ratio": 8.126984,
+      "expected_ratio": 8.107776,
+      "ratio_error_percent": 0.2369,
+      "core_alpha_below_250_percent": 0.0,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 2.77735
+    },
+    "right": {
+      "path": "/root/Project/rack-device-3d/Dell-R7515-3.5inch/views/right.png",
+      "errors": [],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        3088,
+        395
+      ],
+      "content_bbox_px": [
+        8,
+        8,
+        3080,
+        387
+      ],
+      "content_px": [
+        3072,
+        379
+      ],
+      "actual_ratio": 8.105541,
+      "expected_ratio": 8.107776,
+      "ratio_error_percent": 0.0276,
+      "core_alpha_below_250_percent": 0.0,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 1.19266
+    },
+    "top": {
+      "path": "/root/Project/rack-device-3d/Dell-R7515-3.5inch/views/top.png",
+      "errors": [],
+      "warnings": [],
+      "mode": "RGBA",
+      "canvas_px": [
+        2076,
+        3088
+      ],
+      "content_bbox_px": [
+        8,
+        8,
+        2068,
+        3080
+      ],
+      "content_px": [
+        2060,
+        3072
+      ],
+      "actual_ratio": 0.670573,
+      "expected_ratio": 0.670716,
+      "ratio_error_percent": 0.0213,
+      "core_alpha_below_250_percent": 0.0,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 0.0
+    },
+    "bottom": {
+      "path": "/root/Project/rack-device-3d/Dell-R7515-3.5inch/views/bottom.png",
+      "errors": [],
+      "warnings": [],
+      "mode": "RGBA",
+      "canvas_px": [
+        2077,
+        3088
+      ],
+      "content_bbox_px": [
+        8,
+        8,
+        2069,
+        3080
+      ],
+      "content_px": [
+        2061,
+        3072
+      ],
+      "actual_ratio": 0.670898,
+      "expected_ratio": 0.670716,
+      "ratio_error_percent": 0.0272,
+      "core_alpha_below_250_percent": 0.0,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 0.0
+    }
+  },
+  "warning_resolutions": {
+    "left": "RESOLVED_EXPECTED: partial/transparent pixels are confined to the external silhouette around the separately modeled front wing and rear PSU projections; the inset chassis core is 100% opaque.",
+    "right": "RESOLVED_EXPECTED: partial/transparent pixels are confined to the external silhouette around the separately modeled front wing and rear PSU projections; the inset chassis core is 100% opaque."
+  },
+  "error_count": 0,
+  "warning_count": 2,
+  "status": "PASS"
+}
