@@ -1,0 +1,46 @@
+{
+  "model_key": "Huawei-RH2288V3-3.5inch",
+  "identity": "Huawei FusionServer RH2288 V3 / H22M-03 12x3.5-inch LFF",
+  "status": "PASS_WITH_BOTTOM_FALLBACK",
+  "bottom": "GENERIC_BOTTOM_FALLBACK",
+  "component_statuses": {
+    "views": "PASS",
+    "glb_standard": "PASS",
+    "glb_web": "PASS",
+    "configuration_structure": "PASS",
+    "webgl_browser_matrix": "PASS",
+    "embedded_texture_lineage": "PASS"
+  },
+  "body_dimensions_mm": [
+    447.0,
+    86.1,
+    748.0
+  ],
+  "front_mounting_span_mm": 482.6,
+  "world_bounds_m": [
+    0.48260000348091125,
+    0.08641999959945679,
+    0.756520003080368
+  ],
+  "maximum_view_ratio_error_percent": 0.1015,
+  "standard_web_maximum_normalized_rmse": 0.00967004,
+  "webgl_render_count": 40,
+  "model_files": [
+    {
+      "category": "model",
+      "path": "model/Huawei-RH2288V3-3.5inch.glb",
+      "bytes": 21086136,
+      "sha256": "274f7f7dc399c3dfc187c4c5b74d4c34fbbe76d93475ad8455fcfa4d68772e3c"
+    },
+    {
+      "category": "model",
+      "path": "model/Huawei-RH2288V3-3.5inch-web.glb",
+      "bytes": 10019496,
+      "sha256": "0bf68be256a5e69ac79acd0c0411802519289c17be87852550dda0ec94f1398a"
+    }
+  ],
+  "reports": [
+    "qa/COMPARISON-TABLE.md",
+    "qa/QA_REPORT.md"
+  ]
+}

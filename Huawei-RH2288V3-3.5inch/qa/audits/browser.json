@@ -1,0 +1,778 @@
+{
+  "engines": [
+    "three",
+    "babylon"
+  ],
+  "variants": [
+    "standard",
+    "web"
+  ],
+  "views": [
+    "front",
+    "rear",
+    "left",
+    "right",
+    "top",
+    "bottom",
+    "frontLeft",
+    "frontRight",
+    "rearLeft",
+    "rearRight"
+  ],
+  "expected_render_count": 40,
+  "actual_render_count": 40,
+  "playwright_real_chromium_load_result": "PASS_40_READY_SCREENSHOTS",
+  "missing": [],
+  "invalid": [],
+  "standard_web_normalized_rmse": {
+    "three": {
+      "front": 0.00550152,
+      "rear": 0.00544923,
+      "left": 0.00782564,
+      "right": 0.00945597,
+      "top": 0.0096304,
+      "bottom": 0.00265737,
+      "frontLeft": 0.0079841,
+      "frontRight": 0.00886875,
+      "rearLeft": 0.007761,
+      "rearRight": 0.00877193
+    },
+    "babylon": {
+      "front": 0.00532605,
+      "rear": 0.00529322,
+      "left": 0.00925398,
+      "right": 0.00788697,
+      "top": 0.00967004,
+      "bottom": 0.00266399,
+      "frontLeft": 0.0052475,
+      "frontRight": 0.00406625,
+      "rearLeft": 0.00527446,
+      "rearRight": 0.00406435
+    }
+  },
+  "maximum_standard_web_normalized_rmse": 0.00967004,
+  "standard_web_visual_threshold": 0.015,
+  "records": [
+    {
+      "engine": "three",
+      "variant": "standard",
+      "view": "front",
+      "path": "qa/renders/three/standard/front.png",
+      "bytes": 293484,
+      "sha256": "12dd8f0a58e0cdbf5ce39b0d5dcb7f345e2c69139b9f4d5211b8155fb713c604",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        64,
+        304,
+        1136,
+        496
+      ]
+    },
+    {
+      "engine": "three",
+      "variant": "standard",
+      "view": "rear",
+      "path": "qa/renders/three/standard/rear.png",
+      "bytes": 305392,
+      "sha256": "53d41bf9079ca7e7a1318be66dba613bd276d46df0c9ae6df3133ad7a69b5518",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        98,
+        304,
+        1102,
+        496
+      ]
+    },
+    {
+      "engine": "three",
+      "variant": "standard",
+      "view": "left",
+      "path": "qa/renders/three/standard/left.png",
+      "bytes": 138417,
+      "sha256": "dda17007c157e043043457cd6e799f83b02543af16365219d02515ee55f69042",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        64,
+        339,
+        1136,
+        461
+      ]
+    },
+    {
+      "engine": "three",
+      "variant": "standard",
+      "view": "right",
+      "path": "qa/renders/three/standard/right.png",
+      "bytes": 169664,
+      "sha256": "49564102158e14eb055d6038c6691f3d7cd9650ee57e6db6b5c65b2faf564ecd",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        64,
+        339,
+        1136,
+        461
+      ]
+    },
+    {
+      "engine": "three",
+      "variant": "standard",
+      "view": "top",
+      "path": "qa/renders/three/standard/top.png",
+      "bytes": 353773,
+      "sha256": "1ba9f90ec771ef146a0d30c543825652d24aa9c7c6e2c038e912791903bbbd8e",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        372,
+        43,
+        828,
+        758
+      ]
+    },
+    {
+      "engine": "three",
+      "variant": "standard",
+      "view": "bottom",
+      "path": "qa/renders/three/standard/bottom.png",
+      "bytes": 417660,
+      "sha256": "727e4aaf4366ede97c3004f9aca64bb611da672ebd71f8d4dc828f486c209835",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        372,
+        43,
+        828,
+        758
+      ]
+    },
+    {
+      "engine": "three",
+      "variant": "standard",
+      "view": "frontLeft",
+      "path": "qa/renders/three/standard/frontLeft.png",
+      "bytes": 201252,
+      "sha256": "33cbd76014e2b64b361272a2dcf63aecc3899446c61248efbe2462fae7950229",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        252,
+        271,
+        1018,
+        610
+      ]
+    },
+    {
+      "engine": "three",
+      "variant": "standard",
+      "view": "frontRight",
+      "path": "qa/renders/three/standard/frontRight.png",
+      "bytes": 210917,
+      "sha256": "48d6c8a2006a8a00c075298d7880556dacb16860027d94505c022d051847a90e",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        181,
+        271,
+        948,
+        609
+      ]
+    },
+    {
+      "engine": "three",
+      "variant": "standard",
+      "view": "rearLeft",
+      "path": "qa/renders/three/standard/rearLeft.png",
+      "bytes": 202726,
+      "sha256": "f5921c285701428e49a3532fc666ee26b5733e961821e21becccc4efc3393081",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        195,
+        269,
+        964,
+        603
+      ]
+    },
+    {
+      "engine": "three",
+      "variant": "standard",
+      "view": "rearRight",
+      "path": "qa/renders/three/standard/rearRight.png",
+      "bytes": 209316,
+      "sha256": "67e0446a0ccbf7337fc5ea1ed2fbbe75eeb68ff34fa90fdb89e901c8fe512f4a",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        236,
+        269,
+        1007,
+        603
+      ]
+    },
+    {
+      "engine": "three",
+      "variant": "web",
+      "view": "front",
+      "path": "qa/renders/three/web/front.png",
+      "bytes": 295287,
+      "sha256": "e5d2ae8c5e3eddd39b39ce48d62eff02ddc257d00731c7696f5c16033a0ff31c",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        64,
+        304,
+        1136,
+        496
+      ]
+    },
+    {
+      "engine": "three",
+      "variant": "web",
+      "view": "rear",
+      "path": "qa/renders/three/web/rear.png",
+      "bytes": 309500,
+      "sha256": "8cc05f006c257d0e9647a7df95e6f82905c485dfbb93f9f35bdd402aa9439cbd",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        98,
+        304,
+        1102,
+        496
+      ]
+    },
+    {
+      "engine": "three",
+      "variant": "web",
+      "view": "left",
+      "path": "qa/renders/three/web/left.png",
+      "bytes": 140415,
+      "sha256": "44e38bec97e7367994ce78bbca6cc7da6a8309f3c39f126f74292c82f85ff727",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        64,
+        339,
+        1136,
+        461
+      ]
+    },
+    {
+      "engine": "three",
+      "variant": "web",
+      "view": "right",
+      "path": "qa/renders/three/web/right.png",
+      "bytes": 169339,
+      "sha256": "4ccf445ec55b94ac203a1e9441f5ebe82e917ecbd60be19298236f8a95b082d4",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        64,
+        339,
+        1136,
+        461
+      ]
+    },
+    {
+      "engine": "three",
+      "variant": "web",
+      "view": "top",
+      "path": "qa/renders/three/web/top.png",
+      "bytes": 346674,
+      "sha256": "19692f540b47357b54d93ead451ae456acabf14a7bc68aa69111b0a62920ffc9",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        372,
+        43,
+        828,
+        758
+      ]
+    },
+    {
+      "engine": "three",
+      "variant": "web",
+      "view": "bottom",
+      "path": "qa/renders/three/web/bottom.png",
+      "bytes": 407796,
+      "sha256": "4c9eb801e02abee2856940a7afaac8ab5c1d421bde128544b4e5a3a88d187bc4",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        372,
+        43,
+        828,
+        758
+      ]
+    },
+    {
+      "engine": "three",
+      "variant": "web",
+      "view": "frontLeft",
+      "path": "qa/renders/three/web/frontLeft.png",
+      "bytes": 198671,
+      "sha256": "c87c98ce87044a0469ece7837c5b1d94adc56f8028a15520697771d9a32d5550",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        252,
+        271,
+        1018,
+        610
+      ]
+    },
+    {
+      "engine": "three",
+      "variant": "web",
+      "view": "frontRight",
+      "path": "qa/renders/three/web/frontRight.png",
+      "bytes": 207445,
+      "sha256": "f6edd8089790a9b1e9eefe022ee02985058d5664cccbd89518a51bb80b7e150c",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        181,
+        271,
+        948,
+        609
+      ]
+    },
+    {
+      "engine": "three",
+      "variant": "web",
+      "view": "rearLeft",
+      "path": "qa/renders/three/web/rearLeft.png",
+      "bytes": 200041,
+      "sha256": "e9ba9e5e7b74fa950508c9a31acfa3093ff17e389504f1a5b6912d8e219cdcbf",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        195,
+        269,
+        964,
+        603
+      ]
+    },
+    {
+      "engine": "three",
+      "variant": "web",
+      "view": "rearRight",
+      "path": "qa/renders/three/web/rearRight.png",
+      "bytes": 207145,
+      "sha256": "fedb0597d0e5b14fbb7f1f6d19bc4c7c2c0168b2707cddf894a4598b98a70108",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        236,
+        269,
+        1007,
+        603
+      ]
+    },
+    {
+      "engine": "babylon",
+      "variant": "standard",
+      "view": "front",
+      "path": "qa/renders/babylon/standard/front.png",
+      "bytes": 296972,
+      "sha256": "02af42804b71d4e57e41bfae9113c446ddd02cde02986e23cb441cdf2984a363",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        64,
+        304,
+        1136,
+        496
+      ]
+    },
+    {
+      "engine": "babylon",
+      "variant": "standard",
+      "view": "rear",
+      "path": "qa/renders/babylon/standard/rear.png",
+      "bytes": 307526,
+      "sha256": "17aa9378f2603d53891cdc84638e8c7fbd68d1f7dd35e1e77e9e775d2b9a9f28",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        98,
+        304,
+        1102,
+        496
+      ]
+    },
+    {
+      "engine": "babylon",
+      "variant": "standard",
+      "view": "left",
+      "path": "qa/renders/babylon/standard/left.png",
+      "bytes": 168868,
+      "sha256": "43ec236b0544cec30c7aacc5757b168074c7e978f4d8878068882add283e6934",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        64,
+        339,
+        1136,
+        461
+      ]
+    },
+    {
+      "engine": "babylon",
+      "variant": "standard",
+      "view": "right",
+      "path": "qa/renders/babylon/standard/right.png",
+      "bytes": 137912,
+      "sha256": "c23823b7d048eff92d9053c6e56f790d2d8684a01640040d3ee2d096fa8ea8a4",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        64,
+        339,
+        1136,
+        461
+      ]
+    },
+    {
+      "engine": "babylon",
+      "variant": "standard",
+      "view": "top",
+      "path": "qa/renders/babylon/standard/top.png",
+      "bytes": 353004,
+      "sha256": "f19d24e335c008ef7a32d1b37aba2a239a98a6e52686f66d6497640647e397a2",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        372,
+        42,
+        828,
+        757
+      ]
+    },
+    {
+      "engine": "babylon",
+      "variant": "standard",
+      "view": "bottom",
+      "path": "qa/renders/babylon/standard/bottom.png",
+      "bytes": 418501,
+      "sha256": "64cf45bf1bcc1ac8ad3df044e779cc1776464dcba90f90b5dae116ada700fd2b",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        372,
+        42,
+        828,
+        757
+      ]
+    },
+    {
+      "engine": "babylon",
+      "variant": "standard",
+      "view": "frontLeft",
+      "path": "qa/renders/babylon/standard/frontLeft.png",
+      "bytes": 244374,
+      "sha256": "7e2034de77941f8e1a9a49eec7fb848ec0ba612950b6447420c88315e1f6dfaf",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        181,
+        271,
+        948,
+        609
+      ]
+    },
+    {
+      "engine": "babylon",
+      "variant": "standard",
+      "view": "frontRight",
+      "path": "qa/renders/babylon/standard/frontRight.png",
+      "bytes": 231344,
+      "sha256": "e0b85dc2507ece5c9053c34c9317a8f034a7ba5493f7510061afa3ebd64b9035",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        252,
+        271,
+        1018,
+        610
+      ]
+    },
+    {
+      "engine": "babylon",
+      "variant": "standard",
+      "view": "rearLeft",
+      "path": "qa/renders/babylon/standard/rearLeft.png",
+      "bytes": 243880,
+      "sha256": "731e05582b3b8d9f0e3bc83d138c291375d2b737fefc60d176489cb55b1ba6c2",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        236,
+        269,
+        1007,
+        603
+      ]
+    },
+    {
+      "engine": "babylon",
+      "variant": "standard",
+      "view": "rearRight",
+      "path": "qa/renders/babylon/standard/rearRight.png",
+      "bytes": 236387,
+      "sha256": "d4ce04756005b01c2801bee468b303975957b11d04ffc2126c678b9fd62a0908",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        195,
+        269,
+        964,
+        603
+      ]
+    },
+    {
+      "engine": "babylon",
+      "variant": "web",
+      "view": "front",
+      "path": "qa/renders/babylon/web/front.png",
+      "bytes": 298711,
+      "sha256": "ecdc5532cd46358970c47d14a82fa804c0df2b8ed8bb5e83bffdf0d7931ebb15",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        64,
+        304,
+        1136,
+        496
+      ]
+    },
+    {
+      "engine": "babylon",
+      "variant": "web",
+      "view": "rear",
+      "path": "qa/renders/babylon/web/rear.png",
+      "bytes": 311195,
+      "sha256": "b8553de15efa92b0ab943d2e1044c92019fc3ea9e1ced521a973db1c2b5cd7d4",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        98,
+        304,
+        1102,
+        496
+      ]
+    },
+    {
+      "engine": "babylon",
+      "variant": "web",
+      "view": "left",
+      "path": "qa/renders/babylon/web/left.png",
+      "bytes": 168690,
+      "sha256": "995477a367ae357ca24aa3e4f7ba68834e9670676c8a8fa06e7d207fdc245303",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        64,
+        339,
+        1136,
+        461
+      ]
+    },
+    {
+      "engine": "babylon",
+      "variant": "web",
+      "view": "right",
+      "path": "qa/renders/babylon/web/right.png",
+      "bytes": 139362,
+      "sha256": "9ebfe58cefc23abc9367eb041a4ec017123d7a6dfc32c8a9a9c565905b2ea3f3",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        64,
+        339,
+        1136,
+        461
+      ]
+    },
+    {
+      "engine": "babylon",
+      "variant": "web",
+      "view": "top",
+      "path": "qa/renders/babylon/web/top.png",
+      "bytes": 346211,
+      "sha256": "7e8d1adda7b6fb3e7d24f37e3323a37683812d5f4d1b0dd5519fa4ba7146c70a",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        372,
+        42,
+        828,
+        757
+      ]
+    },
+    {
+      "engine": "babylon",
+      "variant": "web",
+      "view": "bottom",
+      "path": "qa/renders/babylon/web/bottom.png",
+      "bytes": 408888,
+      "sha256": "12801c0702140c411bef9cbf1819eb16db9e950e62a52864fd11b8f266cff4de",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        372,
+        42,
+        828,
+        757
+      ]
+    },
+    {
+      "engine": "babylon",
+      "variant": "web",
+      "view": "frontLeft",
+      "path": "qa/renders/babylon/web/frontLeft.png",
+      "bytes": 243391,
+      "sha256": "103fe467e9d4ac3593fc2f31f8f2cf59b49b7ebc7a9c436abe0d32c532b18d53",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        181,
+        271,
+        948,
+        609
+      ]
+    },
+    {
+      "engine": "babylon",
+      "variant": "web",
+      "view": "frontRight",
+      "path": "qa/renders/babylon/web/frontRight.png",
+      "bytes": 231184,
+      "sha256": "b6a4a1f90a4e687038511e4b3a384b36a3a4ddc1ab3f42e51259c99131ec389b",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        252,
+        271,
+        1018,
+        610
+      ]
+    },
+    {
+      "engine": "babylon",
+      "variant": "web",
+      "view": "rearLeft",
+      "path": "qa/renders/babylon/web/rearLeft.png",
+      "bytes": 243242,
+      "sha256": "8a36ad920a74a47782f9087517d7c856a938164d0f568839c7543f4366ade8c9",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        236,
+        269,
+        1007,
+        603
+      ]
+    },
+    {
+      "engine": "babylon",
+      "variant": "web",
+      "view": "rearRight",
+      "path": "qa/renders/babylon/web/rearRight.png",
+      "bytes": 236255,
+      "sha256": "6c642edf1ee0882ef3559b26c5f22f1c514f124bd7dfce21876b6a1040e7e75c",
+      "size_px": [
+        1200,
+        800
+      ],
+      "content_bbox_px": [
+        195,
+        269,
+        964,
+        603
+      ]
+    }
+  ],
+  "status": "PASS"
+}

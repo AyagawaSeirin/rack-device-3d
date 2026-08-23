@@ -1,0 +1,227 @@
+{
+  "identity": "Huawei FusionServer RH2288 V3 / H22M-03 12x3.5-inch LFF",
+  "rear_configuration": "no rear disks; SM211 2xGE; dual vertically stacked 460 W AC PSU",
+  "bottom": "GENERIC_BOTTOM_FALLBACK",
+  "left_view_sha256": "4c7cecc360fa69df354f840a211c017187bc2290e8dee52eda47f17adf5d4497",
+  "right_view_sha256": "6d951e50a366a4a31bb8d7724ca7114c1c92775ba12f50920c40be98243a8382",
+  "left_right_images_are_byte_distinct": true,
+  "models": [
+    {
+      "path": "model/Huawei-RH2288V3-3.5inch.glb",
+      "bytes": 21086136,
+      "sha256": "274f7f7dc399c3dfc187c4c5b74d4c34fbbe76d93475ad8455fcfa4d68772e3c",
+      "node_count": 220,
+      "mesh_count": 220,
+      "material_count": 14,
+      "texture_count": 6,
+      "front_lff_carrier_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "front_lff_row_column_positions": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "ac_psu_indices": [
+        1,
+        2
+      ],
+      "sm211_ports": [
+        "REAR_SM211_Flexible_NIC_GE1_RJ45",
+        "REAR_SM211_Flexible_NIC_GE2_RJ45"
+      ],
+      "rear_drive_names": [],
+      "rear_ear_names": [],
+      "mirrored_node_names": [],
+      "requirements": {
+        "twelve_lff_carrier_indices_00_through_11": true,
+        "lff_carrier_layout_is_three_rows_by_four_columns": true,
+        "separate_front_control_ears": true,
+        "no_rear_ear_geometry": true,
+        "dual_ac_psu_indices_are_1_and_2": true,
+        "psu_fans_and_cord_loops_are_geometry": true,
+        "no_rear_drive_geometry": true,
+        "sm211_has_exactly_two_ge_ports": true,
+        "standard_management_console_group": true,
+        "blank_pcie_and_onboard_slots_present": true,
+        "closed_447x748x86_1_body_present": true,
+        "independent_left_and_right_textures": true,
+        "top_service_latch_is_source_locked_relief_geometry": true,
+        "all_materials_are_opaque": true,
+        "six_embedded_face_textures": true,
+        "no_mirrored_named_nodes": true
+      },
+      "status": "PASS"
+    },
+    {
+      "path": "model/Huawei-RH2288V3-3.5inch-web.glb",
+      "bytes": 10019496,
+      "sha256": "0bf68be256a5e69ac79acd0c0411802519289c17be87852550dda0ec94f1398a",
+      "node_count": 220,
+      "mesh_count": 220,
+      "material_count": 14,
+      "texture_count": 6,
+      "front_lff_carrier_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "front_lff_row_column_positions": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "ac_psu_indices": [
+        1,
+        2
+      ],
+      "sm211_ports": [
+        "REAR_SM211_Flexible_NIC_GE1_RJ45",
+        "REAR_SM211_Flexible_NIC_GE2_RJ45"
+      ],
+      "rear_drive_names": [],
+      "rear_ear_names": [],
+      "mirrored_node_names": [],
+      "requirements": {
+        "twelve_lff_carrier_indices_00_through_11": true,
+        "lff_carrier_layout_is_three_rows_by_four_columns": true,
+        "separate_front_control_ears": true,
+        "no_rear_ear_geometry": true,
+        "dual_ac_psu_indices_are_1_and_2": true,
+        "psu_fans_and_cord_loops_are_geometry": true,
+        "no_rear_drive_geometry": true,
+        "sm211_has_exactly_two_ge_ports": true,
+        "standard_management_console_group": true,
+        "blank_pcie_and_onboard_slots_present": true,
+        "closed_447x748x86_1_body_present": true,
+        "independent_left_and_right_textures": true,
+        "top_service_latch_is_source_locked_relief_geometry": true,
+        "all_materials_are_opaque": true,
+        "six_embedded_face_textures": true,
+        "no_mirrored_named_nodes": true
+      },
+      "status": "PASS"
+    }
+  ],
+  "standard_web_external_structure_matches": {
+    "node_count": true,
+    "mesh_count": true,
+    "material_count": true,
+    "texture_count": true,
+    "front_lff_carrier_indices": true,
+    "front_lff_row_column_positions": true,
+    "ac_psu_indices": true,
+    "sm211_ports": true
+  },
+  "status": "PASS"
+}
