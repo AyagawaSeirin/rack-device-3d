@@ -1,0 +1,51 @@
+path,classification,claimed_model,view_or_angle,configuration,inspection_result,intended_role
+source/originals/user-config-lock-full.png,USER_REAL_SCREENSHOT,HPE DL360G9 3.5-inch,row-6 front/rear thumbnails,4LFF plus specified Gen9 rear,exact target row confirmed; no neighboring row substituted,highest-priority configuration lock
+qa/reference/user-config-lock-row6.png,USER_REAL_SCREENSHOT,HPE DL360G9 3.5-inch,cropped row-6 front/rear,4LFF plus specified Gen9 rear,front and rear preserved without resampling beyond crop,configuration lock imagegen support
+qa/reference/user-config-lock-row6-4x.png,PROCESSED_DERIVATIVE,HPE DL360G9 3.5-inch,upsampled inspection crop,4LFF plus specified Gen9 rear,inspection-only enlargement; not an identity/style source,inspection only
+source/originals/a00020643.gif,OFFICIAL_TECHNICAL_DIAGRAM,HPE ProLiant DL360 Gen9,front orthographic,4LFF,exact four bays and optional media/control positions verified,binding front geometry
+source/originals/a00020644.gif,OFFICIAL_TECHNICAL_DIAGRAM,HPE ProLiant DL360 Gen9,rear orthographic,three PCIe plus dual PSU and all I/O groups,exact order verified,binding rear geometry
+source/originals/a00020645.gif,OFFICIAL_TECHNICAL_DIAGRAM,HPE ProLiant DL360 Gen9,system board top,Gen9 system board,exact board and riser connector positions verified,internal/fan placement support
+source/originals/c04444778.gif,OFFICIAL_REAL_PHOTO,HPE ProLiant DL360 Gen9,open-chassis top,dual CPU with hot-plug fan row,exact fan cage and internal assembly verified,internal fan geometry support
+source/third-party/newserverlife-dl360-g9-4lff.png,REAL_PHOTO,HPE ProLiant DL360 Gen9 4LFF,front-elevated near-orthographic,four installed LFF carriers,exact front identity and real material verified; seller canvas excluded,PRIMARY BINDING front identity/style
+source/third-party/pios-15304-1.jpg,REAL_PHOTO,HPE ProLiant DL360 Gen9 4LFF,front-high three-quarter,empty LFF bays dual CPU chassis,exact top/front shell and material verified; empty bays not copied,PRIMARY BINDING top and left reconstruction
+source/third-party/pios-15304-2.jpg,REAL_PHOTO,HPE ProLiant DL360 Gen9 4LFF,rear-high three-quarter,dual 500W PSU different two-port FlexibleLOM,exact top/rear/PSU material verified; differing FlexibleLOM excluded,PRIMARY BINDING right reconstruction and rear material
+source/third-party/pios-15304-3.jpg,REAL_PHOTO,HPE ProLiant DL360 Gen9 4LFF,stacked front/rear high angles,empty bays and different FlexibleLOM,corroborates same chassis cover and depth; not primary,support only
+source/third-party/servak-dl360g9-lff4.jpg,REAL_PHOTO,HPE ProLiant DL360 Gen9 4LFF,rear-high three-quarter,dual PSU different two-port FlexibleLOM,exact top/rear shell verified; seller sticker and adapter excluded,top/right/rear material support
+source/third-party/hp-pro-net-dl360g9-rear.jpg,OFFICIAL_RENDER,HPE ProLiant DL360 Gen9,rear orthographic,3 PCIe 4-port FlexLOM USB serial iLO embedded NIC VGA dual PSU,exact screenshot-matched rear configuration verified,PRIMARY BINDING rear layout
+source/third-party/maychuvina-dl360g9-rear-8rj45.png,OFFICIAL_RENDER_DERIVATIVE,HPE ProLiant DL360 Gen9,rear orthographic,8 total RJ45 plus dual PSU,same target rear corroborated; seller watermark/background excluded,rear layout support
+source/third-party/generic-bottom-fallback-hpe-dl120g9.jpg,REAL_PHOTO,HPE ProLiant DL120 Gen9 1U,bottom near-orthographic,different model,inspected only for same-generation galvanized sheet color/finish; no holes labels seams copied,GENERIC_BOTTOM_FALLBACK material
+qa/browser/hpe-specifications-page.png,OFFICIAL_BROWSER_SCREENSHOT,HPE ProLiant DL360 Gen9,web document,4LFF dimensions,4.32x43.46x75.0 cm visually confirmed,dimension evidence
+source/pdf-pages/Service-p1.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,cover,maintenance guide identity,part 767928-001 edition/date confirmed,document identity
+source/pdf-pages/Service-p10.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,text page,customer self repair,no exterior evidence; visually inspected,not used
+source/pdf-pages/Service-p11.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,text page,customer self repair,no exterior evidence; visually inspected,not used
+source/pdf-pages/Service-p12.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,text page,customer self repair,no exterior evidence; visually inspected,not used
+source/pdf-pages/Service-p15.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,exploded top/front,access panel chassis ears,top cover and front-side construction verified,top/side geometry
+source/pdf-pages/Service-p16.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,parts table,left/right ears and LFF rail part IDs,independent ears and LFF-specific rail identity verified,side/ear geometry
+source/pdf-pages/Service-p17.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,text page,parts notes,visually inspected,not used
+source/pdf-pages/Service-p18.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,text page,system components heading,visually inspected,not used
+source/pdf-pages/Service-p19.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,exploded chassis,PSU system board fans,hot-plug PSU and system layout verified,PSU/fan geometry
+source/pdf-pages/Service-p20.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,parts table,LFF drive options,LFF compatibility verified,configuration support
+source/pdf-pages/Service-p21.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,parts table,LFF drive options,LFF compatibility verified,configuration support
+source/pdf-pages/Service-p22.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,parts table,4LFF backplane and LFF module part IDs,LFF assemblies verified,configuration support
+source/pdf-pages/Service-p23.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,text page,parts notes,visually inspected,not used
+source/pdf-pages/Service-p24.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,text page,parts notes,visually inspected,not used
+source/pdf-pages/Service-p27.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,rear rack installation,server side/rear with CMA,side hardware context verified; CMA excluded,side geometry support
+source/pdf-pages/Service-p28.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,8SFF SID,wrong front variant,visually inspected and explicitly excluded,not used
+source/pdf-pages/Service-p29.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,4LFF front angle,4LFF SID and right-ear/control integration,front geometry support
+source/pdf-pages/Service-p32.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,drive and AC PSU,AC PSU construction context verified,PSU geometry support
+source/pdf-pages/Service-p33.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,AC PSU and access panel,PSU handle and access panel latch verified,PSU/top geometry support
+source/pdf-pages/Service-p45.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,right-side ear removal,right side plate holes and ear attachment verified,right/ear geometry
+source/pdf-pages/Service-p46.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,right-side ear removal,right side bracket and screws verified,right/ear geometry
+source/pdf-pages/Service-p48.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,4LFF backplane,4LFF exact backplane identity verified,configuration support
+source/pdf-pages/Service-p49.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,FlexibleLOM removal,rear/board integration verified,rear geometry support
+source/pdf-pages/Service-p56.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,processor text,no exterior evidence; visually inspected,not used
+source/pdf-pages/Service-p75.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,front orthographic,4LFF front exact counts/order,front binding geometry
+source/pdf-pages/Service-p76.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,8SFF controls,wrong front variant; visually inspected and excluded,not used
+source/pdf-pages/Service-p77.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,4LFF control close-up,UID NIC health power order verified,front control binding
+source/pdf-pages/Service-p78.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,SID diagram,control display style verified,SID support
+source/pdf-pages/Service-p79.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,LED table,no exterior layout evidence; visually inspected,not used
+source/pdf-pages/Service-p80.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,rear orthographic,all rear groups counts/order verified,rear binding geometry
+source/pdf-pages/Service-p81.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,rear LED/PSU diagram,PSU/inlet/LED form verified,rear/PSU support
+source/pdf-pages/Service-p82.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,PCIe definitions,three-slot compatible riser identity verified,PCIe support
+source/pdf-pages/Service-p83.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,system board top,riser/FlexibleLOM connectors verified,internal support
+source/pdf-pages/Service-p84.png,OFFICIAL_PDF_RENDER,HPE ProLiant DL360 Gen9,text page,system maintenance switch,visually inspected,not used
