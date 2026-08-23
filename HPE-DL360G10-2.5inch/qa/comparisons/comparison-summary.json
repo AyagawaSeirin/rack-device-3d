@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "comparison_count": 6,
+  "source_render_pair": "six source-locked views vs Viewer A standard formal GLB orthographic loads",
+  "items": [
+    {
+      "reference": "HPE-DL360G10-2.5inch/qa/comparisons/matched-inputs/front-reference.png",
+      "render": "HPE-DL360G10-2.5inch/qa/comparisons/matched-inputs/front-render.png",
+      "output": "HPE-DL360G10-2.5inch/qa/comparisons/front.png",
+      "size_px": [
+        1200,
+        800
+      ],
+      "mean_absolute_rgb_difference_0_to_255": 3.195691,
+      "note": "Difference is diagnostic only; exact acceptance requires feature-by-feature review."
+    },
+    {
+      "reference": "HPE-DL360G10-2.5inch/qa/comparisons/matched-inputs/rear-reference.png",
+      "render": "HPE-DL360G10-2.5inch/qa/comparisons/matched-inputs/rear-render.png",
+      "output": "HPE-DL360G10-2.5inch/qa/comparisons/rear.png",
+      "size_px": [
+        1200,
+        800
+      ],
+      "mean_absolute_rgb_difference_0_to_255": 4.866078,
+      "note": "Difference is diagnostic only; exact acceptance requires feature-by-feature review.",
+      "projection_note": "The small outboard ear silhouettes are front-only geometry visible in the depth-collapsed rear orthographic projection; no rear-ear nodes are present."
+    },
+    {
+      "reference": "HPE-DL360G10-2.5inch/qa/comparisons/matched-inputs/left-reference.png",
+      "render": "HPE-DL360G10-2.5inch/qa/comparisons/matched-inputs/left-render.png",
+      "output": "HPE-DL360G10-2.5inch/qa/comparisons/left.png",
+      "size_px": [
+        1200,
+        800
+      ],
+      "mean_absolute_rgb_difference_0_to_255": 3.120269,
+      "note": "Difference is diagnostic only; exact acceptance requires feature-by-feature review."
+    },
+    {
+      "reference": "HPE-DL360G10-2.5inch/qa/comparisons/matched-inputs/right-reference.png",
+      "render": "HPE-DL360G10-2.5inch/qa/comparisons/matched-inputs/right-render.png",
+      "output": "HPE-DL360G10-2.5inch/qa/comparisons/right.png",
+      "size_px": [
+        1200,
+        800
+      ],
+      "mean_absolute_rgb_difference_0_to_255": 3.609859,
+      "note": "Difference is diagnostic only; exact acceptance requires feature-by-feature review."
+    },
+    {
+      "reference": "HPE-DL360G10-2.5inch/qa/comparisons/matched-inputs/top-reference.png",
+      "render": "HPE-DL360G10-2.5inch/qa/comparisons/matched-inputs/top-render.png",
+      "output": "HPE-DL360G10-2.5inch/qa/comparisons/top.png",
+      "size_px": [
+        1200,
+        800
+      ],
+      "mean_absolute_rgb_difference_0_to_255": 9.834252,
+      "note": "Difference is diagnostic only; exact acceptance requires feature-by-feature review."
+    },
+    {
+      "reference": "HPE-DL360G10-2.5inch/qa/comparisons/matched-inputs/bottom-reference.png",
+      "render": "HPE-DL360G10-2.5inch/qa/comparisons/matched-inputs/bottom-render.png",
+      "output": "HPE-DL360G10-2.5inch/qa/comparisons/bottom.png",
+      "size_px": [
+        1200,
+        800
+      ],
+      "mean_absolute_rgb_difference_0_to_255": 3.522028,
+      "note": "Difference is diagnostic only; exact acceptance requires feature-by-feature review."
+    }
+  ],
+  "acceptance_note": "Pixel difference is diagnostic only; feature-by-feature review against source locks controls acceptance."
+}
