@@ -1,0 +1,81 @@
+                                                                                                                                                                                                                                                                                                                     HUAWEI FusionServer 
+                                                                                                                                                                                                                                                                                                                                                          RH1288 V3
+                Copyright © Huawei Technologies Co., Ltd. 2016. All rights reserved.
+                No part of this document may be reproduced or transmitted in any form or by any means without prior written consent of Huawei Technologies Co., Ltd.
+                Trademark Notice
+                        , HUAWEI, and          are trademarks or registered trademarks of Huawei Technologies Co., Ltd.
+                Other trademarks, product, service and company names mentioned are the property of their respective owners.
+                General Disclaimer                                                                                                                  HUAWEI TECHNOLOGIES CO., LTD.
+                The information in this document may contain predictive statements including,                                                                          Huawei Industrial Base
+                                                                                                                                                                           Bantian Longgang
+                without limitation, statements regarding the future financial and operating results, 
+                future product portfolio, new technology, etc. There are a number of factors                                                                   Shenzhen 518129, P.R. China
+                that could cause actual results and developments to differ materially from those                                                                      Tel: +86-755-28780808
+                expressed or implied in the predictive statements. Therefore, such information                                                   Version No.: M3-035260-20160726-C-2.0
+                is provided for reference purpose only and constitutes neither an offer nor an 
+                acceptance. Huawei may change the information at any time without notice.                                                                                 www.huawei.com                                                HUAWEI TECHNOLOGIES CO., LTD.
+            HUAWEI FusionServer 
+            RH1288 V3
+                                                                                                                                                                                                     RH1288 V3 (4 hard disks)                              RH1288 V3 (8 hard disks)
+                                                       New-generation E5-2600 v3/v4 processors allow high performance                                                                                                    RH1288 V3
+                                                                                 ®      ®
+              The HUAWEI FusionServer RH1288             Supports up to two Intel  Xeon  E5-2600 v3/v4 processors. Each processor supports                        Form factor                1U rack server
+              V3 (RH1288 V3 for short) is a new-          a maximum of 20 cores, and 9.6 GT/s QuickPath Interconnect (QPI) speed.                                  Number of processors       1 or 2
+                                                       
+              generation 1U dual-socket rack               Supports up to sixteen 2400 MT/s DDR4 DIMMs to provide a maximum memory capacity                        Processor model            Intel Xeon E5-2600 v3/v4 series processors
+              server. It achieves optimal balance         of 1 TB, meeting requirements of memory-demanding applications.                                          Memory                     16 slots for DDR4 RDIMMs or LRDIMMs
+                                                       
+                                                           Offers flexible networking. The server provides two or four GE ports or two 10GE ports 
+              of performance and density owing            or two 56G FDR IB ports without occupying PCIe slots, improving network availability.                                               Supports two types of hard disk configurations: 
+              to optimal design. It is an ideal                                                                                                                                               • Eight 2.5-inch SSDs or SAS or SATA HDDs (NVMe model supports four NVMe SSD disks)
+              choice for enterprise computing-                                                                                                                     Local storage              • Four 3.5-inch SAS or SATA HDDs 
+                                                       Fine-grained power control improves emergency efﬁciency                                                                                Supports Flash storage: 
+              intensive applications, enterprise 
+                                                                                                                                                                                              • Two Mini SSDs (SATA DOM)
+                                                       
+                                                           Uses 80 Plus Platinum power supply units (PSUs), meeting Energy Star specifications.
+              applications requiring both                                                                                                                                                     • Two SD card
+                                                       
+              computing and storage resources,             Supports 460 W, 750 W, 800 W, and 1200 W PSUs, increasing energy efficiency.                                                       Supports RAID 0, 1, 10, 5, 50, 6, and 60
+                                                       
+              and cloud computing applications.            Uses temperature sensors in key components to monitor temperature in real time, and                     RAID                       Uses a supercapacitor to protect RAID cache data from power failures
+                                                          the fan modules implement intelligent speed adjustment based on the temperature to                                                  Supports RAID state migration, RAID configuration memory, self-diagnosis, and remote web setting
+                                                          improve heat dissipation efficiency.                                                                     Network ports              Supports two or four GE ports or two 10GE ports or two 56G FDR IB ports
+                                                       
+              The RH1288 V3 servers provide                Uses dynamic power conservation and power capping to safely limit the maximum                           PCIe expansion             Supports up to three PCIe slots
+              the following features:                     server power consumption to a specified level without affecting services.                                                           5 hot-swappable fan modules in N+1 redundancy.
+                                                                                                                                                                   Fan                        Each fan module has two counter-rotating fans.
+              
+                  High density and space-saving
+                                                       Professional management module provides comprehensive                                                                                  Can be configured with two hot-swappable PSUs in redundancy and supports N+1 redundancy.
+                                                       management                                                                                                                             The server supports the following PSUs:
+              
+                  Integrated device management                                                                                                                     PSU                        • 460 W or 750 W AC or DC PSU
+                                                       
+                 solution                                  Uses an independent iBMC module to implement Serial over LAN (SOL), remote KVM, 
+                                                                                                                                                                                              • 800 W –48 V DC PSU
+                                                          and functions such as remote server startup and shutdown. 
+                                                                                                                                                                                              • 1200 W high-voltage DC PSU
+              
+                  Flexible network configuration
+                                                       
+                                                           Provides a wide variety of management interfaces, including the IPMI, CLI, HTTPS, SNMP,                                            The on-board iBMC module supports Intelligent Platform Management Interface (IPMI), SOL, KVM over IP, and virtual 
+                                                          and WSMAN interfaces to facilitate integration with third-party systems.                                 Management                 media and provides a 1 Gbit/s RJ45 management network port supporting Network Controller Sideband Interface (NC-SI).
+                                                                                                                                                                                              CentOS
+                                                       Accurate fault locating facilitates efﬁcient O&M                                                                                       Citrix XenServer
+                                                                                                                                                                   Supported OSs              Microsoft Windows Server
+                                                       
+                                                           Provides FDM2.0 fault diagnose management function, to improve troubleshooting                                                     Red Hat Enterprise Linux
+                                                          efficiency.                                                                                                                         SUSE Linux Enterprise Server
+                                                                                                                                                                                             VMware ESXi
+                                                           Provides error codes through the server front panel to help fault locating.
+                                                                                                                                                                                              110 V to 220 V AC
+                                                                                                                                                                   Power supply               240 V to 380 V DC
+                                                                                                                                                                                              –48 V DC
+                                                                                                                                                                   Operating temperature      5°C to 45°C (41°F to 113°F) 
+                                                                                                                                                                                              NOTE: The RH1288 V3 servers operating at 45°C do not support SSDs, and the fault of one fan may affect CPU performance.
+                                                                                                                                                                   Certification              CE, UL, FCC, CCC, and RoHS 
+                                                                                                                                                                   Installation suite         Guide rails
+                                                                                                                                                                                              Adjustable holding rails
+                                                                                                                                                                   Dimensions (W x D x H)     RH1288 V3 with 3.5-inch hard disks: 436 mm x 748 mm x 43 mm (17.17 in. x 29.45 in. x 1.69 in.)
+                                                                                                                                                                                              RH1288 V3 with 2.5-inch hard disks: 436 mm x 708 mm x 43 mm (17.17 in. x 27.87 in. x 1.69 in.)

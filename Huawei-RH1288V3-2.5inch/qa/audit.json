@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "model_key": "Huawei-RH1288V3-2.5inch",
+  "evaluated_at": "2026-08-23T17:30:00+08:00",
+  "status": "PASS_WITH_BOTTOM_FALLBACK",
+  "identity": {
+    "manufacturer": "Huawei Technologies Co., Ltd.",
+    "product": "FusionServer RH1288 V3",
+    "nameplate_model": "H12M-03",
+    "u_height": "1U",
+    "front_configuration": "8 x 2.5-inch SFF, exact asymmetric 3-upper/5-lower layout",
+    "rear_configuration": "SM212-visible 4 x GE, management, 2 x USB, VGA, serial, 2 x PCIe blanks",
+    "power_configuration": "2 x 750 W hot-swap AC PSU",
+    "excluded_variants": ["RH1288H", "V5", "V6", "V7", "3.5-inch", "10GE", "IB", "DC", "HVDC"]
+  },
+  "dimensions_mm": {
+    "published_body": [436.0, 43.0, 708.0],
+    "visible_glb_bounds_xyz": [482.6, 43.53, 715.7],
+    "rack_span_width": 482.6,
+    "height_gate": "PASS: 43.53 mm is inside the required 43-44 mm visible envelope"
+  },
+  "outputs": {
+    "standard_glb": {
+      "path": "model/Huawei-RH1288V3-2.5inch.glb",
+      "bytes": 18455732,
+      "sha256": "e46479d199d482ca6bb2e0d0b48dc93776198e057ee17ab61c20d60894bee6ca"
+    },
+    "web_glb": {
+      "path": "model/Huawei-RH1288V3-2.5inch-web.glb",
+      "bytes": 7037964,
+      "sha256": "3a975b224eea0ea9f957b3c3ccc3289dd38dcf507b4eea04db2cdebb80cca5ba"
+    }
+  },
+  "glb_structure": {
+    "standard_and_web_same_counts": true,
+    "scenes": 1,
+    "nodes": 284,
+    "meshes": 284,
+    "primitives": 284,
+    "materials": 14,
+    "textures": 6,
+    "embedded_images": 6,
+    "external_buffers": 0,
+    "mirrored_nodes": 0,
+    "negative_scale_nodes": 0,
+    "main_face_alpha_mode": "OPAQUE",
+    "structural_audits": {
+      "views": {"status": "PASS", "errors": 0, "warnings": 0},
+      "standard_glb": {"status": "PASS", "errors": 0, "warnings": 0},
+      "web_glb": {"status": "PASS", "errors": 0, "warnings": 0}
+    }
+  },
+  "viewer_validation": {
+    "engines": ["Three.js WebGL", "Babylon.js WebGL2"],
+    "models_each_engine": ["standard", "web"],
+    "views_each_model": ["front", "rear", "left", "right", "top", "bottom", "frontLeft", "frontRight", "rearLeft", "rearRight"],
+    "ready_captures": 40,
+    "load_errors": 0,
+    "checkerboard_alpha_captures": 4,
+    "ear_logo_service_closeups": 2,
+    "maximum_standard_web_normalized_rmse": 0.00655894,
+    "render_note": "Babylon is brighter than Three because of independent engine lighting; geometry, UV orientation, opacity and feature order agree."
+  },
+  "comparison_evidence": {
+    "orthographic_reference_canvases": 6,
+    "three_comparison_sheets": 6,
+    "babylon_comparison_sheets": 6,
+    "viewer_contact_sheets": 4,
+    "alpha_check_directory": "qa/renders/alpha-check",
+    "detail_check_directory": "qa/renders/details",
+    "feature_inventory_rows_unresolved": 0
+  },
+  "repairs_closed": [
+    "front carrier and service frames moved behind the source-locked face",
+    "front VGA coordinate corrected and blue insert recessed",
+    "small front controls/indicator blocks and rear fasteners/indicators recessed so photo-real detail is not covered",
+    "rear recessed parts moved to the chassis-interior side of the rear texture",
+    "front-only ears split into single-sided planes so no false broad rear ears render",
+    "top latch reduced and recessed to remove the double frame",
+    "overall visible height reduced from the rejected 50 mm/44.145 mm candidates to 43.53 mm"
+  ],
+  "bottom": {
+    "mode": "GENERIC_BOTTOM_FALLBACK",
+    "status": "PASS_WITH_BOTTOM_FALLBACK",
+    "reason": "No usable exact RH1288 V3 underside view was found after documented official, dynamic-gallery, PDF, third-party, video and local-language searches.",
+    "constraints_passed": ["plain opaque sheet", "verified width/depth/material", "no copied top", "no logo", "no unsupported labels", "no unsupported vents", "no unsupported feet", "no unsupported holes"]
+  },
+  "official_3d": {
+    "exact_viewer_url_found": true,
+    "public_binary_available": false,
+    "status": "PASS_NOT_AVAILABLE",
+    "record": "source/optional-3d/README.md"
+  },
+  "unresolved_errors": [],
+  "unresolved_warnings": []
+}
