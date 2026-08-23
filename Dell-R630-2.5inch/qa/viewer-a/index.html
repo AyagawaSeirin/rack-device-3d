@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>R630 QA Viewer A — model-viewer</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@4.3.1/dist/model-viewer.min.js"></script>
+  <style>
+    html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#dfe3e6;font:14px system-ui;color:#17212b}
+    body{background-image:linear-gradient(45deg,#c8cdd1 25%,transparent 25%),linear-gradient(-45deg,#c8cdd1 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#c8cdd1 75%),linear-gradient(-45deg,transparent 75%,#c8cdd1 75%);background-size:32px 32px;background-position:0 0,0 16px,16px -16px,-16px 0}
+    model-viewer{width:100%;height:100%;background:transparent;--poster-color:transparent}
+    #badge{position:fixed;left:18px;top:16px;padding:9px 12px;border-radius:8px;background:#ffffffdc;box-shadow:0 2px 12px #0002;z-index:3}
+    #badge b{display:block} #status{color:#256b36}
+  </style>
+</head>
+<body>
+  <div id="badge"><b>Viewer A · &lt;model-viewer&gt;</b><span id="status">loading…</span></div>
+  <model-viewer id="mv" interaction-prompt="none" disable-pan shadow-intensity="0" exposure="1" tone-mapping="neutral" field-of-view="28deg" camera-target="0m 0m 0m"></model-viewer>
+  <script type="module">
+    const q=new URLSearchParams(location.search);
+    const variant=q.get('model')==='web'?'web':'standard';
+    const view=q.get('view')||'front';
+    const src=variant==='web'?'../../model/Dell-R630-2.5inch-web.glb':'../../model/Dell-R630-2.5inch.glb';
+    const orbit={
+      front:'0deg 90deg 0.80m',rear:'180deg 90deg 0.80m',left:'-90deg 90deg 1.12m',right:'90deg 90deg 1.12m',
+      top:'0deg 1deg 1.75m',bottom:'180deg 179deg 1.75m',
+      'front-left':'-38deg 69deg 1.40m','front-right':'38deg 69deg 1.40m',
+      'rear-left':'-142deg 69deg 1.40m','rear-right':'142deg 69deg 1.40m'
+    }[view]||'0deg 90deg 0.80m';
+    const mv=document.querySelector('#mv');
+    mv.setAttribute('camera-orbit',orbit); mv.src=src;
+    window.__QA__={viewer:'model-viewer-4.3.1',variant,view,src,loaded:false};
+    mv.addEventListener('load',async()=>{
+      await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+      window.__QA__.loaded=true;
+      window.__QA__.dimensions=mv.getDimensions();
+      document.querySelector('#status').textContent=`loaded · ${variant} · ${view}`;
+    });
+    mv.addEventListener('error',e=>{window.__QA__.error=String(e.detail?.type||e);document.querySelector('#status').textContent='ERROR';});
+  </script>
+</body>
+</html>

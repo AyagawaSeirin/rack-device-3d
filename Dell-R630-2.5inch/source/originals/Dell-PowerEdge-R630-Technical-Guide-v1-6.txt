@@ -1,0 +1,2155 @@
+        
+         
+        
+        
+        
+        
+       PowerEdge R630 
+        
+        
+       Technical Guide 
+        
+        
+        
+        
+                                                                     
+        
+        
+                                       Ultra-dense, configurable, 
+                                       2-socket, 1U versatile rack 
+        
+                                       server for virtualization 
+        
+                                       environments, large 
+                                       business applications or 
+        
+                                       transactional databases 
+        
+        
+        
+        
+        
+            
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+      This document is for informational purposes only. Dell reserves the right to make changes without further 
+      notice to any products herein. The content provided is as is and without express or implied warranties of any 
+      kind.  
+      Dell, the DELL logo, PowerEdge, Compellent, EqualLogic, PowerVault, OpenManage, KACE and ReadyRails are 
+      trademarks of Dell, Inc. Intel and Xeon are registered trademarks of Intel Corporation in the U.S. and other 
+      countries. Microsoft, Windows, Windows Server, BitLocker, and Hyper-V are either registered trademarks or 
+      trademarks of Microsoft Corporation in the United States and/or other countries. Novell and SUSE are 
+      registered trademarks of Novell, Inc. in the United States and other countries. IBM, Tivoli, and Netcool are 
+      registered trademarks of IBM in the United States. Other trademarks and trade names may be used in this 
+      document to refer to either the entities claiming the marks and names or their products. Dell disclaims 
+      proprietary interest in the marks and names of others. 
+      ©Copyright 2015 Dell Inc. All rights reserved. Reproduction or translation of any part of this work beyond that 
+      permitted by U.S. copyright laws without the written permission of Dell Inc. is unlawful and strictly forbidden. 
+      June 2015  |  Version 1.6 
+      ii    PowerEdge R630 Technical Guide 
+                        
+            Table of contents 
+            1  System overview ................................................................................................................................................................. 6 
+               Introduction ........................................................................................................................................................................ 6 
+               New technologies .............................................................................................................................................................. 7 
+            2  System features .................................................................................................................................................................. 9 
+               Comparison of PowerEdge systems .............................................................................................................................. 9 
+               Specifications ................................................................................................................................................................... 10 
+            3  Chassis views and features .............................................................................................................................................. 12 
+               Chassis views ..................................................................................................................................................................... 12 
+               Chassis features ................................................................................................................................................................14 
+            4  Processor ............................................................................................................................................................................18 
+               Processor features ............................................................................................................................................................18 
+               Supported processors ...................................................................................................................................................... 19 
+               Chipset ................................................................................................................................................................................ 19 
+            5  Memory .............................................................................................................................................................................. 20 
+               DIMMs supported ............................................................................................................................................................ 20 
+               DIMM speed ....................................................................................................................................................................... 21 
+               Memory configurations ................................................................................................................................................... 21 
+               Memory population guidelines ...................................................................................................................................... 21 
+               Memory RAS features...................................................................................................................................................... 22 
+            6  Storage ............................................................................................................................................................................... 23 
+               Internal storage ................................................................................................................................................................ 23 
+               External storage ............................................................................................................................................................... 24 
+               PowerEdge RAID Controllers ........................................................................................................................................ 25 
+               Internal persistent storage ............................................................................................................................................. 26 
+               Optical drive ..................................................................................................................................................................... 28 
+               Tape drive .......................................................................................................................................................................... 28 
+            7  Networking and PCIe ...................................................................................................................................................... 29 
+               Select Network Adapter.................................................................................................................................................. 29 
+               PCIe expansion ................................................................................................................................................................. 31 
+            8  Power, thermal and acoustics ....................................................................................................................................... 34 
+               Power consumption and energy efficiency ................................................................................................................ 34 
+               Power supply units .......................................................................................................................................................... 35 
+               Thermal and acoustics.................................................................................................................................................... 35 
+            9  Rack rails systems............................................................................................................................................................. 38 
+               Sliding and static rail systems ........................................................................................................................................ 38 
+               Cable management arm................................................................................................................................................. 39 
+            10 Operating systems and virtualization ........................................................................................................................... 40 
+               Supported operating systems ........................................................................................................................................ 40 
+               Supported virtualization ................................................................................................................................................. 40 
+            11 Dell OpenManage systems management .....................................................................................................................41 
+               OpenManage systems management ............................................................................................................................41 
+               Dell server management operations ............................................................................................................................ 47 
+            Appendix A.    Additional specifications .......................................................................................................................... 49 
+               Chassis dimensions ......................................................................................................................................................... 49 
+               Chassis weight.................................................................................................................................................................. 50 
+               Power supply specifications ........................................................................................................................................... 51 
+               Environmental specifications ......................................................................................................................................... 51 
+               Video specifications ......................................................................................................................................................... 51 
+               Rack rail specifications ................................................................................................................................................... 52 
+               USB peripherals ................................................................................................................................................................ 52 
+            iii    PowerEdge R630 Technical Guide 
+                        
+               PCIe card dimensions ..................................................................................................................................................... 52 
+            Appendix B.    Standards compliance ............................................................................................................................. 53 
+            Appendix C.    Additional resources ................................................................................................................................. 54 
+            Appendix D.    Support and Deployment Services ........................................................................................................ 56 
+               Server Deployment Services .......................................................................................................................................... 56 
+               ProSupport Enterprise Suite ........................................................................................................................................... 57 
+               Additional professional services .................................................................................................................................... 59 
+            Tables 
+            Table 1.  New technologies ................................................................................................................................................. 7 
+            Table 2.  Comparing the PowerEdge R620 to PowerEdge R630 ................................................................................ 9 
+            Table 3.  Technical specifications .................................................................................................................................... 10 
+            Table 4.  Chassis features ...................................................................................................................................................14 
+            Table 5.  Security features .................................................................................................................................................. 17 
+            Table 6.  Supported processors ........................................................................................................................................ 19 
+            Table 7.  Memory technologies supported .................................................................................................................... 20 
+            Table 8.  DIMMs supported ............................................................................................................................................... 20 
+            Table 9.  Memory configuration and performance ....................................................................................................... 21 
+            Table 10.  Memory populations and operating frequencies .......................................................................................... 21 
+            Table 11.  Memory RAS features ........................................................................................................................................ 22 
+            Table 12.  Storage options .................................................................................................................................................. 23 
+            Table 13.  Supported drives................................................................................................................................................. 23 
+            Table 14.  External storage options ................................................................................................................................... 24 
+            Table 15.  Supported RAID controllers.............................................................................................................................. 26 
+            Table 16.  IDSDM new features .......................................................................................................................................... 27 
+            Table 17.  Supported Select Network Adapter options and features .......................................................................... 30 
+            Table 18.  PCIe slot options ................................................................................................................................................. 31 
+            Table 19.  Optional add-in PCIe expansion cards .......................................................................................................... 32 
+            Table 20.  Power tools and technologies ......................................................................................................................... 34 
+            Table 21.  Power supply units and efficiency................................................................................................................... 35 
+            Table 22.  Acoustical reference points and output comparisons ................................................................................ 36 
+            Table 23.  Supported rack rail system ............................................................................................................................... 39 
+            Table 24.  Operating system support ................................................................................................................................ 40 
+            Table 25.  Virtualization support ........................................................................................................................................ 40 
+            Table 26.  iDRAC8 with Lifecycle Controller functions and benefits .......................................................................... 42 
+            Table 27.  Feature comparison for iDRAC8 Express and Enterprise ............................................................................ 43 
+            Table 28.  One-to-one and one-to-many operations .................................................................................................. 48 
+            Table 29.  Chassis weight .................................................................................................................................................... 50 
+            Table 30.  Power supply specifications .............................................................................................................................. 51 
+            Table 31.  Supported video modes ..................................................................................................................................... 51 
+            Table 32.  Rail adjustability range ....................................................................................................................................... 52 
+            Table 33.  PCIe card dimensions ........................................................................................................................................ 52 
+            Table 34.  Industry standard documents .......................................................................................................................... 53 
+            Table 35.  Additional resources .......................................................................................................................................... 54 
+            Figures 
+            Figure 1.  8-drive bay chassis front view without bezel ................................................................................................. 12 
+            Figure 2.  10-drive bay chassis front view without bezel ............................................................................................... 12 
+            Figure 3.  24-drive bay chassis front view without bezel .............................................................................................. 12 
+            Figure 4.  Front view with bezel.......................................................................................................................................... 12 
+            Figure 5.  Back view .............................................................................................................................................................. 13 
+            Figure 6.  24-drive 1.8” bay chassis internal view ............................................................................................................ 13 
+            Figure 7.  LCD control panel for 8-drive bay chassis ..................................................................................................... 15 
+            Figure 8.  LED control panel for 10-drive and 24-drive bay chassis ............................................................................ 15 
+            iv    PowerEdge R630 Technical Guide 
+            
+      Figure 9.  QRL on chassis .................................................................................................................................................... 16 
+      Figure 10. QRL on information tag ..................................................................................................................................... 16 
+      Figure 11.  Accessing a QRL .................................................................................................................................................. 16 
+      Figure 12. Rack network daughter card (NDC) ................................................................................................................ 29 
+      Figure 13. Sliding rails with optional CMA ........................................................................................................................ 38 
+      Figure 14. Static rails ............................................................................................................................................................. 38 
+      Figure 15. Server lifecycle management operations .......................................................................................................41 
+      Figure 16. Systems management server lifecycle ........................................................................................................... 48 
+      Figure 17.  Chassis width for 10-drive and 24-drive chassis options ........................................................................... 49 
+      Figure 18. Chassis height for 10-drive and 24-drive chassis options .......................................................................... 49 
+      Figure 19. Chassis depth with bezel for 10-drive and 24-drive chassis options ....................................................... 49 
+      Figure 20. Chassis depth without bezel for 10-drive and 24-drive chassis options ................................................. 49 
+      Figure 21. Chassis width for 8-drive chassis option ....................................................................................................... 50 
+      Figure 22. Chassis height for 8-drive chassis option ...................................................................................................... 50 
+      Figure 23. Chassis depth with bezel for 8-drive chassis option ................................................................................... 50 
+      Figure 24. Chassis depth without bezel for 8-drive chassis option ............................................................................. 50 
+      Figure 25. Server Deployment capabilities ....................................................................................................................... 56 
+      Figure 26. ProSupport Enterprise Suite comparison ....................................................................................................... 59 
+      v    PowerEdge R630 Technical Guide 
+            
+           1 System overview 
+           Introduction 
+           The Dell™ PowerEdge™ R630 is Dell’s latest 2-socket, 1U rack server designed to run complex 
+           workloads using highly scalable memory, I/O capacity and flexible network options. The R630 
+                           ®     ®                                                                  ®
+           features the Intel  Xeon  processor E5-2600 v3 product family, up to 24 DIMMs, PCI Express  (PCIe) 
+           3.0 enabled expansion slots, and a choice of NIC technologies. 
+           The PowerEdge R630 is a general-purpose platform with highly expandable memory (up to 768GB) 
+           and impressive I/O capabilities to match. The R630 can readily handle very demanding workloads, 
+           such as data warehouses, e-commerce, virtual desktop infrastructure (VDI), databases and high-
+           performance computing (HPC). 
+           The R630 brings a new dimension to dense rack servers with up to 24 x 1.8” solid-state drives (SSD) 
+           available in a single 1U chassis. The 24 drives can be zoned to add a second Dell PowerEdge RAID 
+           Controller (PERC) controller for maximum IOPS performance. 
+           Manage data overload 
+           Keep pace with the explosion of data in the virtual age with the flexible I/O and storage capabilities 
+           of the R630. You can quickly access and process vast amounts of data with up to 24 internal hot-
+           plug SSDs. The R630 is a great solution for any midsize or large business that requires scalability in 
+           storage capacity while optional hot-plug, front-access Express Flash PCIe SSDs (up to 4) enable 
+           performance-enhancing, in-box storage tiering.  
+           Tailor your network fabric  
+           The R630 allows you to tailor your network throughput to match your application needs, enabling 
+           added I/O performance. Dell’s flexible NIC technology Select Network Adapters, or Network 
+           Daughter Cards (NDC), let you choose the right network fabric without using a valuable PCI slot. 
+           You can pick speed, technology, vendor and other options, like switch independent partitioning that 
+           lets you share and manage bandwidth on 10GbE connections. 
+           Virtualize more  
+           Maximize your data center’s application capacity by expanding your virtual environment using the 
+           large memory footprint of the R630. Choose an industry-leading hypervisor and take advantage of 
+           our system management capability to manage both physical and virtual assets. Redundant failsafe 
+           hypervisors can also help maximize your virtual machines’ uptime. Dell’s Virtual Integrated System 
+           (VIS) solution lets you enable complex virtualization environments in just a few mouse clicks. 
+           Dell OpenManage systems management 
+           The Dell OpenManage™ systems management portfolio includes the Integrated Dell Remote Access 
+           Controller 8 (iDRAC8) with Lifecycle Controller. Dell embedded server management features help IT 
+           administrators manage Dell servers in physical, virtual, local and remote environments, operating in-
+           band or out-of-band, with or without a systems management software agent. OpenManage also 
+           integrates with and connects to third-party systems management solutions so you can maintain 
+           your single point of control and capitalize on your existing investment. OpenManage solutions 
+           simplify the lifecycle of deploying, updating, monitoring and maintaining your PowerEdge servers. 
+            
+            
+                        
+            New technologies 
+            Table 1 lists the new technologies featured on the PowerEdge R630 server. 
+                                                Table 1.   New technologies 
+            New technology               Detailed description 
+            Intel Xeon Processor         The Intel Xeon processor E-2600 v3 product family has embedded PCIe lanes 
+            E5-2600 v3 product family  for improved I/O performance. See the Processor section for details. 
+            Intel C610 series chipset    The R630 server uses the Intel Platform Controller Hub (PCH) chip. 
+                                         Certain models of the E5-2600 v3 processors support 2133MT/s memory. The 
+            2133MT/s DDR4 memory         R630 supports three DIMMs per channel at 1866MT/s with these processors. See 
+                                         the Memory section for details. 
+            Next-generation PERC         The R630 supports the new PERC9 cards with improved functionality and faster 
+            options                      performance. See the Storage section for details. 
+                                         This new software RAID solution supports RAID 0, 1, 5 and 10, and supports a 
+            PERC S130                    maximum of eight hot-plug SATA HDDs or SATA SSDs. See the Storage section 
+                                         for details. 
+                                         The new embedded systems management solution for Dell servers features 
+            iDRAC8 with Lifecycle        hardware and firmware inventory and alerting, data center level power 
+            Controller                   monitoring, faster performance and many more features. See the Dell 
+                                         OpenManage systems management section for details. 
+                                         This is a new at-the-box management solution that allows mobile devices to 
+                                         sync with the PowerEdge server by touching an Android mobile device against 
+            iDRAC Quick Sync             the Quick Sync hardware located in the bezel to gather system information 
+                                         including system status and logs. The mobile application also allows the user to 
+                                         make changes to the system configuration. 
+                                         The front USB port on R630 (marked with tool symbol) provides direct access to 
+            iDRAC Direct                 the iDRAC GUI via a laptop browser. An A-to-A USB cable is required to use this 
+                                         feature. This port can also be used to upload xml configuration files to the 
+                                         iDRAC. 
+                                         The internal dual SD module enables Dell's unique Failsafe Virtualization 
+            Failsafe hypervisors         architecture, ensuring uptime by providing failover capability for embedded 
+                                         hypervisors, such as VMware® vSphere® ESXi™. See the Supported virtualization 
+                                         section for details. 
+                                         Dell has tested and validated select 13th generation PowerEdge servers that 
+            Dell Fresh Air 2.0           operate at higher temperatures helping you reduce your hours of 
+                                         economization or even go chiller-less. See the Power, thermal and acoustics 
+                                         section for details. 
+                                         With fourth-generation SAS (SAS-3), we will again see a doubling of interface 
+            12Gb/s SAS                   bandwidth, now reaching 12Gb/s. 12Gb/s SAS-3 addresses signal quality through 
+                                         “transmitter training.” This gives one of the receiver device’s key interconnects, 
+                                         its PHY, the ability to modify the settings of the transmitter device’s PHY. 
+                                         SATA revision 3.0 runs with a native transfer rate of 6Gb/s, and taking 8b/10b 
+            6Gb/s SATA                   encoding into account, the maximum uncoded transfer rate is 4.8Gb/s 
+                                         (600MB/s). The theoretical burst throughput of SATA 3.0 is double that of SATA 
+                                         revision 2.0. 
+            7    PowerEdge R630 Technical Guide 
+                     
+           New technology           Detailed description 
+           Next-generation Express  Dell Express Flash PCIe SSDs provide fast performance without requiring 
+           Flash drives             processor resources or capturing DRAM. The R630 supports up to four Express 
+                                    Flash drives. See the Storage section for details. 
+                                    The application of 1.8” form factor SATA SSDs has been expanded from the 
+           1.8” SSD                 PowerEdge M420 half-height blade to rack servers. These SSDs provide a high 
+                                    spindle count fast cache layer for tiered storage applications. 
+           USB 3.0                  USB 3.0 can operate in both USB 2.0 and USB 3.0 speed modes. USB 3.0 driver is 
+                                    required to control USB device in USB 3.0 speed mode. 
+           8    PowerEdge R630 Technical Guide 
+                       
+            2 System features 
+            Compared to previous generations, the Dell PowerEdge R630 offers faster processing power, more 
+            drive bay options, more PCIe slots, next-generation RAID controllers and advanced system 
+            management. 
+            Comparison of PowerEdge systems 
+            Table 2 compares some of the features of the R630 to the R620. 
+                            Table 2.   Comparing the PowerEdge R620 to PowerEdge R630 
+            Feature               PowerEdge R620                              PowerEdge R630 
+            Chassis               1U rack                                     1U rack 
+            Processors            Intel Xeon processor                        Intel Xeon processor E5-2600 v3 product 
+                                  E5-2600 and E5-2600 v2 product family       family 
+            Internal interconnect  Intel QuickPath Interconnect               Intel QuickPath Interconnect  
+            Memory                24 x DDR3 RDIMM, UDIMM, and LRDIMM          24 x DDR4 RDIMM and LRDIMM  
+                                  Up to 1.5TB1                                Up to 768GB 
+            Disk drives           2.5” 6Gb/s SAS, 3Gb/s SATA                  2.5”, 1.8” 12Gb/s SAS, 6Gb/s SATA 
+            RAID controller       PERC S110, H310, H710, H710P, H810          PERC S130, H330, H730, H730P, 
+                                  (external)                                  H810/H830 (external) 
+            Express Flash PCIe    Up to 2                                     Up to 4  
+            SSDs  
+            PCI slots             3 PCIe 3.0                                  3 PCIe 3.0 (option to eliminate Riser 1) 
+            Embedded NICs         Select Network Adapter: 4 x 1GbE, 2 x       Select Network Adapter: 4 x 1GbE,  
+                                  10GbE                                       2 x 10GbE, 4 x 10GbE 
+                                  Hot-plug, redundant power supply units:     Hot-plug, redundant power supply units: 
+            Power supplies        495W AC, 750W AC, 750W AC mixed             495W AC, 750W AC, 750W AC mixed 
+                                  mode, 1100W AC, 1100W DC                    mode2, 1100W AC, 1100W DC 
+            USB                   USB 2.0                                     USB 3.0 (back and internal ports only) 
+                                  OpenManage Essentials                       OpenManage Essentials 
+                                  OMSA Agent                                  Dell Management Console 
+                                  OpenManage Power Center (requires           OMSA Agent 
+                                  iDRAC7 Enterprise with Lifecycle            OpenManage Power Center (requires 
+            Dell OpenManage       Controller)                                 iDRAC8 Enterprise with Lifecycle 
+            Systems Management OpenManage Integrations and                    Controller) 
+                                  Connections 
+                                  iDRAC7 Express with Lifecycle Controller    OpenManage Integrations and 
+                                  (standard option)                           Connections 
+                                                                              iDRAC8 Express with Lifecycle Controller 
+                                                                              (standard option) 
+            9    PowerEdge R630 Technical Guide 
+                         
+            Feature                  PowerEdge R620                                PowerEdge R630 
+            Support for internal     Yes (available through CFI or field upgrade   Not supported 
+            GPU                      only) 
+            Power efficiency         Titanium, Platinum+, Platinum                 Titanium, Platinum+, Platinum 
+                                     Hot-plug drives                               Hot-plug drives 
+                                     Hot-plug redundant cooling                    Hot-plug redundant cooling 
+            Availability             Hot-plug redundant power supply units         Hot-plug redundant power supply units 
+                                     Internal dual SD module support               Internal dual SD module support (next 
+                                                                                   generation) 
+            1
+             GB means 1 billion bytes and TB equals 1 trillion bytes; actual capacity varies with preloaded material and operating 
+            environment and will be less.  
+            2
+             750W mixed mode PSU available only in China. 
+             
+            Specifications 
+            Table 3 summarizes the specifications for the PowerEdge R630 features. For the latest information 
+            on supported features for the PowerEdge R630, visit the R630 page on Dell.com. 
+                                              Table 3.     Technical specifications 
+               Feature               PowerEdge R630 technical specification 
+               Form factor           1U rack 
+               Processors            Intel Xeon processor E5-2600 v3 product family 
+               Processor sockets     2 sockets 
+               Internal              2 Intel Quick Path Interconnect (QPI) links: up to 9.6GT/s 
+               interconnect 
+               Cache                 2.5MB per core; core options: 4, 6, 8, 10, 12, 16, 18 
+               Chipset               Intel C610 series chipset 
+               Memory1               Up to 768GB (24 DIMM slots): 4GB/8GB/16GB/32GB DDR4 up to 2133MT/s 
+               I/O slots             Up to 3 x PCIe 3.0 slots plus dedicated PERC slot 
+                                     Internal controllers: PERC S130 (SW RAID), PERC H330, PERC H730, PERC H730P 
+               RAID controller       External HBAs (RAID): PERC H830 
+                                     External HBAs (non-RAID): 12Gb/s SAS HBA 
+                                     Internal hard drive bay and hot-plug backplane: 
+               Disk drives           Up to 24 x 1.8” SATA SSD 
+                                     Up to 10 x 2.5” HDD: SAS, SATA, nearline SAS SSD: SAS, SATA, Up to 4 NVMe PCIe 
+                                     Up to 8 x 2.5” HDD: SAS, SATA, nearline SAS SSD: SAS, SATA 
+            10    PowerEdge R630 Technical Guide 
+                         
+               Feature               PowerEdge R630 technical specification 
+                                     HDD: SAS, SATA, nearline SAS SSD: SAS, SATA, NVMe PCIe 
+               Maximum internal      24 x 1.8” SSD: Up to 23TB using 0.96TB hot-plug SATA SSD 
+               storage               10 x 2.5”: Up to 18TB using 1.8TB hot-plug SAS HDD 
+                                     8 x 2.5”: Up to 14TB using 1.8TB hot-plug SAS HDD 
+               Embedded NIC          4 x 1GbE, 2 x 1GbE + 2 x 10GbE, 4 x 10GbE 
+               Power supply          Titanium efficiency 750W AC power supply; 1100W DC power supply; Platinum 
+                                     efficiency 495W AC, 750W AC, 1100W AC 
+                                     ECC memory, hot-plug hard drives, hot-plug redundant cooling, hot-plug redundant 
+               Availability          power, internal dual SD module, single device data correction (SDDC), spare rank, 
+                                     support for high availability clustering and virtualization, proactive systems 
+                                     management alerts 
+                                     Systems management: IPMI 2.0            Dell OpenManage Integrations: 
+                                     compliant; Dell OpenManage                Dell OpenManage Integration Suite for 
+                                     Essentials; Dell OpenManage Mobile;        Microsoft® System Center 
+                                     Dell OpenManage Power Center              Dell OpenManage Integration for 
+                                     Remote management: iDRAC8 with             VMware® vCenter™ 
+               Systems               Lifecycle Controller, iDRAC8 Express  Dell OpenManage Connections: 
+               management            (default), iDRAC8 Enterprise              HP Operations Manager, IBM Tivoli® 
+                                     (upgrade); 8GB vFlash media                Netcool® and CA Network and Systems 
+                                     (upgrade), 16GB vFlash media               Management 
+                                     (upgrade) iDRAC Quick Sync                Dell OpenManage Plug-in for Oracle® 
+                                                                                Database Manager 
+                                     ReadyRails™ II sliding rails for tool-less mounting in 4-post racks with square or 
+               Rack support          unthreaded round holes or tooled mounting in 4-post threaded hole racks, with 
+                                     support for optional tool-less cable management arm 
+                                     Microsoft® Windows Server® 2008 R2  Virtualization options: 
+                                     Microsoft Windows Server 2012           Microsoft Windows Server 2012 R2 with 
+                                     Microsoft Windows Server 2012 R2        Hyper-V 
+                                            ®      ®                         Citrix® XenServer® 
+               Operating systems  Novell  SUSE  Linux Enterprise Server 
+                                     Red Hat® Enterprise Linux®              VMware vSphere ESXi 
+                                             ®     ®                         For more information on the specific 
+                                     VMware  ESX  
+                                                                             versions and additions, visit 
+                                                                             Dell.com/OSsupport. 
+               OEM-ready version  From bezel to BIOS to packaging, your servers can look and feel as if they were 
+               available             designed and built by you. For more information, visit Dell.com/OEM. 
+                                     Dell ProSupport Plus for critical systems or Dell ProSupport for premium hardware 
+               Recommended           and software support for your PowerEdge solution. Consulting and deployment 
+               support               offerings are also available. Contact your Dell representative today for more 
+                                     information. Availability and terms of Dell Services vary by region. For more 
+                                     information, visit Dell.com/Service. 
+            1
+             GB means 1 billion bytes and TB equals 1 trillion bytes; actual capacity varies with preloaded material and operating 
+            environment and will be less. 
+            11    PowerEdge R630 Technical Guide 
+                        
+            3 Chassis views and features 
+            The Dell PowerEdge R630 is a 1U rack system with an 8-drive, 10-drive or 24-drive bay chassis 
+            design.  
+            Chassis views 
+            The R630 has three chassis options: 8 x 2.5” drives, 10 x 2.5” drives or 24 x 1.8” drives. A chassis 
+            cannot be reconfigured or upgraded after point of purchase. Other features on the front panel 
+            include an interactive LCD control panel, USB management port, video connector and vFlash media 
+            card slot. 
+            Figure 1 is the front view of the R630 chassis with 8 x 2.5” hard drives.  
+                                 Figure 1.    8-drive bay chassis front view without bezel 
+                                                                                                                         
+            Figure 2 is the front view of the R630 chassis with 10 x 2.5” hard drives.  
+                                 Figure 2.   10-drive bay chassis front view without bezel 
+                                                                                                                         
+            Figure 3 is the front view of the R630 chassis with 24 x 1.8” hard drives.  
+                                Figure 3.    24-drive bay chassis front view without bezel 
+                                                                                                                         
+            Figure 4 shows the optional bezel on the front of an 8-drive bay chassis. The bezel for the 10-drive 
+            bay chassis is different than the bezel for the 8-drive bay chassis. 
+                                              Figure 4.   Front view with bezel 
+                                                                                                                         
+            12    PowerEdge R630 Technical Guide 
+                        
+            Figure 5 shows the R630 back panel of the 8-drive bay chassis with 3 PCIe slots. Features on the 
+            back panel include the system identification light and button, iDRAC8 Enterprise port (activated only 
+            when iDRAC8 Enterprise is installed), serial connector, video connector, USB connectors, Ethernet 
+            connectors and power supplies.  
+                                                    Figure 5.   Back view 
+                                                                                                                        
+            Figure 6 is an internal view of the R630 24-drive bay system including fans, DIMMs, power supplies, 
+            system board and hard drive bays. 
+                                    Figure 6.    24-drive 1.8” bay chassis internal view 
+                                                                                                                        
+            For additional system views, see the Dell PowerEdge R630 Owner’s Manual on 
+            Dell.com/Support/Manuals. 
+                                                                   
+             
+            13    PowerEdge R630 Technical Guide 
+                       
+            Chassis features 
+            Table 4 lists the features on the R630 chassis. For additional information, see the Dell PowerEdge 
+            R630 Owner’s Manual on Dell.com/Support/Manuals. 
+                                               Table 4.    Chassis features 
+            Feature                        Description 
+            Power button                   ACPI-complaint power button with an integrated green power LED 
+            Front bezel                    Covers the system’s front-loading hard drives; can be locked to prevent hard 
+                                           drives from being removed 
+                                           Recessed non-maskable interrupt (NMI) button used to troubleshoot 
+            NMI button                     software and device driver errors; use only if directed to do so by qualified 
+                                           support personnel or by the operating system's documentation 
+            System identification button   Buttons on the back and front of a system to help identify the unit in a data 
+                                           center environment 
+            Hard drive activity LED        Indicates the status and activity 
+            Hard drives                    Up to 10 x 2.5” drives and up to 24 x 1.8” drives 
+            USB connectors                 8-drive bay chassis: 2 on front, 2 on back, 1 internal 
+                                           10-drive and 24-drive bay chassis: 1 mini on front, 2 on back, 1 internal  
+                                           Activated when iDRAC8 Enterprise is installed; located on 8-drive bay front 
+            vFlash media reader            panel and inside the 10-drive bay and 24-drive chassis on the hard drive 
+                                           backplane 
+            Information tag                Slide-out label panel for recording system information 
+            Video connector                Connects a monitor to the system 
+                                           8-drive bay chassis: displays system ID, status information, and system error 
+            LCD control panel              messages; two navigation buttons to scroll through the menu on the LCD 
+                                           and one select button 
+            Diagnostic LED                 10-drive and 24-drive bay chassis: displays error status during system startup 
+            Optical drive                  Optional ultra-slim (9.5mm) SATA DVD drive or DVD+RW drive 
+            Tape drive                     Optional external tape drive through the SAS 6Gb/s HBA 
+            Power supply units             Supplies power to the system 
+            Power supply indicators        Indicates whether system has power 
+            NIC indicators                 Indicates network activity and status 
+            PCIe expansion card slots      Connects up to three PCIe expansion cards 
+            Ethernet connectors            Choices of network connectors through the Select Network Adapter 
+            Serial connector               Connects system to serial device and for console redirect 
+            iDRAC8 Enterprise port         Dedicated management port for optional iDRAC8 Enterprise  
+                                           Scan the code on the chassis with smartphone app for additional 
+            Quick Resource Locator         information and resources including videos, reference materials, service tag 
+            (QRL)                          information and Dell contact information; scan the code on the information 
+                                           tag for information specific to the server by service tag 
+             
+            14    PowerEdge R630 Technical Guide 
+                           
+              Control panels, LCD and LED 
+              For more information about the R630 control panels, see the Dell PowerEdge R630 Owner’s Manual 
+              on Dell.com/Support/Manuals. 
+              8-drive bay chassis 
+              The LCD control panel on the front of the R630 8-drive bay chassis (Figure 7) has these features: 
+                 ACPI-complaint power button with an integrated green power LED 
+                 128 x 20 pixel LCD panel with controls 
+                 Two navigation buttons and one select button 
+                 NMI and system ID buttons  
+                 Ambient temperature sensor 
+                 Two external USB 2.0 connectors, one of which has iDRAC access 
+                 System ID EEPROM (for differentiating between PowerEdge, PowerVault and other systems) 
+                                        Figure 7.     LCD control panel for 8-drive bay chassis 
+                                                                                                                       
+                                                                             
+              10-drive and 24-drive bay chassis 
+              The LED control panel on the front of the R630 10-drive and 24-drive bay chassis as shown in 
+              Figure 8 has the following features: 
+                 ACPI-complaint power button with an integrated green power LED 
+                 NMI button  
+                 One system ID button  
+                 Ambient temperature sensor  
+                 One external USB 3.0 connector on the right ear (shipped from the factory in USB 2.0 mode)  
+                 Front VGA port on the right ear  
+                 System ID EEPROM (for differentiating between PowerEdge, PowerVault and other systems)  
+                               Figure 8.     LED control panel for 10-drive and 24-drive bay chassis 
+                                                                                   
+              15    PowerEdge R630 Technical Guide 
+                       
+            Quick Resource Locator 
+            The QRL is a model-specific Quick Response code located on the R630 chassis as shown in Figure 9.  
+                                                Figure 9.    QRL on chassis 
+                                                                                                        
+            The QRL on the pull-out information (luggage) tag provides information specific to the server by 
+            service tag. 
+                                           Figure 10.  QRL on information tag 
+                                                                                       
+            Use a smartphone to access the Dell QRL app to learn more about the server such as: 
+               View step-by-step videos, including overviews of system internals and externals, as well as 
+                detailed, concise, task-oriented videos and installation wizards 
+               Locate reference materials, including searchable owner’s manual content, LCD diagnostics, and 
+                an electrical overview 
+               Look up your service tag so you can quickly gain access to your specific hardware configuration 
+                info and warranty information 
+               Contact Dell directly (by link) to get in touch with technical support and sales teams and provide 
+                feedback to Dell 
+                                               Figure 11.  Accessing a QRL 
+                                                                                           
+            These codes provide an easy way to retrieve the critical support information you need when you 
+            need it, making you more efficient and effective in managing your hardware. 
+                                           
+            16    PowerEdge R630 Technical Guide 
+                       
+            Security features 
+            The latest generation of PowerEdge servers has the features listed in Table 5 to help ensure the 
+            security of your data center. 
+                                               Table 5.    Security features 
+              Security feature       Description 
+              Cover latch            A tooled latch is integrated in the side cover to secure it to the rack chassis. 
+                                     A standard bezel is an optional metal bezel mounted to the chassis front and 
+                                     shows the Dell ID. A lock on the bezel protects unauthorized access to hard 
+                                     drives.  
+              Bezel                  NFC bezel enables the iDRAC QuickSync management function for managing 
+                                     the server from the front using an NFC-capable device and the free Dell 
+                                     OpenManage Mobile App (currently Android only). Available only from the 
+                                     factory and not supported after purchase of sale.  
+                                     The Trusted Platform Module (TPM) is used to generate/store keys, 
+                                     protect/authenticate passwords, and create/store digital certificates. It also 
+              TPM                    supports the Intel Xeon TXT functionality. TPM can also be used to enable the 
+                                     BitLocker™ hard drive encryption feature in Windows Server 2008. TPM 1.2 is 
+                                     supported.  
+              Power-off security     BIOS has the ability to disable the power button function. 
+              Intrusion alert        An internal switch is used to detect chassis intrusion. 
+                                     BIOS has the ability to enter a secure boot mode through system setup. This 
+              Secure mode            mode includes the option to lock out the power and NMI switches on the 
+                                     control panel or set up a system password. 
+            17    PowerEdge R630 Technical Guide 
+                           
+              4 Processor 
+              The Dell PowerEdge R630 server features the exceptional performance, value and power efficiency 
+              of the Intel Xeon processor E5-2600 v3 product family. These processors provide high performance 
+              no matter what your constraint — floor space, power, or budget — and on workloads that range 
+              from the most complicated scientific exploration to crucial web-serving and infrastructure 
+              applications. In addition to providing raw performance gains, improved I/O is also made possible 
+              with Intel Integrated I/O, which can reduce latency by adding more lanes and doubling bandwidth. 
+              This helps to reduce network and storage bottlenecks, unleashing the processor’s performance 
+              capabilities.   
+              Processor features 
+              The new Intel Xeon processor E5-2600 v3 product family not only adds new features, but also 
+              improves upon many features of the predecessor Intel Xeon processor E5-2600 v2 product family, 
+              including: 
+                 Up to 18 execution cores per processor 
+                 Each core supports two threads for up to 36 threads per processor 
+                 46-bit physical addressing and 48-bit virtual addressing 
+                 1GB large page support 
+                 32 kB instruction and 32 kB data first-level cache (L1) for each core 
+                 256 kB shared instruction/data mid-level cache (L2) for each core 
+                 Up to 35MB last level cache (LLC) shared among all cores: up to 2.5MB per core 
+                 Two QPI links up to 9.6GT/s 
+                 Four DMI2 lanes 
+                 40 PCIe 3.0 links capable of 8.0GT/s 
+                 Socket R, 2011-land FCLGA10 package 
+                 No termination required for non-populated CPU (must populate CPU socket 1 first) 
+                 Integrated 4-channel DDR4 memory controller (not all processors support 2133MT/s memory) 
+                 64 byte cache line size 
+                 Execute Disable Bit 
+                 Support for CPU Turbo Mode 
+                 Increases CPU frequency if operating below thermal, power, and current limits 
+                 Streaming SIMD (Single Instruction, Multiple Data) Intel Advanced Vector Extensions (Intel AVX) 
+                 Intel 64 Technology 
+                 Intel VT-x and VT-d Technology for virtualization support 
+                 Enhanced Intel SpeedStep Technology 
+                 Demand-based switching for active CPU power management as well as support for ACPI  
+                  P-States, C-States, and T-States 
+              For more information on Intel Xeon processor E5-2600 v3 product family, visit Intel.com. 
+              18    PowerEdge R630 Technical Guide 
+                       
+            Supported processors 
+            The R630 supports up to two processors with up to 18 cores per processor. The PowerEdge R630 
+            supports the Intel Xeon processors listed in Table 6. For the latest information on supported 
+            processors, visit the R630 page on Dell.com. 
+                                            Table 6.    Supported processors 
+                                                                 Max         Cores/ 
+            Model            Speed       Cache      QPI          memory      Threads      Turbo          TDP 
+                                                                 speed 
+            E5-2699 v3       2.3GHz      45M        9.6GT/s      2133        18/36        Turbo          145W 
+            E5-2698 v3       2.3GHz      40M        9.6GT/s      2133        16/32        Turbo          135W 
+            E5-2697 v3       2.6GHz      35M        9.6GT/s      2133        14/28        Turbo          145W 
+            E5-2695 v3       2.3GHz      35M        9.6GT/s      2133        14/28        Turbo          120W 
+            E5-2690 v3       2.6GHz      30M        9.6GT/s      2133        12/24        Turbo          135W 
+            E5-2683 v3       2.0GHz      35M        9.6GT/s      2133        14/28        Turbo          120W 
+            E5-2680 v3       2.5GHz      30M        9.6GT/s      2133        12/24        Turbo          120W 
+            E5-2670 v3       2.3GHz      30M        9.6GT/s      2133        12/24        Turbo          120W 
+            E5-2660 v3       2.6GHz      25M        9.6GT/s      2133        10/20        Turbo          105W 
+            E5-2650 v3       2.3GHz      25M        9.6GT/s      2133        10/20        Turbo          105W 
+            E5-2640 v3       2.6GHz      20M        8.0GT/s      1866        8/16         Turbo          90W 
+            E5-2630 v3       2.4GHz      20M        8.0GT/s      1866        8/16         Turbo          85W 
+            E5-2620 v3       2.4GHz      15M        8.0GT/s      1866        6/12         Turbo          85W 
+            E5-2609 v3       1.9GHz      15M        4.0GT/s      1600        6/6          NA             85W 
+            E5-2603 v3       1.6GHz      15M        4.0GT/s      1600        6/6          NA             85W 
+            E5-2687W v3      3.1GHz      25M        9.6GT/s      1866        10/20        Turbo          160W 
+            E5-2650L v3      1.8GHz      30M        9.6GT/s      2133        12/24        Turbo          65W 
+            E5-2630L v3      1.8GHz      20M        8.0GT/s      1866        8/16         Turbo          55W 
+            E5-2667 v3       3.2GHz      20M        9.6GT/s      2133        8/16         Turbo          135W 
+            E5-2643 v3       3.4GHz      20M        9.6GT/s      2133        6/12         Turbo          135W 
+            E5-2637 v3       3.5GHz      15M        9.6GT/s      2133        4/8          Turbo          135W 
+            E5-2623 v3       3.0GHz      10M        8.0GT/s      1866        4/8          Turbo          105W 
+            For information on processor installation and configuration, see the Dell PowerEdge R630 Owner’s 
+            Manual on Dell.com/Support/Manuals.  
+            Chipset 
+            The PowerEdge R630 uses the Intel C610 chipset. For more information, visit Intel.com. 
+            19    PowerEdge R630 Technical Guide 
+                       
+            5 Memory 
+            The Dell PowerEdge R630 supports up to 768GB of memory (24 DIMMs) and speeds up to 2133MT/s, 
+            providing high performance in a variety of applications. High memory density means there is no 
+            compromise when it comes to virtualization.  
+            The R630 supports both registered DIMMs (RDIMM) and load-reduced DIMMs (LRDIMMs), which use 
+            a buffer to reduce memory loading and provide greater density, allowing for the maximum platform 
+            memory capacity. Unbuffered DIMMs (UDIMMs) are not supported. 
+            DIMMs supported 
+            The R630 server supports the memory technologies listed in Table 7. 
+                                       Table 7.    Memory technologies supported 
+                  Feature                                 RDIMM                          LRDIMM 
+                 Register                                 Yes                            Yes 
+                 Buffer                                   No                             Yes 
+                 Frequencies                              Up to 2133MT/s                 Up to 2133MT/s 
+                 Ranks supported                          Single or dual rank            Quad rank 
+                 Capacity per DIMM                        4, 8, 16 or 32GB               32GB 
+                 Maximum DIMMs per channel                3                              3 
+                 DRAM technology                          x4 or x8                       x4 
+                 Temperature sensor                       Yes                            Yes 
+                 Error Correction Code (ECC)              Yes                            Yes 
+                 Single Device Disable Code (SDDC)        Yes                            Yes 
+                 Address parity                           Yes                            Yes 
+             
+            The R630 supports the DIMMs listed in Table 8. For the latest information on supported memory, 
+            visit the R630 page on Dell.com. 
+                                               Table 8.    DIMMs supported 
+                 DIMM       DIMM          DIMM            Ranks per      Data     SDDC support          Voltage 
+                 capacity   speed         type            DIMM           width 
+                 4          2133          RDIMM           1              x8       Advanced ECC          1.2 
+                 8          2133          RDIMM           2              x8       Advanced ECC          1.2 
+                 16         2133          RDIMM           2              x4       All modes             1.2 
+                 32         2133          LRDIMM          4              x4       All modes             1.2 
+            20    PowerEdge R630 Technical Guide 
+                       
+            DIMM speed 
+            The R630 supports memory speeds of 2133MT/s, 1600MT/s, 1333MT/s, 1066MT/s and 800MT/s, 
+            depending on the DIMM types installed and the configuration. All memory on all processors and 
+            channels run at the same speed and voltage. By default, the systems run at the highest speed for the 
+            channel with the lowest DIMM voltage and speed. The operating speed of the DIMM is also 
+            determined by the maximum speed supported by the processor, the speed settings in the BIOS, and 
+            the operating voltage of the system. Not all processors support 2133MT/s memory speed. 
+                                   Table 9.   Memory configuration and performance 
+              DIMM       DIMM         Capacity          DIMM rated voltage,      1 DPC       2 DPC       3 DPC 
+              type       ranking                        speed 
+              RDIMM      1R and 2R    4GB, 8GB, 16GB    DDR4 (1.2V), 2133MT/s    2133MT/s  2133MT/s      1866MT/s 
+              LRDIMM     4R           32GB              DDR4 (1.2V), 2133MT/s    2133MT/s  2133MT/s      1866MT/s 
+            Memory configurations 
+            The R630 server supports flexible memory configurations ranging from capacities of 4GB to 768GB. 
+            The system supports up to 12 DIMMs per processor (up to 24 DIMMs in a dual-processor 
+            configuration). The R630 has four memory channels per processor, with each channel supporting 
+            up to three DIMMs.   
+            The R630 supports a flexible memory configuration, according to these basic rules: 
+              Speed: If DIMMs of different speeds are mixed, all channels across all processors operate at the 
+               slowest DIMM’s common frequency. 
+              DIMM type: Only one type of DIMM is allowed per system, either RDIMM or LRDIMM.  
+            Memory population guidelines 
+            The following memory population guidelines apply to the R630: 
+              Can mix DIMMs with x4 and x8 data widths 
+              Can mix DIMMs with different capacities  
+               —  Population rules require the largest capacity DIMM be placed first 
+               —  Maximum of two different capacity DIMMs allowed in a system 
+              Can mix DIMMs with different ranks; maximum of two different rank DIMMs allowed in a system 
+                              Table 10.  Memory populations and operating frequencies 
+               DIMM type             DIMM populated       Operating frequency (MT/s)    Maximum DIMM ranks 
+                                     per channel                                        per channel 
+                                     1                    2133, 1866,1600, 1333 
+               RDIMM                 2                                                  Dual rank or single rank 
+                                     3                    1866, 1600, 1333 
+                                     1                    2133, 1866, 1600, 1333 
+               LRDIMM                2                                                  Quad rank 
+                                     3                    1866, 1600, 1333 
+            For more information on memory configuration, see the Dell PowerEdge R630 Owner’s Manual on 
+            Dell.com/Support/Manuals.  
+            21    PowerEdge R630 Technical Guide 
+                       
+            Memory RAS features 
+            Reliability, availability and serviceability (RAS) features help keep the system online and operational 
+            without significant impact to performance, and can decrease data loss and crashing due to errors. 
+            RAS aids in rapid, accurate diagnosis of faults which require service. Table 11 describes the RAS 
+            features supported on the R630. 
+                                            Table 11.   Memory RAS features 
+            Feature                   Description 
+            Dense configuration       Increased memory reliability can result from this selectable platform profile that 
+            optimized profile         adjusts parameters to reduce faults regarding refresh rates, speed, temperature 
+                                      and voltage. 
+            Memory demand and         Demand scrubbing is the ability to write corrected data back to the memory once 
+            patrol scrubbing          a correctable error is detected on a read transaction. Patrol scrubbing proactively 
+                                      searches the system memory, repairing correctable errors. 
+            Recovery from single      Recovery from Single DRAM Device Failure (SDDC) provides error checking and 
+            DRAM device failure       correction that protects against any single memory chip failure as well as multi-bit 
+                                      errors from any portion of a single memory chip. 
+            Failed DIMM isolation     This feature provides the ability to identify a specific failing DIMM channel pair, 
+                                      thereby enabling the user to replace only the failed DIMM pair. 
+            Memory mirroring          Memory mirroring is a method of keeping a duplicate (secondary or mirrored) 
+                                      copy of the contents of memory as a redundant backup for use if the primary 
+                                      memory fails. The mirrored copy of the memory is stored in memory of the same 
+                                      processor socket. 
+            Memory address parity     This feature provides the ability to detect transient errors on the address lines of 
+            protection                the DDR channel. 
+            Memory sparing (rank)     Memory sparing allocates one rank per channel as a spare. If excessive correctable 
+                                      errors occur in a rank or channel, it is moved to the spare area while the operating 
+                                      system is running to prevent the error from causing an uncorrectable failure. 
+            Memory thermal            This feature helps to optimize power/performance and can also be used to 
+            throttling                prevent DIMMs from overheating. 
+             
+            For information on memory mirroring and sparing configurations, see the Dell PowerEdge R630 
+            Owner’s Manual on Dell.com/Support/Manuals. 
+             
+            22    PowerEdge R630 Technical Guide 
+                       
+            6 Storage 
+            The Dell PowerEdge R630 provides storage expandability that allows you to adapt to your workload 
+            and operational demands. With comprehensive storage options, the R630 offers various drive types, 
+            internal and external storage controllers, and different chassis and backplanes for varied numbers of 
+            drives. 
+            Features such as Express Flash PCIe SSDs and DAS Cache provide vastly accelerated performance 
+            over previous technologies. Dell Express Flash drives use PCIe lanes to connect directly to the 
+            processor and chipset and are easily accessible through a hot-plug drive bay. 
+            Internal storage  
+            With the 8-drive bay, 10-drive bay or 24-drive bay chassis options, the R630 supports five internal 
+            storage options as shown in Table 12. 
+                                              Table 12.   Storage options 
+            Storage option                                                       Storage controller and quantity 
+            Up to 8 x 2.5” SAS, NL-SAS, SATA HDDs or SAS, SATA SSDs (2 PCIe      1 x PERC S130, H330, H730, H730P 
+            slots) 
+            8 x 2.5” SAS, NL-SAS, SATA HDDs or SAS, SATA SSDs (3 PCIe slots)     1 x PERC S130, H330, H730, H730P 
+            Up to 10 x 2.5” SAS, NL-SAS, SATA HDD or SAS, SATA SSDs              1 x PERC H330, H730, H730P 
+            Up to 10 x 2.5” SAS, NL-SAS, SATA HDDs with up to 4 NVMe PCIe SSDs   1 x PERC H330, H730, H730P 
+            Up to 24 x 1.8” SATA SSDs                                            1 or 2 x PERC H330, H730, H730P 
+             
+            Note: A backplane cannot be upgraded or reconfigured after point of purchase. 
+            Supported drives   
+            The R630 supports the drives listed in Table 13. For additional information, visit the R630 page on 
+            Dell.com. 
+                                              Table 13.   Supported drives 
+              Form      Type                            Speed      Capacities 
+              factor                                    (RPM) 
+                        SATA (6Gb)                      7.2K       250GB, 500GB, 1TB 
+                        NL-SAS (6Gb)                    7.2K       500GB, 1TB* 
+              2.5”      SAS (6Gb)                       10K        300GB, 600GB, 1.2TB*, 1.8TB* 
+                        SAS (6Gb)                       15K        300GB, 600GB* 
+                        SATA SSD (mix use, 6Gb)         N/A        100GB,  200GB, 400GB, 800GB 
+            23    PowerEdge R630 Technical Guide 
+                        
+               Form      Type                              Speed        Capacities 
+               factor                                      (RPM) 
+                         SATA SSD (read intensive, 6Gb)    N/A          480GB, 960GB, 19.2TB 
+                         SATA SSD (SSD boot, 6Gb)          N/A          60GB, 120GB 
+                         SAS SSD (write intensive, 12Gb)   N/A          200GB, 400GB, 800GB 
+                         SAS SSD (mix use, 12Gb)           N/A          200GB, 400GB, 800GB, 1.6TB 
+                         SAS SSD (read intensive, 12Gb)    N/A          800GB, 1.6TB 
+                         PCIe SSD                          N/A          500GB, 800GB 
+                         SATA SSD (mix use, 6Gb)           N/A          100GB, 200GB, 400GB 
+               1.8”      SATA SSD (read intensive, 6Gb)    N/A          480GB, 960GB 
+                         SATA SSD (SSD boot, 6Gb)          N/A          60GB, 120GB 
+              *SED available 
+            Express Flash drives 
+            Express Flash drives use PCIe and SSD technologies to provide performance, scalability and optimal 
+            serviceability. Accelerated performance with high IOPS is made possible without requiring processor 
+            resources or capturing DRAM. Express Flash drives also use a standardized 2.5” hot-plug form factor 
+            that saves critical PCIe slot space by moving drives from the back to the front of the system and 
+            allows a common management process for all drives. 
+            The PowerEdge R630 has an option to support up to four 2.5”, hot-plug Express Flash PCIe SSDs in 
+            the 10 x 2.5” chassis.  
+            External storage 
+            The R630 supports the external storage devices types listed in Table 14. For more information, see 
+            Dell.com/Storage. 
+                                            Table 14.  External storage options 
+                   Device type                 Description 
+                                               Dell Storage PS6610 Series 
+                                               Dell EqualLogic™ PS6100/PS6210/PS6500/PS6510 Series 
+                                               Dell EqualLogic PS4100/PS4210 Series  
+                                               Dell EqualLogic PS-M4110 Series 
+                   iSCSI and FC SAN            Dell Storage SCv2000 Series 
+                                               Dell Storage SC4020 
+                                               Dell Compellent™ SC8000 
+                                               Dell PowerVault™ MD3 iSCSI SAN 
+                                               Dell PowerVault MD3 Fibre Channel SAN 
+            24    PowerEdge R630 Technical Guide 
+                       
+                   Device type               Description 
+                   DAS                       Dell Storage MD1400 Series 
+                                             Dell PowerVault MD3 SAS  
+                   NAS options               Dell Compellent FS8600 (with SC Series) 
+                                             Dell EqualLogic FS76x0 (with PS Series) 
+                   Windows NAS               PowerVault NX400  
+                   appliances                Dell Storage NX3230  
+                                             Dell Storage NX3330 
+                                             DR Series 
+                   Data protection           DL4000, DL1000 
+                   solutions                 AppAssure  
+                                             vRanger 
+                                             NetVault 
+                   Tape options              TL1000, TL2000, TL4000, ML6000 Series 
+            PowerEdge RAID Controllers 
+            PERC cards provide enhanced performance, increased reliability and fault tolerance, and simplified 
+            management for a powerful, easy-to-manage way to create a robust infrastructure and help 
+            maximize server uptime. The new line, PERC9, cards feature: 
+               PCIe 3.0 support and 12Gb/s SAS host interface  
+               Significantly increased IOPS performance and throughput performance capability  
+               Capable of RAID as well as non-RAID operations 
+               FastPath™ I/O for accelerating performance when operating on SSDs 
+               Split Mirror function for breaking mirrored disk connection to quickly replace a drive 
+               Dimmer Switch™ for power control of spare or idle drives to save energy and operating 
+                expenses 
+            The base RAID controller in the R630 is the miniPERC, which provides a base RAID hardware 
+            controller without consuming a PCIe slot by using a small form factor and high-density connector 
+            to the base planar. The secondary RAID controller is limited to the H730P low-profile PCIe 
+            controller. In two-controller systems, both controllers must be the H730P.  
+            The R630 supports the PERC cards listed in Table 15. For more information about the latest PERC 
+            offerings, see Dell.com/PERC. 
+                                           
+            25    PowerEdge R630 Technical Guide 
+                              
+                                                     Table 15.        Supported RAID controllers 
+                                                                                              RAID             Form 
+                Controller          Features                                                  modes            factor           Solution 
+                                                                                              supported 
+                                         External 8-port 12Gb/s SAS                                                            Performance-
+                PERC H830                Supports up to 255 SAS HDDs or SSDs                 0, 1, 10, 5,     Adapter          hungry external 
+                                         2GB 1866MT/s DDR3 SDRAM non-                        50, 6, 60                         storage 
+                                          volatile cache                                                                        environments 
+                                        Internal 8-port 12Gb/s PCIe RAID 
+                                         controller                                                                             Premium 
+                PERC H730P     Supports up to 255 3Gb/s, 6Gb/s and                           0, 1, 10, 5,     Mini and         performance for 
+                                         12Gb/s SAS or SATA HDDs or SSDs                      50, 6, 60        Adapter          significant 
+                                        2GB 1866MT/s DDR3 SDRAM non-                                                           performance gains 
+                                         volatile cache 
+                                        Internal 8-port 12Gb/s PCIe RAID                                                       Value/performance 
+                                         controller                                                                             RAID and non-
+                PERC H730               Supports up to 255 3Gb/s, 6Gb/s and                  0, 1, 10, 5,     Mini and         RAID for high-
+                                         12Gb/s SAS or SATA HDDs or SSDs                      50, 6, 60        Adapter          density servers and 
+                                        1GB 1866MT/s DDR3 SDRAM non-                                                           workstations 
+                                         volatile cache 
+                                        Internal 8-port 12Gb/s PCIe RAID                                                       Low cost, entry 
+                PERC H330                controller                                           0, 1, 10, 5,     Mini and         RAID and non-
+                                        Supports 3Gb/s, 6Gb/s and 12Gb/s SAS                 50               Adapter          RAID for high-
+                                         and 3Gb/s and 6Gb/s SATA HDDs or                                                       density servers and 
+                                         SSDs                                                                                   workstations 
+                                        Software RAID controller  
+                                        Supports up to 8 6Gb/s SATA HDDs and                                  System 
+                                         SSD                                                                   board-
+                PERC S130               Only available on the 8-drive 2.5”                   0, 1, 5, 10      embedded  Software 
+                                         configuration                                                         SATA 
+                                        Currently supports only Microsoft 
+                                         Windows operating systems 
+               Internal persistent storage 
+               The R630 offers two types of persistent storage: Lifecycle Controller (LC 3.0) and Internal Dual SD 
+               Module (IDSDM). A vFlash option is available with iDRAC8 Enterprise.  
+               Lifecycle Controller 3.0 
+               For more information on LC 3.0, visit http://en.community.dell.com/techcenter/systems-
+               management/w/wiki/4126.dell-lifecycle-controller-integration-for-configuration-manager. 
+               Internal Dual SD Module  
+               The IDSDM card provides the following major functions: 
+                   Dual SD interface is maintained in a mirrored configuration (primary and secondary SD) 
+                   Provides full RAID1 functionality 
+                   Dual SD cards are not required; the module can operate with only one card but will provide no 
+                    redundancy 
+               26    PowerEdge R630 Technical Guide 
+                           
+                 Enables support for Secure Digital eXtended Capacity (SDXC) cards 
+                 USB interface to host system 
+                 I2C interface to host system and onboard EEPROM for out-of-band status reporting 
+                 Onboard LEDs show status of each SD card 
+                 A BIOS Setup Redundancy setting supports Mirror Mode or Disabled 
+                                                     Table 16.      IDSDM new features 
+                 New feature                   Description 
+                 Support for RAID and          When RAID is enabled, writes to IDSDM will perform write operation to both 
+                 Data Integrity                SD cards simultaneously 
+                                               Ensures data integrity during power loss conditions  
+                 Support for USB 3.0           If USB 3.0 is disabled, or an error on USB 3.0 is detected, IDSDM will revert to 
+                 (higher bandwidth)            USB 2.0 
+                 User-prioritized SD           User-defined primary SD slot for IDSDM; if RAID is enabled, content of primary 
+                 slots                         SD card will be mirrored on secondary SD card 
+                 Bad Block                     Prevents a single bad sector from causing an SD card to fail 
+                 management 
+                 No more BIOS halt             IDSDM does not require the BIOS to halt during POST and wait for the rebuild 
+                 during rebuild                to complete; rebuild happens in the background and is much faster as 
+                                               compare than the previous generation  
+                                               Functionality of primary SD card is not compromised if the secondary SD card 
+                                               has a different speed or lower storage 
+                 Enhanced support for          Mismatch check will only happen if the IDSDM is operating in RAID mode 
+                 mismatched SD cards           Only secondary SD card will be placed in mismatch state; if the secondary 
+                                               card does not match the speed or have lower storage capacity than the 
+                                               primary card, the secondary card will be placed in the Mismatch state 
+                 Enhanced support for          Write-protected SD cards are treated as read-only; if at least one card is write-
+                 write-protected SD            protected and RAID is enabled, IDSDM will operate in the degraded RAID state, 
+                 cards                         and RAID will automatically be disabled if both cards are write-protected 
+                                               IDSDM will bring secondary SD card online and will make it primary if for some 
+                 Seamless SD card              reason primary SD card fails 
+                 assignments                   If RAID is enabled, there will be no compromise in functionality however, 
+                                               system will notify user of degraded RAID status 
+                 Enriched error                New errors have been implemented to help root cause a failure. 
+                 reporting                     Failures will be in iDRAC logs 
+                                               Multiple failures can be now recorded and logged 
+                 Mass erase for                Mass erase options are provided in IDSDM; enabling this register will clean up 
+                 enhanced security             all the data preset on SD cards 
+                 UHS-1 SD card support         Next-generation support 
+              27    PowerEdge R630 Technical Guide 
+            
+      Optical drive 
+      The R630 supports one slim, internal DVD-ROM or DVD+RW optical drive option in the 8-drive 
+      configuration only.  
+      Tape drive 
+      The R630 does not support internal tape drives and does supports external tape drives. See the 
+      External storage section. 
+      28    PowerEdge R630 Technical Guide 
+               
+        7 Networking and PCIe 
+        The Dell PowerEdge R630 offers balanced, scalable I/O capabilities, including integrated PCIe 3.0 
+        capable expansion slots. Dell Select Network Adapters, Dell’s network daughtercards (NDC), let you 
+        choose the right network fabric without using up a valuable PCI slot. Pick the speed, technology, 
+        vendor and other options such as switch independent partitioning, which lets you share and manage 
+        bandwidth on 10GbE connections. 
+        Select Network Adapter 
+        The Select Network Adapter family includes flexible LAN on motherboard (LOM) card options for the 
+        Dell PowerEdge servers. The Select Network Adapter form factor delivers the value of LOM 
+        integration with the system, including BIOS integration and shared port for manageability, while 
+        providing the flexibility of a modular card. 
+        The R630 supports one custom NDC, as part of the Select Network Adapter family, to house the 
+        complete LOM subsystem. The R630 supports NDC options including a selection of 1GbE and 
+        10GbE port cards, such as 1000BASE-T, 10GBASE-T and 10Gb SFP+. 
+                       Figure 12.  Rack network daughter card (NDC) 
+                                                       
+                           
+        29    PowerEdge R630 Technical Guide 
+                             
+               Table 17 lists the available Select Network Adapter options and supported features for the R630. 
+                                 Table 17.       Supported Select Network Adapter options and features 
+           Features          Broadcom         Intel I350      QLogic        QLogic       Intel         Intel        QLogic           Intel            Intel   
+                             5720             BASE-T          57800         57800        I350/X540  I350/X520  57840S                I350/X710        4 x 
+                             BASE-T                           DA/SFP+       BASE-T       BASE-T        2 x 1Gb BT  SFP+              2x1Gb BT         10G 
+                             (default)                                                                 + 2 x 10Gb                    + 2 x            x710 
+                                                                                                       SFP+                          10Gb             SFP+ 
+                                                                                                                                     SFP+ 
+         Number of           4 x 1Gb          4 x 1Gb         2 x 1Gb +   2 x 1Gb +   2 x 1Gb +   2 x 1Gb +   4 x 10Gb  2 x 1Gb +                4 x 10Gb 
+         ports                                                2 x 10Gb      2 x 10Gb     2 x 10Gb      2 x 10Gb                 2 x 10Gb 
+                                                              1GBASE-T,     1GBASE-T,    1GBASE-T,     1GBASE-T,  10GBASE-T, 1GBASE-T,           10GBASE-T, 
+         Link types          1000BASE-T       1000BASE-T      10GBSFP+,     10GBBASE-T 10GBBASE-T 10GBSFP+,  SFP+,              10GBSFP+,        SFP+, 
+                                                              DCA/SR                                   DCA/SR       DCA/SR      DCA/SR           DCA/SR 
+         TCP Chimnet         Not              Not             Supported  Supported  Supported  Supported  Supported Supported                    Supported 
+         (TOE)               supported        supported 
+         ISCSI HBA full      Not              Not             Supported*  Supported* Supported* Supported* Supported Post RTS                    Post RTS 
+         offload             supported        supported 
+         FCoE HBA full       Not              Not             Supported*  Supported* Supported* Supported* Supported Post RTS                    Post RTS 
+         offload             supported        supported 
+         FCoE boot           Not              Not 
+         (boot from          supported        supported       Supported*  Supported* Supported* Supported* Supported Post RTS                    Post RTS 
+         SAN) 
+         NetQueue/           Not              Not             Supported  Supported  Supported  Supported  Supported Supported                    Supported 
+         VMQ IOV             supported        supported 
+         SR-IOV              Not              Not             Supported  Supported  Supported  Supported  Supported Supported                    Supported 
+                             supported        supported 
+         NIC                 Not              Not 
+         partitioning        supported        supported       Supported  Supported  Supported  Supported  Supported Supported                    Supported 
+         (NPAR) 
+         VNTag/VEB           Not              Not             Supported  Supported  Supported  Supported  Supported Supported                    Supported 
+                             supported        supported 
+          *10GbE ports only 
+               System management integration 
+               With R630, the job of deploying, updating, monitoring and maintaining the Select Network Adapters 
+               is fast and easy. System management integration features include the following: 
+                   Pre-boot: Using the Dell Lifecycle Controller graphical user interface (GUI) to set configuration 
+                    such as bandwidth allocation or firmware revision level 
+                   Post-boot: Agent-free out-of-band or high-speed in-band connection over LOM through the 
+                    Operating System/BMC pass-thru feature for sensory information 
+                   Automation of firmware and driver version deployment upon component replacement 
+                   Automatic monitoring of NIC status and notification on SNMP traps 
+                   Local or remote re-configuration of any NIC, physical or virtual 
+               30    PowerEdge R630 Technical Guide 
+                        
+               PXE boot enabled on all LOM and NDCs for ease of use 
+               Boot from SAN (iSCSI, FCoE) configuration for networking devices through the Lifecycle 
+                Controller GUI 
+            PCIe expansion 
+            PCIe slots 
+            PCIe connectivity is integrated with the processor in that the number of processors in a system 
+            impacts the number of PCIe 3.0 slots and the bandwidth of each PCIe slot.  
+            For an R630 with one processor, one two-slot option is available:  
+               Two PCIe x16 slots with one x16 bandwidth and one x8 bandwidth 
+            For an R630 with two processors, two slot options are available: 
+               Two PCIe x16 slots, both slots with x16 bandwidth 
+               Three PCIe x16 slots with two x16 bandwidth and one x8 bandwidth 
+                 
+            Table 18 lists the details of the PCIe slot options. 
+                                                 Table 18.  PCIe slot options 
+                                 Three PCIe slots with two     Two PCIe slots with two       Two PCIe slots with one 
+                                            1                              2
+                                 processors                    processors                    processor 
+                                 PCIe x16 connector with x8  PCIe x16 connector with         PCIe x16 connector with x8 
+            PCIe slot 1          bandwidth; half-length,       x16 bandwidth; half-length,   bandwidth; half-length, 
+                                 half-height                   half-height                   half-height 
+                                 PCIe x16 connector with       PCIe x16 connector with       PCIe x16 connector with 
+                                                                                         3                              3
+            PCIe slot 2          x16 bandwidth; half-length,   x16 bandwidth; 3/4 length ,   x16 bandwidth; 3/4 length , 
+                                 half-height                   full-height                   full-height 
+                                 PCIe x16 connector with 
+            PCIe slot 3          x16 bandwidth; half-length,   N/A                           N/A 
+                                 half-height 
+            Available with       8-, 10- or 24-drive bay       8-drive bay chassis           8-drive bay chassis 
+                                 chassis 
+            1
+             Slot 1 and slot 2 require a second processor. 
+            2
+             Slot 1 requires a second processor. 
+            3
+             10Gb NDCs are not supported with a ¾ length PCIe card. 
+                                             
+            31    PowerEdge R630 Technical Guide 
+                       
+            PCIe expansion cards 
+            The R630 supports a variety of PCIe expansion cards listed in Table 19.  
+                                   Table 19.   Optional add-in PCIe expansion cards 
+              Type               Adapter 
+                                 Broadcom® 5719 quad-port 1Gb NIC 
+                                 Broadcom 5720 dual-port 1Gb NIC 
+                                 QLogic® 57810 dual-port 10Gb BASE-T network adapter 
+                                 Intel Ethernet I350 dual-port 1Gb server adapter 
+                                 Intel Ethernet I350 quad-port 1Gb server adapter 
+              NIC 
+                                 Intel Ethernet X540 dual-port 10GBASE-T server adapter 
+                                 Emulex® OCe14102-N1-D dual-port SFP+ 2 x 10Gb NIC 
+                                 Mellanox® ConnectX®-3 dual-port 10Gb Direct Attach/SFP+ server network adapter 
+                                 Mellanox ConnectX-3 dual-port 40Gb Direct Attach/QSFP server network adapter 
+                                 Mellanox ConnectX-3 single-port FDR VPI 
+                                 Emulex LPe12000 single-port 8Gb FC HBA 
+                                 Emulex LPe12002 dual-port 8Gb FC HBA 
+                                 Emulex LPe16000B single-port 16Gb FC HBA 
+                                 Emulex LPe16002B dual-port 16Gb FC HBA, PCIe 
+              HBA 
+                                 QLogic QLE2560 single-port 8Gb FC HBA, PCIe x8 
+                                 QLogic QLE2562 dual-port 8Gb FC HBA, PCIe x8 
+                                 QLogic QLE2660 single-port 16Gb FC HBA, PCIe x8 
+                                 QLogic QLE2662 dual-port 16Gb FC HBA, PCIe x8 
+                                 Emulex OneConnect OCe14102-U1-D dual-port PCIe 10GbE CNA 
+                                 Emulex OneConnect OCm14104-U1-D, 4-port 10GbE SFP+ CNA, rNDC 
+                                 Intel Ethernet X520 dual-port SFP+/DA server adapter CNA 
+                                 Intel Ethernet X540 dual-port 10GBASE-T server adapter CNA 
+              CNA 
+                                 Intel X710 2x10GE SFP+/DA 
+                                 Intel X710 4x10GE SFP+/DA 
+                                 QLogic 57810S 2x10GE SFP+/DA CNA  
+                                 QLogic 57810S 2x10GE 10BASE-T CNA  
+            32    PowerEdge R630 Technical Guide 
+            
+       
+      For the latest information on all supported add-in PCIe expansion cards for the R630, visit the R630 
+      page on Dell.com. For more information on server network adapters, visit 
+      http://www.dell.com/us/business/p/networking-cards. For PCIe card dimensions, see Table 33 in 
+      Appendix A. 
+      33    PowerEdge R630 Technical Guide 
+                       
+            8 Power, thermal and acoustics 
+            Lower overall system-level power draw is a result of Dell’s breakthrough system design. The R630 
+            PowerEdge server aims to maximize performance-per-watt through a combination of energy 
+            efficient technologies, optimized thermal designs and intelligent fan control algorithms. The 
+            PowerEdge R630 fan control algorithms use an extensive array of sensors that automatically 
+            monitor power and thermal activity to minimize fan speeds based on system cooling requirements, 
+            reducing the power required for cooling.  
+            Power consumption and energy efficiency 
+            With the rise in the cost of energy coupled with increasing data center density, Dell provides tools 
+            and technologies to help you realize greater performance with less energy cost and waste. More 
+            efficient data center usage can reduce costs by slowing the need for additional data center space.  
+            Table 20 lists the tools and technologies Dell offers to help you achieve your data center goals by 
+            lowering power consumption and increasing energy efficiency. 
+                                        Table 20.  Power tools and technologies 
+            Feature                      Description 
+            Power supply units (PSU)     Dell’s PSU portfolio includes intelligent features such as dynamically optimizing 
+            portfolio                    efficiency while maintaining availability and redundancy. Find additional 
+                                         information in the Power supply units section. 
+                                         The Dell Energy Smart Solution Advisor (ESSA) is a tool that helps you plan and 
+            Tools for right-sizing       tune your computer and infrastructure equipment for maximum efficiency by 
+                                         calculating hardware power consumption, power infrastructure and storage. 
+                                         Learn more at Dell.com/calc. 
+            Industry compliance          Dell’s servers are compliant with all relevant industry certifications and 
+                                         guidelines, including 80 PLUS, Climate Savers and ENERGY STAR. 
+                                         PSU power monitoring improvements include:  
+            Power monitoring               Power monitoring accuracy of 1%, whereas the industry standard is 
+            accuracy                        5% 
+                                           More accurate reporting of power 
+                                           Better performance under a power cap 
+                                         Use Dell’s systems management to set the power cap limit for your systems to 
+            Power capping                limit the output of a PSU and reduce system power consumption. Dell is the 
+                                         first hardware vendor to leverage Intel Node Manager for circuit-breaker fast 
+                                         capping. 
+                                         iDRAC8 Enterprise provides server-level management that monitors, reports 
+                                         and controls power consumption at the processor, memory and system level. 
+            Systems management           Dell OpenManage Power Center delivers group power management at the 
+                                         rack, row and data center level for servers, power distribution units and 
+                                         uninterruptible power supplies. 
+                                         With the thermal design and reliability of Dell products, certain configurations 
+                                         of Dell 13th generation servers have the capability to operate at temperatures 
+            Dell Fresh Air 2.0           beyond the industry standard of 35°C (95°F). The supported configurations that 
+                                         meet Dell Fresh Air 2.0 specifications can operate continuously at 40°C (104°F) 
+                                         and up to 45°C (113°F) for excursionary periods of time and up to a 29°C dew 
+                                         point at 90% relative humidity without impacting your availability model. Find 
+                                         additional information at Dell.com/FreshAir. 
+            34    PowerEdge R630 Technical Guide 
+                       
+            Feature                     Description 
+                                        Intel Node Manager is an embedded technology that provides individual 
+                                        server-level power reporting and power limiting functionality. Dell offers a 
+                                        complete power management solution comprised of Intel Node Manager 
+                                        accessed through Dell iDRAC8 Enterprise and OpenManage Power Center that 
+                                        allows policy-based management of power and thermals at the individual 
+                                        server, rack and data center level. 
+            Active power management  Hot spare reduces power consumption of redundant power supplies. 
+                                        Thermal control of fan speed optimizes the thermal settings for your 
+                                        environment to reduce fan consumption and lower system power 
+                                        consumption. 
+                                        Idle power enables Dell servers to run as efficiently when idle as when at full 
+                                        workload. 
+            Find additional information at Dell.com/PowerCenter. 
+            Power supply units 
+            Energy Smart power supplies have intelligent features, such as the ability to dynamically optimize 
+            efficiency while maintaining availability and redundancy. Also featured are enhanced 
+            power-consumption reduction technologies, such as high-efficiency power conversion and 
+            advanced thermal-management techniques, and embedded power-management features including 
+            high-accuracy power monitoring. 
+            The PowerEdge R630 supports up to two AC or DC power supplies with 1 + 1 redundancy, 
+            auto-sensing and auto-switching capability. The R630 supports the PSUs listed in Table 21. For 
+            additional power supply specifications, see Table 30. 
+                                     Table 21.   Power supply units and efficiency 
+                                                                            Efficiency targets by load 
+            Form factor    Output          Class 
+                                                              10%          20%           50%           100%  
+                          495W AC          Platinum          82.0%         90.0%         94.0%         91.0%  
+                          750W AC          Titanium          90.0%         94.0%         96.0%         91.0%  
+           Redundant      750W AC          Platinum          82.0%         90.0%         94.0%         91.0% 
+           86mm           1100W AC         Platinum          89.0%         93.0%         94.5%         92.0%  
+                          1100W DC         N/A               80.0%         88.0%         91.0%         88.0%  
+                          750W AC/DC*      Platinum          82.0%         90.0%         94.0%         91.0%  
+            *Available only in China. 
+            Thermal and acoustics 
+            The R630 thermal management delivers high performance through optimized cooling of 
+            components at the lowest fan speeds across a wide range of ambient temperatures from 10°C to 
+            35°C (50°F to 95°F) and to extended ambient temperature ranges. These optimizations result in 
+            lower fan power consumption for lower total system power and data center power consumption. 
+            35    PowerEdge R630 Technical Guide 
+                           
+              Thermal design  
+              The thermal design of the PowerEdge R630 reflects the following: 
+                 Optimized thermal design: The system layout is architected for optimum thermal design. System 
+                  component placement and layout are designed to provide maximum airflow coverage to critical 
+                  components with minimal expense of fan power. 
+                 Comprehensive thermal management: The thermal control system regulates the system fan 
+                  speeds based on feedback from system component temperature sensors, as well as for system 
+                  inventory and subsystem power draw. Temperature monitoring includes components such as 
+                  processors, DIMMs, chipset, system inlet air temperature, hard disk drives, NDC and GPU. 
+                 Open and closed loop fan speed control: Open loop fan control uses system configuration to 
+                  determine fan speed based on system inlet air temperature. Closed loop thermal control uses 
+                  temperature feedback to dynamically adjust fan speeds based on system activity and cooling 
+                  requirements. 
+                 User-configurable settings: With the understanding and realization that every customer has a 
+                  unique set of circumstances or expectations from the system, in this generation of servers, we 
+                  have introduced limited user-configurable settings in the iDRAC8 BIOS setup screen. For more 
+                  information, see the Dell PowerEdge R630 Owner’s Manual on Dell.com/Support/Manuals and 
+                  “Advanced Thermal Control: Optimizing across Environments and Power Goals” on Dell.com. 
+                 Cooling redundancy: The R630 allows N+1 fan redundancy, allowing continuous operation with 
+                  one fan failure in the system. 
+              Acoustical design  
+              Dell focuses on sound quality in addition to sound power level and sound pressure level. Sound 
+              quality describes how disturbing or pleasing a sound is interpreted, and Dell references a number of 
+              psychacoustical metrics and thresholds in delivering to it. Tone prominence is one such metric. 
+              Sound power and sound pressure levels increase with greater populations or higher utilization, while 
+              sound quality remains good even as the frequency content changes. A reference for comparison to 
+              sound pressure levels for familiar noise sources is given in Table 22. An extensive description of Dell 
+              Enterprise acoustical design and metrics is available in the Dell Enterprise Acoustics white paper. 
+                                Table 22.  Acoustical reference points and output comparisons 
+                     Value measured at your ears 
+                    LpA, dBA, re          Loudness,                         Equivalent familiar noise experience 
+                       20 µPa                sones 
+                          90                  80            Loud concert 
+                          75                  39            Data center, vacuum cleaner, voice must be elevated to be heard 
+                          60                   10           Conversation levels 
+                          45                   4            Whispering, open office layout, normal living room 
+                          35                   2            Quiet office 
+                          30                   1            Quiet library 
+                          20                   0            Recording studio 
+              36    PowerEdge R630 Technical Guide 
+                       
+            Acoustical performance data 
+            The PowerEdge R630 is quiet enough for an office (typical and minimum configurations) and meets 
+            Dell’s sound quality requirements. 
+                                     (1)  
+              Minimally configured    8 x 2.5” chassis in 23 ± 2 °C ambient 
+               —       (4)        (5)                (6)                              (7) 
+                   Idle : LwA-UL   = 3.9 bels;  LpA = 25 dBA; No prominent tones
+               —             (4)         (5)              (6)                               (7) 
+                   Operating : LwA-UL  = 4.1 bels; LpA = 29 dBA;  No prominent tones
+              Typically configured(2)  8 x 2.5” chassis in 23 ± 2 °C ambient 
+               —       (4)        (5)                (6)                              (7) 
+                   Idle : LwA-UL   = 4.7 bels;  LpA = 32 dBA; No prominent tones
+               —             (4)         (5)              (6)                               (7) 
+                   Operating : LwA-UL  = 5.0 bels; LpA = 33 dBA;  No prominent tones
+              Feature-Rich configured(3)  10 x 2.5” chassis in 23 ± 2 °C ambient 
+               —       (4)        (5)                (6)                              (7) 
+                   Idle : LwA-UL   = 6.4 bels;  LpA = 43 dBA; No prominent tones
+               —             (4)         (5)              (6)                               (7) 
+                   Operating : LwA-UL  = 6.4 bels; LpA = 43 dBA;  No prominent tones
+            1. Minimum configuration means 1 x 85W-6C CPU (E5-2609 v3), 1 x 4GB DIMM, 1 x 2.5” SATA SSD, 1 x 495W PSU and no PCI cards. 
+            2. Typical configuration means 2 x 105W-10C CPU (E5-2660 v3), 8 x 8GB DIMM, 4 x 2.5” 10K SAS HDD, 2 x 750W PSU and H730 miniPERC 
+             cards. 
+            3. Feature-rich configuration means 2 x 135W-12C CPU (E5-2690 v3), 16 x 16GB DIMM, 8 x 2.5” 15K SAS HDD, 2 x 1100W PSU, FC8 Dual 
+             Port HBA and H730 miniPERC cards. 
+            4. Idle means the state in which the product is doing nothing but running OS; values for Operating are the maximum acoustical output for 
+             active HDDs or active CPUs. 
+            5. LwA – UL is the upper limit sound power levels (LwA) calculated per section 4.4.1 of ISO9296 (1988) and measured in accordance with 
+             ISO7779 (2010). 
+            6. LpA is the average bystander position A-weighted sound pressure level calculated per section 4.3 of ISO9296 (1988) and measured in 
+             accordance with ISO7779 (2010).  The system is placed in a 24U rack enclosure, 25 cm above reflective floor. 
+            7. Prominent tone: Criteria of D.6 and D.11 of ECMA-74 12th ed. (2012) are followed to determine if discrete tones are prominent. The 
+             system is placed in center of ISO7779 table and acoustic transducer is at front standing operator position, ref ISO7779 (2010 Section 
+             8.6.1, Position P1). 
+            Acoustical dependencies 
+              System thermal profile selected in BIOS: The system default setting is “Power Optimized (DAPC)”, 
+               which is in general a lower fan speed and noise level. If “Performance optimized” is selected, the 
+               fan speed/noise level will increase.  
+              CPU power:   
+               —  Configurations with “low-power” CPUs (which have lower temperature limits than standard 
+                   CPUs), such as an Intel Xeon E5-2650L v3 or E52630L v3 at 65W CPU, under moderate or 
+                   heavy utilization, will be about twice as loud as typical configurations.  
+               —  Configurations increase in loudness as CPU power increases from that in typical 
+                   configurations. 
+              Types of storage devices:  
+               —  HDD:  
+                   >   Lower speed hard disk drives (such as 7.2K RPM SATA) are generally quieter than 10K/15K 
+                       RPM SAS drives. 
+                   >   Loudness increases with the following progression of drives: SATA, SAS 10K, SAS 15K. 
+               —  SSD:  
+                   >   SSDs are not themselves audible. 
+                   >   However, a configuration with PCIe SSD requires more airflow for cooling and will be 
+                       louder than a typical configuration. Under highly-stressed condition, the sound power 
+                       levels may go up to 8.0 bels. 
+              Types of PCIe cards: Configurations with a 10/40GbE NIC or PERC H730 card installed increases 
+               the fan speed causing the system to run louder than a typical configuration. 
+            37    PowerEdge R630 Technical Guide 
+              
+       9 Rack rails systems 
+       The rack rail systems for the Dell PowerEdge R630 provide tool-less support for 4-post racks with 
+       square or unthreaded round mounting holes. The R630 also supports tooled mounting in 4-post 
+       threaded racks and static rail tooled mounting in 2-post (Telco) racks for added versatility.  
+       Sliding and static rail systems 
+       The sliding rails for the R630 offer native support for threaded hole racks via the ReadyRails II 
+       mounting interface. The rails ship in the tool-less mounting configuration but can be converted to 
+       the tooled configuration very quickly and easily. With the sliding rails, you can fully extend a system 
+       out of the rack for servicing. Rails are available with or without the optional cable management arm 
+       (CMA). Figure 13 shows sliding rails with CMA. 
+                       Figure 13.  Sliding rails with optional CMA 
+                                                         
+       The static rails (shown in Figure 14) support a wider variety of racks than the sliding rails, but do not 
+       support serviceability in the rack and are not compatible with the CMA.  
+                             Figure 14.  Static rails 
+                                                         
+                                       
+       38    PowerEdge R630 Technical Guide 
+                           
+              One key factor in selecting the proper rails is identifying the type of rack in which they will be 
+              installed. Both the sliding rails and the static rails support tool-less mounting in 19”-wide, EIA-310-E 
+              compliant square hole and unthreaded round hole 4-post racks. Both also support tooled mounting 
+              in threaded-hole 4-post racks, but only the static rails, as the more universal solution, support 
+              mounting in 2-post (Telco) racks. Table 23 lists the rack rail systems for the R630.  
+                                                 Table 23.  Supported rack rail system 
+                                                                                                      Rack Types Supported 
+                Product          Rail         Mounting Interface            Rail Type                4-Post                   2-Post 
+                              Identifier 
+                                                                                            Square    Round     Thread    Flush   Center 
+                                  A7              ReadyRails II               Sliding                                   X         X 
+                  R630 
+                                  A8               ReadyRails                 Static                                             
+              Other key factors governing proper rail selection include the spacing between the front and rear 
+              mounting flanges of the rack, the type and location of any equipment mounted in the back of the 
+              rack, such as power distribution units, and the overall depth of the rack. Due to their reduced 
+              complexity and lack of need for CMA support, the static rails offer a greater adjustability range and a 
+              smaller overall mounting footprint than the sliding rails. 
+              For detailed information about static and sliding rails, see the Rack rail specifications section in 
+              Appendix A. For more information on installing the R630 in a rack, see the Dell PowerEdge Rack 
+              Installation Guide on Dell.com/Support/Manuals.
+               
+              Cable management arm 
+              The optional CMA can be mounted on either the left or right side of the sliding rails without the use 
+              of tools for fast and easy deployment. The optional CMA organizes and secures the cords and 
+              cables exiting the back of the server and unfolds to allow the server to extend out of the rack 
+              without having to detach the cables. Some key features of the CMA include: 
+                 Large U-shaped baskets to support dense cable loads 
+                 Open vent pattern for optimal airflow 
+                 Ability to be mounted on either side 
+                 Use of hook-and-loop straps rather than plastic tie wraps to eliminate the risk of cable damage 
+                  during cycling 
+                 Low-profile fixed tray to both support and retain the CMA in its fully closed position 
+                 Ability to mount the CMA and tray without the use of tools, due to snap-in designs 
+               
+               
+              39    PowerEdge R630 Technical Guide 
+                      
+           10  Operating systems and virtualization 
+           The Dell PowerEdge R630 supports a wide range of industry-standard operating systems and 
+           virtualization software. 
+           Supported operating systems 
+           Table 24 lists the primary operating systems supported on the R630. For the latest information on 
+           supported operating systems, see Dell.com/OSsupport. 
+                                        Table 24.  Operating system support 
+              Operating System                            Platform              Edition           IDSDM 
+                                                                                                  support 
+              Microsoft Windows Server 2012 R2            x64                   Standard          Yes 
+                                                                                Datacenter 
+              Microsoft Windows Server 2012               x64                   Standard          Yes 
+                                                                                Datacenter 
+                                                                                Standard 
+              Microsoft Windows Server 2008 R2 SP1        x64                   Enterprise        Yes 
+                                                                                Datacenter 
+              Red Hat Enterprise Linux 7.0                x64                   N/A               No 
+              Red Hat Enterprise Linux 6.5                x64                   N/A               No 
+              SUSE Linux Enterprise Server 12             x64                   N/A               No 
+              SUSE Linux Enterprise Server 11 SP3         x64                   N/A               No 
+            
+           Supported virtualization  
+           One of the key features for virtualization on the PowerEdge R630 is the support for a failsafe 
+           hypervisor. By running a hypervisor on an optional SD card and installing a backup copy on the 
+           other mirrored SD card, you can protect against hardware failure and maximize virtualization uptime. 
+           Table 25 highlights the virtualization support for the R630. 
+                                          Table 25.  Virtualization support 
+               Operating systems                                     Install version      IDSDM support 
+              Microsoft      Windows Server 2012 R2 with Hyper-V     N/A                  Yes 
+              VMware         vSphere v5.1, v5.5                      ESXi                 Yes 
+               Citrix        XenServer 6.2 SP1                       N/A                  Yes 
+           40    PowerEdge R630 Technical Guide 
+             
+       11  Dell OpenManage systems management 
+       Whether your IT environment consists of a few servers or a few thousand servers,  
+       Dell OpenManage systems management solutions provide comprehensive management for 
+       evolving IT environments. OpenManage is based on open standards and provides agent-based and 
+       agent-free server lifecycle management functionality for Dell PowerEdge servers. OpenManage 
+       solutions help you automate and streamline essential hardware management tasks.    
+       Start with a firm foundation for efficient hardware management using OpenManage tools, utilities 
+       and management consoles. OpenManage systems management solutions consist of a combination 
+       of embedded management features and software products that help you automate and simplify the 
+       entire server lifecycle: deploy, update, monitor and maintain as shown in Figure 15. OpenManage 
+       solutions are innovatively designed for simplicity and ease of use to help you reduce complexity, 
+       save time, achieve efficiency, control costs and empower productivity. As shown in Figure 15, 
+       OpenManage centers around efficient management of server lifecycle. 
+                  Figure 15.  Server lifecycle management operations 
+                                                   
+       OpenManage systems management 
+       The Dell OpenManage systems management portfolio includes powerful hardware and software 
+       management tools and consoles. OpenManage simplifies the lifecycle of deploying, updating, 
+       monitoring and maintaining your Dell PowerEdge servers. 
+       iDRAC8 with Lifecycle Controller 
+       The Integrated Dell Remote Access Controller 8 (iDRAC8) with Lifecycle Controller, the embedded 
+       intelligence of every Dell PowerEdge 13th generation server, helps you manage Dell servers agent-
+       free or with a systems management agent, within physical, virtual, local and remote environments. 
+       iDRAC8 alerts server issues, enables remote server management and reduces the need to physically 
+       visit the server. iDRAC8 with Lifecycle Controller is part of Dell’s comprehensive OpenManage 
+       41    PowerEdge R630 Technical Guide 
+                         
+             portfolio and works as a stand-alone or in conjunction with other components such as 
+             OpenManage Essentials, OpenManage Mobile, OpenManage Power Center, Chassis Management 
+             Controller, and OpenManage Integrations for Microsoft, VMware and BMC consoles to simplify, 
+             automate and streamline IT operations. 
+             Table 26 describes some of the iDRAC8 features. For more iDRAC8 features, see the “Introducing 
+             iDRAC8 with Lifecycle Controller for Dell 13th Generation PowerEdge Servers” white paper. 
+                            Table 26.  iDRAC8 with Lifecycle Controller functions and benefits 
+               Feature              Function                                  Benefit 
+                                    iDRAC8 offers real-time OOB               Manage servers independently from 
+               Out-of-band          discovery, inventory, deployment          hypervisor/OS type or status. Allows for 
+               (OOB)                monitoring,  alerting  and updates for    bare-metal deployment and monitoring. 
+                                    servers, factory-installed peripherals 
+                                    and internal storage  
+                                    Simplified, more informative, and         More detail allows IT administrators to be 
+                                    expanded coverage than previous           more efficient in diagnosing and remediating 
+               Email alerts         versions of iDRAC                         an issue; alerts include a direct, embedded 
+                                                                              URL in the email notification to further speed 
+                                                                              resolution 
+                                    Enabled with iDRAC8 Enterprise,           Administrators can use virtual flash to house 
+                                    vFlash or virtual flash allows the user   a persistent image for future general or 
+                                    to store CD, floppy and hard drive        emergency use without relying on network 
+                                    images directly on the iDRAC8. Users      resources or the constant presence of a 
+               vFlash media         can store emergency boot images,          client as with Virtual Media. Content can be 
+                                    diagnostic tools, or anything else that   stored permanently on vFlash or can be 
+                                    can fit in a 4GB partition. Users can     deleted and added as necessary. This is ideal 
+                                    create up to 16 partitions.               for customers with slow bandwidth 
+                                                                              connections to the DRAC. 
+                                    Integration with Intel Node Manager       Fine tune data center power policies, 
+               Enhanced power       provides data-center level power          capping and usage. Report on historical 
+               management           monitoring and capping                    power usage by rack, row or room using 
+                                    (requires iDRAC8 Enterprise)              Power Center Manager. 
+                                    Upgrades to iDRAC8 Express or             Digital licenses are installed at the Dell 
+                                    iDRAC8 Enterprise by software             factory; free 30-day trial versions are 
+                                    licensing key and license portal          available. Dell uses a license management 
+                                                                              portal versus paper-based licenses, which 
+               Electronic                                                     simplifies license management. 
+               licensing                                                      For most server models, embedded server 
+                                                                              management and electronic licensing 
+                                                                              enables feature enhancements that do not 
+                                                                              require installation of additional hardware or 
+                                                                              system downtime.   
+              
+                                              
+             42    PowerEdge R630 Technical Guide 
+                          
+             iDRAC8 feature comparison 
+             iDRAC8 Enterprise is available for the PowerEdge R630. Dell also offers iDRAC8 Express. A detailed 
+             feature comparison for iDRAC8 Enterprise and iDRAC8 Express is shown in Table 27. 
+                              Table 27.  Feature comparison for iDRAC8 Express and Enterprise 
+                      Feature (function)                                                     iDRAC8         iDRAC8 
+                                                                                             Express        Enterprise          
+                        Interfaces/Standards                                                                        
+                        IPMI 2.0 
+                                                                                                               
+                        DCMI 1.5 
+                                                                                                               
+                        Web-based GUI 
+                                                                                                               
+                        RACADM command line (local/remote) 
+                                                                                                               
+                        SMASH-CLP (SSH-only) 
+                                                                                                               
+                        Telnet 
+                                                                                                               
+                        SSH 
+                                                                                                               
+                        WSMAN 
+                                                                                                               
+                        Network Time Protocol 
+                                                                                                               
+                        Connectivity                                                                                
+                        Shared NIC 
+                                                                                                               
+                        Dedicated NIC 
+                                                                                                               
+                        VLAN tagging 
+                                                                                                               
+                        IPv4 
+                                                                                                               
+                        IPv6 
+                                                                                                               
+                        DHCP 
+                                                                                                               
+                        Dynamic DNS 
+                                                                                                               
+                        OS pass-through 
+                                                                                                               
+                        Front panel USB 
+                                                                                                               
+                        Security                                                                                    
+                        Role-based authority 
+                                                                                                               
+                        Local users 
+                                                                                                               
+                        SSL encryption 
+                                                                                                               
+                        IP blocking 
+                                                                                                               
+                        Directory services (AD, LDAP) 
+                                                                                                                 
+                        Two-factor authentication 
+                                                                                                                 
+                        Single sign-on 
+                                                                                                                 
+                        PK authentication 
+                                                                                                               
+                        Remote presence                                                                             
+                        Power control 
+                                                                                                               
+                        Boot control 
+                                                                                                               
+                        Serial-over-LAN 
+                                                                                                               
+                        Virtual Media 
+                                                                                                                 
+                        Virtual Folders 
+                                                                                                                 
+                        Remote File Share 
+                                                                                                                 
+                        Virtual Console 
+                                                                                                                 
+             43    PowerEdge R630 Technical Guide 
+                          
+                      Feature (function)                                                     iDRAC8         iDRAC8 
+                                                                                             Express        Enterprise          
+                        VNC connection to OS 
+                                                                                                                 
+                        Quality/bandwidth control 
+                                                                                                                 
+                        Virtual Console collaboration (6 users)  
+                                                                                                                 
+                        Virtual Console chat 
+                                                                                                                 
+                        Virtual Flash partitions                                                                   1
+                                                                                                                 
+                        Power and thermal                                                                           
+                        Real-time power meter 
+                                                                                                               
+                        Power thresholds and alerts 
+                                                                                                               
+                        Real-time power graphing 
+                                                                                                               
+                        Historical power counters 
+                                                                                                               
+                        Power capping 
+                                                                                                                 
+                        Power Center integration                                                 
+                                                                                                                 
+                        Temperature monitoring                                                   
+                                                                                                               
+                        Temperature graphing 
+                                                                                                               
+                        Health monitoring                                                                           
+                        Full agent-free monitoring 
+                                                                                                               
+                        Predictive failure monitoring 
+                                                                                                               
+                        SNMPv1, v2, and v3 (traps and gets) 
+                                                                                                               
+                        Email alerting 
+                                                                                                               
+                        Configurable thresholds 
+                                                                                                               
+                        Fan monitoring 
+                                                                                                               
+                        Power supply monitoring 
+                                                                                                               
+                        Memory monitoring 
+                                                                                                               
+                        CPU monitoring 
+                                                                                                               
+                        RAID monitoring 
+                                                                                                               
+                        NIC monitoring 
+                                                                                                               
+                        HD monitoring (enclosure) 
+                                                                                                               
+                        Out-of-band performance monitoring 
+                                                                                                                 
+                        Update                                                                   
+                                                                                                                    
+                        Remote agent-free update 
+                                                                                                               
+                        Embedded update tools 
+                                                                                                               
+                        Sync with repository (scheduled updates) 
+                                                                                                                 
+                        Auto-update                                                              
+                                                                                                                 
+                        Deployment and configuration                                             
+                                                                                                                    
+                        Embedded OS deployment tools 
+                                                                                                               
+                        Embedded configuration tools 
+                                                                                                               
+                        Auto-discovery 
+                                                                                                               
+                        Remote OS deployment 
+                                                                                                               
+                        Embedded driver pack 
+                                                                                                               
+                        Full configuration inventory 
+                                                                                                               
+                        Inventory export 
+                                                                                                               
+                        Remote configuration 
+                                                                                                               
+             44    PowerEdge R630 Technical Guide 
+                          
+                      Feature (function)                                                     iDRAC8         iDRAC8 
+                                                                                             Express        Enterprise          
+                        Zerotouch configuration 
+                                                                                                                 
+                        System retire/repurpose  
+                                                                                                               
+                        Diagnostics, service and logging                                                            
+                        Embedded diagnostic tools 
+                                                                                                               
+                        Part replacement 
+                                                                                                               
+                        Server configuration backup 
+                                                                                                                 
+                        Server configuration restore 
+                                                                                                               
+                        Easy restore (system configuration)  
+                                                                                                               
+                        Health LED/LCD 
+                                                                                                               
+                        Quick Sync (require NFC bezel)  
+                                                                                                               
+                        iDRAC Direct (front USB management port)  
+                                                                                                               
+                        iDRAC Service Module (iSM)  
+                                                                                                               
+                        Embedded tech support report  
+                                                                                                               
+                        Crash screen capture 
+                                                                                                               
+                        Crash video capture 
+                                                                                                                 
+                        Boot capture 
+                                                                                                                 
+                        Manual reset for iDRAC 
+                                                                                                               
+                        Virtual NMI 
+                                                                                                               
+                        OS watchdog 
+                                                                                                               
+                        Embedded health report 
+                                                                                                               
+                        System event log 
+                                                                                                               
+                        Lifecycle log 
+                                                                                                               
+                        Work notes 
+                                                                                                               
+                        Remote syslog 
+                                                                                                                 
+                        License management 
+                                                                                                               
+                        1
+                         Requires vFlash SD card media  
+             Agent-free management 
+             Because Dell PowerEdge servers have embedded server lifecycle management, in many cases, there 
+             is no need to install an OpenManage systems management software agent into the operating 
+             system of a Dell PowerEdge server. This greatly simplifies and streamlines the management footprint. 
+             Agent-based management 
+             Most systems management solutions require pieces of software, called agents, to be installed on 
+             each node in order to be managed within the IT environment. Additionally, the same agent is often 
+             used as a local interface into the hardware health and may be accessed remotely as a management 
+             interface, typically referred to as a one-to-one interface. For customers that continue to use agent-
+             based solutions, Dell provides OpenManage Server Administrator. 
+             OpenManage Server Administrator 
+             The Dell OpenManage Server Administrator (OMSA) agent gives you a comprehensive, one-to-one 
+             systems management solution for both local and remote servers and their storage. OMSA can help 
+             simplify single-server monitoring with a secure command-line interface (CLI) or Web-based 
+             45    PowerEdge R630 Technical Guide 
+                           
+              management GUI. It can also be used to view system configuration, inventory, health and 
+              performance. 
+              iDRAC Service Module 
+              The iDRAC Service Module (iSM) is a lightweight optional software application that can be installed 
+              on Dell PowerEdge server (12th generation or later). The iSM complements iDRAC interfaces – GUI, 
+              RACADM CLI, and Web Service Management (WSMAN) with additional monitoring data. You can 
+              configure the features on the supported operating system depending on the features to be installed 
+              and the unique integration needs in a work environment. 
+              Dell consoles 
+              The central console in a systems management solution is often referred to as the one-to-many 
+              console. The central console provides a rapid view and insight into the overall health of all systems 
+              in the IT environment. The Dell systems management portfolio includes several powerful consoles, 
+              depending upon your needs, including the following: 
+                 Dell OpenManage Essentials—OpenManage Essentials (OME) is a systems management console 
+                  that provides a comprehensive view of Dell systems, devices, and components in an enterprise 
+                  network. It is used to monitor Dell PowerEdge servers, EqualLogic and PowerVault storage, and 
+                  PowerConnect™ switches; to update and configure Dell servers; and to create asset reports. 
+                  OpenManage Essentials also communicates health status alerts for Dell servers, storage, and 
+                  network devices to the Dell KACE™ K1000 service desk. OpenManage Essentials is available as a 
+                  no-charge software download from Dell.com/Support. When connected through OME, you can 
+                  use Dell OpenManage Mobile (OMM) to securely perform a subset of data center monitoring and 
+                  remediation tasks from a mobile device. 
+                 OpenManage Power Center—Dell’s power management solution, the Dell OpenManage Power 
+                  Center (OMPC) management console, provides increased visibility to power consumption, 
+                  anomalies, and utilization through fine-grained instrumentation. This enables increased control, 
+                  improved rack density, faster response times, greater accuracy, and broader decision-making 
+                  intelligence than would otherwise be possible. When used with a suitably licensed PowerEdge 
+                  server (with a Dell iDRAC Enterprise license), OMPC leverages Intel Node Manager technology 
+                  for platform-level power reporting and capping of Intel chipsets. Power Center then 
+                  communicates with iDRAC to provide node, rack, row or data-center level aggregation of 
+                  power-management data, as well as execution of control policy — making it easy for IT 
+                  professionals to identify areas to gain efficiencies and cut wasteful costs. 
+              OpenManage systems management tools, utilities and protocols 
+              Dell OpenManage systems management tools and utilities consist of the following: 
+                 Dell Repository Manager: The Dell Repository Manager (RM) is a stand-alone GUI-based 
+                  productivity tool that helps simplify the process of managing downloads and baseline BIOS, 
+                  firmware and driver updates. Repository Manager can create deployment disks as well as create 
+                  and manage customized repositories. 
+                 Dell Update Packages: The Dell Update Packages (DUP) is a self-contained executable in a 
+                  standard package format that updates a software element on a Dell server such as the BIOS,  
+                  a driver, firmware and other software updates.  
+                 Dell OpenManage Deployment Toolkit: The Dell OpenManage Deployment Toolkit (DTK) is a 
+                  CLI-based tool that includes a set of utilities for configuring and deploying Dell PowerEdge 
+                  systems, and can be used to build scripted, unattended OS installations to deploy large numbers 
+                  of servers in a reliable fashion. 
+              46    PowerEdge R630 Technical Guide 
+                           
+                 RACADM: The RACADM command-line utility provides a scriptable interface that allows you to 
+                  locally or remotely configure iDRAC7.  
+                 IPMITool: IPMITool includes scriptable console application programs used to control and 
+                  manage remote systems using the IPMI version 1.5 and later protocol. 
+                 Web Services for Management (WSMAN)—WSMAN is a SOAP-XML–based protocol for 
+                  exchanging system management information. Dell's implementation provides remote 
+                  management capabilities through a secure and standards-based Web Services–Management 
+                  (WS-MAN) interface to PowerEdge servers and blade server node chassis. 
+              Integration with third-party consoles  
+              Dell OpenManage provides integration with several leading third-party consoles, including: 
+                 OpenManage Integration Suite for Microsoft System Center—This suite helps you further 
+                  streamline, automate and simplify your most essential IT management tasks. For more 
+                  information, visit http://www.dell.com/learn/us/en/04/solutions/dcsm-microsoft-system-center. 
+                 OpenManage Integration for VMware vCenter—This plug-in allows IT administrators to monitor, 
+                  provision, and manage the physical PowerEdge server hardware and firmware from a dedicated 
+                  Dell menu accessed through the VMware vCenter console using the same role-based access 
+                  control model as vCenter, combining physical server management. For more information, visit 
+                  http://www.dell.com/learn/us/en/04/virtualization/management-plug-in-for-vmware-vcenter. 
+                 BMC Software: Dell and BMC Software work together to simplify IT by ensuring tight integration 
+                  between Dell server, storage, and network management functionality and the BMC Software 
+                  process and data center automation products. 
+              OpenManage connections with third-party consoles 
+              Dell OpenManage Connections gives you an easy path to adding support for third-party devices, so 
+              you can continue to use your existing management tools while easily adding Dell server systems to 
+              your existing IT environment. Integrate new systems at your own pace. Manage new Dell servers 
+              and storage with your legacy management tools, while extending the useful life of your existing 
+              resources. With OpenManage Connections you can add monitoring and troubleshooting of Dell 
+              assets to your IT infrastructure.  
+                 OpenManage Connection for Nagios  
+                 OpenManage Connection for Oracle   
+                 OpenManage Connections for HP   
+                 OpenManage Connections for IBM   
+                 OpenManage Connection for CA 
+              For more information on these OpenManage Connections, visit 
+              http://www.dell.com/learn/us/en/04/solutions/dcsm-partner-consoles. 
+              Dell server management operations 
+              Dell OpenManage systems management is centered on automating the server management 
+              lifecycle — deploy, update, monitor and maintain. To manage an infrastructure properly and 
+              efficiently, you must perform all of these functions easily and quickly. iDRAC7 with Lifecycle 
+              Controller technology provides you with these intelligent capabilities embedded within the server 
+              infrastructure. This allows you to invest more time and energy on business improvements and less 
+              on maintenance. Figure 16 illustrates the various operations that can be performed during the 
+              server’s lifecycle. 
+              47    PowerEdge R630 Technical Guide 
+                       
+                                   Figure 16.  Systems management server lifecycle 
+                                                                                                             
+            Table 28 lists the products that are available for one-to-one and one-to-many operations, and 
+            when they are used in the server’s lifecycle. 
+                                 Table 28.  One-to-one and one-to-many operations 
+           Operation      One-to-one                              One-to-many 
+                            Lifecycle Controller GUI               OpenManage Integration for VMware vCenter 
+           Deploy           DTK                                    OpenManage Integration for BMC BladeLogic 
+                                                                    OpenManage Integration for Microsoft System 
+                                                                     Center Configuration Manager 
+                            iDRAC8 with Lifecycle Controller       Dell OpenManage Essentials 
+                            Repository Manager                     OpenManage Integration for Microsoft System 
+           Update           DUP                                     Center Configuration Manager 
+                            SUU 
+                            OpenManage Integration for 
+                             VMware vCenter 
+                            iDRAC8 with Lifecycle Controller       Dell OpenManage Essentials 
+                            OMSA                                   Dell OpenManage Power Center 
+           Monitor                                                  OpenManage Integration for VMware vCenter 
+                                                                    OpenManage Integration for Microsoft System 
+                                                                     Center Operations Manager 
+                            iDRAC8 with Lifecycle Controller       Lifecycle Controller Remote Services 
+                            IPMI                                 Remediate and replace parts: 
+           Maintain                                                 OpenManage Integration for Microsoft System 
+                                                                     Center Virtual Machine Manager (SCVMM) 
+                                                                    Server Pro Management Pack and Lifecycle 
+                                                                     Controller Integration (DLCI)  
+             
+            For additional detailed information on Dell’s systems management portfolio, visit 
+            Dell.com/OpenManage.                                    
+            48    PowerEdge R630 Technical Guide 
+               
+        Appendix A. Additional specifications  
+        Chassis dimensions 
+        10-drive and 24-drive PowerEdge R630 chassis options 
+                Figure 17.  Chassis width for 10-drive and 24-drive chassis options 
+                                                                          
+                Figure 18.  Chassis height for 10-drive and 24-drive chassis options 
+                                                                          
+             Figure 19.  Chassis depth with bezel for 10-drive and 24-drive chassis options 
+                                                                          
+           Figure 20.  Chassis depth without bezel for 10-drive and 24-drive chassis options 
+                                                                          
+         
+         
+        49    PowerEdge R630 Technical Guide 
+                        
+            8-drive PowerEdge R630 chassis options 
+                                    Figure 21.  Chassis width for 8-drive chassis option 
+                                                                                                                      
+                                   Figure 22.  Chassis height for 8-drive chassis option 
+                                                                                                                      
+                              Figure 23.  Chassis depth with bezel for 8-drive chassis option 
+                                                                                                                  
+                            Figure 24.  Chassis depth without bezel for 8-drive chassis option 
+                                                                                                                  
+             
+            Chassis weight 
+            Table 29 lists the weight of the R630 chassis at maximum configuration for the three different 
+            chassis options. 
+                                                  Table 29.  Chassis weight 
+               Configuration              8-drive bay chassis          10-drive bay chassis        24-drive bay chassis 
+               Maximum                    16.9 kg (37 lb)              18.4 kg (40.5 lb)           17.4 kg (38.3 lb) 
+            50    PowerEdge R630 Technical Guide 
+                            
+              Power supply specifications 
+              Table 30 lists power supply specifications for the PowerEdge R630. 
+                                                  Table 30.  Power supply specifications 
+             Specification           495W               750W              750W              1100W              1100W DC            750W AC/DC 
+                                                                                                                                   mixed mode 
+             80 PLUS                 Platinum           Platinum          Titanium          Platinum           N/A – peak          Platinum 
+                                                                                                               efficiency: 91% 
+             Power factor            Active             Active            Active            Active             None                Active 
+             correction 
+             FCC                     Class A            Class A           Class A           Class A            Class A             Class A 
+             classification 
+             Max output              40.57A             61.47A            61.47A            90.16A             91.6A               62.5A 
+             current                 69.0A (peak)       104.5A (peak)     104.5A (peak)     153.3A (peak)                           
+             Input voltage           90–264V AC         90–264V AC        180–264V AC       90–264V AC         -36V to             90–264V AC 
+             range                   47–63Hz            47–63Hz           47–63Hz           47–63Hz            -72V  DC            47–63Hz 
+                                                                                                                                   192–288V DC 
+                                                                                                                                               1
+             Iin for rating on                1                     1          2                        1          3               10.0A–5.0A  
+             safety label            6.5A–3A            10.0A–5.0A        5.0A              12.0A–6.5A         32A                 4.5A 
+             Initial in-rush         25A (peak)         25A (peak)        25A (peak)        25A (peak)         55A (peak)          55A (peak) 
+             current 
+             Secondary in-rush  25A (peak)              25A (peak)        25A (peak)        25A (peak)         43A (peak)          25A (peak) 
+             current 
+              1100-240V AC 
+              2240V AC 
+              3-48.0V DC 
+              4
+               240-290V DC 
+              Environmental specifications 
+              See Dell PowerEdge R630 Owner’s Manual on Dell.com/Support/Manuals for detailed 
+              environmental specifications including expanded operating temperature (Fresh Air) information.  
+              Video specifications 
+              The Dell PowerEdge R630 iDRAC8 incorporates an integrated video subsystem. The graphics 
+                                                 ®
+              controller is the 2D Matrox  G200. The video frame buffer (16MB) is contained within the iDRAC 
+              RAM (256MB) device. The R630 system supports the 2D graphics video modes listed in Table 31. 
+                                                     Table 31.      Supported video modes 
+                            Resolution                                   Refresh Rate (Hz)             Color Depth (bit) 
+                            640 x 480                                    60, 70                        8, 16, 32 
+                            800 x 600                                    60, 75, 85                    8, 16, 32 
+                            1024 x 768                                   60, 75, 85                    8, 16, 32 
+                            1152 x 864                                   60, 75, 85                    8, 16, 32 
+                            1280 x 1024                                  60, 75                        8, 16, 32 
+                            1440 x 900                                   60                            8, 16, 32 
+              51    PowerEdge R630 Technical Guide 
+                        
+            Rack rail specifications 
+            Table 32 lists the spacing dimensions for the R630 sliding and statics rails.  
+                                              Table 32.  Rail adjustability range 
+                                                                    Rail adjustability range (mm)        Rail depth (mm) 
+             Product           Rail            Rail type         Square        Round        Threaded 
+                               identifier                                                                without    with 
+                                                               Min    Max    Min    Max    Min    Max     CMA       CMA 
+                                                                                                              1         1 
+                                     A7           Sliding      681    868    667    861    681    883      720      845
+                                                                                                              2         2
+                  R630                                                                                     770      895  
+                                     A8            Static      608    879    594    872    604    890      622        — 
+             1
+              For 8-drive bay chassis                                                                               
+             2
+              For 10-drive and 24-drive bay chassis 
+            The adjustment range of the rails is a function of the type of rack in which they are being mounted. 
+            The min-max values listed above represent the allowable distance between the front and rear 
+            mounting flanges in the rack. Rail depth without the CMA represents the minimum depth of the rails 
+            with the outer CMA brackets removed (if applicable) as measured from the front mounting flanges 
+            of the rack. 
+            The rail depth changes based on which version of the R630 is being installed. Although the 10-drive 
+            and 24-drive bay system is 50 mm deeper than the 8-drive bay system, both are able to share the 
+            same rails through a new self-adjusting feature included on the rails. 
+            USB peripherals 
+            USB peripherals are supported through the front and back USB ports on the R630. The front ports 
+            are USB 2.0 compliant and the back ports are USB 3.0 compliant. 
+            PCIe card dimensions 
+            Table 33 provides the dimensions of the PCIe cards supported by the R630.  
+                                              Table 33.  PCIe card dimensions 
+            Type                                  Height                                Length 
+            Full-height, half-length card         111.15 mm (4.376 inches) max          167.65 mm (6.600 inches) max 
+            Full-height, full-length card         111.15 mm (4.376 inches) max          312.00 mm (12.283 inches) max 
+            Low-profile, half-height card         68.90 mm (2.731 inches) max           167.65 mm (6.600 inches) max 
+            Note: ¾-length is 234mm (9.213 inches) 
+            52    PowerEdge R630 Technical Guide 
+                         
+              Appendix B. Standards compliance 
+             The Dell PowerEdge R630 conforms to the industry standards listed in Table 34. 
+                                           Table 34.     Industry standard documents 
+               Standard                              URL for information and specifications 
+               ACPI 
+               Advance Configuration and Power       acpi.info 
+               Interface Specification, v2.0c 
+               Ethernet                              standards.ieee.org/getieee802/802.3.html  
+               IEEE 802.3-2005 
+               HDG 
+               Hardware Design Guide Version         microsoft.com/whdc/system/platform/pcdesign/desguide/serverdg.mspx 
+               3.0 for Microsoft Windows Server 
+               IPMI 
+               Intelligent Platform Management       intel.com/design/servers/ipmi 
+               Interface, v2.0 
+               DDR4 Memory                           jedec.org/standards-documents/docs/jesd79-4.pdf  
+               DDR4 SDRAM Specification 
+               PCI Express 
+               PCI Express Base Specification        pcisig.com/specifications/pciexpress  
+               Rev. 2.0 and 3.0 
+               PMBus 
+               Power System Management               pmbus.info/specs.html  
+               Protocol Specification, v1.2 
+               SAS                                   t10.org 
+               Serial Attached SCSI, v1.1 
+               SATA 
+               Serial ATA Rev. 2.6; SATA II, SATA    sata-io.org 
+               1.0a Extensions, Rev. 1.2 
+               SMBIOS 
+               System Management BIOS                dmtf.org/standards/smbios 
+               Reference Specification, v2.7 
+               TPM 
+               Trusted Platform Module               trustedcomputinggroup.org  
+               Specification, v1.2 and  
+                v2.0 
+               UEFI 
+               Unified Extensible Firmware           uefi.org/specifications  
+               Interface Specification, v2.1 
+               USB 
+               Universal Serial Bus Specification,   usb.org/developers/docs  
+               Rev. 2.0  
+               Windows Logo 
+               Windows Logo Program System           microsoft.com/whdc/winlogo/hwrequirements.mspx  
+               and Device Requirements, v3.10 
+                                              
+             53    PowerEdge R630 Technical Guide 
+                         
+              Appendix C. Additional resources 
+             Table 35 provides a list of documents and websites that provide for more information on the Dell 
+             PowerEdge R630. 
+                                                Table 35.    Additional resources 
+            Resource              Description of contents                                      Location 
+            PowerEdge R630        This manual, available in PDF format,  provides the          Dell.com/Support/Manuals 
+            Owner’s Manual        following information: 
+                                    Chassis features 
+                                    System Setup program 
+                                    System messages 
+                                    System codes and indicators 
+                                    System BIOS 
+                                    Remove and replace procedures 
+                                    Troubleshooting  
+                                    Diagnostics 
+                                    Jumpers and connectors 
+            PowerEdge R630        This guide ships with the system, and is also available in   Dell.com/Support/Manuals 
+            Getting Started       PDF format. This guide provides the following 
+            Guide                 information: 
+                                    Initial setup steps 
+                                    Key system features 
+                                    Technical specifications 
+            Rack Installation     This document  ships with the rack kits, and provides        Dell.com/Support/Manuals 
+            Instructions          instructions for installing a server in a rack. 
+            Information           This document ships with the system, is also available in    Dell.com/Support/Manuals 
+            Update                PDF format online, and provides information on system 
+                                  updates. 
+            System                The system information label documents the system            Inside the system chassis 
+            Information Label     board layout and system jumper settings. Text is             cover 
+                                  minimized due to space limitations and translation 
+                                  considerations. The label size is standardized across 
+                                  platforms. 
+            Quick Resource        This code on the chassis can be scanned by a phone           Inside the system chassis 
+            Locator (QRL)         application to access additional information and             cover  
+                                  resources for the server, including videos, reference 
+                                  materials, service tag information, and Dell contact 
+                                  information. 
+             54    PowerEdge R630 Technical Guide 
+                         
+            Resource              Description of contents                                        Location 
+            Energy Smart          The Dell online Energy Smart Solution Advisor (ESSA)           Dell.com/calc 
+            Solution Advisor      enables easier and more meaningful estimates to help 
+                                  you determine the most efficient configuration possible. 
+                                  Use ESSA to calculate the power consumption of your 
+                                  hardware, power infrastructure, and storage. 
+            Power and             Provides details for improving energy efficiency in the        Dell.com/powerandcooling 
+            cooling               data center. 
+            technologies 
+            Energy                Provides information on Dell’s Fresh Air cooling solutions.    Dell.com/FreshAir 
+            management 
+            Operating system      Provides updated information on which operating                Dell.com/OSsupport 
+            matrix for Dell       systems are available on which PowerEdge systems. 
+            PowerEdge 
+            systems 
+            Processor and         Provides more information about the R630 processors            Intel.com 
+            chipset               and chipset. 
+            Systems               Provides more information on how to simplify, automate         Dell.com/OpenManage 
+            management            and optimize IT operations. 
+            Dell PowerEdge        Provides more information on Dell PowerEdge RAID               Dell.com/PERC 
+            RAID controllers      controllers (PERC). 
+            Uninterruptible       Provides help selecting a UPS model.                           DellUPS.com 
+            power supply 
+            Volatility            Contact your Dell sales representative.                        Dell.com 
+            information 
+            Dell Enterprise       White paper that explores the mechanisms of, people’s          Dell.com/downloads/global/
+            Acoustics             reaction to, language of, and Dell’s work to control noise     products/pedge/en/acoustic
+                                  from Enterprise products.                                      al-education-dell-
+                                                                                                 enterprise-white-paper.pdf 
+            Volatility            Contact your Dell Sales Representative or visit the Dell       Dell.com/Support/Manuals 
+            information           Support site. 
+               
+             55    PowerEdge R630 Technical Guide 
+                           
+              Appendix D. Support and Deployment Services 
+              Dell Global Services include a wide, customizable range of service choices to simplify the 
+              assessment, design, implementation, management and maintenance of your IT environment and to 
+              help you transition from platform to platform. Depending on your current business requirements 
+              and the level of service you want, we can provide you with factory, on-site, remote, modular and 
+              specialized services that fit your needs and budget. We’ll help you with a little or a lot — your 
+              choice — and provide you with access to our global resources. 
+              Server Deployment Services 
+              Our Server Deployment Services can maximize the value of your servers quickly using our expert 
+              server deployment engineers. With over 10,000 server deployment projects each year, we have 
+              experience, best practices and comprehensive deployment tools to install, configure and integrate 
+              your new solution optimally and correctly. Our deployment experts will assess your environment 
+              and understand your goals, then design and integrate your server solution for you. 
+                                              Figure 25.  Server Deployment capabilities 
+                                                                                                                            
+               
+              In addition, we are also experts at rack integration and solutions such as High Performance 
+              Computing, Openstack and Hadoop. 
+              Dell’s Server Deployment Services help you optimize your server configurations and quickly and 
+              correctly install and integrate your solution so you can be up and running faster with minimal 
+              disruption to day-to-day business operations. Our deployment experts provide: 
+                 Single point of project management contact from beginning to end 
+                 Evaluation of your environment with a detailed project plan 
+              56    PowerEdge R630 Technical Guide 
+                           
+                 Optimized configurations for your workloads and user environment 
+                 Personalized documentation and orientation 
+              Remote Consulting Services 
+              When you are in the final stages of your PowerEdge server implementation, you can rely on Dell 
+              Remote Consulting and our certified technical experts to help you optimize your configuration with 
+              best practices for your software, virtualization, server, storage, networking and systems 
+              management. 
+              Data Migration Service 
+              Protect your business and data with our single point of contact to manage your data migration 
+              project. Your project manager will work with our experienced team of experts to create a plan using 
+              industry-leading tools and proven processes based on global best practices to migrate your existing 
+              files and data, so your business gets up and running quickly and smoothly. 
+              ProSupport Enterprise Suite 
+              With Dell ProSupport Services, we can help you keep your operation running smoothly, so you can 
+              focus on running your business. We’ll help you maintain peak performance and availability of your 
+              most essential workloads. Dell ProSupport is a suite of support services that enable you to build the 
+              solution that’s right for your organization. Choose support models based on how you use 
+              technology and where you want to allocate resources. From the desktop to the data center, address 
+              everyday IT challenges, such as unplanned downtime, mission-critical needs, data and asset 
+              protection, support planning, resource allocation, software application management and more. 
+              Optimize your IT resources by choosing the right support model. 
+               
+                                                                                                                                        
+              57    PowerEdge R630 Technical Guide 
+                           
+              ProSupport Plus (for business-critical servers) 
+              When you purchase your PowerEdge server, we recommend ProSupport Plus, our proactive and 
+              preventative support for your business-critical systems. Dell ProSupport Plus provides you with all 
+              the benefits of ProSupport, plus access to a dedicated Technical Account Manager and our elite 
+              ProSupport Plus engineers. ProSupport Plus gives you quick and efficient resolutions, working along 
+              with our SupportAssist technology that enables us to get ahead of issues in your environment 
+              before they become problems. 
+              ProSupport 
+              Our ProSupport service offers highly trained experts around the clock and around the globe to 
+              address your IT needs. We’ll help you minimize disruptions and maximize availability of your 
+              PowerEdge server workloads with 
+                 24x7x365 access to certified hardware experts 
+                 Collaborative support assistance with over 195 third-party vendors 
+                 Hypervisor and operating system support 
+                 Onsite parts and labor response options including next business day or four-hour mission critical 
+              ProSupport Flex for Data Center 
+              Dell ProSupport Flex for Data Center offers flexible site-wide support for hyperscale data centers 
+              with more than 1,000 assets. Built on standard Dell ProSupport components, Flex for Data Center 
+              leverages our global scale while being tailored to suit your needs. While not for everyone, it offers a 
+              flexible solution for those with large and complex environments. When you choose Dell ProSupport 
+              Flex for Data Center, you’ll get: 
+                 Enterprise-wide support that covers your entire data center 
+                 A dedicated Technical Account Manager with remote, on-site, part-time and full-time options 
+                 Dedicated elite ProSupport Flex technical and field engineers who are trained on your 
+                  environment and configurations 
+                 Flexible on-site support and parts options that fit your operational model 
+                 A tailored support plan for your operations staff 
+              58    PowerEdge R630 Technical Guide 
+            
+                 Figure 26.  ProSupport Enterprise Suite comparison 
+                                                     
+      Additional professional services 
+      Dell Education Services 
+      Dell Education Services offers PowerEdge server training courses designed to help you achieve 
+      more with your hardware investment. The curriculum is designed in conjunction with the server 
+      development team, as well as Dell’s technical support team, to ensure that the training delivers the 
+      information and practical, hands-on skills you and your team need to confidently manage and 
+      maintain your Dell server solution. To learn more or register for a class today, visit 
+      LearnDell.com/Server.  
+      Dell Global Infrastructure Consulting Services 
+      Dell Global Infrastructure Consulting Services use skilled solution architects, innovative tools, 
+      automated analysis and Dell’s intellectual property to give you rapid insight into the root causes of 
+      unnecessary complexity. We seek better answers than traditional service models, and our strategy is 
+      to help you quickly identify high-impact, short-duration projects that deliver return on investment 
+      (ROI) and free up resources. The results are practical, action-oriented plans with specific, predictable, 
+      measurable outcomes. From data center optimization to server virtualization to systems 
+      management, our consulting services can help you build a more efficient enterprise. 
+      Dell Managed Services 
+      Dell Managed Services are a modular set of lifecycle services designed to help you automate and 
+      centrally configure, deploy and manage your day-to-day data center operations. These services 
+      extend your existing on-premise IT infrastructure with off-premise cloud services designed to better 
+      address challenges with mobility, highly distributed organizations, security, compliance, business 
+      continuity and disaster preparedness. 
+      59    PowerEdge R630 Technical Guide 

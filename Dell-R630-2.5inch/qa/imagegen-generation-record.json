@@ -1,0 +1,79 @@
+{
+  "tool": "built-in imagegen",
+  "independence_contract": "Each physical face was generated from its own locked real-photo/official-evidence input set. No accepted face used another AI face, a prior GLB texture, or a mirrored opposite face as its primary source.",
+  "background_contract": "Uniform #00ff00 generation background, locally converted to external transparency; product pixels remain opaque.",
+  "faces": [
+    {
+      "face": "front",
+      "mode": "SOURCE_LOCKED_GENERATION",
+      "primary_real_source": "source/third-party/techmikeny-10bay-front.jpg",
+      "input_roles": ["binding real photograph", "user configuration lock", "Dell technical-guide 10-drive render", "secondary exact 10-bay photograph"],
+      "prompt": "qa/imagegen-prompts/front.txt",
+      "attempts": [
+        {"path": "qa/reference/rejected/front-v1-chroma.png", "sha256": "230cac8bf8e205e9c94a3dd1bbfee986c38ec8ccfb87fd4c844b22d7441036f8", "status": "REJECTED"},
+        {"path": "qa/reference/generated/front-v2-chroma.png", "sha256": "7df72902c57e964cc1f0bfff16fcdf448d2177c63e53d341428cb7b5c7722150", "status": "ACCEPTED"}
+      ],
+      "postprocess": "Tight alpha crop/ratio normalization. Five narrow bay-number strips were patched from Dell's official Figure 2 crop; DELL/PowerEdge branding from the accepted generated face was preserved.",
+      "final": {"path": "views/front.png", "sha256": "0148ddaefdcdf31ecd0a3952611c3d473f295a31d12cf8864449381720fc8e5d", "pixels": [4096, 364]}
+    },
+    {
+      "face": "rear",
+      "mode": "SOURCE_LOCKED_GENERATION",
+      "primary_real_source": "source/third-party/oneclickservers-r630-rear.png",
+      "input_roles": ["binding real quad-RJ45/dual-EPP-1100W photograph", "user configuration lock", "Dell technical-guide rear", "Dell Owner's Manual rear enumeration"],
+      "prompt": "qa/imagegen-prompts/rear.txt",
+      "attempts": [
+        {"path": "qa/reference/generated/rear-v1-chroma.png", "sha256": "7b78d8ba05a091f4b2080768d27807ba59429c48d4f9eef5f5309b89312ab6c9", "status": "CORRECTION_SOURCE"},
+        {"path": "qa/reference/generated/rear-v2-chroma.png", "sha256": "e24e57b205ab1dc406c65d35b029b44a2098d0f04da6e456408d9b6d1670a9c6", "status": "ACCEPTED", "correction": "Removed only black fabric retention straps; retained rigid molded PSU handles, dual AC inlets, orange releases, fans, EPP labels and target I/O."}
+      ],
+      "postprocess": "Tight crop/ratio normalization; final rear is fully opaque so dark ports/fans cannot be mistaken for keyed transparency.",
+      "final": {"path": "views/rear.png", "sha256": "298124e4b51b1cd004703be6087163fe47b715376dc6fd51745c9465aeb32700", "pixels": [4096, 404]}
+    },
+    {
+      "face": "left",
+      "mode": "MULTI_REFERENCE_RECONSTRUCTION",
+      "primary_real_source": "source/third-party/ebay-257483086393-7.webp",
+      "input_roles": ["binding physical-left side photograph", "rear closure support", "independent physical-right anti-mirroring reference", "Dell dimension diagram"],
+      "prompt": "qa/imagegen-prompts/left.txt",
+      "attempts": [
+        {"path": "qa/reference/rejected/left-v1-wrong-orientation.png", "sha256": "21f5c7f9dd9403bbeb7f973e31599bbe1f6b788af98b6828bad592e6588583c9", "status": "REJECTED_WRONG_CANONICAL_DIRECTION"},
+        {"path": "qa/reference/generated/left-v2-chroma.png", "sha256": "93fc3fb5d6c746d44a9581d7010d243c3ae860d1fd2b926dfcf9e5ed376cf557", "status": "ACCEPTED", "orientation": "physical front at image right"}
+      ],
+      "postprocess": "Independent tight alpha crop and 731:42.8 side-ratio normalization; seller label excluded.",
+      "final": {"path": "views/left.png", "sha256": "963e70e8620f6ade704fd30abae9b942e76ab96b0427496ced3401afd3134028", "pixels": [4096, 240]}
+    },
+    {
+      "face": "right",
+      "mode": "MULTI_REFERENCE_RECONSTRUCTION",
+      "primary_real_source": "source/third-party/ebay-257483086393-8.webp",
+      "input_roles": ["binding physical-right side photograph", "exact closed front-right photograph", "right-front Intel-wing close photograph", "Dell dimension diagram"],
+      "prompt": "qa/imagegen-prompts/right.txt",
+      "attempts": [
+        {"path": "qa/reference/rejected/right-v1-wrong-orientation.png", "sha256": "89138f0c042ac5432b101e9402d9b4ad28c9c2ef54822869159cea4d25dd5e74", "status": "REJECTED_WRONG_CANONICAL_DIRECTION"},
+        {"path": "qa/reference/generated/right-v2-chroma.png", "sha256": "a7d1d961bb73d2ac6ddea659ed9d65a345afdc15698304ef6f8dd4170cfbdaad", "status": "ACCEPTED", "orientation": "physical front at image left"}
+      ],
+      "postprocess": "Independent tight alpha crop and 731:42.8 side-ratio normalization; no left-face mirroring.",
+      "final": {"path": "views/right.png", "sha256": "f6325dbb6b39b1c4c1ee546e12933719e9d9e83f0ff3768338d638ba8a63b2b8", "pixels": [4096, 240]}
+    },
+    {
+      "face": "top",
+      "mode": "SOURCE_LOCKED_GENERATION",
+      "primary_real_source": "source/third-party/ebay-257483086393-10.webp",
+      "input_roles": ["binding real top photograph", "second exact closed-cover photograph", "exact 10SFF top support", "Dell dimension diagram"],
+      "prompt": "qa/imagegen-prompts/top.txt",
+      "attempts": [{"path": "qa/reference/generated/top-v1-chroma.png", "sha256": "8f9c18b3fa4477c684e582cd2180d9f1f036017444b7ac90b0dfc4c542987b03", "status": "ACCEPTED"}],
+      "postprocess": "Tight alpha crop and 434:731 perspective-to-orthographic ratio normalization; front at image bottom.",
+      "final": {"path": "views/top.png", "sha256": "255fec97589615bef5da54c0818ee9460c141a2510cb8cd92566368c52ac2a1d", "pixels": [2048, 3449]}
+    },
+    {
+      "face": "bottom",
+      "mode": "GENERIC_BOTTOM_FALLBACK",
+      "primary_real_source": "source/third-party/ebay-257483086393-7.webp (support only)",
+      "input_roles": ["physical-left edge/material evidence", "independent physical-right edge/material evidence", "Dell dimension diagram", "documented exhausted bottom search"],
+      "prompt": "qa/imagegen-prompts/bottom.txt",
+      "attempts": [{"path": "qa/reference/generated/bottom-v1-chroma.png", "sha256": "42a6dc7e6148811eb7374e16dab4791249a110876a2858cb12e3ae483996ad58", "status": "ACCEPTED_CONTROLLED_FALLBACK"}],
+      "postprocess": "Tight alpha crop and 434:731 ratio normalization; unsupported detail deliberately omitted; front at image bottom.",
+      "final": {"path": "views/bottom.png", "sha256": "4b650cc17450d0d663bb1d1903791b97865510a136b93b62b6d4252641ba1e20", "pixels": [2048, 3449]}
+    }
+  ]
+}
