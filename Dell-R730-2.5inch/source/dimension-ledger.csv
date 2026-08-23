@@ -1,0 +1,13 @@
+subject,dimension,source_value,normalized_mm,inclusion_scope,source,confidence,tolerance_mm
+R730 installed chassis,body_width,44.40 cm,444.0,painted body excluding front EIA ears,Dell spec sheet and technical guide p57,official,1.0
+R730 installed chassis,overall_width,Xa 482.4 mm,482.4,front EIA rack flange ear-to-ear width,Dell technical guide p57,official,0.5
+R730 installed chassis,height,Y 87.3 mm,87.3,actual 2U chassis height,Dell technical guide p57,official,0.5
+R730 installed chassis,body_depth,Zb 684.0 mm,684.0,front EIA flange reference to rear body plane; same value as spec-sheet depth,Dell technical guide p57 and spec sheet,official,1.0
+R730 installed chassis,front_projection_without_bezel,Za 18.0 mm,18.0,frontmost no-bezel feature forward of EIA rack flange,Dell technical guide p57,official,0.5
+R730 installed chassis,front_projection_with_bezel,Za 32.0 mm,32.0,excluded because bezel is absent,Dell technical guide p57,official,0.5
+R730 installed chassis,rear_max_from_flange,Zc 723.0 mm,723.0,front EIA flange reference to rearmost PSU/handle feature,Dell technical guide p57,official,1.0
+R730 installed chassis,rear_projection_beyond_body,Zc-Zb 39.0 mm,39.0,computed rear PSU handle/inlet protrusion beyond nominal body depth,Dell technical guide p57,inferred-from-official,1.5
+R730 installed chassis,overall_depth_no_bezel,Za(no bezel)+Zc 741.0 mm,741.0,frontmost no-bezel feature to rearmost installed rear feature,computed from Dell official dimensions,inferred-from-official,1.5
+R730 front ear,left_extension,(Xa-Xb)/2 19.2 mm,19.2,lateral extension from 444.0 mm body to 482.4 mm overall width,computed from Dell official dimensions,inferred-from-official,0.8
+R730 front ear,right_extension,(Xa-Xb)/2 19.2 mm,19.2,lateral extension from 444.0 mm body to 482.4 mm overall width,computed from Dell official dimensions,inferred-from-official,0.8
+

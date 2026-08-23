@@ -1,0 +1,90 @@
+{
+  "identity": "Dell PowerEdge R730 16 x 2.5-inch SFF, no bezel, seven blank rear PCIe positions, 4x1GbE NDC, dual EPP 750W AC",
+  "coordinateConvention": "+X right, +Y up, +Z front; glTF metres",
+  "expectedBoundsM": [
+    0.4824,
+    0.0873,
+    0.741
+  ],
+  "visibleGeometry": {
+    "driveCarriers": 16,
+    "driveLEDs": 32,
+    "frontEars": 2,
+    "rearBlankCovers": 7,
+    "rearNdcRj45": 4,
+    "rearUsb": 2,
+    "acPsus": 2,
+    "psuFans": 2,
+    "psuPullHandles": 2,
+    "topRibs": 2,
+    "topLatch": 1,
+    "closedBody": true
+  },
+  "bottomMode": "GENERIC_BOTTOM_FALLBACK",
+  "outputs": [
+    {
+      "variant": "standard",
+      "path": "model/Dell-R730-2.5inch.glb",
+      "bytes": 13671616,
+      "sha256": "9c74ffddbb943bbfab7fe47955d2035c8869e4fa9e66eedf0304da6b30059e08",
+      "textures": {
+        "front": {
+          "path": "qa/build/standard-textures/front.png",
+          "sha256": "11282eeabdedf8669d2a9913d2f8c53f740ddceed0c3d5c5f058748533b57109"
+        },
+        "rear": {
+          "path": "qa/build/standard-textures/rear.png",
+          "sha256": "1780ac1b2f441757255d9942a0463a3b4291b6849e51382bc6724a1dbaf4c001"
+        },
+        "left": {
+          "path": "qa/build/standard-textures/left.png",
+          "sha256": "fb106fc93c1b70604f455f5b5176d17dcbf5db7b698fae305ac96356b38f5080"
+        },
+        "right": {
+          "path": "qa/build/standard-textures/right.png",
+          "sha256": "fd9a429a785432830c4a822d8d156f4bf7e2714350b70960d988cf9ac3f6875a"
+        },
+        "top": {
+          "path": "qa/build/standard-textures/top.png",
+          "sha256": "f7de7ef31bdb830719db78e569c589995870239fe30187f579720f5afa6aa4b8"
+        },
+        "bottom": {
+          "path": "qa/build/standard-textures/bottom.png",
+          "sha256": "71298194fdb04d2b2d3429cabf996b8cc495afaf266605360998329660c22fea"
+        }
+      }
+    },
+    {
+      "variant": "web",
+      "path": "model/Dell-R730-2.5inch-web.glb",
+      "bytes": 1855664,
+      "sha256": "a86fe63f2e27d1f0cd251e5a69c94f71057ff5733f267e22cbed4bc49de8288e",
+      "textures": {
+        "front": {
+          "path": "qa/build/web-textures/front.jpg",
+          "sha256": "7f6f5a60983cc93bb6163869e43d6f6957e757840d5ead9b5149aa8e4d7e2787"
+        },
+        "rear": {
+          "path": "qa/build/web-textures/rear.jpg",
+          "sha256": "8e91025669b5d8f57d4a2155e00b0ca335d333570e0fd10ff4c2ce6bd3f87fe4"
+        },
+        "left": {
+          "path": "qa/build/web-textures/left.jpg",
+          "sha256": "0c31d6025c2cb61d541b2a87004343312cb1f812a2d315a8617e691a697099bb"
+        },
+        "right": {
+          "path": "qa/build/web-textures/right.jpg",
+          "sha256": "379a4821325858c782feb4d144c941b99af91e1b638d84b5f4bb46632d7f07f8"
+        },
+        "top": {
+          "path": "qa/build/web-textures/top.jpg",
+          "sha256": "ed603a3748ae07773eba28cf5e65505ef0fbe71cf091f264763dc736f40f68f4"
+        },
+        "bottom": {
+          "path": "qa/build/web-textures/bottom.jpg",
+          "sha256": "b01998e6d5138c8c4eae624f77e28a21740d184bd9dffdcb7647c75ed305d7d0"
+        }
+      }
+    }
+  ]
+}

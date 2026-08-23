@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>R730 QA Viewer B — model-viewer</title>
+  <script type="importmap">{"imports":{"three":"../vendor/three-r169.module.js"}}</script>
+  <script type="module" src="../vendor/model-viewer-module.min.js"></script>
+  <style>
+    html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#e5e7eb;font:12px system-ui,sans-serif}
+    model-viewer{width:100%;height:100%;background:transparent;--poster-color:transparent}
+    #status{position:fixed;left:10px;top:10px;padding:6px 9px;border-radius:5px;background:#111c;color:#fff;z-index:3}
+    body.checker-light{background-color:#fff;background-image:linear-gradient(45deg,#d6d9dd 25%,transparent 25%),linear-gradient(-45deg,#d6d9dd 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#d6d9dd 75%),linear-gradient(-45deg,transparent 75%,#d6d9dd 75%);background-size:40px 40px;background-position:0 0,0 20px,20px -20px,-20px 0}
+    body.checker-dark{background-color:#1b1d20;background-image:linear-gradient(45deg,#34383d 25%,transparent 25%),linear-gradient(-45deg,#34383d 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#34383d 75%),linear-gradient(-45deg,transparent 75%,#34383d 75%);background-size:40px 40px;background-position:0 0,0 20px,20px -20px,-20px 0}
+  </style>
+</head>
+<body data-status="loading"><div id="status">loading</div><model-viewer id="mv" camera-controls interaction-prompt="none" shadow-intensity="0" exposure="1" tone-mapping="neutral" field-of-view="24deg" min-field-of-view="24deg" max-field-of-view="24deg" min-camera-orbit="auto auto 5%" max-camera-orbit="auto auto 300%"></model-viewer><script type="module" src="viewer.js?v=5"></script></body>
+</html>
