@@ -1,0 +1,96 @@
+                                                                                                                                                                                                                                                                                                                     HUAWEI FusionServer 
+                                                                                                                                                                                                                                                                                                                                                          RH2288 V3
+                Copyright © Huawei Technologies Co., Ltd. 2016. All rights reserved.
+                No part of this document may be reproduced or transmitted in any form or by any means without prior written consent of Huawei Technologies Co., Ltd.
+                Trademark Notice
+                        , HUAWEI, and          are trademarks or registered trademarks of Huawei Technologies Co., Ltd.
+                Other trademarks, product, service and company names mentioned are the property of their respective owners.
+                General Disclaimer                                                                                                                  HUAWEI TECHNOLOGIES CO., LTD.
+                The information in this document may contain predictive statements including,                                                                          Huawei Industrial Base
+                                                                                                                                                                           Bantian Longgang
+                without limitation, statements regarding the future financial and operating results, 
+                future product portfolio, new technology, etc. There are a number of factors                                                                   Shenzhen 518129, P.R. China
+                that could cause actual results and developments to differ materially from those                                                                      Tel: +86-755-28780808
+                expressed or implied in the predictive statements. Therefore, such information                                                   Version No.: M3-035260-20160728-C-2.0
+                is provided for reference purpose only and constitutes neither an offer nor an 
+                acceptance. Huawei may change the information at any time without notice.                                                                                 www.huawei.com                                                HUAWEI TECHNOLOGIES CO., LTD.
+             HUAWEI FusionServer 
+             RH2288 V3
+                                                                                                                                                                                                RH2288 V3                            RH2288 V3                            RH2288 V3                            RH2288 V3
+                                                                                                                                                                                               (8 hard disks)                       (10 hard disks)                     (12 hard disks)                      (25 hard disks)
+                                                               Flexible conﬁguration and expansion of local storage                                                                                                                                    RH2288 V3
+                                                               
+                The HUAWEI FusionServer RH2288                    Provides a maximum of sixteen 3.5-inch hard disks or twenty-eight 2.5-inch hard disks.                                 Form factor                    2U rack server
+                                                               
+                V3 (RH2288 V3 for short) is a new-                Offers a wide range of hard disk enclosures and RAID controllers, allowing flexible 
+                                                                                                                                                                                         Number of processors           1 or 2
+                generation 2U dual-socket rack                    configuration on demand. 
+                                                                                                                                                                                                                            ®     ®
+                                                                                                                                                                                         Processor model                Intel  Xeon  E5-2600 v3/v4 series processor
+                                                               
+                                                                  Cope with big data challenges by supporting the latest 12G SAS, which provides 1x 
+                server. It provides flexible resource 
+                                                                  higher bandwidth than the 6G SAS.                                                                                      Number of memory slots         16 slots for DDR4 RDIMMs or LRDIMMs
+                expansion capabilities as well as 
+                high computing performance.                                                                                                                                                                             Supports the following hard disk configurations:
+                It is an ideal choice for Internet,            High performance allows rapid respond to business growth                                                                                                 •  Eight front 2.5-inch SSDs or SAS or SATA HDDs
+                                                                                             ®      ®                                                                                                                   •  Ten front 3.5-inch SATA HDDs
+                                                               
+                                                                  Supports up to two Intel  Xeon  E5-2600 v3/v4 processors. Each processor supports 
+                big data, cloud computing, and 
+                                                                  a maximum of 18 cores and provides two 9.6 GT/s QuickPath Interconnect (QPI) links                                                                    •  Twelve front 3.5-inch SAS or SATA HDDs (NVMe model supports four NVMe SSD disks) and two rear hard disk 
+                enterprise key applications.                                                                                                                                             Maximum local storage            modules. Each module provides two 2.5-inch SSDs or SAS or SATA HDDs or 3.5-inch SAS or SATA HDDs.
+                                                                  between processors. 
+                                                                                                                                                                                                                        •  Twenty-five front 2.5-inch SSDs or SAS or SATA HDDs and two or three rear 2.5-inch SSDs or SAS or SATA HDDs
+                                                               
+                                                                  Supports up to sixteen 2400 MT/s DDR4 DIMMs to provide a maximum memory 
+                                                                                                                                                                                                                        Supports built-in Flash:
+                                                                  capacity of 1 TB.                                                                                                                                     • Two Mini SSDs (SATA DOM)
+                
+                    Provides large local storage 
+                                                                                                                                                                                                                        • Two SD card
+                                                               
+                    space to quickly respond to fast              Provides up to six PCIe slots, offering the space for I/O extension.
+                                                                                                                                                                                                                        •  Supports RAID 0, 1, 10, 5, 50, 6, and 60
+                                                               
+                    data increase.                                Provides I/O performance surpassing traditional hard disks when used with PCIe SSD 
+                                                                  cards and NVMe SSD disks.                                                                                              RAID                           •  Uses a supercapacitor to protect RAID cache data from power failures
+                                                                                                                                                                                                                        •  Supports RAID state migration, configuration memory, self-diagnosis, and web-based remote configuration 
+                
+                    Ensures high energy efficiency 
+                                                                                                                                                                                         Network ports                  Supports two or four GE ports or two 10GE ports or two 56G FDR IB ports
+                    by using intelligent fine-grained          Intelligent power control increases energy efﬁciency
+                    power control technologies.                                                                                                                                          PCIe expansion                 Supports a maximum of 6 PCIe slots
+                                                               
+                                                                  Uses 80 Plus Platinum power supply units (PSUs), meeting Energy Star specifications.
+                                                               
+                                                                  Uses the dynamic energy management technology (DEMT) to adjust server operating                                        Fan                            Hot-swappable fan modules in N+1 redundancy
+                
+                    Provides a LED digital 
+                    management panel to open the                  status dynamically and limit the power consumption to an optimal level.                                                Power supply                   2 hot-swappable power supplies in 1+1 redundancy
+                                                               
+                    era of digital management.                    Uses power capping to allocate cooling and power supply resources on demand, and 
+                                                                  increase resource utilization and deployment density without affecting services.                                       Management                     The on-board iBMC module supports Intelligent Platform Management Interface (IPMI), SOL, KVM over IP, and virtual 
+                                                                                                                                                                                                                        media, and provides a 1 Gbit/s RJ45 management network port supporting NC-SI.
+                                                               
+                                                                  Supports high-voltage DC power supplies, preventing conversion between AC and DC 
+                                                                  power supplies and minimizing the power loss in power conversion.                                                                                     CentOS
+                                                                                                                                                                                                                        Citrix XenServer
+                                                               
+                                                                  Uses proportion integration differentiation (PID) to control heat dissipation and speed                                                               Microsoft Windows Server
+                                                                  adjustment policies, implements stepless speed regulation and on-demand allocation of                                  Supported OSs                  Red Hat Enterprise Linux
+                                                                  heat dissipation resources, minimizing power consumption and noise.                                                                                   SUSE Linux Enterprise Server
+                                                                                                                                                                                                                        VMware ESXi
+                                                               Efﬁcient management and maintenance                                                                                       Operating temperature          5°C to 45°C (41°F to 113°F)
+                                                               
+                                                                  Providing digital LED fault diagnostics panel, so the device management more accurate                                  Certification                  CE, UL, FCC, CCC, and RoHS
+                                                                  and more convenient.                                                                                                                                  Guide rails
+                                                                                                                                                                                         Installation suite
+                                                               
+                                                                  Provides uMate management tool and FDM2.0 fault diagnose management function, to                                                                      Holding rails and cable management arm (optional)
+                                                                  improve management and troubleshooting efficiency.
+                                                                                                                                                                                         Dimensions (W x D x H)         RH2288 V3 with 3.5-inch hard disks: 447 mm × 748 mm x 86.1 mm (17.60 in. x 29.45 in. x 3.39 in.)
+                                                               
+                                                                  Uses an independent iBMC module to implement Serial over LAN (SOL), remote KVM, 
+                                                                                                                                                                                                                        RH2288 V3 with 2.5-inch hard disks: 447 mm × 708 mm x 86.1 mm (17.60 in. x 27.84 in. x 3.39 in.)
+                                                                  and functions such as remote startup and shutdown of the server.

@@ -1,0 +1,87 @@
+{
+  "model_key": "Huawei-RH2288V3-2.5inch",
+  "status": "PASS_WITH_BOTTOM_FALLBACK",
+  "identity": {
+    "official_product": "Huawei FusionServer RH2288 V3",
+    "nameplate_model": "H22M-03",
+    "form_factor": "2U",
+    "front": "24x2.5-inch SFF, carrier indices 00-23",
+    "rear": "official corrected no-rear-drive topology, dual vertically stacked AC PSU, two-port flexible NIC, standard I/O/PCIe",
+    "power": "AC",
+    "body_dimensions_mm": [447.0, 86.1, 708.0],
+    "rack_mounting_span_mm": 482.6
+  },
+  "user_correction": {
+    "applied": true,
+    "rejected_table_rear": "retained only as pre-correction conflict history",
+    "historical_records": "qa/repair-before-user-correction/"
+  },
+  "views": {
+    "count": 6,
+    "audit": "PASS",
+    "ratio_error_max_percent": 0.0555,
+    "core_alpha_below_250_percent_max": 0.0,
+    "bottom": "GENERIC_BOTTOM_FALLBACK",
+    "details": "qa/audits/views.json"
+  },
+  "models": {
+    "standard": {
+      "path": "model/Huawei-RH2288V3-2.5inch.glb",
+      "bytes": 26207588,
+      "sha256": "daa3ff261e7f7e40b9e3566ebff5430c8dafe78054bec673487cf9828a6e34ee",
+      "audit": "PASS"
+    },
+    "web": {
+      "path": "model/Huawei-RH2288V3-2.5inch-web.glb",
+      "bytes": 10089824,
+      "sha256": "10e11be59a635642e8f3ec289e12766b1a028384ab73edc0060792ff2ae9d570",
+      "audit": "PASS"
+    },
+    "bounds_m": [0.4826000035, 0.0863000005, 0.7153500021],
+    "node_count": 453,
+    "mesh_count": 453,
+    "primitive_count": 453,
+    "material_count": 13,
+    "texture_count": 6,
+    "unique_basecolor_image_count": 6,
+    "mirrored_nodes": 0,
+    "rear_drive_nodes": 0,
+    "front_carrier_groups": 24,
+    "ac_psu_groups": 2
+  },
+  "browser_qa": {
+    "three_standard": "PASS_10_VIEWS",
+    "three_web": "PASS_10_VIEWS",
+    "babylon_standard": "PASS_10_VIEWS",
+    "babylon_web": "PASS_10_VIEWS",
+    "headed_attempt": "X_SERVER_UNAVAILABLE",
+    "headless_real_chromium": "PASS",
+    "post_repair_render_count": 40,
+    "details": "qa/browser-qa.md"
+  },
+  "front_imagegen_repair": {
+    "applied": true,
+    "lineage": "built-in ImageGen source-locked generation plus feature-free top/bottom rail extension",
+    "front_sha256": "f05faeccd0dfe3fcaf59e930e60b0be309a9880c44914bb29bca89f520bbfbfc",
+    "carrier_count": 24,
+    "left_controls": "one USB 2.0 and four Ethernet indicator groups",
+    "right_controls": "diagnostic display, health, UID, power, NMI and VGA",
+    "previous_state": "repair-imagegen-front/before/",
+    "details": "repair-imagegen-front/README.md"
+  },
+  "official_optional_3d": {
+    "found": false,
+    "search_record": "source/optional-3d/README.md"
+  },
+  "non_bottom_evidence_gaps": [],
+  "fallbacks": [
+    "Exact underside was not found after documented search exhaustion; a closed plain zinc-grey bottom is used without invented detail."
+  ],
+  "audit_files": [
+    "qa/audits/views.json",
+    "qa/audits/glb-standard.json",
+    "qa/audits/glb-web.json",
+    "qa/audits/structure.json",
+    "repair-imagegen-front/browser-audit.json"
+  ]
+}
