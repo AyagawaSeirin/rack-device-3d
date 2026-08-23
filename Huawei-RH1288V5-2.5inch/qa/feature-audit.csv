@@ -1,0 +1,33 @@
+face,component,expected_count,actual_glb_counterpart,render_evidence,status
+front,front rack ears,2,front-only left/right extruded ear meshes with true circular holes and source-matched branding,qa/renders/three-standard-front.png; qa/renders/babylon-web-front.png,PASS
+front,SFF carrier/filler faces,10,ten separate recessed carrier bodies plus ten source-matched front quads,qa/renders/three-standard-front.png; qa/renders/babylon-web-front.png,PASS
+front,SFF honeycomb ventilation fields,10,ten opaque source-photo grille fields on relieved carriers,qa/renders/three-standard-front.png; qa/renders/babylon-web-front.png,PASS
+front,carrier handles and latches,10,ten separate handle/latch reliefs with source-matched fronts,qa/renders/three-standard-front.png; qa/renders/babylon-web-front.png,PASS
+front,front control panel,1,separate recessed control-panel body and source-matched face,qa/renders/three-standard-front.png; qa/renders/babylon-web-front.png,PASS
+front,fault diagnosis display,1,source-matched flush display on the relieved control panel,qa/renders/three-standard-front.png; qa/renders/babylon-web-front.png,PASS
+front,indicator/button group,5,source-matched flush controls on the relieved control panel,qa/renders/three-standard-front.png; qa/renders/babylon-web-front.png,PASS
+front,USB 3.0 port,1,source-matched front USB recess on the relieved control panel,qa/renders/three-standard-front.png; qa/renders/babylon-web-front.png,PASS
+front,Huawei flower mark and HUAWEI wordmark,1,source-matched physical-left ear texture,qa/renders/three-standard-front.png; qa/renders/babylon-web-front.png,PASS
+front,1288H V5 model marking,1,source-matched physical-right ear texture,qa/renders/three-standard-front.png; qa/renders/babylon-web-front.png,PASS
+rear,external PCIe slot covers,3,three separately raised stamped cover bodies plus source-matched fronts,qa/renders/three-standard-rear.png; qa/renders/babylon-web-rear.png,PASS
+rear,optional LOM1/2 position,1,"closed, separately raised blank; no connector geometry",qa/renders/three-standard-rear.png; qa/renders/babylon-web-rear.png,PASS
+rear,VGA port,1,true service-strip opening with recessed blue insert,qa/renders/three-standard-rear.png; qa/renders/babylon-web-rear.png,PASS
+rear,GE/management/serial RJ45 group,4,four true service-strip openings with four recessed sockets,qa/renders/three-standard-rear.png; qa/renders/babylon-web-rear.png,PASS
+rear,USB 3.0 ports,2,two vertically stacked true openings with recessed blue inserts,qa/renders/three-standard-rear.png; qa/renders/babylon-web-rear.png,PASS
+rear,FlexIO position,1,"closed, separately raised blank; no connector geometry",qa/renders/three-standard-rear.png; qa/renders/babylon-web-rear.png,PASS
+rear,hot-swap AC PSU modules,2,two identical separately protruding PSU module bodies,qa/renders/three-standard-rear.png; qa/renders/babylon-web-rear.png,PASS
+rear,AC C14 inlets,2,two true PSU-face openings with recessed black IEC C14 blocks,qa/renders/three-standard-rear.png; qa/renders/babylon-web-rear.png,PASS
+rear,PSU fan grilles,2,"two true circular openings, recessed cavities, and eight-spoke grille relief",qa/renders/three-standard-rear.png; qa/renders/babylon-web-rear.png,PASS
+rear,PSU handles/release latches,2,source-matched release/handle details on two identical PSU faces,qa/renders/three-standard-rear.png; qa/renders/babylon-web-rear.png,PASS
+top,closed main cover,1,independent top face over closed shell,qa/renders/three-standard-top.png; qa/renders/babylon-web-top.png,PASS
+top,top vent bands,2,two texture-aligned groups totaling eighty-eight recessed slot meshes,qa/renders/three-standard-top.png; qa/renders/babylon-web-top.png,PASS
+top,cover latch,1,separate shallow base and raised handle relief,qa/renders/three-standard-top.png; qa/renders/babylon-web-top.png,PASS
+top,front fixed strip and seam,1,full-width seam relief at verified front strip,qa/renders/three-standard-top.png; qa/renders/babylon-web-top.png,PASS
+top,rear stepped cover contour,1,two asymmetric raised rear-cover step groups,qa/renders/three-standard-top.png; qa/renders/babylon-web-top.png,PASS
+top,factory label zones,4,source-matched flush texture only; unit identifiers omitted,qa/renders/three-standard-top.png; qa/renders/babylon-web-top.png,PASS
+left,left wall,1,independent non-mirrored physical-left textured wall,qa/renders/three-standard-left.png; qa/renders/babylon-web-left.png,PASS
+left,left rail slots/fasteners,several,left-specific cylinders and shallow slot relief,qa/renders/three-standard-left.png; qa/renders/babylon-web-left.png,PASS
+right,right wall,1,independent non-mirrored physical-right textured wall,qa/renders/three-standard-right.png; qa/renders/babylon-web-right.png,PASS
+right,right rail slots/fasteners,several,right-specific cylinders and shallow slot relief,qa/renders/three-standard-right.png; qa/renders/babylon-web-right.png,PASS
+bottom,conservative base plate,1,opaque 436:708 generic-bottom fallback plane with no unsupported detail,qa/renders/three-standard-bottom.png; qa/renders/babylon-web-bottom.png,PASS_WITH_BOTTOM_FALLBACK
+all,closed chassis shell,1,closed opaque six-sided inner shell behind every exterior surface,qa/renders/three-standard-front-right.png; qa/renders/babylon-web-rear-left.png,PASS

@@ -1,0 +1,249 @@
+{
+  "status": "PASS",
+  "pair_count": 40,
+  "mean_mae_0_to_255": 0.293013,
+  "max_mae_0_to_255": 1.332932,
+  "note": "Differences reflect the intentional standard/web texture resolution and independent engine rasterization; geometry, orientation, opacity, and feature counts agree.",
+  "pairs": [
+    {
+      "check": "standard_vs_web_same_engine",
+      "engine": "three",
+      "angle": "front",
+      "mae_0_to_255": 0.121183
+    },
+    {
+      "check": "standard_vs_web_same_engine",
+      "engine": "three",
+      "angle": "rear",
+      "mae_0_to_255": 0.0
+    },
+    {
+      "check": "standard_vs_web_same_engine",
+      "engine": "three",
+      "angle": "left",
+      "mae_0_to_255": 0.555259
+    },
+    {
+      "check": "standard_vs_web_same_engine",
+      "engine": "three",
+      "angle": "right",
+      "mae_0_to_255": 0.097521
+    },
+    {
+      "check": "standard_vs_web_same_engine",
+      "engine": "three",
+      "angle": "top",
+      "mae_0_to_255": 0.249116
+    },
+    {
+      "check": "standard_vs_web_same_engine",
+      "engine": "three",
+      "angle": "bottom",
+      "mae_0_to_255": 0.170907
+    },
+    {
+      "check": "standard_vs_web_same_engine",
+      "engine": "three",
+      "angle": "front-left",
+      "mae_0_to_255": 0.133339
+    },
+    {
+      "check": "standard_vs_web_same_engine",
+      "engine": "three",
+      "angle": "front-right",
+      "mae_0_to_255": 0.150841
+    },
+    {
+      "check": "standard_vs_web_same_engine",
+      "engine": "three",
+      "angle": "rear-left",
+      "mae_0_to_255": 0.087119
+    },
+    {
+      "check": "standard_vs_web_same_engine",
+      "engine": "three",
+      "angle": "rear-right",
+      "mae_0_to_255": 0.111167
+    },
+    {
+      "check": "standard_vs_web_same_engine",
+      "engine": "babylon",
+      "angle": "front",
+      "mae_0_to_255": 0.116258
+    },
+    {
+      "check": "standard_vs_web_same_engine",
+      "engine": "babylon",
+      "angle": "rear",
+      "mae_0_to_255": 0.0
+    },
+    {
+      "check": "standard_vs_web_same_engine",
+      "engine": "babylon",
+      "angle": "left",
+      "mae_0_to_255": 0.089858
+    },
+    {
+      "check": "standard_vs_web_same_engine",
+      "engine": "babylon",
+      "angle": "right",
+      "mae_0_to_255": 0.098741
+    },
+    {
+      "check": "standard_vs_web_same_engine",
+      "engine": "babylon",
+      "angle": "top",
+      "mae_0_to_255": 0.223956
+    },
+    {
+      "check": "standard_vs_web_same_engine",
+      "engine": "babylon",
+      "angle": "bottom",
+      "mae_0_to_255": 0.168453
+    },
+    {
+      "check": "standard_vs_web_same_engine",
+      "engine": "babylon",
+      "angle": "front-left",
+      "mae_0_to_255": 0.074816
+    },
+    {
+      "check": "standard_vs_web_same_engine",
+      "engine": "babylon",
+      "angle": "front-right",
+      "mae_0_to_255": 0.08137
+    },
+    {
+      "check": "standard_vs_web_same_engine",
+      "engine": "babylon",
+      "angle": "rear-left",
+      "mae_0_to_255": 0.043753
+    },
+    {
+      "check": "standard_vs_web_same_engine",
+      "engine": "babylon",
+      "angle": "rear-right",
+      "mae_0_to_255": 0.050106
+    },
+    {
+      "check": "three_vs_babylon_same_model",
+      "model": "standard",
+      "angle": "front",
+      "mae_0_to_255": 0.332037
+    },
+    {
+      "check": "three_vs_babylon_same_model",
+      "model": "standard",
+      "angle": "rear",
+      "mae_0_to_255": 0.320279
+    },
+    {
+      "check": "three_vs_babylon_same_model",
+      "model": "standard",
+      "angle": "left",
+      "mae_0_to_255": 0.586751
+    },
+    {
+      "check": "three_vs_babylon_same_model",
+      "model": "standard",
+      "angle": "right",
+      "mae_0_to_255": 0.322429
+    },
+    {
+      "check": "three_vs_babylon_same_model",
+      "model": "standard",
+      "angle": "top",
+      "mae_0_to_255": 1.295925
+    },
+    {
+      "check": "three_vs_babylon_same_model",
+      "model": "standard",
+      "angle": "bottom",
+      "mae_0_to_255": 0.696025
+    },
+    {
+      "check": "three_vs_babylon_same_model",
+      "model": "standard",
+      "angle": "front-left",
+      "mae_0_to_255": 0.288936
+    },
+    {
+      "check": "three_vs_babylon_same_model",
+      "model": "standard",
+      "angle": "front-right",
+      "mae_0_to_255": 0.279874
+    },
+    {
+      "check": "three_vs_babylon_same_model",
+      "model": "standard",
+      "angle": "rear-left",
+      "mae_0_to_255": 0.291833
+    },
+    {
+      "check": "three_vs_babylon_same_model",
+      "model": "standard",
+      "angle": "rear-right",
+      "mae_0_to_255": 0.309014
+    },
+    {
+      "check": "three_vs_babylon_same_model",
+      "model": "web",
+      "angle": "front",
+      "mae_0_to_255": 0.331438
+    },
+    {
+      "check": "three_vs_babylon_same_model",
+      "model": "web",
+      "angle": "rear",
+      "mae_0_to_255": 0.320279
+    },
+    {
+      "check": "three_vs_babylon_same_model",
+      "model": "web",
+      "angle": "left",
+      "mae_0_to_255": 0.166207
+    },
+    {
+      "check": "three_vs_babylon_same_model",
+      "model": "web",
+      "angle": "right",
+      "mae_0_to_255": 0.323834
+    },
+    {
+      "check": "three_vs_babylon_same_model",
+      "model": "web",
+      "angle": "top",
+      "mae_0_to_255": 1.332932
+    },
+    {
+      "check": "three_vs_babylon_same_model",
+      "model": "web",
+      "angle": "bottom",
+      "mae_0_to_255": 0.712541
+    },
+    {
+      "check": "three_vs_babylon_same_model",
+      "model": "web",
+      "angle": "front-left",
+      "mae_0_to_255": 0.296513
+    },
+    {
+      "check": "three_vs_babylon_same_model",
+      "model": "web",
+      "angle": "front-right",
+      "mae_0_to_255": 0.287517
+    },
+    {
+      "check": "three_vs_babylon_same_model",
+      "model": "web",
+      "angle": "rear-left",
+      "mae_0_to_255": 0.29711
+    },
+    {
+      "check": "three_vs_babylon_same_model",
+      "model": "web",
+      "angle": "rear-right",
+      "mae_0_to_255": 0.305288
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "identity": "Huawei FusionServer Pro 1288H V5 1U 10x2.5-inch; 3-I/O; LOM/FlexIO empty; dual identical AC PSU",
+  "identity_status": "VERIFIED",
+  "bottom_mode": "GENERIC_BOTTOM_FALLBACK",
+  "views": {
+    "status": "PASS",
+    "errors": 0,
+    "warnings": 5
+  },
+  "standard_glb": {
+    "status": "PASS",
+    "errors": 0,
+    "warnings": 0
+  },
+  "web_glb": {
+    "status": "PASS",
+    "errors": 0,
+    "warnings": 0
+  },
+  "standard_web_geometry_identical": true,
+  "webgl": {
+    "status": "PASS",
+    "render_count": 40,
+    "alpha_render_count": 8
+  },
+  "feature_inventory": {
+    "rows": 32,
+    "unresolved": 0
+  },
+  "source_comparisons": {
+    "rows": 12,
+    "maximum_mae_0_to_255_diagnostic_only": 3.552878
+  },
+  "optional_official_iv3d": "preserved unchanged under source/optional-3d; not imported or substituted",
+  "optional_official_iv3d_checksum_verification": {
+    "listed_files": 49,
+    "failed": 0,
+    "status": "PASS"
+  },
+  "final_status": "PASS_WITH_BOTTOM_FALLBACK"
+}

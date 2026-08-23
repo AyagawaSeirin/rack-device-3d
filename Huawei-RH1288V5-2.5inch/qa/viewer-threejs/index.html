@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Three.js actual-GLB QA</title>
+  <style>
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #d0d0d0; }
+    canvas { display: block; width: 100%; height: 100%; }
+    #status { position: fixed; left: 8px; bottom: 6px; color: transparent; font: 10px sans-serif; user-select: none; }
+  </style>
+  <script type="importmap">
+  {"imports":{"three":"/qa/tooling/node_modules/three/build/three.module.js"}}
+  </script>
+</head>
+<body>
+  <div id="status">loading</div>
+  <script type="module">
+    import * as THREE from 'three';
+    import { GLTFLoader } from '/qa/tooling/node_modules/three/examples/jsm/loaders/GLTFLoader.js';
+
+    const query = new URLSearchParams(location.search);
+    const flavor = query.get('model') === 'web' ? 'web' : 'standard';
+    const view = query.get('view') || 'front';
+    const background = query.get('bg') || 'neutral';
+    const filename = flavor === 'web' ? 'Huawei-RH1288V5-2.5inch-web.glb' : 'Huawei-RH1288V5-2.5inch.glb';
+    const state = window.viewerState = { engine: `Three.js r${THREE.REVISION}`, flavor, filename, view, loaded: false, meshCount: 0, errors: [] };
+    const status = document.getElementById('status');
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false, preserveDrawingBuffer: true });
+    renderer.setPixelRatio(1);
+    renderer.setSize(innerWidth, innerHeight, false);
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+    renderer.toneMapping = THREE.NoToneMapping;
+    document.body.prepend(renderer.domElement);
+
+    function backgroundColor() {
+      if (background === 'dark') return 0x15191d;
+      if (background === 'light') return 0xf4f4f4;
+      return 0xd0d0d0;
+    }
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(backgroundColor());
+    scene.add(new THREE.HemisphereLight(0xffffff, 0x5a6470, 2.1));
+    const key = new THREE.DirectionalLight(0xffffff, 2.4); key.position.set(1.5, 2.5, 2.0); scene.add(key);
+    const fill = new THREE.DirectionalLight(0xffffff, 1.2); fill.position.set(-2.0, 0.8, -1.5); scene.add(fill);
+
+    const directions = {
+      front: [0, 0, 1], rear: [0, 0, -1], left: [-1, 0, 0], right: [1, 0, 0],
+      top: [0, 1, 0], bottom: [0, -1, 0],
+      'front-left': [-1.05, 0.56, 1.20], 'front-right': [1.05, 0.56, 1.20],
+      'rear-left': [-1.05, 0.56, -1.20], 'rear-right': [1.05, 0.56, -1.20]
+    };
+    const orthographic = ['front','rear','left','right','top','bottom'].includes(view);
+
+    function corners(box) {
+      const out = [];
+      for (const x of [box.min.x, box.max.x]) for (const y of [box.min.y, box.max.y]) for (const z of [box.min.z, box.max.z]) out.push(new THREE.Vector3(x,y,z));
+      return out;
+    }
+
+    function makeCamera(object) {
+      const box = new THREE.Box3().setFromObject(object);
+      const center = box.getCenter(new THREE.Vector3());
+      const size = box.getSize(new THREE.Vector3());
+      const dir = new THREE.Vector3(...(directions[view] || directions.front)).normalize();
+      const aspect = innerWidth / innerHeight;
+      let camera;
+      if (orthographic) {
+        camera = new THREE.OrthographicCamera(-aspect, aspect, 1, -1, 0.01, 10);
+        camera.position.copy(center).addScaledVector(dir, 2.0);
+        camera.up.set(0, 1, 0);
+        if (view === 'top' || view === 'bottom') camera.up.set(0, 0, -1);
+        camera.lookAt(center); camera.updateMatrixWorld(true);
+        let maxX = 0, maxY = 0;
+        for (const point of corners(box)) {
+          point.applyMatrix4(camera.matrixWorldInverse);
+          maxX = Math.max(maxX, Math.abs(point.x)); maxY = Math.max(maxY, Math.abs(point.y));
+        }
+        const halfH = Math.max(maxY / 0.84, maxX / (aspect * 0.90), 0.03);
+        camera.left = -halfH * aspect; camera.right = halfH * aspect;
+        camera.top = halfH; camera.bottom = -halfH; camera.updateProjectionMatrix();
+      } else {
+        camera = new THREE.PerspectiveCamera(28, aspect, 0.01, 10);
+        const radius = size.length() / 2;
+        const distance = radius / Math.sin(THREE.MathUtils.degToRad(camera.fov / 2)) * 1.15;
+        camera.position.copy(center).addScaledVector(dir, distance);
+        camera.up.set(0, 1, 0); camera.lookAt(center); camera.updateProjectionMatrix();
+      }
+      return camera;
+    }
+
+    new GLTFLoader().load(`/model/${filename}`, gltf => {
+      const root = gltf.scene;
+      scene.add(root);
+      root.traverse(node => { if (node.isMesh) state.meshCount += 1; });
+      const camera = makeCamera(root);
+      renderer.render(scene, camera);
+      state.loaded = true;
+      state.camera = camera.type;
+      state.bounds = new THREE.Box3().setFromObject(root).getSize(new THREE.Vector3()).toArray();
+      status.textContent = JSON.stringify(state);
+      document.title = `READY Three ${flavor} ${view}`;
+      window.dispatchEvent(new Event('viewer-ready'));
+    }, undefined, error => {
+      state.errors.push(String(error?.message || error));
+      status.textContent = JSON.stringify(state);
+      document.title = 'ERROR Three';
+    });
+  </script>
+</body>
+</html>

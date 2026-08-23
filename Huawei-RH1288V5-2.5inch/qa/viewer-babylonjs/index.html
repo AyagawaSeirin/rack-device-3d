@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Babylon.js actual-GLB QA</title>
+  <style>
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #d0d0d0; }
+    canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+    #status { position: fixed; left: 8px; bottom: 6px; color: transparent; font: 10px sans-serif; user-select: none; }
+  </style>
+  <script src="/qa/tooling/node_modules/babylonjs/babylon.js"></script>
+  <script src="/qa/tooling/node_modules/babylonjs-loaders/babylonjs.loaders.min.js"></script>
+</head>
+<body>
+  <canvas id="renderCanvas"></canvas><div id="status">loading</div>
+  <script>
+    const query = new URLSearchParams(location.search);
+    const flavor = query.get('model') === 'web' ? 'web' : 'standard';
+    const view = query.get('view') || 'front';
+    const background = query.get('bg') || 'neutral';
+    const filename = flavor === 'web' ? 'Huawei-RH1288V5-2.5inch-web.glb' : 'Huawei-RH1288V5-2.5inch.glb';
+    const state = window.viewerState = { engine: `Babylon.js ${BABYLON.Engine.Version}`, flavor, filename, view, loaded: false, meshCount: 0, errors: [] };
+    const canvas = document.getElementById('renderCanvas');
+    const status = document.getElementById('status');
+    const engine = new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true }, false);
+    engine.setSize(innerWidth, innerHeight);
+    const scene = new BABYLON.Scene(engine);
+    scene.useRightHandedSystem = true;
+    const colors = { neutral: [0.8157,0.8157,0.8157], light: [0.9569,0.9569,0.9569], dark: [0.0824,0.098,0.1137] };
+    const c = colors[background] || colors.neutral;
+    scene.clearColor = new BABYLON.Color4(c[0], c[1], c[2], 1);
+    const hemi = new BABYLON.HemisphericLight('hemisphere', new BABYLON.Vector3(0,1,0), scene); hemi.intensity = 1.35;
+    const key = new BABYLON.DirectionalLight('key', new BABYLON.Vector3(-1,-1,-1), scene); key.intensity = 1.1;
+    const fill = new BABYLON.DirectionalLight('fill', new BABYLON.Vector3(1,-0.5,1), scene); fill.intensity = 0.6;
+    const directions = {
+      front: [0,0,1], rear: [0,0,-1], left: [-1,0,0], right: [1,0,0], top: [0,1,0], bottom: [0,-1,0],
+      'front-left': [-1.05,0.56,1.20], 'front-right': [1.05,0.56,1.20],
+      'rear-left': [-1.05,0.56,-1.20], 'rear-right': [1.05,0.56,-1.20]
+    };
+    const orthographic = ['front','rear','left','right','top','bottom'].includes(view);
+
+    function bounds(meshes) {
+      let min = new BABYLON.Vector3(Number.POSITIVE_INFINITY, Number.POSITIVE_INFINITY, Number.POSITIVE_INFINITY);
+      let max = new BABYLON.Vector3(Number.NEGATIVE_INFINITY, Number.NEGATIVE_INFINITY, Number.NEGATIVE_INFINITY);
+      for (const mesh of meshes) {
+        if (!mesh.getTotalVertices || mesh.getTotalVertices() === 0) continue;
+        mesh.computeWorldMatrix(true);
+        const box = mesh.getBoundingInfo().boundingBox;
+        min = BABYLON.Vector3.Minimize(min, box.minimumWorld); max = BABYLON.Vector3.Maximize(max, box.maximumWorld);
+      }
+      return { min, max, center: min.add(max).scale(0.5), size: max.subtract(min) };
+    }
+
+    function makeCamera(info) {
+      const d = BABYLON.Vector3.FromArray(directions[view] || directions.front).normalize();
+      const aspect = innerWidth / innerHeight;
+      const radius = info.size.length() / 2;
+      const distance = orthographic ? 2.0 : radius / Math.sin(BABYLON.Tools.ToRadians(28 / 2)) * 1.15;
+      const camera = new BABYLON.FreeCamera('camera', info.center.add(d.scale(distance)), scene);
+      camera.upVector = (view === 'top' || view === 'bottom') ? new BABYLON.Vector3(0,0,-1) : new BABYLON.Vector3(0,1,0);
+      camera.setTarget(info.center);
+      camera.minZ = 0.01; camera.maxZ = 10;
+      if (orthographic) {
+        camera.mode = BABYLON.Camera.ORTHOGRAPHIC_CAMERA;
+        let projectedW, projectedH;
+        if (view === 'front' || view === 'rear') { projectedW = info.size.x; projectedH = info.size.y; }
+        else if (view === 'left' || view === 'right') { projectedW = info.size.z; projectedH = info.size.y; }
+        else { projectedW = info.size.x; projectedH = info.size.z; }
+        const halfH = Math.max(projectedH / 2 / 0.84, projectedW / 2 / (aspect * 0.90), 0.03);
+        camera.orthoLeft = -halfH * aspect; camera.orthoRight = halfH * aspect;
+        camera.orthoTop = halfH; camera.orthoBottom = -halfH;
+      } else {
+        camera.fov = BABYLON.Tools.ToRadians(28);
+      }
+      scene.activeCamera = camera;
+      return camera;
+    }
+
+    BABYLON.SceneLoader.ImportMeshAsync('', '/model/', filename, scene).then(result => {
+      state.meshCount = result.meshes.filter(mesh => mesh.getTotalVertices && mesh.getTotalVertices() > 0).length;
+      const info = bounds(result.meshes);
+      const camera = makeCamera(info);
+      scene.render();
+      state.loaded = true;
+      state.camera = camera.mode === BABYLON.Camera.ORTHOGRAPHIC_CAMERA ? 'OrthographicCamera' : 'PerspectiveCamera';
+      state.bounds = [info.size.x, info.size.y, info.size.z];
+      status.textContent = JSON.stringify(state);
+      document.title = `READY Babylon ${flavor} ${view}`;
+      window.dispatchEvent(new Event('viewer-ready'));
+      engine.runRenderLoop(() => scene.render());
+    }).catch(error => {
+      state.errors.push(String(error?.message || error));
+      status.textContent = JSON.stringify(state);
+      document.title = 'ERROR Babylon';
+    });
+  </script>
+</body>
+</html>

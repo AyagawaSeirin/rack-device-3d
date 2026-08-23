@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "viewport_px": [
+    1600,
+    1000
+  ],
+  "engines": [
+    {
+      "name": "Three.js",
+      "version": "r180",
+      "models_loaded": [
+        "model/Huawei-RH1288V5-2.5inch.glb",
+        "model/Huawei-RH1288V5-2.5inch-web.glb"
+      ],
+      "mesh_count_each": 33,
+      "load_errors": 0
+    },
+    {
+      "name": "Babylon.js",
+      "version": "8.26.0",
+      "models_loaded": [
+        "model/Huawei-RH1288V5-2.5inch.glb",
+        "model/Huawei-RH1288V5-2.5inch-web.glb"
+      ],
+      "mesh_count_each": 33,
+      "load_errors": 0
+    }
+  ],
+  "views_per_engine_model": [
+    "front",
+    "rear",
+    "left",
+    "right",
+    "top",
+    "bottom",
+    "front-left",
+    "front-right",
+    "rear-left",
+    "rear-right"
+  ],
+  "required_render_count": 40,
+  "actual_render_count": 40,
+  "alpha_background_render_count": 8,
+  "reported_bounds_m": [
+    0.48260000348091125,
+    0.0430000014603138,
+    0.714000016450882
+  ],
+  "browser_console_errors": 0,
+  "non_model_warning": "Headless Chromium emitted GPU ReadPixels performance warnings only; no loader, shader, resource, or page error.",
+  "missing": []
+}

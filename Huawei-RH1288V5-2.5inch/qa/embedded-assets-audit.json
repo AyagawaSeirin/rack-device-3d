@@ -1,0 +1,374 @@
+{
+  "status": "PASS",
+  "standard_web_geometry_identical": true,
+  "models": {
+    "standard": {
+      "path": "model/Huawei-RH1288V5-2.5inch.glb",
+      "sha256": "5aab50a1f7bf6874bf5ecd2a611fc2463f6f511ab935d84783d19c3b488c93e5",
+      "byte_size": 11735768,
+      "geometry_hash": "27ffad72d7f61e9640d21c5ac25eb2efa909c443d5618c4e8cc60738b8f7e06d",
+      "counts": {
+        "nodes": 33,
+        "meshes": 33,
+        "primitives": 33,
+        "materials": 15,
+        "textures": 15,
+        "images": 15
+      },
+      "all_materials_opaque": true,
+      "negative_scale_nodes": [],
+      "images": [
+        {
+          "name": "front-left-ear",
+          "sha256": "9e04808a0d98d3ab341fe8c0059685bd1a04baf3c87cc2c74aaeb7484945479d",
+          "size_px": [
+            555,
+            1024
+          ],
+          "mode": "RGB",
+          "fully_opaque": true,
+          "prepared_texture": "model/textures/standard/front-left-ear.png",
+          "matches_prepared_texture": true
+        },
+        {
+          "name": "front-body",
+          "sha256": "6f75e907d009347cc6b1965b1f437ad9fda41f0b7973669707a8a62b9c76f081",
+          "size_px": [
+            3252,
+            321
+          ],
+          "mode": "RGB",
+          "fully_opaque": true,
+          "prepared_texture": "model/textures/standard/front-body.png",
+          "matches_prepared_texture": true
+        },
+        {
+          "name": "front-right-ear",
+          "sha256": "7a44b10f1fbea6cbde7b76e39a735954a7266e6bdf02710eba65c1f3890db3ca",
+          "size_px": [
+            555,
+            1024
+          ],
+          "mode": "RGB",
+          "fully_opaque": true,
+          "prepared_texture": "model/textures/standard/front-right-ear.png",
+          "matches_prepared_texture": true
+        },
+        {
+          "name": "rear",
+          "sha256": "8ef50407f986a43b1ad0fa00b0ead8e6dea9e6fc4e41b2819bcd6c16dd474238",
+          "size_px": [
+            1024,
+            101
+          ],
+          "mode": "RGB",
+          "fully_opaque": true,
+          "prepared_texture": "model/textures/standard/rear.png",
+          "matches_prepared_texture": true
+        },
+        {
+          "name": "left",
+          "sha256": "f8bf6bfc1db13c465019e9d0babfaecd89400397b7e6bed562de4ecb475529e9",
+          "size_px": [
+            3600,
+            219
+          ],
+          "mode": "RGB",
+          "fully_opaque": true,
+          "prepared_texture": "model/textures/standard/left.png",
+          "matches_prepared_texture": true
+        },
+        {
+          "name": "right",
+          "sha256": "a8f808d5d5de54ea227f15d74e3f79ec0298bfa2dfa2052ec8f961bc173a6f68",
+          "size_px": [
+            3600,
+            219
+          ],
+          "mode": "RGB",
+          "fully_opaque": true,
+          "prepared_texture": "model/textures/standard/right.png",
+          "matches_prepared_texture": true
+        },
+        {
+          "name": "top",
+          "sha256": "5e4eec45d98388fd39f49d404b3a373fbeddff7fce707a93a6baf3c3cb470a97",
+          "size_px": [
+            1847,
+            3000
+          ],
+          "mode": "RGB",
+          "fully_opaque": true,
+          "prepared_texture": "model/textures/standard/top.png",
+          "matches_prepared_texture": true
+        },
+        {
+          "name": "bottom",
+          "sha256": "eb34f60dc37cd2e410ed3c8b669ececacabeb86ec3217782e62a4b5e8fee0d83",
+          "size_px": [
+            1847,
+            3000
+          ],
+          "mode": "RGB",
+          "fully_opaque": true,
+          "prepared_texture": "model/textures/standard/bottom.png",
+          "matches_prepared_texture": true
+        },
+        {
+          "name": "galvanized metal relief solid color",
+          "sha256": "99df1a058884721b7d3e780d1fe4570dfc775d0634a78531e4ba9543c49b3eb8",
+          "size_px": [
+            1024,
+            1024
+          ],
+          "mode": "RGB",
+          "fully_opaque": true
+        },
+        {
+          "name": "bright metal solid color",
+          "sha256": "7f07ae07170d7bd8c92c3ec8a5c7e44e1d89aa6de7cfab4c9ce5bf689c16b18f",
+          "size_px": [
+            1024,
+            1024
+          ],
+          "mode": "RGB",
+          "fully_opaque": true
+        },
+        {
+          "name": "dark metal solid color",
+          "sha256": "0ce150aec7cb60a625b9cfb66bd7bffb0dea69dfebb206d006639c0fe6a7bc4a",
+          "size_px": [
+            1024,
+            1024
+          ],
+          "mode": "RGB",
+          "fully_opaque": true
+        },
+        {
+          "name": "black polymer solid color",
+          "sha256": "1b559c58cf64ebf6fdb101a68a31c6b6920c4ff4cb3208b151d604d2a4d96eef",
+          "size_px": [
+            1024,
+            1024
+          ],
+          "mode": "RGB",
+          "fully_opaque": true
+        },
+        {
+          "name": "Huawei lime release accent solid color",
+          "sha256": "a6d734b7032d3056963cbb7961dc16977542285bb1082839f0ba09e154cd00aa",
+          "size_px": [
+            1024,
+            1024
+          ],
+          "mode": "RGB",
+          "fully_opaque": true
+        },
+        {
+          "name": "connector blue solid color",
+          "sha256": "5a6946cb989d70508f877de292d76433e4027fe26a0295a19a9239bfe90dd4aa",
+          "size_px": [
+            1024,
+            1024
+          ],
+          "mode": "RGB",
+          "fully_opaque": true
+        },
+        {
+          "name": "smoked display solid color",
+          "sha256": "a8b726c41d5e7c4570fc7c02061d8e6eec382a7db3f1c43c6499b0515221dc52",
+          "size_px": [
+            1024,
+            1024
+          ],
+          "mode": "RGB",
+          "fully_opaque": true
+        }
+      ]
+    },
+    "web": {
+      "path": "model/Huawei-RH1288V5-2.5inch-web.glb",
+      "sha256": "b1f245d86e60e63b97ae332af6eb9f11fd1faedaffba6728e9c998c7e8b538bc",
+      "byte_size": 5346348,
+      "geometry_hash": "27ffad72d7f61e9640d21c5ac25eb2efa909c443d5618c4e8cc60738b8f7e06d",
+      "counts": {
+        "nodes": 33,
+        "meshes": 33,
+        "primitives": 33,
+        "materials": 15,
+        "textures": 15,
+        "images": 15
+      },
+      "all_materials_opaque": true,
+      "negative_scale_nodes": [],
+      "images": [
+        {
+          "name": "front-left-ear",
+          "sha256": "9e04808a0d98d3ab341fe8c0059685bd1a04baf3c87cc2c74aaeb7484945479d",
+          "size_px": [
+            555,
+            1024
+          ],
+          "mode": "RGB",
+          "fully_opaque": true,
+          "prepared_texture": "model/textures/web/front-left-ear.png",
+          "matches_prepared_texture": true
+        },
+        {
+          "name": "front-body",
+          "sha256": "09ba958473eba0b5de51b3f2a9d13361bf0e4ec841513dd1015dfe1b623ba442",
+          "size_px": [
+            2048,
+            202
+          ],
+          "mode": "RGB",
+          "fully_opaque": true,
+          "prepared_texture": "model/textures/web/front-body.png",
+          "matches_prepared_texture": true
+        },
+        {
+          "name": "front-right-ear",
+          "sha256": "7a44b10f1fbea6cbde7b76e39a735954a7266e6bdf02710eba65c1f3890db3ca",
+          "size_px": [
+            555,
+            1024
+          ],
+          "mode": "RGB",
+          "fully_opaque": true,
+          "prepared_texture": "model/textures/web/front-right-ear.png",
+          "matches_prepared_texture": true
+        },
+        {
+          "name": "rear",
+          "sha256": "8ef50407f986a43b1ad0fa00b0ead8e6dea9e6fc4e41b2819bcd6c16dd474238",
+          "size_px": [
+            1024,
+            101
+          ],
+          "mode": "RGB",
+          "fully_opaque": true,
+          "prepared_texture": "model/textures/web/rear.png",
+          "matches_prepared_texture": true
+        },
+        {
+          "name": "left",
+          "sha256": "8e43fa9377a3129fa3b712fb730a655d116995eaa6e17d0ef68ebf18f5154ca5",
+          "size_px": [
+            2048,
+            125
+          ],
+          "mode": "RGB",
+          "fully_opaque": true,
+          "prepared_texture": "model/textures/web/left.png",
+          "matches_prepared_texture": true
+        },
+        {
+          "name": "right",
+          "sha256": "16ae6bc9e7f357a7ddd0edc440f23975d956510a3b50c2751dd98e60f6e7a66b",
+          "size_px": [
+            2048,
+            125
+          ],
+          "mode": "RGB",
+          "fully_opaque": true,
+          "prepared_texture": "model/textures/web/right.png",
+          "matches_prepared_texture": true
+        },
+        {
+          "name": "top",
+          "sha256": "f7f4d7c0a7f1329f3ec28d4c4f3c6476183c31a4ce5c1303a37b6159f1073767",
+          "size_px": [
+            946,
+            1536
+          ],
+          "mode": "RGB",
+          "fully_opaque": true,
+          "prepared_texture": "model/textures/web/top.png",
+          "matches_prepared_texture": true
+        },
+        {
+          "name": "bottom",
+          "sha256": "b1019db3f752b256bafddd019d0ab10473d252b89a1900f2e300fe7b97caa16b",
+          "size_px": [
+            946,
+            1536
+          ],
+          "mode": "RGB",
+          "fully_opaque": true,
+          "prepared_texture": "model/textures/web/bottom.png",
+          "matches_prepared_texture": true
+        },
+        {
+          "name": "galvanized metal relief solid color",
+          "sha256": "99df1a058884721b7d3e780d1fe4570dfc775d0634a78531e4ba9543c49b3eb8",
+          "size_px": [
+            1024,
+            1024
+          ],
+          "mode": "RGB",
+          "fully_opaque": true
+        },
+        {
+          "name": "bright metal solid color",
+          "sha256": "7f07ae07170d7bd8c92c3ec8a5c7e44e1d89aa6de7cfab4c9ce5bf689c16b18f",
+          "size_px": [
+            1024,
+            1024
+          ],
+          "mode": "RGB",
+          "fully_opaque": true
+        },
+        {
+          "name": "dark metal solid color",
+          "sha256": "0ce150aec7cb60a625b9cfb66bd7bffb0dea69dfebb206d006639c0fe6a7bc4a",
+          "size_px": [
+            1024,
+            1024
+          ],
+          "mode": "RGB",
+          "fully_opaque": true
+        },
+        {
+          "name": "black polymer solid color",
+          "sha256": "1b559c58cf64ebf6fdb101a68a31c6b6920c4ff4cb3208b151d604d2a4d96eef",
+          "size_px": [
+            1024,
+            1024
+          ],
+          "mode": "RGB",
+          "fully_opaque": true
+        },
+        {
+          "name": "Huawei lime release accent solid color",
+          "sha256": "a6d734b7032d3056963cbb7961dc16977542285bb1082839f0ba09e154cd00aa",
+          "size_px": [
+            1024,
+            1024
+          ],
+          "mode": "RGB",
+          "fully_opaque": true
+        },
+        {
+          "name": "connector blue solid color",
+          "sha256": "5a6946cb989d70508f877de292d76433e4027fe26a0295a19a9239bfe90dd4aa",
+          "size_px": [
+            1024,
+            1024
+          ],
+          "mode": "RGB",
+          "fully_opaque": true
+        },
+        {
+          "name": "smoked display solid color",
+          "sha256": "a8b726c41d5e7c4570fc7c02061d8e6eec382a7db3f1c43c6499b0515221dc52",
+          "size_px": [
+            1024,
+            1024
+          ],
+          "mode": "RGB",
+          "fully_opaque": true
+        }
+      ]
+    }
+  }
+}
