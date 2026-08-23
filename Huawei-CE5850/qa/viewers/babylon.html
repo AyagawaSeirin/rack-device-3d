@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    html, body { margin:0; width:100%; height:100%; overflow:hidden; }
+    body {
+      background-color:#e6e8eb;
+      background-image:linear-gradient(45deg,#cfd3d8 25%,transparent 25%),linear-gradient(-45deg,#cfd3d8 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#cfd3d8 75%),linear-gradient(-45deg,transparent 75%,#cfd3d8 75%);
+      background-size:40px 40px;background-position:0 0,0 20px,20px -20px,-20px 0;
+    }
+    canvas { width:100%; height:100%; display:block; }
+  </style>
+  <script src="/node_modules/babylonjs/babylon.js"></script>
+  <script src="/node_modules/babylonjs-loaders/babylonjs.loaders.min.js"></script>
+</head>
+<body><canvas id="render"></canvas>
+<script>
+const params=new URLSearchParams(location.search), view=params.get('view')||'front', model=params.get('model')||'Huawei-CE5850-48T4S2Q-EI-B00.glb';
+const directions={front:[0,0,1],rear:[0,0,-1],left:[-1,0,0],right:[1,0,0],top:[0,1,0],bottom:[0,-1,0],front_left:[-1,.55,1],front_right:[1,.55,1],rear_left:[-1,.55,-1],rear_right:[1,.55,-1]};
+const canvas=document.getElementById('render'), engine=new BABYLON.Engine(canvas,true,{preserveDrawingBuffer:true,stencil:true});
+engine.setSize(innerWidth,innerHeight); const scene=new BABYLON.Scene(engine); scene.useRightHandedSystem=true; scene.clearColor=new BABYLON.Color4(0,0,0,0);
+new BABYLON.HemisphericLight('hemisphere',new BABYLON.Vector3(0,1,0),scene).intensity=1.45;
+const dl=new BABYLON.DirectionalLight('directional',new BABYLON.Vector3(-1,-2,-3),scene); dl.intensity=1.1;
+const camera=new BABYLON.FreeCamera('camera',new BABYLON.Vector3(0,0,2),scene); camera.mode=BABYLON.Camera.ORTHOGRAPHIC_CAMERA; camera.minZ=.01;camera.maxZ=10;
+function fit(){
+  const ext=scene.getWorldExtends(), min=ext.min, max=ext.max, center=min.add(max).scale(.5);
+  const d=BABYLON.Vector3.FromArray(directions[view]).normalize(); camera.position=center.add(d.scale(2));
+  camera.upVector=new BABYLON.Vector3(0,1,0); if(view==='top')camera.upVector=new BABYLON.Vector3(0,0,-1); if(view==='bottom')camera.upVector=new BABYLON.Vector3(0,0,1); camera.setTarget(center);
+  const forward=center.subtract(camera.position).normalize(), right=BABYLON.Vector3.Cross(forward,camera.upVector).normalize(), up=BABYLON.Vector3.Cross(right,forward).normalize();
+  let minX=Infinity,maxX=-Infinity,minY=Infinity,maxY=-Infinity;
+  for(const x of [min.x,max.x])for(const y of [min.y,max.y])for(const z of [min.z,max.z]){const rel=new BABYLON.Vector3(x,y,z).subtract(center), px=BABYLON.Vector3.Dot(rel,right), py=BABYLON.Vector3.Dot(rel,up);minX=Math.min(minX,px);maxX=Math.max(maxX,px);minY=Math.min(minY,py);maxY=Math.max(maxY,py);}
+  const width=(maxX-minX)*1.14,height=(maxY-minY)*1.14,aspect=innerWidth/innerHeight,cx=(minX+maxX)/2,cy=(minY+maxY)/2;let halfW=width/2,halfH=height/2;if(halfW/halfH<aspect)halfW=halfH*aspect;else halfH=halfW/aspect;
+  camera.orthoLeft=cx-halfW;camera.orthoRight=cx+halfW;camera.orthoTop=cy+halfH;camera.orthoBottom=cy-halfH;
+}
+BABYLON.SceneLoader.AppendAsync('/model/',model,scene).then(async()=>{
+  fit();
+  await scene.whenReadyAsync();
+  scene.render();
+  document.body.dataset.ready='true';
+}).catch(error=>{document.body.dataset.error=String(error);});
+</script></body></html>

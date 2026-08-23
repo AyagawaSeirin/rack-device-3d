@@ -1,0 +1,22 @@
+gate,expected,actual_evidence,status
+identity,"02359104 / CE5850-EI-B00 / CE5850-48T4S2Q-EI","source/identity-manifest.md; GLB root extras",PASS
+front_ge_rj45,"48 in four 2x6 blocks","front render; 48 named GE RJ45 cavity/rim pairs",PASS
+front_sfp_plus,"4 in 2x2","front render; Four 10GE SFP+ cages node",PASS
+front_qsfp_plus,"2 vertical; no HI breakout LEDs","front render; Two 40GE QSFP+ cages EI no breakout lamps node",PASS
+front_branding,"Huawei and CE5850-48T4S2Q-EI retained","front source/reference comparisons",PASS
+rear_psu,"2 x PAC-150WA AC at outer ends","rear render and Rear installed assembly node",PASS
+rear_fans,"2 x FAN-40EA-F with four honeycomb fields","rear render and FAN1/FAN2 nodes",PASS
+rear_management,"Console over ETH; USB and label tab","rear render and Central Console ETH USB management area node",PASS
+airflow,"power-side intake; port-side exhaust","identity manifest; GLB extras; official datasheet",PASS
+left_right_asymmetry,"distinct panels; right-only grounding screw","left/right orthographic and oblique comparisons",PASS
+rack_ears,"two independent port-side ears with real openings","front and four oblique renders; RackEarLeft/RackEarRight nodes",PASS
+top,"plain cover plus port-side perforated band","top and four oblique comparisons",PASS
+bottom,"conservative non-identifying underside","bottom source/live-load comparison",PASS_WITH_BOTTOM_FALLBACK
+logo_policy,"factory logo preserved","front and rear live loads",PASS
+power_policy,"all AC; no DC module substituted","rear live loads and root extras",PASS
+dimensions,"482.6 x 43.6 x 420.0 mm","qa/glb-standard-audit.json; qa/glb-web-audit.json",PASS
+materials_alpha,"six opaque source-locked materials; no transparent chassis","both GLB audits; checkerboard live loads",PASS
+orientation,"+X right +Y up +Z user port side; no mirror","two-viewer six-orthographic matrix",PASS
+standard_web_equivalence,"same 185 nodes / 167 meshes / 167 primitives and silhouette","two GLB audits; normalized screenshot RMSE <= 0.00630306",PASS
+two_viewers,"Three.js and Babylon.js independent sessions","qa/checklists/webgl-live-load.csv",PASS
+official_3d,"no public downloadable exact official model","source/optional-3d/README.md",PASS

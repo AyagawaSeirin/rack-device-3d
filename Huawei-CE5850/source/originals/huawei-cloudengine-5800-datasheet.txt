@@ -1,0 +1,392 @@
+           CloudEngine 5800 Series 
+             Data Center Switches
+                     CloudEngine 5800 Series Data Center Switches
+                                         Product Overview
+                                         Huawei CloudEngine 5800 series (CE5800) switches are next-generation, high-density Gigabit Ethernet 
+                                         switches designed for data centers and high-end campus networks. The CE5800 hardware has an 
+                                         advanced architectural design with the industry's highest density of GE access ports. The CE5800 is also 
+                                         the ﬁrst Gigabit Ethernet access switch to provide 40GE uplink ports. Using the Huawei VRP8 software 
+                                         platform, CE5800 switches support Transparent Interconnection of Lots of Links (TRILL) and have a high 
+                                         stacking capability (up to 16-member switches in a stack system). In addition, the airﬂow direction (front-
+                                         to-back or back-to-front) can be changed. CE5800 switches can work with CE12800 switches to build an 
+                                         elastic, virtualized, high-quality fabric that meets the requirements of cloud-computing data centers.
+                                         CE5800 switches provide high-density GE access to help enterprises build a scalable data center network 
+                                         platform for cloud computing. They can also be used as aggregation or access switches for enterprise 
+                                         campus networks.
+                                         Product Appearance
+                                         The CE5800 comes in six models.  
+                                                                                      CE5855-48T4S2Q-EI
+                                                                 48*GE BASE-T ports,� 4*10GE SFP+ ports,� 2*40GE QSFP+ ports
+                                                                                      CE5855-24T4S2Q-EI
+                                                                  24*GE BASE-T ports, 4*10GE SFP+ ports, 2*40GE QSFP+ ports
+                                                                                     CE5850-48T4S2Q-HI
+                                                                  48*GE BASE-T ports, 4*10GE SFP+ ports, 2*40GE QSFP+ ports
+                                                                                      CE5850-48T4S2Q-EI
+                                                                  48*GE BASE-T ports, 4*10GE SFP+ports, 2*40GE QSFP+ ports
+                                                                                                                  Huawei CloudEngine Series Switches          1
+                                                                                                                                CE5810-48T4S-EI
+                                                                                                                 48*GE BASE-T ports, 4*10GE SFP+ ports
+                                                                                                                                CE5810-24T4S-EI
+                                                                                                                 24*GE BASE-T ports, 4*10GE SFP+ ports
+                                                            Product Characteristics
+                                                            High-density GE Access
+                                                            •  Each CE5800 switch provides 48*GE line-speed ports, which makes future data center expansion easy.
+                                                            •  The CE5850 is the ﬁrst GE access switch to provide 40GE uplink ports. CE5850 switches can work with 
+                                                                  CE12800 switches to build a high-performance data center network that provides 40GE access. The two 
+                                                                  40GE uplink ports on CE5850 back up each other to improve system reliability.
+                                                            •  The CE5810 has models with 48*GE and 24*GE ports that can be ﬂexibly deployed in racks with different 
+                                                                  server port densities to meet different cabling requirements in data center equipment rooms.
+                                                            Highly Reliable, High-performance Stacking
+                                                            •  The industry's ﬁrst 16-member stack system
+                                                                        A stack system of 16 member switches has a maximum of 768*GE access ports that provide high-
+                                                                  »
+                                                                        density server access in a data center.
+                                                                        Multiple switches in a stack system are virtualized into one logical device, making it possible to build 
+                                                                  »
+                                                                        a scalable, easy-to-manage data center network platform.
+                                                                        A stack system separates the control plane from the data plane. This eliminates the risk of single-
+                                                                  »
+                                                                        point failures and greatly improves system reliability.
+                                                            •  Long-distance, highly reliable stacking
+                                                                        CE5800 switches can use either 10GE or 40GE ports as stack ports. A stack system can be established 
+                                                                  »
+                                                                        with switches in the same rack or different racks, and even over long distances.
+                                                                        The 40GE ports of the CE5850 can set up large-capacity stack channels that enable multiple CE5800 
+                                                                  »
+                                                                        switches to constitute a non-blocking stack system.
+                                                            Vertical Virtualization Simpliﬁes Management
+                                                            •  The CE5800 supports Super Virtual Fabric (SVF), which can virtualize multiple homogeneous or 
+                                                                  heterogeneous physical switches into one logical switch to simplify network management and improve 
+                                                                  reliability.
+                                                            •  SVF implements vertical extension of heterogeneous switches and virtualizes multiple leaf switches into 
+                                                                  remote cards of the spine switch, making it easier to install cables in equipment rooms and manage 
+                                                                  devices. The CE5810 functions as the leaf switch.
+                                                                        Huawei's SVF is the ﬁrst in the industry to implement local forwarding of leaf switches. When 
+                                                                  »
+                                                                        horizontal trafﬁc is the mainstream trafﬁc in a data center, SVF improves forwarding efﬁciency and 
+                                                                        reduces network delay.
+                   2               Huawei CloudEngine Series Switches
+                                         Large-scale Routing Bridge, On-demand Scalability
+                                         •  The CE5850 supports the TRILL protocol and can be used on a large Layer 2 TRILL network with GE/10GE 
+                                             servers. A TRILL network can contain more than 500 nodes, enabling ﬂexible service deployments and 
+                                             large-scale Virtual Machine (VM) migrations.
+                                         •  The TRILL protocol uses a routing mechanism similar to IS-IS and sets a limited Time-to-Live (TTL) value 
+                                             in packets to prevent Layer 2 loops. This signiﬁcantly improves network stability and speeds up network 
+                                             convergence.
+                                         •  On a TRILL network, all data ﬂows are forwarded quickly using Shortest Path First (SPF) and Equal-cost 
+                                             Multi-path (ECMP) routing. SPF and ECMP avoid the suboptimal path selection problem in STP and 
+                                             increase link bandwidth efﬁciency to 100 percent.
+                                         •  The CE5850 supports up to 16 TRILL-based Layer 2 equal-cost paths, greatly improving links' load 
+                                             balancing capabilities. The network has a fat-tree architecture that enhances expansion.
+                                         Fast VM Migration, Policy Mobility
+                                         •  The CE5800 works with Huawei's Agile Controller to permit network policies to be dynamically deployed 
+                                             on the CE5800. Agile Controller also supports online VM migration.
+                                         •  Agile Controller delivers network policies through high-speed RADIUS interfaces. Its online VM migration 
+                                             is 10 to 20 times the rate of other industry platforms, enabling large-scale VM migrations.
+                                         •  Agile Controller is based on open APIs and is compatible with all major virtualization platforms including 
+                                             VMware.
+                                         Programmable Network Device, Flexible Customization
+                                         •  The CE5800 uses the Open Programmability System (OPS) embedded in the VRP8 software platform to 
+                                             provide programmability at the control plane.
+                                         •  The OPS provides open APIs. APIs can be integrated with mainstream cloud platforms (including 
+                                             commercial and open cloud platforms) and third-party controllers. The OPS enables services to be ﬂexibly 
+                                             customized and provides automatic management.
+                                         •  Users or third-party developers can use open APIs to develop and deploy specialized network 
+                                             management policies to implement extension of fast service functions, automatic deployment, and 
+                                             intelligent management. The OPS also implements automatic operation and maintenance, and reduces 
+                                             management costs.
+                                         •  The OPS provides seamless integration of data center service and network in addition to a service-
+                                             oriented, Software-Deﬁned Network (SDN).
+                                         Zero-Conﬁguration Deployment, Automatic O&M
+                                         •  The CE5800 supports Zero Touch Provisioning (ZTP). ZTP enables the CE5800 to automatically obtain 
+                                             and load version ﬁles from a USB ﬂash drive or ﬁle server, freeing network engineers from onsite 
+                                             conﬁguration or deployment. ZTP reduces labor costs and improves device deployment efﬁciency.
+                                         •  ZTP provides built-in scripts for users through open APIs. Data center personnel can use the programming 
+                                             language they are familiar with, such as Python, to provide uniﬁed conﬁguration of network devices.
+                                         •  ZTP decouples conﬁguration time of new devices from device quantity and area distribution, which 
+                                             improves service provisioning efﬁciency.
+                                                                                                                  Huawei CloudEngine Series Switches          3
+                                                            Flexible Airﬂow Design Saves Energy
+                                                            •  Flexible front-to-back/back-to-front airﬂow design
+                                                                        The CE5800 uses a front-to-back/back-to-front airﬂow design that isolates cold air channels from hot 
+                                                                  »
+                                                                        air channels. This design meets heat dissipation requirements in data center equipment rooms.
+                                                                        Air can ﬂow from front to back, or back to front when different fans and power modules are used.
+                                                                  »
+                                                                        Redundant power modules and fans can be conﬁgured to ensure uninterrupted service transmission.
+                                                                  »
+                                                            •  Energy-saving technologies
+                                                                        The CE5800 has energy-saving chips and can measure system power consumption in real time. Fan 
+                                                                  »
+                                                                        speed can be adjusted dynamically based on system consumption. These energy-saving technologies 
+                                                                        reduce O&M costs and contribute to a greener data center.
+                                                            Clear Indicators, Simple Maintenance
+                                                            •  Clear indicators
+                                                                        Port indicators clearly show port status and port speeds.
+                                                                  »
+                                                                        State and stack indicators on both the front and rear panels enable operators to maintain the switch 
+                                                                  »
+                                                                        from either side.
+                                                                        CE5800 switches support remote positioning. Operators can turn on remote positioning indicators 
+                                                                  »
+                                                                        on the switches they want to maintain, so that they can ﬁnd switches easily in an equipment room 
+                                                                        full of devices.
+                                                            •  Simple maintenance
+                                                                        The management port, fans, and power modules are on the front panel, which facilitates device 
+                                                                  »
+                                                                        maintenance.
+                                                                        Data ports are located at the rear, facing servers. This simpliﬁes cabling.
+                                                                  »
+                                                            Product Speciﬁcations
+                                                              Item                      CE5855-                CE5855-                 CE5850-                CE5850-                 CE5810-                CE5810-
+                                                                                        48T4S2Q-EI             24T4S2Q-EI              48T4S2Q-HI             48T4S2Q-EI              48T4S-EI               24T4S-EI
+                                                                                                                                                              48*10/100/ 
+                                                                                                                                       48*10/100/ 
+                                                                                                               24*10/100/ 
+                                                                                        48*10/100/ 
+                                                                                                                                                                                                             24*10/100/ 
+                                                                                                                                                                                      48*10/100/ 
+                                                                                                                                                              1000BASE-T, 
+                                                                                                                                       1000BASE-T, 
+                                                                                                               1000BASE-T, 
+                                                                                        1000BASE-T, 
+                                                                                                                                                                                                             1000BASE-T 
+                                                                                                                                                                                      1000BASE-T 
+                                                                                                                                                              4*10GE SFP+, 
+                                                                                                                                       4*10GE SFP+, 
+                                                                                                               4*10GE SFP+, 
+                                                                                        4*10GE SFP+, 
+                                                              Ports
+                                                                                                                                                                                                             and 4*10GE 
+                                                                                                                                                                                      and 4*10GE 
+                                                                                                                                                              and 2*40GE 
+                                                                                                                                       and 2*40GE 
+                                                                                                               and 2*40GE 
+                                                                                        and 2*40GE 
+                                                                                                                                                                                                             SFP+
+                                                                                                                                                                                      SFP+
+                                                                                                                                                              QSFP+
+                                                                                                                                       QSFP+
+                                                                                                               QSFP+
+                                                                                        QSFP+
+                                                              Switching 
+                                                              capacity                  336 Gbit/s             288 Gbit/s              336 Gbit/s             336 Gbit/s              176 Gbit/s             128 Gbit/s 
+                                                              Forwarding                 252 Mpps               216 Mpps               252 Mpps               252 Mpps                132 Mpps               96 Mpps
+                                                              performance
+                                                              Airﬂow design             Front-to-back or back-to-front
+                                                              Device                    iStack
+                                                              virtualization
+                                                                                        Super Virtual Fabric (SVF)
+                                                                                        M-LAG
+                                                              Network 
+                                                              virtualization
+                                                                                        TRILL (CE5855 & CE5850)
+                                   Huawei CloudEngine Series Switches
+                   4
+                                                            CE5855-         CE5855-         CE5850-         CE5850-         CE5810-         CE5810-
+                                          Item
+                                                            48T4S2Q-EI      24T4S2Q-EI      48T4S2Q-HI      48T4S2Q-EI      48T4S-EI        24T4S-EI
+                                          VM awareness Agile Controller
+                                          SDN               Open Programmability System (OPS)
+                                                            NetStream
+                                          Trafﬁc analysis
+                                                            sFlow
+                                                            Adding access, trunk, and hybrid interfaces to VLANs 
+                                                            Default VLAN
+                                          VLAN
+                                                            QinQ
+                                                            MUX VLAN
+                                                            Dynamic learning and aging of MAC addresses
+                                                            Static, dynamic, and blackhole MAC address entries
+                                          MAC address 
+                                          table
+                                                            Packet ﬁltering based on source MAC addresses
+                                                            MAC address limiting based on ports and VLANs
+                                                            IPv4 routing protocols, such as RIP, OSPF, BGP, and IS-IS
+                                          IP routing
+                                                            IPv6 routing protocols, such as RIPng, OSPFv3, IS-ISv6, and BGP4+
+                                                            IPv6 Neighbor Discovery (ND)
+                                          IPV6              Path MTU Discovery (PMTU)
+                                                            TCP6, ping IPv6, tracert IPv6, socket IPv6, UDP6, and Raw IP6
+                                                            IGMP,PIM-SM,PIM-DM, MSDP,and MBGP
+                                                            IGMP snooping
+                                                            IGMP proxy
+                                          Multicast
+                                                            Fast leave of multicast member interfaces
+                                                            Multicast trafﬁc suppression
+                                                            Multicast VLAN
+                                                            LACP 
+                                                            STP, RSTP, VBST, and MSTP
+                                                            BPDU protection, root protection, and loop protection
+                                                            Smart Link and multi-instance
+                                          Reliability
+                                                            DLDP
+                                                            ERPS (G.8032) 
+                                                            VRRP, VRRP load balancing, and BFD for VRRP
+                                                            BFD for BGP/IS-IS/OSPF/Static route
+                                                                                                                  Huawei CloudEngine Series Switches          5
+                                                     CE5855-       CE5855-       CE5850-       CE5850-       CE5810-       CE5810-
+                                     Item
+                                                     48T4S2Q-EI    24T4S2Q-EI    48T4S2Q-HI    48T4S2Q-EI    48T4S-EI      24T4S-EI
+                                                     Trafﬁc classiﬁcation based on Layer 2 headers, Layer 3 protocols, Layer 4 protocols, and 
+                                                     802.1p priority
+                                                     Actions of ACL, CAR, re-marking, and scheduling
+                                     QoS
+                                                     Queue scheduling algorithms, including PQ, WRR, DRR, PQ+WRR, and PQ+DRR
+                                                     Congestion avoidance mechanisms, including WRED and tail drop
+                                                     Trafﬁc shaping
+                                                     Console, Telnet, and SSH terminals
+                                                     Network management protocols, such as SNMPv1/v2c/v3
+                                                     File upload and download through FTP and TFTP
+                                     Conﬁguration 
+                                                     BootROM upgrade and remote upgrade
+                                     and 
+                                     maintenance     802.3az Energy Efﬁcient Ethernet (EEE)
+                                                     Hot patches
+                                                     User operation logs
+                                                     Zero Touch Provisioning (ZTP)
+                                                     802.1x authentication 
+                                                     Command line authority control based on user levels, preventing unauthorized users from 
+                                                     using commands
+                                                     DoS, ARP, and ICMP attack defenses
+                                     Security and 
+                                     management      Port isolation, port security, and sticky MAC
+                                                     Binding of the IP address, MAC address, interface number, and VLAN ID
+                                                     Authentication methods, including AAA, RADIUS, and HWTACACS
+                                                     Remote Network Monitoring (RMON)
+                                                                                                                           442 mm x 
+                                                                                                             442 mm x 
+                                                                                               442 mm x 
+                                                                                 442 mm x 
+                                                                   442 mm x 
+                                                     442 mm x 
+                                     Dimensions (W 
+                                                                                                                           420 mm x 
+                                                                                                             420 mm x 
+                                                                                               420 mm x 
+                                                                                 420 mm x 
+                                                                   420 mm x 
+                                     x D x H)        420 mm x 
+                                                                                                                           43.6 mm
+                                                                                                             43.6 mm
+                                                                                               43.6 mm
+                                                                                 43.6 mm
+                                                                   43.6 mm
+                                                     43.6 mm
+                                     Weight (fully   8 kg          7.5 kg        8.8 kg        8.8 kg        8.2 kg        8 kg
+                                     loaded)
+                                                                            o       o
+                                     Environmental   Operating temperature: 0 C to 40 C (0 m to 1,800 m)
+                                                                            o        o
+                                     parameters      Storage temperature: -40 C to +70 C
+                                                     Relative humidity: 5% RH to 95% RH, non-condensing
+                                     Operating 
+                                     voltage         AC：90V～290V       DC：-38.4V～-72V
+                                     Maximum 
+                                     power           ≤130 W        ≤90 W         ≤131W         ≤133W         ≤92W          ≤68W
+                                     consumption
+            6        Huawei CloudEngine Series Switches
+                                 Ordering Information
+                                   Mainframe
+                                                         CE5850-48T4S2Q-HI Switch (2*150W AC Power Module,2*FAN Box,Port side 
+                                   CE5850-HI-B00         exhaust)
+                                                         CE5850-48T4S2Q-EI Switch (2*150W AC Power Module,2*FAN Box,Port side 
+                                   CE5850-EI-B00         exhaust)
+                                                         CE5810-48T4S-EI Switch (2*150W AC Power Module,2*FAN Box,Port side 
+                                   CE5810-EI-B00         exhaust)
+                                                         CE5810-24T4S-EI Switch (2*150W AC Power Module,2*FAN Box,Port side 
+                                   CE5810-EI-B01         exhaust)
+                                                         CE5810-EI Bundle 10 (CE5810-48T4S-EI mainframe, 8*SFP-10G-USR ,Without 
+                                   CE5810-EI-B10
+                                                         Fan and Power Module)
+                                                         CE5810-EI Bundle 11 (CE5810-24T4S-EI mainframe, 4*SFP-10G-USR, Without 
+                                   CE5810-EI-B11
+                                                         Fan and Power Module)
+                                                         CE5855-48T4S2Q-EI Switch (48-Port GE RJ45, 4-Port 10GE SFP+, 2-Port 40G 
+                                   CE5855-48T4S2Q-EI
+                                                         QSFP+, Without Fan and Power Module)
+                                                         CE5855-24T4S2Q-EI Switch (24-Port GE RJ45, 4-Port 10GE SFP+, 2-Port 40G 
+                                   CE5855-24T4S2Q-EI
+                                                         QSFP+, Without Fan and Power Module)
+                                                         CE5850-48T4S2Q-HI Switch (48-Port GE RJ45, 4-Port 10GE SFP+, 2-Port 40G 
+                                   CE5850-48T4S2Q-HI
+                                                         QSFP+, Without Fan and Power Module)
+                                                         CE5850-48T4S2Q-EI Switch (48-Port GE RJ45, 4-Port 10GE SFP+, 2-Port 40G 
+                                   CE5850-48T4S2Q-EI
+                                                         QSFP+, Without Fan and Power Module)
+                                                         CE5810-48T4S-EI Switch (48-Port GE RJ45, 4-Port 10GE SFP+, Without Fan 
+                                   CE5810-48T4S-EI
+                                                         and Power Module)
+                                                         CE5810-24T4S-EI Switch (24-Port GE RJ45, 4-Port 10GE SFP+, Without Fan 
+                                   CE5810-24T4S-EI
+                                                         and Power Module) 
+                                   Fan box
+                                   FAN-40EA-F            Fan box (EA, Front to Back, FAN panel side intake)
+                                   FAN-40EA-B            Fan box (EA, Back to Front, FAN panel side exhaust)
+                                   FAN-40SB-F            Fan box (SB, Front to Back, FAN panel side intake) 
+                                   FAN-40SB-B            Fan box (SB, Back to Front, FAN panel side exhaust) 
+                                   Power
+                                   PAC-150WA             150W AC Power Module (No Fan)
+                                   PDC-350WA-F           350W DC Power Module (Front to Back, Power panel side intake)
+                                   PDC-350WA-B           350W DC Power Module (Back to Front, Power panel side exhaust)
+                                                                                            Huawei CloudEngine Series Switches
+                                                                                                                               7
+                                                       Networking and Application
+                                                       Data Center Applications
+                                                       CE12800/CE8800/CE7800 switches work as core                                  Data Center              Internet                            WAN
+                                                                                                                                                                                                 IP/VPN
+                                                       switches and CE6800/CE5800 switches work as 
+                                                       TOR switches on a typical data center network. 
+                                                       CE6800/CE5800 switches connect to CE12800/
+                                                       CE8800/CE7800 switches through 40GE/10GE                                     CE12800
+                                                                                                                                    CE8800
+                                                       ports. The CE12800/CE8800/CE7800 and CE6800/                                 CE7800
+                                                       CE5800 switches use the TRILL protocol to build 
+                                                       a non-blocking Layer 2 network, which allows                                                                  TRILL Bridging
+                                                                                                                                    CE6800
+                                                                                                                                    CE5800
+                                                       large-scale VM migrations and ﬂexible service                                                                        ...
+                                                       deployments.
+                                                       Note: The TRILL protocol can be also used on 
+                                                                                                                                                           ...                               ...
+                                                       campus networks to support ﬂexible service 
+                                                       deployments in different service areas.
+                                                                                                                                                      40GE/10GE                  10GE              GE
+                                                       Campus Network Applications
+                                                       CE5800 switches can be used as aggregation or access switches on a campus network. Their high-density, 
+                                                       line-speed GE ports, unique 40GE uplink ports, and high stacking capabilities can meet the ever-increasing 
+                                                       demand for network bandwidth. CE5800 switches are cost-effective campus network switches, thanks to 
+                                                       their extensive service features and innovative energy-saving technologies.
+                                                       On a typical campus network, two CE12800/CE8800/CE7800 switches are virtualized into a logical 
+                                                       core switch using CSS or iStack technology. Multiple CE6800 switches at the aggregation layer form a 
+                                                       logical switch using iStack technology. CSS and iStack improve network reliability and simplify network 
+                                                       management. At the access layer, CE5800 switches are virtualized with SVF to provide high-density line-
+                                                       speed ports.
+                                                       Note: iStack technology is also widely used in data centers to facilitate network management.
+                                                                                                               Internet/WAN
+                                                                Enterprise Data Center                         CSS/iStack
+                                                                                                                                            CE12800/CE8800/CE7800
+                                                                  Web      Email   Application
+                                                                 Server    Server     Server
+                                                                                                                  iStack
+                                                                                                                                            CE6800
+                                                                 Database      Database
+                                                                                                                  SVF                                       CE5800
+                                                                                                                                                                                        10GE Link
+                                                                                                                                                                                        40GE Link
+                                                                      Training Center               Office             Production Area             Dormitory
+                  8             Huawei CloudEngine Series Switches
+          Copyright © Huawei Technologies Co., Ltd. 2016. All rights reserved.
+          No part of this document may be reproduced or transmitted in any form or by any means without prior written consent of Huawei 
+          Technologies Co., Ltd.
+          Trademark Notice
+                  , HUAWEI, and        are trademarks or registered trademarks of Huawei Technologies Co., Ltd.
+          Other trademarks, product, service and company names mentioned are the property of their respective owners.
+          General Disclaimer
+          The information in this document may contain predictive statements including, 
+          without limitation, statements regarding the future financial and operating results, 
+          future product portfolio, new technology, etc. There are a number of factors that 
+          could cause actual results and developments to differ materially from those 
+          expressed or implied in the predictive statements. Therefore, such information is 
+          provided for reference purpose only and constitutes neither an offer nor an 
+          acceptance. Huawei may change the information at any time without notice. 
