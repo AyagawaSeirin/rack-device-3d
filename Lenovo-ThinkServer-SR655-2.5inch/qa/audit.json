@@ -1,0 +1,100 @@
+{
+  "status": "PASS",
+  "identity": {
+    "status": "VERIFIED",
+    "product": "Lenovo ThinkSystem SR655 original generation",
+    "machine_types": ["7Y00", "7Z01"],
+    "physical_variant": "B5VJ 24x2.5-inch chassis",
+    "front": "24 visible SFF carriers, positions 0-23",
+    "rear": "PCIe-rich 8-slot 3+3+2, no rear drives",
+    "power": "2x750W hot-swap AC",
+    "unresolved_non_bottom_evidence_gaps": []
+  },
+  "views": {
+    "status": "PASS",
+    "error_count": 0,
+    "automated_warning_count": 6,
+    "warning_resolution": "Warnings are limited to anti-aliased exterior silhouette pixels. Every face has 0 percent core alpha below 250 and 0 percent transparent core.",
+    "max_physical_ratio_error_percent": 0.1029,
+    "left_right_independence": {
+      "status": "PASS",
+      "generation_calls": "one separate built-in imagegen call per side",
+      "physical_left_vs_mirrored_right_mean_rgb_0_255": 27.999523,
+      "right_only_yellow_label": true,
+      "different_hole_and_boss_patterns": true
+    }
+  },
+  "standard_glb": {
+    "path": "model/Lenovo-ThinkServer-SR655-2.5inch.glb",
+    "bytes": 11964408,
+    "sha256": "51e5d5a72fb4f4471d76cb24f16627d10e7ea12993ebeec220aa2da7f7f7bc25",
+    "status": "PASS",
+    "error_count": 0,
+    "warning_count": 0,
+    "nodes": 261,
+    "meshes": 261,
+    "materials": 17,
+    "embedded_textures": 6,
+    "bounds_mm": [481.999993, 86.499996, 764.859974],
+    "dimension_ratio_error_percent": 0.0139
+  },
+  "web_glb": {
+    "path": "model/Lenovo-ThinkServer-SR655-2.5inch-web.glb",
+    "bytes": 8382752,
+    "sha256": "3a721b51d754151d01b5981391318b5d74b361ef8e9f980228167dc8846f1f09",
+    "status": "PASS",
+    "error_count": 0,
+    "warning_count": 0,
+    "nodes": 261,
+    "meshes": 261,
+    "materials": 17,
+    "embedded_textures": 6,
+    "bounds_mm": [481.999993, 86.499996, 764.859974],
+    "dimension_ratio_error_percent": 0.0139
+  },
+  "materials": {
+    "main_faces_opaque": true,
+    "negative_or_mirrored_transforms": 0,
+    "external_resources": 0,
+    "missing_uv_on_textured_primitives": 0,
+    "standard_embedded_textures_pixel_identical_to_approved_build_textures": true,
+    "photo_materials_unlit": true
+  },
+  "viewer_validation": {
+    "status": "PASS_BY_FEATURE_REVIEW",
+    "actual_glb_render_count": 24,
+    "engines": [
+      "Three.js 0.180 GLTFLoader",
+      "Babylon.js public glTF loader"
+    ],
+    "views_per_primary_path": ["front", "rear", "right", "left", "top", "bottom", "frontRight", "rearRight"],
+    "standard_web_max_mean_rgb_difference_three_0_255": 0.520367,
+    "standard_web_max_mean_rgb_difference_babylon_0_255": 0.494065,
+    "engine_parity_note": "Raw engine-to-engine pixel differences reflect different neutral PBR lighting and antialiasing; orientation, opacity, silhouette and all feature counts agree."
+  },
+  "source_comparison": {
+    "status": "PASS_BY_FEATURE_REVIEW",
+    "comparison_sheet_count": 32,
+    "three_standard_max_mean_rgb_difference_0_255": 7.621456,
+    "babylon_web_max_mean_rgb_difference_0_255": 15.388142,
+    "front": "PASS: exactly 24 SFF carriers and normal Lenovo/ThinkSystem/SR655 orientation.",
+    "rear": "PASS: 3+3+2 PCIe covers, OCP/BMC/VGA/USB/serial, two 750W AC PSUs, no rear drives.",
+    "sides": "PASS: independent non-mirrored left/right patterns; right-only warning label.",
+    "top_bottom": "PASS: real top service-layout and latch/vent; exact official underside seam; bottom is not a fallback.",
+    "geometry": "PASS: closed body plus 24 multi-part SFF carriers, latches, PCIe covers, PSUs, I/O, side relief, top and bottom assemblies."
+  },
+  "imagegen": {
+    "builtin_calls": 6,
+    "one_call_per_face": true,
+    "chroma_method": "built-in imagegen flat magenta then installed helper; front repeated without despill to preserve red accents",
+    "unit_specific_pseudo_serial_qr_content_deidentified": true
+  },
+  "official_archive": {
+    "path": "source/optional-3d/Lenovo-ThinkSystem-SR655-official-viewer-original-files.tar.gz",
+    "bytes": 16590938,
+    "sha256": "2d99c8fe4bc86f0ed28575421e76630a356cb69360e1dcb09b44c2c81af24a3e",
+    "used_as_main_model": false
+  },
+  "unresolved_errors": [],
+  "unresolved_non_bottom_evidence_gaps": []
+}
