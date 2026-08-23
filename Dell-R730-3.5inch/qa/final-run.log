@@ -1,0 +1,119 @@
+LOAD final-three-standard-front attempt=1
+LOAD final-three-standard-rear attempt=1
+LOAD final-three-standard-left attempt=1
+LOAD final-three-standard-right attempt=1
+LOAD final-three-standard-top attempt=1
+LOAD final-three-standard-bottom attempt=1
+LOAD final-three-standard-front-left attempt=1
+LOAD final-three-standard-front-right attempt=1
+LOAD final-three-standard-rear-left attempt=1
+LOAD final-three-standard-rear-right attempt=1
+LOAD final-three-web-front attempt=1
+LOAD final-three-web-rear attempt=1
+LOAD final-three-web-left attempt=1
+LOAD final-three-web-right attempt=1
+LOAD final-three-web-top attempt=1
+LOAD final-three-web-bottom attempt=1
+LOAD final-three-web-front-left attempt=1
+LOAD final-three-web-front-right attempt=1
+LOAD final-three-web-rear-left attempt=1
+LOAD final-three-web-rear-right attempt=1
+LOAD final-babylon-standard-front attempt=1
+LOAD final-babylon-standard-rear attempt=1
+LOAD final-babylon-standard-left attempt=1
+LOAD final-babylon-standard-right attempt=1
+LOAD final-babylon-standard-top attempt=1
+LOAD final-babylon-standard-bottom attempt=1
+LOAD final-babylon-standard-front-left attempt=1
+LOAD final-babylon-standard-front-right attempt=1
+LOAD final-babylon-standard-rear-left attempt=1
+LOAD final-babylon-standard-rear-right attempt=1
+LOAD final-babylon-web-front attempt=1
+LOAD final-babylon-web-rear attempt=1
+LOAD final-babylon-web-left attempt=1
+LOAD final-babylon-web-right attempt=1
+LOAD final-babylon-web-top attempt=1
+LOAD final-babylon-web-bottom attempt=1
+LOAD final-babylon-web-front-left attempt=1
+LOAD final-babylon-web-front-right attempt=1
+LOAD final-babylon-web-rear-left attempt=1
+LOAD final-babylon-web-rear-right attempt=1
+{
+  "status": "PASS",
+  "loads": 40,
+  "browser": "Chromium",
+  "browserVersion": "151.0.7922.34",
+  "pageErrors": [],
+  "consoleMessages": [
+    "warning: [.WebGL-0x38bc00159600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "warning: [.WebGL-0x38bc00159600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "warning: [.WebGL-0x38bc00155600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "warning: [.WebGL-0x38bc00155600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+    "log: BJS - [00:44:00]: Babylon.js v8.56.2 - WebGL2",
+    "log: BJS - [00:44:17]: Babylon.js v8.56.2 - WebGL2",
+    "log: BJS - [00:44:28]: Babylon.js v8.56.2 - WebGL2",
+    "log: BJS - [00:44:38]: Babylon.js v8.56.2 - WebGL2",
+    "log: BJS - [00:44:50]: Babylon.js v8.56.2 - WebGL2",
+    "log: BJS - [00:45:03]: Babylon.js v8.56.2 - WebGL2",
+    "log: BJS - [00:45:11]: Babylon.js v8.56.2 - WebGL2",
+    "log: BJS - [00:45:18]: Babylon.js v8.56.2 - WebGL2",
+    "log: BJS - [00:45:25]: Babylon.js v8.56.2 - WebGL2",
+    "log: BJS - [00:45:36]: Babylon.js v8.56.2 - WebGL2",
+    "log: BJS - [00:45:43]: Babylon.js v8.56.2 - WebGL2",
+    "log: BJS - [00:45:52]: Babylon.js v8.56.2 - WebGL2",
+    "log: BJS - [00:46:03]: Babylon.js v8.56.2 - WebGL2",
+    "log: BJS - [00:46:12]: Babylon.js v8.56.2 - WebGL2",
+    "log: BJS - [00:46:23]: Babylon.js v8.56.2 - WebGL2",
+    "log: BJS - [00:46:30]: Babylon.js v8.56.2 - WebGL2",
+    "log: BJS - [00:46:37]: Babylon.js v8.56.2 - WebGL2",
+    "log: BJS - [00:46:44]: Babylon.js v8.56.2 - WebGL2",
+    "log: BJS - [00:46:51]: Babylon.js v8.56.2 - WebGL2",
+    "log: BJS - [00:46:56]: Babylon.js v8.56.2 - WebGL2"
+  ],
+  "requestFailures": [
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/model/Dell-R730-3.5inch.glb :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/model/Dell-R730-3.5inch.glb :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/model/Dell-R730-3.5inch-web.glb :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/model/Dell-R730-3.5inch-web.glb :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED",
+    "http://127.0.0.1:38991/qa-log :: net::ERR_ABORTED"
+  ]
+}
