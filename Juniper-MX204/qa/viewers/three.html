@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>MX204 Three.js QA Viewer</title>
+  <style>
+    html,body{width:100%;height:100%;margin:0;overflow:hidden}
+    body.light{background-color:#d9dde0;background-image:linear-gradient(45deg,#f5f6f7 25%,transparent 25%),linear-gradient(-45deg,#f5f6f7 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#f5f6f7 75%),linear-gradient(-45deg,transparent 75%,#f5f6f7 75%);background-size:36px 36px;background-position:0 0,0 18px,18px -18px,-18px 0}
+    body.dark{background-color:#25282b;background-image:linear-gradient(45deg,#3b3f43 25%,transparent 25%),linear-gradient(-45deg,#3b3f43 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#3b3f43 75%),linear-gradient(-45deg,transparent 75%,#3b3f43 75%);background-size:36px 36px;background-position:0 0,0 18px,18px -18px,-18px 0}
+    canvas{display:block;width:100%;height:100%}
+  </style>
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+</head>
+<body>
+<script type="module">
+import * as THREE from 'three';
+import {GLTFLoader} from './vendor/GLTFLoader.js';
+
+const q=new URLSearchParams(location.search);
+document.body.className=q.get('bg')==='dark'?'dark':'light';
+const view=q.get('view')||'front';
+const model=q.get('model')||'/Juniper-MX204/model/Juniper-MX204.glb';
+const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true,preserveDrawingBuffer:true});
+renderer.setPixelRatio(1); renderer.setSize(innerWidth,innerHeight);
+renderer.outputColorSpace=THREE.SRGBColorSpace; renderer.toneMapping=THREE.NoToneMapping;
+renderer.setClearColor(0x000000,0); document.body.appendChild(renderer.domElement);
+const scene=new THREE.Scene();
+scene.add(new THREE.HemisphereLight(0xffffff,0x59616a,2.25));
+scene.add(new THREE.AmbientLight(0xffffff,1.15));
+const key=new THREE.DirectionalLight(0xffffff,2.4); key.position.set(1.8,2.3,2.6); scene.add(key);
+const fill=new THREE.DirectionalLight(0xcbd8ff,1.2); fill.position.set(-2.1,0.7,-2.4); scene.add(fill);
+const under=new THREE.DirectionalLight(0xffffff,1.25); under.position.set(0,-2.5,0); scene.add(under);
+
+const definitions={
+ front:{forward:[0,0,-1],up:[0,1,0]}, rear:{forward:[0,0,1],up:[0,1,0]},
+ left:{forward:[1,0,0],up:[0,1,0]}, right:{forward:[-1,0,0],up:[0,1,0]},
+ top:{forward:[0,-1,0],up:[0,0,1]}, bottom:{forward:[0,1,0],up:[0,0,-1]},
+ 'front-left':{eye:[-1,.48,1]}, 'front-right':{eye:[1,.48,1]},
+ 'rear-left':{eye:[-1,.48,-1]}, 'rear-right':{eye:[1,.48,-1]}
+};
+
+function corners(box){const a=[];for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z])a.push(new THREE.Vector3(x,y,z));return a}
+function orthoCamera(box,def){
+ const center=box.getCenter(new THREE.Vector3()), f=new THREE.Vector3(...def.forward).normalize(), up=new THREE.Vector3(...def.up).normalize();
+ const right=new THREE.Vector3().crossVectors(f,up).normalize(), cs=corners(box);
+ const px=cs.map(p=>p.clone().sub(center).dot(right)), py=cs.map(p=>p.clone().sub(center).dot(up));
+ let hw=(Math.max(...px)-Math.min(...px))*0.55, hh=(Math.max(...py)-Math.min(...py))*0.55; const aspect=innerWidth/innerHeight;
+ if(hw/hh<aspect)hw=hh*aspect;else hh=hw/aspect;
+ const c=new THREE.OrthographicCamera(-hw,hw,hh,-hh,.01,10); c.position.copy(center).addScaledVector(f,-2); c.up.copy(up); c.lookAt(center); return c;
+}
+function perspectiveCamera(box,def){
+ const center=box.getCenter(new THREE.Vector3()), radius=box.getBoundingSphere(new THREE.Sphere()).radius;
+ const eye=new THREE.Vector3(...def.eye).normalize(); const c=new THREE.PerspectiveCamera(35,innerWidth/innerHeight,.01,10);
+ c.position.copy(center).addScaledVector(eye,radius/Math.sin(THREE.MathUtils.degToRad(17.5))*1.20); c.up.set(0,1,0); c.lookAt(center); return c;
+}
+
+new GLTFLoader().load(model,gltf=>{
+ scene.add(gltf.scene); gltf.scene.updateMatrixWorld(true);
+ const box=new THREE.Box3().setFromObject(gltf.scene), def=definitions[view]||definitions.front;
+ const camera=def.forward?orthoCamera(box,def):perspectiveCamera(box,def);
+ let frames=0; function draw(){renderer.render(scene,camera);if(++frames<5)requestAnimationFrame(draw);else window.__READY=true} draw();
+},undefined,error=>{document.body.dataset.error=String(error);window.__ERROR=String(error)});
+</script>
+</body>
+</html>
