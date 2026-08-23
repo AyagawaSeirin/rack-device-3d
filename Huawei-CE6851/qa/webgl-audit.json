@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "engines": {
+    "threejs": "Three.js r180 / WebGL2",
+    "babylonjs": "Babylon.js 9.22.0 / WebGL2"
+  },
+  "profiles": {
+    "standard": "Huawei-CE6851.glb",
+    "web": "Huawei-CE6851-web.glb"
+  },
+  "core_views": [
+    "front",
+    "rear",
+    "left",
+    "right",
+    "top",
+    "bottom",
+    "front_left",
+    "front_right",
+    "rear_left",
+    "rear_right"
+  ],
+  "detail_views_standard": [
+    "front_ear_left",
+    "front_ear_right",
+    "front_logo",
+    "rear_management",
+    "front-checker-light",
+    "rear-checker-dark"
+  ],
+  "screenshot_count": 52,
+  "console_error_count": 0,
+  "readpixels_performance_warning_count": 338,
+  "standard_web_max_nrmse": 0.012141,
+  "yellow_ground_landmark_pixels": {
+    "threejs": {
+      "left": 0,
+      "right": 684
+    },
+    "babylonjs": {
+      "left": 0,
+      "right": 688
+    }
+  },
+  "checks": {
+    "all_expected_screenshots_present": true,
+    "all_screenshots_1280x720": true,
+    "browser_console_has_no_errors": true,
+    "standard_web_same_exterior": true,
+    "independent_viewers_agree_on_physical_left_right": true,
+    "six_orthographic_and_four_oblique_views_per_engine_profile": true,
+    "standard_detail_and_checker_views_per_engine": true
+  },
+  "errors": []
+}

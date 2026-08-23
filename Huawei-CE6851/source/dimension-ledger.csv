@@ -1,0 +1,4 @@
+subject,body_width_mm,overall_width_mm,height_mm,body_depth_mm,overall_depth_mm,front_projection_mm,rear_projection_mm,rack_ear_left_extension_mm,rack_ear_right_extension_mm,published_dimension_includes,source_url,confidence,notes
+CE6851-48S6Q-HI fixed chassis,442.0,,43.6,420.0,,,,,,Huawei states device dimensions W x D x H but does not explicitly enumerate bracket/handle inclusion,https://support.huawei.com/enterprise/zh/doc/EDOC1000019242/a1d7e273,VERIFIED,"Hardware Description print p82 and current online hardware description agree"
+02350JAS installed assembly,442.0,482.6,43.6,420.0,420.0,0.0,0.0,20.3,20.3,"442 x 420 x 43.6 is the published device envelope; 482.6 is the standard 19-inch rack flange span and is photo-anchored rather than a Huawei quoted product dimension",https://revodistribution.com/parts/huawei-ce6851-48s6q-hi,INFERRED_HIGH,"Rack brackets are modeled as separate port-side parts; handles stay within the 420 mm product envelope"
+
