@@ -1,0 +1,103 @@
+{
+  "model_key": "Cisco-N9KC93180YC",
+  "audit_date": "2026-08-24",
+  "status": "BLOCKED",
+  "blocking_gate": "assembly_identity",
+  "blocking_reason": "The screenshot omits the Cisco generation suffix and does not resolve EX versus FX or the AC airflow/module variant. Candidate chassis have materially different dimensions, rear I/O, top geometry, fan family, and PSU labels.",
+  "scope_compliance": {
+    "only_model_directory_modified": true,
+    "git_commit_or_push": false,
+    "batch_status_touched": false,
+    "delegation_or_new_task_created": false
+  },
+  "skills": {
+    "rack_device_3d_model_assets_read": true,
+    "all_five_references_read": true,
+    "imagegen_skill_read": true,
+    "rack_device_elevation_skill_and_references_read": true,
+    "playwright_skill_read_and_used": true,
+    "pdf_skill_available": false,
+    "pdf_equivalent_used": "Ghostscript txtwrite plus 150 dpi png16m page rendering and original-detail visual inspection"
+  },
+  "identity_gate": {
+    "requested_label": "N9KC93180YC",
+    "candidate_pids": [
+      "N9K-C93180YC-EX",
+      "N9K-C93180YC-FX",
+      "N9K-C93180YC-FX3",
+      "N9K-C93180YC-FX3S"
+    ],
+    "exact_pid_verified": false,
+    "ac_power_verified": true,
+    "ac_psu_pid_verified": false,
+    "airflow_verified": false,
+    "front_common_layout_verified": true,
+    "rear_common_layout_verified": true,
+    "rear_exact_io_verified": false,
+    "non_bottom_face_identity_complete": false,
+    "result": "BLOCKED"
+  },
+  "source_gates": {
+    "user_screenshot_preserved": true,
+    "official_pdfs_preserved": 3,
+    "official_pdf_text_extracted": 3,
+    "selected_pdf_pages_rendered_and_inspected": 11,
+    "official_candidate_figures_downloaded_and_inspected": 6,
+    "third_party_images_downloaded_and_inspected": 10,
+    "dynamic_pages_inspected_with_browser": 4,
+    "source_matrix_present": true,
+    "dimension_ledger_present": true,
+    "feature_inventory_present": true,
+    "face_source_lock_present": true,
+    "face_source_lock_approved_faces": 0
+  },
+  "image_generation": {
+    "required_if_identity_verified": 6,
+    "actual_calls": 0,
+    "reason_not_run": "The skill forbids image generation before the assembly identity and major visible-feature inventory are VERIFIED.",
+    "views_present": []
+  },
+  "models": {
+    "standard": {
+      "path": "model/Cisco-N9KC93180YC.glb",
+      "exists": false,
+      "size_bytes": null,
+      "sha256": null
+    },
+    "web": {
+      "path": "model/Cisco-N9KC93180YC-web.glb",
+      "exists": false,
+      "size_bytes": null,
+      "sha256": null
+    },
+    "reason_not_built": "Blocked before mesh construction by unresolved exact PID and airflow/module configuration."
+  },
+  "official_3d": {
+    "found": false,
+    "files": [],
+    "visio_found_but_excluded": true,
+    "search_log": "source/official-3d-search-log.md"
+  },
+  "viewer_validation": {
+    "required_viewers": 2,
+    "required_glbs": 2,
+    "required_views_per_glb_per_viewer": 10,
+    "required_actual_loads": 40,
+    "actual_loads": 0,
+    "viewer_one": null,
+    "viewer_two": null,
+    "reason_not_run": "No GLB may be created or loaded while the identity gate is BLOCKED.",
+    "fabricated_evidence": false
+  },
+  "comparison_gate": {
+    "orthographic_comparisons": 0,
+    "oblique_comparisons": 0,
+    "result": "NOT_REACHED"
+  },
+  "bottom_fallback": {
+    "used": false,
+    "search_started": false,
+    "reason": "A bottom fallback cannot cure a non-bottom assembly identity failure."
+  },
+  "final_result": "BLOCKED"
+}

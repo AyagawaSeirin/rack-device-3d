@@ -1,0 +1,2203 @@
+                 CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                 First Published: 2017-08-25
+                 Last Modified: 2026-07-27
+                 AmericasHeadquarters
+                 CiscoSystems,Inc.
+                 170WestTasmanDrive
+                 SanJose,CA95134-1706
+                 USA
+                 http://www.cisco.com
+                 Tel: 408 526-4000
+                   800553-NETS(6387)
+                 Fax: 408 527-0883
+             THESPECIFICATIONSANDINFORMATIONREGARDINGTHEPRODUCTSINTHISMANUALARESUBJECTTOCHANGEWITHOUTNOTICE.ALLSTATEMENTS,
+             INFORMATION,ANDRECOMMENDATIONSINTHISMANUALAREBELIEVEDTOBEACCURATEBUTAREPRESENTEDWITHOUTWARRANTYOFANYKIND,
+             EXPRESSORIMPLIED.USERSMUSTTAKEFULLRESPONSIBILITYFORTHEIRAPPLICATIONOFANYPRODUCTS.
+             THESOFTWARELICENSEANDLIMITEDWARRANTYFORTHEACCOMPANYINGPRODUCTARESETFORTHINTHEINFORMATIONPACKETTHATSHIPPEDWITH
+             THEPRODUCTANDAREINCORPORATEDHEREINBYTHISREFERENCE.IFYOUAREUNABLETOLOCATETHESOFTWARELICENSEORLIMITEDWARRANTY,
+             CONTACTYOURCISCOREPRESENTATIVEFORACOPY.
+             Thefollowing information is for FCC compliance of Class A devices: This equipment has been tested and found to comply with the limits for a Class A digital device, pursuant to part 15
+             of the FCC rules. These limits are designed to provide reasonable protection against harmful interference when the equipment is operated in a commercial environment. This equipment
+             generates, uses, and can radiate radio-frequency energy and, if not installed and used in accordance with the instruction manual, may cause harmful interference to radio communications.
+             Operation of this equipment in a residential area is likely to cause harmful interference, in which case users will be required to correct the interference at their own expense.
+             Thefollowinginformation is for FCC compliance of Class B devices: This equipment has been tested and found to comply with the limits for a Class B digital device, pursuant to part 15 of
+             the FCC rules. These limits are designed to provide reasonable protection against harmful interference in a residential installation. This equipment generates, uses and can radiate radio
+             frequencyenergyand,ifnotinstalledandusedinaccordancewiththeinstructions,maycauseharmfulinterferencetoradiocommunications.However,thereisnoguaranteethatinterference
+             will not occur in a particular installation. If the equipment causes interference to radio or television reception, which can be determined by turning the equipment off and on, users are
+             encouraged to try to correct the interference by using one or more of the following measures:
+                  • Reorient or relocate the receiving antenna.
+                  • Increase the separation between the equipment and receiver.
+                  • Connect the equipment into an outlet on a circuit different from that to which the receiver is connected.
+                  • Consult the dealer or an experienced radio/TV technician for help.
+             Modifications to this product not authorized by Cisco could void the FCC approval and negate your authority to operate the product.
+             TheCiscoimplementationof TCP header compression is an adaptation of a program developed by the University of California, Berkeley (UCB) as part of UCB’s public domain version of
+                                                                       ©
+             the UNIX operating system. All rights reserved. Copyright   1981, Regents of the University of California.
+             NOTWITHSTANDINGANYOTHERWARRANTYHEREIN,ALLDOCUMENTFILESANDSOFTWAREOFTHESESUPPLIERSAREPROVIDED"ASIS"WITHALLFAULTS.
+             CISCOANDTHEABOVE-NAMEDSUPPLIERSDISCLAIMALLWARRANTIES,EXPRESSEDORIMPLIED,INCLUDING,WITHOUTLIMITATION,THOSEOF
+             MERCHANTABILITY,FITNESSFORAPARTICULARPURPOSEANDNONINFRINGEMENTORARISINGFROMACOURSEOFDEALING,USAGE,ORTRADEPRACTICE.
+             INNOEVENTSHALLCISCOORITSSUPPLIERSBELIABLEFORANYINDIRECT,SPECIAL,CONSEQUENTIAL,ORINCIDENTALDAMAGES,INCLUDING,WITHOUT
+             LIMITATION,LOSTPROFITSORLOSSORDAMAGETODATAARISINGOUTOFTHEUSEORINABILITYTOUSETHISMANUAL,EVENIFCISCOORITSSUPPLIERS
+             HAVEBEENADVISEDOFTHEPOSSIBILITYOFSUCHDAMAGES.
+             AnyInternetProtocol(IP)addressesandphonenumbersusedinthisdocumentarenotintendedtobeactualaddressesandphonenumbers.Anyexamples,commanddisplayoutput,network
+             topologydiagrams,andotherfiguresincludedinthedocumentareshownforillustrativepurposesonly.AnyuseofactualIPaddressesorphonenumbersinillustrativecontentisunintentional
+             and coincidental.
+             All printed copies and duplicate soft copies of this document are considered uncontrolled. See the current online version for the latest version.
+             Cisco has more than 200 offices worldwide. Addresses and phone numbers are listed on the Cisco website at www.cisco.com/go/offices.
+             Cisco and the Cisco logo are trademarks or registered trademarks of Cisco and/or its affiliates in the U.S. and other countries. To view a list of Cisco trademarks, go to this URL:
+             https://www.cisco.com/c/en/us/about/legal/trademarks.html. Third-party trademarks mentioned are the property of their respective owners. The use of the word partner does not imply a
+             partnership relationship between Cisco and any other company. (1721R)
+             ©
+               2017–2026 Cisco Systems, Inc. All rights reserved.
+                                     CONTENTS
+             CHAPTER 1               Overview 1
+                                            Overview    1
+                                            Overview    5
+             CHAPTER 2               Preparing the Site     11
+                                            Temperature Requirements      11
+                                            Humidity Requirements      12
+                                            Altitude Requirements    12
+                                            Dust and Particulate Requirements     12
+                                            Minimizing Electromagnetic and Radio Frequency Interference        13
+                                            ShockandVibration Requirements        14
+                                            Preventing Electrostatic Discharge Damage      14
+                                            Grounding Requirements      14
+                                            Planning for Power Requirements      14
+                                            Airflow Requirements     16
+                                            RackandCabinetRequirements         17
+                                            Clearance Requirements     17
+                                            NetworkEquipment-Building System (NEBS) Statements           19
+             CHAPTER 3               Installing the Switch Chassis     23
+                                            Safety   23
+                                            Installation Options with Rack-Mount Kits     27
+                                            Airflow Considerations    27
+                                            Installation Guidelines  27
+                                            Unpacking and Inspecting the Switch     28
+                                            Procure Tools and Equipment     29
+                                                                         CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                                                                            iii
+              Contents
+                                       Installing the Switch Using the N3K-C3064-ACC-KIT Rack-Mount Kit          30
+                                       Installing the Switch Using the NXK-ACC-KIT-1RU Rack-Mount Kit          34
+                                       Installing the Airflow Sleeve (N9K-AIRFLOW-SLV)         38
+                                       Grounding the Chassis    40
+                                       Starting the Switch  41
+         CHAPTER 4               Connecting the Switch to the Network       45
+                                       Overview of Network Connections      45
+                                       Creating the Initial Switch Configuration  46
+                                       Setting Up the Management Interface     47
+                                       Connecting Interface Ports to Other Devices   48
+                                       Uplink Connections    48
+                                       DownlinkConnections      48
+                                       Maintaining Transceivers and Optical Cables    48
+         CHAPTER 5               Replacing Components       51
+                                       Replacing a Fan Module     51
+                                         RemovingaFanModule 51
+                                         Installing a Fan Module    52
+                                       Replacing a Power Supply Module      52
+                                         Replacing an AC Power Supply       52
+                                         Replacing a High Voltage (HVAC/HVDC) Power Supply           54
+                                         Replacing a DC Power Supply      55
+         APPENDIX A              RackSpecifications     57
+                                       Overview of Racks     57
+                                       General Requirements for Cabinets and Racks     57
+                                       Requirements Specific to Standard Open Racks      58
+                                       Requirements Specific to Perforated Cabinets    58
+                                       Cable Management Guidelines      59
+         APPENDIX B              SystemSpecifications     61
+                                       Environmental Specifications    61
+                                       Switch Dimensions     61
+                             CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                  iv
+                                                                                                                                 Contents
+                                          Switch and Module Weights and Quantities    62
+                                          Transceiver and Cable Specifications  62
+                                          Switch Power Input Requirements     63
+                                          PowerSpecifications    63
+                                            500-WACPowerSupplySpecifications 63
+                                            650-WACPowerSupplySpecifications 64
+                                            1200-WHVAC/HVDCPowerSupplySpecifications 64
+                                            930-WDCPowerSupplySpecifications 65
+                                          PowerCableSpecifications     66
+                                            PowerCableSpecifications for AC Power Supplies       66
+                                            HVAC/HVDCPowerCablesSupportedbyACI-ModeandNX-OSModeSwitches 67
+                                          Regulatory Standards Compliance Specifications    68
+             APPENDIX C             LEDs 71
+                                          Switch Chassis LEDs    71
+                                          FanModuleLEDs 72
+                                          PowerSupplyLEDs 72
+             APPENDIX D             Additional Kits   75
+                                          RackMountKitNXK-ACC-KIT-1RU 75
+                                          RackMountKitN3K-C3064-ACC-KIT 76
+                                          Airflow Sleeve   76
+             APPENDIX E             Site Preparation and Maintenance Records       79
+                                          Site Preparation Checklist 79
+                                          Contact and Site Information  80
+                                          Chassis and Module Information    81
+                                                                      CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                                                                       v
+       Contents
+               CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+         vi
+                                                                                      CHAPTER 1
+                                 Overview
+                                     • Overview, on page 1
+                                     • Overview, on page 5
+            Overview
+                                 TheCiscoN9K-C93180YC-FXswitchisa1-RU,fixed-portswitchdesignedforTop-of-Rack(TOR),
+                                 Middle-of-Rack(MoR),andEnd-of-Rack(EoR)deploymentindatacenters.Thisswitchhas4810/25-Gigabit
+                                 SFP+downlinkportsthat support 1-Gigabit, 10-Gigabit, and 25-Gigabit Ethernet connections and 8-, 16-,
+                                 and 32-Gigabit Fibre Channel connections, and it has six fixed 40/100-Gigabit QSFP28 uplink ports that
+                                 supportcombinationsof10-,25-,40-,50-,and100-Gigabitconnectivity.Youcansetthedownlinkportspeeds
+                                 on a port-by-port basis. The chassis for this switch includes the following user-replaceable components:
+                                     • Fan modules (four) with the following airflow choices:
+                                         • Port-side intake airflow with burgundy coloring (NXA-FAN-30CFM-B)
+                                         • Port-side exhaust airflow with blue coloring (NXA-FAN-30CFM-F)
+                                 Note
+                                       Theport-side intake airflow fan module with burgundy coloring can go from 0
+                                       to 55 degrees Celsius.
+                                 Note  Table 1: Fan Speeds for This Switch
+                                                                    Port-Side Intake        Port-Side Exhaust
+                                                                      FanSpeed%               FanSpeed%
+                                           Typical/Minimum                50%                     70%
+                                               Maximum                   100%                    100%
+                                                                  CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                                                              1
+                                                                  Overview
+       Overview
+                Note
+                    Theswitchhasfourfanmodules.Eachfanmodulehastworotors(atotalofeight
+                    rotors in the switch). The switch can function normally if only one rotor inside
+                    any one fan module fails. In the case of more than one rotor failure, the switch
+                    will continue to operate if the failures are contained within a single fan module.
+                    Tomaintain safe operation, the switch requires at least three operational fan
+                    modules. If fewer than three fan modules are operational, the switch will issue a
+                    warning and power down in two minutes.
+                   • Power supply modules (two—one for operations and one for redundancy [1+1]) with the following
+                   choices:
+                     • 500-W ACpowersupplywithport-side exhaust airflow (blue coloring) (NXA-PAC-500W-PE)
+                     • 500-WACpowersupplywithport-sideintakeairflow(burgundycoloring) (NXA-PAC-500W-PI)
+                     • 1200-W HVAC/HVDCpowersupplywithdual-directionairflow (white coloring)
+                      (N9K-PUV-1200W)
+                     • 930-W DCpowersupplywithport-side exhaust airflow (blue coloring) (NXA-PDC-930W-PE)
+                     • 930-WDCpowersupplywithport-sideintakeairflow(burgundycoloring)(NXA-PDC-930W-PI)
+                Note
+                    Bothpowersuppliesmustbethesametypeofpowersource.DonotmixACand
+                    DCpowersources.
+                Note
+                    All fan modules and power supplies must use the same airflow direction during
+                    operations. If you are using the 1200-W HVAC/HVDC power supply, the power
+                    supplyautomaticallyusesthesameairflowdirectionasusedbytheothermodules
+                    in the switch.
+                 DeploymentSchemeforSFP-10G-T-XandSFP-10G-OLT20-XTransceivers
+                 Thefollowing figure shows the maximum configuration density of SFP-10G-T-X and SFP-10G-OLT20-X
+                 SFPtransceivers.
+               CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+          2
+             Overview
+                                                                                                            Overview
+                                          ActiveportdeployingtheSFP10GBASE-Tor10G-OLT20transceivers,withmaximumpower
+                                          consumption up to 2.5W.
+                                          Onceconfiguredwithmedia-type10g-txcommandinNX-OS,“LinkLevelPolicy->Physical
+                                          MediaType->SFP10GTX”inACI,theseportscandeploySFP-10G-T-X.Withoutsuch
+                                          configuration, they behave like normal ports.
+                                          Usethemedia-typehigh-powercommandinNX-OStodeploySFP-10G-OLT20onthese
+                                          ports. Without such configuration, they behave like normal ports.
+                                          Ports must either be empty or active with passive copper cables only (Maximum power
+                                          consumption up to 0.1W).
+                                          Whenmedia-type10g-txormedia-typehigh-powerisconfiguredonyellowports, ports to
+                                          the left, right, top, and bottom of the yellow port are referenced as blue ports. These adjacent
+                                          ports will then support only low power Passive Copper DAC cable, or these can be left empty
+                                          to conserve power. If the media-type 10g-tx or media-type high-power configuration is
+                                          removedfromtheadjacent yellow ports, the blue ports will revert to behaving like normal
+                                          ports.
+                                          Active port deploying any Cisco 1/10/25G optics (SFP, SFP+, SFP28) EXCLUDING SFP
+                                          10GBASE-Tand10G-OLT,withmaximumpowerconsumptionupto1.5W.Theseportsare
+                                          not part of any scheme and can deploy all regular Cisco optics and behave like normal ports.
+                                          Activeports17to36,deployinganyCisco1/10/25Goptics(SFP,SFP+,SFP28)EXCLUDING
+                                          SFP10GBASE-Tand10G-OLT,withmaximumpowerconsumptionupto1.5Wandactive
+                                          ports49to54,deployinganyCiscoQSFP,QSFP+,QSFP28,withmaximumpowerconsumption
+                                          upto3.5W.TheseportsarenotpartofanyschemeandcandeployallregularCiscoopticsand
+                                          behave like normal ports.
+                              Thefollowing figure shows the hardware features seen from the port side of the chassis.
+                               1    ChassisLEDs(Beacon[BCN],Status[STS],andEnvironment 4      Screwholes (6) for attaching
+                                    [ENV])                                                    rack mounting brackets.
+                               2    48 10/25-Gigabit SFP28 ports to other devices       5     Screwholes (2) for attaching
+                                                                                              grounding lug.
+                               3    640/100-GigabitQSFP28opticalportsforuplinkconnections
+                                    to spine switches
+                              Todeterminewhichtransceivers,adapters,andcablesthisswitchsupports,seetheCiscoTransceiverModules
+                              Compatibility Information document.
+                              Thefollowing figure shows the hardware features seen from the power supply side of the chassis.
+                                                           CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                                                 3
+                                                                                                                               Overview
+              Overview
+                                 1 Twopowersupplies(oneusedforoperationsand 6            Console port (RS232 port)
+                                    one used for redundancy) (AC power supplies
+                                    shown) with power supply slot 1 on the left and
+                                    slot 2 on the right.
+                                 2 Fourfanmoduleswithfanslot1ontheleftand 7              USBportusedforsavingorcopyingfunctions
+                                    fan slot 4 on the right
+                                 3 L1(softwaredefined port)                          8   Out-of-band management port (RJ-45 port)
+                                 4 L2(softwaredefined port)                          9   Screwholes (6) for attaching rack mounting
+                                                                                         brackets
+                                 5 ChassisLEDs(Beacon[BCN]andStatus[STS]) 10 Screwholes(2)forattachinggroundinglug.
+                              Note
+                                     ThereisalimittoUSB2.0devicesthatuselessthan2.5W(lessthan0.5Ainclusiveofsurgecurrent).There
+                                     is no support for devices, such as external hard drives, that instantaneously draw more than 0.5 A.
+                                Depending on whether you plan to position the ports in a hot or cold aisle, you can order the fan and power
+                                supply modules with port-side intake or port-side exhaust airflow. To determine the airflow direction of the
+                                modules installed in your switch, see the following table.
+                                 ReplaceableModules                 Port-Side Intake Airflow Coloring  Port-SideExhaustAirflowColoring
+                                 Fans                               Burgundy                           Blue
+                                 ACpowersupplies                    Burgundy                           Blue
+                                 HVAC/HVDCpowersupplies                                            White
+                                                                                                       Blue
+                                 DCpowersupplies                    Burgundy
+                                Thefanandpowersupplymodulesarefieldreplaceableand you can replace one fan module or one power
+                                supply module during operations so long as the other modules are operating. If you have only one power
+                                supply that is installed, you can install the replacement power supply in the open slot before removing the
+                                original power supply.
+                             CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                  4
+              Overview
+                                                                                                                         Overview
+                               Note
+                                      Fansandpowersupplymodulesmusthavethesamedirectionofairflow.Otherwise,theswitchcanoverheat
+                                      and shut down. If you are installing a dual-direction power supply, that module will automatically use the
+                                      sameairflow direction as the other modules in the switch.
+                             Caution
+                                      If the switch has port-side intake airflow (burgundy coloring for fan modules), you must locate the ports in
+                                      the cold aisle. If the switch has port-side exhaust airflow (blue coloring for fan modules), you must locate the
+                                      ports in the hot aisle. If you locate the air intake in a hot aisle, the switch can overheat and shut down.
+            Overview
+                                 TheCiscoN9K-C93180YC-FX3Sswitchisa1-rackunit(RU),fixed-portswitchdesignedfor deployment
+                                 in data centers. This switch has these ports:
+                                     • 48 100M/1/10/25-Gigabit Ethernet SFP28 ports (ports 1-48).
+                                     • Auto-negotiation is not supported with 10G speed on Ports 1 through 48 and Ports 49 through 52 with
+                                      QSA
+                                     • 6 10/25/40/50/100-Gigabit l28 ports (ports 49-54)
+                                     • One management port (one 10/100/1000BASE-T port)
+                                     • One console port (RS-232)
+                                     • 1 USB port
+                                 This switch includes these user-replaceable components:
+                                     • Fan modules (four) with these airflow choices:
+                                         • Port-side exhaust fan module with blue coloring (NXA-FAN-35CFM-PE)
+                                         • Port-side intake fan module with burgundy coloring (NXA-FAN-35CFM-PI)
+                                 Note  Table 2: Fan Speeds for This Switch
+                                                                    Port-Side Intake        Port-Side Exhaust
+                                                                      FanSpeed%               FanSpeed%
+                                           Typical/Minimum                50%                     70%
+                                               Maximum                   100%                    100%
+                                                                  CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                                                              5
+                                                                  Overview
+       Overview
+                Note
+                    This switch runs with +1 redundancy mode, so that if one fan fails, the switch
+                    can sustain operation. But if a second fan fails, this switch is not designed to
+                    sustainoperation.Beforewaitingtoreachmajorthresholdtemperature,theswitch
+                    will power down due to Powered-down due to fan policy trigger.
+                Note
+                    Eachfanmodulehastworotors. The switch can function normally if one rotor
+                    inside any one fan modulefails. In case of more than one rotor failure, the switch
+                    issues a warning and powers down in 2 minutes.
+                   • Power supply modules (two—One for operations and one for redundancy [1+1]) with these choices:
+                     • 650-W port-side exhaust AC power supply with blue coloring (NXA-PAC-650W-PE)
+                     • 650-W port-side intake AC power supply with burgundy coloring (NXA-PAC-650W-PI)
+                     • 1200-WHVAC/HVDCpowersupplywithdual-directionairflowwhitecoloring(N9K-PUV-1200W)
+                     • 930-W port-side exhaust DC power supply with blue coloring (NXA-PDC-930W-PE)
+                     • 930-W port-side intake DC power supply with burgundy coloring (NXA-PDC-930W-PI)
+                Note
+                    All fan modules and power supplies must use the same airflow direction.
+                Note
+                    This switch may present access issues if installed between switches with greater
+                    chassis depth. Please consider this before installation.
+                 DeploymentSchemeforSFP-10G-T-XandSFP-10G-OLT20-XTransceivers
+                 Thefigure shows the maximum configuration density of SFP-10G-T-X and SFP-10G-OLT20-X SFP
+                 transceivers.
+                        ActiveportdeployingtheSFP10GBASE-Tor10G-OLT20transceivers,withmaximumpower
+                        consumption up to 2.5W.
+                        Onceconfigured with media-type 10g-tx command in NX-OS, these ports can deploy
+                        SFP-10G-T-X.Withoutsuchconfiguration, they behave like normal ports.
+                        Usethemedia-typehigh-powercommandinNX-OStodeploySFP-10G-OLT20onthese
+                        ports. Without such configuration, they behave like normal ports.
+               CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+          6
+             Overview
+                                                                                                          Overview
+                                         Ports must either be empty or brought up with passive copper cables only (Maximum power
+                                         consumption up to 0.1W).
+                                         Whenmedia-type10g-txormedia-typehigh-powerisconfiguredonyellowports, ports to
+                                         the left, right, top, and bottom of the yellow port are referenced as blue ports. These adjacent
+                                         ports will then support only low power Passive Copper DAC cable, or these can be left empty
+                                         to conserve power. If the media-type 10g-tx or media-type high-power configuration is
+                                         removedfromtheadjacent yellow ports, the blue ports will revert to behaving like normal
+                                         ports.
+                                         Active port deploying any Cisco 1/10/25G optics (SFP, SFP+, SFP28) EXCLUDING SFP
+                                         10GBASE-Tand10G-OLT,withmaximumpowerconsumptionupto1.5W.Theseportsare
+                                         not part of any scheme and can deploy all regular Cisco optics and behave like normal ports.
+                                         Activeports17to36,deployinganyCisco1/10/25Goptics(SFP,SFP+,SFP28)EXCLUDING
+                                         SFP10GBASE-Tand10G-OLT,withmaximumpowerconsumptionupto1.5Wandactive
+                                         ports49to54,deployinganyCiscoQSFP,QSFP+,QSFP28,withmaximumpowerconsumption
+                                         upto3.5W.TheseportsarenotpartofanyschemeandcandeployallregularCiscoopticsand
+                                         behave like normal ports.
+                             Thefigure shows the switch features on the front side of the chassis.
+                              1   1PPSand10MHzSMBports                   4  48100M/1/10/25-GigabitEthernetSFP28ports
+                              2   GPS/GNSSantennaconnector, ANTportis    5  6 10/25/40/50/100-Gigabit QSFP28 ports
+                                  SMAPinIn
+                              3   LEDs:Thefunctionisthesamefortheportand -  -
+                                  rear side of switch
+                           Note
+                                 TimeofDayisnotsupported.
+                                 Beginning with Cisco NX-OS Release 10.3(2)F, PTP GM functionality is supported on the Cisco
+                                 N9K-C93180YC-FX3platformswitches.
+                             Todeterminewhichtransceivers,adapters,andcablessupportthisswitch,seetheCiscoTransceiverModules
+                             Compatibility Information document.
+                             Thefigure shows the switch features on the power supply side of the chassis, the back view.
+                                                          CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                                               7
+                                                                                                       Overview
+           Overview
+                           1  Powersupplymodules(1or2)(AC 4   Managementport(RJ45)
+                              powersupplies shown) with slots
+                              numbered1(left) and 2 (right)
+                           2  Fanmodules(4)withslots      5   USBport
+                              numberedfrom1(left) to 4 (right)
+                           3  Console port                6   ToDport
+                          Table 3: ToD/1PPS RS422 Interface-RJ-45 Pinout
+                           Pin Signal_name                       Description
+                           1  NC                                 NoConnect
+                           2  NC                                 NoConnect
+                           3  1PPS_N                             1PPSRS422
+                           4  GND                                -
+                           5  GND                                -
+                           6  1PPS_P                             1PPSRS422
+                           7  TOD_N                              TimeofDay(ToD)RS422
+                           8  TOD_P                              TimeofDay(ToD)RS422
+                          Thefigure shows the side of the chassis.
+                       CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+               8
+             Overview
+                                                                                                               Overview
+                               1   Screwholesformountingbrackets 2    Grounding pad
+                               Depending on whether you plan to position the ports in a hot or cold aisle, order the fan and power supply
+                               modules with port-side intake or port-side exhaust airflow. For port-side intake airflow, the fan and power
+                               supplieshaveburgundycoloring.Forport-sideexhaustairflow,thefanandpowersupplieshavebluecoloring.
+                               Thefanandpowersupplymodulesarefieldreplaceable.Replaceonefanmoduleoronepowersupplymodule
+                               duringoperationsaslongastheothermodulesareinstalledandoperating.Ifyouhaveonlyonepowersupply
+                               installed, install the replacement power supply in the open slot before removing the original power supply.
+                             Note
+                                   Allfanandpowersupplymodulesmusthavethesamedirectionofairflow.Otherwise,theswitchcanoverheat
+                                   and shut down.
+                          Caution
+                                   If the switch has port-side intake airflow (burgundy coloring for fan modules), locate the ports in the cold
+                                   aisle. If the switch has port-side exhaust airflow (blue coloring for fan modules), locate the ports in the hot
+                                   aisle. If you locate the air intake in a hot aisle, the switch can overheat and shut down.
+                                                            CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                                                    9
+                                                                  Overview
+       Overview
+               CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+         10
+                                                CHAPTER 2
+                   PreparingtheSite
+                    • Temperature Requirements, on page 11
+                    • Humidity Requirements, on page 12
+                    • Altitude Requirements, on page 12
+                    • Dust and Particulate Requirements, on page 12
+                    • Minimizing Electromagnetic and Radio Frequency Interference, on page 13
+                    • Shock and Vibration Requirements, on page 14
+                    • Preventing Electrostatic Discharge Damage, on page 14
+                    • Grounding Requirements, on page 14
+                    • Planning for Power Requirements, on page 14
+                    • Airflow Requirements, on page 16
+                    • Rack and Cabinet Requirements, on page 17
+                    • Clearance Requirements, on page 17
+                    • Network Equipment-Building System (NEBS) Statements, on page 19
+       TemperatureRequirements
+                   Theoperatingtemperatureoftheswitchis32to104degreesFahrenheit(0to40degreesCelsius)atsealevel.
+                   For every 300 meters (1000 feet) above sea level, the maximum temperature is reduced by 1 degree Celsius.
+                   Thenon-operating temperature of the switch is -40 to 158 degrees Fahrenheit (-40 to 70 degrees Celsius).
+                   OverviewofModuleTemperatures
+                   Built-in, automatic sensors in all switches in the Cisco N9000 Series monitor your switch at all times. Each
+                   module(supervisor, I/O, and fabric) has temperature sensors with two thresholds:
+                 Note
+                     For any Major temperature alarms from the sensors, the switch powers down in 2 minutes. Power on the
+                     switch after fixing the temperature issue.
+                    • Minor temperature threshold—If exceeded, a minor alarm occurs and these actions happen for all four
+                     sensors:
+                       • System messages display.
+                       • System sends Call Home alerts (if configured).
+                                    CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                      11
+                                                               PreparingtheSite
+       HumidityRequirements
+                     • System sends SNMP notifications (if configured).
+                     • System fan speed will increment.
+                   • Major temperature threshold—If exceeded, a major alarm occurs and these actions happen:
+                   If the threshold is exceeded in a switching module, only that module is shut down.
+                   For all sensors:
+                     • System messages display.
+                     • System sends Call Home alerts (if configured).
+                     • System sends SNMP notifications (if configured).
+                     • System fan speed will increment.
+                     • If the major threshold is exceeded in a switching module, only that module is shut down.
+                     • If the major threshold is exceeded in an active supervisor module with HA-standby or standby
+                      present, only that supervisor module is shut down and the standby supervisor module takes over.
+                     • If you do not have a standby supervisor module in your switch, you have 2 minutes to decrease the
+                      temperature. During this interval, the software monitors the temperature every 5 seconds and
+                      continuously sends system messages every 10 seconds, as configured.
+     HumidityRequirements
+                 Highhumidity can cause moisture to enter the switch. Moisture can cause corrosion of internal components
+                 and degradation of properties such as electrical resistance, thermal conductivity, physical strength, and size.
+                 Theswitchisratedtowithstandfrom5-to95-percent(nonoperating)and5-to90-percent(operating)relative
+                 humidity.
+                 Climate-controlledbuldingsusuallymaintainanacceptablelevelofhumidityfortheswitchequipment.Ifthe
+                 switch is located in an unusually humid location, use a dehumidifier to maintain the humidity within an
+                 acceptable range.
+     Altitude Requirements
+                 Altitude rating is 10,000 ft (3048 m). For China, it is 6,562 ft (2000 m).
+     DustandParticulateRequirements
+                 Exhaustfanscoolpowersupplies.Systemfanscoolswitchesbydrawinginairandexhaustingairoutthrough
+                 various openings in the chassis. Fans also introduce dust and other particles, causing contaminant buildup in
+                 the switch and increased internal chassis temperature. Dust and particles can act as insulators and interfere
+                 with the mechanical components in the switch. Keep a clean operating environment to reduce the negative
+                 effects of dust and other particles.
+               CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+         12
+        PreparingtheSite
+                                             MinimizingElectromagneticandRadioFrequencyInterference
+                   Inadditiontokeepingyourenvironmentfreeofdustandparticles,usetheseprecautionstoavoidcontamination
+                   of your switch:
+                    • Do not smoke near the switch.
+                    • Do not eat or drink near the switch.
+       MinimizingElectromagneticandRadioFrequencyInterference
+                   Electromagnetic interference (EMI) and radio frequency interference (RFI) from the switch can adversely
+                   affect other devices, such as radio and television (TV) receivers. Radio frequencies that emanate from the
+                   switchcanalsointerferewithcordlessandlow-powertelephones.Conversely,RFIfromhigh-powertelephones
+                   can cause spurious characters to appear on the switch monitor.
+                   RFIisdefinedasanyEMIwithafrequencyabove10kHz.Thistypeofinterferencecantravelfromtheswitch
+                   to other devices through the power cable and power source or through the air as transmitted radio waves. The
+                   Federal Communications Commission (FCC) publishes specific regulations to limit the amount of EMI and
+                   RFIthat are emitted by computing equipment. Each switch meets these FCC regulations.
+                   Toreduce the possibility of EMI and RFI, use these guidelines:
+                    • Cover all open expansion slots with a blank filler plate.
+                    • Always use shielded cables with metal connector shells for attaching peripherals to the switch.
+                   Whenwiresarerunforanysignificant distance in an electromagnetic field, interference can occur to the
+                   signals on the wires with these implications:
+                    • Bad wiring can result in radio interference emanating from the plant wiring.
+                    • StrongEMI,especiallywhenitiscausedbylightningorradiotransmitters,candestroythesignaldrivers
+                     and receivers in the chassis and even create an electrical hazard by conducting power surges through
+                     lines into equipment.
+                 Note
+                     Topredict and prevent strong EMI, consult experts in radio frequency interference (RFI).
+                   Thewiring is unlikely to emit radio interference if you use a twisted-pair cable with a good distribution of
+                   grounding conductors. Copper cables should not be longer than maximum distances for the media type.
+                Caution
+                     If the wires exceed the recommendeddistances,orifwirespassbetweenbuildings,givespecialconsideration
+                     to the effect of a lightning strike in your vicinity. The electromagnetic pulse that is caused by lightning or
+                     otherhigh-energyphenomenacaneasilycoupleenoughenergyintounshieldedconductorstodestroyelectronic
+                     switches. Consult experts in electrical surge suppression and shielding if you have had similar problems in
+                     the past.
+                                    CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                      13
+                                                               PreparingtheSite
+       ShockandVibrationRequirements
+     ShockandVibrationRequirements
+                 Theswitch has been shock- and vibration-tested for operating ranges, handling, and earthquake standards.
+     Preventing Electrostatic Discharge Damage
+                 Manyswitchcomponentscanbedamagedbystaticelectricity.Notexercisingtheproperelectrostaticdischarge
+                 (ESD)precautions can result in intermittent or complete component failures. To minimize the potential for
+                 ESDdamage,alwaysuseanESD-preventiveanti-static wrist strap (or ankle strap) and ensure that it makes
+                 adequate skin contact.
+                Note
+                   Checktheresistance value of the ESD-preventive strap periodically. The measurement should be 1–10
+                   megohms.Beforeyouperformanyoftheproceduresinthisguide, attach an ESD-preventive strap to your
+                   wrist and connect the leash to the chassis.
+     GroundingRequirements
+                 Theswitchissensitivetovariationsinvoltagethatissuppliedbythepowersources.Overvoltage,undervoltage,
+                 andtransients(spikes)canerasedatafrommemoryorcausecomponentstofail.Toprotectagainstthesetypes
+                 of problems, ensure that there is an earth-ground connection for the switch.
+                 Connect the grounding pad on the switch either directly to the earth-ground connection or to a fully bonded
+                 and grounded rack.
+                 Whenthechassisisproperlyinstalledinagroundedrack,theswitchisgroundedbecauseithasametal-to-metal
+                 (nopaint,stain,dirt, or anything else on it) contact to the rack. See Note to ensure proper conductivity between
+                 rack and switch is maintained.
+                 Alternatively, ground the chassis by using a customer-supplied grounding cable that meets your local and
+                 nationalinstallationrequirements.ForU.S.installations,werecommend6-AWGwire.Connectyourgrounding
+                 cable to the chassis with a grounding lug (provided in the switch accessory kit) and to the facility ground.
+                Note
+                   Create an electrical conducting path between the product chassis and the metal surface of the enclosure, or
+                   rackinwhichitismounted,ortoagroundingconductor.Provideelectricalcontinuitybyusingthread-forming
+                   typemountingscrewsthatremoveanypaintornon-conductivecoatingsandestablishametal-to-metalcontact.
+                   Removeanypaintorothernon-conductive coatings on the surfaces between the mounting hardware and the
+                   enclosure or rack. Clean the surfaces and apply an antioxidant before installation.
+     PlanningforPowerRequirements
+                 Theswitchincludestwopowersupplies(1-to-1redundancywithcurrentsharing)inoneofthesecombinations:
+               CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+         14
+              PreparingtheSite
+                                                                                                       PlanningforPowerRequirements
+                                     • Two 650-W ACpowersupplies (NEBScompliant)
+                                     • Two 1200-W HVAC/HVDCpowersupplies
+                                     • Two 930-W DCpowersupplies
+                                     • Two 500-W ACpowersupplies
+                                     • Two 1200-W HVAC/HVDCpowersupplies
+                                     • Two 930-W DCpowersupplies
+                               Note
+                                      Both power supplies must be the same type. Do not mix AC, DC, and HVAC/HVDC power supplies in the
+                                      samechassis.
+                               Note   For n+1 redundancy, you can use one or two power sources for the two power supplies. For n+n redundancy,
+                                      you must use two power sources and connect each power supply to a separate power source.
+                               Note
+                                      For 1+1 redundancy, you must use two power sources and connect each power supply to a separate power
+                                      source.
+                                 Thepowersupplies are rated to output up to 650 W (AC power supplies) but the switch requires less than
+                                 that amount of power from the power supply. To operate the switch, you must provision enough power from
+                                 the power source to cover the requirements of both the switch and a power supply. Typically, this switch and
+                                 a powersupplyrequire500Wofpowerinputfromthepowersource,butyoumustprovisionasmuchas625
+                                 Wofpowerinputfromthepowersourcetocoverpeakdemand.
+                               Note
+                                      Someofthepowersupplymoduleshaveratingcapabilities that exceed the switch requirements. When
+                                      calculating your power requirements, use the switch requirements to determine the amount of power that is
+                                      required for the power supplies.
+                               Note
+                                      In any power redundancy mode, the total power is shared across the populated Power Supply Units (PSUs).
+                                      Multiple PSUs are always load-sharing regardless of the mode used. If a PSU has an active input power, the
+                                      PSUprovidesafractionofthetotalpowertothesystem.Thisensuresthatallactivepowersuppliescontribute
+                                      to the power load, sharing it proportionally to maintain power redundancy.
+                                 Tominimizethepossibility of circuit failure, verify that each power-source circuit that is used by the switch
+                                 is dedicated to the switch.
+                                 This Warning applies to AC input application.
+                                                                  CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                                                              15
+                                                                                                               PreparingtheSite
+             Airflow Requirements
+                        Warning   Statement 1005—Circuit Breaker when using AC power supplies
+                                  This product relies on the building's installation for short-circuit (overcurrent) protection. Ensure that the
+                                  protective devices are rated not greater than 20A (North America), 16A (Europe), and 13A (UK).
+                           Note
+                                  This Warning applies to low-voltage DC input application.
+                        Warning   Statement 1005—Circuit Breaker when using DC power supplies
+                                  This product relies on the building's installation for short-circuit (overcurrent) protection.
+                                     • Ensurethattheprotectivedevicesareratednotgreaterthan30Awhentheswitchispoweredwithregular
+                                      DCpowersupplies(rated 48-60VDC).
+                                     • Ensurethattheprotectivedevicesareratednotgreaterthan10AwhentheswitchispoweredwithHVDC
+                                      powersupplies (rated 240-350VDC).
+                           Note   Statement 1033—SafetyExtra-LowVoltage (SELV)—IEC60950/ES1–IEC62368DCPowerSupply
+                                  Toreducetheriskofelectricshock,connecttheunitonlytoaDCpowersourcethatcomplieswiththeSafety
+                                  Extra-Low Voltage (SELV) requirements in IEC 60950 based safety standards or ES1 requirements in IEC
+                                  62368 based safety standards.
+                           Note
+                                  Werecommend8-AWGwireforDCinstallationsintheU.S.
+         Airflow Requirements
+                              Theswitch is positioned with its ports in either the front or the rear of the rack, depending on your cabling
+                              and maintenance requirements. To identify the airflow options for your switch, see the user-replaceable
+                              components in the Overview section of this document. Position the fan and power supply modules to move
+                              the coolant air from the cold aisle to the hot aisle in one of these ways:
+                                 • Port-side exhaust airflow—Cool air enters the chassis through the fan and power supply modules in the
+                                  cold aisle and exhausts through the port end of the chassis in the hot aisle.
+                                 • Port-side intake airflow—Cool air enters the chassis through the port end in the cold aisle and exhausts
+                                  through the fan and power supply modules in the hot aisle.
+                                 • Single-direction airflow—The direction of the installed fan modules determines the airflow.
+                          CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                16
+        PreparingtheSite
+                                                          RackandCabinetRequirements
+                   Identify the airflow direction of each fan and power supply module by its coloring.
+                    • Blue coloring indicates port-side exhaust airflow.
+                    • Red coloring indicates port-side intake airflow.
+                    • White coloring on HVAC/HVDC power supplies indicates dual-direction airflow.
+                 Note
+                     Toprevent the switch from overheating and shutting down, position the air intake for the switch in a cold
+                     aisle. The fan and power supply modules must have the same direction of airflow. To change the airflow
+                     direction for the switch, shutdown the switch before changing the modules.
+       RackandCabinetRequirements
+                   Install these types of racks or cabinets for your switch:
+                    • Standard perforated cabinets
+                    • Solid-walled cabinets with a roof fan tray (bottom-to-top cooling)
+                    • Standard open four-post Telco racks
+                   WorkwithyourcabinetvendorstodeterminewhichoftheircabinetsmeettheserequirementsorseetheCisco
+                   Technical Assistance Center (TAC) for recommendations:
+                    • Use a standard 19-inch (48.3-cm), four-post Electronic Industries Alliance (EIA) cabinet or rack with
+                     mountingrailsthatconformtoEnglishuniversalholespacingpersection1oftheANSI/EIA-310-D-1992
+                     standard.
+                    • The depth of a four-post rack must be 24 to 32 inches (61.0 to 81.3 cm) between the front and rear
+                     mounting rails (for proper mounting of the bottom-support brackets or other mounting hardware).
+                    • Required clearances between the chassis and the edges of its rack or the interior of its cabinet are:
+                       • 4.5 inches (11.4 cm) between the front of the chassis and the interior of the cabinet (required for
+                        cabling).
+                       • 3.0 inches (7.6 cm) betweentherearofthechassisandtheinteriorofthecabinet(requiredforairflow
+                        in the cabinet if used).
+                       • No clearance is required between the chassis and the sides of the rack or cabinet (no side airflow).
+                   Also, you must have power receptacles that are located within reach of the power cords that are used with the
+                   switch.
+       ClearanceRequirements
+                   Provide the chassis with adequate clearance between the chassis and any other rack, device, or structure so
+                   that you can properly install the switch. Provide the chassis with adequate clearance to route cables, provide
+                                    CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                      17
+                                                                                                                             PreparingtheSite
+              ClearanceRequirements
+                                 airflow, and maintain the switch. For the clearances required for an installation of this chassis in a four-post
+                                 rack, see the figure.
+                                  1    Chassis                                          5    Depth of the chassis
+                                  2    Vertical rack-mount posts and rails              6    Maximumextensionofthebottom-supportrails
+                                                                                             36.0 in (91.4 cm)
+                                  3    Chassis width                                    7    Depth of the front clearance area (equal to the
+                                                                                             depth of the chassis).
+                                       17.3 in (43.9 cm)
+                              CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                  18
+              PreparingtheSite
+                                                                                      NetworkEquipment-BuildingSystem(NEBS)Statements
+                                  4    Width of the front clearance area (equal to the
+                                       width of the chassis with two rack-mount
+                                       brackets that are attached to it).
+                                       19.0 in (48.3 cm)
+                               Note
+                                      Both the front and rear of the chassis must be open to both aisles for airflow.
+            NetworkEquipment-BuildingSystem(NEBS)Statements
+                                 TheregulatorycompliancestatementsandrequirementsfortheNetworkEquipmentBuildingSystem(NEBS)
+                                 certification are listed here.
+                               Note   Statement 7001—ESDMitigation
+                                      This equipment may be ESD sensitive. Always use an ESD ankle or wrist strap before handling equipment.
+                                      ConnecttheequipmentendoftheESDstraptoanunfinishedsurfaceoftheequipmentchassisortotheESD
+                                      jack on the equipment if provided.
+                            Warning   Statement 7003—Shielded Cable Requirements for Intrabuilding Lightning Surge
+                                      Theintrabuildingport(s)oftheequipmentorsubassemblymustuseshieldedintrabuildingcabling/wiringthat
+                                      is grounded at both ends.
+                                      Thefollowing port(s) are considered intrabuilding ports on this equipment:
+                               Note   Statement 7004—Special Accessories Required to Comply with GR-1089 Emission and Immunity
+                                      Requirements
+                                      Tocomplywiththeemissionandimmunityrequirementsof GR-1089, shielded cables are required for the
+                                      following ports:
+                                                                  CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                                                              19
+                                                                                                               PreparingtheSite
+             NetworkEquipment-BuildingSystem(NEBS)Statements
+                        Warning   Statement 7005—Intrabuilding Lightning Surge and AC Power Fault
+                                  Theintrabuilding port(s) of the equipment or subassembly is suitable for connection to intrabuilding or
+                                  unexposed wiring or cabling only. The intrabuilding port(s) of the equipment or subassembly MUST NOT
+                                  be metallically connected to interfaces that connect to the OSP or its wiring for more than 6 meters
+                                  (approximately 20 feet). These interfaces are designed for use as intrabuilding interfaces only (Type 2, 4, or
+                                  4aportsasdescribedinGR-1089)andrequireisolationfromtheexposedOSPcabling.Theadditionofprimary
+                                  protectorsisnotsufficientprotectioninordertoconnecttheseinterfacesmetallicallytoanOSPwiringsystem.
+                                  Thefollowing ports are considered intrabuilding ports on the equipment:
+                        Warning   Statement 7012—EquipmentInterfacing with AC Power Ports
+                                  Connect this equipment to AC mains that are provided with a surge protective device (SPD) at the service
+                                  equipment that complies with NFPA 70, the National Electrical Code (NEC).
+                           Note   Statement 7013—EquipmentGroundingSystems—CommonBondingNetwork(CBN)
+                                  This equipment is suitable for installations using the CBN.
+                           Note   Statement 7015—EquipmentBondingandGrounding
+                                  Whenyouusethread-formingscrewstobondequipmenttoitsmountingmetalwork,removeanypaintand
+                                  nonconductive coatings and clean the joining surfaces. Apply an antioxidant compound before joining the
+                                  surfaces between the equipment and mounting metalwork.
+                           Note   Statement 7016—Battery Return Conductor
+                                  Treat the battery return conductor of this equipment as
+                           Note   Statement 7018—SystemRecoverTime
+                                  Theequipmentis designed to boot up in less than 30 minutes provided the neighboring devices are fully
+                                  operational.
+                          CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                20
+              PreparingtheSite
+                                                                                      NetworkEquipment-BuildingSystem(NEBS)Statements
+                               Note   Statement 8015—Installation Location Network Telecommunications Facilities
+                                      This equipment is suitable for installation in network telecommunications facilities.
+                               Note   Statement 8016—Installation Location Where the National Electric Code (NEC) Applies
+                                      This equipment is suitable for installation in locations where the NEC applies.
+                            Warning   Statement 1056—Unterminated Fiber Cable
+                                      Invisible laser radiation may be emitted from the end of the unterminated fiber cable or connector. Do not
+                                      viewdirectlywithopticalinstruments.Viewingthelaseroutputwithcertainopticalinstruments,forexample,
+                                      eye loupes, magnifiers, and microscopes, within a distance of 100 mm, may pose an eye hazard.
+                            Warning   Statement 1255—Laser Compliance Statement
+                                      PluggableopticalmodulescomplywithIEC60825-1Ed.3and21CFR1040.10and1040.11withorwithout
+                                      exception for conformance with IEC 60825-1 Ed. 3 as described in Laser Notice No. 56, dated May 8, 2019.
+                                                                  CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                                                              21
+                                                               PreparingtheSite
+       NetworkEquipment-BuildingSystem(NEBS)Statements
+               CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+         22
+                                                                                    CHAPTER 3
+                                 Installing the Switch Chassis
+                                    • Safety, on page 23
+                                    • Installation Options with Rack-Mount Kits, on page 27
+                                    • Airflow Considerations, on page 27
+                                    • Installation Guidelines, on page 27
+                                    • Unpacking and Inspecting the Switch, on page 28
+                                    • Procure Tools and Equipment, on page 29
+                                    • Installing the Switch Using the N3K-C3064-ACC-KIT Rack-Mount Kit, on page 30
+                                    • Installing the Switch Using the NXK-ACC-KIT-1RU Rack-Mount Kit, on page 34
+                                    • Installing the Airflow Sleeve (N9K-AIRFLOW-SLV), on page 38
+                                    • Grounding the Chassis, on page 40
+                                    • Starting the Switch, on page 41
+            Safety
+                                 Beforeyouinstall,operate, or service the switch, see the Regulatory, Compliance, and Safety Information for
+                                 the Cisco N9000 Series content for important Safety Information.
+                           Warning   Statement 1071—WarningDefinition
+                                     IMPORTANTSAFETYINSTRUCTIONS
+                                     Beforeyouworkonanyequipment,beawareofthehazardsinvolvedwithelectricalcircuitryandbefamiliar
+                                     with standard practices for preventing accidents. Read the installation instructions before using, installing, or
+                                     connecting the system to the power source. Use the statement number at the beginning of each warning
+                                     statement to locate its translation in the translated safety warnings for this device.
+                                     SAVETHESEINSTRUCTIONS
+                                                                CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                                                           23
+                                                                                                         Installing the Switch Chassis
+             Safety
+                            Note   Statement 1089—Instructed and Skilled Person Definitions
+                                   Aninstructedpersonissomeonewhohasbeeninstructedandtrainedbyaskilledpersonandtakesthenecessary
+                                   precautions when working with equipment.
+                                   Askilledpersonorqualifiedpersonnelissomeonewhohastrainingorexperienceintheequipmenttechnology
+                                   and understands potential hazards when working with equipment.
+                         Warning   Statement 1074—ComplywithLocalandNationalElectricalCodes
+                                   Toreduce risk of electric shock or fire, installation of the equipment must comply with local and national
+                                   electrical codes.
+                            Note   Statement 407—Japanese Safety Instruction
+                                   Youarestrongly advised to read the safety instruction before using the product.
+                                   https://www.cisco.com/web/JP/techdoc/pldoc/pldoc.html
+                                   Wheninstalling the product, use the provided or designated connection cables/power cables/AC adapters.
+                                   〈製品使用における安全上の注意〉
+                                   www.cisco.com/web/JP/techdoc/index.html
+                                   接続ケーブル、電源コードセット、ACアダプタ、バッテリなどの部品は、必ず添付品または
+                                   指定品をご使用ください。添付品・指定品以外をご使用になると故障や動作不良、火災の
+                                   原因となります。また、電源コードセットは弊社が指定する製品以外の電気機器には使用
+                                   できないためご注意ください。
+                         Warning   Statement 1017—Restricted Area
+                                   This unit is intended for installation in restricted access areas. Only skilled, instructed, or qualified personnel
+                                   can access a restricted access area.
+                         Warning   Statement 1091—Installation by an Instructed Person or Skilled Person
+                                   Onlyaninstructed person or skilled person should be allowed to install, replace, or service this equipment.
+                                   See statement 1089 for the definition of an instructed person or skilled person.
+                           CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                 24
+              Installing the Switch Chassis
+                                                                                                                         Safety
+                           Warning   Statement 1028—MoreThanOnePowerSupply
+                                     This unit might have more than one power supply connection. To reduce risk of electric shock, remove all
+                                     connections to de-energize the unit.
+                           Warning   Statement 1003—DCPowerDisconnection
+                                     Toreducerisk of electric shock or personal injury, disconnect DC power before removing or replacing
+                                     components or performing upgrades.
+                           Warning   Statement 1046—Installing or Replacing the Unit
+                                     Toreducerisk of electric shock, when installing or replacing the unit, the ground connection must always be
+                                     madefirst and disconnected last.
+                                     If your unit has modules, secure them with the provided screws.
+                           Warning   Statement 1022—Disconnect Device
+                                     Toreducethe risk of electric shock and fire, a readily accessible disconnect device must be incorporated in
+                                     the fixed wiring.
+                           Warning   Statement 1033—Safety Extra-Low Voltage (SELV)—IEC 60950/ES1–IEC 62368 DC Power Supply
+                                     Toreducetheriskofelectricshock, connect the unit only to a DC power source that complies with the SELV
+                                     requirementsintheIEC60950-basedsafetystandardsortheES1requirementsintheIEC62368-basedsafety
+                                     standards.
+                                                                CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                                                           25
+                                                                                                       Installing the Switch Chassis
+             Safety
+                        Warning   Statement 1024—GroundConductor
+                                  This equipment must be grounded. To reduce the risk of electric shock, never defeat the ground conductor or
+                                  operatetheequipmentintheabsenceofasuitablyinstalledgroundconductor.Contacttheappropriateelectrical
+                                  inspection authority or an electrician if you are uncertain that suitable grounding is available.
+                        Warning   Statement 1032—Lifting the Chassis
+                                  Toprevent personal injury or damage to the chassis, never attempt to lift or tilt the chassis using the handles
+                                  on modules, such as power supplies, fans, or cards. These types of handles are not designed to support the
+                                  weight of the unit.
+                        Warning   Statement 1006—Chassis Warning for Rack-Mounting and Servicing
+                                  Topreventbodily injury when mounting or servicing this unit in a rack, you must take special precautions to
+                                  ensure that the system remains stable. The following guidelines are provided to ensure your safety:
+                                     • This unit should be mounted at the bottom of the rack if it is the only unit in the rack.
+                                     • Whenmountingthis unit in a partially filled rack, load the rack from the bottom to the top with the
+                                      heaviest component at the bottom of the rack.
+                                     • If the rack is provided with stabilizing devices, install the stabilizers before mounting or servicing the
+                                      unit in the rack.
+                        Warning   Statement 1056—Unterminated Fiber Cable
+                                  Invisible laser radiation may be emitted from the end of the unterminated fiber cable or connector. Do not
+                                  viewdirectlywithopticalinstruments.Viewingthelaseroutputwithcertainopticalinstruments,forexample,
+                                  eye loupes, magnifiers, and microscopes, within a distance of 100 mm, may pose an eye hazard.
+                         Caution
+                                  Topreventlossofinputpower,ensurethetotalmaximumloadsonthecircuitssupplyingpowertotheswitch
+                                  are within the current ratings for the wiring and breakers.
+                           Note
+                                  For ACinput application, please refer to the statement below:
+                          CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                26
+              Installing the Switch Chassis
+                                                                                               Installation Options with Rack-Mount Kits
+                           Warning   Statement 1005—Circuit Breaker
+                                     This product relies on the building's installation for short-circuit (overcurrent) protection. Ensure that the
+                                     protective devices is rated not greater than 20A (North America), 16A (Europe), and 13A (UK).
+            Installation Options with Rack-Mount Kits
+                                 Therack-mountkit enables you to install the switch into racks of varying depths. Position the switch with
+                                 easy access to either the port connections or the fan and power supply modules.
+                                 Install the switch using these rack-mount options:
+                                    • Rack-mount kit (NXK-ACC-KIT-1RU) which you can order from Cisco. This option offers you easy
+                                     installation, greater stability, increased weight capacity, added accessibility, and improved removability
+                                     with front and rear removal.
+                                        • Wheninstalling the NXK-ACC-KIT-1RUrack-mountkit,thedistancebetweentheoutsidefaceof
+                                          the front mounting rail and the outside face of the back mounting rail should be 25.37 to 35 inches
+                                          (64.43 to 88.9 cm) to allow for rear-bracket installation.
+                                 Therackorcabinet that you use must meet the requirements listed in the section General Requirements for
+                                 Cabinets and Racks, on page 57.
+                               Note
+                                     Youareresponsible for verifying that your rack and rack-mount hardware comply with the guidelines that
+                                     are described in this document.
+            Airflow Considerations
+                                 Theswitch comes with fan and power supply modules that have either port-side intake or port-side exhaust
+                                 airflow for cooling the switch. If you are positioning the port end of the switch in a cold aisle, verify that the
+                                 switch has port-side intake fan modules with burgundy coloring. If you are positioning the fan and power
+                                 supply modules in a cold aisle, verify that the switch has port-side exhaust fan modules with blue colorings.
+                                 All fan modules must have the same direction of airflow.
+                                 Eachfanmoduleincludestwofanrotors that are counter rotating.
+            Installation Guidelines
+                                 Wheninstalling the switch, follow these guidelines:
+                                    • Ensure that there is adequate clearance space around the switch to allow for servicing the switch and for
+                                     adequate airflow.
+                                                                CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                                                           27
+                                                          Installing the Switch Chassis
+       UnpackingandInspectingtheSwitch
+                   • Ensure that you are positioning the switch in a rack so that it takes in cold air from the cold aisle and
+                   exhausts air to the hot aisle. If there is blue coloring on the fan modules, the switch is configured for
+                   port-side exhaust airflow and you must position the module side of the switch in a cold aisle. If there is
+                   burgundycoloringonthefanmodules,theswitchisconfiguredforport-sideintakeairflowandyoumust
+                   position the port side of the switch in a cold aisle.
+                   • Ensure that the chassis can be adequately grounded. If the switch is not mounted in a grounded rack, we
+                   recommendconnectingthe system ground on the chassis directly to an earth ground.
+                   • Ensurethatthesitepowermeetsthepowerrequirementsfortheswitch.Ifavailable,useanuninterruptible
+                   powersupply (UPS) to protect against power failures.
+               Caution
+                    AvoidUPStypesthatuseferroresonanttechnology.TheseUPStypescanbecome
+                    unstable with the switch, which can have substantial current draw fluctuations
+                    because of fluctuating data traffic patterns.
+                   • Ensure that circuits are sized according to local and national codes. Typically, this often requires one or
+                   both of these:
+                     • ACpowersupplies typically require at least a 15-A or 20-A AC circuit, 100 to 240 VAC, and a
+                      frequency of 50 to 60 Hz.
+               Caution
+                    Toprevent loss of input power, ensure the total maximum loads on the circuits
+                    supplying power to the switch are within the current ratings for the wiring and
+                    breakers.
+     UnpackingandInspectingtheSwitch
+                 Before you install the switch, unpack and inspect the switch for damage or missing components. If anything
+                 is missing or damaged, contact your customer service representative immediately.
+                Tip
+                   Keeptheshipping container in case the chassis requires shipping at a later time.
+                Note
+                   The93180YC-FXswitchwasdesignedfor32GBofmemory.Ifyoureceivedthisswitchwith64GBof
+                   SystemMemoryandhavetoperformareturnmerchandiseauthorization(RMA),theswitchwillarrivewith
+                   32 GBofSystemMemory.
+               CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+         28
+        Installing the Switch Chassis
+                                                           ProcureToolsandEquipment
+                   Beforeyoubegin
+                   Before you unpack the switch and before you handle any switch components, be sure that you are wearing a
+                   grounded electrostatic discharge (ESD) strap. To ground the strap, attach it directly to an earth ground or to
+                   a grounded rack or grounded chassis (there must be a metal-to-metal connection to the earth ground).
+             Procedure
+       Step1 Comparetheshipmenttotheequipmentlist provided by your customer service representative and verify that you have
+             received all items, including:
+               • Accessory Kit
+       Step2 Checkfordamageandreportanydiscrepanciesordamagetoyourcustomerservicerepresentative.Havethisinformation
+             ready:
+               • Invoice number of shipper (see packing slip)
+               • Model and serial number of the damaged unit
+               • Description of damage
+               • Effect of damage on the installation
+       Step3 Checktobesurethateachofthepowersupplyandthefantraymoduleshavetheexpecteddirectionof airflow.
+               • Port-side intake airflow modules
+                 • Burgundy (fan modules, AC power supplies, and DC power supplies)
+               • Port-side exhaust airflow modules
+                 • Blue (fan modules, AC power supplies, and DC power supplies)
+               • Dual-direction airflow power-supply modules
+                 • White (see the color of the fan modules to determine the airflow direction used)
+             Note
+             All power supplies and fan modules must have the same direction of airflow.
+       ProcureToolsandEquipment
+                   Obtain these necessary tools and equipment for installing the chassis:
+                    • Number 1 and number 2 Phillips screwdrivers with torque capability to rack-mount the chassis.
+                    • 3/16-inch flat-blade screwdriver.
+                    • Tape measure and level.
+                                    CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                      29
+                                                                                                                      Installing the Switch Chassis
+              Installing the Switch Using the N3K-C3064-ACC-KIT Rack-Mount Kit
+                                     • ESDwrist strap or other grounding device.
+                                     • Antistatic mat or antistatic foam.
+                                     • Crimping tool for lug.
+                                     • Wire-stripping tool.
+                                     • M4screwstofix brackets (16).
+                                     • M4screwstofix a ground lug (2).
+          InstallingtheSwitchUsingtheN3K-C3064-ACC-KITRack-Mount
+          Kit
+                                  Toinstall the switch, you must attach front and rear mounting brackets to the switch, install slider rails on the
+                                  rear of the rack, slide the switch onto the slider rails, and secure the switch to the front of the rack. Typically,
+                                  the front of the rack is the side easiest to access for maintenance.
+                               Note
+                                       Youmustsupplytheeight10-32or12-24screwsrequired to mount the slider rails and switch to the rack.
+                                  Beforeyoubegin
+                                     • You have inspected the switch shipment to ensure that you have everything ordered.
+                                     • Make sure that the switch rack-mount kit includes the following parts:
+                                           • Front rack-mount brackets (2)
+                                           • Rear rack-mount brackets (2)
+                                           • Slider rails (2)
+                                           • M4x0.7x8-mmPhillipscountersinkscrews(12)
+                                     • The rack is installed and secured to its location.
+                      Procedure
+          Step1       Install two front-mount brackets to the switch as follows:
+                      a)  Determine which end of the chassis is to be located in the cold aisle as follows:
+                              • If the switch has port-side intake modules (fan modules with burgundy coloring), position the switch so that its
+                               ports will be in the cold aisle.
+                              • If the switch has port-side exhaust modules (fan modules with blue coloring), position the switch so that its fan
+                               and power supply modules will be in the cold aisle.
+                              CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                   30
+               Installing the Switch Chassis
+                                                                                Installing the Switch Using the N3K-C3064-ACC-KIT Rack-Mount Kit
+                       b) Positionafront-mountbracketsothatfourofitsscrewholesarealignedtothescrewholesonthesideofthechassis.
+                           Note
+                           Youcanalignanyfouroftheholesinthefront rack-mount bracket to four of the six screw holes on the side of the
+                           chassis (see the two ways to mount these brackets on a typical chassis, in following figure). The holes that you use
+                           dependontherequirementsofyourrackandtheamountofclearancerequiredforinterfacecables(3inches[7.6mm]
+                           minimum)andmodulehandles(1inch[2.5mm]minimum).
+                            1 Frontrack-mountbracket aligned to the port end of   5 Frontrack-mountbracket aligned to the module end
+                               the chassis                                           of the chassis
+                            2 FourM4screwsusedtoattachthebrackettothe             6 FourM4screwsusedtoattachthebrackettothe
+                               chassis                                               chassis
+                            3 Rearrack-mountguidealignedto the module end of 7 Two M4 screws used to attach the bracket to the
+                               the chassis                                           chassis
+                            4 TwoM4screwsusedtoattachthebrackettothe              8 Rearrack-mountguidealignedto the port end of the
+                               chassis                                               chassis
+                       c)  Secure the front-mount bracket to the chassis using four M4 screws and tighten each screw to 12 in-lb (1.36 N·m)
+                           of torque.
+                       d) RepeatStep1fortheotherfrontrack-mountbracketontheothersideoftheswitchandbesuretopositionthatbracket
+                           the same distance from the front of the switch.
+            Step2      Install the two rear rack-mount brackets on the chassis as follows:
+                                                                   CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                                                                 31
+                                                                                                                      Installing the Switch Chassis
+              Installing the Switch Using the N3K-C3064-ACC-KIT Rack-Mount Kit
+                      a)  Align the two screw holes on a rear rack-mount bracket to the middle two screw holes in the remaining six screw
+                          holes on a side of the chassis. If you are aligning the guide to holes that are near the port connections end of the
+                          chassis, see Callout 3 in the previous figure. Otherwise, see Callout 7 in the previous figure.
+                      b) Attach the guide to the chassis using two M4 screws (see Callout 4 or 8 in the previous figure). Tighten the screws
+                          to 12 in-lb (1.36 N·m) of torque.
+                      c)  Repeat Step 2 for the other rear rack-mount bracket on the other side of the switch.
+          Step3       If you are not installing the chassis into a grounded rack, you must attach a customer-supplied grounding wire to the
+                      chassis as explained in the Grounding the Chassis, on page 40 section.. If you are installing the chassis into a grounded
+                      rack, you can skip this step.
+          Step4       Install the slider rails on the rack or cabinet as follows:
+                      a)  Determine which two posts of the rack or cabinet you should use for the slider rails. Of the four vertical posts in the
+                          rack or cabinet, two will be used for the front mount brackets attached to the easiest accessed end of the chassis, and
+                          the other two posts will have the slider rails.
+                      b) Position a slider rail at the desired level on the back side of the rack and use two 12-24 screws or two 10-32 screws,
+                          depending on the rack thread type, to attach the rails to the rack (see the following figure). Tighten 12-24 screws to
+                          30 in-lb (3.39 N·m) of torque and tighten 10-32 screws to 20 in-lb (2.26 N·m) of torque.
+                           1 Sliderrail with screw holes aligned to screw holes in 2      Twocustomer-supplied 12-24 or 10-32 screws used
+                               rack                                                       to attach each slider rail to the rack
+                      c)  Repeat Step 3 to attach the other slider rail to the other side of the rack.
+                          Tomakesurethattheslider rails are at the same level, you should use a level tool, tape measure, or carefully count
+                          the screw holes in the vertical mounting rails.
+          Step5       Insert the switch into the rack and attach it as follows:
+                      a)  Holding the switch with both hands, position the two rear rack-mount brackets on the switch between the rack or
+                          cabinet posts that do not have slider rails attached to them (see the following figure).
+                              CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                   32
+              Installing the Switch Chassis
+                                                                          Installing the Switch Using the N3K-C3064-ACC-KIT Rack-Mount Kit
+                          1 Alignthetworearrack-mountbracketguides with     3 Front-mountbrackets.
+                             the slider rails installed in the rack.
+                          2 Slidetherack-mountguidesontothesliderrailsuntil 4  Mounting rails on rack or cabinet posts.
+                             the front rack-mount brackets come in contact with
+                             the front rack-mount rails.
+                      b) Align the two rear rack-mount guides on either side of the switch with the slider rails installed in the rack. Slide the
+                         rack-mount guides onto the slider rails, and then gently slide the switch all the way into the rack until the front
+                         rack-mount brackets come in contact with two rack or cabinet posts.
+                      c) Holding the chassis level, insert two screws (12-24 or 10-32, depending on the rack type) in each of the two front
+                         rack-mountbrackets(usingatotaloffourscrews)andintothecagenutsorthreadedholesintheverticalrack-mounting
+                         rails (see the following figure).
+                                                              CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                                                        33
+                                                                                                               Installing the Switch Chassis
+              Installing the Switch Using the NXK-ACC-KIT-1RU Rack-Mount Kit
+                         1 Fastenthechassis to the front of the rack with two    3 Mountingrails on rack or cabinet posts.
+                             12-24 or 10-32 screws on each side.
+                         2 Front-mountbracket.
+                     d) Tighten the 10-32 screws to 20 in-lb (2.26 N·m) or tighten the 12-24 screws to 30 in-lb (3.39 N·m).
+         Step6       If you attached a grounding wire to the chassis grounding pad, connect the other end of the wire to the facility ground.
+         InstallingtheSwitchUsingtheNXK-ACC-KIT-1RURack-Mount
+         Kit
+                                Toinstall the switch, attach front and rear mounting brackets to the switch, install slider rails on the rear of
+                                the rack, slide the switch onto the slider rails, and secure the switch to the front of the rack. Typically, the
+                                front of the rack is the side easiest to access for maintenance.
+                              Note
+                                     Yousupplytheeight 10-32 or 12-24 screws required to mount the slider rails and switch to the rack.
+                                Beforeyoubegin
+                                   • Inspected the switch shipment to ensure that you have everything ordered.
+                                   • Verify that the switch rack-mount kit includes these parts:
+                             CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                  34
+                Installing the Switch Chassis
+                                                                                          Installing the Switch Using the NXK-ACC-KIT-1RU Rack-Mount Kit
+                                              • Front rack-mount brackets (2)
+                                              • Rear rack-mount brackets (2)
+                                              • Slider rails (2)
+                                              • M4x0.7x8-mmPhillipscountersinkscrews(10-12)
+                                         • The rack is installed and secured to its location.
+                          Procedure
+              Step1       Install two front rack-mount brackets and the two rear rack-mount brackets to the switch.
+                          a)  Determine which end of the chassis is to be located in the cold aisle.
+                                  • If the switch has port-side intake modules (fan modules with burgundy coloring), position the switch so that its
+                                   ports will be in the cold aisle.
+                                  • If the switch has port-side exhaust modules (fan modules with blue coloring), position the switch so that its fan
+                                   and power supply modules will be in the cold aisle.
+                          b) Positionthefrontrack-mountbracketandtherearrack-mountbracketsothatitsscrewholesarealignedtothescrew
+                              holes on the side of the chassis.
+                              Note
+                              Align the holes in the rack-mount bracket to the holes on the side of the chassis (see the two ways to mount these
+                              brackets on a typical chassis, in the figure). The holes that you use depend on the requirements of your rack and the
+                              amountofclearance required for interface cables (3 inches [7.6 mm] minimum) and module handles (1 inch [2.5
+                              mm]minimum).
+                                                                          CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                                                                              35
+                                                                                                                      Installing the Switch Chassis
+              Installing the Switch Using the NXK-ACC-KIT-1RU Rack-Mount Kit
+                      c)  Securethefront-mountbracketandtheback-mountbrackettothechassisusingfourM4screws.Tighteneachscrew
+                          to 12 in-lb (1.36 N·m) of torque.
+                      d) RepeatStep1fortheotherfrontrack-mountbracketandtheotherback-mountbracketontheothersideoftheswitch.
+                          Besuretoposition that bracket the same distance from the front of the switch.
+                          Note
+                          Depending on the chassis depth, the back rack-mount bracket may not fit. In that case, you do not need the back
+                          rack-mount bracket.
+          Step2       If you are not installing the chassis into a grounded rack, attach a customer-supplied grounding wire to the chassis as
+                      explained in the Grounding the Chassis, on page 40 section. If you are installing the chassis into a grounded rack, skip
+                      this step.
+          Step3       Install the slider rails on the rack or cabinet.
+                      a)  Determine which two posts of the rack or cabinet you should use for the slider rails. Of the four vertical posts in the
+                          rack or cabinet, two will be used for the front-mount brackets attached to the easiest accessed end of the chassis. The
+                          other two posts will have the slider rails.
+                      b) Position a slider rail at the desired level on the back side of the rack. Use 12-24 screws or 10-32 screws, depending
+                          on the rack thread type. To attach the rails to the rack, see the figure. Tighten 12-24 screws to 30 in-lb (3.39 N·m)
+                          of torque. Tighten 10-32 screws to 20 in-lb (2.26 N m) of torque.
+                              CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                   36
+                Installing the Switch Chassis
+                                                                                          Installing the Switch Using the NXK-ACC-KIT-1RU Rack-Mount Kit
+                          c)  Repeat Step 3 to attach the other slider rail to the other side of the rack.
+                              Makesurethatthesliderrailsareatthesamelevel.Usealeveltool,tapemeasure,orcarefullycountthescrewholes
+                              in the vertical mounting rails.
+              Step4       Insert the switch into the rack and attach it.
+                          a)  Holding the switch with both hands, position the two, rear rack-mount brackets on the switch between the rack or
+                              cabinet posts that do not have slider rails attached to them (see the figure).
+                          b) Align the two rear rack-mount guides on either side of the switch with the slider rails installed in the rack. Slide the
+                              rack-mount guides onto the slider rails. Gently slide the switch all the way into the rack until the front rack-mount
+                              brackets come in contact with two rack or cabinet posts.
+                          c)  Holdingthechassislevel,insertscrews(12-24or10-32,dependingontheracktype)ineachofthetwofrontrack-mount
+                              brackets (using a total of six screws) and into the cage nuts or threaded holes in the vertical rack-mounting rails (see
+                              the figure).
+                                                                          CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                                                                              37
+                                                                                       Installing the Switch Chassis
+           Installing the Airflow Sleeve (N9K-AIRFLOW-SLV)
+                d) Tighten the 10-32 screws to 20 in-lb (2.26 N m) or tighten the 12-24 screws to 30 in-lb (3.39 N m).
+       Step5    If you attached a grounding wire to the chassis grounding pad, connect the other end of the wire to the facility ground.
+       Installing the Airflow Sleeve (N9K-AIRFLOW-SLV)
+                         Install the airflow sleeve (N9K-AIRFLOW-SLV)toallowproperairflow,sothattheswitchisproperlycooled.
+                         This airflow sleeve is only compatible with rack mount kit (N3K-C3064-ACC-KIT).
+                         Table 4: Airflow Sleeve (N9K-AIRFLOW-SLV) MinimumandMaximumRackRailDepth.
+                          Chassis                    MinimumRackRailDepth       MaximumRackRailDepth
+                          N9K-C92348GC-X             636.49 mm                  748.25 mm
+                          N9K-C9316D-GX              824.80 mm                  916.60 mm
+                          N9K-C9332C                 794.20 mm                  898.70 mm
+                          N9K-C9332D-GX2B            824.00 mm                  915.80 mm
+                          N9K-C9332D-GX2B-M          824.00 mm                  915.80 mm
+                          N9K-C9336C-FX2             802.39 mm                  903.98 mm
+                          N9K-C9336C-FX2-E           806.90 mm                  898.70 mm
+                          N9K-C9348GC-FXP            672.49 mm                  764.29 mm
+                          N9K-C93108TC-FX            781.29 mm                  873.09 mm
+                          N9K-C93108TC-FX3P          672.49 mm                  769.69 mm
+                          N9K-C93180YC-FX            781.29 mm                  873.09 mm
+                      CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+              38
+            Installing the Switch Chassis
+                                                                            Installing the Airflow Sleeve (N9K-AIRFLOW-SLV)
+                            Chassis                     MinimumRackRailDepth       MaximumRackRailDepth
+                            N9K-C93180YC-FX3            672.49 mm                  784.25 mm
+                            N9K-C93180YC-FX3S           672.49 mm                  784.25 mm
+                            N9K-C93400LD-H1             663 mm                     775 mm
+                            N9K-C93600CD-GX             824.80 mm                  916.60 mm
+                          Note
+                                Yousupplythescrewstomounttheairflowsleeve.
+                            Beforeyoubegin
+                              • Verify that your shipment is complete.
+                              • Install your rack in a secure location.
+                   Procedure
+                   Insert the airflow sleeve into the rack and attach it.
+                   a) Holdingtheairflowsleeve(N9K-AIRFLOW-SLV)withbothhands,positionitinfrontofthefansideofthechassis.
+                   b) Holdingtheairflow sleeve level, insert screws (12-24 or 10-32, depending on the rack type) in each of the two front
+                      rack-mountflanges(usingatotaloftwoscrews)andintothecagenutsorthreadedholesintheverticalrack-mounting
+                      rails (see the figure).
+                   c) Tighten the 10-32 screws to 20 in-lb (2.26 N·m) or tighten the 12-24 screws to 30 in-lb (3.39 N·m) of torque.
+                                                       CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                                        39
+                                                                                                       Installing the Switch Chassis
+             GroundingtheChassis
+         GroundingtheChassis
+                              Theswitch chassis is automatically grounded when you properly install the switch in a grounded rack with
+                              metal-to-metal connections between the switch and rack.
+                           Note
+                                  Provide an electrical conducting path between the product chassis and the metal surface of the enclosure or
+                                  rack in which it is mounted or to a grounding conductor. To ensure electrical continuity, use thread-forming
+                                  typemountingscrewsthatremoveanypaintornon-conductivecoatingsandestablishametal-to-metalcontact.
+                                  Removeanypaintorothernon-conductive coatings on the surfaces between the mounting hardware and the
+                                  enclosure or rack. Clean the surfaces and apply an antioxidant before installation.
+                              Groundtherackif using LVDC power supplies. If using AC or HVDC power supplies, the power cord for
+                              the AC power supplies provides grounding for the chassis. For supplemental grounding or bonding, attach a
+                              customer-supplied grounding cable to the chassis ground pad.
+                              Groundthechassis. If you are using a 2-post rack, attach a customer-supplied grounding cable. Attach the
+                              cable to the chassis grounding pad and the facility ground. If you are using a 4-post rack, ensure that your
+                              chassis is grounded through the rack mount system or the power cable (AC or HVDC).
+                        Warning   Statement 1024—GroundConductor
+                                  This equipment must be grounded. To reduce the risk of electric shock, never defeat the ground conductor or
+                                  operatetheequipmentintheabsenceofasuitablyinstalledgroundconductor.Contacttheappropriateelectrical
+                                  inspection authority or an electrician if you are uncertain that suitable grounding is available.
+                        Warning   Statement 1046—Installing or Replacing the Unit
+                                  Toreducerisk of electric shock, when installing or replacing the unit, the ground connection must always be
+                                  madefirst and disconnected last.
+                              Beforeyoubegin
+                              Before you can ground the chassis, verify the earth ground contact has a solid connection to the data center
+                              building.
+                   Procedure
+         Step1     Useawire-stripping tool to remove approximately 0.75 inch (19 mm) of the covering from the end of the grounding
+                   wire. We recommend 6-AWG wire for the U.S. installations.
+         Step2     Insert the stripped end of the grounding wire into the open end of the grounding lug. Use a crimping tool to crimp the
+                   lug to the wire. See the figure. Verify that the ground wire is securely attached to the grounding lug by attempting to pull
+                   the wire out of the crimped lug (tug test).
+                          CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                40
+        Installing the Switch Chassis
+                                                               Starting the Switch
+             1  Chassis grounding pad      3  2 M4screwsareusedtosecurethegrounding lug to
+                                              the chassis
+             2  Groundingcable,with0.75in.(19mm)ofinsulation
+                that is stripped from one end, which is inserted into
+                the grounding lug and crimped in place
+       Step3 Secure the grounding lug to the chassis grounding pad with two M4 screws, see figure 1. Tighten the screws to 11 to 15
+             in-lb (1.24 to 1.69 N m) of torque.
+       Step4 Prepare the other end of the grounding wire and connect it to the facility ground.
+       Starting the Switch
+                   Start the switch by connecting it to its dedicated power source. If you need n+n redundancy, connect each
+                   powersupply in a switch to a different power source.
+                 Note
+                     This equipment is designed to boot up in less than 30 minutes, dependent on its neighboring devices being
+                     fully up and running.
+                   Beforeyoubegin
+                    • The switch must be installed and secured to a rack or cabinet.
+                    • The switch must be adequately grounded.
+                    • The rack must be close enough to the dedicated power source so that you can connect the switch to the
+                     powersource by using the designated power cables.
+                    • You have the designated power cables for the power supplies that you are connecting to the dedicated
+                     powersources.
+                  Note
+                      DependingontheoutletreceptacleonyourACpowerdistributionunit,youmight
+                      needanoptionaljumperpowercordtoconnecttheswitchtoyouroutletreceptacle.
+                                    CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                      41
+                                                                                                                      Installing the Switch Chassis
+              Starting the Switch
+                                     • The switch is not connected to the network (this includes any management or interface connections).
+                                     • The fan and power supply modules are fully secured in their chassis slots.
+                      Procedure
+          Step1       (Optional) For any HVAC/HVDC power supply, connect it to a power source like this:
+                      a)  Usingtherecommendedhighvoltagepowercableforyourcountryorregion,connecttheAndersonPowerSaf-D-Grid
+                          connectoronthepowercabletothepowerreceptacleonthepowersupply.Makesurethattheconnectorclickswhen
+                          fully pushed into the receptacle.
+                      b) Connectthe other end of the power cable to a power source.
+                              • Whenconnecting to an HVAC power source, insert the plug in a receptacle for the HVAC power source.
+                              • Whenconnecting to an HVDC power source, do this:
+                               1.   Verify that the power is turned off at a circuit breaker for the power source terminals.
+                               2.   Removethenutsfromeachoftheterminalpostsfor the power source.
+                               3.   Place the power cable ground-wire terminal ring on the ground terminal for the power source and secure
+                                    themwithaterminal nut.
+                               4.   Place the power cable negative-wire terminal ring on the negative terminal for the power source and secure
+                                    themwithaterminal nut.
+                               5.   Place the power cable positive-wire terminal ring on the positive terminal for the power source and secure
+                                    themwithaterminal nut.
+                               6.   If there is a safety cover for the power source terminals, place and secure it over the terminals.
+                               7.   Turn on the power at the power source circuit breaker.
+          Step2       (Optional) For any DC power supply, do this:
+                      a)  Turn off the circuit breaker for the power source.
+                      b) WhenusinganLVDCpowersupplythatdoesnotusealug,connectthesuppliedwiringharnesstothesource.Or
+                          connect the user-supplied wires to the LV DC power source.
+                      c)  WhenusinganLVDCpowersupplythatdoesnotusealug,connecttheattachedplugofthesuppliedwiringharness
+                          to the power supply. Or attach the lugs of the user supplied wires to the power supply.
+                      d) If there is a safety cover for the power source terminals, place and secure it over the terminals.
+                      e)  Turn on the power at the circuit breaker for the DC power source.
+          Step3       Verify that the power supply LED is on and green.
+          Step4       Listen for the fans; they should begin operating when the power supply is powered.
+          Step5       After the switch boots, verify that these LEDs are lit:
+                          • On the fan modules, the Status (STA or STS) LED is green.
+                           If a fan module Status LED is not green, try reinstalling the fan module.
+                          • After initialization, the switch chassis Status (labeled as STA or STS) LED is green.
+                              CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                   42
+        Installing the Switch Chassis
+                                                               Starting the Switch
+       Step6 Verify that the system software has booted and the switch has initialized without error messages.
+             Asetuputility automatically launches the first time that you access the switch and guides you through the basic
+             configuration. For instructions on how to configure the switch and check module connectivity, see the appropriate Cisco
+             N9000Series Configuration Guides.
+                                    CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                      43
+                                                          Installing the Switch Chassis
+       Starting the Switch
+               CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+         44
+                                                CHAPTER 4
+                   ConnectingtheSwitchtotheNetwork
+                    • Overview of Network Connections, on page 45
+                    • Creating the Initial Switch Configuration, on page 46
+                    • Setting Up the Management Interface, on page 47
+                    • Connecting Interface Ports to Other Devices, on page 48
+                    • Uplink Connections, on page 48
+                    • Downlink Connections, on page 48
+                    • Maintaining Transceivers and Optical Cables, on page 48
+       OverviewofNetworkConnections
+                   After you install the switch in a rack and power it up, make these network connections:
+                    • Console connection—This is a direct local management connection that you use to initially configure
+                     the switch. Make this connection first to initially configure the switch and determine its IP address,
+                     which is needed for the other connections.
+                    • Management connection—After you complete the initial configuration using a console, make this
+                     connection to manage all future switch configurations.
+                    • Uplink and downlink interface connections—These are connections to hosts and servers in the network.
+                   Eachofthese connection types is explained in one of these sections.
+                 Note
+                     Whenrunningcablesinoverheadorsubfloorcabletrays,westronglyrecommendthatyoulocatepowercables
+                     and other potential noise sources as far away as practical from network cabling that terminates on Cisco
+                     equipment. In situations where long parallel cable runs cannot be separated by at least 3.3 feet (1 meter), we
+                     recommendthatyoushield any potential noise sources by housing them in a grounded metallic conduit.
+                                    CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                      45
+                                                      ConnectingtheSwitchtotheNetwork
+       Creating the Initial Switch Configuration
+     Creating the Initial Switch Configuration
+                 Beforeyoubegin
+                   • A console device must be connected with the switch.
+                   • The switch must be connected to a power source.
+                   • Determine the IP address and the netmask that is needed for the Management (Mgmt0) interface.
+           Procedure
+     Step1 Poweruptheswitchbyconnectingeachinstalled power supply to an AC circuit.
+           If you are using the input-source (n+n) power mode, connect half of the power supplies to one AC circuit. Connect the
+           other half of the power supplies to another AC circuit.
+           TheInput and Output LEDs on each power supply light up (green) when the power supply units are sending power to
+           the switch. The software asks you to specify a password to use with the switch.
+     Step2 Enter a new password for this switch.
+           Thesoftwarechecksthesecuritystrengthofyourpassword.Itrejectsyourpasswordifitdoesnotmeettheseguidelines:
+             • At least eight characters.
+             • Minimizes or avoids the use of consecutive characters (such as "abcd").
+             • Minimizes or avoids repeating characters (such as "aaabbb").
+             • Does not contain recognizable words from the dictionary.
+             • Does not contain proper names.
+             • Contains both uppercase and lowercase characters.
+             • Contains numbers and letters.
+           Examplesofstrong passwords are:
+             • If2CoM18
+             • 2004AsdfLkj30
+             • Cb1955S21
+           Note
+           Clear text passwords cannot include the dollar sign ($) special character.
+           Tip
+           If a passwordistrivial (such as a short, easy-to-decipher password), the software will reject your password configuration.
+           Configure a strong password as explained in this step. Passwords are case-sensitive.
+           Whenyouenterastrongpassword,thesoftware asks you to confirm the password.
+               CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+         46
+        ConnectingtheSwitchtotheNetwork
+                                                       Setting Up the ManagementInterface
+       Step3 Enter the same password again.
+             If you enter the same password, the software accepts the password and begins asking a series of configuration questions.
+       Step4 Until you are asked for an IP address, enter the default configuration for each question.
+             Repeat this step for each question until you are asked for the Mgmt0 IPv4 address.
+       Step5 Enter the IP address for the management interface.
+             Thesoftware asks for the Mgmt0 IPv4 netmask.
+       Step6 Enter a network mask for the management interface.
+             Thesoftware asks if you need to edit the configuration.
+       Step7 Enter no, to not edit the configuration.
+             Thesoftware asks if you need to save the configuration.
+       Step8 Enter yes to save the configuration.
+                   Whattodonext
+                   Set up the management interface for each supervisor module on the switch.
+       Setting Up the ManagementInterface
+                   TheRJ-45and/orSFPmanagementportsprovideout-of-band management,which enables you to use the
+                   command-line interface (CLI) to manage the switch by its IP address. Use one of these ports depending on
+                   the cable and connectors that you are using to connect the management interface to the network.
+                   Beforeyoubegin
+                    • The switch must be powered on.
+                    • The switch must be initially configured using a console.
+             Procedure
+       Step1 Connectthemanagementcableintothemanagementportontheswitch.Forshorterconnections,useacablewithRJ-45
+             connectors. For longer connections, use an optical cable with SFP transceivers (LH or SX type).
+       Step2 Note
+             Useonlyoneofthesemanagementports—theswitchdoesnotsupporttheuseofbothmanagementports.
+       Step3 Connect the other end of the cable to a 10/100/1000 or SFP port on a network device.
+                                    CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                      47
+                                                                                                ConnectingtheSwitchtotheNetwork
+             ConnectingInterfacePortstoOtherDevices
+         ConnectingInterfacePortstoOtherDevices
+                              After you perform the initial configuration for the switch and create a management connection, you are ready
+                              to connect the interface ports on the switch to other devices. Depending on the types of interface ports on the
+                              switch, use interface cables with QSFP28, QSFP+, SFP+, SFP transceivers, or RJ-45 connectors to connect
+                              the switch to other devices.
+                           Note
+                                  WhenusingSFP+orSFPtransceiversinaQSFP+orQSFP28uplinkport,installaQSFP-to-SFPadapter,
+                                  such as the CVR-QSFP-SFP10Gadapter,intheQSFPportandtheninstalltheSFP+orSFPtransceiver.The
+                                  switch automatically sets the port speed to the speed of the installed transceiver.
+                              If the transceivers that you are using can be separated from their optical cables, install the transceivers without
+                              their cables before inserting the cables into the transceivers. This helps to prolong the life of both the transceiver
+                              and cables. When removing transceivers from the switch, remove the optical cable first and then remove the
+                              transceiver.
+                              Todeterminewhichtransceivers,adapters,andcablesaresupportedbythisswitch,seetheCiscoTransceiver
+                              ModulesCompatibility Information document.
+         UplinkConnections
+                              Foralistoftransceiversandcablesusedbythisswitchforuplinkconnections,seeCiscoTransceiverModules
+                              Compatibility Information.
+                              Thesix uplink ports support 40- and 100-Gigabit Ethernet using QSFP28 transceivers.
+                        Warning   Statement 1051—Laser Radiation
+                                  Invisible laser radiation may be emitted from disconnected fibers or connectors. Do not stare into beams or
+                                  view directly with optical instruments.
+         DownlinkConnections
+                              TheCiscoN93180YC-FXswitchhas48downlinkportsthatconnecttoservers.Eachoftheseportssupports
+                              1-, 10-, and 25-Gigabit speeds over optical cables.
+                              For a listing of the transceivers and cables that the optical downlink ports support, see
+                              https://www.cisco.com/c/en/us/support/interfaces-modules/transceiver-modules/products-device-support-tables-list.html
+         MaintainingTransceiversandOpticalCables
+                              Keeptransceivers and fiber-optic cables clean and dust free to maintain high signal accuracy and prevent
+                              damagetotheconnectors. Contamination increases attenuation (loss of light) and should be below 0.35 dB.
+                          CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                48
+        ConnectingtheSwitchtotheNetwork
+                                                    MaintainingTransceiversandOpticalCables
+                   Consider these maintenance guidelines:
+                    • Transceivers are static sensitive. To prevent ESD damage, wear an ESD-preventative wrist strap that is
+                     connected to the grounded chassis.
+                    • Do not remove and insert a transceiver more often than is necessary. Repeated removals and insertions
+                     can shorten its useful life.
+                    • Keep all optical connections covered when not in use. Clean them before using to prevent dust from
+                     scratching the fiber-optic cable ends.
+                    • Do not touch the ends of connectors. Touching the ends can leave fingerprints and cause other
+                     contamination.
+                    • Clean the connectors regularly; the required frequency of cleaning depends upon the environment. In
+                     addition, clean connectors if they are exposed to dust or accidentally touched. Both wet and dry cleaning
+                     techniques can be effective; refer to the fiber-optic connection cleaning procedures for your site.
+                    • Inspect routinely for dust and damage. If you suspect damage, clean and then inspect fiber ends under a
+                     microscope to determine if damage has occurred.
+                 Note
+                     Whenyouneedtoremoveafiber-optictransceiver, first remove the fiber-optic cable from the transceiver
+                     before you remove the transceiver from the port.
+                                    CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                      49
+                                                      ConnectingtheSwitchtotheNetwork
+       MaintainingTransceiversandOpticalCables
+               CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+         50
+                                                CHAPTER 5
+                   ReplacingComponents
+                    • Replacing a Fan Module, on page 51
+                    • Replacing a Power Supply Module, on page 52
+       ReplacingaFanModule
+                   Youcanreplaceafanmodulewhiletheswitchisoperating, as long as you perform the replacement within
+                   one minute. If you cannot perform the replacement within one minute, leave the original fan module in the
+                   chassis to maintain the designed airflow until you have the replacement fan module on hand and can perform
+                   the replacement.
+                Caution
+                     If you are replacing a module during operations, verify the replacement fan module has the correct direction
+                     of airflow. This means that it has the same airflow direction as the other modules in the chassis. Also, verify
+                     that the airflow direction takes in air from a cold aisle and exhausts air to a hot aisle. Otherwise, the switch
+                     can overheat and shutdown.
+                     If you are changingtheairflowdirectionofallthemodulesinthechassis,shutdowntheswitchbeforereplacing
+                     all the fan and power supply modules with modules using the other airflow direction. During operations, all
+                     of the modules must have the same direction of airflow.
+       RemovingaFanModule
+                Caution
+                     Thefansmightstillbeturningwhenyouremovethefanassemblyfromthechassis.Keepfingers,screwdrivers,
+                     and other objects away from the openings in the fan assembly's housing.
+             Procedure
+       Step1 Onthefanmodulethatyouareremoving,pressthetwosidesofthefanmodulehandletogether,andpullonthehandles
+             enough to unseat it from its connectors.
+                                    CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                      51
+                                                                    ReplacingComponents
+        Installing a Fan Module
+      Step2 Holding the handle, pull the module out of the chassis.
+            Caution
+            Donottouchtheelectricalconnectorsonthebacksideofthemoduleandpreventanythingelsefromcomingintocontact
+            with and damaging the connectors.
+      Installing a Fan Module
+                   Beforeyoubegin
+                     • A fan slot must be open and ready for the new fan module to be installed.
+                     • If the switch is operating, you musthaveanewfanmoduleonhandandreadytoinstallwithinoneminute
+                      of removing the original fan module.
+                     • The new fan module must have the same airflow direction as the other fan and power supply modules
+                      installed in the switch.
+            Procedure
+      Step1 Holding the fan module by its handle, align the back of the fan module (the side with the electrical connectors) to the
+            open fan slot in the chassis.
+      Step2 Slide the fan module into the slot until it clicks in place.
+      Step3 Verify that the Status (STS) LED turns on and becomes green.
+      ReplacingaPowerSupplyModule
+                   Theswitch requires two power supplies for redundancy. With one power supply providing the necessary
+                   powerfor operations, replace the other power supply during operations as long as the new power supply has
+                   the same airflow direction as the other modules in the chassis.
+                   Replace a power supply with another supported power supply that has the same power source type as the
+                   other installed power supply. Additionally, the airflow direction of the power supply must match or conform
+                   to the airflow direction of the installed fan modules. For the airflow direction used by the switch, see the
+                   coloring of the fan modules.
+      ReplacinganACPowerSupply
+                   Replace an AC power supply during operations as long as the other power supply provides power to the
+                   switch.
+                 CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+           52
+                ReplacingComponents
+                                                                                                                       ReplacinganACPowerSupply
+                                      Beforeyoubegin
+                                   Note
+                                           Determine the airflow direction by looking at the coloring of the latch on each power supply. AC power
+                                           supplies with burgundy latches have port-side intake airflow direction AC power supplies with blue latches
+                                           have port-side exhaust airflow direction.
+                                         • The replacement power supply must have the same wattage and airflow direction as the power supply
+                                           being replaced. Do not mix AC, DC, HVAC/HVDC power supplies in the same switch.
+                                         • An ACpowersourcemustbewithinreachofthepowercablethatwillbeusedwiththereplacement
+                                           powersupply. If you are using n+n power redundancy, there must be a separate power source for each
+                                           powersupply installed in the chassis.
+                                         • There must be an earth ground connection to the chassis that you are installing the replacement module.
+                                           ACpowersuppliesconnectedtoACpowersourcesareautomaticallygrounded through their power
+                                           cable.
+                          Procedure
+              Step1       RemoveanACpowersupply.
+                          a)  Holding the plug for the power cable, pull the plug out from the power receptacle on the power supply and verify
+                              that both power supply LEDs are off.
+                          b) Graspthe power supply handle while pressing the colored release latch towards the power supply handle.
+                          c)  Place your other hand under the power supply to support it while you slide it out of the chassis.
+                              Caution
+                              Donottouchtheelectrical connections on the back side of the module and prevent anything else from coming into
+                              contact with and damaging the connectors.
+              Step2       Install the replacement power supply.
+                          a)  Holdingthereplacementpowersupplywithonehandunderneaththemoduleandtheotherhandholdingthehandle,
+                              turn the power supply so that its release latch is on the right side and align the back end of the power supply (the end
+                              with the electrical connections) to the open power supply slot before carefully sliding the power supply all the way
+                              into the slot until it clicks into place.
+                              Note
+                              If the power supply does not fit into the open slot, turn the module over before sliding it carefully into the open slot.
+                          b) Test the installation by trying to pull the power supply out of the slot without using the release latch.
+                              If the power supply does not move out of place, it is secured in the slot. If the power supply moves, carefully press
+                              it all the way into the slot until it clicks in place.
+                          c)  Attach the power cable to the electrical outlet on the front of the power supply.
+                          d) Makesurethattheother end of the power cable is attached to the appropriate power source for the power supply.
+                              Note
+                              Depending on the outlet receptacle on your power distribution unit, you might need the optional jumper cable to
+                              connect the switch to your outlet receptacle.
+                                                                          CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                                                                              53
+                                                                                                                            ReplacingComponents
+              ReplacingaHighVoltage(HVAC/HVDC)PowerSupply
+                      e)  Verify that the power supply is operational by making sure that the power supply LED is green.
+          ReplacingaHighVoltage(HVAC/HVDC)PowerSupply
+                                  Replace an HVACHVDCpowersupplyduringoperationsaslongastheotherpowersupplyprovidespower
+                                  to the switch.
+                                  Beforeyoubegin
+                                     • The replacement power supply must have the same wattage and airflow direction as the power supply
+                                       being replaced. Do not mix AC, DC, HVAC/HVDC power supplies in the same switch.
+                                 Note
+                                         Determine the airflow direction by looking at the coloring of the latch on each
+                                         powersupply. HVAC/HVDCpowersupplieshavewhitelatches.Whitelatches
+                                         indicate that they have dual airflow directional capability. Those power supplies
+                                         automatically use the same airflow direction as the fan modules installed in the
+                                         sameswitch.
+                                     • An HVAC/HVDCpowersourcemustbewithinreachofthepowercablethatwillbeusedwiththe
+                                       replacementpowersupply.Ifyouareusingn+npowerredundancy,theremustbeaseparatepowersource
+                                       for each power supply installed in the chassis.
+                                     • There must be an earth ground connection to the chassis in which you are installing the replacement
+                                       powersupply.HVAC/HVDCpowersuppliesconnectedtoACpowersourcesareautomaticallygrounded
+                                       by their power cable when connected to the power supply and AC power source. HVAC/HVDC power
+                                       supplies connected to DC power sources have Saf-D-Grid power cables with three connectors on the
+                                       powersource end--you connect one of those connectors to the earth ground.
+                      Procedure
+          Step1       RemoveanHVAC/HVDCpowersupply.
+                      a)  Turn off the circuit breaker for the power feed to the power supply that you are replacing.
+                          Besurethat the LEDs turn off on the power supply that you are removing.
+                      b) RemovethepowercablefromthepowersupplybypressingthetabonthetopoftheAndersonPowerSAF-D-Grid
+                          connector and pull the cable and connector out of the power supply.
+                      c)  Grasp the power supply handle while pressing the colored release latch towards the power supply handle.
+                      d) Place your other hand under the power supply to support it while you slide it out of the chassis.
+                          Caution
+                          Donottouchtheelectrical connections on the back side of the module and prevent anything else from coming into
+                          contact with and damaging the connectors.
+          Step2       Install the replacement power supply.
+                              CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                   54
+                ReplacingComponents
+                                                                                                                        ReplacingaDCPowerSupply
+                          a)  Holdingthereplacementpowersupplywithonehandunderneaththemoduleandtheotherhandholdingthehandle,
+                              turn the power supply so that its release latch is on the right side and align the back end of the power supply (the end
+                              with the electrical connections) to the open power supply slot before carefully sliding the power supply all the way
+                              into the slot until it clicks into place.
+                              Note
+                              If the power supply does not fit into the open slot, turn the module over before sliding it carefully into the open slot.
+                          b) Test the installation by trying to pull the power supply out of the slot without using the release latch.
+                              If the power supply does not move out of place, it is secured in the slot. If the power supply moves, carefully press
+                              it all the way into the slot until it clicks in place.
+                          c)  Attach the Saf-D-Grid end of the power cable to the electrical outlet on the front of the power supply.
+                          d) Makesurethattheother end of the power cable is attached to the appropriate power source for the power supply.
+                                  • For an HVAC power source, plug the other end of the power cable into the power source.
+                                  • For a HVDC power source, verify that the circuit breaker is turned off and then connect each of the three cable
+                                   connectors to the appropriate DC and grounding terminals on the power source. If there is a cover plate for the
+                                   DCterminals, install the plate to prevent accidental contact with the terminals.
+                          e)  If using an HVDC power source, turn on the circuit breaker for the power source.
+                          f)  Verify that the power supply is operational by making sure that the power supply LED is green.
+              ReplacingaDCPowerSupply
+                                      ReplaceaDCpowersupplyduringoperationssolongastheotherpowersupplyprovidespowertotheswitch.
+                                      Beforeyoubegin
+                                         • Replaceapowersupplywiththesamewattageandairflowdirectionasthepowersupplybeingreplaced.
+                                           DonotmixAC,DC,HVAC/HVDCpowersuppliesinthesameswitch.
+                                     Note
+                                            Determine the airflow direction by looking at the coloring of the latch on each
+                                            powersupply. AC power supplies with burgundy latches have port-side intake
+                                            airflow direction. AC power supplies with blue latches have port-side exhaust
+                                            airflow direction.
+                                         • A DCpowersourcemustbewithinreachofthepowercablesthatwillbeusedwiththereplacement
+                                           powersupply. If you are using n+n power redundancy, there must be a separate power source for each
+                                           powersupply installed in the chassis.
+                                         • There must be an earth ground connection to the chassis in which you are installing the replacement
+                                           powersupply. If the switch is mounted properly in a grounded rack then there is no need to ground the
+                                           PSU.SomeDCpowersuppliesconnectedtoDCpowersourceshavethreepowercables(twoforDC
+                                           powerandoneforgrounding). Some, like the (NXA-PDC-1100W) only have two power cables (both
+                                           for DC power).
+                                         • We recommend8-AWGwireforDCinstallationintheU.S.
+                                                                          CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                                                                              55
+                                                                                                                            ReplacingComponents
+              ReplacingaDCPowerSupply
+                                     • AllDCpowersupplieshavereversepolarityprotection.Whenyouinadvertentlyconnecttheinputpower
+                                       (+) to the DC PSU’s – terminal and the input power – to the DC PSU’s (+) terminal, the PSU will not
+                                       be damaged and will operate fine after the input power feeds are correctly wired.
+                      Procedure
+          Step1       RemoveaDCpowersupply.
+                      a)  Turn off the circuit breaker for the power feed to the power supply that you are replacing.
+                          Besurethat the LEDs turn off on the power supply that you are removing.
+                      b) RemovetheDCpowerconnectorblockfromthepowersupply.
+                          1.  Push the orange plastic button on the top of the connector block inward toward the power supply.
+                          2.  Pull the connector block out of the power supply.
+                      c)  Grasp the power supply handle while pressing the release latch towards the power supply handle.
+                      d) Place your other hand under the power supply to support it while you slide it out of the chassis.
+                          Caution
+                          Donottouchtheelectrical connections on the back side of the module and prevent anything else from coming into
+                          contact with and damaging the connectors.
+          Step2       Install the replacement power supply.
+                      a)  Holdingthereplacementpowersupplywithonehandunderneaththemoduleandtheotherhandholdingthehandle,
+                          turn the power supply so that its release latch is on the right side and align the back end of the power supply (the end
+                          with the electrical connections) to the open power supply slot before carefully sliding the power supply all the way
+                          into the slot until it clicks into place.
+                          Note
+                          If the power supply does not fit into the open slot, turn the module over before sliding it carefully into the open slot.
+                      b) Test the installation by trying to pull the power supply out of the slot without using the release latch.
+                          If the power supply does not move out of place, it is secured in the slot. If the power supply moves, carefully press
+                          it all the way into the slot until it clicks in place.
+                      c)  Attach the power connector block end of the power cable to the electrical outlet on the front of the power supply.
+                      d) Turnonthecircuit breaker for the power source.
+                      e)  Verify that the power supply is operational by making sure that the power supply LED is green.
+                              CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                   56
+                                              APPENDIX A
+                   RackSpecifications
+                    • Overview of Racks, on page 57
+                    • General Requirements for Cabinets and Racks, on page 57
+                    • Requirements Specific to Standard Open Racks, on page 58
+                    • Requirements Specific to Perforated Cabinets, on page 58
+                    • Cable Management Guidelines, on page 59
+       OverviewofRacks
+                   Install the switch in these types of cabinets and racks, assuming an external ambient air temperature range of
+                   0 to 104°F (0 to 40°C):
+                    • Standard perforated cabinets
+                    • Solid-walled cabinets with a roof fan tray (bottom to top cooling)
+                    • Standard open racks
+                 Note
+                       • If you are using an enclosed cabinet, we recommendoneofthethermallyvalidatedtypes,eitherstandard
+                        perforated or solid-walled with a fan tray.
+                       • Wedonotrecommendusingracksthathaveobstructions(suchaspowerstrips).Theobstructionscould
+                        impair access to field-replaceable units (FRUs).
+       GeneralRequirementsforCabinetsandRacks
+                   Thecabinet or rack must meet these requirements:
+                    • Standard 19-inch (48.3 cm) (two- or four-post EIA cabinet or rack, with mounting rails that conform to
+                     English universal hole spacing per section 1 of ANSI/EIA-310-D-1992). For more information, see
+                     Requirements Specific to Perforated Cabinets, on page 58.
+                     Thespacing between the posts of the rack must be (EIA-310-D-1992 19-inch rack compatible) wide
+                     enough to accommodate the width of the chassis.
+                                    CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                      57
+                                                              RackSpecifications
+       RequirementsSpecifictoStandardOpenRacks
+                   • The minimum vertical rack space requirement per chassis is:
+                     • For a one RU (rack unit) switch, 1.75 inches (4.4 cm)
+                     • For a one and a half RU (rack unit) switch, 2.63 (6.68 cm)
+                     • For a two RU (rack unit) switch, 3.5 inches (8.8 cm)
+                     • For a three RU (rack unit) switch, 5.25 inches (13.3 cm)
+                   • The width between the rack-mounting rails must be at least 17.75 inches (45.0 cm) if the rear of the
+                   device is not attached to the rack. For four-post EIA racks, this measurement is the distance between the
+                   twofront rails.
+                 Four-post EIA cabinets (perforated or solid-walled) must meet these requirements:
+                   • The minimumspacing for the bend radius for fiber-optic cables should have the front-mounting rails of
+                   the cabinet offset from the front door by a minimum of 3 inches (7.6 cm).
+                   • Thedistancebetweentheoutsidefaceofthefrontmountingrailandtheoutsidefaceofthebackmounting
+                   rail should be 23.0 to 30.0 inches (58.4 to 76.2 cm) to allow for rear-bracket installation.
+                   For the specific rack dimension information for each possible rack-mount, see Installation Options with
+                   Rack-MountKits, on page 27.
+     RequirementsSpecifictoStandardOpenRacks
+                 If you are mounting the chassis in an open rack (no side panels or doors), ensure that the rack meets these
+                 requirements:
+                   • The minimum vertical rack space per chassis must be equal to the rack unit (RU) of the chassis. One
+                   rack unit is equal to 1.75 inches (4.4 cm).
+                   • The distance between the chassis air vents and any walls should be 2.5 inches (6.4 cm).
+     RequirementsSpecifictoPerforatedCabinets
+                 Aperforatedcabinethasperforationsinitsfrontandreardoorsandsidewalls.Perforatedcabinetsmustmeet
+                 these requirements:
+                   • The front and rear doors must have at least a 60 percent open area perforation pattern, with at least 15
+                   square inches (96.8 square cm) of open area per rack unit of door height.
+                   • The roof should be perforated with at least a 20 percent open area.
+                   • The cabinet floor should be open or perforated to enhance cooling.
+                 TheCiscoRSeriesrackconformstotheserequirements.
+               CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+         58
+        RackSpecifications
+                                                          CableManagementGuidelines
+       CableManagementGuidelines
+                   Tohelpwithcablemanagement,allowadditional space in the rack above and below the chassis to make it
+                   easier to route all of the fiber optic or copper cables through the rack.
+                                    CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                      59
+                                                              RackSpecifications
+       CableManagementGuidelines
+               CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+         60
+                                                                                       APPENDIX B
+                                   SystemSpecifications
+                                       • Environmental Specifications, on page 61
+                                       • Switch Dimensions, on page 61
+                                       • Switch and Module Weights and Quantities, on page 62
+                                       • Transceiver and Cable Specifications, on page 62
+                                       • Switch Power Input Requirements, on page 63
+                                       • Power Specifications, on page 63
+                                       • Power Cable Specifications, on page 66
+                                       • Regulatory Standards Compliance Specifications, on page 68
+             EnvironmentalSpecifications
+                                    Environment                                      Specification
+                                    Temperature Ambient operating temperature        32 to 104°F (0 to 40°C)
+                                                  Ambientnonoperating                –40 to 158°F (–40 to 70°C)
+                                                                                     5 to 90%
+                                    Relative      Operating
+                                    humidity
+                                                  Nonoperating                       5 to 95%
+                                                                                     0 to 13,123 feet (0 to 4,000 meters)
+                                    Altitude      Operating
+             SwitchDimensions
+                                    Switch                       Width                  Depth                   Height
+                                    Cisco N93180YC-FX            17.3 inches (43.9 cm)  22.5 inches (57.1 cm)   1.72 inches (4.4 cm) (1 RU)
+                                    Switch                       Width                  Depth                   Height
+                                    Cisco N93180YC-FX3S          17.3 inches (43.9 cm)  19.5 inches (49.6 cm)   1.72 inches (4.4 cm) (1 RU)
+                                                                     CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                                                                     61
+                                                                                                                             SystemSpecifications
+               SwitchandModuleWeightsandQuantities
+          SwitchandModuleWeightsandQuantities
+                                   Component                                                                    WeightperUnit      Quantity
+                                   Cisco N93180YC-FXChassis(N9K-C93180YC-FX)                                    17.4 lb (7.9 kg)   1
+                                   FanModule                                                                    —                  4
+                                   – Port-side exhaust (blue) (NXA-FAN-30CFM-F)                                 0.26 lb (0.12 kg)
+                                   – Port-side intake (burgundy) (NXA-FAN-30CFM-B)
+                                   PowerSupplies                                                                —                  2 (1 for
+                                                                                                                                   operations
+                                   – 500-WACport-sideexhaust (blue) (NXA-PAC-500W-PE)                           2.42 lb (1.1 kg)
+                                                                                                                                   and 1 for
+                                   – 500-WACport-sideintake (burgundy) (NXA-PAC-500W-PI)                        2.42 lb (1.1 kg)   redundancy)
+                                   – 1200-WHVAC/HVDCdual-direction(white)(N9K-PUV-1200W)                        2.42 lb (1.1 kg)
+                                   – 930-WDCport-sideexhaust (blue) (NXA-PDC-930W-PE)                           2.42 lb (1.1 kg)
+                                   – 930-WDCport-sideintake (burgundy) (NXA-PDC-930W-PI)                        2.42 lb (1.1 kg)
+                                   Component                                                                    WeightperUnit      Quantity
+                                   Cisco N93180YC-FX3SChassis(N9K-C93180YC-FX3S)                                21 lb (9.52 kg)    1
+                                   FanModule                                                                    —                  4
+                                   – Port-side exhaust (blue) (NXA-FAN-35CFM-PE)                                0.26 lb (0.12 kg)
+                                   – Port-side intake (burgundy) (NXA-FAN-35CFM-PI)
+                                   PowerSupplymodule                                                            —                  2 (1 for
+                                                                                                                                   operations
+                                   – 650-WACport-sideexhaust (blue) (NXA-PAC-650W-PE)                           2.42 lb (1.1 kg)
+                                                                                                                                   and 1 for
+                                   – 650-WACport-sideintake (burgundy) (NXA-PAC-650W-PI)                        2.42 lb (1.1 kg)   redundancy)
+                                   – 1200-WHVAC/HVDCdual-direction(white)(N9K-PUV-1200W)
+                                   – 930-WDCport-sideexhaust (blue) (NXA-PDC-930W-PE)
+                                   – 930-WDCport-sideintake (burgundy) (NXA-PDC-930W-PI)
+          Transceiver and Cable Specifications
+                                  Toseethetransceiverspecificationsandinstallationinformation,seehttps://www.cisco.com/c/en/us/support/
+                                  interfaces-modules/transceiver-modules/products-device-support-tables-list.html.
+                               CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                   62
+              SystemSpecifications
+                                                                                                       SwitchPowerInputRequirements
+            SwitchPowerInputRequirements
+                                 This table lists the typical amount of power that the switch consumes. It also lists the maximum amount of
+                                 powerthat you must provision for the switch and power supply for peak conditions.
+                               Note
+                                      Somepowersupplieshavecapabilities that are greater than the maximum power requirements for a switch.
+                                      Todeterminethepowerconsumptioncharacteristicsfortheswitch,usethetypicalandmaximumrequirements
+                                      that are listed here.
+                               Note   If you want to use optics that consume 5W or more power on all the 36 ports, you must install 1100W
+                                      powersupplies.
+                                  Switch                              Typical Power            MaximumPower         HeatDissipation
+                                                                      Consumption(ACorDC)      Consumption(ACor     Requirement
+                                                                                               DC)
+                                  Cisco N93180YC-FX                   260 W                    425 W                1450.16 BTUs
+                                                                                                                    per hour
+                                  Cisco N93180YC-FX3S                 375                      600 W                2047.285 BTUs
+                                                                                                                    per hour
+            PowerSpecifications
+                                 Powerspecifications include the specifications for each type of power supply module.
+            500-WACPowerSupplySpecifications
+                                 These specifications apply to the NXA-PAC-500W power supplies.
+                                  Characteristic                   Specification
+                                  ACinputvoltage                   Nominalrange: 100 and 240 Vac (Range: 90-264 Vac)
+                                  ACinputfrequency                 Nominalrange: 50 to 60 Hz (Range: 47-63 Hz)
+                                  MaximumACinputcurrent            5.7 A at 100 Vac
+                                  Maximuminputvolt-amperes         648 VA, (2.7 A at 240 Vac)
+                                  Maximumoutputpowerperpower 500W
+                                  supply
+                                  Maximuminrushcurrent             33 A (sub-cycle duration)
+                                                                  CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                                                              63
+                                                                                                             SystemSpecifications
+             650-WACPowerSupplySpecifications
+                              Characteristic                   Specification
+                              Maximumhold-uptime               12 ms at 500 W
+                              Powersupply output voltage       12 Vdc
+                              Powersupply standby voltage      12 Vdc
+                              Efficiency rating                Climate Savers Platinum Efficiency (80Plus Platinum certified)
+                              Formfactor                       RSP1
+         650-WACPowerSupplySpecifications
+                              These specifications apply to the following power supplies:
+                                 • NXA-PAC-650W-PE
+                                 • NXA-PAC-650W-PI
+                              Characteristic                   Specification
+                              ACinputvoltage                   Nominalrange:100and240VAC(Range:90-132VAC,180-264VAC)
+                              ACinputfrequency                 Nominalrange: 50 to 60 Hz (Range: 47-63 Hz)
+                              MaximumACinputcurrent            7.6 A at 90 - 132 VAC
+                                                               3.65 A at 180 - 264 VAC
+                              Maximuminputvolt-amperes         760 VAat100VAC
+                              Maximumoutputpowerperpower 650W
+                              supply
+                              Maximuminrushcurrent             11 A (sub-cycle duration)
+                              Maximumhold-uptime               12 ms at 650 W
+                              Powersupply output voltage       12 VDC
+                              Powersupply standby voltage      12 VDC
+                              Efficiency rating                Climate Savers Platinum Efficiency (80Plus Platinum certified)
+                              Formfactor                       RSP1
+         1200-WHVAC/HVDCPowerSupplySpecifications
+                              These specifications apply to the N9K-PUV-1200W power supplies.
+                           CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                64
+              SystemSpecifications
+                                                                                                  930-WDCPowerSupplySpecifications
+                                  Characteristic                     Specification
+                                  Input voltage                         • Nominal range: 100-240 Vac (Range: 90-264 Vac)
+                                     • AC(for 1230 W output)
+                                                                        • Nominal range: 200-277 Vac (Range: 180-305 Vac)
+                                     • DC(for 1230 W output)
+                                                                        • Nominal range: 240-380 Vdc (Range: 1204-400 Vdc)
+                                  ACinputfrequency                   Nominal: 50 to 60 Hz (Range: 47-63 Hz)
+                                  MaximumACinputcurrent              10 A at 100 Vac
+                                  Maximuminrushcurrent               35 A (cold turn on); 70 A (hot turn on)
+                                  MaximumoutputWatts                 Per power supply
+                                     • For 200 to 277 VAC               • 1230 W
+                                     • For 192 to 400 VDC               • 1230 W
+                                  Powersupply output voltage         Per power supply
+                                     • For 200 to 277 VAC               • 12 Vdc at 100 A
+                                     • For 192 to 400 VDC               • 12 Vdc at 100 A
+                                  Powersupply standby voltage        12 V at 2.5 A
+                                  Efficiency rating                  ClimateSaversPlatinumEfficiency(80PlusPlatinumcertified)
+                                  Formfactor                         RSP1
+            930-WDCPowerSupplySpecifications
+                                 These specifications apply to the NXA-PDC-930W power supplies.
+                                  Characteristic                  Specification
+                                  DCinputvoltage range            Nominalrange: -48 to -72 Vdc nominal (Range: -40 to -60 Vdc
+                                  MaximumDCinputcurrent           23 A at -48 Vdc
+                                  Maximumoutputpowerperpower 930W
+                                  supply
+                                  Maximuminrushcurrent            35 A (sub-cycle duration)
+                                  Maximumhold-uptime              8 ms at 930 W
+                                  Powersupply output voltage      12 Vdc
+                                  Powersupply standby voltage     12 Vdc
+                                  Efficiency rating               Greater than 92% at 50% load
+                                                                 CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                                                            65
+                                                                                                                 SystemSpecifications
+             PowerCableSpecifications
+                                Characteristic                    Specification
+                                Formfactor                        RSP1
+         PowerCableSpecifications
+                               These sections show the power cables that you can order and use with this switch.
+         PowerCableSpecificationsforACPowerSupplies
+                                PowerType                     PowerCordPartNumber         CordSetDescription
+                                                              CAB-C13-C14-2M              PowerCordJumper,C13-C14Connectors,6.6feet
+                                                                                          (2.0 m)
+                                                              CAB-C13-CBN                 Cabinetjumperpowercord,250VAC,10A,C14-C13
+                                                                                          connectors, 2.3 feet (0.7 m)
+                                Argentina                     CAB-250V-10A-AR             250 V, 10 A, 8.2 feet (2.5 m)
+                                Australia                     CAB-9K10A-AU                250 VAC,10A,3112plug,8.2feet(2.5m)
+                                Brazil                        CAB-250V-10A-BR             250 V, 10 A, 6.9 feet (2.1 m)
+                                European Union                CAB-9K10A-EU                250 VAC,10A,CEE7/7plug,8.2feet(2.5m)
+                                India                         CAB-IND-10A                 10 A, 8.2 feet (2.5 m)
+                                India                         CAB-C13-C14-2M-IN           PowerCordJumper,C13-C14Connectors,6.6feet
+                                                                                          (2.0 m)
+                                India                         CAB-C13-C14-3M-IN           PowerCordJumper,C13-C14Connectors,9.8feet
+                                                                                          (3.0 m)
+                                Israel                        CAB-250V-10A-IS             250 V, 10 A, 8.2 feet (2.5 m)
+                                Italy                         CAB-9K10A-IT                250VAC,10A,CEI23-16/VIIplug,8.2feet(2.5m)
+                                Japan                         CAB-C13-C14-2M-JP           PowerCordJumper,C13-C14Connectors,6.6feet
+                                                                                          (2.0 m)
+                                North America                 CAB-9K12A-NA                125 VAC,13A,NEMA5-15plug,8.2feet(2.5m)
+                                North America                 CAB-AC-L620-C13             NEMAL6-20-C13,6.6feet(2.0m)
+                                North America                 CAB-N5K6A-NA                200/240V, 6A, 8.2 feet (2.5 m)
+                                Peoples Republic of China     CAB-250V-10A-CN             250 V, 10 A, 8.2 feet (2.5 m)
+                                South Africa                  CAB-250V-10A-ID             250 V, 10 A, 8.2 feet (2.5 m)
+                                Switzerland                   CAB-9K10A-SW                250 VAC,10A,MP232plug,8.2feet(2.5m)
+                            CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                 66
+                SystemSpecifications
+                                                                             HVAC/HVDCPowerCablesSupportedbyACI-ModeandNX-OSModeSwitches
+                                     PowerType                        PowerCordPartNumber           CordSetDescription
+                                     United Kingdom                   CAB-9K10A-UK                  250 VAC,10A,BS1363plug(13Afuse),8.2(2.5
+                                                                                                    m)
+                                     All except Argentina, Brazil,    NO-POWER-CORD                 Nopowercordincludedwithswitch
+                                     and Japan
+             HVAC/HVDCPowerCablesSupportedbyACI-ModeandNX-OSModeSwitches
+                                     Part Number                 CordSetDescription         Photo
+                                     CAB-HVAC-SD-0.6M            HVAC
+                                                                 2-foot (0.6 m) cable with
+                                                                 Saf-D-Grid and SD
+                                                                 connectors
+                                                                 277VAC
+                                     CAB-HVAC-C14-2M             HVAC
+                                                                 6.6-foot (2.0 m) cable
+                                                                 with Saf-D-Grid and C14
+                                                                 (use for up to 240 V)
+                                                                 connector
+                                                                 250VAC
+                                     CAB-HVAC-RT-0.6M            HVAC
+                                                                 2-foot (0.6 m) cable with
+                                                                 Saf-D-Grid and RT
+                                                                 connector
+                                                                 277VAC
+                                     CAB-HVDC-3T-2M              HVDC
+                                                                 6.6-foot (2.0 m) cable
+                                                                 withSaf-D-Gridandthree
+                                                                 terminal connectors
+                                                                 300VAC/400VDC
+                                                                 (+200/-200 V DC)
+                                     NO-POWER-CORD               All except Argentina,      Notapplicable
+                                                                 Brazil, and Japan
+                                                                 Nopowercordincluded
+                                                                 with switch
+                                                                        CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                                                                           67
+                                                                                                                    SystemSpecifications
+             Regulatory Standards ComplianceSpecifications
+                                Table 5: HVAC/HVDCPowerCablesCalloutTable
+                                                         1                               Connect this end to the power supply unit.
+         Regulatory Standards ComplianceSpecifications
+                                This table lists the regulatory standards compliance for the switch.
+                                Table 6: Regulatory Standards Compliance: Safety and EMC
+                                Specification             Description
+                                Regulatory compliance     ProductsshouldcomplywithCEMarkingsaccordingtodirectives2004/108/EC
+                                                          and 2006/95/EC.
+                                Safety                        • CAN/CSA-C22.2No.60950-1SecondEdition
+                                                              • CAN/CSA-C22.2No.62368-1-19ThirdEdition
+                                                              • ANSI/UL60950-1Secondedition
+                                                              • IEC 62368-1
+                                                              • EN 62368-1
+                                                              • AS/NZS62368-1
+                                                              • GB4943
+                                                              • UL 62368-1
+                                EMC:Emissions                 • 47CFRPart 15 (CFR 47) Class A
+                                                              • AS/NZSCISPR22ClassA
+                                                              • CISPR22 Class A
+                                                              • EN55022 Class A
+                                                              • ICES003 Class A
+                                                              • VCCIClassA
+                                                              • EN61000-3-2
+                                                              • EN61000-3-3
+                                                              • KN22ClassA
+                                                              • CNS13438ClassA
+                            CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                 68
+               SystemSpecifications
+                                                                                                                     SystemSpecifications
+                                    Specification             Description
+                                    EMC:Immunity                 • EN55024
+                                                                 • CISPR24
+                                                                 • EN300386
+                                                                 • KN61000-4series
+                                    RoHS                      TheproductisRoH-6compliantwithexceptionsforleaded-ballgrid-array(BGA)
+                                                              balls and lead press-fit connectors.
+                                                                     CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                                                                    69
+                                                             SystemSpecifications
+       SystemSpecifications
+               CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+         70
+                                                                                       APPENDIX C
+                                   LEDs
+                                      • Switch Chassis LEDs, on page 71
+                                      • Fan Module LEDs, on page 72
+                                      • Power Supply LEDs, on page 72
+             SwitchChassisLEDs
+                                   TheBCN,STS,andENV,LEDsarelocatedontheleftsideofthefrontoftheswitch.TheportLEDsappear
+                                   as triangles pointing up or down to the nearest port.
+                                    LED      Color           Status
+                                    BCN      Flashing blue   Theoperator has activated this LED to identify this switch in the chassis.
+                                             Off             This switch is not being identified.
+                                                             Theswitch is operational.
+                                    STS      Green
+                                             Flashingamber The switch is booting up.
+                                             Amber           Temperature exceeds the minor alarm threshold.
+                                             Red             Temperature exceeds the major alarm threshold.
+                                             Off             Theswitch is not receiving power.
+                                                             Fans and power supply modules are operational.
+                                    ENV      Green
+                                             Amber           Atleast one fan or power supply module is not operating.
+                                                             Port admin state is 'Enabled', SFP is present and the interface is connected (that is, cabled,
+                                    (port)   Green
+                                                             and the link is up).
+                                             Amber           Port admin state is 'Disabled, or the SFP is absent, or both.
+                                             Off             Port admin state is 'Enabled' and SFP is present, but interface is not connected.
+                                                                     CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                                                                    71
+                                                                                                                                                LEDs
+               FanModuleLEDs
+                                    LED       Color             Status
+                                                                Thefrequencyaresynchronizedtoexternalinterface.TheexternalinterfacecouldbeGPS,
+                                    (SYNC) Green
+                                                                Recovered RX clk).
+                                              Amber             Freerun/Holdover - Time core is in freerun or holdover mode.
+                                              Off               Timecoreclocksynchronization is disabled.
+                                                                Thetime, phase are synchronized to external interface. The external interface could be
+                                    (TIMING)  Green
+                                                                (GPS, FP).
+                                              Amber             Freerun/Holdover - Time core is in freerun or holdover mode.
+                                              Off               Timecoreclocksynchronization is disabled.
+                                                                GPSinterface provisioned and ports are turned on. ToD, 1PPS, 10MHz are all valid.
+                                    (GNSS) Green
+                                              Off               Either the interface is not provisioned, or the ports are not turned on. ToD, 1PPS, 10MHz
+                                                                are not valid.
+                                                                GPSinterface provisioned and ports are turned on. ToD, 1PPS, 10MHz are all valid.
+                                    (GPS)     Green
+                                              Off               Either the interface is not provisioned, or the ports are not turned on. ToD, 1PPS, 10MHz
+                                                                are not valid.
+          FanModuleLEDs
+                                    LED      Color      Status
+                                    Status   Green      Thefanmoduleisoperational.
+                                             Red        Thefanmoduleisnotoperational (fan is probably not functional).
+                                             Off        Fanmoduleisnotreceiving power.
+          PowerSupplyLEDs
+                                   ThepowersupplyLEDsarelocatedontheleftfrontportionofthepowersupply.Combinationsofstatesthat
+                                   are indicated by the Okay (PS_OK) and Okay (AC_OK) LEDs indicate the status for the module as shown
+                                   in the following table.
+                                    PSOKLED ACOKLED                 Status
+                                    Green         Green             Powersupply is on and outputting power to the switch.
+                                    Flashing      Off               Powersupply is connected to a power source but not outputting power to the
+                                    green                           switch.
+                                CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                   72
+          LEDs
+                                                                                     LEDs
+                       PSOKLED ACOKLED    Status
+                       Green    Flashingamber Power supply warning—possibly one of the following conditions:
+                                            • High voltage
+                                            • High power
+                                            • Low voltage
+                                            • Slow power supply fan
+                       Green    Amber     Rotor fault
+                                          Note
+                                          Thisbehavioroccursifthefanrotorisstoppedduringnormalswitchoperation.
+                       Off      Off       ACcordthatisremovedwhileinredundantmode(whileotherPSUisrunning).
+                                             CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                      73
+                                                                    LEDs
+       LEDs
+               CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+         74
+                                                                                         APPENDIX D
+                                    Additional Kits
+                                        • Rack Mount Kit NXK-ACC-KIT-1RU, on page 75
+                                        • Rack Mount Kit N3K-C3064-ACC-KIT, on page 76
+                                        • Airflow Sleeve, on page 76
+             RackMountKitNXK-ACC-KIT-1RU
+                                    This table lists and illustrates the contents for the 1-RU rack-mount kit (NXK-ACC-KIT-1RU).
+                                     Illustration                                     Description                                  Quantity
+                                                                                      Rack-mountkit                                1
+                                                                                          • Front brackets (2)
+                                                                                          • Rear brackets (2)
+                                                                                          • Slider rails (2)
+                                                                                          • M4Phillips pan-head screws (10)
+                                                                                      Groundlugkit                                 1
+                                                                                          • Two-hole lug (1)
+                                                                                          • M4x8-mmPhillipspan-headscrews
+                                                                                           (2)
+                                     Notapplicable                                    EACCompliancedocument                        1
+                                     Notapplicable                                    Hazardous substances list for customers in   1
+                                                                                      China
+                                    This table lists and illustrates the console cable (CAB-CONSOLE-RJ45) that can be ordered.
+                                                                       CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                                                                         75
+                                                                                                                              Additional Kits
+              RackMountKitN3K-C3064-ACC-KIT
+                                 Illustration                                      Description                                 Quantity
+                                                                                   Console cable with DB-9F and RJ-45F         1
+                                                                                   connectors
+         RackMountKitN3K-C3064-ACC-KIT
+                                 Thefollowing table lists and illustrates the contents for the 1-RU rack-mount kit (N3K-C3064-ACC-KIT).
+                                 Illustration                                      Description                                 Quantity
+                                                                                   Rack-mountkit                               1
+                                                                                      • Front-mount angled bracket (2)
+                                                                                      • Rear-mount slider bracket (2)
+                                                                                      • Slider rails (2)
+                                                                                      • M4x7mmmountingscrews(16)
+                                                                                   Groundlugkit                                1
+                                                                                      • Two-hole lug (1)
+                                                                                      • M4x8-mmPhillipspan-headscrews
+                                                                                        (2)
+                                 Notapplicable                                     EACCompliancedocument                       1
+                                 Notapplicable                                     Hazardous substances list for customers in  1
+                                                                                   China
+                                 Thefollowing table lists and illustrates the console cable (CAB-CONSOLE-RJ45) that can be ordered.
+                                 Illustration                                      Description                                 Quantity
+                                                                                   Console cable with DB-9F and RJ-45F         1
+                                                                                   connectors
+         Airflow Sleeve
+                                 This table lists and illustrates the airflow sleeve (N9K-AIRFLOW-SLV).
+                             CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                  76
+        Additional Kits
+                                                                 Additional Kits
+                   Illustration             Description            Quantity
+                                            Airflow sleeve         1
+                                    CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                      77
+                                                                Additional Kits
+       Additional Kits
+               CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+         78
+                                                                                    APPENDIX E
+                                  Site Preparation and Maintenance Records
+                                     • Site Preparation Checklist, on page 79
+                                     • Contact and Site Information, on page 80
+                                     • Chassis and Module Information, on page 81
+            Site Preparation Checklist
+                                  Planningthelocationandlayoutofyourequipmentrackorcabinetisessentialforsuccessfulswitchoperation,
+                                  ventilation, and accessibility.
+                                  Thetableliststhesiteplanningtasks.Werecommendthatyoucompletethetasksbeforeyouinstalltheswitch.
+                                  Your completion of each task ensures a successful switch installation.
+                                  PlanningActivity             Verification Time and Date
+                                  Space evaluation:
+                                     Space and layout
+                                     Floor covering
+                                     Impact and vibration
+                                     Lighting
+                                     Physical access
+                                     Maintenance access
+                                  Environmental evaluation:
+                                     Ambienttemperature
+                                     Humidity
+                                     Altitude
+                                     Atmosphericcontamination
+                                     Airflow
+                                                                  CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                                                               79
+                                                                                               Site Preparation and Maintenance Records
+             ContactandSiteInformation
+                               PlanningActivity             Verification Time and Date
+                               Powerevaluation:
+                                 Input power type
+                                 Powerreceptacles
+                                 Receptacleproximitytothe
+                                 equipment
+                                 Dedicated (separate)
+                                 circuits for power
+                                 redundancy
+                                 UPSforpowerfailures
+                                 Grounding: proper wire
+                                 gauge and lugs
+                                 Circuit breaker size
+                               Grounding evaluation:
+                                 Data center ground
+                               Cableandinterfaceequipment
+                               evaluation:
+                                 Cable type
+                                 Connector type
+                                 Cable distance limitations
+                                 Interface equipment
+                                 (transceivers)
+                               EMIevaluation:
+                                 Distance limitations for
+                                 signaling
+                                 Site wiring
+                                 RFIlevels
+         ContactandSiteInformation
+                              Usetheworksheet to record contact and site information for the installation.
+                               Contact person
+                               Contact phone
+                           CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                 80
+            Site Preparation and Maintenance Records
+                                                                                         ChassisandModuleInformation
+                             Contact e-mail
+                             Building/site name
+                             Data center location
+                             Floor location
+                             Address (line 1)
+                             Address (line 2)
+                             City
+                             State/Provence
+                             Contact person
+                             ZIP/postal code
+                             Country
+          ChassisandModuleInformation
+                             Usetheworksheet to record information about the switch.
+                             Contract number
+                             Chassis serial number
+                             Product Identification (PID)
+                             number
+                             Usetheworksheet to record network-related information.
+                             Switch IP address
+                             Switch IP netmask
+                             Hostname
+                             Domainname
+                             IP broadcast address
+                             Gateway/router address
+                             DNSaddress
+                             Usetheworksheet to record information about the modules in the switch.
+                             ModuleSlot                   ModuleType           ModuleSerialNumber   Notes
+                             Fanmodule1
+                                                        CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+                                                                                                            81
+                                                                                 Site Preparation and Maintenance Records
+           Site Preparation and Maintenance Records
+                           ModuleSlot                  ModuleType           ModuleSerialNumber   Notes
+                           Fanmodule2
+                           Fanmodule3
+                           Fanmodule4
+                           PowerSupply1
+                           PowerSupply2
+                           QSFP/QSFP-DDTranceiver
+                           SFP/SFP+Tranceiver
+                       CiscoN93180YC-FXNX-OSModeSwitchHardwareInstallationGuide
+              82
