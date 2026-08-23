@@ -1,0 +1,1179 @@
+{
+  "status": "PASS",
+  "required_loads": 40,
+  "actual_loads": 40,
+  "viewer_model_pairs": [
+    {
+      "pair": "babylon-standard",
+      "loads": 10,
+      "views": [
+        "front",
+        "rear",
+        "left",
+        "right",
+        "top",
+        "bottom",
+        "front-left",
+        "front-right",
+        "rear-left",
+        "rear-right"
+      ]
+    },
+    {
+      "pair": "babylon-web",
+      "loads": 10,
+      "views": [
+        "front",
+        "rear",
+        "left",
+        "right",
+        "top",
+        "bottom",
+        "front-left",
+        "front-right",
+        "rear-left",
+        "rear-right"
+      ]
+    },
+    {
+      "pair": "three-standard",
+      "loads": 10,
+      "views": [
+        "front",
+        "rear",
+        "left",
+        "right",
+        "top",
+        "bottom",
+        "front-left",
+        "front-right",
+        "rear-left",
+        "rear-right"
+      ]
+    },
+    {
+      "pair": "three-web",
+      "loads": 10,
+      "views": [
+        "front",
+        "rear",
+        "left",
+        "right",
+        "top",
+        "bottom",
+        "front-left",
+        "front-right",
+        "rear-left",
+        "rear-right"
+      ]
+    }
+  ],
+  "bounds_unique": [
+    {
+      "min": [
+        -0.24100000000000002,
+        -0.0434,
+        -0.38594000000000006
+      ],
+      "max": [
+        0.24100000000000002,
+        0.0434,
+        0.38619000000000003
+      ]
+    },
+    {
+      "min": [
+        -0.24100000225007534,
+        -0.04340000078082085,
+        -0.38594000175362453
+      ],
+      "max": [
+        0.24100000225007534,
+        0.04340000078082085,
+        0.3861900104020606
+      ]
+    }
+  ],
+  "records": [
+    {
+      "load_index": 1,
+      "viewer": "three",
+      "variant": "standard",
+      "view": "front",
+      "url": "http://127.0.0.1:8792/qa/viewers/three.html?view=front&variant=standard&labels=1&load=1&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/three-standard/front.png",
+      "screenshot_sha256": "8cbd850885af35a2a7244e07adc705b838d5db7b46b3ec28809458fcf8e2174e",
+      "viewer_info": {
+        "engine": "Three.js 0.170.0",
+        "variant": "Dell-R7525-3.5inch.glb",
+        "view": "front",
+        "bounds": {
+          "min": [
+            -0.24100000000000002,
+            -0.0434,
+            -0.38594000000000006
+          ],
+          "max": [
+            0.24100000000000002,
+            0.0434,
+            0.38619000000000003
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 2,
+      "viewer": "three",
+      "variant": "standard",
+      "view": "rear",
+      "url": "http://127.0.0.1:8792/qa/viewers/three.html?view=rear&variant=standard&labels=1&load=2&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/three-standard/rear.png",
+      "screenshot_sha256": "2a0ab69c91a98b275745316f3c9d2f0907f901697220dc2bb77c19f72b5fcaf0",
+      "viewer_info": {
+        "engine": "Three.js 0.170.0",
+        "variant": "Dell-R7525-3.5inch.glb",
+        "view": "rear",
+        "bounds": {
+          "min": [
+            -0.24100000000000002,
+            -0.0434,
+            -0.38594000000000006
+          ],
+          "max": [
+            0.24100000000000002,
+            0.0434,
+            0.38619000000000003
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 3,
+      "viewer": "three",
+      "variant": "standard",
+      "view": "left",
+      "url": "http://127.0.0.1:8792/qa/viewers/three.html?view=left&variant=standard&labels=1&load=3&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/three-standard/left.png",
+      "screenshot_sha256": "7606fdca0a509c1fca01c55ed41255e704cb53c56e8f5b061929f5f8fb5571ca",
+      "viewer_info": {
+        "engine": "Three.js 0.170.0",
+        "variant": "Dell-R7525-3.5inch.glb",
+        "view": "left",
+        "bounds": {
+          "min": [
+            -0.24100000000000002,
+            -0.0434,
+            -0.38594000000000006
+          ],
+          "max": [
+            0.24100000000000002,
+            0.0434,
+            0.38619000000000003
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 4,
+      "viewer": "three",
+      "variant": "standard",
+      "view": "right",
+      "url": "http://127.0.0.1:8792/qa/viewers/three.html?view=right&variant=standard&labels=1&load=4&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/three-standard/right.png",
+      "screenshot_sha256": "6407015fcfc99bbc6d8147aaabf3928edfb38ca906e4c3be69c31fb062154eab",
+      "viewer_info": {
+        "engine": "Three.js 0.170.0",
+        "variant": "Dell-R7525-3.5inch.glb",
+        "view": "right",
+        "bounds": {
+          "min": [
+            -0.24100000000000002,
+            -0.0434,
+            -0.38594000000000006
+          ],
+          "max": [
+            0.24100000000000002,
+            0.0434,
+            0.38619000000000003
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 5,
+      "viewer": "three",
+      "variant": "standard",
+      "view": "top",
+      "url": "http://127.0.0.1:8792/qa/viewers/three.html?view=top&variant=standard&labels=1&load=5&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/three-standard/top.png",
+      "screenshot_sha256": "331e5580fd192f2a8ad6045e562804f151818d47014f0533103a9406d4f05e25",
+      "viewer_info": {
+        "engine": "Three.js 0.170.0",
+        "variant": "Dell-R7525-3.5inch.glb",
+        "view": "top",
+        "bounds": {
+          "min": [
+            -0.24100000000000002,
+            -0.0434,
+            -0.38594000000000006
+          ],
+          "max": [
+            0.24100000000000002,
+            0.0434,
+            0.38619000000000003
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 6,
+      "viewer": "three",
+      "variant": "standard",
+      "view": "bottom",
+      "url": "http://127.0.0.1:8792/qa/viewers/three.html?view=bottom&variant=standard&labels=1&load=6&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/three-standard/bottom.png",
+      "screenshot_sha256": "a243a5924b0db6d3c2c4233717e31a7478db9cb6aff7c55e4e235374cd3652fc",
+      "viewer_info": {
+        "engine": "Three.js 0.170.0",
+        "variant": "Dell-R7525-3.5inch.glb",
+        "view": "bottom",
+        "bounds": {
+          "min": [
+            -0.24100000000000002,
+            -0.0434,
+            -0.38594000000000006
+          ],
+          "max": [
+            0.24100000000000002,
+            0.0434,
+            0.38619000000000003
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 7,
+      "viewer": "three",
+      "variant": "standard",
+      "view": "front-left",
+      "url": "http://127.0.0.1:8792/qa/viewers/three.html?view=front-left&variant=standard&labels=1&load=7&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/three-standard/front-left.png",
+      "screenshot_sha256": "7958b68175ed5b111cdd4af58be9dee94721a5686f8040d70f1ef15fbe5c0e81",
+      "viewer_info": {
+        "engine": "Three.js 0.170.0",
+        "variant": "Dell-R7525-3.5inch.glb",
+        "view": "front-left",
+        "bounds": {
+          "min": [
+            -0.24100000000000002,
+            -0.0434,
+            -0.38594000000000006
+          ],
+          "max": [
+            0.24100000000000002,
+            0.0434,
+            0.38619000000000003
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 8,
+      "viewer": "three",
+      "variant": "standard",
+      "view": "front-right",
+      "url": "http://127.0.0.1:8792/qa/viewers/three.html?view=front-right&variant=standard&labels=1&load=8&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/three-standard/front-right.png",
+      "screenshot_sha256": "68d93d035136e672cf5a6c313fc0a4f9ad6909fa5334e5653c591ad9807f1ff2",
+      "viewer_info": {
+        "engine": "Three.js 0.170.0",
+        "variant": "Dell-R7525-3.5inch.glb",
+        "view": "front-right",
+        "bounds": {
+          "min": [
+            -0.24100000000000002,
+            -0.0434,
+            -0.38594000000000006
+          ],
+          "max": [
+            0.24100000000000002,
+            0.0434,
+            0.38619000000000003
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 9,
+      "viewer": "three",
+      "variant": "standard",
+      "view": "rear-left",
+      "url": "http://127.0.0.1:8792/qa/viewers/three.html?view=rear-left&variant=standard&labels=1&load=9&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/three-standard/rear-left.png",
+      "screenshot_sha256": "b87ff6b74fcdfe6327a3fdb51368c491f2f228386fbf65cc37a2e6076eb8515d",
+      "viewer_info": {
+        "engine": "Three.js 0.170.0",
+        "variant": "Dell-R7525-3.5inch.glb",
+        "view": "rear-left",
+        "bounds": {
+          "min": [
+            -0.24100000000000002,
+            -0.0434,
+            -0.38594000000000006
+          ],
+          "max": [
+            0.24100000000000002,
+            0.0434,
+            0.38619000000000003
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 10,
+      "viewer": "three",
+      "variant": "standard",
+      "view": "rear-right",
+      "url": "http://127.0.0.1:8792/qa/viewers/three.html?view=rear-right&variant=standard&labels=1&load=10&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/three-standard/rear-right.png",
+      "screenshot_sha256": "7c8c73462d9d9abe8c5279562ff5b6887caadee312871b54a82486450047f140",
+      "viewer_info": {
+        "engine": "Three.js 0.170.0",
+        "variant": "Dell-R7525-3.5inch.glb",
+        "view": "rear-right",
+        "bounds": {
+          "min": [
+            -0.24100000000000002,
+            -0.0434,
+            -0.38594000000000006
+          ],
+          "max": [
+            0.24100000000000002,
+            0.0434,
+            0.38619000000000003
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 11,
+      "viewer": "three",
+      "variant": "web",
+      "view": "front",
+      "url": "http://127.0.0.1:8792/qa/viewers/three.html?view=front&variant=web&labels=1&load=11&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/three-web/front.png",
+      "screenshot_sha256": "19db6fce2caa633e876d84f7850ac69849e10d7617e632aea7687a3542162860",
+      "viewer_info": {
+        "engine": "Three.js 0.170.0",
+        "variant": "Dell-R7525-3.5inch-web.glb",
+        "view": "front",
+        "bounds": {
+          "min": [
+            -0.24100000000000002,
+            -0.0434,
+            -0.38594000000000006
+          ],
+          "max": [
+            0.24100000000000002,
+            0.0434,
+            0.38619000000000003
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 12,
+      "viewer": "three",
+      "variant": "web",
+      "view": "rear",
+      "url": "http://127.0.0.1:8792/qa/viewers/three.html?view=rear&variant=web&labels=1&load=12&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/three-web/rear.png",
+      "screenshot_sha256": "bbf05bd9b7fdfb57bc1ff7de34ba60f55c9b5e6316f21961321b47109c2500a8",
+      "viewer_info": {
+        "engine": "Three.js 0.170.0",
+        "variant": "Dell-R7525-3.5inch-web.glb",
+        "view": "rear",
+        "bounds": {
+          "min": [
+            -0.24100000000000002,
+            -0.0434,
+            -0.38594000000000006
+          ],
+          "max": [
+            0.24100000000000002,
+            0.0434,
+            0.38619000000000003
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 13,
+      "viewer": "three",
+      "variant": "web",
+      "view": "left",
+      "url": "http://127.0.0.1:8792/qa/viewers/three.html?view=left&variant=web&labels=1&load=13&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/three-web/left.png",
+      "screenshot_sha256": "a2e15eb03293271505b968b400fe90a47572be91a941bc0b4b88e9ae95a24406",
+      "viewer_info": {
+        "engine": "Three.js 0.170.0",
+        "variant": "Dell-R7525-3.5inch-web.glb",
+        "view": "left",
+        "bounds": {
+          "min": [
+            -0.24100000000000002,
+            -0.0434,
+            -0.38594000000000006
+          ],
+          "max": [
+            0.24100000000000002,
+            0.0434,
+            0.38619000000000003
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 14,
+      "viewer": "three",
+      "variant": "web",
+      "view": "right",
+      "url": "http://127.0.0.1:8792/qa/viewers/three.html?view=right&variant=web&labels=1&load=14&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/three-web/right.png",
+      "screenshot_sha256": "9a086ffa9522c5951790ffbbc1ebf4c5d9dc71e195826856bf919bd856a0770e",
+      "viewer_info": {
+        "engine": "Three.js 0.170.0",
+        "variant": "Dell-R7525-3.5inch-web.glb",
+        "view": "right",
+        "bounds": {
+          "min": [
+            -0.24100000000000002,
+            -0.0434,
+            -0.38594000000000006
+          ],
+          "max": [
+            0.24100000000000002,
+            0.0434,
+            0.38619000000000003
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 15,
+      "viewer": "three",
+      "variant": "web",
+      "view": "top",
+      "url": "http://127.0.0.1:8792/qa/viewers/three.html?view=top&variant=web&labels=1&load=15&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/three-web/top.png",
+      "screenshot_sha256": "5654c2f53f8d3e9add96f4ad52cc3e852e6159a20efefa3bf0e5107c24fd15d2",
+      "viewer_info": {
+        "engine": "Three.js 0.170.0",
+        "variant": "Dell-R7525-3.5inch-web.glb",
+        "view": "top",
+        "bounds": {
+          "min": [
+            -0.24100000000000002,
+            -0.0434,
+            -0.38594000000000006
+          ],
+          "max": [
+            0.24100000000000002,
+            0.0434,
+            0.38619000000000003
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 16,
+      "viewer": "three",
+      "variant": "web",
+      "view": "bottom",
+      "url": "http://127.0.0.1:8792/qa/viewers/three.html?view=bottom&variant=web&labels=1&load=16&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/three-web/bottom.png",
+      "screenshot_sha256": "7d6d719e04c6ee2b718b2f5842743dc693b6449848f75bec8717402edd09b94f",
+      "viewer_info": {
+        "engine": "Three.js 0.170.0",
+        "variant": "Dell-R7525-3.5inch-web.glb",
+        "view": "bottom",
+        "bounds": {
+          "min": [
+            -0.24100000000000002,
+            -0.0434,
+            -0.38594000000000006
+          ],
+          "max": [
+            0.24100000000000002,
+            0.0434,
+            0.38619000000000003
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 17,
+      "viewer": "three",
+      "variant": "web",
+      "view": "front-left",
+      "url": "http://127.0.0.1:8792/qa/viewers/three.html?view=front-left&variant=web&labels=1&load=17&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/three-web/front-left.png",
+      "screenshot_sha256": "72231220cfec9b9d1bfae52562bec0e2129b3611ba73820412b0c1c541c4d6f7",
+      "viewer_info": {
+        "engine": "Three.js 0.170.0",
+        "variant": "Dell-R7525-3.5inch-web.glb",
+        "view": "front-left",
+        "bounds": {
+          "min": [
+            -0.24100000000000002,
+            -0.0434,
+            -0.38594000000000006
+          ],
+          "max": [
+            0.24100000000000002,
+            0.0434,
+            0.38619000000000003
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 18,
+      "viewer": "three",
+      "variant": "web",
+      "view": "front-right",
+      "url": "http://127.0.0.1:8792/qa/viewers/three.html?view=front-right&variant=web&labels=1&load=18&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/three-web/front-right.png",
+      "screenshot_sha256": "1e5059ab3714fd34cdb0a1d387b7e27328c9c73ced87b00472f6fc8e8a923cbb",
+      "viewer_info": {
+        "engine": "Three.js 0.170.0",
+        "variant": "Dell-R7525-3.5inch-web.glb",
+        "view": "front-right",
+        "bounds": {
+          "min": [
+            -0.24100000000000002,
+            -0.0434,
+            -0.38594000000000006
+          ],
+          "max": [
+            0.24100000000000002,
+            0.0434,
+            0.38619000000000003
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 19,
+      "viewer": "three",
+      "variant": "web",
+      "view": "rear-left",
+      "url": "http://127.0.0.1:8792/qa/viewers/three.html?view=rear-left&variant=web&labels=1&load=19&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/three-web/rear-left.png",
+      "screenshot_sha256": "f9b89e3a7e915340a196a265d1d373a06494529d8c9e4e18ebf3ba90a861da37",
+      "viewer_info": {
+        "engine": "Three.js 0.170.0",
+        "variant": "Dell-R7525-3.5inch-web.glb",
+        "view": "rear-left",
+        "bounds": {
+          "min": [
+            -0.24100000000000002,
+            -0.0434,
+            -0.38594000000000006
+          ],
+          "max": [
+            0.24100000000000002,
+            0.0434,
+            0.38619000000000003
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 20,
+      "viewer": "three",
+      "variant": "web",
+      "view": "rear-right",
+      "url": "http://127.0.0.1:8792/qa/viewers/three.html?view=rear-right&variant=web&labels=1&load=20&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/three-web/rear-right.png",
+      "screenshot_sha256": "07e49a0b1039f7190de15f5126391e5cb3c64ccc953e101e0872552ed7408d71",
+      "viewer_info": {
+        "engine": "Three.js 0.170.0",
+        "variant": "Dell-R7525-3.5inch-web.glb",
+        "view": "rear-right",
+        "bounds": {
+          "min": [
+            -0.24100000000000002,
+            -0.0434,
+            -0.38594000000000006
+          ],
+          "max": [
+            0.24100000000000002,
+            0.0434,
+            0.38619000000000003
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 21,
+      "viewer": "babylon",
+      "variant": "standard",
+      "view": "front",
+      "url": "http://127.0.0.1:8792/qa/viewers/babylon.html?view=front&variant=standard&labels=1&load=21&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/babylon-standard/front.png",
+      "screenshot_sha256": "15da2c35534c0dc18f3821c8d1158700089636315b002a6882324f443e3df412",
+      "viewer_info": {
+        "engine": "Babylon.js 7.44.0",
+        "variant": "Dell-R7525-3.5inch.glb",
+        "view": "front",
+        "bounds": {
+          "min": [
+            -0.24100000225007534,
+            -0.04340000078082085,
+            -0.38594000175362453
+          ],
+          "max": [
+            0.24100000225007534,
+            0.04340000078082085,
+            0.3861900104020606
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 22,
+      "viewer": "babylon",
+      "variant": "standard",
+      "view": "rear",
+      "url": "http://127.0.0.1:8792/qa/viewers/babylon.html?view=rear&variant=standard&labels=1&load=22&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/babylon-standard/rear.png",
+      "screenshot_sha256": "73a9aad2bcf79b15dab1347bff72f904f5c4a0b684cb6301dcdc02addde168a0",
+      "viewer_info": {
+        "engine": "Babylon.js 7.44.0",
+        "variant": "Dell-R7525-3.5inch.glb",
+        "view": "rear",
+        "bounds": {
+          "min": [
+            -0.24100000225007534,
+            -0.04340000078082085,
+            -0.38594000175362453
+          ],
+          "max": [
+            0.24100000225007534,
+            0.04340000078082085,
+            0.3861900104020606
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 23,
+      "viewer": "babylon",
+      "variant": "standard",
+      "view": "left",
+      "url": "http://127.0.0.1:8792/qa/viewers/babylon.html?view=left&variant=standard&labels=1&load=23&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/babylon-standard/left.png",
+      "screenshot_sha256": "195afc1526ab28e9d1ed5f8a41d21f8501cc511b25a77e087efdf4f104f26ad6",
+      "viewer_info": {
+        "engine": "Babylon.js 7.44.0",
+        "variant": "Dell-R7525-3.5inch.glb",
+        "view": "left",
+        "bounds": {
+          "min": [
+            -0.24100000225007534,
+            -0.04340000078082085,
+            -0.38594000175362453
+          ],
+          "max": [
+            0.24100000225007534,
+            0.04340000078082085,
+            0.3861900104020606
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 24,
+      "viewer": "babylon",
+      "variant": "standard",
+      "view": "right",
+      "url": "http://127.0.0.1:8792/qa/viewers/babylon.html?view=right&variant=standard&labels=1&load=24&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/babylon-standard/right.png",
+      "screenshot_sha256": "88fc3d579dc6e76cf62586aafb1b33346a528858ba08cc9b7818494eb1c30ba8",
+      "viewer_info": {
+        "engine": "Babylon.js 7.44.0",
+        "variant": "Dell-R7525-3.5inch.glb",
+        "view": "right",
+        "bounds": {
+          "min": [
+            -0.24100000225007534,
+            -0.04340000078082085,
+            -0.38594000175362453
+          ],
+          "max": [
+            0.24100000225007534,
+            0.04340000078082085,
+            0.3861900104020606
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 25,
+      "viewer": "babylon",
+      "variant": "standard",
+      "view": "top",
+      "url": "http://127.0.0.1:8792/qa/viewers/babylon.html?view=top&variant=standard&labels=1&load=25&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/babylon-standard/top.png",
+      "screenshot_sha256": "a9939711056b036d05d1bd2a7dd7800cc72e3aa27edf5b752873b6a8c78a3746",
+      "viewer_info": {
+        "engine": "Babylon.js 7.44.0",
+        "variant": "Dell-R7525-3.5inch.glb",
+        "view": "top",
+        "bounds": {
+          "min": [
+            -0.24100000225007534,
+            -0.04340000078082085,
+            -0.38594000175362453
+          ],
+          "max": [
+            0.24100000225007534,
+            0.04340000078082085,
+            0.3861900104020606
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 26,
+      "viewer": "babylon",
+      "variant": "standard",
+      "view": "bottom",
+      "url": "http://127.0.0.1:8792/qa/viewers/babylon.html?view=bottom&variant=standard&labels=1&load=26&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/babylon-standard/bottom.png",
+      "screenshot_sha256": "5bf0160d5fb24a38a601304e4b8224eaf4b533b03b95aa6c61b4772bea144ec6",
+      "viewer_info": {
+        "engine": "Babylon.js 7.44.0",
+        "variant": "Dell-R7525-3.5inch.glb",
+        "view": "bottom",
+        "bounds": {
+          "min": [
+            -0.24100000225007534,
+            -0.04340000078082085,
+            -0.38594000175362453
+          ],
+          "max": [
+            0.24100000225007534,
+            0.04340000078082085,
+            0.3861900104020606
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 27,
+      "viewer": "babylon",
+      "variant": "standard",
+      "view": "front-left",
+      "url": "http://127.0.0.1:8792/qa/viewers/babylon.html?view=front-left&variant=standard&labels=1&load=27&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/babylon-standard/front-left.png",
+      "screenshot_sha256": "97918c9ab1d48716758811aa4ec5c859657db2d854d83e2adc14c390661b6e7e",
+      "viewer_info": {
+        "engine": "Babylon.js 7.44.0",
+        "variant": "Dell-R7525-3.5inch.glb",
+        "view": "front-left",
+        "bounds": {
+          "min": [
+            -0.24100000225007534,
+            -0.04340000078082085,
+            -0.38594000175362453
+          ],
+          "max": [
+            0.24100000225007534,
+            0.04340000078082085,
+            0.3861900104020606
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 28,
+      "viewer": "babylon",
+      "variant": "standard",
+      "view": "front-right",
+      "url": "http://127.0.0.1:8792/qa/viewers/babylon.html?view=front-right&variant=standard&labels=1&load=28&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/babylon-standard/front-right.png",
+      "screenshot_sha256": "7f1e436843ac11028981e2675b785da5c6f2b0b395b4207fc644f941356ec458",
+      "viewer_info": {
+        "engine": "Babylon.js 7.44.0",
+        "variant": "Dell-R7525-3.5inch.glb",
+        "view": "front-right",
+        "bounds": {
+          "min": [
+            -0.24100000225007534,
+            -0.04340000078082085,
+            -0.38594000175362453
+          ],
+          "max": [
+            0.24100000225007534,
+            0.04340000078082085,
+            0.3861900104020606
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 29,
+      "viewer": "babylon",
+      "variant": "standard",
+      "view": "rear-left",
+      "url": "http://127.0.0.1:8792/qa/viewers/babylon.html?view=rear-left&variant=standard&labels=1&load=29&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/babylon-standard/rear-left.png",
+      "screenshot_sha256": "b3db80f8fb30966aa927517571e34cafbe2601334e41381dc23c3547cfb76554",
+      "viewer_info": {
+        "engine": "Babylon.js 7.44.0",
+        "variant": "Dell-R7525-3.5inch.glb",
+        "view": "rear-left",
+        "bounds": {
+          "min": [
+            -0.24100000225007534,
+            -0.04340000078082085,
+            -0.38594000175362453
+          ],
+          "max": [
+            0.24100000225007534,
+            0.04340000078082085,
+            0.3861900104020606
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 30,
+      "viewer": "babylon",
+      "variant": "standard",
+      "view": "rear-right",
+      "url": "http://127.0.0.1:8792/qa/viewers/babylon.html?view=rear-right&variant=standard&labels=1&load=30&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/babylon-standard/rear-right.png",
+      "screenshot_sha256": "c194f707e1300d8bf98724d558990b474fe3bdb2d71772fb7f6393676f55422a",
+      "viewer_info": {
+        "engine": "Babylon.js 7.44.0",
+        "variant": "Dell-R7525-3.5inch.glb",
+        "view": "rear-right",
+        "bounds": {
+          "min": [
+            -0.24100000225007534,
+            -0.04340000078082085,
+            -0.38594000175362453
+          ],
+          "max": [
+            0.24100000225007534,
+            0.04340000078082085,
+            0.3861900104020606
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 31,
+      "viewer": "babylon",
+      "variant": "web",
+      "view": "front",
+      "url": "http://127.0.0.1:8792/qa/viewers/babylon.html?view=front&variant=web&labels=1&load=31&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/babylon-web/front.png",
+      "screenshot_sha256": "60b0723bd4ba9c8c9a564634c2d023c70f8c4ac538c4d890a23e7f069e32577d",
+      "viewer_info": {
+        "engine": "Babylon.js 7.44.0",
+        "variant": "Dell-R7525-3.5inch-web.glb",
+        "view": "front",
+        "bounds": {
+          "min": [
+            -0.24100000225007534,
+            -0.04340000078082085,
+            -0.38594000175362453
+          ],
+          "max": [
+            0.24100000225007534,
+            0.04340000078082085,
+            0.3861900104020606
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 32,
+      "viewer": "babylon",
+      "variant": "web",
+      "view": "rear",
+      "url": "http://127.0.0.1:8792/qa/viewers/babylon.html?view=rear&variant=web&labels=1&load=32&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/babylon-web/rear.png",
+      "screenshot_sha256": "ee58ff0c9134fd8550933efed50b072de63f4b0794ed6a0de32cf6cee981c946",
+      "viewer_info": {
+        "engine": "Babylon.js 7.44.0",
+        "variant": "Dell-R7525-3.5inch-web.glb",
+        "view": "rear",
+        "bounds": {
+          "min": [
+            -0.24100000225007534,
+            -0.04340000078082085,
+            -0.38594000175362453
+          ],
+          "max": [
+            0.24100000225007534,
+            0.04340000078082085,
+            0.3861900104020606
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 33,
+      "viewer": "babylon",
+      "variant": "web",
+      "view": "left",
+      "url": "http://127.0.0.1:8792/qa/viewers/babylon.html?view=left&variant=web&labels=1&load=33&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/babylon-web/left.png",
+      "screenshot_sha256": "99140514d5532153c0ef643acd429bb4ed5135d355edb4e9a4eb2826dec27431",
+      "viewer_info": {
+        "engine": "Babylon.js 7.44.0",
+        "variant": "Dell-R7525-3.5inch-web.glb",
+        "view": "left",
+        "bounds": {
+          "min": [
+            -0.24100000225007534,
+            -0.04340000078082085,
+            -0.38594000175362453
+          ],
+          "max": [
+            0.24100000225007534,
+            0.04340000078082085,
+            0.3861900104020606
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 34,
+      "viewer": "babylon",
+      "variant": "web",
+      "view": "right",
+      "url": "http://127.0.0.1:8792/qa/viewers/babylon.html?view=right&variant=web&labels=1&load=34&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/babylon-web/right.png",
+      "screenshot_sha256": "61178147f0678343f7b78ddcd8e0029dc830344ccae3c9550dc67398c369f89d",
+      "viewer_info": {
+        "engine": "Babylon.js 7.44.0",
+        "variant": "Dell-R7525-3.5inch-web.glb",
+        "view": "right",
+        "bounds": {
+          "min": [
+            -0.24100000225007534,
+            -0.04340000078082085,
+            -0.38594000175362453
+          ],
+          "max": [
+            0.24100000225007534,
+            0.04340000078082085,
+            0.3861900104020606
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 35,
+      "viewer": "babylon",
+      "variant": "web",
+      "view": "top",
+      "url": "http://127.0.0.1:8792/qa/viewers/babylon.html?view=top&variant=web&labels=1&load=35&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/babylon-web/top.png",
+      "screenshot_sha256": "7b14a96e3b83386202172607cb75156bc06f31a23ea9888ad9fea5e6cf915ddf",
+      "viewer_info": {
+        "engine": "Babylon.js 7.44.0",
+        "variant": "Dell-R7525-3.5inch-web.glb",
+        "view": "top",
+        "bounds": {
+          "min": [
+            -0.24100000225007534,
+            -0.04340000078082085,
+            -0.38594000175362453
+          ],
+          "max": [
+            0.24100000225007534,
+            0.04340000078082085,
+            0.3861900104020606
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 36,
+      "viewer": "babylon",
+      "variant": "web",
+      "view": "bottom",
+      "url": "http://127.0.0.1:8792/qa/viewers/babylon.html?view=bottom&variant=web&labels=1&load=36&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/babylon-web/bottom.png",
+      "screenshot_sha256": "adcab19720d37f788a23bf66f92524ad4907f8a5729618cd1719142de758d20f",
+      "viewer_info": {
+        "engine": "Babylon.js 7.44.0",
+        "variant": "Dell-R7525-3.5inch-web.glb",
+        "view": "bottom",
+        "bounds": {
+          "min": [
+            -0.24100000225007534,
+            -0.04340000078082085,
+            -0.38594000175362453
+          ],
+          "max": [
+            0.24100000225007534,
+            0.04340000078082085,
+            0.3861900104020606
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 37,
+      "viewer": "babylon",
+      "variant": "web",
+      "view": "front-left",
+      "url": "http://127.0.0.1:8792/qa/viewers/babylon.html?view=front-left&variant=web&labels=1&load=37&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/babylon-web/front-left.png",
+      "screenshot_sha256": "e829e94511fa7c54eb78dd907e672df5dcd3bbaa445d95a4773e1bdfb844785a",
+      "viewer_info": {
+        "engine": "Babylon.js 7.44.0",
+        "variant": "Dell-R7525-3.5inch-web.glb",
+        "view": "front-left",
+        "bounds": {
+          "min": [
+            -0.24100000225007534,
+            -0.04340000078082085,
+            -0.38594000175362453
+          ],
+          "max": [
+            0.24100000225007534,
+            0.04340000078082085,
+            0.3861900104020606
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 38,
+      "viewer": "babylon",
+      "variant": "web",
+      "view": "front-right",
+      "url": "http://127.0.0.1:8792/qa/viewers/babylon.html?view=front-right&variant=web&labels=1&load=38&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/babylon-web/front-right.png",
+      "screenshot_sha256": "3af90d0b9601abcd9a091e37d3738c46fb004db65526505a6579c04bb3b802d7",
+      "viewer_info": {
+        "engine": "Babylon.js 7.44.0",
+        "variant": "Dell-R7525-3.5inch-web.glb",
+        "view": "front-right",
+        "bounds": {
+          "min": [
+            -0.24100000225007534,
+            -0.04340000078082085,
+            -0.38594000175362453
+          ],
+          "max": [
+            0.24100000225007534,
+            0.04340000078082085,
+            0.3861900104020606
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 39,
+      "viewer": "babylon",
+      "variant": "web",
+      "view": "rear-left",
+      "url": "http://127.0.0.1:8792/qa/viewers/babylon.html?view=rear-left&variant=web&labels=1&load=39&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/babylon-web/rear-left.png",
+      "screenshot_sha256": "5a3e1084c2e8794b795f4804fe63f57609b79fb5f4b0f6e709806c2b58ef191d",
+      "viewer_info": {
+        "engine": "Babylon.js 7.44.0",
+        "variant": "Dell-R7525-3.5inch-web.glb",
+        "view": "rear-left",
+        "bounds": {
+          "min": [
+            -0.24100000225007534,
+            -0.04340000078082085,
+            -0.38594000175362453
+          ],
+          "max": [
+            0.24100000225007534,
+            0.04340000078082085,
+            0.3861900104020606
+          ]
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "load_index": 40,
+      "viewer": "babylon",
+      "variant": "web",
+      "view": "rear-right",
+      "url": "http://127.0.0.1:8792/qa/viewers/babylon.html?view=rear-right&variant=web&labels=1&load=40&run=1787494110483008003",
+      "screenshot": "qa/webgl-evidence/babylon-web/rear-right.png",
+      "screenshot_sha256": "4e473e2f63a6ffac3f2f6a2863bd4f1fdf222de162b009ea84d9aa486b591961",
+      "viewer_info": {
+        "engine": "Babylon.js 7.44.0",
+        "variant": "Dell-R7525-3.5inch-web.glb",
+        "view": "rear-right",
+        "bounds": {
+          "min": [
+            -0.24100000225007534,
+            -0.04340000078082085,
+            -0.38594000175362453
+          ],
+          "max": [
+            0.24100000225007534,
+            0.04340000078082085,
+            0.3861900104020606
+          ]
+        }
+      },
+      "status": "PASS"
+    }
+  ]
+}

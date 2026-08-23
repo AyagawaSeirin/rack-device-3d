@@ -1,0 +1,12 @@
+### Result
+{"engine":"Three.js 0.170.0","variant":"Dell-R7525-3.5inch.glb","view":"front","bounds":{"min":[-0.24100000000000002,-0.0434,-0.38594000000000006],"max":[0.24100000000000002,0.0434,0.38619000000000003]}}
+### Ran Playwright code
+```js
+await (async page => { await page.waitForFunction(() => window.__VIEWER_READY__ === true, null, {timeout: 30000}); return await page.evaluate(() => window.__VIEWER_INFO__); })(page);
+```
+### Page
+- Page URL: http://127.0.0.1:8792/qa/viewers/three.html?view=front&variant=standard&labels=1&load=1
+- Page Title: R7525 Three.js validation viewer
+- Console: 0 errors, 2 warnings
+### Events
+- New console entries: qa/webgl-evidence/.playwright-cli/console-2026-08-23T13-12-17-707Z.log#L2

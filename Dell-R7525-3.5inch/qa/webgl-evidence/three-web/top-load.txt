@@ -1,0 +1,6 @@
+### Result
+{"engine":"Three.js 0.170.0","variant":"Dell-R7525-3.5inch-web.glb","view":"top","bounds":{"min":[-0.24100000000000002,-0.0434,-0.38594000000000006],"max":[0.24100000000000002,0.0434,0.38619000000000003]}}
+### Ran Playwright code
+```js
+await (async page => { await page.waitForFunction(() => window.__VIEWER_READY__ === true, null, {timeout: 30000}); return await page.evaluate(() => window.__VIEWER_INFO__); })(page);
+```

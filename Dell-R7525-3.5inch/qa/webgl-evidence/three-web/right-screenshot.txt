@@ -1,0 +1,11 @@
+### Result
+- [Screenshot of viewport](qa/webgl-evidence/three-web/right.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as qa/webgl-evidence/three-web/right.png
+await page.screenshot({
+  path: 'qa/webgl-evidence/three-web/right.png',
+  scale: 'css',
+  type: 'png'
+});
+```

@@ -1,0 +1,6 @@
+### Result
+{"engine":"Babylon.js 7.44.0","variant":"Dell-R7525-3.5inch-web.glb","view":"rear-left","bounds":{"min":[-0.24100000225007534,-0.04340000078082085,-0.38594000175362453],"max":[0.24100000225007534,0.04340000078082085,0.3861900104020606]}}
+### Ran Playwright code
+```js
+await (async page => { await page.waitForFunction(() => window.__VIEWER_READY__ === true, null, {timeout: 30000}); return await page.evaluate(() => window.__VIEWER_INFO__); })(page);
+```

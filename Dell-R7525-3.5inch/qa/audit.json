@@ -1,0 +1,55 @@
+{
+  "model_key": "Dell-R7525-3.5inch",
+  "status": "PASS_WITH_BOTTOM_FALLBACK",
+  "configuration": "Dell PowerEdge R7525 2U; 12 x 3.5-inch LFF; installed Dell EMC LCD/security bezel; no rear-drive module; four riser groups/eight PCIe positions; two matching 2400 W AC PSUs",
+  "dimensions_mm": [482.0, 86.8, 772.13],
+  "views_audit": {
+    "status": "PASS",
+    "errors": 0,
+    "warnings": 5,
+    "warning_resolution": "Canonical PNG warnings are limited to anti-aliased exterior edges and verified side rail/keyhole openings; opaque GLB-derived crops have 0 transparent and 0 semi-transparent pixels."
+  },
+  "standard_glb": {
+    "path": "model/Dell-R7525-3.5inch.glb",
+    "bytes": 11067812,
+    "sha256": "90ec6e7a3601ae8166132f35ae3e9e8a62e646d349a548e419658b848a62ffc0",
+    "structural_status": "PASS",
+    "errors": 0,
+    "warnings": 0
+  },
+  "web_glb": {
+    "path": "model/Dell-R7525-3.5inch-web.glb",
+    "bytes": 5523780,
+    "sha256": "e8655c521bfd599aa073756107ee5c1046c4efbe5631d8f16f3673832665aa05",
+    "structural_status": "PASS",
+    "errors": 0,
+    "warnings": 0
+  },
+  "glb_structure": {
+    "nodes": 77,
+    "meshes": 16,
+    "materials": 18,
+    "textures": 8,
+    "images": 8,
+    "mirrored_nodes": 0,
+    "external_buffers": 0,
+    "all_visible_materials_opaque": true
+  },
+  "webgl": {
+    "status": "PASS",
+    "actual_loads": 40,
+    "required_loads": 40,
+    "viewers": ["Three.js 0.170.0", "Babylon.js 7.44.0"],
+    "variants": ["standard", "web"],
+    "views_per_pair": ["front", "rear", "left", "right", "top", "bottom", "front-left", "front-right", "rear-left", "rear-right"],
+    "evidence": "qa/webgl-evidence-final-v2/load-evidence.json"
+  },
+  "bottom": {
+    "mode": "GENERIC_BOTTOM_FALLBACK",
+    "search_log": "source/bottom-search-log.md"
+  },
+  "official_3d": {
+    "public_exact_binary_found": false,
+    "record": "source/optional-3d/README.md"
+  }
+}

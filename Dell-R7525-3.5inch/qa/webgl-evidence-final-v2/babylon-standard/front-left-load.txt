@@ -1,0 +1,12 @@
+### Result
+{"engine":"Babylon.js 7.44.0","variant":"Dell-R7525-3.5inch.glb","view":"front-left","bounds":{"min":[-0.24100000225007534,-0.04340000078082085,-0.38593998551368713],"max":[0.24100000225007534,0.04340000078082085,0.3861899971961975]}}
+### Ran Playwright code
+```js
+await (async page => { await page.waitForFunction(() => window.__VIEWER_READY__ === true, null, {timeout: 30000}); return await page.evaluate(() => window.__VIEWER_INFO__); })(page);
+```
+### Page
+- Page URL: http://127.0.0.1:8792/qa/viewers/babylon.html?view=front-left&variant=standard&labels=1&load=27&run=1787498614503305704
+- Page Title: R7525 Babylon.js validation viewer
+- Console: 0 errors, 4 warnings
+### Events
+- New console entries: .playwright-cli/console-2026-08-23T15-23-36-987Z.log#L3-L5

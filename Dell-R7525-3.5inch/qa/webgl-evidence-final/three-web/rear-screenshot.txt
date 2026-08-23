@@ -1,0 +1,11 @@
+### Result
+- [Screenshot of viewport](Dell-R7525-3.5inch/qa/webgl-evidence-final/three-web/rear.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as Dell-R7525-3.5inch/qa/webgl-evidence-final/three-web/rear.png
+await page.screenshot({
+  path: 'Dell-R7525-3.5inch/qa/webgl-evidence-final/three-web/rear.png',
+  scale: 'css',
+  type: 'png'
+});
+```
