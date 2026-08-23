@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>R240 Three.js validation viewer</title>
+  <style>
+    html,body{margin:0;width:100%;height:100%;overflow:hidden;background:transparent}
+    canvas{display:block;width:100%;height:100%}
+    #status{position:fixed;left:10px;top:8px;padding:5px 8px;border-radius:4px;background:#10141acc;color:#fff;font:12px system-ui;z-index:3}
+  </style>
+  <script type="importmap">
+    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"}}
+  </script>
+</head>
+<body>
+  <div id="status">loading Three.js…</div>
+  <canvas id="c" width="1200" height="800"></canvas>
+  <script type="module">
+    import * as THREE from 'three';
+    import {GLTFLoader} from 'https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/loaders/GLTFLoader.js';
+
+    const params=new URLSearchParams(location.search);
+    const view=params.get('view')||'front-left';
+    const variant=params.get('variant')==='web'?'Dell-R240-3.5inch-web.glb':'Dell-R240-3.5inch.glb';
+    const loadToken=params.get('load')||String(Date.now());
+    const modelURL=`../../model/${variant}?viewer=three&load=${encodeURIComponent(loadToken)}`;
+    const checker=params.get('bg')||'light';
+    const colors=checker==='dark'?['#17202a','#34404d']:['#f6f6f6','#d8dce0'];
+    document.body.style.backgroundColor=colors[0];
+    document.body.style.backgroundImage=`linear-gradient(45deg,${colors[1]} 25%,transparent 25%),linear-gradient(-45deg,${colors[1]} 25%,transparent 25%),linear-gradient(45deg,transparent 75%,${colors[1]} 75%),linear-gradient(-45deg,transparent 75%,${colors[1]} 75%)`;
+    document.body.style.backgroundSize='32px 32px';
+    document.body.style.backgroundPosition='0 0,0 16px,16px -16px,-16px 0';
+
+    const canvas=document.getElementById('c');
+    const status=document.getElementById('status');
+    const WIDTH=window.innerWidth,HEIGHT=window.innerHeight;
+    const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true,preserveDrawingBuffer:true});
+    renderer.setPixelRatio(1); renderer.setSize(WIDTH,HEIGHT,false);
+    renderer.outputColorSpace=THREE.SRGBColorSpace; renderer.toneMapping=THREE.NoToneMapping;
+    renderer.setClearColor(0x000000,0);
+    const scene=new THREE.Scene();
+    scene.add(new THREE.HemisphereLight(0xffffff,0x506070,2.0));
+    const key=new THREE.DirectionalLight(0xffffff,2.4); key.position.set(1.8,2.5,2.2); scene.add(key);
+    const fill=new THREE.DirectionalLight(0xbad5ff,1.0); fill.position.set(-1.8,0.8,-1.4); scene.add(fill);
+    const directions={front:[0,0,1],rear:[0,0,-1],right:[1,0,0],left:[-1,0,0],top:[0,1,0],bottom:[0,-1,0],'front-left':[-1,.62,1],'front-right':[1,.62,1],'rear-left':[-1,.62,-1],'rear-right':[1,.62,-1]};
+    const orthogonal=new Set(['front','rear','right','left','top','bottom']);
+
+    function corners(box){const out=[];for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z])out.push(new THREE.Vector3(x,y,z));return out}
+    function makeCamera(box){
+      const center=box.getCenter(new THREE.Vector3()),size=box.getSize(new THREE.Vector3());
+      const d=new THREE.Vector3(...directions[view]).normalize();
+      const up=(view==='top'||view==='bottom')?new THREE.Vector3(0,0,-1):new THREE.Vector3(0,1,0);
+      if(orthogonal.has(view)){
+        const forward=d.clone().multiplyScalar(-1),right=new THREE.Vector3().crossVectors(forward,up).normalize(),trueUp=new THREE.Vector3().crossVectors(right,forward).normalize();
+        let halfW=0,halfH=0;for(const c of corners(box)){const rel=c.clone().sub(center);halfW=Math.max(halfW,Math.abs(rel.dot(right)));halfH=Math.max(halfH,Math.abs(rel.dot(trueUp)))}
+        const aspect=WIDTH/HEIGHT,h=Math.max(halfH,halfW/aspect)*1.09;
+        const camera=new THREE.OrthographicCamera(-h*aspect,h*aspect,h,-h,.01,10);
+        camera.position.copy(center).addScaledVector(d,2);camera.up.copy(up);camera.lookAt(center);camera.updateProjectionMatrix();return camera;
+      }
+      const camera=new THREE.PerspectiveCamera(30,WIDTH/HEIGHT,.01,10),radius=size.length()/2,distance=(radius/Math.sin(THREE.MathUtils.degToRad(camera.fov/2)))*1.18;
+      camera.position.copy(center).addScaledVector(d,distance);camera.up.copy(up);camera.lookAt(center);camera.updateProjectionMatrix();return camera;
+    }
+
+    try{
+      const response=await fetch(modelURL,{cache:'no-store'});
+      if(!response.ok)throw new Error(`GLB HTTP ${response.status}`);
+      const bytes=await response.arrayBuffer();
+      const gltf=await new Promise((resolve,reject)=>new GLTFLoader().parse(bytes,'../../model/',resolve,reject));
+      scene.add(gltf.scene);gltf.scene.updateMatrixWorld(true);
+      const box=new THREE.Box3().setFromObject(gltf.scene),camera=makeCamera(box);
+      renderer.render(scene,camera);await new Promise(resolve=>requestAnimationFrame(()=>{renderer.render(scene,camera);resolve()}));
+      status.textContent=`Three.js PASS · ${variant} · ${view}`;status.style.display=params.get('labels')==='1'?'block':'none';
+      window.__VIEWER_READY__=true;
+      window.__VIEWER_INFO__={status:'PASS',engine:'Three.js 0.170.0',webgl:renderer.capabilities.isWebGL2?'WebGL2':'WebGL1',variant,view,modelURL,byteLength:bytes.byteLength,bounds:{min:box.min.toArray(),max:box.max.toArray()}};
+    }catch(error){status.textContent=`ERROR ${error}`;window.__VIEWER_ERROR__=String(error);throw error}
+  </script>
+</body>
+</html>
+
