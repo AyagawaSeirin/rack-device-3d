@@ -1,0 +1,18 @@
+production_mode: SOURCE_LOCKED_GENERATION
+method: built-in image_gen, one dedicated product-mockup call, #FF00FF chroma key
+raw_output: qa/imagegen-raw/rear.png
+raw_sha256: 9971512a57e4f59230038a009b1f5232997cea61285697134944968924bb503d
+final_output: views/rear.png
+final_sha256: 5a1a3d0b0f6c4aba795fd350993b40f88a5b2106e90383d10dd6c00d49bf951d
+
+Input roles:
+Image 1: PRIMARY BINDING REAL PHOTOGRAPH — source/third-party/itinstock-dl360-gen9-rear-blankplates-2x500w.jpg; galvanized material/style and exact dual-500W AC PSU appearance.
+Image 2: BINDING OFFICIAL TECHNICAL VIEW — qa/reference/official-maintenance-p088-rear-crop.png; exact rear component identity and order.
+Image 3: BINDING USER CONFIGURATION LOCK — qa/reference/user-config-lock-row7.png; three blank expansion positions, blank FlexibleLOM and dual PSU state.
+Image 4: SUPPORTING ORTHOGRAPHIC DIAGRAM — qa/reference/visiocafe-rear-crop.png; proportions.
+Image 5: SUPPORTING REAL GEOMETRY — source/third-party/usedservers-dl360-g9-back.jpg; top/rear relief and PSU form only, not its 800W configuration.
+
+Final prompt contract:
+Use case: product-mockup. Generate one exact straight orthographic rear face of the HPE ProLiant DL360 Gen9 target configuration on uniform #FF00FF. Lock Image 1's real used-server galvanized texture, wear, color, contrast and recess shadows. Preserve from rear-view left to right: three PCIe blanking plates, FlexibleLOM blank with green release detail, two stacked USB 3.0, installed DB9 serial, dedicated iLO 4 RJ45, four embedded 331i RJ45 ports, blue VGA, and two matched 500W HPE Flex Slot hot-plug AC PSUs. Each PSU must show its radial fan, blue 500W badge, IEC C14 inlet, red release latch and black pull handle. No DC inlet, empty PSU bay, installed card, installed FlexibleLOM ports, rear-ear invention, mirror, pseudo-text, extra ports, CGI cleanup, floor, cable, rail, shadow or watermark. Product pixels opaque; background only key-colored.
+
+Acceptance/post-process: border-connected chroma removal, internal alpha sealing, plain sheet-metal span extension only; component order, three blanks, serial/iLO/4×NIC/VGA and dual AC PSU state accepted.

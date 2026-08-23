@@ -1,0 +1,16 @@
+production_mode: GENERIC_BOTTOM_FALLBACK
+method: built-in image_gen, one dedicated product-mockup call, #FF00FF chroma key
+raw_output: qa/imagegen-raw/bottom.png
+raw_sha256: 22b6746534d425cbf1b1b72707a3706770ad2475538026babbf1f9f8cebf65bf
+final_output: views/bottom.png
+final_sha256: b0fc036809e0f94cbf4a2f3b07cd98a9b7a8ab41f3c8fb169522a1897cee4e2a
+
+Input roles:
+Image 1: EXACT-MODEL OFFICIAL CHASSIS-BASE DIAGRAM — source/pdf-pages/maintenance-p016.png; only enclosure/base silhouette authority, not underside details.
+Image 2: VERIFIED RIGHT/TOP MATERIAL AND EDGE REFERENCE — source/third-party/cloudninjas-dl360-g9-8bay-2.jpg.
+Image 3: VERIFIED LEFT/TOP MATERIAL AND EDGE REFERENCE — source/third-party/cloudninjas-dl360-g9-1.jpg.
+
+Final prompt contract:
+Use case: product-mockup. Exact-model underside imagery was not found after the documented official, PDF, Browser-assisted, reseller, marketplace, used-equipment, video and multilingual search. Generate one conservative non-identifying 434.7:698.5 rack-server underside on uniform #FF00FF. Match only the verified DL360 Gen9 galvanized sheet-metal color, grain, wear, folded edge treatment and closed silhouette. Do not mirror the top and do not add logos, labels, service stickers, vents, holes, feet, rails, seams, fasteners, protrusions, ports or invented mechanical details. Keep every product pixel opaque and the exterior key background uniform with no shadow/floor/reflection.
+
+Acceptance/post-process: border-connected chroma removal and plain folded-edge ratio extension only. No identifying underside detail exists. Final status must remain PASS_WITH_BOTTOM_FALLBACK.

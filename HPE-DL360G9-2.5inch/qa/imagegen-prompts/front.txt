@@ -1,0 +1,17 @@
+production_mode: SOURCE_LOCKED_GENERATION
+method: built-in image_gen, one dedicated product-mockup call, #FF00FF chroma key
+raw_output: qa/imagegen-raw/front.png
+raw_sha256: 6c9b4b6b362d9be4a44935f68486cab4b2190344f44a6e91feb2e548479e729c
+final_output: views/front.png
+final_sha256: 3c6bdaf703ba1282dc9ba0b3b5353d5d46fd72ac135e29fabb3b36e13b84101a
+
+Input roles:
+Image 1: PRIMARY BINDING REAL PHOTOGRAPH — source/third-party/ecs-755258-b21-front.jpg; identity, 8SFF layout, factory materials, color, texture, lighting character, ears and branding.
+Image 2: BINDING OFFICIAL TECHNICAL VIEW — qa/reference/official-maintenance-p083-8sff-front-crop.png; exact 6+2 carrier layout and Universal Media Bay.
+Image 3: BINDING USER CONFIGURATION LOCK — qa/reference/user-config-lock-row7.png; requested HPE DL360G9/2.5-inch row and dual-PSU paired configuration.
+Image 4: SUPPORTING ORTHOGRAPHIC DIAGRAM — qa/reference/visiocafe-8sff-front-crop.png; proportions and control/media-bay placement.
+
+Final prompt contract:
+Use case: product-mockup. Generate one exact perfectly orthographic front face of the HPE ProLiant DL360 Gen9 755258-B21 8SFF chassis, no security bezel, on a perfectly flat uniform #FF00FF chroma-key background. Image 1 is binding for the same real product-photography style, metal/plastic grain, wear, color balance, contrast, highlight softness and recess shadows. Preserve exactly eight horizontal SFF Smart Carrier fronts in a 6-left plus 2-lower-right arrangement; the Universal Media Bay above the last two with VGA, USB and slim optical drive; the far-right power/health/NIC/UID/SID/USB strip; long intake grille; separate HPE Quick Release ears; and the real HP/HPE roundel and readable `ProLiant DL360 Gen9` marking on the right ear. Do not mirror, restyle, beautify, invent pseudo-text/ports/LEDs, change carrier count, substitute 10SFF, add a bezel, show top/side/perspective, add shadows, rails, cables, captions, seller labels or watermarks. Keep all equipment pixels opaque; background only is key-colored.
+
+Acceptance/post-process: border-connected chroma removal; unverifiable tiny carrier microtext blanked without altering carriers; metric reconstruction changed only plain spans; source-locked count, order, right-ear branding and non-mirrored orientation visually accepted.

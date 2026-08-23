@@ -1,0 +1,16 @@
+production_mode: MULTI_REFERENCE_RECONSTRUCTION
+method: built-in image_gen, one dedicated product-mockup call, #FF00FF chroma key
+raw_output: qa/imagegen-raw/right.png
+raw_sha256: 5874a959287a5c006dab6e8a7ab42023cdc1bab97f891ed8a8c9c03983c0c0b3
+final_output: views/right.png
+final_sha256: e3ea5602e1573fe5112218546723b0787ae69b5141f0db285929767509f423f6
+
+Input roles:
+Image 1: PRIMARY EXACT-MODEL REAL ANGLE — source/third-party/cloudninjas-dl360-g9-8bay-2.jpg; physical device-right stamp/hole/slot/perforation sequence and galvanized photographic style.
+Image 2: SUPPORTING EXACT 755258-B21 FRONT PHOTO — source/third-party/ecs-755258-b21-front.jpg; front/right transition and HPE ear form.
+Image 3: BINDING OFFICIAL ASSEMBLY DIAGRAM — source/pdf-pages/maintenance-p016.png; chassis/cover/ear construction.
+
+Final prompt contract:
+Use case: product-mockup. Reconstruct one exact perfectly orthographic physical RIGHT face of the HPE ProLiant DL360 Gen9 8SFF chassis on uniform #FF00FF. Preserve Image 1's genuine galvanized finish, staining, scratches, highlights and asymmetric right-side order: front flange, local round holes, long rail slot, stamped circles, rear vent/perforation strip and rear flange. The right must not be a mirror/copy of the left. Do not show adjacent faces, add rails/feet/labels/ports, invent holes, beautify/denoise/relight/smooth, use CGI/vector/toon style, or add seller text, floor, shadow or watermark. Product pixels opaque except verified real side through-holes.
+
+Acceptance/post-process: border-connected chroma removal, verified holes retained, a source-proven featureless sheet span extended without moving features; non-mirrored landmark review accepted.

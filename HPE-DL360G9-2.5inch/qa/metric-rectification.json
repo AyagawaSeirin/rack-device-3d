@@ -1,0 +1,173 @@
+{
+  "method": "source-locked component-preserving metric reconstruction",
+  "faces": [
+    {
+      "face": "front",
+      "source": "qa/work/front-base-alpha.png",
+      "source_bbox": [
+        32,
+        324,
+        1838,
+        489
+      ],
+      "native_cropped_px": [
+        1806,
+        165
+      ],
+      "method": "native_source_locked_ratio",
+      "metric_content_px_before_export": [
+        1806,
+        165
+      ],
+      "metric_content_ratio": 10.945454545454545,
+      "target_ratio": 11.171296296296296,
+      "ratio_error_percent": 2.0216252872697127,
+      "output": "views/front.png",
+      "output_canvas_px": [
+        3072,
+        275
+      ],
+      "checkerboard": "qa/reference/front-checkerboard.png"
+    },
+    {
+      "face": "rear",
+      "source": "qa/work/rear-alpha.png",
+      "source_bbox": [
+        64,
+        255,
+        2115,
+        471
+      ],
+      "native_cropped_px": [
+        2051,
+        216
+      ],
+      "method": "featureless_sheet_metal_span_extension",
+      "metric_content_px_before_export": [
+        2173,
+        216
+      ],
+      "metric_content_ratio": 10.060185185185185,
+      "target_ratio": 10.062499999999998,
+      "ratio_error_percent": 0.02300437083043727,
+      "output": "views/rear.png",
+      "output_canvas_px": [
+        3072,
+        305
+      ],
+      "checkerboard": "qa/reference/rear-checkerboard.png"
+    },
+    {
+      "face": "left",
+      "source": "qa/work/left-alpha.png",
+      "source_bbox": [
+        31,
+        455,
+        1567,
+        562
+      ],
+      "native_cropped_px": [
+        1536,
+        107
+      ],
+      "method": "featureless_sheet_metal_span_extension",
+      "metric_content_px_before_export": [
+        1730,
+        107
+      ],
+      "metric_content_ratio": 16.16822429906542,
+      "target_ratio": 16.16898148148148,
+      "ratio_error_percent": 0.00468293205064807,
+      "output": "views/left.png",
+      "output_canvas_px": [
+        3072,
+        190
+      ],
+      "checkerboard": "qa/reference/left-checkerboard.png"
+    },
+    {
+      "face": "right",
+      "source": "qa/work/right-alpha.png",
+      "source_bbox": [
+        41,
+        457,
+        1551,
+        566
+      ],
+      "native_cropped_px": [
+        1510,
+        109
+      ],
+      "method": "featureless_sheet_metal_span_extension",
+      "metric_content_px_before_export": [
+        1762,
+        109
+      ],
+      "metric_content_ratio": 16.165137614678898,
+      "target_ratio": 16.16898148148148,
+      "ratio_error_percent": 0.023773091749690334,
+      "output": "views/right.png",
+      "output_canvas_px": [
+        3072,
+        190
+      ],
+      "checkerboard": "qa/reference/right-checkerboard.png"
+    },
+    {
+      "face": "top",
+      "source": "qa/work/top-alpha.png",
+      "source_bbox": [
+        103,
+        89,
+        874,
+        1417
+      ],
+      "native_cropped_px": [
+        771,
+        1328
+      ],
+      "method": "plain_folded_edge_extension",
+      "metric_content_px_before_export": [
+        826,
+        1328
+      ],
+      "metric_content_ratio": 0.6219879518072289,
+      "target_ratio": 0.6223335719398712,
+      "ratio_error_percent": 0.05553615427895675,
+      "output": "views/top.png",
+      "output_canvas_px": [
+        1274,
+        2048
+      ],
+      "checkerboard": "qa/reference/top-checkerboard.png"
+    },
+    {
+      "face": "bottom",
+      "source": "qa/work/bottom-alpha.png",
+      "source_bbox": [
+        94,
+        98,
+        895,
+        1492
+      ],
+      "native_cropped_px": [
+        801,
+        1394
+      ],
+      "method": "plain_folded_edge_extension",
+      "metric_content_px_before_export": [
+        868,
+        1394
+      ],
+      "metric_content_ratio": 0.6226685796269728,
+      "target_ratio": 0.6223335719398712,
+      "ratio_error_percent": 0.05383088783998957,
+      "output": "views/bottom.png",
+      "output_canvas_px": [
+        1274,
+        2048
+      ],
+      "checkerboard": "qa/reference/bottom-checkerboard.png"
+    }
+  ]
+}

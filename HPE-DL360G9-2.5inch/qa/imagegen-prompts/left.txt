@@ -1,0 +1,16 @@
+production_mode: MULTI_REFERENCE_RECONSTRUCTION
+method: built-in image_gen, one dedicated product-mockup call, #FF00FF chroma key
+raw_output: qa/imagegen-raw/left.png
+raw_sha256: 06321adc3fd5e6210e695afddffbc92f56b265ac1cce461686703137829b842f
+final_output: views/left.png
+final_sha256: d0248a8bad2c6c87c0580b30369d0e77d75e74056de9bf230c0fcfbb9f3bc1a7
+
+Input roles:
+Image 1: PRIMARY EXACT-MODEL REAL ANGLE — source/third-party/cloudninjas-dl360-g9-1.jpg; physical device-left hole/slot/perforation sequence and galvanized photographic style.
+Image 2: SUPPORTING EXACT-MODEL REAR/TOP PHOTO — source/third-party/usedservers-dl360-g9-back.jpg; cover edge and rear relief.
+Image 3: BINDING OFFICIAL ASSEMBLY DIAGRAM — source/pdf-pages/maintenance-p016.png; chassis/cover/ear construction.
+
+Final prompt contract:
+Use case: product-mockup. Reconstruct one exact perfectly orthographic physical LEFT face of the HPE ProLiant DL360 Gen9 chassis on uniform #FF00FF. Preserve Image 1's real galvanized metal texture, stamping, scratches, color balance, edge seams and non-mirrored left-side pattern: front flange, round holes, stamped circles, long side seam, lower rear perforation strip and rear flange in their verified order. Do not infer the right face, mirror any layout, show top/front/rear, add rails/feet/labels/ports, clean or smooth the real material, invent holes, use CGI/vector/toon styling, add shadow/floor/caption/watermark, or make dark recesses transparent unless they are source-proven through-holes.
+
+Acceptance/post-process: border-connected chroma removal, verified through-holes retained, plain metal span extended without moving features; left/right pixel and feature layouts are independently different.

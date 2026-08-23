@@ -1,0 +1,18 @@
+production_mode: MULTI_REFERENCE_RECONSTRUCTION
+method: built-in image_gen, one dedicated product-mockup call, #FF00FF chroma key
+raw_output: qa/imagegen-raw/top.png
+raw_sha256: 590110a4901c0ea73d6ca7ef1cd251ae535e3cd54f07629b5f8bb3236d6b70f3
+final_output: views/top.png
+final_sha256: 02882edb2901d7cf6a0ae971396d334651e4e719a89f6f22dd0403e1e665e8ff
+
+Input roles:
+Image 1: PRIMARY EXACT-MODEL REAL REAR/TOP PHOTO — source/third-party/usedservers-dl360-g9-back.jpg; access-cover shape, vent groups, latch and real galvanized style.
+Image 2: BINDING EXACT-MODEL DUAL-500W REAR/TOP PHOTO — source/third-party/itinstock-dl360-gen9-rear-blankplates-2x500w.jpg; rear edge and hot-surface label position.
+Image 3: SUPPORTING EXACT RIGHT/TOP PHOTO — source/third-party/cloudninjas-dl360-g9-8bay-2.jpg.
+Image 4: SUPPORTING EXACT LEFT/TOP PHOTO — source/third-party/cloudninjas-dl360-g9-1.jpg.
+Image 5: BINDING OFFICIAL COVER DIAGRAM — source/pdf-pages/maintenance-p016.png.
+
+Final prompt contract:
+Use case: product-mockup. Reconstruct one exact orthographic top face of the HPE ProLiant DL360 Gen9 on uniform #FF00FF, physical body ratio 434.7:698.5. Front is the long intake-strip edge; rear contains the two large vent fields, the smaller latch-side field, cover release latch and the factory hot-surface warning at rear-right. Preserve the real galvanized grain, scratches, seam, fasteners, vent shapes, latch positions, asymmetric surface and photographic character. No side/front/rear perspective, no internal components, rails, extra labels, invented vents/holes, mirror, CGI cleanup, smoothing, relighting, floor, shadow or watermark.
+
+Acceptance/post-process: border-connected chroma removal; plain folded side margins extended only; original output otherwise retained. Deterministic factual repair moved the existing hot-surface label pixel block from unsupported front-right to source-proven rear-right and restored the covered front vent continuation. Pre-repair output retained under qa/work.
