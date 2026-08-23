@@ -1,0 +1,12 @@
+Use case: product-mockup
+Asset type: exact rack-device right-side texture for a website GLB
+Production mode: SOURCE_LOCKED_GENERATION
+Input images: Image 1 is the PRIMARY BINDING ANATEL REAL FG-3700D RIGHT-SIDE PHOTOGRAPH and binds identity, non-mirrored geometry, regulatory-label position, paint and photographic style. Image 2 is an exact FG-3700D right-side oblique photograph with readable FG-3700D-USG AC label. Image 3 is a closer exact label/material photograph. The front rack bracket/handle is separate GLB geometry and must not be baked into this flat body-side texture.
+Primary request: generate a perfectly orthographic physical RIGHT side of the exact Fortinet FortiGate 3700D AC chassis body.
+Verified features: long warm-white 579 x 133 mm panel; top-cover seam; one real rectangular FORTINET / FORTIGATE-3700D AC regulatory label near the physical front; source-locked asymmetric screw and rail-hole pattern; four stamped circular lower standoffs; no side vents.
+Scene/backdrop: perfectly flat uniform solid #ff00ff chroma-key background; no shadow/gradient/floor/reflection/texture variation.
+Style/medium: preserve the real used white paint, fine grain, scuffs, label printing character, subtle screw shadows and edge wear from Image 1; no beautification/CGI cleanup.
+Composition/framing: exactly straight side elevation, physical front is at image left, physical rear at image right, no adjacent face/perspective, physical ratio 579:133, generous magenta padding.
+Text (verbatim identity): "FORTINET", "FORTIGATE-3700D" and "Model: FG-3700D" where readable; do not invent serial numbers beyond the binding source.
+Constraints: no mirroring; label only on this side; exact seam/fastener/standoff pattern; all device pixels opaque; no watermark/seller sticker/handle baked into texture/invented rails/vents/feet. Do not use #ff00ff on device.
+Avoid: mirrored left panel, generic label, pseudo-text, CGI/vector/toon appearance, opaque background.

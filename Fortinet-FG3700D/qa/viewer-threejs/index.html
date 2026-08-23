@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FG-3700D Three.js QA viewer</title>
+  <style>
+    html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #dfe3e6; }
+    canvas { display: block; width: 100%; height: 100%; }
+    #status { position: fixed; left: 12px; bottom: 9px; color: #293038;
+      font: 14px/1.2 system-ui, sans-serif; background: rgba(255,255,255,.82);
+      padding: 5px 8px; border-radius: 3px; }
+  </style>
+  <script type="importmap">
+  { "imports": { "three": "../../node_modules/three/build/three.module.js" } }
+  </script>
+</head>
+<body>
+<div id="status">loading</div>
+<script type="module">
+import * as THREE from "three";
+import { GLTFLoader } from "../../node_modules/three/examples/jsm/loaders/GLTFLoader.js";
+
+const WIDTH = 1600;
+const HEIGHT = 1200;
+const ASPECT = WIDTH / HEIGHT;
+const query = new URLSearchParams(location.search);
+const modelUrl = query.get("model") || "../../model/Fortinet-FG3700D.glb";
+const view = query.get("view") || "front";
+const status = document.getElementById("status");
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false, preserveDrawingBuffer: true });
+renderer.setPixelRatio(1);
+renderer.setSize(WIDTH, HEIGHT, false);
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.toneMapping = THREE.NoToneMapping;
+document.body.insertBefore(renderer.domElement, status);
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0xdfe3e6);
+scene.add(new THREE.HemisphereLight(0xffffff, 0x68717a, 2.15));
+const key = new THREE.DirectionalLight(0xffffff, 1.55);
+key.position.set(-2.5, 3.5, 4.0);
+scene.add(key);
+const fill = new THREE.DirectionalLight(0xffffff, 0.70);
+fill.position.set(3.0, 1.0, -3.0);
+scene.add(fill);
+
+const orthographic = {
+  front: { dir: [0, 0, 1], up: [0, 1, 0], axes: ["x", "y"] },
+  rear: { dir: [0, 0, -1], up: [0, 1, 0], axes: ["x", "y"] },
+  left: { dir: [-1, 0, 0], up: [0, 1, 0], axes: ["z", "y"] },
+  right: { dir: [1, 0, 0], up: [0, 1, 0], axes: ["z", "y"] },
+  top: { dir: [0, 1, 0], up: [0, 0, -1], axes: ["x", "z"] },
+  bottom: { dir: [0, -1, 0], up: [0, 0, -1], axes: ["x", "z"] }
+};
+const perspective = {
+  "front-left": [-1.0, 0.62, 1.15],
+  "front-right": [1.0, 0.62, 1.15],
+  "rear-left": [-1.0, 0.62, -1.15],
+  "rear-right": [1.0, 0.62, -1.15]
+};
+
+function axisSize(size, axis) { return size[axis]; }
+
+function cameraFor(center, size) {
+  if (orthographic[view]) {
+    const spec = orthographic[view];
+    const projectedWidth = axisSize(size, spec.axes[0]);
+    const projectedHeight = axisSize(size, spec.axes[1]);
+    const halfH = Math.max(projectedHeight * 0.56, projectedWidth / ASPECT * 0.56);
+    const halfW = halfH * ASPECT;
+    const camera = new THREE.OrthographicCamera(-halfW, halfW, halfH, -halfH, 0.01, 20);
+    const dir = new THREE.Vector3(...spec.dir);
+    camera.position.copy(center).addScaledVector(dir, 2.0);
+    camera.up.set(...spec.up);
+    camera.lookAt(center);
+    camera.updateProjectionMatrix();
+    return camera;
+  }
+  const camera = new THREE.PerspectiveCamera(28, ASPECT, 0.01, 20);
+  const dir = new THREE.Vector3(...(perspective[view] || perspective["front-left"])).normalize();
+  const radius = Math.max(size.x, size.y, size.z) * 0.5;
+  const distance = radius / Math.tan(THREE.MathUtils.degToRad(14)) * 1.18;
+  camera.position.copy(center).addScaledVector(dir, distance);
+  camera.up.set(0, 1, 0);
+  camera.lookAt(center);
+  camera.updateProjectionMatrix();
+  return camera;
+}
+
+new GLTFLoader().load(modelUrl, (gltf) => {
+  scene.add(gltf.scene);
+  gltf.scene.updateMatrixWorld(true);
+  const bounds = new THREE.Box3().setFromObject(gltf.scene);
+  const center = bounds.getCenter(new THREE.Vector3());
+  const size = bounds.getSize(new THREE.Vector3());
+  const camera = cameraFor(center, size);
+  renderer.render(scene, camera);
+  requestAnimationFrame(() => {
+    renderer.render(scene, camera);
+    requestAnimationFrame(() => {
+      renderer.render(scene, camera);
+      window.qaReady = true;
+      document.body.dataset.ready = "true";
+      status.textContent = `THREE.js · ${view} · ${modelUrl.split("/").pop()}`;
+    });
+  });
+}, undefined, (error) => {
+  console.error(error);
+  status.textContent = "load error";
+  window.qaError = String(error);
+});
+</script>
+</body>
+</html>

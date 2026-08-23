@@ -1,0 +1,229 @@
+{
+  "model": "Fortinet FortiGate FG-3700D / FG-3700D-USG AC",
+  "date": "2026-08-23",
+  "status": "PASS",
+  "bottom_mode": "SOURCE_LOCKED_GENERATION",
+  "bottom_verified_double_keyhole_groups": 7,
+  "official_public_3d": "not found; source/optional-3d intentionally empty",
+  "standard_glb": {
+    "path": "model/Fortinet-FG3700D.glb",
+    "bytes": 9006532,
+    "sha256": "0961f7873bd7fb4ae7b30c502fadfd739cdff04adc2bb499ea8a8aa03c0aa7d7",
+    "asset_extras": {
+      "manufacturer": "Fortinet, Inc.",
+      "product_id": "FG-3700D",
+      "configuration": "FG-3700D-USG AC",
+      "profile": "standard",
+      "body_dimensions_mm": [
+        437,
+        133,
+        579
+      ],
+      "installed_bounds_mm": [
+        482.6,
+        133,
+        633
+      ],
+      "visible_counts": {
+        "QSFP_plus": 4,
+        "SFP_SFP_plus": 28,
+        "AC_PSU": 2,
+        "rear_fan_trays": 3,
+        "rear_visible_rotors": 3,
+        "fan_indicators": 6,
+        "grounding_studs": 2,
+        "bottom_double_keyhole_groups": 7
+      }
+    },
+    "node_count": 49,
+    "mesh_count": 49,
+    "material_count": 16,
+    "image_count": 6
+  },
+  "web_glb": {
+    "path": "model/Fortinet-FG3700D-web.glb",
+    "bytes": 6167632,
+    "sha256": "da509ed749d6025eec1573295b805c09d87f73896621f6d5920ffe189a57e694",
+    "asset_extras": {
+      "manufacturer": "Fortinet, Inc.",
+      "product_id": "FG-3700D",
+      "configuration": "FG-3700D-USG AC",
+      "profile": "web",
+      "body_dimensions_mm": [
+        437,
+        133,
+        579
+      ],
+      "installed_bounds_mm": [
+        482.6,
+        133,
+        633
+      ],
+      "visible_counts": {
+        "QSFP_plus": 4,
+        "SFP_SFP_plus": 28,
+        "AC_PSU": 2,
+        "rear_fan_trays": 3,
+        "rear_visible_rotors": 3,
+        "fan_indicators": 6,
+        "grounding_studs": 2,
+        "bottom_double_keyhole_groups": 7
+      }
+    },
+    "node_count": 49,
+    "mesh_count": 49,
+    "material_count": 16,
+    "image_count": 6
+  },
+  "structural_audits": {
+    "views": "PASS",
+    "standard_glb": "PASS",
+    "web_glb": "PASS",
+    "named_visible_geometry": "PASS"
+  },
+  "webgl": {
+    "viewers": [
+      "Three.js 0.179.1",
+      "Babylon.js 8.22.2"
+    ],
+    "model_profiles": [
+      "standard",
+      "web"
+    ],
+    "renders_per_viewer_profile": 10,
+    "total_final_renders": 40,
+    "render_size_px": [
+      1600,
+      1200
+    ],
+    "comparison_rows": [
+      {
+        "view": "front",
+        "source_reference": "qa/reference/canonical/front.png",
+        "threejs_standard": "qa/viewer-threejs/standard/front.png",
+        "babylonjs_standard": "qa/viewer-babylonjs/standard/front.png",
+        "threejs_web": "qa/viewer-threejs/web/front.png",
+        "babylonjs_web": "qa/viewer-babylonjs/web/front.png",
+        "three_vs_babylon_standard_mad": 1.999797,
+        "three_vs_babylon_web_mad": 1.998875,
+        "standard_vs_web_three_mad": 0.619793,
+        "feature_review": "PASS"
+      },
+      {
+        "view": "rear",
+        "source_reference": "qa/reference/canonical/rear.png",
+        "threejs_standard": "qa/viewer-threejs/standard/rear.png",
+        "babylonjs_standard": "qa/viewer-babylonjs/standard/rear.png",
+        "threejs_web": "qa/viewer-threejs/web/rear.png",
+        "babylonjs_web": "qa/viewer-babylonjs/web/rear.png",
+        "three_vs_babylon_standard_mad": 4.378086,
+        "three_vs_babylon_web_mad": 4.382834,
+        "standard_vs_web_three_mad": 0.316797,
+        "feature_review": "PASS"
+      },
+      {
+        "view": "left",
+        "source_reference": "qa/reference/canonical/left.png",
+        "threejs_standard": "qa/viewer-threejs/standard/left.png",
+        "babylonjs_standard": "qa/viewer-babylonjs/standard/left.png",
+        "threejs_web": "qa/viewer-threejs/web/left.png",
+        "babylonjs_web": "qa/viewer-babylonjs/web/left.png",
+        "three_vs_babylon_standard_mad": 0.513722,
+        "three_vs_babylon_web_mad": 0.528598,
+        "standard_vs_web_three_mad": 0.14682,
+        "feature_review": "PASS"
+      },
+      {
+        "view": "right",
+        "source_reference": "qa/reference/canonical/right.png",
+        "threejs_standard": "qa/viewer-threejs/standard/right.png",
+        "babylonjs_standard": "qa/viewer-babylonjs/standard/right.png",
+        "threejs_web": "qa/viewer-threejs/web/right.png",
+        "babylonjs_web": "qa/viewer-babylonjs/web/right.png",
+        "three_vs_babylon_standard_mad": 0.532729,
+        "three_vs_babylon_web_mad": 0.55007,
+        "standard_vs_web_three_mad": 0.203693,
+        "feature_review": "PASS"
+      },
+      {
+        "view": "top",
+        "source_reference": "qa/reference/canonical/top.png",
+        "threejs_standard": "qa/viewer-threejs/standard/top.png",
+        "babylonjs_standard": "qa/viewer-babylonjs/standard/top.png",
+        "threejs_web": "qa/viewer-threejs/web/top.png",
+        "babylonjs_web": "qa/viewer-babylonjs/web/top.png",
+        "three_vs_babylon_standard_mad": 1.269946,
+        "three_vs_babylon_web_mad": 1.296318,
+        "standard_vs_web_three_mad": 0.255914,
+        "feature_review": "PASS"
+      },
+      {
+        "view": "bottom",
+        "source_reference": "qa/reference/canonical/bottom.png",
+        "threejs_standard": "qa/viewer-threejs/standard/bottom.png",
+        "babylonjs_standard": "qa/viewer-babylonjs/standard/bottom.png",
+        "threejs_web": "qa/viewer-threejs/web/bottom.png",
+        "babylonjs_web": "qa/viewer-babylonjs/web/bottom.png",
+        "three_vs_babylon_standard_mad": 1.588569,
+        "three_vs_babylon_web_mad": 1.605586,
+        "standard_vs_web_three_mad": 0.272956,
+        "feature_review": "PASS"
+      },
+      {
+        "view": "front-left",
+        "source_reference": "qa/reference/oblique/front-left.png",
+        "threejs_standard": "qa/viewer-threejs/standard/front-left.png",
+        "babylonjs_standard": "qa/viewer-babylonjs/standard/front-left.png",
+        "threejs_web": "qa/viewer-threejs/web/front-left.png",
+        "babylonjs_web": "qa/viewer-babylonjs/web/front-left.png",
+        "three_vs_babylon_standard_mad": 1.241278,
+        "three_vs_babylon_web_mad": 1.355985,
+        "standard_vs_web_three_mad": 0.476786,
+        "feature_review": "PASS"
+      },
+      {
+        "view": "front-right",
+        "source_reference": "qa/reference/oblique/front-right.png",
+        "threejs_standard": "qa/viewer-threejs/standard/front-right.png",
+        "babylonjs_standard": "qa/viewer-babylonjs/standard/front-right.png",
+        "threejs_web": "qa/viewer-threejs/web/front-right.png",
+        "babylonjs_web": "qa/viewer-babylonjs/web/front-right.png",
+        "three_vs_babylon_standard_mad": 1.269707,
+        "three_vs_babylon_web_mad": 1.389323,
+        "standard_vs_web_three_mad": 0.518694,
+        "feature_review": "PASS"
+      },
+      {
+        "view": "rear-left",
+        "source_reference": "qa/reference/oblique/rear-left.png",
+        "threejs_standard": "qa/viewer-threejs/standard/rear-left.png",
+        "babylonjs_standard": "qa/viewer-babylonjs/standard/rear-left.png",
+        "threejs_web": "qa/viewer-threejs/web/rear-left.png",
+        "babylonjs_web": "qa/viewer-babylonjs/web/rear-left.png",
+        "three_vs_babylon_standard_mad": 1.840254,
+        "three_vs_babylon_web_mad": 1.868181,
+        "standard_vs_web_three_mad": 0.269301,
+        "feature_review": "PASS"
+      },
+      {
+        "view": "rear-right",
+        "source_reference": "qa/reference/oblique/rear-right.png",
+        "threejs_standard": "qa/viewer-threejs/standard/rear-right.png",
+        "babylonjs_standard": "qa/viewer-babylonjs/standard/rear-right.png",
+        "threejs_web": "qa/viewer-threejs/web/rear-right.png",
+        "babylonjs_web": "qa/viewer-babylonjs/web/rear-right.png",
+        "three_vs_babylon_standard_mad": 1.822396,
+        "three_vs_babylon_web_mad": 1.85964,
+        "standard_vs_web_three_mad": 0.294078,
+        "feature_review": "PASS"
+      }
+    ]
+  },
+  "resolved_notes": [
+    "Six source PNG audit alpha warnings were visually resolved as external-edge anti-aliasing; opaque core alpha is 100% for all faces.",
+    "Babylon QA viewer explicitly uses a right-handed scene so physical left/right matches glTF and Three.js.",
+    "Playwright capture viewport explicitly fixed at 1600x1200 to preserve camera aspect ratio.",
+    "Browser console warnings were SwiftShader ReadPixels performance notices only; no load, material, GLB, or JavaScript errors occurred."
+  ],
+  "errors": []
+}
