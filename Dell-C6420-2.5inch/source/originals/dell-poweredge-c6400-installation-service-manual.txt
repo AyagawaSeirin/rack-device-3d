@@ -1,0 +1,1536 @@
+
+===== PDF PAGE 1 =====
+Dell EMC PowerEdge C6400
+Installation and Service Manual
+Regulatory Model: E43S Series
+Regulatory Type: E43S001
+September 2021
+Rev. A07
+===== PDF PAGE 2 =====
+Notes, cautions, and warnings
+NOTE:  A NOTE indicates important information that helps you make better use of your product.
+CAUTION:  A CAUTION indicates either potential damage to hardware or loss of data and tells you how to avoid
+the problem.
+WARNING:  A WARNING indicates a potential for property damage, personal injury, or death.
+© 2017 - 2021 Dell Inc. or its subsidiaries. All rights reserved. Dell, EMC, and other trademarks are trademarks of Dell Inc. or its subsidiaries.
+Other trademarks may be trademarks of their respective owners.
+===== PDF PAGE 3 =====
+Chapter 1: Dell EMC PowerEdge C6400 overview.......................................................................... 5
+Supported configurations.................................................................................................................................................. 5
+Front view of the Dell EMC PowerEdge C6400 enclosure....................................................................................... 7
+Front view of the control panels......................................................................................................................................7
+Back view of the enclosure with sleds........................................................................................................................... 9
+Sled to hard drive mapping............................................................................................................................................... 9
+Expander zoning.................................................................................................................................................................10
+Diagnostic indicators..........................................................................................................................................................11
+Drive indicator codes................................................................................................................................................... 11
+Power supply unit indicator codes........................................................................................................................... 12
+Locating the Service Tag of your system.................................................................................................................... 13
+System information label..................................................................................................................................................14
+Chapter 2: Installing and removing enclosure components........................................................... 18
+Safety instructions.............................................................................................................................................................18
+Before working inside your system................................................................................................................................19
+After working inside your system...................................................................................................................................19
+Recommended tools..........................................................................................................................................................19
+Dell EMC PowerEdge C6420 sled..................................................................................................................................19
+Sled Installation Guidelines.........................................................................................................................................19
+Removing a sled ..........................................................................................................................................................20
+Installing a sled ............................................................................................................................................................22
+Drives................................................................................................................................................................................... 24
+Removing a drive blank.............................................................................................................................................. 24
+Installing a drive blank................................................................................................................................................ 25
+Removing a drive carrier............................................................................................................................................25
+Installing a drive carrier..............................................................................................................................................26
+Removing the drive from the drive carrier............................................................................................................ 27
+Installing a drive into the drive carrier....................................................................................................................28
+Power supply units............................................................................................................................................................29
+Fault tolerant redundancy......................................................................................................................................... 29
+Removing a power supply unit................................................................................................................................. 30
+Installing a power supply unit.................................................................................................................................... 31
+System cover......................................................................................................................................................................32
+Removing the system cover..................................................................................................................................... 32
+Installing the system cover....................................................................................................................................... 33
+Backplane cover................................................................................................................................................................ 34
+Removing the backplane cover................................................................................................................................34
+Installing the backplane cover.................................................................................................................................. 35
+Cooling fans .......................................................................................................................................................................36
+Removing a cooling fan..............................................................................................................................................36
+Installing a cooling fan................................................................................................................................................36
+Removing the cooling fan cage................................................................................................................................37
+Installing the cooling fan cage..................................................................................................................................38
+Contents
+Contents 3
+===== PDF PAGE 4 =====
+Power interposer board................................................................................................................................................... 39
+Removing the power interposer board...................................................................................................................39
+Installing the power interposer board......................................................................................................................41
+Chassis management board............................................................................................................................................42
+Removing the chassis management board............................................................................................................42
+Installing the chassis management board..............................................................................................................43
+Linking board...................................................................................................................................................................... 44
+Removing the linking board.......................................................................................................................................44
+Installing the linking board.........................................................................................................................................45
+Midplane.............................................................................................................................................................................. 47
+Removing the right midplane.................................................................................................................................... 47
+Installing the right midplane...................................................................................................................................... 48
+Removing the left midplane...................................................................................................................................... 48
+Installing the left midplane........................................................................................................................................ 49
+Midplane power cable routing...................................................................................................................................51
+Drive cage............................................................................................................................................................................51
+Removing the 2.5 inch drive cage............................................................................................................................51
+Installing the 2.5 inch drive cage.............................................................................................................................52
+Removing the 3.5 inch drive cage...........................................................................................................................53
+Installing the 3.5 inch drive cage.............................................................................................................................54
+Backplanes and expander board....................................................................................................................................55
+Backplane...................................................................................................................................................................... 55
+Removing the backplane............................................................................................................................................ 61
+Installing the backplane..............................................................................................................................................62
+Removing the backplane expander board............................................................................................................. 63
+Installing the backplane expander board................................................................................................................64
+Control panel...................................................................................................................................................................... 65
+Removing the control panel......................................................................................................................................65
+Installing the control panel........................................................................................................................................ 66
+Thermal sensor board.......................................................................................................................................................68
+Removing the thermal sensor board ..................................................................................................................... 68
+Installing the thermal sensor board.........................................................................................................................69
+Chapter 3: Getting help............................................................................................................... 70
+Contacting Dell EMC........................................................................................................................................................ 70
+Documentation feedback.................................................................................................................................................70
+Accessing system information by using QRL..............................................................................................................70
+Quick Resource Locator for C6400 and C6420 systems...................................................................................71
+Receiving automated support with SupportAssist ....................................................................................................71
+Recycling or End-of-Life service information..............................................................................................................71
+Chapter 4: Documentation resources...........................................................................................72
+4 Contents
+===== PDF PAGE 5 =====
+Dell EMC PowerEdge C6400 overview
+The PowerEdge C6400 is an ultra-dense 2U enclosure that can support up to four independent two-socket (2S) sleds. The
+PowerEdge C6400 enclosure supports the following drive configurations:
+● up to 24 x 2.5-inch SAS or SATA drives
+● up to 8 x 2.5-inch NVMe drives, with 16 x 2.5-inch SAS or SATA drives
+● up to 12 x 3.5-inch SAS or SATA drives
+● diskless no backplane
+Topics:
+• Supported configurations
+• Front view of the Dell EMC PowerEdge C6400 enclosure
+• Front view of the control panels
+• Back view of the enclosure with sleds
+• Sled to hard drive mapping
+• Expander zoning
+• Diagnostic indicators
+• Locating the Service Tag of your system
+• System information label
+Supported configurations
+The PowerEdge C6400 system supports the following configurations:
+1
+Dell EMC PowerEdge C6400 overview 5
+===== PDF PAGE 6 =====
+Figure 1. Supported configurations for PowerEdge C6400
+Chassis configuration summary table
+Table 1. Chassis configuration summary table 
+PE C6400 Chassis Config. PEC6420 support PEC6520 support
+24 x 2.5" SAS/SATA Backplane Yes Yes
+8 x 2.5" NVME + 16 X 2.5" SAS/SATA
+backplane
+Yes Yes
+12 x 3.5" SAS/SATA Backplane Yes Yes
+Diskless No backplane Yes Yes
+Expander Backplane Yes No
+24 x 2.5" All/PURE NVME backplane No Yes
+6 Dell EMC PowerEdge C6400 overview
+===== PDF PAGE 7 =====
+Front view of the Dell EMC PowerEdge C6400
+enclosure
+Figure 2. Front view of the enclosure with 24 x 2.5-inch drives
+1. Left control panel 2. Drive bay
+3. Right control panel 4. EST tag
+Figure 3. Front view of the enclosure with 12 x 3.5-inch drives
+1. Left control panel 2. Drive bay
+3. Right control panel 4. EST tag
+Front view of the control panels
+Figure 4. Front view of the left and right control panels
+Dell EMC PowerEdge C6400 overview 7
+===== PDF PAGE 8 =====
+Table 2. Control panel 
+Item Indicator or button Icon Description
+1 Left control panel - The power-on indicator and
+system identification LED for
+sleds 1 and 2 are on the left
+control panel.
+2 Right control panel - The power-on indicator and
+system identification LED for
+sleds 3 and 4 are on the right
+control panel.
+3 Power-on indicator or system
+state indicator or power
+button for sleds 1 and 3
+Press the power button to
+turn the sled on or off.
+The power-on indicator turns
+amber when a critical system
+event occurs.
+NOTE:  To gracefully shut
+down an ACPI-compliant
+operating system, press
+the power button.
+4 System identification button
+for sleds 1 and 3
+Press the system ID button:
+● To locate a particular sled
+within the enclosure.
+● To turn the system ID on
+or off.
+NOTE:  If the sled stops
+responding during POST,
+press and hold the system
+ID button (for more than
+five seconds) to enter the
+BIOS progress mode.
+5 Power-on indicator or system
+state indicator or power
+button for sleds 2 and 4
+Press the power button to
+turn the sled on or off.
+The power-on indicator turns
+amber when a critical system
+event occurs.
+NOTE:  To gracefully shut
+down an ACPI-compliant
+operating system, press
+the power button.
+6 System identification button
+for sleds 2 and 4
+Press the system ID button:
+● To locate a particular sled
+within the enclosure.
+● To turn the system ID on
+or off.
+NOTE:  If the sled stops
+responding during POST,
+press and hold the system
+ID button (for more than
+five seconds) to enter the
+BIOS progress mode.
+8 Dell EMC PowerEdge C6400 overview
+===== PDF PAGE 9 =====
+Back view of the enclosure with sleds
+Figure 5. Back view of the enclosure with sleds
+1. Sled 3 2. Power supply unit (2)
+3. Sled 1 4. Sled 2
+5. Sled 4
+NOTE:  For more information about sled installation sequence, see Sled Installation Guidelines
+Sled to hard drive mapping
+Figure 6. Sled to drive mapping for 24 x 2.5-inch drive configuration
+1. Drives 0–5 mapped to sled 1 2. Drives 6–11 mapped to sled 2
+3. Drives 12–17 mapped to sled 3 4. Drives 18–23 mapped to sled 4
+5. (Optional) NVMe hard drive location
+Figure 7. Sled to drive mapping for 12 x 3.5-inch drive configuration
+1. Drives 0–2 mapped to sled 1 2. Drives 3–5 mapped to sled 2
+3. Drives 6–8 mapped to sled 3 4. Drives 9–11 mapped to sled 4
+NOTE:  The warranty of the drives are linked to the Service Tag of the corresponding sled.
+Dell EMC PowerEdge C6400 overview 9
+===== PDF PAGE 10 =====
+Expander zoning
+A SAS expander board allows higher, single-volume hard drive configurations. An integrated expander device expands each sleds
+hard drive footprint.
+The Dell EMC PowerEdge C6400 enclosure supports four sled access to a single expander controller at the same time. The
+enclosure provides two expander zoning options:
+● Up to 6 SAS/SATA device of each sled in Split Mode (6+6+6+6)
+● Up to 12 SAS/SATA device of sled 1 and sled 3 in Zoning Mode (12+12)
+10 Dell EMC PowerEdge C6400 overview
+===== PDF PAGE 11 =====
+NOTE:
+● Install expander firmware 2.07 or later to support these configurations
+● The expander mode works only with a PERC card, and is not supported by the onboard SATA controller.
+Diagnostic indicators
+The diagnostic indicators on the system indicate operation and error status.
+Drive indicator codes
+Each drive carrier has an activity LED indicator and a status LED indicator. The indicators provide information about the status
+of the drive. The activity LED indicator indicates whether the drive is in use or not. The status LED indicator indicates the power
+condition of the drive.
+Figure 8. Drive indicators on the drive and the mid drive tray backplane
+1. Drive activity LED indicator
+Dell EMC PowerEdge C6400 overview 11
+===== PDF PAGE 12 =====
+2. Drive status LED indicator
+3. Drive
+NOTE:  If the drive is in the Advanced Host Controller Interface (AHCI) mode, the status LED indicator does not turn on.
+Table 3. Drive indicator codes 
+Drive status indicator code Condition
+Flashes green twice per second Identifying drive or preparing for removal.
+Off Drive ready for removal.
+NOTE:  The drive status indicator remains off until all drives are
+initialized after the system is turned on. Drives are not ready
+for removal during this time.
+Flashes green, amber, and then turns off Predicted drive failure.
+Flashes amber four times per second Drive failed.
+Flashes green slowly Drive rebuilding.
+Solid green Drive online.
+Flashes green for three seconds, amber for three
+seconds, and then turns off after six seconds
+Rebuild stopped.
+Power supply unit indicator codes
+AC power supply units (PSUs) have an illuminated translucent handle that serves as an indicator. The indicator shows whether
+power is present or if a power fault has occurred.
+NOTE:  The 2400 W and 2000 W PSUs use a C19 or C20 connector. The 1600 W PSUs use a C13 or C14 connector.
+NOTE:  The 2600 W PSU (DPN 9D4R6) that is supported only on Dell EMC PowerEdge C6525 and Dell EMC PowerEdge
+C6520 sleds uses a C19-C14 connector. The 2000 W, 2400 W, 2600 W PSUs (DPN 9YJ53 and DPN 9D4R6) use a C20 AC
+inlet connector and the 1600 W PSU uses a C14 AC inlet connector.
+Figure 9. AC PSU status indicator
+1. AC PSU status indicator/handle
+Table 4. AC PSU status indicator codes 
+Power indicator codes Condition
+Green A valid power source is connected to the PSU and the PSU is operational.
+Blinking amber Indicates a problem with the PSU.
+Not illuminated Power is not connected to the PSU.
+Blinking green When the firmware of the PSU is being updated, the PSU handle blinks green.
+CAUTION:  Do not disconnect the power cord or unplug the PSU when updating
+firmware. If firmware update is interrupted, the PSUs do not function.
+12 Dell EMC PowerEdge C6400 overview
+===== PDF PAGE 13 =====
+Table 4. AC PSU status indicator codes (continued)
+Power indicator codes Condition
+Blinking green and turns
+off
+When hot-plugging a PSU, the PSU handle blinks green five times at a rate of 4 Hz and turns off.
+This indicates a PSU mismatch with respect to efficiency, feature set, health status, or supported
+voltage.
+CAUTION:  The PSUs must have the same type of label; for example, Extended Power
+Performance (EPP) label. Mixing PSUs from previous generations of PowerEdge
+servers is not supported, even if the PSUs have the same power rating. This results in
+a PSU mismatch condition or failure to turn the system on.
+CAUTION:  When correcting a PSU mismatch, replace only the PSU with the blinking
+indicator. Swapping the PSU to make a matched pair can result in an error condition
+and unexpected system shutdown. To change from a high output configuration to a
+low output configuration or vice versa, you must turn off the system.
+CAUTION:  AC PSUs support both 240 V and 120 V input voltages with the exception of
+Titanium PSUs, which support only 240 V. When two identical PSUs receive different
+input voltages, they can output different wattages, and trigger a mismatch.
+CAUTION:  If two PSUs are used, they must be of the same type and have the same
+maximum output power.
+Locating the Service Tag of your system
+Your system is identified by a unique Express Service Code and Service Tag number. The Express Service Code and Service Tag
+are found on the front of the enclosure by pulling out the EST tag. This information is used by Dell to route support calls to the
+appropriate personnel.
+Figure 10. Locating the Service Tag of your system
+1. Information tag (top view)
+2. QR code label
+3. Express Service Tag label
+Dell EMC PowerEdge C6400 overview 13
+===== PDF PAGE 14 =====
+System information label
+Sled service information
+Figure 11. Sled service information
+14 Dell EMC PowerEdge C6400 overview
+===== PDF PAGE 15 =====
+Cable routing
+Figure 12. Cable routing
+Dell EMC PowerEdge C6400 overview 15
+===== PDF PAGE 16 =====
+Mechanical overview
+Figure 13. Mechanical overview
+Link board and Drive cage
+Figure 14. Link board and Drive cage
+16 Dell EMC PowerEdge C6400 overview
+===== PDF PAGE 17 =====
+Jumper settings
+Figure 15. Jumper settings
+System tasks
+Figure 16. System tasks
+Dell EMC PowerEdge C6400 overview 17
+===== PDF PAGE 18 =====
+Installing and removing enclosure
+components
+Topics:
+• Safety instructions
+• Before working inside your system
+• After working inside your system
+• Recommended tools
+• Dell EMC PowerEdge C6420 sled
+• Drives
+• Power supply units
+• System cover
+• Backplane cover
+• Cooling fans
+• Power interposer board
+• Chassis management board
+• Linking board
+• Midplane
+• Drive cage
+• Backplanes and expander board
+• Control panel
+• Thermal sensor board
+Safety instructions
+NOTE:  Whenever you need to lift the system, get others to assist you. To avoid injury, do not attempt to lift the system by
+yourself.
+WARNING:  Opening or removing the system cover while the system is powered on may expose you to a risk of
+electric shock.
+CAUTION:  Do not operate the system without the cover for a duration exceeding five minutes. Operating the
+system without the system cover can result in component damage.
+CAUTION:  Many repairs may only be done by a certified service technician. You should only perform
+troubleshooting and simple repairs as authorized in your product documentation, or as directed by the online or
+telephone service and support team. Damage due to servicing that is not authorized by Dell is not covered by
+your warranty. Read and follow the safety instructions that are shipped with your product.
+NOTE:  It is recommended that you always use an antistatic mat and antistatic strap while working on components inside
+the system.
+CAUTION:  To ensure proper operation and cooling, all bays in the system and system fans must be always
+populated with a component or a blank.
+2
+18 Installing and removing enclosure components
+===== PDF PAGE 19 =====
+Before working inside your system
+Prerequisites
+Follow the safety guidelines listed in Safety instructions .
+Steps
+1. Power off the system, including all attached peripherals.
+2. Disconnect the system from the electrical outlet and disconnect the peripherals.
+3. If applicable, remove the system from the rack.
+For more information, see the Rack Installation Guide  at www.dell.com/poweredgemanuals .
+4. Remove the system cover.
+After working inside your system
+Prerequisites
+Follow the safety guidelines listed in Safety instructions .
+Steps
+1. Install the system cover.
+2. If applicable, install the system into the rack.
+For more information, see the Rack Installation Guide  at www.dell.com/poweredgemanuals .
+3. Reconnect the peripherals and connect the system to the electrical outlet.
+4. Power on the attached peripherals and then turn on the system.
+Recommended tools
+You need the following tools to perform the removal and installation procedures:
+● Phillips #1 screwdriver
+● Phillips #2 screwdriver
+● 1/4 inch flat head screwdriver
+● Wrist grounding strap
+● ESD mat
+Dell EMC PowerEdge C6420 sled
+Sled Installation Guidelines
+NOTE:  Ensure to install a sled blank in all the empty slots. Operating the enclosure without a blank results in overheating.
+NOTE:  For optimized thermal operation, ensure to follow the sled population sequence mentioned below:
+Installing and removing enclosure components 19
+===== PDF PAGE 20 =====
+Figure 17. Sled Installation Guidelines
+Removing a sled
+Prerequisites
+1. Follow the safety guidelines listed in Safety instructions .
+2. Follow the procedure listed in Before working inside your enclosure .
+NOTE:  The process of removing a sled blank is similar to removing a sled.
+Steps
+Press the retaining latch and using the sled pull handle, slide the sled out of the enclosure horizontally, ensuring that the sled is
+supported from beneath.
+20 Installing and removing enclosure components
+===== PDF PAGE 21 =====
+Figure 18. Removing a sled
+Figure 19. Removing a sled blank
+Next steps
+1. Install the sled into the enclosure .
+Installing and removing enclosure components 21
+===== PDF PAGE 22 =====
+NOTE:  If the sled is not being replaced immediately, a sled blank must be installed to ensure proper cooling of the
+system.
+Installing a sled
+Prerequisites
+1. Follow the safety guidelines listed in Safety instructions .
+2. If installed, remove the sled blank .
+Steps
+1. Align the sled to the enclosure horizontally to insert the sled into the enclosure.
+Figure 20. Installing a sled
+22 Installing and removing enclosure components
+===== PDF PAGE 23 =====
+Figure 21. Installing a sled blank
+2. Push the blue retention latch to slide the sled into the enclosure, and stop the sled at a distance of 20-30 mm before
+complete insertion of the sled as shown in the image below.
+CAUTION:  To avoid any damages to the pins on the sled, do not force the sled into the enclosure. Follow the
+two-position insertion and gently slide the sled into the enclosure.
+Installing and removing enclosure components 23
+===== PDF PAGE 24 =====
+Figure 22. Stop the sled at a distance of 20-30 mm before complete insertion
+3. Slide the blue retention latch gently, until the sled locks into the place.
+Next steps
+1. Follow the procedure listed in After working inside your enclosure .
+NOTE:  To add the Service Tag of the system board to match the Service Tag of the physical node, contact Dell
+Technical Support.
+Drives
+CAUTION:  Before attempting to remove or install a drive while the system is running, see the documentation for
+the storage controller card to ensure that the host adapter is configured correctly.
+CAUTION:  Do not turn off or restart your system while a drive is being formatted. Doing so can cause a drive
+failure.
+When you format a drive, allow enough time for the formatting to complete. Be aware that high-capacity drives can take a long
+time to format.
+Removing a drive blank
+The procedure for removing 2.5-inch and 3.5-inch drive blanks is identical.
+Prerequisites
+1. Follow the safety guidelines listed in Safety instructions .
+CAUTION:  To maintain proper system cooling, all empty drive slots must have drive blanks installed.
+CAUTION:  To maintain proper system cooling, drive blanks must be installed in all empty drive slots.
+24 Installing and removing enclosure components
+===== PDF PAGE 25 =====
+CAUTION:  Mixing drive blanks from previous generations of PowerEdge servers is not supported.
+Steps
+Press the release button, and slide the drive blank out of the drive slot.
+Figure 23. Removing a drive blank
+Next steps
+1. Install a drive or a drive blank.
+Installing a drive blank
+The procedure for installing 2.5-inch and 3.5-inch drive blanks is identical.
+Prerequisites
+1. Follow the safety guidelines listed in Safety instructions ..
+CAUTION:  Mixing drive blanks from previous generations of PowerEdge servers is not supported.
+Steps
+Insert the drive blank into the drive slot, and push the blank until the release button clicks into place.
+Figure 24. Installing a drive blank
+Removing a drive carrier
+Prerequisites
+1. Follow the safety guidelines listed in Safety instructions .
+2. Using the management software, prepare the drive for removal.
+Installing and removing enclosure components 25
+===== PDF PAGE 26 =====
+If the drive is online, the green activity or fault indicator flashes while the drive is turning off. When the drive indicators are
+off, the drive is ready for removal. For more information, see the documentation for the storage controller.
+CAUTION:  Before attempting to remove or install a drive while the system is running, see the documentation
+for the storage controller card to ensure that the host adapter is configured correctly to support drive
+removal and insertion.
+CAUTION:  Mixing drives from previous generations of PowerEdge servers is not supported.
+CAUTION:  To prevent data loss, ensure that your operating system supports drive installation. See the
+documentation supplied with your operating system.
+Steps
+1. Press the release button to open the drive carrier release handle.
+2. Holding the handle, slide the drive carrier out of the drive slot.
+Figure 25. Removing a drive carrier
+Next steps
+1. Follow the procedure listed in After working inside your enclosure ..
+2. Install a drive carrier .
+3. If you are not replacing the drive immediately, insert a drive blank in the empty drive slot to maintain proper system cooling.
+Installing a drive carrier
+Prerequisites
+CAUTION:  Before attempting to remove or install a drive while the system is running, see the documentation for
+the storage controller card to ensure that the host adapter is configured correctly to support drive removal and
+insertion.
+CAUTION:  Mixing drives from previous generations of PowerEdge servers is not supported.
+CAUTION:  Combining SAS and SATA drives in the same RAID volume is not supported.
+CAUTION:  When installing a drive, ensure that the adjacent drives are fully installed. Inserting a drive carrier
+and attempting to lock its handle next to a partially installed carrier can damage the partially installed carrier's
+shield spring and make it unusable.
+26 Installing and removing enclosure components
+===== PDF PAGE 27 =====
+CAUTION:  To prevent data loss, ensure that your operating system supports hot-swap drive installation. See the
+documentation supplied with your operating system.
+CAUTION:  When a replacement hot swappable drive is installed and the system is powered on, the drive
+automatically begins to rebuild. Ensure that the replacement drive is blank or contains data that you wish to
+overwrite. Any data on the replacement drive is immediately lost after the drive is installed.
+1. Follow the safety guidelines listed in Safety instructions .
+2. If applicable, remove the drive blank .
+Steps
+1. Press the release button on the front of the drive carrier to open the release handle.
+2. Insert and slide the drive carrier into the drive slot.
+3. Close the drive carrier release handle until it clicks in place.
+Figure 26. Installing a drive carrier
+Removing the drive from the drive carrier
+Prerequisites
+1. Follow the safety guidelines listed in Safety instructions .
+CAUTION:  Mixing drives from previous generations of PowerEdge servers is not supported.
+Steps
+1. Using a Phillips #1 screwdriver, remove the screws from the slide rails on the drive carrier.
+2. Lift the drive out of the drive carrier.
+Installing and removing enclosure components 27
+===== PDF PAGE 28 =====
+Figure 27. Removing the drive from the drive carrier
+Next steps
+1. If applicable, install the drive into the drive carrier .
+Installing a drive into the drive carrier
+Prerequisites
+CAUTION:  Mixing drive carriers from other generations of PowerEdge servers is not supported.
+NOTE:  When installing a drive into the drive carrier, ensure that the screws are torqued to 4 in-lbs.
+1. Follow the safety guidelines listed in Safety instructions .
+Steps
+1. Insert the drive into the drive carrier with the connector end of the drive towards the back of the carrier.
+2. Align the screw holes on the drive with the screws holes on the drive carrier.
+When aligned correctly, the back of the drive is flush with the back of the drive carrier.
+3. Using a Phillips #1 screwdriver, secure the drive to the drive carrier with screws.
+28 Installing and removing enclosure components
+===== PDF PAGE 29 =====
+Figure 28. Installing a drive into the drive carrier
+Next steps
+Install the drive carrier.
+Power supply units
+CAUTION:  The PSUs must have the Extended Power Performance (EPP) label. Mixing PSUs (even the PSUs that
+have the same power rating) from previous generations of PowerEdge servers is not supported. Mixing PSUs
+results in a PSU mismatch condition or failure to turn the system on.
+Your system supports two 2400 W AC PSUs.
+NOTE:  For more information, see the PowerEdge T440 Technical Specs at www.dell.com/poweredgemanuals .
+Fault tolerant redundancy
+Policy Budgeting
+Fault Tolerant Redundancy is a hybrid redundancy mode which uses the power capacity limits of a single Power Supply Unit for
+Power Budget Checks, similar to Grid Redundancy, but enforces added performance limiting after redundancy is lost. Previous
+generation modular sleds will still work with Fault Tolerant Redundancy enabled, but they treat it identically to Grid Redundancy.
+When the maximum potential power needs of installed chassis components exceeds the capacity of a single Power Supply, the
+Chassis Management Controller (CMC) will deny power on to further chassis components. The Power Budget Checks for Fault
+Tolerant Redundancy ensure that the Shared Infrastructure Chassis will remain operational in the event of maximum potential
+workload conditions at the time of an AC Grid or PSU Supply failure. Using the maximum potential is a conservative target that
+ensures continued operation across the wide range of potential customer workloads for a given configuration.
+Policy philosophy
+Similar to Grid Redundancy, Fault Tolerant Redundancy is a conservative redundancy policy that ensures that the Shared
+Infrastructure Chassis and all installed components remain operational with no risk of shutdown in the event of an AC Grid or
+Power Supply failure even when all installed components are simultaneously running at their worst case power consumption.
+New for Fault Tolerant Redundancy is a limit on peak performance that occurs when redundancy is lost. Fault Tolerant
+Installing and removing enclosure components 29
+===== PDF PAGE 30 =====
+Redundancy can maintain the same conservative standards of redundancy as traditional Grid Redundancy by limiting peak power
+after redundancy is lost to levels which fit within the surviving Power Supply.
+Policy control
+As with all Redundancy Policies, while the two Power Supplies remain healthy, load is shared evenly between them and the
+capacity of both Power Supplies is made available for use. In the event of an AC Grid or Power Supply failure, Power Controls
+will rapidly engage to restrict the power consumption of the chassis and ensure that consumption is restricted to what a single
+Power Supply can support. Besides the controls used with all Redundancy Policies, Fault Tolerant Redundancy also implements
+more performance limiting functionality which restricts the peak power after redundancy loss.
+For a fully loaded chassis running at maximum potential power this can result in some observed performance reduction as the
+chassis Power Control limits are enforced. In practice, customer workloads are often not at the maximum potential power and so
+practical performance reduction during an AC Grid or Power Supply failure is often minor or even unnoticeable.
+Power on behavior after fault
+In the event of an AC Grid or Power Supply failure, new chassis components are enabled to power on as long as the maximum
+potential power of the newly installed chassis components does not exceed the capacity of a single Power Supply when
+evaluated by the chassis Power Budget Checks. This means that, while customers will note a chassis "Critical" state due to the
+loss of redundancy, they will observe no difference in which chassis components are enabled to power on (both before and after
+a redundancy fault). This is because in both cases, the chassis Power Budget Checks use the capacity of only a single Power
+Supply. This is a key difference from the other Shared Infrastructure Chassis Redundancy Policies.
+Logging behavior
+As with all Redundancy Policies, when a Power Supply Unit fails, a log message is generated. For the Fault Tolerant Redundancy
+policy, a log message will also be recorded to note a "Loss of Redundancy". This message indicates that the system is continuing
+to operate in a Non-Redundant state, and action is necessary to either restore power to a failed AC Grid or replace a failed
+Power Supply Unit. Details in log messages make it possible to distinguish between these two cases. Finally, in case power-on of
+a chassis component is denied due to a Power Budget Check, the denial is logged both in CMC logs and iDRAC logs (in the case
+of compute sleds).
+Removing a power supply unit
+Prerequisites
+1. Follow the safety guidelines listed in Safety instructions .
+2. Disconnect the power cable from the power source and from the PSU you intend to remove, and then remove the cable
+from the strap on the PSU handle.
+Steps
+Press the release latch and slide the PSU out of the system by using the PSU handle.
+30 Installing and removing enclosure components
+===== PDF PAGE 31 =====
+Figure 29. Removing a power supply unit
+Next steps
+Install the PSU  or install the PSU blank
+Installing a power supply unit
+Prerequisites
+1. Follow the safety guidelines listed in Safety instructions .
+2. For systems that support redundant PSU, ensure that both the PSUs are of the same type and have the same maximum
+output power.
+NOTE:  The maximum output power (shown in watts) is listed on the PSU label.
+Steps
+Slide the PSU into the system until the PSU is fully seated and the release latch snaps into place.
+Installing and removing enclosure components 31
+===== PDF PAGE 32 =====
+Figure 30. Installing a power supply unit
+Next steps
+1. Connect the power cable to the PSU, and plug the cable into a power outlet.
+CAUTION:  Secure the power cable to the PSU with the strap provided on the PSU handle.
+NOTE:  When installing, hot swapping, or hot adding a new PSU, wait for 15 seconds for the system to recognize the
+PSU and determine its status. The PSU redundancy may not occur until discovery is complete. Wait until the new PSU is
+discovered and enabled before you remove the other PSU. The PSU status indicator turns green to signify that the PSU
+is functioning properly.
+System cover
+Removing the system cover
+Prerequisites
+1. Follow the safety guidelines listed in Safety instructions .
+2. Power off the system and all attached peripherals.
+3. Disconnect the system from the electrical outlet and disconnect the peripherals.
+Steps
+1. Press and hold the cover release latch lock down.
+2. With your palm on one of the traction pads, slide the system cover toward the rear of the system.
+3. Lift the cover from the system.
+32 Installing and removing enclosure components
+===== PDF PAGE 33 =====
+Figure 31. Removing the system cover
+Next steps
+1. Install the system cover .
+Installing the system cover
+Prerequisites
+CAUTION:  Many repairs may only be done by a certified service technician. You should only perform
+troubleshooting and simple repairs as authorized in your product documentation, or as directed by the online or
+telephone service and support team. Damage due to servicing that is not authorized by Dell is not covered by
+your warranty. Read and follow the safety instructions that are shipped with your product.
+1. Follow the safety guidelines listed in Safety instructions .
+Steps
+Place the system cover on the chassis, and slide it to the front of the chassis until it locks into place.
+Installing and removing enclosure components 33
+===== PDF PAGE 34 =====
+Figure 32. Installing the system cover
+Next steps
+1. Reconnect the peripherals, and connect the system to the electrical outlet.
+2. Power on the system, and all attached peripherals.
+Backplane cover
+Removing the backplane cover
+Prerequisites
+NOTE:  This procedure is not applicable for enclosures with the 3.5-inch hard drive configuration.
+1. Follow the safety guidelines listed in Safety instructions .
+2. Follow the procedure listed in Before working inside your enclosure .
+Steps
+1. Using the Phillips #1 screwdriver, remove the screws that secure the backplane cover to the enclosure.
+2. Slide the backplane cover toward the back of the enclosure and lift the cover away.
+34 Installing and removing enclosure components
+===== PDF PAGE 35 =====
+Figure 33. Removing the backplane cover
+Next steps
+1. Install the backplane cover .
+Installing the backplane cover
+Prerequisites
+1. Follow the safety guidelines listed in Safety instructions .
+Steps
+1. Align the screw holes on the backplane cover with the screw holes on the chassis by sliding the cover toward the front of
+the enclosure.
+2. Using the Phillips #1 screwdriver, tighten the screws to secure the backplane cover to the enclosure.
+Figure 34. Installing the backplane cover
+Installing and removing enclosure components 35
+===== PDF PAGE 36 =====
+Next steps
+1. Follow the procedure listed in After working inside your enclosure .
+Cooling fans
+Removing a cooling fan
+Prerequisites
+WARNING:  Do not attempt to operate the system without the cooling fans.
+WARNING:  The cooling fan spins for some time after the system is powered off. Allow the fan to stop spinning
+before removing it from the system.
+1. Follow the safety guidelines listed in Safety instructions .
+2. Follow the procedure listed in Before working inside your enclosure .
+Steps
+Disconnect the fan cable from the connector on the cooling fan cage and lift the fan out.
+Figure 35. Removing a cooling fan
+Next steps
+1. Install a cooling fan .
+2. For more information about the fan status, see the management software.
+Installing a cooling fan
+Prerequisites
+1. Follow the safety guidelines listed in Safety instructions .
+Steps
+1. Align the cooling fan with the fan slot on the cooling fan cage, and push the cooling fan until it is firmly seated.
+2. Connect the fan cable to the connector on the cooling fan cage.
+36 Installing and removing enclosure components
+===== PDF PAGE 37 =====
+Figure 36. Installing a cooling fan
+Next steps
+1. Follow the procedure listed in After working inside your enclosure .
+2. Check the management software to see if the fan is rotating at the optimal speed.
+Removing the cooling fan cage
+Prerequisites
+WARNING:  Do not attempt to operate the system without the cooling fans.
+WARNING:  The cooling fan spins for some time after the system is powered down. Allow the fan to stop
+spinning before removing it from the system.
+NOTE:  Observe the routing of the cables when removing them from the system. Route these cables properly when you
+replace them to prevent the cables from being pinched or crimped.
+1. Follow the safety guidelines listed in Safety instructions .
+2. Follow the procedure listed in Before working inside your enclosure .
+3. Remove the cooling fans .
+Steps
+1. Disconnect the fan power cable from the chassis management board.
+2. Lift the cooling fan cage out of the chassis.
+Installing and removing enclosure components 37
+===== PDF PAGE 38 =====
+Figure 37. Removing the cooling fan cage
+Next steps
+1. Install the cooling fan cage .
+Installing the cooling fan cage
+Prerequisites
+WARNING:  Do not attempt to operate the system without the cooling fans.
+NOTE:  Observe the routing of the cables when removing them from the system. Route these cables properly when you
+replace them to prevent the cables from being pinched or crimped.
+1. Follow the safety guidelines listed in Safety instructions .
+Steps
+1. Align the guide pins on the cooling fan cage with the guide holes on the chassis.
+2. Install the fan cage onto the chassis, and push until it is firmly seated on the guide holes.
+3. Connect the fan power cable to the connector on the chassis management board.
+To prevent the cable from being damaged, route this cable properly.
+38 Installing and removing enclosure components
+===== PDF PAGE 39 =====
+Figure 38. Installing the cooling fan cage
+Next steps
+1. Install the cooling fans .
+2. Follow the procedure listed in After working inside your enclosure .
+3. Check the management software to see if all the fans are rotating at the optimal speed.
+Power interposer board
+Removing the power interposer board
+Prerequisites
+WARNING:  Allow the power interposer board (PIB) to discharge after you power off the system. Handle the PIB
+by the edges and avoid touching the contact surfaces of the connectors.
+1. Follow the safety guidelines listed in Safety instructions .
+2. Follow the procedure listed in Before working inside your enclosure .
+3. Remove the power supply units .
+4. Disconnect all the cables from the PIB except for the mid-plane power cables.
+Steps
+1. To release the PIB from the lock on the chassis, pull the blue release latch.
+2. Holding the release latch, lift the PIB up and away from the guide hooks on the chassis.
+3. Using the Phillips #2 screwdriver, remove the screws that secure the mid-plane power cables to the PIB.
+Installing and removing enclosure components 39
+===== PDF PAGE 40 =====
+Figure 39. Removing the PIB
+Figure 40. Removing the midplane power cables from the PIB
+Next steps
+1. Install the PIB .
+40 Installing and removing enclosure components
+===== PDF PAGE 41 =====
+Installing the power interposer board
+Prerequisites
+WARNING:  Allow the power interposer board (PIB) to discharge after you power off the system. Handle the PIB
+by the edges and avoid touching the contact surfaces of the connectors.
+1. Follow the safety guidelines listed in Safety instructions .
+Steps
+1. Using the Phillips #2 screwdriver, replace the screws that secure the midplane power cable to the PIB.
+Figure 41. Installing the midplane power cables to the PIB
+2. Align and insert the PIB on the guide hooks on the chassis.
+3. Push the PIB down to secure it with the lock on the chassis.
+Installing and removing enclosure components 41
+===== PDF PAGE 42 =====
+Figure 42. Installing the PIB
+Next steps
+1. Reconnect all the disconnected cables.
+2. Install the power supply units .
+3. Follow the procedure listed in After working inside your enclosure .
+Chassis management board
+Removing the chassis management board
+Prerequisites
+1. Follow the safety guidelines listed in Safety instructions .
+2. Follow the procedure listed in Before working inside your enclosure .
+3. Remove the power supply units .
+4. Remove the power interposer board .
+5. Disconnect all the cables that are connected to the chassis management board.
+Steps
+1. Using the Phillips #2 screwdriver, remove the two screws that secure the chassis management board to the chassis.
+2. Sliding the board toward the front of the enclosure, lift the board away after the guide slots are free of the standoffs.
+42 Installing and removing enclosure components
+===== PDF PAGE 43 =====
+Figure 43. Removing the chassis management board
+Next steps
+1. Install the chassis management board .
+Installing the chassis management board
+Prerequisites
+1. Follow the safety guidelines listed in Safety instructions ..
+Steps
+1. Insert the chassis management board into the enclosure, aligning the guide slots with the standoffs on the chassis.
+2. Push the board toward the back of the enclosure to align the screw holes on the board and standoffs chassis.
+3. Using the Phillips #2 screwdriver, replace the screws to secure the board in place.
+Installing and removing enclosure components 43
+===== PDF PAGE 44 =====
+Figure 44. Installing the chassis management board
+Next steps
+1. Reconnect all the disconnected cables.
+2. Install the power interposer board .
+3. Install the power supply units .
+4. Follow the procedure listed in After working inside your enclosure .
+Linking board
+Removing the linking board
+Prerequisites
+1. Follow the safety guidelines listed in Safety instructions .
+2. Follow the procedure listed in Before working inside your enclosure .
+3. Remove all the sleds from the enclosure .
+4. Remove the fan cage .
+Steps
+1. Using the Phillips #1 screwdriver, remove the screw that secures the linking board to the enclosure.
+2. Lift the linking board out of the enclosure.
+3. Disconnect all the attached cables.
+44 Installing and removing enclosure components
+===== PDF PAGE 45 =====
+Figure 45. Removing the right linking board
+Figure 46. Removing the left linking board
+Next steps
+1. Install the linking board .
+Installing the linking board
+Prerequisites
+1. Follow the safety guidelines listed in Safety instructions .
+Installing and removing enclosure components 45
+===== PDF PAGE 46 =====
+Steps
+1. Reconnect all the disconnected cables to the linking board.
+2. Align the board with the standoff on the chassis and slide the board into place.
+NOTE:  Ensure that the linking board cable connector is not folded or twisted while installing the sled, to avoid damaging
+the linking board cable connector.
+3. Using a Phillips #1 screwdriver, replace the screw on the linking board to secure the board in place.
+Figure 47. Installing the right linking board
+Figure 48. Installing the left linking board
+Next steps
+1. Install the fan cage .
+2. Install the sleds into the enclosure .
+46 Installing and removing enclosure components
+===== PDF PAGE 47 =====
+3. Follow the procedure listed in After working inside your enclosure .
+Midplane
+Removing the right midplane
+Prerequisites
+NOTE:  Observe the routing of the cables on the chassis as you remove them from the system. Route these cables properly
+when you replace them to prevent the cables from being pinched or crimped.
+1. Follow the safety guidelines listed in Safety instructions .
+2. Follow the procedure listed in After working inside your enclosure .
+3. Remove all the sleds from the enclosure .
+4. Remove the cooling fan cage .
+5. Disconnect all the connected cables.
+Steps
+1. Using the Phillips #1 screwdriver, remove the screws that secure the midplane to the chassis.
+2. Lift the midplane out of the chassis.
+3. Using the Phillips #1 screwdriver, remove the screws that secure the power cables to the midplane.
+Figure 49. Removing the right midplane
+Next steps
+1. Install the right midplane .
+Installing and removing enclosure components 47
+===== PDF PAGE 48 =====
+Installing the right midplane
+Prerequisites
+NOTE:  You must route the cables properly on the chassis to prevent them from being pinched or crimped.
+1. Follow the safety guidelines listed in Safety instructions .
+Steps
+1. Using the Phillips #1 screwdriver, connect and secure the power cables to the midplane.
+2. Place the midplane into the chassis.
+3. Using the Phillips #1 screwdriver, tighten the screws that secure the midplane to the chassis.
+Figure 50. Installing the right midplane
+Next steps
+1. Reconnect all the disconnected cables.
+2. Install the cooling fan cage .
+3. Install the sleds into the enclosure .
+4. Follow the procedure listed in After working inside your enclosure .
+Removing the left midplane
+Prerequisites
+NOTE:  Observe the routing of the cables on the chassis as you remove them from the system. Route these cables properly
+when you replace them to prevent the cables from being pinched or crimped.
+1. Follow the safety guidelines listed in Safety instructions ..
+2. Follow the procedure listed in Before working inside your enclosure .
+3. Remove all the sleds from the enclosure .
+4. Remove the cooling fan cage .
+48 Installing and removing enclosure components
+===== PDF PAGE 49 =====
+5. Disconnect all the connected cables.
+Steps
+1. Using the Phillips #1 screwdriver, remove the screws that secure the midplane.
+2. Slide and lift the midplane out of the chassis.
+3. Using the Phillips #1 screwdriver, remove the screws that secure the power cables to the midplane.
+Figure 51. Removing the left midplane
+Next steps
+1. Install the midplanes .
+Installing the left midplane
+Prerequisites
+NOTE:  You must route the cables properly on the chassis to prevent them from being pinched or crimped.
+1. Follow the safety guidelines listed in Safety instructions .
+Steps
+1. Using the Phillips #1 screwdriver, connect and secure the power cables to the midplane.
+2. Place the midplane into the chassis.
+3. Using the Phillips #1 screwdriver, secure the midplane to the chassis with the screws.
+Installing and removing enclosure components 49
+===== PDF PAGE 50 =====
+Figure 52. Installing the left midplane
+Next steps
+1. Connect all the disconnected cables.
+2. Install the cooling fan cage .
+3. Follow the procedure listed in After working inside your enclosure ..
+50 Installing and removing enclosure components
+===== PDF PAGE 51 =====
+Midplane power cable routing
+Figure 53. Midplane power cable routing from power interposer board
+1. left midplane 2. +12 V power cable for left midplane
+3. GND cable for left midplane 4. power interposer board
+5. +12 V power cable for right midplane 6. GND cable for right midplane
+7. right midplane
+Drive cage
+Removing the 2.5 inch drive cage
+Prerequisites
+CAUTION:  To prevent damage to the drives and backplane, you must remove the drives from the system before
+removing the backplane.
+CAUTION:  You must note the number of each drive and temporarily label them before removal so that you can
+replace them in the same locations.
+NOTE:  Observe the routing of the cables on the chassis as you remove them from the system. You must route these cables
+properly when you replace them to prevent the cables from being pinched or crimped.
+1. Follow the safety guidelines listed in Safety instructions .
+2. Follow the procedure listed in Before working inside your enclosure .
+3. Remove the backplane cover .
+4. Remove the fan cages .
+5. If applicable, disconnect the backplane and expander board cables from the linking board and chassis management board.
+6. Remove all the drives .
+Installing and removing enclosure components 51
+===== PDF PAGE 52 =====
+Steps
+1. Using the Phillips #1 screwdriver, remove the screws that secure the drive cage to the chassis.
+2. Slide the drive cage to the unlock position.
+3. Lift the drive cage away from the enclosure.
+Figure 54. Removing the 2.5-inch drive cage
+Next steps
+1. Install the 2.5-inch drive cage .
+Installing the 2.5 inch drive cage
+Prerequisites
+CAUTION:  To prevent damage to the drives and backplane, you must remove the drives from the system before
+removing the backplane.
+CAUTION:  You must note the number of each drive and temporarily label them before removal so that you can
+replace them in the same locations.
+Follow the safety guidelines listed in Safety instructions .
+Steps
+1. Insert the drive cage into the enclosure, aligning the cage with the standoffs on the chassis.
+2. Slide the drive cage toward the lock position.
+3. Reconnect all the cables that were disconnected from the backplane.
+4. Using the Phillips #1 screwdriver, secure the drive cage in place with screws.
+52 Installing and removing enclosure components
+===== PDF PAGE 53 =====
+Figure 55. Installing the 2.5-inch drive cage
+Next steps
+1. If applicable, reconnect all the cables that were disconnected from the linking board and chassis management board.
+2. Install the removed drives .
+3. Install the fan cage .
+4. Install the backplane cover .
+5. Follow the procedure listed in After working inside your enclosure .
+Removing the 3.5 inch drive cage
+Prerequisites
+CAUTION:  To prevent damage to the drives and backplane, you must remove the drives from the system before
+removing the backplane.
+CAUTION:  You must note the slot number of each drive and temporarily label them before removal so that you
+can replace them in the same slots.
+NOTE:  Observe the routing of the cables on the chassis as you remove them from the system. You must route these cables
+properly when you replace them to prevent the cables from being pinched or crimped.
+1. Follow the safety guidelines listed in Safety instructions .
+2. Follow the procedure listed in Before working inside your enclosure .
+3. Remove the fan cages .
+4. Disconnect the backplane cables from the linking board and chassis management board.
+5. Remove all the drives .
+Steps
+1. Using the Phillips #1 screwdriver, remove the screws that secure the drive cage to the chassis.
+2. Slide the drive cage to the unlock position.
+3. Hold and lift the drive cage up.
+4. Lift the drive cage away from the enclosure.
+Installing and removing enclosure components 53
+===== PDF PAGE 54 =====
+Figure 56. Removing the 3.5-inch drive cage
+Next steps
+1. Install the 3.5-inch drive cage .
+Installing the 3.5 inch drive cage
+Prerequisites
+CAUTION:  To prevent damage to the drives and backplane, you must remove the drives from the system before
+removing the backplane.
+CAUTION:  You must note the number of each drive and temporarily label them before removal so that you can
+replace them in the same locations.
+Follow the safety guidelines listed in Safety instructions .
+Steps
+1. Insert the drive cage into the enclosure, aligning the drive cage with the standoffs on the chassis.
+2. Slide the drive cage toward the lock position.
+3. Using the Phillips #1 screwdriver, secure the drive cage in place with screws.
+54 Installing and removing enclosure components
+===== PDF PAGE 55 =====
+Figure 57. Installing the 3.5-inch drive cage
+Next steps
+1. Reconnect all the backplane cables that were disconnected from the linking board and chassis management board.
+2. Install all the drives .
+3. Install the fan cages .
+4. Follow the procedure listed in After working inside your enclosure .
+Backplanes and expander board
+Backplane
+The following pages contain information about the backplane and middle plane connectors.
+NOTE:  SGPIO features will only be available on all passive backplanes at Quarter 4 2017's firmware release.
+The image below shows the 12 x 3.5-in hard drive backplane:
+Figure 58. 12 x 3.5-in hard drive backplane
+1. SATA/SAS connector (12)
+2. Backplane signal cable to sled 4 connector
+3. Backplane signal cable to sled 3 connector
+4. Backplane power connector
+5. Backplane signal cable to sled 2 connector
+6. Backplane signal cable connector
+Installing and removing enclosure components 55
+===== PDF PAGE 56 =====
+7. Backplane signal cable to sled 1 connector
+The image below shows the 24 x 2.5-in hard drive backplane:
+Figure 59. 24 x 2.5-in hard drive backplane
+1. SATA connector (24)
+2. Expander power connector
+3. Backplane power connector
+4. Backplane signal connector
+The image below shows the 24 x 2.5-in hard drive backplane with NVMe:
+Figure 60. 24 x 2.5-in hard drive backplane with NVMe
+1. SATA connector (24)
+2. Signal cable to sled 4
+3. NVMe ports 19 and 18 connect to sled 4
+4. Signal cable to sled 3
+5. NVMe ports 13 and 12 connect to sled 3
+6. Connector for chassis management board cable
+7. Signal cable to sled 2
+8. NVMe ports 7 and 6 connect to sled 2
+9. Signal cable to sled 1
+10. NVMe ports 1 and 0 connect to sled 1
+SAS Expander board
+The SAS Expander board is necessary to achieve higher, single-volume hard drive configurations. An expander board allows the
+C6400 to maximize the hard drive space in the hard drive bay. A single expander board supports up to 24 hard drives in the
+C6400 chassis. The expander board is integrated with the 24 x 2.5-in backplane via MiniSAS hard drive connectors.
+The image below shows the SAS Expander board:
+56 Installing and removing enclosure components
+===== PDF PAGE 57 =====
+Figure 61. SAS Expander board
+1. Expander signal cable connector 2
+2. Power connector
+3. SAS expander F connector
+4. SAS expander E connector
+5. SAS expander D connector
+6. PERC 3 expander and PERC 4 expander connector
+7. PERC 1 expander and PERC 2 expander connector
+8. SAS expander C connector
+9. SAS expander B connector
+10. SAS expander A connector
+11. Expander signal cable connector 1
+Backplane cable routing
+Figure 62. Cabling the 24 x 2.5-inch backplane with NVMe hard drives
+1. Backplane 2. Backplane signal cable 1(BP: BPSIG2 to MB: left linking
+board)
+Installing and removing enclosure components 57
+===== PDF PAGE 58 =====
+3. Backplane signal cable 2(BP: BPSIG1 to MB: left linking
+board)
+4. SATA cable for sled 1(BP: sled 1 to MB: left linking board)
+5. NVMe cable for sled 1(BP: BP_NVMe0 sled 1 to MB: left
+linking board)
+6. NVMe cable for sled 2(BP: BP_NVMe6 sled 2 to MB: left
+linking board)
+7. NVMe connector for sled 2 8. NVMe connector for sled 1
+9. Left linking board 10. Linking board connector for sled 1
+11. Linking board connector for sled 2 12. SATA cable for sled 2(BP: sled 2 to MB: left linking board)
+13. NVMe cable for sled 3(BP: BP_NVMe12 sled 3 to MB: Right
+linking board)
+14. NVMe cable for sled 4(BP: BP_NVMe18 sled 4 to MB: right
+linking board)
+15. NVMe connector for sled 4 16. NVMe connector for sled 3
+17. Right linking board 18. Linking board connector for sled 3
+19. Linking board connector for sled 4 20. SATA cable for sled 3(BP: sled 3 to MB: right linking board)
+21. SATA cable for sled 4(BP: sled 4 to MB: right linking board) 22. Backplane signal cable 3(BP: BPSIG2 to MB: right linking
+board)
+23. Backplane signal cable 4(BP: BPSIG3 to MB: Right linking
+board)
+Figure 63. Cabling the 24 x 2.5-inch backplane with expander board
+1. Backplane to expander board signal cable 2. Expander SAS B cable (BP: EXP_SAS B to Expander Board
+EXP_SAS B)
+3. Backplane 4. Expander SAS A cable(BP: EXP_SAS A to Expander Board
+EXP_SAS A)
+5. Expander board 6. Expander SAS C cable(BP: EXP_SAS C to Expander Board
+EXP_SAS C)
+7. PERC cable from sled 2(EB: EXP_PERC2 sled 2 to left
+linking board)
+8. PERC cable from sled 1(EB: EXP_PERC1 sled 1 to left linking
+board)
+9. Left linking board 10. Linking board connector for sled 1
+11. Linking board connector for sled 2 12. PERC cable from sled 4(EB: EXP_PERC4 sled 3 to right
+linking board)
+13. PERC cable from sled 3(EB: EXP_PERC3 sled 3 to right
+linking board)
+14. right linking board
+15. Linking board connector for sled 3 16. Linking board connector for sled 4
+17. Expander SAS E cable(BP: EXP_SAS E to Expander Board
+EXP_SAS E)
+18. Expander SAS F cable(BP: EXP_SAS F to Expander Board
+EXP_SAS F)
+58 Installing and removing enclosure components
+===== PDF PAGE 59 =====
+19. Backplane to expander board power cable 20. Expander SAS D cable(BP: EXP_SAS D to Expander Board
+EXP_SAS D)
+Figure 64. Cabling the 12 x 3.5-inch backplane
+1. Backplane 2. SATA cable for sled 1(BP: SATA cable sled 1 to left linking
+board)
+3. Signal cable sled 1(BP: BP_SIG1 to left linking board) 4. Linking board connector for sled 1
+5. Left linking board 6. Linking board connector for sled 2
+7. SATA cable for sled 2(BP: SATA cable sled 2 to left linking
+board)
+8. Signal cable sled 2(BP: BP_SIG2 to left linking board)
+9. SATA cable for sled 3(BP: SATA cable sled 3 to right linking
+board)
+10. Signal cable sled 3(BP: BP_SIG3 to left linking board)
+11. Right linking board 12. Linking board connector for sled 3
+13. Linking board connector for sled 4 14. SATA cable for sled 4(BP: SATA cable sled 4 to right linking
+board)
+15. Signal cable sled 4(BP: BP_SIG4 to left linking board)
+Sled to hard drive mapping
+Figure 65. Sled to drive mapping for the enclosure with 24 x 2.5-inch drives
+1. Drives 0–5 mapped to sled 1 2. Drives 6–11 mapped to sled 2
+3. Drives 12–17 mapped to sled 3 4. Drives 18–23 mapped to sled 4
+Installing and removing enclosure components 59
+===== PDF PAGE 60 =====
+5. (Optional) NVMe hard drive location
+Figure 66. Sled to drive mapping for the enclosure with 12 x 3.5-inch drives
+1. Drives 0–2 mapped to sled 1 2. Drives 3–5 mapped to sled 2
+3. Drives 6–8 mapped to sled 3 4. Drives 9–11 mapped to sled 4
+NOTE:  The warranty of the drives are linked to the Service Tag of the corresponding sled.
+Expander zoning
+A SAS expander board allows higher, single-volume hard drive configurations. An integrated expander device expands each sleds
+hard drive footprint.
+The PowerEdge 6400 enclosure allows four sleds to access a single expander controller at the same time. there are two zoning
+options available, they are:
+● Up to 6 SAS/SATA device of each sled in Split Mode (6+6+6+6)
+● Up to 12 SAS/SATA device of sled 1 and sled 3 in Zoning Mode (12+12)
+60 Installing and removing enclosure components
+===== PDF PAGE 61 =====
+NOTE:
+● Install expander firmware 2.07 (X25-00) or later to support these configurations
+● The expander mode works only with a PERC card, and is not supported by the onboard SATA controller.
+Removing the backplane
+Prerequisites
+CAUTION:  To prevent damage to the drives and backplane, you must remove the drives from the system before
+removing the backplane.
+CAUTION:  You must note the slot number of each drive and temporarily label them before removal so that you
+can replace them in the same slots.
+NOTE:  Observe the routing of the cables on the chassis as you remove them from the system. You must route these cables
+properly when you replace them to prevent the cables from being pinched or crimped.
+1. Follow the safety guidelines listed in Safety instructions .
+2. Follow the procedure listed in Before working inside your enclosure .
+3. Remove the drive cage .
+4. Disconnect all the cables from the backplane.
+Steps
+1. Orient the drive cage so that the drive bays are facing down.
+2. Using the Phillips #2 screwdriver, remove the screws that secure the backplane to the drive cage.
+3. Lift the backplane away from the drive cage.
+Installing and removing enclosure components 61
+===== PDF PAGE 62 =====
+Figure 67. Removing the backplane
+Next steps
+1. Install the backplane .
+Installing the backplane
+Prerequisites
+CAUTION:  You must note the slot number of each drive and temporarily label them before removal so that you
+can replace them in the same slots.
+NOTE:  Observe the routing of the cables on the chassis as you remove them from the system. You must route these cables
+properly when you replace them to prevent the cables from being pinched or crimped.
+Follow the safety guidelines listed in Safety instructions .
+Steps
+1. Orient the drive cage so that the drive bays are facing down.
+2. Place the backplane on the drive cage, aligning the screw holes on the backplane with the holes on the drive cage.
+3. Using the Phillips #2 screwdriver, replace the screws to secure the backplane to the drive cage.
+62 Installing and removing enclosure components
+===== PDF PAGE 63 =====
+Figure 68. Installing the backplane
+Next steps
+1. Reconnect all the disconnected cables.
+2. Install the drive cage into the enclosure .
+3. Follow the procedure listed in After working inside your enclosure .
+Removing the backplane expander board
+Prerequisites
+NOTE:  To prevent damage to the drives and backplane, you must remove the drives from the system before removing the
+backplane.
+NOTE:  Observe the routing of the cable on the chassis as you remove them from the system. You must route these cables
+properly when you replace them to prevent the cables from being pinched or crimped.
+NOTE:  The backplane expander board is only available with 24 x 2.5-inch drives with NVMe configuration.
+1. Follow the safety guidelines listed in Safety instructions .
+2. Follow the procedure listed in Before working inside your enclosure .
+3. Remove the drive cage .
+4. Disconnect all the cables from the backplane expander board.
+Installing and removing enclosure components 63
+===== PDF PAGE 64 =====
+Steps
+1. Using the Phillips #2 screwdriver, remove the screws that secure the backplane expander board to the drive cage.
+2. Lift the backplane expander board out of the enclosure.
+Figure 69. Removing the backplane expander board
+Next steps
+1. Install the backplane expander board .
+Installing the backplane expander board
+Prerequisites
+NOTE:  Observe the routing of the cable on the chassis as you remove them from the system. You must route these cables
+properly when you replace them to prevent the cables from being pinched or crimped.
+NOTE:  The backplane expander board is only available with 24 x 2.5-inch drives with NVMe configuration.
+1. Follow the safety guidelines listed in Safety instructions .
+Steps
+1. Install the backplane expander board into the enclosure, aligning the screw holes on the board with the holes on the drive
+cage.
+2. Using the Phillips #2 screwdriver, secure the backplane expander board to the chassis.
+64 Installing and removing enclosure components
+===== PDF PAGE 65 =====
+Figure 70. Installing the backplane expander board
+Next steps
+1. Reconnect all the disconnected cables.
+2. Install the drive cage .
+3. Follow the procedure listed in After working inside your enclosure .
+Control panel
+Removing the control panel
+Prerequisites
+NOTE:  Observe the routing of the cables on the enclosure as you remove them. You must route these cables properly when
+you replace them to prevent the cables from being pinched or crimped.
+1. Follow the safety guidelines listed in Safety instructions .
+2. Follow the procedure listed in Before working inside your enclosure .
+3. Remove all the drives .
+4. Disconnect all the backplane cables from the linking board and chassis management board.
+5. Remove the drive cage from the enclosure .
+6. Disconnect control panel cables from the midplane.
+Steps
+1. Using the Phillips #1 screwdriver, remove the screws that secure the control panel assembly to the enclosure.
+2. Remove the cable from the cable retention clips.
+3. Lift the control panel assembly away.
+Installing and removing enclosure components 65
+===== PDF PAGE 66 =====
+Figure 71. Removing the left control panel assembly
+Figure 72. Removing the right control panel assembly
+Next steps
+1. Install the control panel assembly .
+Installing the control panel
+Prerequisites
+NOTE:  Observe the routing of the cables on the chassis as you remove them from the system. You must route these cables
+properly when you replace them to prevent the cables from being pinched or crimped.
+66 Installing and removing enclosure components
+===== PDF PAGE 67 =====
+NOTE:  Additional tape maybe required to secure the cables.
+1. Follow the safety guidelines listed in Safety instructions .
+Steps
+1. Route the control panel cable through the cable retention clips.
+2. Install the control panel assembly and secure it in place with screws.
+Figure 73. Installing the left control panel
+Figure 74. Installing the right control panel
+Next steps
+1. Reconnect the control panel cable to the midplane.
+2. Install the drive cage into the enclosure .
+Installing and removing enclosure components 67
+===== PDF PAGE 68 =====
+3. Reconnect all the disconnected backplane cables.
+4. Install all the removed drives .
+5. Follow the procedure listed in After working inside your enclosure .
+Thermal sensor board
+Removing the thermal sensor board
+Prerequisites
+CAUTION:  To prevent damage to the drives and backplane, you must remove the drives from the system before
+removing the backplane.
+CAUTION:  You must note the number of each drive and temporarily label them before removal so that you can
+replace them in the same locations.
+NOTE:  Observe the routing of the cables on the chassis as you remove them from the system. You must route these cables
+properly when you replace them to prevent the cables from being pinched or crimped.
+1. Follow the safety guidelines listed in Safety instructions .
+2. Follow the procedure listed in Before working inside your enclosure .
+3. Remove all the drives .
+4. Disconnect all the cables from the backplane.
+5. Disconnect the control panel cable from the midplane.
+6. Remove the drive cage from the chassis .
+Steps
+1. Using the Phillips #1 screwdriver, remove the screw that secures the thermal sensor board assembly to the drive cage.
+2. Disconnect the cable from the sensor board assembly.
+3. Remove the screw that secures the sensor board to the drive cage, and lift the board away.
+Figure 75. Removing the sensor board
+Next steps
+1. Install the sensor board .
+68 Installing and removing enclosure components
+===== PDF PAGE 69 =====
+Installing the thermal sensor board
+Prerequisites
+NOTE:  Observe the routing of the cables on the chassis as you remove them from the system. You must route these cables
+properly on the chassis to prevent them from being pinched or crimped.
+1. Follow the safety guidelines listed in Safety instructions .
+Steps
+1. Install the thermal sensor board into the sensor board holder, and using the Phillips #1 screwdriver, secure it to the holder.
+2. Connect the cable to the sensor board assembly.
+3. Install the sensor board assembly into the drive cage.
+4. Replace the screw that secures the sensor board assembly to the drive cage.
+Figure 76. Installing the sensor board assembly
+Next steps
+1. Replace the drive cage into the chassis .
+2. Connect all the cables to the backplane.
+3. Connect the control panel cables to the midplane.
+4. Install the drives .
+5. Follow the procedure listed in After working inside your enclosure .
+Installing and removing enclosure components 69
+===== PDF PAGE 70 =====
+Getting help
+Topics:
+• Contacting Dell EMC
+• Documentation feedback
+• Accessing system information by using QRL
+• Receiving automated support with SupportAssist
+• Recycling or End-of-Life service information
+Contacting Dell EMC
+Dell EMC provides several online and telephone based support and service options. If you do not have an active internet
+connection, you can find contact information about your purchase invoice, packing slip, bill, or Dell EMC product catalog.
+Availability varies by country and product, and some services may not be available in your area. To contact Dell EMC for sales,
+technical assistance, or customer service issues:
+Steps
+1. Go to www.dell.com/support/home .
+2. Select your country from the drop-down menu on the lower right corner of the page.
+3. For customized support:
+a. Enter your system Service Tag in the Enter your Service Tag  field.
+b. Click Submit .
+The support page that lists the various support categories is displayed.
+4. For general support:
+a. Select your product category.
+b. Select your product segment.
+c. Select your product.
+The support page that lists the various support categories is displayed.
+5. For contact details of Dell EMC Global Technical Support:
+a. Click Contact Technical Support .
+b. Enter your system Service Tag in the Enter your Service Tag  field on the Contact Us webpage.
+Documentation feedback
+You can rate the documentation or write your feedback on any of our Dell EMC documentation pages and click Send Feedback
+to send your feedback.
+Accessing system information by using QRL
+You can use the Quick Resource Locator (QRL) located on the information tag in the front of the system, to access the
+information about the PowerEdge system.
+Prerequisites
+Ensure that your smartphone or tablet has the QR code scanner installed.
+The QRL includes the following information about your system:
+● How-to videos
+3
+70 Getting help
+===== PDF PAGE 71 =====
+● Reference materials, including the Installtion and Service Manual, and mechanical overview
+● Your system service tag to quickly access your specific hardware configuration and warranty information
+● A direct link to Dell to contact technical assistance and sales teams
+Steps
+1. Go to www.dell.com/qrl  and navigate to your specific product or
+2. Use your smartphone or tablet to scan the model-specific Quick Resource (QR) code on your system or in the Quick
+Resource Locator section.
+Quick Resource Locator for C6400 and C6420 systems
+Figure 77. Quick Resource Locator for PowerEdge C6400 and C6420 systems
+Receiving automated support with SupportAssist
+Dell EMC SupportAssist is an optional Dell EMC Services offering that automates technical support for your Dell EMC server,
+storage, and networking devices. By installing and setting up a SupportAssist application in your IT environment, you can receive
+the following benefits:
+● Automated issue detection  — SupportAssist monitors your Dell EMC devices and automatically detects hardware issues,
+both proactively and predictively.
+● Automated case creation  — When an issue is detected, SupportAssist automatically opens a support case with Dell EMC
+Technical Support.
+● Automated diagnostic collection  — SupportAssist automatically collects system state information from your devices and
+uploads it securely to Dell EMC. This information is used by Dell EMC Technical Support to troubleshoot the issue.
+● Proactive contact  — A Dell EMC Technical Support agent contacts you about the support case and helps you resolve the
+issue.
+The available benefits vary depending on the Dell EMC Service entitlement purchased for your device. For more information
+about SupportAssist, go to www.dell.com/supportassist .
+Recycling or End-of-Life service information
+Take back and recycling services are offered for this product in certain countries. If you want to dispose of system components,
+visit www.dell.com/recyclingworldwide  and select the relevant country.
+Getting help 71
+===== PDF PAGE 72 =====
+Documentation resources
+This section provides information about the documentation resources for your system.
+To view the document that is listed in the documentation resources table:
+● From the Dell EMC support site:
+1. Click the documentation link that is provided in the Location column in the table.
+2. Click the required product or product version.
+NOTE:  To locate the product name and model, see the front of your system.
+3. On the Product Support page, click Manuals & documents .
+● Using search engines:
+○ Type the name and version of the document in the search box.
+Table 5. Documentation resources 
+Task Document Location
+Setting up your
+system
+For more information about installing and
+securing the system into a rack, see the
+Rail Installation Guide included with your
+rack solution.
+For information about setting up your
+system, see the Getting Started Guide
+document that is shipped with your
+system.
+https://www.dell.com/
+poweredgemanuals
+Configuring your
+system
+For information about the iDRAC
+features, configuring and logging in
+to iDRAC, and managing your system
+remotely, see the Integrated Dell Remote
+Access Controller User's Guide.
+For information about understanding
+Remote Access Controller Admin
+(RACADM) subcommands and
+supported RACADM interfaces, see the
+RACADM CLI Guide for iDRAC.
+For information about Redfish and its
+protocol, supported schema, and Redfish
+Eventing implemented in iDRAC, see the
+Redfish API Guide.
+For information about iDRAC property
+database group and object descriptions,
+see the Attribute Registry Guide.
+For information about Intel QuickAssist
+Technology, see the Integrated Dell
+Remote Access Controller User's Guide.
+https://www.dell.com/
+poweredgemanuals
+For information about earlier versions of
+the iDRAC documents.
+To identify the version of iDRAC
+available on your system, on the iDRAC
+web interface, click ? > About .
+https://www.dell.com/idracmanuals
+4
+72 Documentation resources
+===== PDF PAGE 73 =====
+Table 5. Documentation resources (continued)
+Task Document Location
+For information about installing the
+operating system, see the operating
+system documentation.
+https://www.dell.com/
+operatingsystemmanuals
+Managing your system For information about system
+management software offered by Dell,
+see the Dell OpenManage Systems
+Management Overview Guide.
+https://
+www.dell.com/
+poweredgemanuals
+For information
+about setting
+up, using, and
+troubleshooting
+OpenManage,
+see the
+Dell OpenManage
+Server
+Administrator
+User’s Guide.
+www.dell.com/openmanagemanuals  >
+OpenManage Server Administrator
+For information
+about installing,
+using, and
+troubleshooting
+Dell OpenManage
+Enterprise, see the
+Dell OpenManage
+Enterprise User’s
+Guide.
+https://www.dell.com/
+openmanagemanuals
+For information
+about installing
+and using
+Dell SupportAssist,
+see the Dell
+EMC SupportAssist
+Enterprise User’s
+Guide.
+https://www.dell.com/
+serviceabilitytools
+For information
+about partner
+programs
+enterprise systems
+management, see
+the OpenManage
+Connections
+Enterprise Systems
+Management
+documents.
+https://www.dell.com/
+openmanagemanuals
+Working with the
+Dell PowerEdge
+RAID controllers
+For information about understanding
+the features of the Dell PowerEdge
+RAID controllers (PERC), Software RAID
+controllers, or BOSS card and deploying
+the cards, see the Storage controller
+documentation.
+www.dell.com/storagecontrollermanuals
+Understanding
+event and error
+messages
+For information about the event and
+error messages generated by the system
+firmware and agents that monitor
+system components, go to qrl.dell.com  >
+Look Up  > Error Code , type the error
+code, and then click Look it up .
+www.dell.com/qrl
+Documentation resources 73
+===== PDF PAGE 74 =====
+Table 5. Documentation resources (continued)
+Task Document Location
+Troubleshooting
+your system
+For information about identifying and
+troubleshooting the PowerEdge server
+issues, see the Server Troubleshooting
+Guide.
+https://www.dell.com/
+poweredgemanuals
+74 Documentation resources

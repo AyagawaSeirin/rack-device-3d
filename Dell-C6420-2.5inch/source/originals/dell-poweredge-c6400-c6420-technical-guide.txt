@@ -1,0 +1,4586 @@
+
+===== PDF PAGE 1 =====
+Dell EMC PowerEdge
+C6400 and C6420 Technical Guide
+Regulatory Model: Regulatory Model: E68S
+Regulatory Type: Regulatory Type: E68S001
+Nov 2022
+Rev. A07
+===== PDF PAGE 2 =====
+Notes, cautions, and warnings
+NOTE:  A NOTE indicates important information that helps you make better use of your product.
+CAUTION:  A CAUTION indicates either potential damage to hardware or loss of data and tells you how to avoid
+the problem.
+WARNING:  A WARNING indicates a potential for property damage, personal injury, or death.
+Copyright © 2018 Dell Inc. or its subsidiaries. All rights reserved.  Dell, EMC, and other trademarks are trademarks of Dell Inc. or its
+subsidiaries. Other trademarks may be trademarks of their respective owners.
+===== PDF PAGE 3 =====
+Tables........................................................................................................................................... 5
+Figures.......................................................................................................................................... 7
+Chapter 1: System overview.......................................................................................................... 8
+Introduction...........................................................................................................................................................................8
+New technologies................................................................................................................................................................ 8
+Chapter 2: System features......................................................................................................... 10
+Comparison of PowerEdge systems..............................................................................................................................10
+Specifications.......................................................................................................................................................................11
+Chapter 3: Chassis views and features.........................................................................................13
+Chassis views...................................................................................................................................................................... 13
+Back view....................................................................................................................................................................... 14
+Accessing system information by using QRL.............................................................................................................. 16
+Security features................................................................................................................................................................16
+Chapter 4: Processor................................................................................................................... 17
+Processor Features............................................................................................................................................................17
+Supported processors.......................................................................................................................................................18
+Processor installation....................................................................................................................................................... 20
+Processor configurations.................................................................................................................................................20
+Chipset..................................................................................................................................................................................21
+Chapter 5: Memory..................................................................................................................... 22
+Chapter 6: Storage......................................................................................................................23
+Supported drives............................................................................................................................................................... 23
+RAID Configurations......................................................................................................................................................... 30
+Internal storage..................................................................................................................................................................30
+Lifecycle Controller 3.0...............................................................................................................................................31
+Optical Drives......................................................................................................................................................................31
+Tape drive............................................................................................................................................................................ 31
+Chapter 7: Networking and PCIe..................................................................................................32
+Network card options.......................................................................................................................................................32
+PCIe expansion cards....................................................................................................................................................... 32
+Chapter 8: Power, Thermal, and Acoustics.................................................................................. 34
+Power consumption and energy efficiency.................................................................................................................34
+Power supply units............................................................................................................................................................35
+Thermal and Acoustics.....................................................................................................................................................35
+Thermal design.............................................................................................................................................................35
+Contents
+Contents 3
+===== PDF PAGE 4 =====
+Acoustical design.........................................................................................................................................................36
+Inlet temperature guidelines and requirements..........................................................................................................36
+Chapter 9: Rack rails systems..................................................................................................... 57
+Chapter 10: Operating systems and virtualization........................................................................58
+Supported operating systems........................................................................................................................................ 58
+Supported virtualization.................................................................................................................................................. 58
+Chapter 11: Dell EMC OpenManage systems management............................................................59
+OpenManage systems management............................................................................................................................ 60
+iDRAC9 with Lifecycle Controller..................................................................................................................................60
+Agent-free management................................................................................................................................................. 63
+Agent-based management..............................................................................................................................................63
+Dell EMC consoles.............................................................................................................................................................63
+Automation Enablers........................................................................................................................................................ 63
+Integration with third-party consoles...........................................................................................................................63
+Connections for third-party consoles.......................................................................................................................... 64
+Dell EMC server management operations...................................................................................................................64
+Chapter 12: Appendix A. Additional specifications....................................................................... 66
+Chassis dimensions........................................................................................................................................................... 66
+Power supply specifications............................................................................................................................................67
+Environmental specifications..........................................................................................................................................67
+Video specifications.......................................................................................................................................................... 67
+USB peripherals................................................................................................................................................................. 68
+PCIe card dimensions....................................................................................................................................................... 68
+Chapter 13: Appendix B. Standards compliance........................................................................... 69
+Chapter 14: Appendix C Additional resources...............................................................................70
+Chapter 15: Appendix D. Support and Deployment Services .........................................................71
+Server Deployment Services........................................................................................................................................... 71
+Remote Consulting Services............................................................................................................................................71
+Data Migration Service...............................................................................................................................................72
+ProSupport Enterprise Suite...........................................................................................................................................72
+ProSupport Plus...........................................................................................................................................................72
+ProSupport....................................................................................................................................................................73
+ProSupport Flex for Data Center.............................................................................................................................73
+Additional professional services..................................................................................................................................... 73
+Dell EMC Education Services................................................................................................................................... 73
+Dell EMC Global Infrastructure Consulting Services...........................................................................................74
+Dell EMC managed services......................................................................................................................................74
+4 Contents
+===== PDF PAGE 5 =====
+1 New technologies.......................................................................................................................................................8
+2 PowerEdge C6320 and C6420 product Comparison...................................................................................... 10
+3 Technical Specifications.......................................................................................................................................... 11
+4 Back panel features................................................................................................................................................. 14
+5 Security features...................................................................................................................................................... 16
+6 Processor Features.................................................................................................................................................. 17
+7 Supported processors............................................................................................................................................. 18
+8 Fabric SKUs...............................................................................................................................................................20
+9 Allowed Mixed Processor Configurations.......................................................................................................... 20
+10 Memory technologies supported......................................................................................................................... 22
+11 DIMMs supported.................................................................................................................................................... 22
+12 Supported NVMe Drives........................................................................................................................................ 23
+13 Supported Solid State Drives (SSDs)................................................................................................................. 23
+14 Supported 2.5" Hard Disk Drives (HDDs)..........................................................................................................26
+15 Supported 3.5" Hard Disk Drives (HDDs)..........................................................................................................28
+16 Supported RAID Levels.......................................................................................................................................... 30
+17 Mezzanine and Daughtercard Options............................................................................................................... 32
+18 Supported expansion cards................................................................................................................................... 32
+19 Power tools and technologies...............................................................................................................................34
+20 Acoustical reference points and output comparisons.....................................................................................36
+21 Maximum continuous operating inlet air temperature (°C) with for Air Cooled C6420 Sleds
+with Dual Processors.............................................................................................................................................. 36
+22 Maximum continuous operating inlet air temperature (°C) with for Air Cooled C6420 Sleds
+with Single Processor............................................................................................................................................. 42
+23 Maximum continuous operating inlet air temperature (°C) for C6420 Sleds with Dual
+Processors and 45°C coolant entering cold plate at .48L/minute............................................................. 45
+24 Maximum continuous operating inlet air temperature (°C) for C6420 Sleds with Dual
+Processors and 57°C coolant entering cold plate at .48L/minute............................................................. 50
+25 Configuration Restrictions with Mellanox ConnectX-4 EDR Dual Port Card with Active
+(Optical) connectivity.............................................................................................................................................56
+26 Rail adjustability range............................................................................................................................................ 57
+27 Supported operating systems...............................................................................................................................58
+28 Supported virtualization.........................................................................................................................................58
+29 Feature comparison for Dell EMC BMC and iDRAC9 Enterprise.................................................................60
+30 One-to-one and one-to-many operations..........................................................................................................64
+31 Chassis Dimensions (mm)......................................................................................................................................66
+32 Chassis weight..........................................................................................................................................................67
+33 Power supply specifications.................................................................................................................................. 67
+34 Supported video resolution options.....................................................................................................................67
+35 PCIe card dimensions............................................................................................................................................. 68
+Tables
+Tables 5
+===== PDF PAGE 6 =====
+36 Industry standard documents...............................................................................................................................69
+37 Additional resources................................................................................................................................................70
+38 Server deployment capabilities..............................................................................................................................71
+6 Tables
+===== PDF PAGE 7 =====
+1 Front panel features and indicators of the 24 x 2.5 inch hard drive enclosure........................................ 13
+2 Front panel features and indicators of the 12 x 3.5 inch hard drive enclosure......................................... 13
+3 System sled enumeration........................................................................................................................................14
+4 Back view of the PowerEdge C6420 sled.......................................................................................................... 14
+5 M.2 Boot Device Riser............................................................................................................................................30
+6 M.2 Boot Device installed in buried x16 PCIe slot........................................................................................... 30
+7 M.2 Boot drive SATA cabling.................................................................................................................................31
+8 Static rail....................................................................................................................................................................57
+9 Dell EMC OpenManage Portfolio.........................................................................................................................59
+10 Systems management server lifecycle............................................................................................................... 64
+11 Chassis dimensions..................................................................................................................................................66
+12 ProSupport Enterprise Suite................................................................................................................................. 72
+13 ProSupport Enterprise Suite comparison...........................................................................................................73
+Figures
+Figures 7
+===== PDF PAGE 8 =====
+System overview
+Topics:
+• Introduction
+• New technologies
+Introduction
+The PowerEdge C6400 is an ultra-dense, 2U enclosure that supports up to four independent (C6420), hot-swappable two-
+socket (2S) sleds.
+The system (C6400 and C6420) is optimized for the most demanding workloads, such as:
+● High performance computing (HPC)
+● High Performance Data Analytics (HPDA)
+● Analytics and Big Data
+● Web 2.0
+● Web scale applications, SaaS, and IaaS
+● Software defined storage
+● Private cloud
+● Financial Analysis and High Frequency Trading (HFT)
+● Hyper Converged Infrastructure (HCI), vSAN
+With flexible configurations and hyper-scale capabilities, the system is the ideal choice for hyper-converged infrastructures
+including validated, pre-bundled Dell EMC HPC solutions, VxRail and VxRack and the Dell EMC XC Series.
+The system offers the following features:
+● Latest generation of Intel ® Xeon ® processors with up to 205W processors and 28 cores per processor.
+● Supports up to 512 GB memory per node.
+● Offers flexible I/O options including, low-latency InfiniBand ™ and next-generation Intel Omni-Path.
+● Provides new Direct Contact Liquid Cooling options for improved power efficiency and thermal efficiency.
+New technologies
+Table 1. New technologies 
+New technology Detailed description
+Intel ® Xeon ® processor series The processor product family has embedded PCIe lanes for
+improved I/O performance. For details, see the Processor
+section.
+Intel C621 series chipset The system uses the Intel 620 family of Platform Controller
+Hub (PCH).
+2666 MT/s 16x DDR4 memory, 3200 MT/s 16x DDR4 memory The processor product family supports 2666 MT/s memory
+and 3200 MT/s memory. The system supports ECC DDR4
+(RDIMM/LRDIMM). For details, see the Memory section.
+iDRAC9 with Lifecycle Controller The new embedded systems management solution for Dell
+EMC servers features hardware and firmware inventory and
+in-depth memory alerting, data center level power monitoring,
+faster performance and many more features. For details, see
+the Dell EMC OpenManage systems management section.
+1
+8 System overview
+===== PDF PAGE 9 =====
+Table 1. New technologies (continued)
+New technology Detailed description
+USB 3.0 USB 3.0 can operate in both USB 2.0 and USB 3.0 speed
+modes. USB 3.0 driver is required to control USB device in
+USB 3.0 speed mode.
+Micro USB 1x micro USB CONN type-AB for iDRAC direct.
+miniDP video Digital video with smaller connector to improve thermals at
+the exit.
+M.2 Internal SATA boot, Larger capacity (upto 240 G).
+Native fabric support from INTEL Omnipath direct from CPU.
+System overview 9
+===== PDF PAGE 10 =====
+System features
+Compared to previous generations, C6420 offers faster processing power and advanced system management.
+Topics:
+• Comparison of PowerEdge systems
+• Specifications
+Comparison of PowerEdge systems
+The following table compares some of the features of the PowerEdge C6320 with PowerEdge C6420.
+Table 2. PowerEdge C6320 and C6420 product Comparison 
+Feature PowerEdge C6320 PowerEdge C6420
+Processor Intel Xeon E5-2600v3 and v4 Series Intel XeonScalable Family Processor
+Series
+Front Side Bus Intel QuickPath Interconnect (QPI) Intel Ultra Path Interconnect (UPI)
+Sockets 2 2
+Cores 4, 6, 8, 10, 12, 14, 16, 18, 20, 22 core 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 28 core
+L2/L3 Cache 10 MB, 15 MB, 20 MB, 25 MB, 30 MB,
+35 MB, 40 MB, or 45 MB
+8, 11, 16, 16.5, 19, 19.25, 22, 27 20, 22,
+24.75. 25, 2730, 33, 36, or 38MB
+Chipset Intel C612 chipset Intel C621 Chipset
+DIMMs 16 x DDR4 1600MHz/1866/2133MHz/
+2400MHz
+16 x DDR4 2666 MT/s
+Min/Max RAM 4GB / 512GB 8GB/1024GB
+Hard Drive Bays 4-node: Up to 6 x 2.5-in. or 3 x 3.5-in.
+hot-swap HDDs
+4-node: Up to 6 x 2.5-in. or 3 x 3.5-in.
+hot-swap HDDs
+Hard Drive Types SAS/SATA SAS/SATA/NVMe
+External Drive Bay None None
+Internal Boot Drive SATA DOM (64GB) or 1.8" SSD options 1 x 120/240GB M.2 Boot Drive
+2 x 120/240GB M.2 Boot Drives in RAID
+1
+Embedded Hard Drive Controller Chipset-based SATA Chipset-based SATA
+Optional Storage Controller NON-RAID: Intel C612 RAID: All @ 6Gbs
+- LSI 2008 Mezzanine, PERC H330,
+PERC H730
+NON-RAID: Intel C621, HBA330 RAID:
+PERC H330, PERC H730p Mezz,
+HBA355e external PERC, and S140
+SWRAID
+Availability Hot-plug HDD and PSU; Redundant PSU Hot-plug HDD and PSU; Fault Tolerant
+Redundant PSU
+Server Management iDRAC8 (Express, Enterprise) editions BMC (including virtual media and
+console), iDRAC9 Enterprise
+2
+10 System features
+===== PDF PAGE 11 =====
+Table 2. PowerEdge C6320 and C6420 product Comparison (continued)
+Feature PowerEdge C6320 PowerEdge C6420
+I/O Slots 1U sled: One x PCIe x16 Gen3 (half
+height, half length)+ One x PCIe x8
+Gen3 (mezzanine)
+One x16 PCIe Gen3 riser (low profile,
+half height and half length)+ One x8
+PCIe Gen3 Mezzanine (for storage
+controller)+ One x16 PCIe Gen3 OCP
+Mezzanine (for network controller)+
+One x16 PCIe Gen3 riser (for M.2 Boot
+Device)
+NIC/LOM 2x Intel® 82599ES 10GbE (SFP+) 1 x 1 Gb Ethernet RJ45.
+Multiplexed between LOM and dedicated
+system management ports.
+USB 1 rear per server 2 x USB 3.0 ports per C6420
+Power Supplies Hot-Swap Redundant, 1400W (80+
+Platinum) Redundant, 1600W (80+
+Platinum) (200~240VAC or 240VDC)
+Hot-Swap Fault Tolerant Redundant
+2600W/1600W (Titanium),Fault Tolerant
+Redundant 2600W/1600W (80+
+Platinum), Fault Tolerant Redundant
+2000W/2400W (200~240VAC or
+240VDC)
+Fans 4 x 60 mm, Non-redundant, non-hot
+Swappable
+4x60 mm dual rotor redundant, non-hot
+swappble fans
+Form Factor 2U Rack 2U Rack
+Dimension (HxWxD) 87 mm x 448 mm x 790 cm 86.8 mm x 448 mm x 790 mm
+Weight Max: 41 Kg (90.4 lbs) 24 x 2.5 HDD chassis - 41.6 Kg /
+91.71232 lb
+12 x 3.5 HDD chassis - 43.62 Kg /
+96.1656 lb
+No Backplane - 34.56 Kg / 76.1917 lb
+Specifications
+Table 3. Technical Specifications 
+Feature PowerEdge C6400 and C6420 technical specification
+Form factor Up to four 2-socket C6420 servers per C6400 chassis
+Processor Intel ® Xeon ® E5- 2600 Scalable family series + Fabric SKU in
+each of the four independent sleds
+Chipset Intel C621 chipset
+Memory 16 x DDR4 RDIMM (2677 MT/s); 4 slots capable of Apache
+Pass (AEP) DIMM, DDR4 RDIMM (3200 MT/s)
+I/O slots ● 1 x16 PCIe Gen 3 LP HH riser slot
+● 1 x16 OCP Mezz slot (for network controller)
+● 1 x8 Mezz slot (for storage controller)
+● 1 x16 PCIe Gen 3 buried slot (for M.2 Boot device)
+I/O adapter options ● 1 Gb Ethernet
+● 10/25/40/100Gb Ethernet
+● InfiniBand
+● Omni-Path
+C6400 Chassis Configurations ● No backplane chassis
+System features 11
+===== PDF PAGE 12 =====
+Table 3. Technical Specifications (continued)
+Feature PowerEdge C6400 and C6420 technical specification
+● 24 x 2.5 inch SAS/SATA drives with up to six drives per
+sled
+● 24 x 25 inch SAS/SATA drives with Expander Backplane
+with either four sleds each with six 2.5 inch drives or two
+sleds each with 12 2.5 inch drives
+● 24 x 2.5 inch drives with up to two NVMe drives and four
+SAS/SATA drives per sled
+● 12 x 3.5 inch drives with up to three drives per sled
+Operating systems ● Microsoft Windows Server 2012 R2
+● Microsoft Windows Server 2016
+● Novell SuSE Linux Enterprise Server 11 (with PLDP) SP4
+x86_64
+● Novell SuSE Linux Enterprise Server 12 SP2 x86_64
+● RedHat Enterprise Linux 7.3 Server x86_64
+● Ubuntu 16.04 LTS
+Virtualization options:
+● Citrix Xen Server 7.1.x
+● VMWare vSphere 2016 U1 (ESXi 6.5 U1)
+● VMWare vSphere 2015 U3 (ESXi 6.0 U3)
+Storage Controllers ● S140 Software RAID
+● PERC H330 x8 Mezz Card
+● PERC H730p x8 Mezz Card
+● SAS HBA330
+● 12 Gb SAS HBA x16 PCIe Adapter
+● HBA355e HBA: External adapter x8 Low Profile
+Embedded NIC Intel i350 1 GbE (single port)
+Power supplies ● Dual hot-plug non-redundant high-efficiency 1600W PSU
+● Dual hot-plug fault tolerant redundant high-efficiency
+1600W/2000W/2400W PSUs
+● 2600 W PSU (supported only on Dell EMC PowerEdge
+C6525 and Dell EMC PowerEdge C6520 sleds)
+Availability ● Hot-plug hard drives
+● Hot-plug redundant power
+● ECC memory
+● Single device data correction (SDDC)
+● Dual Rotor redundant fans
+Systems management ● BMC or iDRAC9 Enterprise with 1 x 1Gbps RJ45 connector
+● Intel Node Manager 3.0 compliant
+Chassis Dimensions ● Height: 86.8 mm (3.41 in)
+● width: 448 mm (17.63 in)
+● Chassis depth: 797 mm (31.3 cm)
+Recommended support Dell EMC ProSupport Plus for critical systems or Dell EMC
+ProSupport for premium hardware and software support
+for your PowerEdge solution. Consulting and deployment
+offerings are also available. Contact your Dell representative
+today for more information. Availability and terms of Dell
+Services vary by region. For more information, visit Dell.com/
+ServiceDescriptions .
+12 System features
+===== PDF PAGE 13 =====
+Chassis views and features
+The C6400 chassis is an ultra-dense 2U enclosure that supports up to four independent two-socket (2S) sleds connected to a
+direct backplane.
+Topics:
+• Chassis views
+• Accessing system information by using QRL
+• Security features
+Chassis views
+Front panel view and features
+The C6400 chassis offers four sled options.
+Figure 1. Front panel features and indicators of the 24 x 2.5 inch hard drive enclosure
+1. left control panel 2. drive bay
+3. right control panel 4. information tag
+Figure 2. Front panel features and indicators of the 12 x 3.5 inch hard drive enclosure
+1. left control panel 2. drive bay
+3. right control panel 4. information tag
+3
+Chassis views and features 13
+===== PDF PAGE 14 =====
+System sled enumeration
+The enumeration for the motherboards is:
+Figure 3. System sled enumeration
+1U sled are shipped from the factory in:
+● 1- node, 2- node, 3- node, and 4- node configurations only with 2.5 inch backplanes, 2.5 inch with NVMe backplanes and 3.5
+inch backplanes.
+○ Only 1- node, and 3-node applies to the 2.5 inch expander backplane.
+● The empty slots in 1- node, 2- node, and 3- node configurations are filled with the dummy or blank sleds.
+Back view
+Figure 4. Back view of the PowerEdge C6420 sled
+Table 4. Back panel features 
+Item Indicator, button, or
+connector
+Icon Description
+1 mezzanine card slot N/A Enables you to connect
+mezzanine expansion cards.
+For more information, see
+the Technical specifications
+section.
+2 sled release handle N/A Enables you to remove the
+sled from the enclosure.
+3 Low Profile PCIe card slot N/A Enables you to connect
+PCI Express expansion cards.
+For more information, see
+14 Chassis views and features
+===== PDF PAGE 15 =====
+Table 4. Back panel features (continued)
+Item Indicator, button, or
+connector
+Icon Description
+the Technical specifications
+section.
+4 sled release lock N/A Enables you to remove the
+sled from the enclosure.
+5 rear power button N/A Enables you to power on the
+sled while accessing it from
+the rear.
+6 iDRAC or NIC port
+ Enables you to remotely
+access iDRAC. For
+more information, see
+the iDRAC User’s
+Guide at www.dell.com/
+poweredgemanuals .
+7 mini display port
+ Enables you to connect a
+display device to the system.
+For more information, see
+the Technical specifications
+section.
+8 iDRAC Direct micro USB port
+ Enables you to connect a
+portable device to the sled.
+9 OCP or OPA card slot N/A Enables you to connect
+Open Compute Project (OCP)
+or Omni-Path Architecture
+(OPA) expansion cards.
+For more information, see
+the Technical specifications
+section.
+10 EST pull out tab N/A This tab has the unique
+Express Service Code,
+Service Tag, and MAC
+address labels.
+11 system id indicator and button
+ The System Identification
+(ID) button is available on
+the front and back of the
+systems. Press the button to
+identify a system in a rack
+by turning on the system ID
+button. You can also use the
+system ID button to reset
+iDRAC and to access BIOS
+using the step through mode.
+12 USB 3.0 port (2)
+ The USB ports are 9-pin and
+3.0-compliant. These ports
+enable you to connect USB
+devices to the system.
+Chassis views and features 15
+===== PDF PAGE 16 =====
+Accessing system information by using QRL
+You can use the Quick Resource Locator (QRL) to get immediate access to the information about your system. The QRL is
+located on the top of the system cover and provides access to generic information about your system. If you want to access
+information specific to the system service tag, such as configuration and warranty, you can access QR code located on the
+system Information tag.
+Ensure that your smart phone or tablet has the QR code scanner installed.
+The QRL includes the following information about your system:
+● How-to videos
+● Reference materials, including the Owner’s Manual and mechanical overview
+● A direct link to Dell to contact technical assistance and sales teams
+1. Go to Dell.com/QRL  and navigate to your specific product or
+2. Use your smart phone or tablet to scan the model-specific Quick Resource (QR) code on your PowerEdge system or in the
+Quick Resource Locator section.
+Security features
+The latest generation of PowerEdge servers has the features listed in the table to help ensure the security of your data center.
+List of the security features:
+● PowerEdge Secure Boot
+● System Erase
+● System Lockdown
+● Drift Detection
+● BIOS and OS Recovery
+● Active Directory/LDAP
+● two-factor authentication (TFA)
+● SSH with Public Key Authentication (PKA)
+● TLS 1.2
+● SNMP v3
+● Self-Encrypting and Instant Secure Erase (ISE) Drives
+Table 5. Security features 
+Security feature Description
+Power-off security BIOS has the ability to disable the power button function.
+Secure mode BIOS has the ability to enter a secure boot mode via Setup.
+This mode includes the option to lock out the power and NMI
+switches on the Control Panel or set up a system password.
+16 Chassis views and features
+===== PDF PAGE 17 =====
+Processor
+Intel Xeon processor
+The C6420 sled supports up to two Intel Xeon E5- 2600 or 2600 F product family processors in each of the four independent
+sleds. Each processor supports up to 28 cores.
+Topics:
+• Processor Features
+• Supported processors
+• Processor installation
+• Processor configurations
+• Chipset
+Processor Features
+Based on Intel's 14nm fabrication technology, the Intel ® Xeon ® processor family introduced a new micro-architecture that
+provides significant performance advantages and new features targeted for a range of workloads such as: High Performance
+Computing (HPC), Enterprise applications, Cloud service providers, storage, network applications, Internet of Things (IoT), and
+many more. The following table summarizes key features of the processor family.
+Table 6. Processor Features 
+Category Feature Function
+Compute Additional Cores Up to 28C
+Intel ® AVX-512 512-bit instructions
+MLC Optimization Acceleration of enterprise-class and
+HPC workloads
+Heterogeneous support with converged
+programming environment
+Higher 'private-local' ratio in cache
+Lower power
+Intel ® Ultra Path Interconnect (UPI)
+(replaces QPI)
+Increases bandwidth: up to 10.4 GT/s
+Memory & Security Memory Capacity and Bandwidth
+increase
+Up to DDR4 2666 MHz (11% increase)
+Up to 6 channels (50% increase)
+MPX (Memory Protection Extensions) Prevents buffer overflow
+I/O Fabric Integration On package integration of next-
+generation Intel® Omni-Path Fabric
+controller
+PCIe Bandwidth Up to 48 PCIe lanes; 3.0 speed 79 GB/s
+bi-directional pipeline (from 53 GB/s on
+BDW)
+Separate Reference with Independent
+Spread Spectrum Clocking (SRIS)
+Eliminates clock in PCIe cables
+4
+Processor 17
+===== PDF PAGE 18 =====
+Table 6. Processor Features (continued)
+Category Feature Function
+MCTP Scaling 256 PCIe buses, up to 8 segments
+Storage Non-Transparent Bridge (NTB)
+Enhancements
+3 full-duplex NTBs and 32 MSI-X vectors
+Crystal Beach DMA (CBDMA) Adds MMIO -> mem transfer support
+2X performance increase vs. prior gen
+platform
+Intel ® Volume Management Device
+(Intel ® VMD)
+Manages CPU attached PCIe NVMe
+SSDs: Provides robust hot-plug
+capability
+Enclosure Management and Error
+isolation
+Supported processors
+The system supports the following processors:
+Table 7. Supported processors 
+SKU Class Frequency (GHz) Number of Cores TDP Watts
+8176 Platinum 2.1 28 165
+8176M Platinum 2.1 28 165
+8170M Platinum 2.1 26 165
+8170 Platinum 2.1 26 165
+8164 Platinum 2 26 150
+8160M Platinum 2.1 24 150
+8160 Platinum 2.1 24 150
+8153 Platinum 2 16 125
+6152 Gold 2.1 22 140
+6138 Gold 2 20 125
+6140M Gold 2.3 18 140
+6140 Gold 2.3 18 140
+6130 Gold 2.1 16 135
+5120 Gold 2.2 14 105
+5118 Gold 2.3 12 105
+5115 Gold 2.4 10 85
+4116 Silver 2.1 12 85
+18 Processor
+===== PDF PAGE 19 =====
+Table 7. Supported processors (continued)
+SKU Class Frequency (GHz) Number of Cores TDP Watts
+4114 Silver 2.2 10 85
+4112 Silver 2.6 4 85
+4110 Silver 2.1 8 85
+4108 Silver 1.8 8 85
+3106 Bronze 1.7 8 85
+3104 Bronze 1.7 6 85
+8180 Platinum 2.5 28 205
+8180M Platinum 2.5 28 205
+8176M Platinum 2.1 28 165
+8168 Platinum 2.7 24 205
+8158 Platinum 3 12 150
+8156 Platinum 3.6 4 105
+6148 Gold 2.4 20 150
+6154 Gold 3 18 200
+6150 Gold 2.7 18 165
+6142 Gold 2.6 16 150
+6132 Gold 2.6 14 140
+6146 Gold 12
+6136 Gold 3 12 150
+6126 Gold 2.6 12 125
+6144 Gold 8
+6134 Gold 3.2 8 130
+6128 Gold 3.4 6 115
+5122 Gold 3.6 4 105
+8176F Platinum 2.1 28 173
+8160F Platinum 2.1 24 160
+6138F Platinum 2 20 135
+6130F Platinum 2.1 16 135
+6148F Gold 20 2.4 160
+Processor 19
+===== PDF PAGE 20 =====
+Table 7. Supported processors (continued)
+SKU Class Frequency (GHz) Number of Cores TDP Watts
+6142F Gold 16 2.6 160
+6126F Gold 12 2.6 135
+Processor installation
+For processor installation instructions see the Dell EMC PowerEdge C6420 Installation and Service Manual.
+Processor configurations
+The system offers the following processor configurations:
+● Non Fabric Processor Configuration  — The system is available in single and dual non Fabric processor configurations. In
+the dual non Fabric processor configuration, both the processors should match.
+● Omni-Path Fabric Processor Configuration  — The system is available in dual Omni-Path Fabric processors. The
+following table lists the available Stock Keeping Units (SKUs):
+Table 8. Fabric SKUs 
+Type SKU
+Fabric 8176F
+Fabric 8160F
+Fabric 6138F
+Fabric 6130F
+Fabric/Frequency Optimized 6148F
+Fabric/Frequency Optimized 6142F
+Fabric/Frequency Optimized 6126F
+NOTE:
+○ Single processor configuration using an Omni-Path fabric CPU is not a supported configuration.
+○ When an Omni-Path fabric CPU is configured, the C6420 compute sled cannot be configured with the OCP Mezz
+card. So, for additional networking, the x16 PCIe LP slot must be used.
+● Fabric and Non-Fabric Mixed Processor Configurations  — The system can be configured to have one non-fabric
+CPU and one Omni-Path fabric CPU. The following table shows the allowed CPU SKUs for mixing fabric and non-fabric
+processors:
+Table 9. Allowed Mixed Processor Configurations 
+SKU for CPU1 Allowed SKU for CPU2
+6126 12C 2.6GHz 125W 6126F 12C 2.6GHz 135W
+6130 16C 2.1GHz 125W 6130F 16C 2.1GHz 135W
+6138 20C 2.0GHz 125W 6138F 20C 2.0GHz 135W
+6142 16C 2.6GHz 150W 6162F 16C 2.6GHz 160W
+6148 20C 2.4GHz 150W 4148F 20C 2.4GHz 160W
+8160 24C 2.1GHz 150W 8160F 24C 2.1GHz 160W
+8176 28C 2.1GHz 165W 8176F 28C 2.1GHz 173W
+20 Processor
+===== PDF PAGE 21 =====
+NOTE:
+○ In mixed fabric and non-fabric CPU configurations, CPU2 will be always populated with an Omni-Path fabric CPU.
+○ When an Omni-Path fabric CPU is configured, the C6420 compute sled cannot be configured with the OCP Mezz
+card. So, for additional networking, the x16 PCIe LP slot must be used.
+Chipset
+The C6400 and C6420 uses the Intel C620 chipset. For more information, visit Intel.com .
+Processor 21
+===== PDF PAGE 22 =====
+Memory
+The system supports up to 512 GB of memory and speeds up to 3200 MT/s, providing high performance in a variety of
+applications. High memory density means there is no compromise when it comes to virtualization.
+The system supports both registered DIMMs (RDIMM) and load-reduced DIMMs (LRDIMMs). Unbuffered DIMMs (UDIMMs) are
+not supported.
+DIMMs supported
+Table 10. Memory technologies supported 
+Feature RDIMM LRDIMM
+Register Yes Yes
+Buffer No No
+Frequencies Up to 2666 MT/s Up to 2666 MT/s
+Ranks supported Single or dual rank Dual Rank
+Capacity per DIMM Upto 32GB Upto 64 GB
+Maximum DIMMs per channel per
+sled
+2 2
+DRAM technology x4 or x8 x4
+Error Correction Code (ECC) Yes Yes
+The C6420 supports the following DIMMs. For the latest information on supported memory, visit the C6420 page on Dell.com .
+Table 11. DIMMs supported. 
+DIMM Capacity DIMM Speed DIMM Type Ranks Per DIMM Data width Voltage (V)
+8 GB 2666 MT/s RDIMM Single Rank x8 1.2
+16 GB 2666 MT/s RDIMM Dual Rank x8 1.2
+32 GB 2666 MT/s RDIMM Dual Rank x4 1.2
+32 GB 3200 MT/s RDIMM Dual Rank x8 1.2
+64 GB 2666 MT/s LRDIMM Dual Rank x4 1.2
+NOTE:  The older 32 GB capacity RDIMM memory with x4 data width and 8Gb DRAM density cannot be mixed with the
+newer 32GB capacity RDIMM memory with x8 data width and 16Gb DRAM density in the same AMD EPYC™ processor unit.
+5
+22 Memory
+===== PDF PAGE 23 =====
+Storage
+The system enables multiple storage configurations to tune the system configuration for a wide variety of workloads. The C6400
+chassis is available in the following configuration types:
+● No hard drives in a No-Backplane Configuration
+● 24 x 2.5" Direct Backplane configuration with up to 6 SAS/SATA drives per node
+● 24 x 2.5" Expander Backplane configuration with up to 12 SAS/SATA drives per node and two nodes per chassis
+● 24 x 2.5" NVMe Backplane configuration with up to 6 drives per node out of which two drives can be NVMe drives
+● 12 x 3.5" Direct Backplane configuration with up to 3 SAS/SATA drives per node
+Topics:
+• Supported drives
+• RAID Configurations
+• Internal storage
+• Optical Drives
+• Tape drive
+Supported drives
+The system supports the following drives:
+Table 12. Supported NVMe Drives 
+Vendor Description Capacity Type Interface
+Samsung SSDR, 1.6T, NVME, PCIE, 2.5,
+PM1725
+1.6TB MU PCIe
+Samsung SSDR, 1.6T, NVME, PCIE, 2.5,
+PM1725A
+1.6TB MU PCIe
+Samsung SSDR, 3.2, NVME, PCIE, 2.5,
+PM1725A
+3.2TB MU PCIe
+Samsung SSDR, 3.2, NVME, PCIE, 2.5,
+PM1725
+3.2TB MU PCIe
+Samsung SSDR, 800G, NVME, PCIE,
+2.5, PM1725
+800GB MU PCIe
+Samsung SSDR, 800G, NVME, PCIE,
+2.5, PM1725A
+800GB MU PCIe
+Table 13. Supported Solid State Drives (SSDs) 
+Vendor Description Capacity Type FIPS Interface
+Intel Downieville S3520
+Boot, SSD, 6Gbps
+SATA, 2.5, 512n,
+ISE
+120GB Boot No SATA
+Samsung SM863a MU, SSD,
+6Gbps SATA, 2.5,
+512n, ISE
+960GB MU No SATA
+6
+Storage 23
+===== PDF PAGE 24 =====
+Table 13. Supported Solid State Drives (SSDs) (continued)
+Vendor Description Capacity Type FIPS Interface
+TOS Phoenix M4 MU,
+SSD, 12Gbps SAS,
+2.5, 512n, ISE
+960GB MU No SAS
+Intel Haleyville S3610
+MU (ND), SSD,
+6Gbps SATA, 2.5,
+512n, ISE
+800GB MU No SATA
+Samsung PM1635a MU, SSD,
+12Gbps SAS, 2.5,
+512e, FIPS-140
+800GB MU Yes SAS
+Samsung PM1635a MU, SSD,
+12Gbps SAS, 2.5,
+512e, ISE
+800GB MU No SAS
+Samsung SM863a MU, SSD,
+6Gbps SATA, 2.5,
+512n, ISE
+480GB MU No SATA
+TOS Phoenix M4 MU,
+SSD, 12Gbps SAS,
+2.5, 512n, ISE
+480GB MU No SAS
+Samsung PM1635a MU, SSD,
+12Gbps SAS, 2.5,
+512e, ISE
+400GB MU No SAS
+TOS Phoenix M3 MU,
+SSD, 12Gbps SAS,
+2.5, 512n
+400GB MU No SAS
+Samsung SM863a MU, SSD,
+6Gbps SATA, 2.5,
+512n, ISE
+240GB MU No SATA
+Samsung SM863a MU, SSD,
+6Gbps SATA, 2.5,
+512n, ISE
+1.92TB MU No SATA
+TOS Phoenix M4 MU,
+SSD, 12Gbps SAS,
+2.5, 512n, ISE
+1.92TB MU No SAS
+Samsung PM1635a MU, SSD,
+12Gbps SAS, 2.5,
+512e, FIPS-140
+1.6TB MU Yes SAS
+Samsung PM1635a MU, SSD,
+12Gbps SAS, 2.5,
+512e, ISE
+1.6TB MU No SAS
+Samsung PM863a RI, SSD,
+6Gbps SATA, 2.5,
+512n, ISE
+960GB RI No SATA
+24 Storage
+===== PDF PAGE 25 =====
+Table 13. Supported Solid State Drives (SSDs) (continued)
+Vendor Description Capacity Type FIPS Interface
+Intel Downieville S3520
+RI, SSD, 6Gbps
+SATA, 2.5, 512n,
+ISE
+960GB RI No SATA
+TOS Phoenix M4 RI,
+SSD, 12Gbps SAS,
+2.5, 512n, ISE
+960GB RI No SAS
+Samsung PM1633a RI, SSD,
+12Gbps SAS, 2.5,
+512e, ISE
+960GB RI No SAS
+Intel Downieville S3520
+RI, SSD, 6Gbps
+SATA, 2.5, 512n,
+ISE
+800GB RI No SATA
+Intel Downieville S3520
+RI, SSD, 6Gbps
+SATA, 2.5, 512n,
+ISE
+480GB RI No SATA
+Samsung PM863a RI, SSD,
+6Gbps SATA, 2.5,
+512n, ISE
+480GB RI No SATA
+Samsung PM863a RI, SSD,
+6Gbps SATA, 2.5,
+512n, ISE
+3.84TB RI No SATA
+TOS Phoenix M4 RI,
+SSD, 12Gbps SAS,
+2.5, 512n, ISE
+3.84TB RI No SAS
+Samsung PM1633a RI, SSD,
+12Gbps SAS, 2.5,
+512e, ISE
+3.84TB RI No SAS
+Samsung PM863a RI, SSD,
+6Gbps SATA, 2.5,
+512n, ISE
+1.92TB RI No SATA
+Samsung PM1633a RI, SSD,
+12Gbps SAS, 2.5,
+512e, ISE
+1.92TB RI No SAS
+TOS Phoenix M4 RI,
+SSD, 12Gbps SAS,
+2.5, 512n, ISE
+1.92TB RI No SAS
+Intel Downieville S3520
+RI, SSD, 6Gbps
+SATA, 2.5, 512n,
+ISE
+1.6TB RI No SATA
+TOS Phoenix M4 WI,
+SSD, 12Gbps SAS,
+2.5, 512n, ISE
+800GB WI No SAS
+Storage 25
+===== PDF PAGE 26 =====
+Table 13. Supported Solid State Drives (SSDs) (continued)
+Vendor Description Capacity Type FIPS Interface
+TOS Phoenix M4 WI,
+SSD, 12Gbps SAS,
+2.5, 512n, ISE
+400GB WI No SAS
+TOS Phoenix M3 WI,
+SSD, 12Gbps SAS,
+2.5, 512n
+400GB WI No SAS
+TOS Phoenix M4 WI,
+SSD, 12Gbps SAS,
+2.5, 512n, ISE
+1.6TB WI No SAS
+Table 14. Supported 2.5" Hard Disk Drives (HDDs) 
+Vendor Description Capacity Speed Interface
+TOS AL13SX MLK, HDD,
+12Gbps SAS, 2.5, 15K,
+512n, ISE
+300GB 15K SAS
+STX Kestrel, HDD, 12Gbps
+SAS, 2.5, 15K, 512n, ISE
+300GB 15K SAS
+STX Avenger, HDD, 12Gbps
+SAS, 2.5, 7.2K, 512n,
+FIPS-140
+2TB 7.2K SAS
+TOS AL14SE, HDD, 12Gbps
+SAS, 2.5, 10K, 512e, ISE
+1.8TB 10K SAS
+HGST Cobra F, HDD, 12Gbps
+SAS, 2.5, 10K, 512n, ISE
+600GB 10K SAS
+STX Avenger, HDD, 12Gbps
+SAS, 2.5, 7.2K, 512n,
+ISE
+1TB 7.2K SAS
+HGST King Cobra F, HDD,
+12Gbps SAS, 2.5, 15K,
+512n, ISE
+300GB 15K SAS
+TOS AL14SE-Lite, HDD,
+12Gbps SAS, 2.5, 10K,
+512n, ISE
+1.2TB 10K SAS
+STX Kestrel TEC, HDD,
+12Gbps SAS, 2.5, 15K,
+512e, ISE
+900GB 15K SAS
+TX Kestrel, HDD, 12Gbps
+SAS, 2.5, 15K, 512n, ISE
+900GB 15K SAS
+HGST Cobra F, HDD, 12Gbps
+SAS, 2.5, 10K, 512n, ISE
+300GB 10K SAS
+STX Kestrel, HDD, 12Gbps
+SAS, 2.5, 15K, 512n, ISE
+600GB 15K SAS
+26 Storage
+===== PDF PAGE 27 =====
+Table 14. Supported 2.5" Hard Disk Drives (HDDs) (continued)
+Vendor Description Capacity Speed Interface
+STX Kestrel, HDD, 12Gbps
+SAS, 2.5, 15K, 512n,
+FIPS-140
+900GB 15K SAS
+STX Thunderbug, HDD,
+12Gbps SAS, 2.5, 10K,
+512n, ISE
+600GB 10K SAS
+TX Thunderbug, HDD,
+12Gbps SAS, 2.5, 10K,
+512n, ISE
+300GB 10K SAS
+STX Avenger, HDD, 12Gbps
+SAS, 2.5, 7.2K, 512n,
+ISE
+2TB 7.2K SAS
+STX Thunderbolt, HDD,
+12Gbps SAS, 2.5, 10K,
+512n, FIPS-140
+1.2TB 10K SAS
+HGST Cobra F, HDD, 12Gbps
+SAS, 2.5, 10K, 512n, ISE
+1.2TB 10K SAS
+STX Avenger, HDD, 12Gbps
+SAS, 2.5, 7.2K, 4096n,
+ISE
+2TB 7.2K SAS
+HGST King Cobra F, HDD,
+12Gbps SAS, 2.5, 15K,
+512n, ISE
+600GB 15K SAS
+TOS AL13SX MLK, HDD,
+12Gbps SAS, 2.5, 15K,
+512n, ISE
+600GB 15K SAS
+TOS AL14SE-Lite, HDD,
+12Gbps SAS, 2.5, 10K,
+512n, ISE
+600GB 10K SAS
+STX Kestrel, HDD, 12Gbps
+SAS, 2.5, 15K, 4096n,
+ISE
+900GB 15K SAS
+STX Avenger, HDD, 6Gbps
+SATA, 2.5, 7.2K, 512n,
+ISE
+1TB 7.2K SATA
+STX Thunderbolt, HDD,
+12Gbps SAS, 2.5, 10K,
+512n, ISE
+1.2TB 10K SAS
+STX Thunderbolt 2, HDD,
+12Gbps SAS, 2.5, 10K,
+512e, ISE
+1.8TB 10K SAS
+TOS AL14SE-Lite, HDD,
+12Gbps SAS, 2.5, 10K,
+512n, ISE
+300GB 10K SAS
+Storage 27
+===== PDF PAGE 28 =====
+Table 14. Supported 2.5" Hard Disk Drives (HDDs) (continued)
+Vendor Description Capacity Speed Interface
+HGST King Cobra F, HDD,
+12Gbps SAS, 2.5, 15K,
+512n
+600GB 15K SAS
+Table 15. Supported 3.5" Hard Disk Drives (HDDs) 
+Vendor Description Capacity Speed Interface
+STX Makara Plus, HDD,
+12Gbps SAS, 3.5, 7.2K,
+512e, ISE
+8TB 7.2K SAS
+STX Makara Plus, HDD,
+12Gbps SAS, 3.5, 7.2K,
+512e, FIPS-140
+8TB 7.2K SAS
+HGST Libra HE10, HDD,
+12Gbps SAS, 3.5, 7.2K,
+4096n, ISE
+8TB 7.2K SAS
+HGST Libra HE10, HDD,
+12Gbps SAS, 3.5, 7.2K,
+512e, ISE
+8TB 7.2K SAS
+STX Makara Plus, HDD,
+12Gbps SAS, 3.5, 7.2K,
+4096n, ISE
+8TB 7.2K SAS
+STX Makara Plus, HDD,
+6Gbps SATA, 3.5, 7.2K,
+512e, ISE
+8TB 7.2K SATA
+HGST Libra HE10, HDD,
+6Gbps SATA, 3.5, 7.2K,
+512e, ISE
+8TB 7.2K SATA
+TOS Tomcat R, HDD,
+12Gbps SAS, 3.5, 7.2K,
+512n, ISE
+4TB 7.2K SAS
+STX Makara BP, HDD,
+12Gbps SAS, 3.5, 7.2K,
+512n, ISE
+4TB 7.2K SAS
+HGST Aries K Plus, HDD,
+12Gbps SAS, 3.5, 7.2K,
+512n, ISE
+4TB 7.2K SAS
+STX Makara BP, HDD,
+12Gbps SAS, 3.5, 7.2K,
+512n, FIPS-140
+4TB 7.2K SAS
+STX Makara BP, HDD,
+6Gbps SATA, 3.5, 7.2K,
+512n, ISE
+4TB 7.2K SATA
+HGST Aries K Plus, HDD,
+6Gbps SATA, 3.5, 7.2K,
+512n, ISE
+4TB 7.2K SATA
+28 Storage
+===== PDF PAGE 29 =====
+Table 15. Supported 3.5" Hard Disk Drives (HDDs) (continued)
+Vendor Description Capacity Speed Interface
+STX Makara BP, HDD,
+12Gbps SAS, 3.5, 7.2K,
+512n, ISE
+2TB 7.2K SAS
+HGST Aries K Plus, HDD,
+12Gbps SAS, 3.5, 7.2K,
+512n, ISE
+2TB 7.2K SAS
+TOS Tomcat R, HDD,
+12Gbps SAS, 3.5, 7.2K,
+512n, ISE
+2TB 7.2K SAS
+HGST Aries K Plus, HDD,
+6Gbps SATA, 3.5, 7.2K,
+512n, ISE
+2TB 7.2K SATA
+HGST Rainier MLK, HDD,
+6Gbps SATA, 3.5, 7.2K,
+512n, ISE
+2TB 7.2K SATA
+STX Nemo, HDD, 6Gbps
+SATA, 3.5, 7.2K, 512n,
+ISE
+2TB 7.2K SATA
+STX Makara BP, HDD,
+6Gbps SATA, 3.5, 7.2K,
+512n, ISE
+2TB 7.2K SATA
+STX Makara BP, HDD,
+12Gbps SAS, 3.5, 7.2K,
+512n, ISE
+1TB 7.2K SAS
+STX Nemo, HDD, 6Gbps
+SATA, 3.5, 7.2K, 512n,
+ISE
+1TB 7.2K SATA
+STX Makara BP, HDD,
+6Gbps SATA, 3.5, 7.2K,
+512n
+1TB 7.2K SATA
+HGST Rainier MLK, HDD,
+6Gbps SATA, 3.5, 7.2K,
+512n, ISE
+1TB 7.2K SATA
+STX Tatsu, HDD, 12Gbps
+SAS, 3.5, 7.2K, 512e,
+ISE
+10TB 7.2K SAS
+HGST Libra HE10, HDD,
+12Gbps SAS, 3.5, 7.2K,
+512e, ISE
+10TB 7.2K SAS
+HGST Libra HE10, HDD,
+6Gbps SATA, 3.5, 7.2K,
+512e, ISE
+10TB 7.2K SATA
+STX Tatsu, HDD, 6Gbps
+SATA, 3.5, 7.2K, 512e,
+ISE
+10TB 7.2K SATA
+Storage 29
+===== PDF PAGE 30 =====
+RAID Configurations
+The system supports the following RAID configurations:
+Table 16. Supported RAID Levels 
+Storage Controller Supported RAID Levels
+Chipset SATA RAID 0, 1, 10, 5 (Software RAID Only)
+PERC H330 Mezz RAID 0, 1, 5, 10, 50
+PERC H730p Mezz RAID 0, 1, 5, 6, 10, 50, 60
+NOTE:  RAID using a PERC controller is not supported on NVMe drives
+Internal storage
+The C6420 introduces support for internal boot storage using the M.2 boot device. A single M.2 boot drive can be configured
+for each C6420 node. The boot device uses a PCIe riser which, in turn uses the x16 PCIe buried riser. Note that the M.2 boot
+device is not a PCIe devices, but a SATA device and connects to the SATA port.
+M.2 Boot Storage
+PowerEdge C6420 introduces support for internal boot storage using the M.2 boot device. A single M.2 boot drive can be
+configured for each C6420 node. The boot device uses a PCIe riser which uses the x16 PCIe buried riser. Note that the M.2
+boot device is not a PCIe devices, but a SATA device and connects to the SATA port. The available M.2 capacity is 120 GB.
+Figure 5. M.2 Boot Device Riser
+Figure 6. M.2 Boot Device installed in buried x16 PCIe slot
+30 Storage
+===== PDF PAGE 31 =====
+Figure 7. M.2 Boot drive SATA cabling
+NOTE:
+● The x16 PCIe riser used for M.2 device uses PCIe lanes from CPU2, hence C6420 configurations using an M.2 device
+must have both CPUs populated.
+● Currently support for dual M.2 devices in a RAID 1 configuration is not available.
+MicroSD card storage
+The PCI Express riser which is optional on the C6420 includes a MicroSD card reader slot. An SD card can be ordered and
+installed in this slot to be used for storing an embedded hypervisor. SD cards with capacity of 16GB, 32GB and 64GB are
+available on C6420.
+Lifecycle Controller 3.0
+For more information on LC 3.0, visit http://en.community.dell.com/techcenter/systems-management/w/wiki/4126.dell-
+lifecycle-controller-integration-for-configuration-manager
+Optical Drives
+The system does not support optical drives.
+Tape drive
+The system does not support an internal tape drive. External storage peripherals are not directly validated.
+Storage 31
+===== PDF PAGE 32 =====
+Networking and PCIe
+The C6400 and C6420 offers a choice of integrated, low latency I/O fabric (Omni-Path integrated on the CPU and in PCIe card
+form factor, InfiniBand in a PCIe card form factor), for balanced processing that fuels performance acceleration.
+NOTE:  The C6420 does not support hot-swapping of PCIe cards.
+Topics:
+• Network card options
+• PCIe expansion cards
+Network card options
+The system supports the following IO slots:
+Table 17. Mezzanine and Daughtercard Options 
+Slot Description Standard Usage
+x8 Mezz PCI-e Riser One x8 PCIe Gen3 for Mezz (x8 lanes) Storage Controller
+x16 (x8+x8) OCP Mezz Riser X8 + X8 PCIe Gen3 for OCP Mezz (x16
+lanes max)
+Network card for host
+x16 PCI-e Main Riser (plug-in) One x16 PCIe Gen3 for LP from CPU 1
+(x16 lanes)
+Half Height Low Profile PCIe Adapter
+x16 buried PCI-e Riser One x16 PCIe Gen3 for specific form
+factor (x16 lanes)
+M.2 SATA Boot Device
+PCIe expansion cards
+The system supports one PCIe card and one mezzanine card. There is no slot priority concern as the sled has a single PCIe slot.
+Table 18. Supported expansion cards 
+Description Type Form Factor
+Intel 1Gb Dual Port Ethernet LP PCIe
+Adapter
+Ethernet Low Profile PCIe Adapter
+Broadcom 1Gb Dual Port Ethernet LP PCIe
+Adapter
+Ethernet Low Profile PCIe Adapter
+Intel X710 Dual Port 10Gb SFP+ OCP
+Mezzanine Adapter
+Ethernet Open Compute Project (OCP) Mezzanine Card
+Intel Dual Port 10Gb SFP+ LP PCIe Adapter Ethernet Low Profile PCIe Adapter
+Intel Dual Port 10Gb BASE-T LP PCIe
+Adapter
+Ethernet Low Profile PCIe Adapter
+Intel Quad Port 10Gb BASE-T LP PCIe
+Adapter
+Ethernet Low Profile PCIe Adapter
+Broadcom 57402 10Gb SFP+ LP PCIe
+Adapter
+Ethernet Low Profile PCIe Adapter
+7
+32 Networking and PCIe
+===== PDF PAGE 33 =====
+Table 18. Supported expansion cards (continued)
+Broadcom 57406 10Gb BASE-T LP PCIe
+Adapter
+Ethernet Low Profile PCIe Adapter
+SolarFlare SFN8002F Dual Port 10Gb SFP+
+LP PCIe Adapter
+Ethernet Low Profile PCIe Adapter
+Mellanox 10Gb Dual Port ConnectX-3 LP
+PCIe Adapter
+Ethernet Low Profile PCIe Adapter
+Broadcom Dual Port 25Gbps SFP PCIe
+Adapter
+Ethernet Low Profile PCIe Adapter
+QLogic Dual Port 25Gbps SFP LP PCIe
+Adapter
+Ethernet Low Profile PCIe Adapter
+Mellanox Dual Port 25Gbps SFP LP PCIe
+Adapter
+Ethernet Low Profile PCIe Adapter
+Mellanox Dual Port 40Gbps QSFP LP PCIe
+Adapter
+Ethernet Low Profile PCIe Adapter
+Intel Dual Port 40Gbps QSFP LP PCIe
+Adapter
+Ethernet Low Profile PCIe Adapter
+Mellanox ConnectX-4 Dual Port 100Gb
+QSFP28 LP PCIe Adapter
+Ethernet Low Profile PCIe Adapter
+Mellanox ConnectX3 VPI QSFP+ Single Port
+FDR LP PCIe Adapter
+InfiniBand Low Profile PCIe Adapter
+Mellanox ConnectX-4 Single Port VPI
+QSFP28 EDR LP PCIe Adapter
+InfiniBand Low Profile PCIe Adapter
+Mellanox ConnectX-4 Dual Port VPI QSFP28
+EDR LP PCIe Adapter
+InfiniBand Low Profile PCIe Adapter
+Intel Omni-Path Single Port Host Fabric
+Adapter 100 Series LP PCIe Adapter
+OmniPath Low Profile PCIe Adapter
+Samsung PM1725 1.6 TB NVMe Low Profile, Half Height, Half Length PCIe controller
+cards
+Samsung PM1725A 3.2 TB NVMe Low Profile, Half Height, Half Length PCIe controller
+cards
+Samsung PM1725 3.2 TB NVMe Low Profile, Half Height, Half Length PCIe controller
+cards
+Samsung PM1725A 1.6 TB NVMe Low Profile, Half Height, Half Length PCIe controller
+cards
+Networking and PCIe 33
+===== PDF PAGE 34 =====
+Power, Thermal, and Acoustics
+The lower overall system-level power draw is a result of the breakthrough system design developed by Dell EMC. The system
+aims to maximize performance per watt through a combination of energy efficient technologies, optimized thermal designs and
+intelligent fan control algorithms. The system fan control algorithms use an extensive array of sensors that automatically monitor
+power and thermal activity to minimize fan speeds based on system cooling requirements, reducing the power required for
+cooling.
+Topics:
+• Power consumption and energy efficiency
+• Power supply units
+• Thermal and Acoustics
+• Inlet temperature guidelines and requirements
+Power consumption and energy efficiency
+With the rise in the cost of energy that is coupled with increasing data center density, Dell EMC provides tools and technologies
+to help you realize greater performance with lower energy cost and wastage. More efficient data center usage can reduce costs
+by slowing the need for additional data center space. The following table lists the tools and technologies that Dell EMC offers to
+help you achieve your data center goals by lowering power consumption and increasing energy efficiency.
+Table 19. Power tools and technologies 
+Feature Description
+Power supply units (PSU) portfolio PSU portfolio includes intelligent features such as dynamically
+optimizing efficiency while maintaining availability and
+redundancy.
+Tools for right-sizing Enterprise Infrastructure Planning Tool (EIPT) is a tool
+that helps you to plan and tune your computer and
+infrastructure equipment for maximum efficiency. EIPT helps
+you by calculating hardware power consumption, power
+infrastructure, and storage. You can learn more at Dell.com/
+calc
+Industry compliance Dell EMC's servers are compliant with all relevant industry
+certifications and guidelines, including 80 PLUS, Climate
+Savers, and ENERGY STAR.
+Power monitoring accuracy PSU power monitoring improvements include:
+● Power monitoring accuracy of 1%, whereas the industry
+standard is 5%
+● More accurate reporting of power
+● Better performance under a power cap
+Power capping Use Dell EMC's systems management to set the power cap
+limit for your systems to limit the output of a PSU and
+reduce system power consumption. Dell is the first hardware
+vendor to leverage Intel Node Manager for circuit-breaker fast
+capping.
+Systems management Dell EMC's servers are compliant with all relevant industry
+certifications and guidelines, including 80 PLUS, Climate
+Savers, and ENERGY STAR.
+8
+34 Power, Thermal, and Acoustics
+===== PDF PAGE 35 =====
+Table 19. Power tools and technologies (continued)
+Feature Description
+Dell OpenManage Power Center delivers group power
+management at the rack, row, and data center level for
+servers, power distribution units, and uninterruptible power
+supplies.
+Active power management Intel® Node Manager is an embedded technology that
+provides individual server- level power reporting and
+power limiting functionality. Dell offers a complete power
+management solution that is comprised of Intel Node
+Manager that is accessed through Dell iDRAC9 Enterprise
+and OpenManage Power Center that allows policy- based
+management of power and thermals at the individual server,
+rack, and data center level. Hot spare reduces power
+consumption of redundant power supplies.
+Thermal control of fan speed optimizes the thermal settings
+for your environment to reduce fan consumption and lower
+system power consumption. Idle power enables Dell servers to
+run as efficiently when idle as when at full workload.
+Fresh Air cooling FAC is supported with certain configuration limitations. With
+the thermal design and reliability of Dell products, you
+can have the capability to operate at excursion- based
+temperatures beyond the industry standard of 35°C (95°F)
+without impacting your availability model. This solution
+takes into account servers, networking, storage, and other
+infrastructure.
+Rack infrastructure Dell EMC offers some of the industry's highest- efficiency
+power infrastructure solutions, including:
+● Power distribution units (PDUs)
+● Uninterruptible power supplies (UPSs)
+● Energy smart containment rack enclosures
+Power supply units
+Energy Smart power supplies have intelligent features, such as the ability to dynamically optimize efficiency while maintaining
+availability and redundancy. Also featured are enhanced power-consumption reduction technologies, such as high-efficiency
+power conversion and advanced thermal-management techniques, and embedded power-management features including high-
+accuracy power monitoring.
+The system supports two hot-swappable AC power supplies with 1 + 1 redundancy, auto-sensing and auto-switching capability.
+Thermal and Acoustics
+The system's thermal management delivers high performance through optimized cooling of components at the lowest fan
+speeds across a wide range of ambient temperatures from 10°C to 35°C (50°F to 95°F) and to extended ambient temperature
+ranges. These optimizations result in lower fan power consumption which translate to lower system power and data center
+power consumption.
+Thermal design
+The thermal design of the system reflects the following:
+● Optimized thermal design:  The system layout is architected for optimum thermal design. System component placement
+and layout are designed to provide maximum airflow coverage to critical components with minimal expense of fan power.
+Power, Thermal, and Acoustics 35
+===== PDF PAGE 36 =====
+● Comprehensive thermal management:  The thermal control system regulates the system fan speeds based on feedback
+from system component temperature sensors, as well as for system inventory and subsystem power draw. Temperature
+monitoring includes components such as processors, DIMMs, chipset, system inlet air temperature and hard disk drives.
+● Open and closed loop fan speed control:  Open loop fan control uses system configuration to determine fan speed based
+on system inlet air temperature. Closed loop thermal control uses temperature feedback to dynamically adjust fan speeds
+based on system activity and cooling requirements.
+● User-configurable settings:  With the understanding and realization that every customer has a unique set of
+circumstances or expectations from the system, in this generation of servers, we have introduced limited user-configurable
+settings in the iDRAC9 BIOS setup screen. For more information, see the Dell EMC PowerEdge system Installation and
+Service Manual on Dell.com/Support/Manuals  and “ Advanced Thermal Control: Optimizing across Environments and Power
+Goals ” on Dell.com .
+● Cooling redundancy:  The system allows N+1 fan redundancy, allowing continuous operation with one fan failure in the
+system.
+Acoustical design
+Dell EMC focuses on sound quality in addition to sound power level and sound pressure level. Sound quality describes how
+disturbing or pleasing a sound is interpreted, and Dell EMC references several psychacoustical metrics and thresholds in
+delivering to it. Tone prominence is one such metric. Sound power and sound pressure levels increase with greater populations
+or higher utilization, while sound quality remains good even as the frequency content changes. A reference for comparison to
+sound pressure levels for familiar noise sources is given in the following table. An extensive description of Dell EMC Enterprise
+acoustical design and metrics is available in the Dell Enterprise Acoustics  white paper.
+Table 20. Acoustical reference points and output comparisons 
+Value measured at your ears Equivalent familiar noise experience
+LpA, dBA, re 20 μPa Loudness, sones
+90 80 Loud concert
+75 39 Data center, vacuum cleaner, voice must be elevated to be
+heard
+60 10 Conversation levels
+45 4 Whispering, open office layout, normal living room
+35 2 Quiet office
+30 1 Quiet library
+20 0 Recording studio
+Inlet temperature guidelines and requirements
+Table 21. Maximum continuous operating inlet air temperature (°C) with for Air Cooled C6420 Sleds with
+Dual Processors 
+Class SKU Frequ
+ency
+(GHz
+)
+Core
+s
+Watt
+s
+Max
+DIM
+M
+Coun
+ts
+No-
+BP
+Air
+Coole
+d
+Chas
+sis
+3.5" Chassis with
+Air Cooled Sleds
+2.5" (Direct BP/EXP/NVMe) Chassis with
+Air Cooled Sleds
+NA 12
+HDD
+8
+HDD
+4
+HDD
+24
+HDD
+20
+HDD
+16
+HDD
+12
+HDD
+8
+HDD
+4
+HDD
+Platin
+um
+8180 2.5 28 205 CPU1:
+6 |
+CPU2
+: 8
+C30 Not
+Suppo
+rted
+C5 or
+lower
+Not
+Suppo
+rted
+C13 or
+lower
+Not
+Suppo
+rted
+C14 or
+lower
+Not
+Suppo
+rted
+C19
+C20
+or
+lower
+C21 or
+lower
+C21 or
+lower
+C21
+or
+lower
+C21 or
+lower
+36 Power, Thermal, and Acoustics
+===== PDF PAGE 37 =====
+Table 21. Maximum continuous operating inlet air temperature (°C) with for Air Cooled C6420 Sleds with
+Dual Processors (continued)
+Class SKU Frequ
+ency
+(GHz
+)
+Core
+s
+Watt
+s
+Max
+DIM
+M
+Coun
+ts
+No-
+BP
+Air
+Coole
+d
+Chas
+sis
+3.5" Chassis with
+Air Cooled Sleds
+2.5" (Direct BP/EXP/NVMe) Chassis with
+Air Cooled Sleds
+NA 12
+HDD
+8
+HDD
+4
+HDD
+24
+HDD
+20
+HDD
+16
+HDD
+12
+HDD
+8
+HDD
+4
+HDD
+or
+lower
+Platin
+um
+8180
+M
+2.5 28 205 CPU1:
+6 |
+CPU2
+: 8
+C30 Not
+Suppo
+rted
+C5 or
+lower
+Not
+Suppo
+rted
+C13 or
+lower
+Not
+Suppo
+rted
+C14 or
+lower
+Not
+Suppo
+rted
+C19
+or
+lower
+C20
+or
+lower
+C21 or
+lower
+C21 or
+lower
+C21
+or
+lower
+C21 or
+lower
+Platin
+um
+8168 2.7 24 205 CPU1:
+6 |
+CPU2
+: 8
+C30 Not
+Suppo
+rted
+C5 or
+lower
+Not
+Suppo
+rted
+C13 or
+lower
+Not
+Suppo
+rted
+C14 or
+lower
+Not
+Suppo
+rted
+C19
+or
+lower
+C20
+or
+lower
+C21 or
+lower
+C21 or
+lower
+C21
+or
+lower
+C21 or
+lower
+Gold 6154 3 18 200 CPU1:
+6 |
+CPU2
+: 8
+C30 Not
+Suppo
+rted
+C6 or
+lower
+Not
+Suppo
+rted
+C14 or
+lower
+Not
+Suppo
+rted
+C15
+or
+lower
+C20
+or
+lower
+C21 or
+lower
+C22
+or
+lower
+C22
+or
+lower
+C22
+or
+lower
+C22
+or
+lower
+Gold 6150 2.7 18 165 CPU1:
+8 |
+CPU2
+: 8
+C35 Not
+Suppo
+rted
+C11 or
+lower
+Not
+Suppo
+rted
+C18 or
+lower
+Not
+Suppo
+rted
+C19
+or
+lower
+C30 C30 C30 C30 C30 C35
+Platin
+um
+8158 3 12 150 CPU1:
+8 |
+CPU2
+: 8
+C35 Not
+Suppo
+rted
+C14 or
+lower
+C21 or
+lower
+C23
+or
+lower
+C30 C30 C30 C30 C30 C35
+Gold 6148 2.4 20 150 CPU1:
+8 |
+CPU2
+: 8
+C35 Not
+Suppo
+rted
+C14 or
+lower
+C21 or
+lower
+C23
+or
+lower
+C30 C30 C30 C30 C30 C35
+Gold 6146 3.2 12 165 CPU1:
+8 |
+CPU2
+: 8
+C35 Not
+Suppo
+rted
+C11 or
+lower
+Not
+Suppo
+rted
+C18 or
+lower
+Not
+Suppo
+rted
+C19
+or
+lower
+C30 C30 C30 C30 C30 C35
+Power, Thermal, and Acoustics 37
+===== PDF PAGE 38 =====
+Table 21. Maximum continuous operating inlet air temperature (°C) with for Air Cooled C6420 Sleds with
+Dual Processors (continued)
+Class SKU Frequ
+ency
+(GHz
+)
+Core
+s
+Watt
+s
+Max
+DIM
+M
+Coun
+ts
+No-
+BP
+Air
+Coole
+d
+Chas
+sis
+3.5" Chassis with
+Air Cooled Sleds
+2.5" (Direct BP/EXP/NVMe) Chassis with
+Air Cooled Sleds
+NA 12
+HDD
+8
+HDD
+4
+HDD
+24
+HDD
+20
+HDD
+16
+HDD
+12
+HDD
+8
+HDD
+4
+HDD
+Gold 6144 3.5 8 150 CPU1:
+6 |
+CPU2
+: 8
+C35 Not
+Suppo
+rted
+C14 or
+lower
+Not
+Suppo
+rted
+C18 or
+lower
+C20
+or
+lower
+C30 C30 C30 C30 C30 C35
+Gold 6142 2.6 16 150 CPU1:
+6 |
+CPU2
+: 8
+C35 Not
+Suppo
+rted
+C14 or
+lower
+C21 or
+lower
+C23
+or
+lower
+C30 C30 C30 C30 C30 C35
+Gold 6136 3 12 150 CPU1:
+8 |
+CPU2
+: 8
+C35 Not
+Suppo
+rted
+C14 or
+lower
+C21 or
+lower
+C23
+or
+lower
+C30 C30 C30 C30 C30 C35
+Gold 6132 2.6 14 140 CPU1:
+8 |
+CPU2
+: 8
+C35 Not
+Suppo
+rted
+C16
+or
+lower
+C25 C25 C30 C30 C35 C35 C35 C35
+Gold 6134 3.2 8 130 CPU1:
+8 |
+CPU2
+: 8
+C35 Not
+Suppo
+rted
+C18 or
+lower
+C25 C25 C30 C30 C35 C35 C35 C35
+Gold 6126 2.6 12 125 CPU1:
+8 |
+CPU2
+: 8
+C35 C25 C30 C30 C30 C30 C35 C35 C35 C35
+Gold 6128 3.4 6 115 CPU1:
+6 |
+CPU2
+: 8
+C35 C25 C30 C30 C30 C30 C35 C35 C35 C35
+Platin
+um
+8156 3.6 4 105 CPU1:
+6 |
+CPU2
+: 8
+C35 C30 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 5122 3.6 4 105 CPU1:
+6 |
+CPU2
+: 8
+C35 C30 C35 C35 C35 C35 C35 C35 C35 C35
+38 Power, Thermal, and Acoustics
+===== PDF PAGE 39 =====
+Table 21. Maximum continuous operating inlet air temperature (°C) with for Air Cooled C6420 Sleds with
+Dual Processors (continued)
+Class SKU Frequ
+ency
+(GHz
+)
+Core
+s
+Watt
+s
+Max
+DIM
+M
+Coun
+ts
+No-
+BP
+Air
+Coole
+d
+Chas
+sis
+3.5" Chassis with
+Air Cooled Sleds
+2.5" (Direct BP/EXP/NVMe) Chassis with
+Air Cooled Sleds
+NA 12
+HDD
+8
+HDD
+4
+HDD
+24
+HDD
+20
+HDD
+16
+HDD
+12
+HDD
+8
+HDD
+4
+HDD
+Platin
+um
+8176 2.1 28 165 CPU1:
+8 |
+CPU2
+: 8
+C35 Not
+Suppo
+rted
+C14 or
+lower
+C21 or
+lower
+C22
+or
+lower
+C30 C30 C30 C30 C30 C35
+Platin
+um
+8176
+M
+2.1 28 165 CPU1:
+8 |
+CPU2
+: 8
+C35 Not
+Suppo
+rted
+C14 or
+lower
+C21 or
+lower
+C22
+or
+lower
+C30 C30 C30 C30 C30 C35
+Platin
+um
+8170
+M
+2.1 26 165 CPU1:
+8 |
+CPU2
+: 8
+C35 Not
+Suppo
+rted
+C14 or
+lower
+C21 or
+lower
+C22
+or
+lower
+C30 C30 C30 C30 C30 C35
+Platin
+um
+8170 2.1 26 165 CPU1:
+8 |
+CPU2
+: 8
+C35 Not
+Suppo
+rted
+C14 or
+lower
+C21 or
+lower
+C22
+or
+lower
+C30 C30 C30 C30 C30 C35
+Platin
+um
+8164 2 26 150 CPU1:
+8 |
+CPU2
+: 8
+C35 Not
+Suppo
+rted
+C14 or
+lower
+C21 or
+lower
+C23
+or
+lower
+C30 C30 C30 C30 C30 C35
+Platin
+um
+8160
+M
+2.1 24 150 CPU1:
+8 |
+CPU2
+: 8
+C35 Not
+Suppo
+rted
+C14 or
+lower
+C21 or
+lower
+C23
+or
+lower
+C30 C30 C30 C30 C30 C35
+Platin
+um
+8160 2.1 24 150 CPU1:
+8 |
+CPU2
+: 8
+C35 Not
+Suppo
+rted
+C14 or
+lower
+C21 or
+lower
+C23
+or
+lower
+C30 C30 C30 C30 C30 C35
+Gold 6152 2.1 22 140 CPU1:
+8 |
+CPU2
+: 8
+C35 Not
+Suppo
+rted
+C16
+or
+lower
+C25 C25 C30 C30 C35 C35 C35 C35
+Power, Thermal, and Acoustics 39
+===== PDF PAGE 40 =====
+Table 21. Maximum continuous operating inlet air temperature (°C) with for Air Cooled C6420 Sleds with
+Dual Processors (continued)
+Class SKU Frequ
+ency
+(GHz
+)
+Core
+s
+Watt
+s
+Max
+DIM
+M
+Coun
+ts
+No-
+BP
+Air
+Coole
+d
+Chas
+sis
+3.5" Chassis with
+Air Cooled Sleds
+2.5" (Direct BP/EXP/NVMe) Chassis with
+Air Cooled Sleds
+NA 12
+HDD
+8
+HDD
+4
+HDD
+24
+HDD
+20
+HDD
+16
+HDD
+12
+HDD
+8
+HDD
+4
+HDD
+Gold 6140
+M
+2.3 18 140 CPU1:
+8 |
+CPU2
+: 8
+C35 Not
+Suppo
+rted
+C16
+or
+lower
+C25 C25 C30 C30 C35 C35 C35 C35
+Gold 6140 2.3 18 140 CPU1:
+8 |
+CPU2
+: 8
+C35 Not
+Suppo
+rted
+C16
+or
+lower
+C25 C25 C30 C30 C35 C35 C35 C35
+Gold 6130 2.1 16 135 CPU1:
+8 |
+CPU2
+: 8
+C35 C25 C30 C30 C30 C30 C35 C35 C35 C35
+Platin
+um
+8153 2 16 125 CPU1:
+8 |
+CPU2
+: 8
+C35 C25 C30 C30 C30 C30 C35 C35 C35 C35
+Gold 6138 2 20 125 CPU1:
+8 |
+CPU2
+: 8
+C35 C25 C30 C30 C30 C30 C35 C35 C35 C35
+Gold 5120 2.2 14 105 CPU1:
+8 |
+CPU2
+: 8
+C35 C30 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 5118 2.3 12 105 CPU1:
+8 |
+CPU2
+: 8
+C35 C30 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 5115 2.4 10 85 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Silver 4116 2.1 12 85 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+40 Power, Thermal, and Acoustics
+===== PDF PAGE 41 =====
+Table 21. Maximum continuous operating inlet air temperature (°C) with for Air Cooled C6420 Sleds with
+Dual Processors (continued)
+Class SKU Frequ
+ency
+(GHz
+)
+Core
+s
+Watt
+s
+Max
+DIM
+M
+Coun
+ts
+No-
+BP
+Air
+Coole
+d
+Chas
+sis
+3.5" Chassis with
+Air Cooled Sleds
+2.5" (Direct BP/EXP/NVMe) Chassis with
+Air Cooled Sleds
+NA 12
+HDD
+8
+HDD
+4
+HDD
+24
+HDD
+20
+HDD
+16
+HDD
+12
+HDD
+8
+HDD
+4
+HDD
+Silver 4114 2.2 10 85 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Silver 4112 2.6 4 85 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Silver 4110 2.1 8 85 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Silver 4108 1.8 8 85 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Bronz
+e
+3106 1.7 8 85 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Bronz
+e
+3104 1.7 6 85 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8176F 2.1 28 173 CPU1:
+6 |
+CPU2
+: 8
+C30 Not
+Availa
+ble
+Not
+Availa
+ble
+Not
+Availa
+ble
+C20
+or
+lower
+C21 or
+lower
+C22
+or
+lower
+C22
+or
+lower
+C25 C25
+Platin
+um
+8160F 2.1 24 160 CPU1:
+6 |
+CPU2
+: 8
+C30 Not
+Availa
+ble
+Not
+Availa
+ble
+Not
+Availa
+ble
+C25 C25 C25 C25 C25 C30
+Platin
+um
+6138F 2 20 135 CPU1:
+8 |
+CPU2
+: 8
+C35 Not
+Availa
+ble
+Not
+Availa
+ble
+Not
+Availa
+ble
+C30 C30 C30 C30 C30 C35
+Platin
+um
+6130F 2.1 16 135 CPU1:
+8 |
+CPU2
+: 8
+C35 Not
+Availa
+ble
+Not
+Availa
+ble
+Not
+Availa
+ble
+C30 C30 C30 C30 C30 C35
+Power, Thermal, and Acoustics 41
+===== PDF PAGE 42 =====
+Table 21. Maximum continuous operating inlet air temperature (°C) with for Air Cooled C6420 Sleds with
+Dual Processors (continued)
+Class SKU Frequ
+ency
+(GHz
+)
+Core
+s
+Watt
+s
+Max
+DIM
+M
+Coun
+ts
+No-
+BP
+Air
+Coole
+d
+Chas
+sis
+3.5" Chassis with
+Air Cooled Sleds
+2.5" (Direct BP/EXP/NVMe) Chassis with
+Air Cooled Sleds
+NA 12
+HDD
+8
+HDD
+4
+HDD
+24
+HDD
+20
+HDD
+16
+HDD
+12
+HDD
+8
+HDD
+4
+HDD
+Gold 6148F 2.4 20 160 CPU1:
+6 |
+CPU2
+: 8
+C30 Not
+Availa
+ble
+Not
+Availa
+ble
+Not
+Availa
+ble
+C25 C25 C25 C25 C25 C30
+Gold 6142F 2.6 16 160 CPU1:
+6 |
+CPU2
+: 8
+C30 Not
+Availa
+ble
+Not
+Availa
+ble
+Not
+Availa
+ble
+C25 C25 C25 C25 C25 C30
+Gold 6126F 2.6 12 135 CPU1:
+8 |
+CPU2
+: 8
+C35 Not
+Availa
+ble
+Not
+Availa
+ble
+Not
+Availa
+ble
+C30 C30 C30 C30 C30 C35
+Silver 4109T 2 8 70 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Table 22. Maximum continuous operating inlet air temperature (°C) with for Air Cooled C6420 Sleds with
+Single Processor 
+Class SKU Frequ
+ency
+(GHz
+)
+Core
+s
+Watt
+s
+Max
+DIM
+M
+Coun
+ts
+No-
+BP
+Air
+Coole
+d
+Chas
+sis
+3.5" Chassis with
+Air Cooled Sleds
+2.5" (Direct BP/EXP/NVMe) Chassis with
+Air Cooled Sleds
+NA 12
+HDD
+8
+HDD
+4
+HDD
+24
+HDD
+20
+HDD
+16
+HDD
+12
+HDD
+8
+HDD
+4
+HDD
+Platin
+um
+8180 2.5 28 205 CPU1:
+6
+C35 C30 C30 C30 C35 C35 C35 C35 C35 C35
+Platin
+um
+8180
+M
+2.5 28 205 CPU1:
+6
+C35 C30 C30 C30 C35 C35 C35 C35 C35 C35
+Platin
+um
+8168 2.7 24 205 CPU1:
+6
+C35 C30 C30 C30 C35 C35 C35 C35 C35 C35
+Gold 6154 3 18 200 CPU1:
+6
+C35 C30 C30 C30 C35 C35 C35 C35 C35 C35
+Gold 6150 2.7 18 165 CPU1:
+8
+C35 C30 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8158 3 12 150 CPU1:
+8
+C35 C30 C35 C35 C35 C35 C35 C35 C35 C35
+42 Power, Thermal, and Acoustics
+===== PDF PAGE 43 =====
+Table 22. Maximum continuous operating inlet air temperature (°C) with for Air Cooled C6420 Sleds with
+Single Processor (continued)
+Class SKU Frequ
+ency
+(GHz
+)
+Core
+s
+Watt
+s
+Max
+DIM
+M
+Coun
+ts
+No-
+BP
+Air
+Coole
+d
+Chas
+sis
+3.5" Chassis with
+Air Cooled Sleds
+2.5" (Direct BP/EXP/NVMe) Chassis with
+Air Cooled Sleds
+NA 12
+HDD
+8
+HDD
+4
+HDD
+24
+HDD
+20
+HDD
+16
+HDD
+12
+HDD
+8
+HDD
+4
+HDD
+Gold 6148 2.4 20 150 CPU1:
+8
+C35 C30 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6146 3.2 12 165 CPU1:
+6
+C35 C30 C30 C30 C35 C35 C35 C35 C35 C35
+Gold 6144 3.5 8 150 CPU1:
+6
+C35 C30 C30 C30 C35 C35 C35 C35 C35 C35
+Gold 6142 2.6 16 150 CPU1:
+8
+C35 C30 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6136 3 12 150 CPU1:
+8
+C35 C30 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6132 2.6 14 140 CPU1:
+8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6134 3.2 8 130 CPU1:
+8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6126 2.6 12 125 CPU1:
+8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6128 3.4 6 115 CPU1:
+6
+C35 C30 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8156 3.6 4 105 CPU1:
+6
+C35 C30 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 5122 3.6 4 105 CPU1:
+6
+C35 C30 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8176 2.1 28 165 CPU1:
+8
+C35 C30 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8176
+M
+2.1 28 165 CPU1:
+8
+C35 C30 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8170
+M
+2.1 26 165 CPU1:
+8
+C35 C30 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8170 2.1 26 165 CPU1:
+8
+C35 C30 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8164 2 26 150 CPU1:
+8
+C35 C30 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8160
+M
+2.1 24 150 CPU1:
+8
+C35 C30 C35 C35 C35 C35 C35 C35 C35 C35
+Power, Thermal, and Acoustics 43
+===== PDF PAGE 44 =====
+Table 22. Maximum continuous operating inlet air temperature (°C) with for Air Cooled C6420 Sleds with
+Single Processor (continued)
+Class SKU Frequ
+ency
+(GHz
+)
+Core
+s
+Watt
+s
+Max
+DIM
+M
+Coun
+ts
+No-
+BP
+Air
+Coole
+d
+Chas
+sis
+3.5" Chassis with
+Air Cooled Sleds
+2.5" (Direct BP/EXP/NVMe) Chassis with
+Air Cooled Sleds
+NA 12
+HDD
+8
+HDD
+4
+HDD
+24
+HDD
+20
+HDD
+16
+HDD
+12
+HDD
+8
+HDD
+4
+HDD
+Platin
+um
+8160 2.1 24 150 CPU1:
+8
+C35 C30 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6152 2.1 22 140 CPU1:
+8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6140
+M
+2.3 18 140 CPU1:
+8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6140 2.3 18 140 CPU1:
+8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6130 2.1 16 135 CPU1:
+8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8153 2 16 125 CPU1:
+8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6138 2 20 125 CPU1:
+8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 5120 2.2 14 105 CPU1:
+8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 5118 2.3 12 105 CPU1:
+8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 5115 2.4 10 85 CPU1:
+8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Silver 4116 2.1 12 85 CPU1:
+8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Silver 4114 2.2 10 85 CPU1:
+8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Silver 4112 2.6 4 85 CPU1:
+8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Silver 4110 2.1 8 85 CPU1:
+8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Silver 4108 1.8 8 85 CPU1:
+8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Bronz
+e
+3106 1.7 8 85 CPU1:
+8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Bronz
+e
+3104 1.7 6 85 CPU1:
+8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+44 Power, Thermal, and Acoustics
+===== PDF PAGE 45 =====
+Table 22. Maximum continuous operating inlet air temperature (°C) with for Air Cooled C6420 Sleds with
+Single Processor (continued)
+Class SKU Frequ
+ency
+(GHz
+)
+Core
+s
+Watt
+s
+Max
+DIM
+M
+Coun
+ts
+No-
+BP
+Air
+Coole
+d
+Chas
+sis
+3.5" Chassis with
+Air Cooled Sleds
+2.5" (Direct BP/EXP/NVMe) Chassis with
+Air Cooled Sleds
+NA 12
+HDD
+8
+HDD
+4
+HDD
+24
+HDD
+20
+HDD
+16
+HDD
+12
+HDD
+8
+HDD
+4
+HDD
+Platin
+um
+8176F 2.1 28 173 NA NA NA NA NA NA NA NA NA NA NA
+Platin
+um
+8160F 2.1 24 160 NA NA NA NA NA NA NA NA NA NA NA
+Platin
+um
+6138F 2 20 135 NA NA NA NA NA NA NA NA NA NA NA
+Platin
+um
+6130F 2.1 16 135 NA NA NA NA NA NA NA NA NA NA NA
+Gold 6148F 2.4 20 160 NA NA NA NA NA NA NA NA NA NA NA
+Gold 6142F 2.6 16 160 NA NA NA NA NA NA NA NA NA NA NA
+Gold 6126F 2.6 12 135 NA NA NA NA NA NA NA NA NA NA NA
+Silver 4109T 2 8 70 CPU1:
+8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Table 23. Maximum continuous operating inlet air temperature (°C) for C6420 Sleds with Dual
+Processors and 45°C coolant entering cold plate at .48L/minute 
+Class SKU Frequ
+ency
+(GHz
+)
+Numb
+er of
+Cores
+TDP
+Watt
+s
+Max
+DIM
+M
+Coun
+ts
+No-
+BP
+Liqui
+d
+Coole
+d
+Chas
+sis
+3.5" Chassis with
+Liquid Cooled Sleds
+2.5" (Direct BP) Chassis with Liquid
+Cooled Sleds
+NA 12
+HDD
+8
+HDD
+4
+HDD
+24
+HDD
+20
+HDD
+16
+HDD
+12
+HDD
+8
+HDD
+4
+HDD
+Platin
+um
+8180 2.5 28 205 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8180
+M
+2.5 28 205 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8168 2.7 24 205 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Power, Thermal, and Acoustics 45
+===== PDF PAGE 46 =====
+Table 23. Maximum continuous operating inlet air temperature (°C) for C6420 Sleds with Dual
+Processors and 45°C coolant entering cold plate at .48L/minute (continued)
+Class SKU Frequ
+ency
+(GHz
+)
+Numb
+er of
+Cores
+TDP
+Watt
+s
+Max
+DIM
+M
+Coun
+ts
+No-
+BP
+Liqui
+d
+Coole
+d
+Chas
+sis
+3.5" Chassis with
+Liquid Cooled Sleds
+2.5" (Direct BP) Chassis with Liquid
+Cooled Sleds
+NA 12
+HDD
+8
+HDD
+4
+HDD
+24
+HDD
+20
+HDD
+16
+HDD
+12
+HDD
+8
+HDD
+4
+HDD
+Platin
+um
+8158 3 12 150 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8156 3.6 4 105 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6148 2.4 20 150 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6146 3.2 12 165 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6144 3.5 8 150 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6154 3 18 200 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6150 2.7 18 165 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6142 2.6 16 150 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6132 2.6 14 140 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6136 3 12 150 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+46 Power, Thermal, and Acoustics
+===== PDF PAGE 47 =====
+Table 23. Maximum continuous operating inlet air temperature (°C) for C6420 Sleds with Dual
+Processors and 45°C coolant entering cold plate at .48L/minute (continued)
+Class SKU Frequ
+ency
+(GHz
+)
+Numb
+er of
+Cores
+TDP
+Watt
+s
+Max
+DIM
+M
+Coun
+ts
+No-
+BP
+Liqui
+d
+Coole
+d
+Chas
+sis
+3.5" Chassis with
+Liquid Cooled Sleds
+2.5" (Direct BP) Chassis with Liquid
+Cooled Sleds
+NA 12
+HDD
+8
+HDD
+4
+HDD
+24
+HDD
+20
+HDD
+16
+HDD
+12
+HDD
+8
+HDD
+4
+HDD
+Gold 6126 2.6 12 125 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6134 3.2 8 130 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6128 3.4 6 115 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 5122 3.6 4 105 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8176 2.1 28 165 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8176
+M
+2.1 28 165 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8170
+M
+2.1 26 165 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8170 2.1 26 165 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8164 2 26 150 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8160
+M
+2.1 24 150 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Power, Thermal, and Acoustics 47
+===== PDF PAGE 48 =====
+Table 23. Maximum continuous operating inlet air temperature (°C) for C6420 Sleds with Dual
+Processors and 45°C coolant entering cold plate at .48L/minute (continued)
+Class SKU Frequ
+ency
+(GHz
+)
+Numb
+er of
+Cores
+TDP
+Watt
+s
+Max
+DIM
+M
+Coun
+ts
+No-
+BP
+Liqui
+d
+Coole
+d
+Chas
+sis
+3.5" Chassis with
+Liquid Cooled Sleds
+2.5" (Direct BP) Chassis with Liquid
+Cooled Sleds
+NA 12
+HDD
+8
+HDD
+4
+HDD
+24
+HDD
+20
+HDD
+16
+HDD
+12
+HDD
+8
+HDD
+4
+HDD
+Platin
+um
+8160 2.1 24 150 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8153 2 16 125 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6152 2.1 22 140 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6138 2 20 125 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6140
+M
+2.3 18 140 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6140 2.3 18 140 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6130 2.1 16 135 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 5120 2.2 14 105 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 5118 2.3 12 105 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 5115 2.4 10 85 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+48 Power, Thermal, and Acoustics
+===== PDF PAGE 49 =====
+Table 23. Maximum continuous operating inlet air temperature (°C) for C6420 Sleds with Dual
+Processors and 45°C coolant entering cold plate at .48L/minute (continued)
+Class SKU Frequ
+ency
+(GHz
+)
+Numb
+er of
+Cores
+TDP
+Watt
+s
+Max
+DIM
+M
+Coun
+ts
+No-
+BP
+Liqui
+d
+Coole
+d
+Chas
+sis
+3.5" Chassis with
+Liquid Cooled Sleds
+2.5" (Direct BP) Chassis with Liquid
+Cooled Sleds
+NA 12
+HDD
+8
+HDD
+4
+HDD
+24
+HDD
+20
+HDD
+16
+HDD
+12
+HDD
+8
+HDD
+4
+HDD
+Silver 4116 2.1 12 85 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Silver 4114 2.2 10 85 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Silver 4112 2.6 4 85 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Silver 4110 2.1 8 85 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Silver 4108 1.8 8 85 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Bronz
+e
+3106 1.7 8 85 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Bronz
+e
+3104 1.7 6 85 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8176F 2.1 28 173 CPU1:
+8 |
+CPU2
+: 8
+C35 NA NA NA C35 C35 C35 C35 C35 C35
+Platin
+um
+8160F 2.1 24 160 CPU1:
+8 |
+CPU2
+: 8
+C35 NA NA NA C35 C35 C35 C35 C35 C35
+Platin
+um
+6138F 2 20 135 CPU1:
+8 |
+CPU2
+: 8
+C35 NA NA NA C35 C35 C35 C35 C35 C35
+Power, Thermal, and Acoustics 49
+===== PDF PAGE 50 =====
+Table 23. Maximum continuous operating inlet air temperature (°C) for C6420 Sleds with Dual
+Processors and 45°C coolant entering cold plate at .48L/minute (continued)
+Class SKU Frequ
+ency
+(GHz
+)
+Numb
+er of
+Cores
+TDP
+Watt
+s
+Max
+DIM
+M
+Coun
+ts
+No-
+BP
+Liqui
+d
+Coole
+d
+Chas
+sis
+3.5" Chassis with
+Liquid Cooled Sleds
+2.5" (Direct BP) Chassis with Liquid
+Cooled Sleds
+NA 12
+HDD
+8
+HDD
+4
+HDD
+24
+HDD
+20
+HDD
+16
+HDD
+12
+HDD
+8
+HDD
+4
+HDD
+Platin
+um
+6130F 2.1 16 135 CPU1:
+8 |
+CPU2
+: 8
+C35 NA NA NA C35 C35 C35 C35 C35 C35
+Gold 6148F 20 2.4 160 CPU1:
+8 |
+CPU2
+: 8
+C35 NA NA NA C35 C35 C35 C35 C35 C35
+Gold 6142F 16 2.6 160 CPU1:
+8 |
+CPU2
+: 8
+C35 NA NA NA C35 C35 C35 C35 C35 C35
+Gold 6126F 12 2.6 135 CPU1:
+8 |
+CPU2
+: 8
+C35 NA NA NA C35 C35 C35 C35 C35 C35
+Silver 4109T 2 8 70 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Table 24. Maximum continuous operating inlet air temperature (°C) for C6420 Sleds with Dual
+Processors and 57°C coolant entering cold plate at .48L/minute 
+Class SKU Freq
+uenc
+y
+(GHz
+)
+Num
+ber
+of
+Cores
+TDP
+Watt
+s
+Max
+DIM
+M
+Coun
+ts
+No-
+BP
+Liqui
+d
+Coole
+d
+Chas
+sis
+3.5" Chassis with
+Liquid Cooled Sleds
+2.5" (Direct BP) Chassis with Liquid
+Cooled Sleds
+NA 12
+HDD
+8
+HDD
+4
+HDD
+24
+HDD
+20
+HDD
+16
+HDD
+12
+HDD
+8
+HDD
+4
+HDD
+Platin
+um
+8180 2.5 28 205 CPU1:
+8 |
+CPU2
+: 8
+C35 C30 C30 C30 C35 C35 C35 C35 C35 C35
+Platin
+um
+8180
+M
+2.5 28 205 CPU1:
+8 |
+CPU2
+: 8
+C35 C30 C30 C30 C35 C35 C35 C35 C35 C35
+50 Power, Thermal, and Acoustics
+===== PDF PAGE 51 =====
+Table 24. Maximum continuous operating inlet air temperature (°C) for C6420 Sleds with Dual
+Processors and 57°C coolant entering cold plate at .48L/minute (continued)
+Class SKU Freq
+uenc
+y
+(GHz
+)
+Num
+ber
+of
+Cores
+TDP
+Watt
+s
+Max
+DIM
+M
+Coun
+ts
+No-
+BP
+Liqui
+d
+Coole
+d
+Chas
+sis
+3.5" Chassis with
+Liquid Cooled Sleds
+2.5" (Direct BP) Chassis with Liquid
+Cooled Sleds
+NA 12
+HDD
+8
+HDD
+4
+HDD
+24
+HDD
+20
+HDD
+16
+HDD
+12
+HDD
+8
+HDD
+4
+HDD
+Platin
+um
+8168 2.7 24 205 CPU1:
+8 |
+CPU2
+: 8
+C35 C30 C30 C30 C35 C35 C35 C35 C35 C35
+Platin
+um
+8158 3 12 150 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8156 3.6 4 105 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6148 2.4 20 150 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6146 3.2 12 165 CPU1:
+8 |
+CPU2
+: 8
+C35* C35* C35* C35* C35* C35* C35* C35* C35* C35*
+Gold 6144 3.5 8 150 CPU1:
+8 |
+CPU2
+: 8
+C35* C35* C35* C35* C35* C35* C35* C35* C35* C35*
+Gold 6154 3 18 200 CPU1:
+8 |
+CPU2
+: 8
+C35 C30 C30 C30 C35 C35 C35 C35 C35 C35
+Gold 6150 2.7 18 165 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6142 2.6 16 150 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6132 2.6 14 140 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Power, Thermal, and Acoustics 51
+===== PDF PAGE 52 =====
+Table 24. Maximum continuous operating inlet air temperature (°C) for C6420 Sleds with Dual
+Processors and 57°C coolant entering cold plate at .48L/minute (continued)
+Class SKU Freq
+uenc
+y
+(GHz
+)
+Num
+ber
+of
+Cores
+TDP
+Watt
+s
+Max
+DIM
+M
+Coun
+ts
+No-
+BP
+Liqui
+d
+Coole
+d
+Chas
+sis
+3.5" Chassis with
+Liquid Cooled Sleds
+2.5" (Direct BP) Chassis with Liquid
+Cooled Sleds
+NA 12
+HDD
+8
+HDD
+4
+HDD
+24
+HDD
+20
+HDD
+16
+HDD
+12
+HDD
+8
+HDD
+4
+HDD
+Gold 6136 3 12 150 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6126 2.6 12 125 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6134 3.2 8 130 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6128 3.4 6 115 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 5122 3.6 4 105 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8176 2.1 28 165 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8176
+M
+2.1 28 165 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8170
+M
+2.1 26 165 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8170 2.1 26 165 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8164 2 26 150 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+52 Power, Thermal, and Acoustics
+===== PDF PAGE 53 =====
+Table 24. Maximum continuous operating inlet air temperature (°C) for C6420 Sleds with Dual
+Processors and 57°C coolant entering cold plate at .48L/minute (continued)
+Class SKU Freq
+uenc
+y
+(GHz
+)
+Num
+ber
+of
+Cores
+TDP
+Watt
+s
+Max
+DIM
+M
+Coun
+ts
+No-
+BP
+Liqui
+d
+Coole
+d
+Chas
+sis
+3.5" Chassis with
+Liquid Cooled Sleds
+2.5" (Direct BP) Chassis with Liquid
+Cooled Sleds
+NA 12
+HDD
+8
+HDD
+4
+HDD
+24
+HDD
+20
+HDD
+16
+HDD
+12
+HDD
+8
+HDD
+4
+HDD
+Platin
+um
+8160
+M
+2.1 24 150 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8160 2.1 24 150 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8153 2 16 125 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6152 2.1 22 140 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6138 2 20 125 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6140
+M
+2.3 18 140 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6140 2.3 18 140 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 6130 2.1 16 135 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 5120 2.2 14 105 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Gold 5118 2.3 12 105 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Power, Thermal, and Acoustics 53
+===== PDF PAGE 54 =====
+Table 24. Maximum continuous operating inlet air temperature (°C) for C6420 Sleds with Dual
+Processors and 57°C coolant entering cold plate at .48L/minute (continued)
+Class SKU Freq
+uenc
+y
+(GHz
+)
+Num
+ber
+of
+Cores
+TDP
+Watt
+s
+Max
+DIM
+M
+Coun
+ts
+No-
+BP
+Liqui
+d
+Coole
+d
+Chas
+sis
+3.5" Chassis with
+Liquid Cooled Sleds
+2.5" (Direct BP) Chassis with Liquid
+Cooled Sleds
+NA 12
+HDD
+8
+HDD
+4
+HDD
+24
+HDD
+20
+HDD
+16
+HDD
+12
+HDD
+8
+HDD
+4
+HDD
+Gold 5115 2.4 10 85 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Silver 4116 2.1 12 85 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Silver 4114 2.2 10 85 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Silver 4112 2.6 4 85 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Silver 4110 2.1 8 85 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Silver 4108 1.8 8 85 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Bronz
+e
+3106 1.7 8 85 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Bronz
+e
+3104 1.7 6 85 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+Platin
+um
+8176F 2.1 28 173 CPU1:
+8 |
+CPU2
+: 8
+C35 NA NA NA C35 C35 C35 C35 C35 C35
+Platin
+um
+8160F 2.1 24 160 CPU1:
+8 |
+CPU2
+: 8
+C35 NA NA NA C35 C35 C35 C35 C35 C35
+54 Power, Thermal, and Acoustics
+===== PDF PAGE 55 =====
+Table 24. Maximum continuous operating inlet air temperature (°C) for C6420 Sleds with Dual
+Processors and 57°C coolant entering cold plate at .48L/minute (continued)
+Class SKU Freq
+uenc
+y
+(GHz
+)
+Num
+ber
+of
+Cores
+TDP
+Watt
+s
+Max
+DIM
+M
+Coun
+ts
+No-
+BP
+Liqui
+d
+Coole
+d
+Chas
+sis
+3.5" Chassis with
+Liquid Cooled Sleds
+2.5" (Direct BP) Chassis with Liquid
+Cooled Sleds
+NA 12
+HDD
+8
+HDD
+4
+HDD
+24
+HDD
+20
+HDD
+16
+HDD
+12
+HDD
+8
+HDD
+4
+HDD
+Platin
+um
+6138F 2 20 135 CPU1:
+8 |
+CPU2
+: 8
+C35 NA NA NA C35 C35 C35 C35 C35 C35
+Platin
+um
+6130F 2.1 16 135 CPU1:
+8 |
+CPU2
+: 8
+C35 NA NA NA C35 C35 C35 C35 C35 C35
+Gold 6148F 20 2.4 160 CPU1:
+8 |
+CPU2
+: 8
+C35 NA NA NA C35 C35 C35 C35 C35 C35
+Gold 6142F 16 2.6 160 CPU1:
+8 |
+CPU2
+: 8
+C35 NA NA NA C35 C35 C35 C35 C35 C35
+Gold 6126F 12 2.6 135 CPU1:
+8 |
+CPU2
+: 8
+C35 NA NA NA C35 C35 C35 C35 C35 C35
+Silver 4109T 2 8 70 CPU1:
+8 |
+CPU2
+: 8
+C35 C35 C35 C35 C35 C35 C35 C35 C35 C35
+PowerEdge C6420 has the following restrictions when deployed in a
+configuration compliant with Fresh Air:
+PERC Restriction:
+● Support 105W CPUs without H730. H330 can be supported.
+● Support 85W and less TDP CPUs without PERC restrictions.
+General restrictions
+● CPUs with TDP > 105W are not supported
+● 3.5” HDD chassis is not supported
+● NVMe SSDs are not supported
+● 114mm HSK (FMM2M) is required for CPU#1
+● OCP Mezz card is not supported
+● X8 M.2 on DCS Mezz slot is not supported
+● LR DIMMs are not supported
+● PCIe cards >25W are not supported
+Power, Thermal, and Acoustics 55
+===== PDF PAGE 56 =====
+Table 25. Configuration Restrictions with Mellanox ConnectX-4 EDR Dual Port Card with Active (Optical)
+connectivity 
+CPU TDP 3.5" Chassis 2.5" Chassis No BP
+12x HDDs 8x HDDs 4x HDDs 24x HDDs 16x HDDs 8x HDDs 4x HDDs N/A
+205W Not
+supported
+Not
+supported
+Not
+supported
+Not
+supported
+Not
+supported
+Not
+supported
+Not
+supported
+23
+200W Not
+supported
+Not
+supported
+Not
+supported
+Not
+supported
+Not
+supported
+Not
+supported
+Not
+supported
+23
+173W Not
+supported
+Not
+supported
+Not
+supported
+Not
+supported
+Not
+supported
+24 24 28
+165W Not
+supported
+Not
+supported
+Not
+supported
+24 25 25 26 29
+160W Not
+supported
+Not
+supported
+Not
+supported
+24 25 26 26 30
+150W Not
+supported
+Not
+supported
+Not
+supported
+26 27 28 28 31
+140W Not
+supported
+23 25 28 29 29 30 33
+135W Not
+supported
+24 25 29 30 30 31 33
+130W Not
+supported
+24 26 30 31 31 31 34
+125W 20 25 27 30 31 32 32 35
+115W 21 27 28 32 33 34 34 35
+113W 21 27 28 32 33 34 34 35
+105W 22 28 30 34 35 35 35 35
+85W 23 32 33 35 35 35 35 35
+70W 25 34 35 35 35 35 35 35
+56 Power, Thermal, and Acoustics
+===== PDF PAGE 57 =====
+Rack rails systems
+The rack rail systems for C6400 server provide tool-less support for 4-post racks with square or unthreaded round holes. There
+is no support for cable management arms (CMA). The static rails supports a wider variety of racks.
+Figure 8. Static rail
+The key factor in selecting the proper rails is identifying the type of rack in which they are installed. The static rail supports
+tool-less mounting in 19"-wide, EIA-310-E compliant square hole and unthreaded round hole 4-post racks. The static rail also
+supports tooled mounting in threaded-hole 4-post racks including all Dell EMC 42xx and 24xx racks.
+NOTE:  APC racks are also supported.
+Table 26. Rail adjustability range 
+Product Rail
+identifier
+Mounting
+Interface
+Rail type Rail adjustability range (mm) Rail depth
+(mm)
+without
+CMA
+Square Rounded
+Min Max Min Max
+C6400 N/A Tool-less Static 582 mm 822 mm 582 mm 822 mm 602 mm
+Other key factors governing proper rail selection include the spacing between the front and rear mounting flanges of the rack,
+the type and location of any equipment mounted in the back of the rack, such as power distribution units, and the overall depth
+of the rack. Due to their reduced complexity and lack of need for CMA support, the static rails offer a greater adjustability range
+and a smaller overall mounting footprint than the sliding rails.
+For information about installing the system in a rack, see the Dell EMC PowerEdge Rack Installation Guide  on Dell.com/
+Support/Manuals.
+9
+Rack rails systems 57
+===== PDF PAGE 58 =====
+Operating systems and virtualization
+The Dell EMC PowerEdge C6400 and C6420 supports a wide range of industry-standard operating systems and virtualization
+software.
+Topics:
+• Supported operating systems
+• Supported virtualization
+Supported operating systems
+The following table lists the supported operating systems.
+Table 27. Supported operating systems 
+Operating system Platform Edition
+Microsoft Windows Server 2016 x64 Standard Datacenter
+Microsoft Windows Server 2012 R2 x64 Standard Datacenter
+RedHat Enterprise Linux 6.9 x86 x64 N/A
+RedHat Enterprise Linux 7.3 x86 x64 N/A
+Novell SuSE Linux Enterprise Server 11
+(with PLDP) SP4 x86
+x64 N/A
+Novell SuSE Linux Enterprise Server 12
+SP2 x86
+x64 N/A
+Ubuntu 16.04 LTS x64 N/A
+Supported virtualization
+The following table lists the supported virtualization.
+Table 28. Supported virtualization 
+Operating system Install version
+VMWare vSphere 2016 U1 (ESXi 6.5 U1)
+VMWare vSphere 2015 U3 (ESXi 6.0 U3)
+Citrix Xen Server 7.1.x
+10
+58 Operating systems and virtualization
+===== PDF PAGE 59 =====
+Dell EMC OpenManage systems management
+Figure 9. Dell EMC OpenManage Portfolio
+Dell EMC delivers management solutions that help IT Administrators effectively deploy, update, monitor, and manage IT assets.
+OpenManage solutions and tools enable you to quickly respond to problems by helping them to manage Dell EMC servers
+effectively and efficiently; in physical, virtual, local, and remote environments, operating in-band, and out-of-band (agent-free).
+The OpenManage portfolio includes innovative embedded management tools such as the integrated Dell Remote Access
+Controller (iDRAC), Chassis Management Controller and Consoles like OpenManage Enterprise, OpenManage Power Manager
+plug in, and tools like Repository Manager.
+Dell EMC has developed comprehensive systems management solutions based on open standards and has integrated with
+management consoles that can perform advanced management of Dell hardware. Dell EMC has connected or integrated the
+advanced management capabilities of Dell hardware into offerings from the industry's top systems management vendors and
+frameworks such as Ansible, thus making Dell EMC platforms easy to deploy, update, monitor, and manage.
+The key tools for managing Dell EMC PowerEdge servers are iDRAC and the one-to-many OpenManage Enterprise console.
+OpenManage Enterprise helps the system administrators in complete lifecycle management of multiple generations of
+PowerEdge servers. Other tools such as Repository Manager, which enables simple yet comprehensive change management.
+OpenManage tools integrate with systems management framework from other vendors such as VMware, Microsoft, Ansible, and
+ServiceNow. This enables you to use the skills of the IT staff to efficiently manage Dell EMC PowerEdge servers.
+Topics:
+• OpenManage systems management
+• iDRAC9 with Lifecycle Controller
+• Agent-free management
+• Agent-based management
+• Dell EMC consoles
+• Automation Enablers
+• Integration with third-party consoles
+• Connections for third-party consoles
+• Dell EMC server management operations
+11
+Dell EMC OpenManage systems management 59
+===== PDF PAGE 60 =====
+OpenManage systems management
+The Dell EMC OpenManage systems management portfolio includes powerful hardware and software management tools and
+consoles. OpenManage simplifies the lifecycle of deploying, updating, monitoring and maintaining your Dell EMC PowerEdge
+servers.
+iDRAC9 with Lifecycle Controller
+The Integrated Dell Remote Access Controller 9 (iDRAC9) with Lifecycle Controller, the embedded intelligence of every Dell
+EMC PowerEdge 14th generation server, helps you manage Dell EMC servers agent-free or with a systems management
+agent, within physical, virtual, local and remote environments. iDRAC9 alerts server issues, enables remote server management
+and reduces the need to physically visit the server. iDRAC9 with Lifecycle Controller is part of Dell EMC comprehensive
+OpenManage portfolio and works as a stand-alone or in conjunction with other components such as OpenManage Essentials,
+OpenManage Mobile, OpenManage Power Center, Chassis Management Controller, and OpenManage Integrations for Microsoft,
+VMware and BMC consoles to simplify, automate and streamline IT operations.
+Dell EMC BMC and iDRAC9 feature comparison
+iDRAC9 Enterprise is available for the system. Dell EMC also offers BMC. A detailed feature comparison for Dell EMC BMC and
+iDRAC9 Express is shown in the following table
+Table 29. Feature comparison for Dell EMC BMC and iDRAC9 Enterprise 
+Feature Dell EMC BMC iDRAC9 Enterprise
+Interfaces / Standards
+IPMI 2.0 Yes Yes
+DCMI 1.5 Yes Yes
+Web-based GUI Yes Yes
+Racadm command line (local/remote) Yes Yes
+SMASH-CLP (SSH-only) Yes Yes
+Telnet Yes Yes
+SSH Yes Yes
+WSMAN Yes Yes
+RedFish API Yes Yes
+Network Time Protocol Yes Yes
+Connectivity
+Shared NIC Yes Yes
+Dedicated NIC (with Ports card) Yes Yes
+VLAN tagging Yes Yes
+IPv4 Yes Yes
+IPv6 Yes Yes
+DHCP Yes Yes
+Dynamic DNS Yes Yes
+OS pass-through Yes Yes
+Security
+Role-based authority Yes Yes
+Local users Yes Yes
+60 Dell EMC OpenManage systems management
+===== PDF PAGE 61 =====
+Table 29. Feature comparison for Dell EMC BMC and iDRAC9 Enterprise (continued)
+SSL encryption Yes Yes
+IP blocking Yes Yes
+Directory services (AD, LDAP) No Yes
+Two-factor authentication No Yes
+Single sign-on No Yes
+PK authentication Yes Yes
+14G: Configuration Lockdown No Yes
+14G: System Erase of internal storage
+devices
+Yes Yes
+Remote Presence
+Power control Yes Yes
+Boot control Yes Yes
+Serial-over-LAN Yes Yes
+Virtual Media No Yes
+Virtual Folders No Yes
+Remote File Share No Yes
+Virtual Console Yes Yes
+VNC connection to OS No Yes
+Quality/bandwidth control No Yes
+Virtual Console collaboration (6 users) No Yes
+Virtual Console chat No Yes
+Power & Thermal
+Real-time power meter Yes Yes
+Power thresholds & alerts Yes Yes
+Real-time power graphing Yes Yes
+Historical power counters Yes Yes
+Power capping Yes Yes
+Power Center integration Yes Yes
+Temperature monitoring Yes Yes
+Temperature graphing Yes Yes
+Health Monitoring
+Full agent-free monitoring Yes Yes
+Predictive failure monitoring Yes Yes
+SNMPv1, v2, and v3 (traps and gets) Yes Yes
+Email Alerting Yes Yes
+Configurable thresholds Yes Yes
+Fan monitoring Yes Yes
+Power Supply monitoring Yes Yes
+Memory monitoring Yes Yes
+Dell EMC OpenManage systems management 61
+===== PDF PAGE 62 =====
+Table 29. Feature comparison for Dell EMC BMC and iDRAC9 Enterprise (continued)
+CPU monitoring Yes Yes
+RAID monitoring (PERC) Yes Yes
+NIC monitoring Yes Yes
+HD monitoring ( (including JBOD
+enclosure)
+Yes Yes
+Out of Band Performance Monitoring No Yes
+Update
+Remote agent-free update Yes Yes
+Embedded update tools No Yes
+Sync with repository (scheduled
+updates)
+No Yes
+Auto-update No Yes
+Deployment & Configuration
+Embedded OS deployment tools No Yes
+Embedded configuration tools No Yes
+Auto-Discovery No Yes
+Remote OS deployment (vMedia) No Yes
+Embedded driver pack Yes Yes
+Full configuration inventory Yes Yes
+Inventory export Yes Yes
+Remote configuration Yes Yes
+Zerotouch configuration No Yes
+System Retire/Repurpose Yes Yes
+14G: iDRAC Connection View No Yes
+14G: BIOS configuration page in iDRAC
+GUI
+Yes Yes
+Diagnostics, Service, & Logging
+Embedded diagnostic tools Yes Yes
+Part Replacement No Yes
+Server Configuration Backup No Yes
+Server Configuration Restore Yes Yes
+Easy Restore (system configuration) -
+USB and rSPI
+Yes Yes
+Health LED only Yes Yes
+14G: Quick Sync 2.0 NA NA
+14G: iDRAC Direct 2.0 (micro USB port
+on rear)
+Yes Yes
+iDRAC Service Module (iSM) Yes Yes
+Embedded Tech Support Report Yes Yes
+Crash screen capture No Yes
+62 Dell EMC OpenManage systems management
+===== PDF PAGE 63 =====
+Table 29. Feature comparison for Dell EMC BMC and iDRAC9 Enterprise (continued)
+Crash video capture (requires iSM or
+OMSA)
+No Yes
+Boot capture No Yes
+Manual reset for iDRAC Yes Yes
+Virtual NMI Yes Yes
+OS watchdog (requires iSM or OMSA) Yes Yes
+System Event Log Yes Yes
+Lifecycle Log Yes Yes
+Work notes Yes Yes
+Remote Syslog No Yes
+License management Yes Yes
+Agent-free management
+As Dell EMC PowerEdge servers have embedded server lifecycle management, in many cases, there is no need to install an
+OpenManage systems management software agent into the operating system of a Dell EMC PowerEdge server. This greatly
+simplifies and streamlines the management footprint.
+Agent-based management
+Most systems management solutions require pieces of software, called agents, to be installed on each node in order to be
+managed within the IT environment. Additionally, the same agent is often used as a local interface into the hardware health
+and may be accessed remotely as a management interface, typically referred to as a one-to-one interface. For customers that
+continue to use agent-based solutions, Dell EMC provides OpenManage Server Administrator.
+Dell EMC consoles
+● Dell EMC OpenManage Enterprise
+● Dell EMC Repository Manager (DRM)
+● Dell EMC OpenManage Enterprise Power Manager plugin to OpenManage Enterprise
+● Dell EMC OpenManage Mobile (OMM)
+Automation Enablers
+● OpenManage Ansible Modules
+● iDRAC RESTful APIs (Redfish)
+● Standards-based APIs (Python, PowerShell)
+● RACADM Command Line Interface (CLI)
+● GitHub Scripting Libraries
+Integration with third-party consoles
+● Dell EMC OpenManage Integrations with Microsoft System Center
+● Dell EMC OpenManage Integration for VMware vCenter (OMIVV)
+● Dell EMC OpenManage Ansible Modules
+● Dell EMC OpenManage Integration with ServiceNow
+Dell EMC OpenManage systems management 63
+===== PDF PAGE 64 =====
+Connections for third-party consoles
+● Micro Focus and other HPE tools
+● OpenManage Connection for IBM Tivoli
+● OpenManage Plug-in for Nagios Core and XI
+Dell EMC server management operations
+Dell EMC OpenManage systems management is centered on automating the server management lifecycle — deploy, update,
+monitor and maintain. To manage an infrastructure properly and efficiently, you must perform all of these functions easily and
+quickly. iDRAC9 with Lifecycle Controller technology provides you with these intelligent capabilities embedded within the server
+infrastructure. This allows you to invest more time and energy on business improvements and less on maintenance.
+Figure 10. Systems management server lifecycle
+The following table lists the products that are available for one-to-one and one-to-many operations, and when they are used in
+the server’s lifecycle.
+Table 30. One-to-one and one-to-many operations 
+Operation One-to-one One-to-many
+Deploy ● Lifecycle Controller GUI
+● DTK
+● OpenManage Integration for VMware vCenter
+● OpenManage Integration for BMC BladeLogic
+● OpenManage Integration for Microsoft
+System Center Configuration Manager
+Update ● iDRAC9 with Lifecycle Controller
+● Repository Manager
+● DUP
+● SUU
+● OpenManage Integration for VMware vCenter
+● Dell EMC OpenManage Essentials
+● OpenManage Integration for Microsoft
+System Center Configuration Manager
+Monitor ● iDRAC9 with Lifecycle Controller
+● OMSA
+● Dell EMC OpenManage Essentials
+● Dell EMC OpenManage Power Center
+● OpenManage Integration for VMware vCenter
+● OpenManage Integration for Microsoft
+System Center Operations Manager
+Maintain ● iDRAC9 with Lifecycle Controller
+● IPMI
+● Lifecycle Controller Remote Services
+Remediate and replace parts:
+64 Dell EMC OpenManage systems management
+===== PDF PAGE 65 =====
+Table 30. One-to-one and one-to-many operations (continued)
+Operation One-to-one One-to-many
+● OpenManage Integration for Microsoft
+System Center Virtual Machine Manager
+(SCVMM)
+● Server Pro Management Pack and Lifecycle
+Controller Integration (DLCI)
+For additional detailed information on Dell EMC systems management portfolio, visit Dell.com/OpenManage .
+Dell EMC OpenManage systems management 65
+===== PDF PAGE 66 =====
+Appendix A. Additional specifications
+Topics:
+• Chassis dimensions
+• Power supply specifications
+• Environmental specifications
+• Video specifications
+• USB peripherals
+• PCIe card dimensions
+Chassis dimensions
+Figure 11. Chassis dimensions
+Table 31. Chassis Dimensions (mm)  
+Chassis dimensions (mm)
+Xa Xb Y Za without bezel Zb Zc
+482.6 mm 448.0 mm 86.8 mm 26.8 mm 763.2 mm 797.3 mm
+12
+66 Appendix A. Additional specifications
+===== PDF PAGE 67 =====
+Table 32. Chassis weight 
+Configuration Weight
+24 x 2.5 HDD chassis 8.7717 Kg (19.32 lb)
+12 x 3.5 HDD chassis 8.7717 Kg (19.32 lb)
+Power supply specifications
+The following table lists power supply specifications.
+Table 33. Power supply specifications 
+Specification 1600 W Platinum 2000 W Platinum 2400 W Platinum
+Power factor
+correction
+Active Active Active
+FCC
+classification
+Class A Class A Class A
+Max Output
+Current
+131.15 A (180-264 V AC)
+65.57 A (90-140 V AC)
+163.93 A (180-264 V AC)
+81.97 A (90-140 V AC)
+196.72 A (180-264 V AC)
+114.75 A (90-140 V AC)
+Input voltage
+range
+90-264 V AC 47-63 Hz 90-264 V AC 47-63 Hz 90-264 V AC 47-63 Hz
+Iin for rating
+on safety label
+10.0 A 11.5 A 16.0 A
+Initial in-rush
+current
+25 A (peak) 25 A (peak) 35 A (peak)
+Secondary in-
+rush current
+25 A (peak) 45 A (peak) 45 A (peak)
+Environmental specifications
+See Dell EMC PowerEdge C6420 Owner’s Manual on Dell.com/Support/Manuals  for detailed environmental specifications.
+Video specifications
+The Dell EMC PowerEdge C6420 iDRAC incorporates an integrated video subsystem, connected to the south bridge via PCI
+Express and internal PCIe Switch and PCIe to PCI Bridge. The graphics controller is the 2D Matrox® G200. The video frame
+buffer (16MB) is contained within the iDRAC RAM (256MB) device. The system supports the 2D graphics video modes listed in
+the following table.
+Table 34. Supported video resolution options 
+Resolution Refresh rate (Hz) Color depth (bits)
+640 x 480 60, 72 8, 16, 24
+800 x 600 60, 75, 85 8, 16, 24
+1024 x 768 60, 75, 85 8, 16, 24
+1152 x 864 60, 75, 85 8, 16, 24
+1280 x 1024 60, 75 8, 16, 24
+Appendix A. Additional specifications 67
+===== PDF PAGE 68 =====
+USB peripherals
+USB peripherals are supported through the front USB ports on the C6420 sled. The ports are USB 3.0 compliant. The system
+also supports Micro USB for iDRAC direct.
+PCIe card dimensions
+The following table provides the dimensions of the PCIe cards supported by the C6420.
+Table 35. PCIe card dimensions 
+Type Height Length
+Half-height, half-length
+card
+68.90 mm (2.731 inches) max 167.65 mm (6.600 inches) max
+68 Appendix A. Additional specifications
+===== PDF PAGE 69 =====
+Appendix B. Standards compliance
+The Dell EMC PowerEdge C6400 and C6420 conforms to the following industry standards.
+Table 36. Industry standard documents 
+Standard URL for information and specifications
+ACPI  Advance Configuration and Power Interface
+Specification, v2.0c
+acpi.info
+Ethernet  IEEE 802.3-2005 standards.ieee.org/getieee802/802.3.html
+HDG Hardware Design Guide Version 3.0 for Microsoft
+Windows Server
+microsoft.com/whdc/system/platform/pcdesign/desguide/
+serverdg.mspx
+IPMI  Intelligent Platform Management Interface, v2.0 intel.com/design/servers/ipmi
+DDR4 Memory  DDR4 SDRAM Specification jedec.org/standards-documents/docs/jesd79-4.pdf
+PCI Express  PCI Express Base Specification Rev. 2.0 and 3.0 pcisig.com/specifications/pciexpress
+PMBus  Power System Management Protocol Specification,
+v1.2
+pmbus.info/specs.html
+SAS Serial Attached SCSI, v1.1 t10.org
+SATA  Serial ATA Rev. 2.6; SATA II, SATA 1.0a Extensions,
+Rev. 1.2
+sata-io.org
+SMBIOS  System Management BIOS Reference Specification,
+v2.7
+dmtf.org/standards/smbios
+TPM Trusted Platform Module Specification, v1.2 and v2.0 trustedcomputinggroup.org
+UEFI  Unified Extensible Firmware Interface Specification, v2.1 uefi.org/specifications
+USB Universal Serial Bus Specification, Rev. 2.0 usb.org/developers/docs
+13
+Appendix B. Standards compliance 69
+===== PDF PAGE 70 =====
+Appendix C Additional resources
+The following table provides a list of documents and web sites that provide more information.
+Table 37. Additional resources 
+Resource Description of contents Location
+PowerEdge Istallation and
+Service Manual
+This manual, available in PDF format, provides the following
+information:
+● Chassis features
+● System Setup program
+● System messages
+● System codes and indicators
+● System BIOS
+● Remove and replace procedures
+● Troubleshooting
+● Diagnostics
+● Jumpers and connectors
+Dell.com/Support/Manuals
+PowerEdge Getting Started
+Guide
+This guide ships with the system, and is also available in PDF
+format. This guide provides the following information:
+● Initial setup steps
+● Key system features
+● Technical specifications
+Dell.com/Support/Manuals
+Rack Installation Instructions This document ships with the rack kits, and provides
+instructions for installing a server in a rack.
+Dell.com/Support/Manuals
+Information Update This document ships with the system, is also available in PDF
+format online, and provides information on system updates.
+Dell.com/Support/Manuals
+System Information Label The system information label documents the system board
+layout and system jumper settings. Text is minimized due
+to space limitations and translation considerations. The label
+size is standardized across platforms.
+Inside the system chassis
+cover
+Quick Resource Locator (QRL) This code on the chassis can be scanned by a phone
+application to access additional information and resources for
+the server, including videos, reference materials, service tag
+information, and Dell contact information.
+Inside the system chassis
+cover
+Enterprise Infrastructure
+Planning Tool (EIPT)
+The Dell online EIPT enables easier and more meaningful
+estimates to help you determine the most efficient
+configuration possible. Use EIPT to calculate the power
+consumption of your hardware, power infrastructure, and
+storage.
+Dell.com/calc
+14
+70 Appendix C Additional resources
+===== PDF PAGE 71 =====
+Appendix D. Support and Deployment
+Services
+Dell EMC Global Services include a wide, customizable range of service choices to simplify the assessment, design,
+implementation, management and maintenance of your IT environment and to help you transition from platform to platform.
+Depending on your current business requirements and the level of service you want, we can provide you with factory, on-site,
+remote, modular and specialized services that fit your needs and budget. We'll help you with a little or a lot - your choice - and
+provide you with access to our global resources.
+Topics:
+• Server Deployment Services
+• Remote Consulting Services
+• ProSupport Enterprise Suite
+• Additional professional services
+Server Deployment Services
+Our Server Deployment Services can maximize the value of your servers quickly using our expert server deployment engineers.
+With over 10,000 server deployment projects each year, we have experience, best practices, and comprehensive deployment
+tools to install, configure, and integrate your new solution optimally and correctly. Our deployment experts will assess your
+environment and understand your goals, then design and integrate your server solution for you.
+Table 38. Server deployment capabilities 
+Server Installation Server Integration
+Place single server in target workspace Yes
+Rack, cable, and label servers Yes
+Install image Yes
+Connect to network Yes Yes
+Test and validate connection Yes Yes
+Install operating system Yes
+Install applications Yes
+Perform advanced configuration services Yes
+Remote configuration services Yes
+Virtualization Yes
+Converged infrastructure Yes
+Test and validate data center integration Yes
+Remote Consulting Services
+When you are in the final stages of your PowerEdge server implementation, you can rely on Dell EMC Remote Consulting and
+our certified technical experts to help you optimize your configuration with best practices for your software, virtualization,
+server, storage, networking, and systems management.
+15
+Appendix D. Support and Deployment Services 71
+===== PDF PAGE 72 =====
+Data Migration Service
+Protect your business and data with our single point of contact to manage your data migration project. Your project manager will
+work with our experienced team of experts to create a plan using industry-leading tools and proven processes based on global
+best practices to migrate your existing files and data, so your business gets up and running quickly and smoothly.
+ProSupport Enterprise Suite
+With Dell EMC ProSupport Services, we can help you keep your operation running smoothly, so you can focus on running your
+business. We will help you maintain peak performance and availability of your most essential workloads. Dell EMC ProSupport
+is a suite of support services that enable you to build the solution that is right for your organization. Choose support models
+based on how you use technology and where you want to allocate resources. From the desktop to the data center, address
+everyday IT challenges, such as unplanned downtime, mission-critical needs, data and asset protection, support planning,
+resource allocation, software application management and more. Optimize your IT resources by choosing the right support
+model.
+Figure 12. ProSupport Enterprise Suite
+ProSupport Plus
+When you purchase your PowerEdge server, we recommend ProSupport Plus, our proactive and preventative support for your
+business-critical systems. Dell EMC ProSupport Plus provides you with all the benefits of ProSupport, plus access to a dedicated
+Technical Account Manager and our elite ProSupport Plus engineers. ProSupport Plus gives you quick and efficient resolutions,
+working along with our SupportAssist  technology that enables us to get ahead of issues in your environment before they
+become problems.
+72 Appendix D. Support and Deployment Services
+===== PDF PAGE 73 =====
+ProSupport
+Our ProSupport service offers highly trained experts around the clock and around the globe to address your IT needs. We will
+help you minimize disruptions and maximize availability of your PowerEdge server workloads with:
+● 24x7x365 access to certified hardware experts
+● Collaborative support assistance with over 195 third-party vendors
+● Hypervisor and operating system support
+● Onsite parts and labor response options including next business day or four-hour mission critical
+ProSupport Flex for Data Center
+Dell EMC ProSupport Flex for Data Center offers flexible site-wide support for hyperscale data centers with more than 1,000
+assets. Built on standard Dell EMC ProSupport components, Flex for Data Center leverages our global scale while being tailored
+to suit your needs. While not for everyone, it offers a flexible solution for those with large and complex environments. When you
+choose Dell EMC ProSupport Flex for Data Center, you will get:
+● Enterprise-wide support that covers your entire data center.
+● A dedicated Technical Account Manager with remote, on-site, part-time and full-time options.
+● Dedicated elite ProSupport Flex technical and field engineers who are trained on your environment and configurations.
+● Flexible on-site support and parts options that fit your operational model
+● A tailored support plan for your operations staff.
+Figure 13. ProSupport Enterprise Suite comparison
+Additional professional services
+Dell EMC Education Services
+Dell EMC Education Services offers the PowerEdge server training courses designed to help you achieve more with your
+hardware investment. The curriculum is designed in conjunction with the server development team, as well as Dell EMC’s
+technical support team, to ensure that the training delivers the information and practical, hands-on skills you and your team
+need to confidently manage and maintain your Dell EMC server solution.
+Appendix D. Support and Deployment Services 73
+===== PDF PAGE 74 =====
+Dell EMC Global Infrastructure Consulting Services
+Dell EMC Global Infrastructure Consulting Services use skilled solution architects, innovative tools, automated analysis and Dell
+EMC’s intellectual property to give you rapid insight into the root causes of unnecessary complexity. We seek better answers
+than traditional service models, and our strategy is to help you quickly identify high-impact, short-duration projects that deliver
+return on investment (ROI) and free up resources. The results are practical, action-oriented plans with specific, predictable,
+measurable outcomes. From data center optimization to server virtualization to systems management, our consulting services
+can help you build a more efficient enterprise.
+Dell EMC managed services
+Dell EMC Managed Services are a modular set of lifecycle services designed to help you automate and centrally configure,
+deploy, and manage your day-to-day data center operations. These services extend your existing on-premise IT infrastructure
+with off-premise cloud services designed to better address challenges with mobility, highly distributed organizations, security,
+compliance, business continuity, and disaster preparedness.
+74 Appendix D. Support and Deployment Services
