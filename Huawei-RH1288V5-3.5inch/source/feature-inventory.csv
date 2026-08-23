@@ -1,0 +1,28 @@
+face,feature,expected_count,state,geometry_requirement,source_lock,qa_priority
+front,rack ears,2,present,separate protruding geometry with mounting holes,exact front sources,critical
+front,LFF carrier bays,4,installed,deep recessed bay frames and separate carrier handles,exact 4LFF sources,critical
+front,carrier ventilation fields,4,present,modeled perforation/vent geometry or dark inset plus repeated geometry,exact 4LFF sources,high
+front,Huawei flower mark and HUAWEI wordmark,1,present,retained as evidence-matched marking,exact front sources,high
+front,1288H V5 product marking,1,present,retained without unit serial information,exact front sources,critical
+front,front controls/status cluster,1,present,separate button/indicator/USB geometry at right ear/front edge,official and exact front sources,high
+rear,external PCIe/riser openings,3,closed,three distinct recessed/perforated rear faces,exact rear sources,critical
+rear,FlexIO/LOM area,1,present,separate port and cage geometry in evidence order,official rear diagrams and exact rear,critical
+rear,service I/O group,1,present,VGA/USB/management/serial shapes in evidence order,official rear diagrams,critical
+rear,hot-swap AC PSUs,2,installed,separate PSU bodies with fan grille/C14 inlet/handle and latch,exact dual-900W specimen,critical
+rear,AC C14 inlets,2,present,recessed inlet geometry; no DC terminal blocks,exact dual-900W specimen,critical
+rear,PSU fan grilles,2,present,circular fan detail and perforation field,exact rear specimen,high
+top,main cover,1,closed,separate thin cover above chassis body,exact top specimen,critical
+top,center cover latch,1,present,raised/indented latch geometry,exact top specimen,high
+top,rear vent band,1,present,repeated slot geometry across evidence-matched span,exact top specimen,high
+top,mid/front vent band,1,present,repeated slot geometry across evidence-matched span,exact top specimen,high
+top,cover seams,2,present,visible panel breaks at measured proportional positions,exact top specimen,high
+top,regulatory/instruction label zones,limited,present only as non-unit-specific graphic blocks,no readable serial/barcode invention,exact specimen plus omission policy,medium
+left,side wall,1,present,separate wall with independent endpoint/rail-relief details,multi-reference reconstruction,high
+left,rail relief/fasteners,several,present only where supported,shallow geometric features not mirrored from right,multi-reference reconstruction,medium
+right,side wall,1,present,separate wall with independent PSU-side endpoint details,multi-reference reconstruction,high
+right,rail relief/fasteners,several,present only where supported,shallow geometric features not mirrored from left,multi-reference reconstruction,medium
+bottom,base plate,1,fallback,plain galvanized base matching authoritative footprint,controlled fallback,critical
+bottom,manufacturing seams,rationalized,fallback,conservative shallow seams only; no invented service panels,controlled fallback,medium
+all,visible chassis depth,748 mm,locked,model bounds must preserve 3.5-inch chassis depth,official user guide,critical
+all,body dimensions,436 x 43 x 748 mm,locked,body bounds and rack-ear span audit,official user guide,critical
+all,internal fan modules,7,documented not exposed,do not expose through closed cover beyond vent darkness,official datasheet/user guide,low

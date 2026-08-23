@@ -1,0 +1,62 @@
+{
+  "model": "Huawei-RH1288V5-3.5inch-web.glb",
+  "engines": [
+    "Three.js 0.180.0",
+    "Babylon.js CDN current at capture"
+  ],
+  "views": {
+    "front": {
+      "mean_absolute_rgb_difference_0_to_255": 1.68812,
+      "p95_absolute_difference": 7,
+      "max_absolute_difference": 219
+    },
+    "rear": {
+      "mean_absolute_rgb_difference_0_to_255": 3.62882,
+      "p95_absolute_difference": 28,
+      "max_absolute_difference": 219
+    },
+    "left": {
+      "mean_absolute_rgb_difference_0_to_255": 2.60132,
+      "p95_absolute_difference": 8,
+      "max_absolute_difference": 221
+    },
+    "right": {
+      "mean_absolute_rgb_difference_0_to_255": 2.84662,
+      "p95_absolute_difference": 7,
+      "max_absolute_difference": 225
+    },
+    "top": {
+      "mean_absolute_rgb_difference_0_to_255": 1.84096,
+      "p95_absolute_difference": 3,
+      "max_absolute_difference": 219
+    },
+    "bottom": {
+      "mean_absolute_rgb_difference_0_to_255": 1.63574,
+      "p95_absolute_difference": 4,
+      "max_absolute_difference": 219
+    },
+    "frontLeft": {
+      "mean_absolute_rgb_difference_0_to_255": 7.52269,
+      "p95_absolute_difference": 37,
+      "max_absolute_difference": 221
+    },
+    "frontRight": {
+      "mean_absolute_rgb_difference_0_to_255": 7.57037,
+      "p95_absolute_difference": 37,
+      "max_absolute_difference": 221
+    },
+    "rearLeft": {
+      "mean_absolute_rgb_difference_0_to_255": 7.48882,
+      "p95_absolute_difference": 40,
+      "max_absolute_difference": 223
+    },
+    "rearRight": {
+      "mean_absolute_rgb_difference_0_to_255": 7.55441,
+      "p95_absolute_difference": 40,
+      "max_absolute_difference": 228
+    }
+  },
+  "overall_mean_absolute_rgb_difference_0_to_255": 4.43779,
+  "status": "PASS",
+  "note": "Lighting implementation differs slightly; topology, orientation, textures, and silhouette are visually matched."
+}
