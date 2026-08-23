@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>R7525 Babylon QA Viewer</title>
+<style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#20252b}canvas{width:100%;height:100%;display:block}#status{position:fixed;left:12px;top:10px;padding:6px 9px;background:#fffD;color:#17202a;font:12px/1.3 sans-serif;border-radius:4px;z-index:2}</style>
+</head><body><div id="status">loading</div><canvas id="c"></canvas>
+<script src="./vendor/babylon.js"></script><script src="./vendor/babylonjs.loaders.min.js"></script><script>
+(async()=>{
+const p=new URLSearchParams(location.search),variant=p.get('model')==='web'?'web':'standard',view=p.get('view')||'front';
+const file=variant==='web'?'Dell-R7525-2.5inch-web.glb':'Dell-R7525-2.5inch.glb';
+const canvas=document.getElementById('c'),engine=new BABYLON.Engine(canvas,true,{preserveDrawingBuffer:true,stencil:true,alpha:true});
+engine.loadingScreen.displayLoadingUI=()=>{};engine.loadingScreen.hideLoadingUI=()=>{};
+engine.setHardwareScalingLevel(1);const scene=new BABYLON.Scene(engine);scene.useRightHandedSystem=true;scene.clearColor=new BABYLON.Color4(0.08,0.10,0.12,1);
+const camera=new BABYLON.FreeCamera('qa-camera',new BABYLON.Vector3(0,0,2),scene);camera.mode=BABYLON.Camera.ORTHOGRAPHIC_CAMERA;scene.activeCamera=camera;
+const hemi=new BABYLON.HemisphericLight('hemi',new BABYLON.Vector3(0,1,0),scene);hemi.intensity=1.45;const key=new BABYLON.DirectionalLight('key',new BABYLON.Vector3(-1,-1,-1),scene);key.intensity=1.2;
+const specs={front:[[0,0,1],[0,1,0]],rear:[[0,0,-1],[0,1,0]],left:[[-1,0,0],[0,1,0]],right:[[1,0,0],[0,1,0]],top:[[0,1,0],[0,0,-1]],bottom:[[0,-1,0],[0,0,-1]],front_left:[[-1,.55,1],[0,1,0]],front_right:[[1,.55,1],[0,1,0]],rear_left:[[-1,.55,-1],[0,1,0]],rear_right:[[1,.55,-1],[0,1,0]]};
+const started=performance.now();await BABYLON.SceneLoader.AppendAsync('../../model/',file,scene);engine.hideLoadingUI();
+let min=new BABYLON.Vector3(Infinity,Infinity,Infinity),max=new BABYLON.Vector3(-Infinity,-Infinity,-Infinity);scene.meshes.forEach(m=>{if(!m.getTotalVertices())return;m.computeWorldMatrix(true);const b=m.getBoundingInfo().boundingBox;min=BABYLON.Vector3.Minimize(min,b.minimumWorld);max=BABYLON.Vector3.Maximize(max,b.maximumWorld)});
+const center=min.add(max).scale(.5),size=max.subtract(min),radius=size.length();const spec=specs[view]||specs.front,dir=BABYLON.Vector3.FromArray(spec[0]).normalize(),up=BABYLON.Vector3.FromArray(spec[1]).normalize();camera.position=center.add(dir.scale(Math.max(2,radius*3)));camera.upVector=up;camera.setTarget(center);camera.getViewMatrix(true);
+const corners=[];for(const x of [min.x,max.x])for(const y of [min.y,max.y])for(const z of [min.z,max.z])corners.push(BABYLON.Vector3.TransformCoordinates(new BABYLON.Vector3(x,y,z),camera.getViewMatrix()));
+const xs=corners.map(v=>v.x),ys=corners.map(v=>v.y),w=Math.max(...xs)-Math.min(...xs),h=Math.max(...ys)-Math.min(...ys),aspect=engine.getRenderWidth()/engine.getRenderHeight(),halfH=Math.max(h/2,w/(2*aspect))*1.12;camera.orthoLeft=-halfH*aspect;camera.orthoRight=halfH*aspect;camera.orthoTop=halfH;camera.orthoBottom=-halfH;scene.render();
+window.__LOAD_EVIDENCE__={viewer:'Babylon.js',variant,view,url:'../../model/'+file,loadMs:+(performance.now()-started).toFixed(2),meshCount:scene.meshes.length,materialCount:scene.materials.length};document.getElementById('status').textContent=`Babylon.js · ${variant} · ${view}`;document.body.dataset.ready='1';engine.runRenderLoop(()=>scene.render());
+})().catch(e=>{document.body.dataset.error=String(e);document.getElementById('status').textContent='ERROR '+e;});
+</script></body></html>

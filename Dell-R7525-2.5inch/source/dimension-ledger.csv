@@ -1,0 +1,14 @@
+subject,field,source_value,normalized_mm,inclusion_or_interpretation,source,confidence
+24-drive complete assembly,Xa overall width,"482.0 mm (18.97 in)",482.0,front rack-ear outer span,technical-specifications page 5 / Dell chassis dimensions page,verified
+24-drive chassis body,Xb body width,"434.0 mm (17.08 in)",434.0,rear/body sheet-metal width excluding rack-ear extensions,technical-specifications page 5 / Dell chassis dimensions page,verified
+24-drive complete assembly,Y height,"86.8 mm (3.41 in)",86.8,actual 2U chassis height,technical-specifications page 5 / Dell chassis dimensions page,verified
+LCD-bezel projection,Za with bezel,"35.84 mm (1.4 in)",35.84,rack-ear plane to installed bezel outermost point,technical-specifications page 5,verified
+unbezeled front projection,Za without bezel,"22.0 mm (0.87 in)",22.0,rack-ear plane to carrier/ear outermost point without bezel,technical-specifications page 5,verified
+rear wall position,Zb,"700.7 mm (27.58 in)",700.7,rack-ear plane to nominal rear-wall I/O surface,technical-specifications page 5,verified
+rear PSU handle position,Zc,"736.29 mm (28.98 in)",736.29,rack-ear plane to rear PSU handle outermost point,technical-specifications page 5,verified
+complete installed assembly,overall depth derived,"35.84 + 736.29 mm",772.13,bezel outermost point to PSU handle outermost point; no CMA/rails,derived from official Za and Zc,verified-derived
+unbezeled assembly,overall depth derived,"22.0 + 736.29 mm",758.29,carrier/ear front outermost point to PSU handle outermost point,derived from official Za and Zc,verified-derived
+rack ears,extension each side,"(482.0 - 434.0) / 2",24.0,lateral extension from body to each ear outer edge,derived from official Xa/Xb,verified-derived
+rear PSU handle,projection behind rear wall,"736.29 - 700.7 mm",35.59,maximum rear protrusion,derived from official Zb/Zc,verified-derived
+24 x 2.5 fully populated chassis,maximum weight,"28.6 kg (63.05 lb)",28600,documentation only; not used for scaling,technical-specifications page 6,verified
+

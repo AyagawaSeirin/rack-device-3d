@@ -1,0 +1,761 @@
+      Dell EMC PowerEdge R7525 
+      Technical Specifications
+      Regulatory Model: E68S
+      Regulatory Type: E68S001
+      August 2025
+      Rev. A10
+     Notes, cautions, and warnings
+       NOTE: A NOTE indicates important information that helps you make better use of your product.
+       CAUTION: A CAUTION indicates either potential damage to hardware or loss of data and tells you how to avoid 
+       the problem.
+       WARNING: A WARNING indicates a potential for property damage, personal injury, or death.
+     © 2020 - 2022 Dell Inc. or its subsidiaries. All rights reserved. Dell, EMC, and other trademarks are trademarks of Dell Inc. or its subsidiaries. 
+     Other trademarks may be trademarks of their respective owners.
+                                                                                        Contents
+               Chapter 1: Technical specifications............................................................................................... 4
+                  Chassis dimensions............................................................................................................................................................. 5
+                  Chassis weight..................................................................................................................................................................... 6
+                  Processor specifications.................................................................................................................................................... 6
+                  PSU specifications.............................................................................................................................................................. 6
+                  Supported operating systems...........................................................................................................................................7
+                  Cooling fan specifications..................................................................................................................................................7
+                  System battery specifications.......................................................................................................................................... 9
+                  Expansion card riser specifications................................................................................................................................. 9
+                  Memory specifications......................................................................................................................................................10
+                  Storage controller specifications.................................................................................................................................... 11
+                  Drive specifications............................................................................................................................................................ 11
+                    Drives............................................................................................................................................................................... 11
+                  Ports and connectors specifications.............................................................................................................................12
+                    USB ports specifications............................................................................................................................................ 12
+                    NIC port specifications............................................................................................................................................... 12
+                    Serial connector specifications.................................................................................................................................12
+                    VGA ports specifications............................................................................................................................................12
+                    IDSDM............................................................................................................................................................................. 13
+                  Video specifications...........................................................................................................................................................13
+                  Environmental specifications...........................................................................................................................................13
+                    Thermal air restrictions...............................................................................................................................................15
+                    Thermal restriction matrix..........................................................................................................................................16
+                    Particulate and gaseous contamination specifications....................................................................................... 21
+                                                                                               Contents      3
+                                                              1
+                                Technical specifications
+     The technical and environmental specifications of your system are outlined in this section.
+     Topics:
+     • Chassis dimensions
+     • Chassis weight
+     • Processor specifications
+     • PSU specifications
+     • Supported operating systems
+     • Cooling fan specifications
+     • System battery specifications
+     • Expansion card riser specifications
+     • Memory specifications
+     • Storage controller specifications
+     • Drive specifications
+     • Ports and connectors specifications
+     • Video specifications
+     • Environmental specifications
+     4   Technical specifications
+          Chassis dimensions
+          Figure 1. Chassis dimensions
+          Table 1. PowerEdge R7525 
+           Drives              Xa                       Xb                Y                Za                Zb                 Zc
+           12 drives           482.0 mm                 434.0 mm          86.8 mm          With bezel:       700.7 mm           736.29 mm
+                               (18.97 inches)           (17.08 inches)    (3.41 inches)    35.84 mm (1.4     (27.58 inches)     (28.98 inches)
+                                                                                           inches)
+                                                                                                             (Ear to rear       (Ear to PSU 
+                                                                                           Without bezel:  wall)                handle)
+                                                                                           22.0 mm (0.87 
+                                                                                           inches)
+           24 drives           482.0 mm                 434.0 mm          86.8 mm          With bezel:       700.7 mm           736.29 mm
+                               (18.97 inches)           (17.08 inches)    (3.41 inches)    35.84 mm (1.4     (27.58 inches)     (28.98 inches)
+                                                                                           inches)
+                                                                                                             (Ear to rear       (Ear to PSU 
+                                                                                           Without bezel:  wall)                handle)
+                                                                                           22.0 mm (0.87 
+                                                                                           inches)
+              NOTE: Zb is the nominal rear wall external surface where the system board I/O connectors reside.
+                                                                                                            Technical specifications           5
+         Chassis weight
+         Table 2. PowerEdge R7525 
+          System configuration                                      Maximum weight (with all drives/SSDs)
+          12 x 3.5-inch                                             36.3 kg (80.02 lb)
+          8 x 3.5-inch                                              33.2 kg (73.19 lb)
+          24 x 2.5-inch                                             28.6 kg (63.05 lb)
+          16 x 2.5-inch                                             26.6 kg (58.64 lb)
+          8 x 2.5-inch                                              24.6 kg (54.23 lb)
+         Processor specifications
+         Table 3. PowerEdge R7525 processor specifications  
+          Supported processor                                       Number of processors supported
+          AMD EPYC 7002 or 7003 series processor                    Two
+         PSU specifications
+         The PowerEdge R7525 system supports up to two AC or DC power supply units (PSUs).
+             WARNING: Instructions for the qualified electricians only:
+             System using -(48-60) V DC or 240 V DC power supplies are intended for restricted access locations in 
+             accordance with Articles 110-5, 110-6, 110-11, 110-14, and 110-17 of the National Electrical Code, American 
+             National Standards Institute (ANSI)/National Fire Protection Association (NFPA) 70.
+             240 V DC power supplies shall be connected to the 240 V DC outlet from certified power distribution units if 
+             applicable in country of use.
+             Power supply cords/jumper cords and the associated plugs/inlets/connectors shall have appropriate electrical 
+             ratings referencing the rating label on the system when used for connection.
+         Table 4. PowerEdge R7525 PSU specifications 
+          PSU                Class (AC only)    Heat dissipation    Frequency          Voltage             Current
+                                                (maximum)
+          800 W Mixed Mode Platinum             3000 BTU/hr         50/60 Hz           100 -240 V AC       9.2 - 4.7 A
+                             N/A                                    DC                 240 V DC            3.8 A
+          1100 W Mixed       Titanium           4100 BTU/hr         50/60 Hz           100–240 V AC        12 A-6.3 A (X2)
+          Mode               N/A                                    DC                 240 V DC            5.2 A DC
+          1100 W (-48Vdc)    N/A                4265 BTU/hr         DC                 (-48)-(-60) V DC    27 A
+          1400 W Mixed       Platinum           5250 BTU/hr         50/60 Hz           100 - 240 V AC      12 - 8 A AC
+          Mode               N/A                                    DC                 240 V DC            6.6 A DC
+          2400W Mixed        Platinum           9000 BTU/hr         50/60 Hz           100 - 240 V AC      13.5 - 11 A AC
+          Mode               N/A                                    DC                 240 V DC            11.2 A DC
+             NOTE: If a system with AC 1400 W PSU operate at low line 100-120 V AC, then the power rating per PSU is derated to 
+             1050 W.
+         6      Technical specifications
+            NOTE: : If a system with AC 2400 W PSU operate at low line 100-120 V AC, then the power rating per PSU is derated to 
+            1400 W.
+            NOTE: When selecting or upgrading the system configuration, to ensure optimum power utilization, verify the system 
+            power consumption with the Dell Energy Smart Solution Advisor available at Dell.com/ESSA.
+        Supported operating systems
+        The PowerEdge R7525 supports the following operating systems:
+        ● Canonical Ubuntu Server LTS
+        ● Citrix XenServer
+        ● Microsoft Windows Server with Hyper-V
+        ● Red Hat Enterprise Linux
+        ● SUSE Linux Enterprise Server
+        ● VMware vSAN/ESXi
+        For more information, see www.dell.com/ossupport.
+        Cooling fan specifications
+        The PowerEdge R7525 system supports up to six (STD), high performance silver grade (HPR (Silver)), or high performance 
+        gold grade (HPR (Gold)) cooling fans.
+        Table 5. Cooling fan specifications 
+         Fan type     Abbreviation           Also known as       Label color  Label image
+         Standard     STD                    STD                 No label
+         fan 
+         High-        HPR (Silver)           HPR                 Silver          NOTE: New cooling fans comes with 
+         performanc                                                              the High Performance Silver Grade label. 
+         e fan (Silver                                                           While the older cooling fans has the High 
+         grade) fan                                                              Performance label.
+                                                                                        Technical specifications     7
+        Table 5. Cooling fan specifications (continued)
+         Fan type     Abbreviation           Also known as       Label color  Label image
+                                                                              Figure 2. High performance fan
+                                                                              Figure 3. High performance (Silver 
+                                                                              grade) fan
+         High-        HPR (Gold)             VHP - Very High     Gold            NOTE: New cooling fans comes with 
+         performanc                          Performance                         the High Performance Gold Grade label. 
+         e fan (Gold                                                             While the older cooling fans has the High 
+         grade) fan                                                              Performance label.
+                                                                              Figure 4. Very high performance fan
+        8       Technical specifications
+          Table 5. Cooling fan specifications (continued)
+           Fan type         Abbreviation                  Also known as            Label color      Label image
+                                                                                                    Figure 5. High performance (Gold grade) 
+                                                                                                    fan
+               NOTE: Mixing of STD, HPR (Silver), or HPR (Gold) fan is not supported.
+               NOTE: The STD, HPR (Silver), or HPR (Gold) fan installation depends on the system configuration. For more information 
+               about the supported fan configuration or matrix, see Thermal restriction matrix.
+          System battery specifications
+          The PowerEdge R7525 system supports CR 2032 3.0-V lithium coin cell system battery.
+          Expansion card riser specifications
+               WARNING: Consumer-Grade GPU should not be installed or used in the Enterprise Server products.
+          The PowerEdge R7525 system supports up to eight PCI express (PCIe) Gen 4 expansion cards.
+          Table 6. Expansion card slots supported on the system board 
+            PCI       With         PCIe 
+             e      Regular         slot       R1a       R1b        R1c         R2a         R3a          R3b         R4a         R4b          R4c
+            slot     shroud       length
+                       Low          Low 
+                   profile and    profile 
+            Slot       Full       and Full                x8        x16
+              1      Height-      Height- 
+                       Half         Half 
+                     Length       Length
+                       Low          Full 
+                   profile and  Height-3
+            Slot       Full       /4 and      x16(GP      x8        x16
+             2       Height-        Full        U)
+                       Half       Length
+                     Length
+            Slot       Low                                                       x16
+             3       profile-
+                                                                                                                Technical specifications             9
+          Table 6. Expansion card slots supported on the system board (continued)
+            PCI       With         PCIe 
+             e      Regular         slot       R1a       R1b        R1c         R2a         R3a          R3b         R4a         R4b          R4c
+            slot     shroud       length
+                       Half 
+                     Length
+                       Low 
+                   profile and 
+            Slot       Full                                                                               x8
+             4       Height- 
+                       Half 
+                     Length
+                       Low          Full 
+                   profile and  Height-3
+            Slot       Full       /4 and                                                  x16(GPU         x8
+             5       Height-        Full                                                      )
+                       Half       Length
+                     Length
+                       Low 
+            Slot     profile-                                                    x16
+             6         Half 
+                     Length
+                       Low          Full 
+                   profile and  Height-3
+            Slot       Full       /4 and                                                                          x16(GPU         x8           x16
+              7      Height-        Full                                                                               )
+                       Half       Length
+                     Length
+                       Low          Low 
+                   profile and    profile 
+            Slot       Full       and Full                                                                                        x8           x16
+             8       Height-      Height- 
+                       Half         Half 
+                     Length       Length
+          Memory specifications
+          The PowerEdge R7525 system supports the following memory specifications for optimized operation.
+          Table 7. Memory specifications 
+           DIMM type          Rank         Capacity               DIMM rated voltage and speed                 Operating Speed on AMD 
+                                                                                                               EPYC™ processor
+                                                                                                               1 DIMM per          2 DIMMs per 
+                                                                                                               channel             channel (2DPC)
+                                                                                                               (1DPC)
+           RDIMM              1R           8 GB                   DDR4 (1.2V), 3200 MT/s                       3200 MT/s           2933 MT/s
+                              2R           16 GB, 32 GB, 64       DDR4 (1.2V), 3200 MT/s                       3200 MT/s           2933 MT/s
+                                           GB
+           LRDIMM             4 R          128 GB                 DDR4 (1.2 V), 3200 MT/s                      3200 MT/s           2933 MT/s
+                              8R           128 GB                 DDR4 (1.2V), 2666 MT/s                       2666 MT/s           2666 MT/s
+                              8R           128 GB                 DDR4 (1.2V), 3200 MT/s                       3200 MT/s           2933 MT/s
+               NOTE: The older 32 GB capacity RDIMM memory with x4 data width and 8Gb DRAM density cannot be mixed with the 
+               newer 32GB capacity RDIMM memory with x8 data width and 16Gb DRAM density in the same AMD EPYC™ processor unit.
+          10        Technical specifications
+              NOTE: The older 128 GB capacity LRDIMM memory at 2666 MT/s speed cannot be mixed with the new 128 GB capacity 
+              LRDIMM memory at 3200 MT/s speed.
+         Table 8. Memory module sockets 
+                         Memory module sockets                                                   Speed
+                                32, 288-pin                                        3200 MT/s, 2933 MT/s, 2666 MT/s
+         Storage controller specifications
+         The PowerEdge R7525 system supports the following controller cards:
+         Table 9. PowerEdge R7525 system controller cards 
+          Internal controllers                                           External controllers
+          ● PERC H755                                                    ● 12Gbps SAS Ext. HBA
+          ● PERC H755N                                                   ● PERC H840
+          ● PERC H745                                                    ● HBA355E
+          ● PERC H345
+          ● HBA345
+          ● HBA355
+          ● S150
+          ● Boot Optimized Storage Subsystem (BOSS-S1): HWRAID 
+              2 x M.2 SSDs
+          ● Boot Optimized Storage Subsystem (BOSS-S2): HWRAID 
+              2 x M.2 SSDs
+         Table 10. PowerEdge R7525 Front PERC and Adapter PERC support on back planes  
+          Front PERC                                                     Adapter PERC
+          8 x 3.5 inches SAS/SATA                                        12 x 3.5 inches SAS/SATA
+          16 x 2.5 inches SAS/SATA                                       12 x 3.5 inches + Rear 2 x 2.5 inches
+          24 x 2.5 inches (16 SAS/SATA X 2.5 inches + 8 X 2.5 inches     12 x 3.5 inches + Rear 2 x 2.5 inches NVME
+          NVME)
+          8 x 2.5 inches NVMe                                            16 x 2.5 inches SAS/SATA
+         Drive specifications
+         Drives
+         The PowerEdge R7525 system supports:
+         ● 8 x 3.5-inch hot-swappable SAS, SATA drives.
+         ● 8 x 2.5 inch NVMe drives.
+         ● 12 x 3.5-inch hot-swappable SAS, SATA drives.
+         ● 16 x 2.5-inch hot-swappable SAS, SATA drives.
+         ● 24 x 2.5-inch hot-swappable SAS, SATA , or NVMe drives.
+         Backplane
+         ● Up to 8 x 3.5-inch SAS, SATA drives.
+         ● Up to 8 x 2.5 inch NVMe drives.
+         ● Up to 12 x 3.5-inch SAS, SATA drives.
+         ● Up to 16 x 2.5-inch SAS, SATA drives.
+         ● Up to 24 x 2.5-inch NVMe drives.
+                                                                                                     Technical specifications        11
+         ● Up to 2 x 2.5-inch rear SAS, SATA, or NVMe drives
+              NOTE: For more information about how to hot swap NVMe PCIe SSD U.2 device, see the Dell Express Flash NVMe PCIe 
+              SSD User's Guide at https://www.dell.com/support Browse all Products > Data Center Infrastructure >  Storage 
+              Adapters & Controllers > Dell PowerEdge Express Flash NVMe PCIe SSD > Documentation > Manuals and 
+              Documents.
+         Ports and connectors specifications
+         USB ports specifications
+         Table 11. PowerEdge R7525 system USB specifications 
+                          Front                                     Rear                                Internal (Optional)
+            USB port type       No. of ports       USB port type          No. of ports         USB port type          No. of ports
+          USB 2.0-            One                USB 3.0-            One                     Internal USB 3.0-   One
+          compliant port                         compliant ports                             compliant port
+          Micro-USB 2.0       One                USB 2.0-            One
+          compliant port                         compliant ports
+              NOTE: The micro USB 2.0 compliant port can only be used as an iDRAC Direct or a management port.
+              NOTE: The USB 2.0 specifications provide a 5 V supply on a single wire to power connected USB devices. A unit load is 
+              defined as 100 mA in USB 2.0, and 150 mA in USB 3.0. A device may draw a maximum of 5 unit loads (500 mA) from a port 
+              in USB 2.0; 6 (900 mA) in USB 3.0.
+              NOTE: The USB 2.0 interface can provide power to low-power peripherals but must adhere to USB specification. An 
+              external power source is required for higher-power peripherals to function, such as external CD/DVD Drives.
+         NIC port specifications
+         The PowerEdge R7525 system supports up to two 10/100/1000 Mbps Network Interface Controller (NIC) ports embedded on 
+         the LAN on Motherboard (LOM) and integrated on the optional OCP cards.
+         Table 12. NIC port specification  
+          Feature                                                         Specifications
+          LOM card                                                        1 GB x 2
+          OCP card (OCP 3.0)                                              1 GbE x 4, 10 GbE x 2, 25 GbE x 2, 25 GbE x 4, 50 GbE x 2, 
+                                                                          100 GbE x 2
+         Serial connector specifications
+         The PowerEdge R7525 system supports one optional card type serial connector, which is a 9-pin connector, Data Terminal 
+         Equipment (DTE), 16550-compliant.
+         The optional serial connector card is installed similar to an expansion card filler bracket.
+         VGA ports specifications
+         The PowerEdge R7525 system supports two DB-15 VGA port one each on the front and back panels.
+         12       Technical specifications
+         IDSDM
+         The PowerEdge R7525 system supports Internal Dual SD module (IDSDM).
+         The IDSDM supports two SD cards and is available in the following configurations:
+         Table 13. Supported SD card storage capacity 
+          IDSDM card
+          ● 16 GB
+          ● 32 GB
+          ● 64 GB
+             NOTE: One IDSDM card slot is dedicated for redundancy.
+             NOTE: Use Dell EMC branded SD cards that are associated with the IDSDM configured systems.
+         Video specifications
+         The PowerEdge R7525 system supports integrated Matrox G200 graphics controller with 16 MB of video frame buffer.
+         Table 14. Supported front video resolution options 
+          Resolution                            Refresh rate (Hz)                      Color depth (bits)
+          1024 x 768                            60                                     8, 16, 32
+          1280 x 800                            60                                     8, 16, 32
+          1280 x 1024                           60                                     8, 16, 32
+          1360 x 768                            60                                     8, 16, 32
+          1440 x 900                            60                                     8, 16, 32
+         Table 15. Supported rear video resolution options 
+          Resolution                            Refresh rate (Hz)                      Color depth (bits)
+          1024 x 768                            60                                     8, 16, 32
+          1280 x 800                            60                                     8, 16, 32
+          1280 x 1024                           60                                     8, 16, 32
+          1360 x 768                            60                                     8, 16, 32
+          1440 x 900                            60                                     8, 16, 32
+          1600 x 900                            60                                     8, 16, 32
+          1600 x 1200                           60                                     8, 16, 32
+          1680 x 1050                           60                                     8, 16, 32
+          1920 x 1080                           60                                     8, 16, 32
+          1920 x 1200                           60                                     8, 16, 32
+         Environmental specifications
+             NOTE: For additional information about environmental certifications, refer to the Product Environmental Datasheet located 
+             with the Manuals & Documents on www.dell.com/support/home.
+                                                                                              Technical specifications     13
+         Table 16. Operational climatic range category A2 
+          Temperature                                      Specifications
+          Allowable continuous operations
+          Temperature ranges for altitudes <= 900 m (<=    10–35°C (50–95°F) with no direct sunlight on the equipment
+          2953 ft)
+          Humidity percent ranges (non-condensing at all   8% RH with -12°C minimum dew point to 80% RH with 21°C (69.8°F) 
+          times)                                           maximum dew point
+          Operational altitude de-rating                   Maximum temperature is reduced by 1°C/300 m (33.8°F/984 Ft) above 
+                                                           900 m (2953 Ft)
+         Table 17. Operational climatic range category A3 
+          Temperature                                      Specifications
+          Allowable continuous operations
+          Temperature ranges for altitudes <= 900 m (<=    5–40°C (41–104°F) with no direct sunlight on the equipment
+          2953 ft)
+          Humidity percent ranges (non-condensing at all   8% RH with -12°C minimum dew point to 85% RH with 24°C (75.2°F) 
+          times)                                           maximum dew point
+          Operational altitude de-rating                   Maximum temperature is reduced by 1°C/175 m (33.8°F/574 Ft) above 
+                                                           900 m (2953 Ft)
+         Table 18. Operational climatic range category A4 
+          Temperature                                      Specifications
+          Allowable continuous operations
+          Temperature ranges for altitudes <= 900 m (<=    5–45°C (41–113°F) with no direct sunlight on the equipment
+          2953 ft)
+          Humidity percent ranges (non-condensing at all   8% RH with -12°C minimum dew point to 90% RH with 24°C (75.2°F) 
+          times)                                           maximum dew point
+          Operational altitude de-rating                   Maximum temperature is reduced by 1°C/125 m (33.8°F/410 Ft) above 
+                                                           900 m (2953 Ft)
+         Table 19. Shared requirements across all categories 
+          Temperature                                      Specifications
+          Allowable continuous operations
+          Maximum temperature gradient (applies to both    20°C in an hour* (36°F in an hour) and 5°C in 15 minutes (41°F in 15 
+          operation and non-operation)                     minutes), 5°C in an hour* (41°F in an hour) for tape
+                                                               NOTE: * - Per ASHRAE thermal guidelines for tape hardware, these are 
+                                                               not instantaneous rates of temperature change.
+          Non-operational temperature limits               -40 to 65°C (-104 to 149°F)
+          Non-operational humidity limits                  5% to 95% RH with 27°C (80.6°F) maximum dew point
+          Maximum non-operational altitude                 12,000 meters (39,370 feet)
+          Maximum operational altitude                     3,048 meters (10,000 feet)
+         Table 20. Maximum vibration specifications 
+          Maximum vibration                                Specifications
+          Operating                                        0.26 Grms at 5 Hz to 350 Hz (all operation orientations)
+          Storage                                          1.88 Grms at 10 Hz to 500 Hz for 15 minutes (all six sides tested)
+         14      Technical specifications
+         Table 21. Maximum shock pulse specifications 
+          Maximum shock pulse                           Specifications
+          Operating                                     Six consecutively executed shock pulses in the positive and negative x, y, 
+                                                        and z axis of 6 G for up to 11 ms.
+          Storage                                       Six consecutively executed shock pulses in the positive and negative x, y, 
+                                                        and z axis (one pulse on each side of the system) of 71 G for up to 2 ms.
+         Thermal air restrictions
+         Fresh air environment
+         ● Two PSUs are required in redundant mode, however single PSU failure is not supported.
+         ● NVMe drive is not supported.
+         ● 128 GB or greater capacity DIMMs are not supported.
+         ● Both SW and DW GPGPU/FPGA are not supported.
+         ● CPU TDP equal or greater than 180 W are not supported.
+         ● Rear drives are not supported.
+         ● PCIe card TDP more than 25 W is not supported
+         ASHRAE A3 environment
+         ● Two PSUs are required in redundant mode, however single PSU failure is not supported.
+         ● NVMe drive is not supported.
+         ● 128 GB or greater capacity DIMMs are not supported.
+         ● Both SW and DW GPGPU/FPGA are not supported.
+         ● CPU TDP equal or greater than 180 W are not supported.
+         ● Rear drives are not supported.
+         ● PCIe card TDP more than 25 W is not supported.
+         ASHRAE A4 environment
+         ● Two PSUs are required in redundant mode, however single PSU failure is not supported.
+         ● NVMe drive is not supported.
+         ● 128 GB or greater capacity DIMMs are not supported.
+         ● CPU TDP equal or greater than 155 W are not supported (Only 120 W processor supports A4).
+         ● Rear drives are not supported.
+         ● 12 x 3.5-inch chassis is not supported.
+         ● BOSS and OCP are not supported.
+         ● PCIe card TDP more than 25 W is not supported.
+         Liquid cooling: Fresh air environment
+         ● Two PSUs are required in redundant mode. Single PSU failure is not supported.
+         ● NVMe drive is not supported.
+         ● 256 GB and higher capacity DIMM is not supported.
+         ● Both SW and DW GPGPU/FPGA are not supported.
+         ● Rear drive configuration is not supported.
+         ● PCIe card TDP more than 25 W is not supported.
+         Liquid cooling: ASHRAE A3 environment
+         ● Two PSUs are required in redundant mode, however single PSU failure is not supported.
+                                                                                              Technical specifications     15
+          ● NVMe drive is not supported.
+          ● 256 GB and higher capacity DIMM is not supported.
+          ● Both SW and DW GPGPU/FPGA are not supported.
+          ● Rear drive configuration is not supported.
+          ● PCIe card TDP more than 25 W is not supported.
+          Liquid cooling: ASHRAE A4 environment
+          ● Two PSUs are required in redundant mode, however single PSU failure is not supported.
+          ● NVMe drive is not supported.
+          ● 256 GB and higher capacity DIMM is not supported.
+          ● Both SW and DW GPGPU/FPGA are not supported.
+          ● Rear drive configuration is not supported.
+          ● PCIe card TDP more than 25 W is not supported.
+          Thermal restriction matrix
+          Table 22. Thermal restriction matrix 
+                                                                                      16 x 
+                             8 x              16 x                                   2.5-     24 x 
+                             2.5-    16 x    2.5-                                    inch     2.5-     8 x 
+            Configurati      inch    2.5-    inch        24 x 2.5-inch SAS          SAS +  inch       3.5-           12 x 3.5-inch
+                 on         NVM inch  NVM                                             8 x      NV     inch
+                              e      SAS       e                                     2.5-      Me
+                                                                                     inch                                                   Ambie
+                                                                                    NVMe                                                      nt 
+                                                                                                                                            tempe
+                                                                  2 x       4 x                                            2 x      4 x     rature
+                             No       No      No                 Rear      Rear                No                         Rear     Rear 
+                Rear        Rear  Rear  Rear           No        2.5-      2.5-       No      Rea      No        No       2.5-     2.5-
+              storage       Drive Drive Drive         Rear       inch      inch      Rear       r     Rear      Rear      inch     inch 
+                              s        s       s     Drives       No       with     Drives    Driv Drives Drives           No      with 
+                                                                 Rear      Rear                es                         Rear     Rear 
+                                                                 Fan        Fan                                           Fan       Fan
+                             STD     STD      STD      STD       HPR       HPR        STD     HPR      STD      HPR       HPR      HPR 
+                             fan      fan     fan      fan        fan       fan       fan      fan     fan       fan       fan      fan
+                     120      1U      1U       1U                                              1U       1U                 1U        1U      35°C
+                      W      STD     STD      STD  1U STD  1U STD  1U STD  1U STD  STD                 STD     1U STD     STD       STD 
+                             HSK     HSK     HSK       HSK       HSK       HSK        HSK     HSK     HSK       HSK       HSK       HSK
+                             STD     STD      STD      STD       HPR       HPR        STD     HPR      STD      HPR       HPR      HPR 
+                             fan      fan     fan      fan        fan       fan       fan      fan     fan       fan       fan      fan
+                     155      1U      1U       1U                                              1U       1U                 1U        1U      35°C
+                      W      STD     STD      STD  1U STD  1U STD  1U STD  1U STD  STD                 STD     1U STD     STD       STD 
+                             HSK     HSK     HSK       HSK       HSK       HSK        HSK     HSK     HSK       HSK       HSK       HSK
+            CPU 
+           TDP/
+           cTDP              STD     STD      STD      STD       HPR       HPR        STD     HPR      STD      HPR       HPR      HPR 
+                             fan      fan     fan      fan        fan       fan       fan      fan     fan       fan       fan      fan
+                     170      1U      1U       1U                                              1U       1U                 1U        1U      35°C
+                      W      STD     STD      STD  1U STD  1U STD  1U STD  1U STD  STD                 STD     1U STD     STD       STD 
+                             HSK     HSK     HSK       HSK       HSK       HSK        HSK     HSK     HSK       HSK       HSK       HSK
+                             STD     STD      STD      STD       HPR       HPR        STD     HPR      STD      HPR       HPR      HPR 
+                             fan      fan     fan      fan        fan       fan       fan      fan     fan       fan       fan      fan
+                     180      2U      2U      2U                                               2U                                            35°C
+                      W      Full     Full    Full   2U Full    2U Full   2U Full   2U Full    Full  2U Full  2U Full  2U Full  2U Full 
+                             HSK     HSK     HSK       HSK       HSK       HSK        HSK     HSK     HSK       HSK       HSK       HSK
+          16       Technical specifications
+          Table 22. Thermal restriction matrix (continued)
+                                                                                      16 x 
+                             8 x              16 x                                   2.5-     24 x 
+                             2.5-    16 x    2.5-                                    inch     2.5-     8 x 
+            Configurati      inch    2.5-    inch        24 x 2.5-inch SAS          SAS +  inch       3.5-           12 x 3.5-inch
+                 on         NVM inch  NVM                                             8 x      NV     inch
+                              e      SAS       e                                     2.5-      Me
+                                                                                     inch                                                   Ambie
+                                                                                    NVMe                                                      nt 
+                                                                                                                                            tempe
+                                                                  2 x       4 x                                            2 x      4 x     rature
+                             No       No      No                 Rear      Rear                No                         Rear     Rear 
+                Rear        Rear  Rear  Rear           No        2.5-      2.5-       No      Rea      No        No       2.5-     2.5-
+              storage       Drive Drive Drive         Rear       inch      inch      Rear       r     Rear      Rear      inch     inch 
+                              s        s       s     Drives       No       with     Drives    Driv Drives Drives           No      with 
+                                                                 Rear      Rear                es                         Rear     Rear 
+                                                                 Fan        Fan                                           Fan       Fan
+                             STD     STD      STD      STD       HPR       HPR        STD     HPR      STD      HPR       HPR      HPR 
+                             fan      fan     fan      fan        fan       fan       fan      fan     fan       fan       fan      fan
+                     200      2U      2U      2U                                               2U                                            35°C
+                      W      Full     Full    Full   2U Full    2U Full   2U Full   2U Full    Full  2U Full  2U Full  2U Full  2U Full 
+                             HSK     HSK     HSK       HSK       HSK       HSK        HSK     HSK     HSK       HSK       HSK       HSK
+                             STD     STD      STD      STD       HPR       HPR        STD     HPR      STD      HPR       HPR      HPR 
+                             fan      fan     fan      fan        fan       fan       fan      fan     fan       fan       fan      fan
+                     225      2U      2U      2U                                               2U                                            35°C
+                      W      Full     Full    Full   2U Full    2U Full   2U Full   2U Full    Full  2U Full  2U Full  2U Full  2U Full 
+                             HSK     HSK     HSK       HSK       HSK       HSK        HSK     HSK     HSK       HSK       HSK       HSK
+                             STD     STD      STD      STD       HPR       HPR        STD     HPR      STD      HPR       HPR      HPR 
+                             fan      fan     fan      fan        fan       fan       fan      fan     fan       fan       fan      fan
+                     240      2U      2U      2U                                               2U                                            35°C
+                      W      Full     Full    Full   2U Full    2U Full   2U Full   2U Full    Full  2U Full  2U Full  2U Full  2U Full 
+                             HSK     HSK     HSK       HSK       HSK       HSK        HSK     HSK     HSK       HSK       HSK       HSK
+                             STD     STD      STD      STD       HPR       VHP        STD     HPR      STD      HPR       HPR      HPR 
+                     280     fan      fan     fan      fan*       fan       fan      fan*     fan*     fan      fan*      fan*     fan*
+                     W -      2U      2U      2U     2U Full    2U Full   2U Full   2U Full    2U    2U Full  2U Full  2U Full  2U Full      35°C
+                     64C     Full     Full    Full     HSK       HSK       HSK        HSK      Full   HSK       HSK       HSK       HSK
+                             HSK     HSK     HSK                                              HSK
+                             STD     STD      STD      STD       HPR       VHP        STD     HPR      STD 
+                     280     fan      fan     fan      fan*       fan       fan      fan*     fan*     fan
+                     W -      2U      2U      2U     2U Full    2U Full   2U Full   2U Full    2U    2U Full      -         -        -       35°C
+                     32C     Full     Full    Full     HSK       HSK       HSK        HSK      Full   HSK
+                             HSK     HSK     HSK                                              HSK
+                             STD     STD      STD      STD       HPR       VHP        STD     HPR      STD 
+                     280     fan      fan     fan      fan*       fan       fan      fan*     fan*     fan
+                     W -      2U      2U      2U                                               2U                 -         -        -       35°C
+                    64C/     Full     Full    Full   2U Full    2U Full   2U Full   2U Full    Full  2U Full 
+                     32C     HSK     HSK     HSK       HSK       HSK       HSK        HSK     HSK     HSK
+                             VHP     VHP     VHP 
+                     280     fan      fan     fan
+                     W -      2U      2U      2U 
+                    24C/     Full     Full    Full 
+                     16C     HSK     HSK     HSK
+                                                                                                               Technical specifications           17
+          Table 22. Thermal restriction matrix (continued)
+                                                                                     16 x 
+                             8 x             16 x                                    2.5-    24 x 
+                            2.5-     16 x    2.5-                                    inch    2.5-     8 x 
+            Configurati     inch     2.5-    inch        24 x 2.5-inch SAS          SAS +  inch       3.5-          12 x 3.5-inch
+                 on         NVM inch  NVM                                             8 x     NV      inch
+                              e      SAS       e                                     2.5-     Me
+                                                                                     inch                                                  Ambie
+                                                                                    NVMe                                                      nt 
+                                                                                                                                           tempe
+                                                                 2 x       4 x                                            2 x      4 x     rature
+                             No       No      No                Rear      Rear                No                         Rear     Rear 
+                Rear        Rear  Rear  Rear           No       2.5-       2.5-       No      Rea      No       No       2.5-      2.5-
+              storage       Drive Drive Drive         Rear      inch       inch      Rear      r     Rear      Rear      inch      inch 
+                              s        s       s     Drives      No        with     Drives   Driv Drives Drives           No      with 
+                                                                Rear      Rear                 es                        Rear     Rear 
+                                                                 Fan       Fan                                           Fan       Fan
+                                                                                                               HPR       HPR 
+            128                                                 HPR        HPR               HPR              (Silver)  (Silver    HPR 
+             GB       -      STD     STD     STD      STD      (Silver)  (Silver)    STD     (Silv    STD     fan*, if  ) fan*,  (Silver    35°C
+            LRDI             fan     fan      fan      fan       fan       fan        fan     er)     fan     TDP ≥  if TDP  ) fan*
+            MM                                                                                fan             200 W      ≥ 170 
+                                                                                                                          W
+               NOTE: * Supported ambient temperature is 30°C.
+               NOTE: Three fan modules are required for single processor, and six fan modules are required for dual processor system.
+          Table 23. Air cooling and liquid cooling: GPU/FPGA thermal restriction matrix  
+           Con                                           GPU/FPGA ( Ambient temperature )
+           figu
+            rati           Max 
+            on     Fan     CPU            V10                   Sno RTX  RTX
+           (Fro type TDP/           T4      0     V10 M10        w     600 800 A100 MI10 A40                  A10     A30     A16    MI21     A2
+             nt           cTDP             (16    0S           whit     0      0               0                                       0
+           stor                           GB)                    e
+           age)
+            No  HPR 
+            Bac (Silv 280 W 30°           35°     30°    35°    35°    35°    35° 35°C 30°C 30°C 30°C 35°C 35°C 35°C 30°C
+            kpa    er)               C      C      C      C      C      C      C
+            ne
+            8 x 
+           2.5- HPR                30°    35°     30°    35°    35°    35°    35°
+           inch  (Silv    280 W      C      C      C      C      C      C      C     35°C 30°C 30°C 30°C 35°C 35°C 35°C 30°C
+            NV     er)
+            Me
+            16 x  HPR 
+           2.5- (Silv     280 W 30° 35° 30° 35° 35° 35° 35° 35°C 30°C 30°C 30°C 35°C 35°C 35°C 30°C
+           inch    er)               C      C      C      C      C      C      C
+           SAS
+            16 x 
+           2.5- HPR                30°    35°     30°    35°    35°    35°    35°
+           inch  (Gol     280 W      C      C      C      C      C      C      C     35°C 30°C 30°C 30°C 35°C 35°C 35°C 30°C
+            NV      d)
+            Me
+            16 x 
+           2.5-
+           inch  HPR               30°    35°     30°    35°    35°    35°    35°
+           SAS  (Gol 280 W           C      C      C      C      C      C      C     35°C 30°C 30°C 30°C 35°C 35°C 35°C 30°C
+            + 8     d)
+             x 
+           2.5-
+          18       Technical specifications
+         Table 23. Air cooling and liquid cooling: GPU/FPGA thermal restriction matrix  (continued)
+          Con                                      GPU/FPGA ( Ambient temperature )
+          figu
+          rati          Max 
+           on    Fan    CPU           V10               Sno RTX  RTX
+          (Fro type TDP/        T4     0    V10 M10       w    600 800 A100 MI10 A40             A10    A30    A16    MI21    A2
+           nt          cTDP           (16   0S          whit    0     0             0                                   0
+          stor                       GB)                  e
+          age)
+          inch 
+           NV
+           Me
+           8 x  HPR 
+          3.5- (Silv   280 W 30° 35° 30° 35° 35° 35° 35° 35°C 30°C 30°C 30°C 35°C 35°C 35°C 30°C
+          inch   er)            C      C     C     C      C     C     C
+          SAS
+             NOTE: GPU is not supported in 12 x 3.5-inch hard drive and 24 x 2.5-inch NVMe configuration systems.
+             NOTE: Low Profile and Full Height T4 cards are installed in order to support maximun 6 pcs T4 in x 16 slots.
+             NOTE: In Liquid Cooling system, maximum two DW GPUs are supported.
+         Table 24. Processor and heat sink matrix 
+          Heat sink                                                    Processor TDP
+          STD HSK                                                      < 180 W
+          2U HPR (Silver) HSK                                          >= 180 W
+          L-type HSK                                                   Supports all TDP (system should be installed with GPU/
+                                                                       FGPA/long PCIe cards)
+             NOTE: All GPU/FGPA cards require 1U L-type HSK and GPU shroud.
+         Table 25. Label reference 
+          Label                                                        Description
+          STD                                                          Standard
+          HPR (Silver)                                                 High performance (silver grade)
+          HPR (Gold)                                                   High performance (gold grade)
+          HSK                                                          Heat sink
+          LP                                                           Low profile
+          FH                                                           Full height
+         Table 26. Liquid cooling: CPU thermal restrictions (non-GPU/FPGA) 
+          Configuration         8 x 2.5-    16 x 2.5-     16 x 2.5-    16 x 2.5-      24 x 2.5- 8 x 3.5-   12 x 3.5-inch
+                                inch        inch SAS      inch NVMe inch SAS +        inch       inch
+                                NVMe                                   8 x 2.5-inch  NVMe
+                                                                       NVMe
+          Rear storage          No Rear     No Rear       No Rear      No Rear        No Rear  No Rear  No Rear  2 x rear 2.5-
+                                Drives      Drives        Drives       Drives         Drives     Drives    Drives    inch, No 
+                                                                                                                     rear fan
+          CPU TDP/              STD fan     STD fan (A4  STD fan       STD fan        STD fan    STD fan  STD fan    STD fan (A3 
+          cTDP         120 W                support)                                             (A4       (A4       support)
+                                                                                                 support)  support)
+                                                                                                  Technical specifications       19
+         Table 26. Liquid cooling: CPU thermal restrictions (non-GPU/FPGA) (continued)
+          Configuration        8 x 2.5-    16 x 2.5-    16 x 2.5-    16 x 2.5-     24 x 2.5- 8 x 3.5-  12 x 3.5-inch
+                               inch        inch SAS     inch NVMe inch SAS +       inch      inch
+                               NVMe                                  8 x 2.5-inch  NVMe
+                                                                     NVMe
+          Rear storage         No Rear     No Rear      No Rear      No Rear       No Rear  No Rear  No Rear  2 x rear 2.5-
+                               Drives      Drives       Drives       Drives        Drives    Drives    Drives    inch, No 
+                                                                                                                 rear fan
+                               STD fan     STD fan (A4  STD fan      STD fan       STD fan   STD fan  STD fan    STD fan (A3 
+                      155 W                support)                                          (A4       (A4       support)
+                                                                                             support)  support)
+                               STD fan     STD fan (A4  STD fan      STD fan       STD fan   STD fan  STD fan    STD fan (A3 
+                      170 W                support)                                          (A4       (A4       support)
+                                                                                             support)  support)
+                               STD fan     STD fan (A4  STD fan      STD fan       STD fan   STD fan  STD fan    STD fan (A3 
+                      180 W                support)                                          (A4       (A4       support)
+                                                                                             support)  support)
+                               STD fan     STD fan (A4  STD fan      STD fan       STD fan   STD fan  STD fan    STD fan (A3 
+                      200 W                support)                                          (A4       (A4       support)
+                                                                                             support)  support)
+                               STD fan     STD fan (A4  STD fan      STD fan       STD fan   STD fan  STD fan    STD fan (A3 
+                      225 W                support)                                          (A4       (A4       support)
+                                                                                             support)  support)
+                               STD fan     STD fan (A4  STD fan      STD fan       STD fan   STD fan  STD fan    STD fan (A3 
+                      240 W                support)                                          (A4       (A4       support)
+                                                                                             support)  support)
+                               STD fan     STD fan (A4  STD fan      STD fan       STD fan   STD fan  STD fan    STD fan (A3 
+                      280 W                support)                                          (A4       (A4       support)
+                                                                                             support)  support)
+         Table 27. Liquid cooling: Memory thermal restrictions (non-GPU/FPGA) 
+          Configuration   1 DPC       2 DPC       8 x 2.5-  16 x 2.5- 16 x 2.5- 16 x 2.5-  24 x     8 x     12 x 3.5-inch
+                                                  inch      inch      inch      inch SAS  2.5-      3.5-
+                                                  NVMe      SAS       NVMe      + 8 x 2.5- inch     inch
+                                                                                inch       NVMe
+                                                                                NVMe
+          Rear storage                            No Rear  No Rear  No Rear  No Rear       No       No      No      2 x rear 
+                                                  Drives    Drives    Drives    Drives     Rear     Rear    Rear    2.5-inch, 
+                                                                                           Drives   Drive   Drives No rear 
+                                                                                                    s               fan
+          Memory    8 GB                          STD fan   STD fan   STD fan   STD fan    STD      STD     STD     STD fan 
+                   RDIM                                     (A4                            fan      fan     fan     (A3 
+                     M        2.8         2.0               support)                                (A4     (A4     support)
+                    3200                                                                            suppor suppor
+                                                                                                    t)      t)
+                   16 GB                          STD fan   STD fan   STD fan   STD fan    STD      STD     STD     STD fan 
+                   RDIM                                     (A4                            fan      fan     fan     (A3 
+                     M        4.3         3.0               support)                                (A4     (A4     support)
+                    3200                                                                            suppor suppor
+                                                                                                    t)      t)
+                   32 GB                          STD fan   STD fan   STD fan   STD fan    STD      STD     STD     STD fan 
+                   RDIM                                     (A4                            fan      fan     fan     (A3 
+                     M        6.9         4.8               support)                                (A4     (A4     support)
+                    3200                                                                            suppor suppor
+                                                                                                    t)      t)
+         20      Technical specifications
+         Table 27. Liquid cooling: Memory thermal restrictions (non-GPU/FPGA) (continued)
+          Configuration   1 DPC       2 DPC      8 x 2.5-  16 x 2.5- 16 x 2.5- 16 x 2.5-   24 x    8 x     12 x 3.5-inch
+                                                 inch      inch      inch       inch SAS  2.5-     3.5-
+                                                 NVMe      SAS       NVMe       + 8 x 2.5- inch    inch
+                                                                                inch       NVMe
+                                                                                NVMe
+          Rear storage                           No Rear  No Rear  No Rear  No Rear        No      No      No      2 x rear 
+                                                 Drives    Drives    Drives     Drives     Rear    Rear    Rear    2.5-inch, 
+                                                                                           Drives  Drive   Drives No rear 
+                                                                                                   s               fan
+                   64 GB                         STD fan   STD fan   STD fan    STD fan    STD     STD     STD     STD fan 
+                   RDIM                                    (A4                             fan     fan     fan     (A3 
+                     M        8.3        5.8               support)                                (A4     (A4     support)
+                   3200                                                                            suppor suppor
+                                                                                                   t)      t)
+                    128                          STD fan   STD fan   STD fan    STD fan    STD     STD     STD     STD fan 
+                    GB                                     (A3                             fan     fan     fan     (A3 
+                    LRDI      12.4       9.9               support)                                (A3     (A3     support)
+                    MM                                                                             suppor suppor
+                   2666                                                                            t)      t)
+         Particulate and gaseous contamination specifications
+         The following table defines the limitations that help avoid any equipment damage or failure from particulates and gaseous 
+         contamination. If the levels of particulates or gaseous pollution exceed the specified limitations and result in equipment damage 
+         or failure, you must rectify the environmental conditions. Remediation of environmental conditions is the responsibility of the 
+         customer.
+         Table 28. Particulate contamination specifications 
+          Particulate contamination                         Specifications
+          Air filtration: Conventional Data Center only     Data center air filtration as defined by ISO Class 8 per ISO 14644-1 
+                                                            with a 95% upper confidence limit
+                                                                NOTE: Filtering room air with a MERV8 filter, as specified 
+                                                                in ANSI/ASHRAE Standard 127, is a recommended method for 
+                                                                achieving the necessary environmental conditions.
+                                                                NOTE: Air entering the data center must have MERV11 or MERV13 
+                                                                filtration.
+                                                                NOTE: This condition applies to data center environments only. Air 
+                                                                filtration requirements do not apply to IT equipment designed to be 
+                                                                used outside a data center, in environments such as an office or 
+                                                                factory floor.
+          Walk-Up Edge Data Center or Cabinet (sealed, closed  Filtration is not required for cabinets that are anticipated to be opened 
+          loop environment)                                 six times or less per year. Class 8 per ISO 1466-1 filtration as defined 
+                                                            above is required otherwise.
+                                                                NOTE: In environments commonly above ISA-71 Class G1 or that 
+                                                                may have known challenges, special filters may be required.
+          Conductive dust: data center and non-data center  Air must be free of conductive dust, zinc whiskers, or other 
+          environments                                      conductive particles.
+                                                                NOTE: Conductive dust, which can interfere with equipment 
+                                                                operation, can originate from various sources, including 
+                                                                manufacturing processes and zinc whiskers that may develop on 
+                                                                the plating of raised floor tiles.
+                                                                NOTE: This condition applies to data center and non-data center 
+                                                                environments.
+                                                                                              Technical specifications     21
+         Table 28. Particulate contamination specifications (continued)
+          Particulate contamination                              Specifications
+          Corrosive dust: data center and non-data center        ● Air must be free of corrosive dust.
+          environments                                           ● Residual dust present in the air must have a deliquescent point less 
+                                                                     than 60% relative humidity.
+                                                                     NOTE: This condition applies to data center and non-data center 
+                                                                     environments.
+         Table 29. Gaseous contamination specifications 
+          Gaseous contamination           Specifications                          Notes
+          Copper coupon corrosion rate    ISA-71 Class G1: <300 Å/month           Per ANSI/ISA71.04
+          Silver coupon corrosion rate    ISA-71 Class G1: <200 Å/month           Per ANSI/ISA71.04
+         22       Technical specifications

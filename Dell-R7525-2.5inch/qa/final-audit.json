@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "product": "Dell PowerEdge R7525",
+  "variant": "24 x 2.5-inch SFF, Dell EMC LCD bezel, standard no-rear-drive rear, Riser 3 DB9 serial, dual matching 2400W AC PSU",
+  "identityStatus": "VERIFIED",
+  "bottomMode": "MULTI_REFERENCE_RECONSTRUCTION_FROM_OFFICIAL_DELL_AR",
+  "bottomFallbackUsed": false,
+  "canonicalViews": {
+    "status": "PASS",
+    "audit": "qa/views-audit.json",
+    "errors": 0,
+    "warnings": 6,
+    "warningDisposition": "expected anti-aliased silhouette/opening pixels; visually checked; GLB materials are OPAQUE"
+  },
+  "standardGlb": {
+    "path": "model/Dell-R7525-2.5inch.glb",
+    "bytes": 10789788,
+    "sha256": "75f798eff49cfe9f110068cd5c2a54d946ae7f78113c837a2012c433d883494d",
+    "audit": "qa/standard-glb-audit.json",
+    "status": "PASS"
+  },
+  "webGlb": {
+    "path": "model/Dell-R7525-2.5inch-web.glb",
+    "bytes": 6375036,
+    "sha256": "7f738897782ef91ef890cd91cf22844058902c5d950f7e9fb033077d765a4e21",
+    "audit": "qa/web-glb-audit.json",
+    "status": "PASS"
+  },
+  "structuralSummary": {
+    "worldBoundsMeters": [0.482, 0.0868, 0.77213],
+    "nodes": 318,
+    "meshes": 23,
+    "primitives": 23,
+    "materials": 17,
+    "textures": 7,
+    "images": 7,
+    "mirroredNodes": 0,
+    "externalResources": 0,
+    "glbErrors": 0
+  },
+  "viewerEvidence": {
+    "status": "PASS",
+    "actualGlbLoads": 40,
+    "matrix": {
+      "Three.js/standard": 10,
+      "Three.js/web": 10,
+      "Babylon.js/standard": 10,
+      "Babylon.js/web": 10
+    },
+    "viewsPerFile": ["front", "rear", "left", "right", "top", "bottom", "front_left", "front_right", "rear_left", "rear_right"],
+    "evidence": "qa/renders/load-evidence.json",
+    "contactSheets": [
+      "qa/renders/contact-three-standard.png",
+      "qa/renders/contact-three-web.png",
+      "qa/renders/contact-babylon-standard.png",
+      "qa/renders/contact-babylon-web.png"
+    ]
+  },
+  "officialOptionalModel": {
+    "path": "source/optional-3d/dell-official-ar-r7525-mySceneClone.glb",
+    "bytes": 18454132,
+    "sha256": "4d195480b7717b92687b20a9d0e96c1cd733e3cf4e4124fc92bb11fa89dbcbff",
+    "preservedUnchanged": true,
+    "usedAsDeliverable": false,
+    "officialMeshesCopied": false
+  },
+  "comparisons": {
+    "orthographicStandard": "qa/comparisons/standard-orthographic-contact.png",
+    "orthographicWeb": "qa/comparisons/web-orthographic-contact.png",
+    "authoritativeOblique": "qa/comparisons/authoritative-oblique-sources-vs-renders.png"
+  }
+}
