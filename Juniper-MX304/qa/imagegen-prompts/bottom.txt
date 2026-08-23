@@ -1,0 +1,13 @@
+Method: built-in image_gen, one dedicated call for bottom.
+Use case: product-mockup
+Asset type: conservative Juniper MX304 bottom orthographic face texture for GLB pipeline
+Production mode: GENERIC_BOTTOM_FALLBACK
+Input images: Image 1 generic 2U underside product-render reference—sheet-metal tone and edge treatment only; every hole, foot, handle, hatch and layout in it is non-binding and must be removed; Image 2 exact MX304 top/side real photo—binding gray material and exact side-edge silhouette; Image 3 exact MX304 rear/right/top real photo—binding AC rear projection and side-edge material; Image 4 official exact MX304 installation drawing—binding side/bottom edge and rack-ear silhouette.
+Primary request: Generate a conservative non-identifying opaque bottom sheet for the MX304-PREM AC model after documented exact-bottom search exhaustion.
+Scene/backdrop: perfectly flat solid #FF00FF chroma-key background for local removal; uniform; no shadow, gradient, floor, reflection or texture; do not use #FF00FF in the device.
+Style/medium: restrained real gray sheet-metal product photography matching exact MX304 side/top sources; subtle fine grain only; no CGI decoration.
+Composition/framing: one complete bottom face, perfectly orthographic, no side/front/rear face visible; physical ratio 440.9:667.2; front is at image top and rear is at image bottom so final glTF orientation remains correct; crisp edges and padding.
+Verified invariants: plain closed opaque gray underside; preserve only the exact rectangular body and proven front/rear/side edge silhouettes; no detail from the generic reference may survive.
+Forbidden unsupported detail: no holes, vents, feet, rails, handles, labels, logos, serials, barcodes, QR codes, hatches, seams, screws, protrusions, ports or mirrored top features.
+Constraints: all product pixels opaque; no shadow, watermark, pseudo-text, invented pattern, beautification, recoloring, vector/toon/flat style or detached fragments.
+Output: one image only.

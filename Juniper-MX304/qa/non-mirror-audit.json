@@ -1,0 +1,141 @@
+{
+  "status": "PASS",
+  "coordinate_convention": "+X device right from front, +Y up, +Z front",
+  "old_mirrored_or_ai_face_used_as_repair_input": false,
+  "standard": {
+    "path": "/root/Project/rack-device-3d/Juniper-MX304/model/Juniper-MX304.glb",
+    "left": {
+      "node": "Left reconstructed face",
+      "mesh": "Left reconstructed face mesh",
+      "material": "Left reconstructed photo material",
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation_xyzw": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "transform_determinant_sign": 1,
+      "front_z": 0.3050000071525574,
+      "rear_z": -0.3050000071525574,
+      "front_u": 1,
+      "rear_u": 0,
+      "embedded_texture_sha256": "db4af92c89d50de3c6cd85f8298edd3fe66557fb3aaf69ae6e348c6188bbc10b",
+      "embedded_texture_mime": "image/png"
+    },
+    "right": {
+      "node": "Right reconstructed face",
+      "mesh": "Right reconstructed face mesh",
+      "material": "Right reconstructed photo material",
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation_xyzw": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "transform_determinant_sign": 1,
+      "front_z": 0.3050000071525574,
+      "rear_z": -0.3050000071525574,
+      "front_u": 0,
+      "rear_u": 1,
+      "embedded_texture_sha256": "afd587a96eb3032f2c8b3bebbfbeb659aefbf835e558787aff53416751d49766",
+      "embedded_texture_mime": "image/png"
+    }
+  },
+  "web": {
+    "path": "/root/Project/rack-device-3d/Juniper-MX304/model/Juniper-MX304-web.glb",
+    "left": {
+      "node": "Left reconstructed face",
+      "mesh": "Left reconstructed face mesh",
+      "material": "Left reconstructed photo material",
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation_xyzw": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "transform_determinant_sign": 1,
+      "front_z": 0.3050000071525574,
+      "rear_z": -0.3050000071525574,
+      "front_u": 1,
+      "rear_u": 0,
+      "embedded_texture_sha256": "3b89113202fd106b5e5e22796f0bf5d01ce298a83c031c85ba77c4d1eb919c04",
+      "embedded_texture_mime": "image/jpeg"
+    },
+    "right": {
+      "node": "Right reconstructed face",
+      "mesh": "Right reconstructed face mesh",
+      "material": "Right reconstructed photo material",
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation_xyzw": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "transform_determinant_sign": 1,
+      "front_z": 0.3050000071525574,
+      "rear_z": -0.3050000071525574,
+      "front_u": 0,
+      "rear_u": 1,
+      "embedded_texture_sha256": "ce1b717c59b3a79cfc44edd9074f52eff35fc7693313664d7ae89f6f198b1aa2",
+      "embedded_texture_mime": "image/jpeg"
+    }
+  },
+  "expected": {
+    "standard_left_texture_sha256": "db4af92c89d50de3c6cd85f8298edd3fe66557fb3aaf69ae6e348c6188bbc10b",
+    "web_left_texture_sha256": "3b89113202fd106b5e5e22796f0bf5d01ce298a83c031c85ba77c4d1eb919c04",
+    "final_left_view_sha256": "11a6d4c632cddea4b677730f5173aefbb240f7e1201fb930cd4047bd32b6ce64",
+    "final_right_view_sha256": "d95d0c4e503f2f2b6027496dea1668901f6b819abfe7ebed3eff2588c5928780",
+    "rejected_mirrored_left_sha256": "18a9329cd59d5921532d6d33ea67fc83a34aabddc19b98e44b575bfdf83f533c"
+  },
+  "checks": {
+    "standard_left_texture_matches_selected_repair": true,
+    "web_left_texture_matches_selected_repair": true,
+    "final_left_is_not_right_bytes": true,
+    "final_left_is_not_rejected_mirror_bytes": true,
+    "standard_transforms_positive": true,
+    "web_transforms_positive": true,
+    "left_uv_maps_physical_front_to_image_right": true,
+    "right_uv_maps_physical_front_to_image_left": true,
+    "left_and_right_embedded_textures_are_distinct": true
+  }
+}

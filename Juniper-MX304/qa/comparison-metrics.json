@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "metric": "mean_absolute_rgb_difference_0_to_255",
+  "three_vs_babylon": {
+    "front": 6.572205,
+    "rear": 2.094311,
+    "left": 1.578883,
+    "right": 1.547922,
+    "top": 3.513909,
+    "bottom": 5.503864,
+    "front_left": 2.440859,
+    "rear_right": 1.342245,
+    "maximum": 6.572205
+  },
+  "standard_vs_web": {
+    "front": 1.490990,
+    "rear": 1.000055,
+    "left": 0.713187,
+    "right": 0.479528,
+    "top": 0.562609,
+    "bottom": 0.443411,
+    "front_left": 0.623028,
+    "rear_right": 0.458325,
+    "maximum": 1.490990
+  },
+  "orthographic_reference_vs_standard_render": {
+    "front": 17.579430,
+    "rear": 32.354450,
+    "left": 8.595953,
+    "right": 13.131755,
+    "top": 5.413208,
+    "bottom": 5.102645,
+    "note": "Diagnostic camera/crop/color differences only; final acceptance is feature-by-feature."
+  }
+}

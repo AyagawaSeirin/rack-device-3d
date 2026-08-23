@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "face": "physical-left",
+  "coordinate_convention": "+X device right from front, +Y up, +Z front",
+  "orientation": {
+    "front": "screen-right",
+    "rear": "screen-left",
+    "front_landmarks": ["front-only rack ear", "two cyan ejector-handle profiles", "large rectangular recessed pad"],
+    "rear_landmarks": ["AC/fan projection silhouette", "no rear ear"]
+  },
+  "counts": {
+    "rail_recess_rows": 2,
+    "rail_recess_columns": 4,
+    "rail_recess_total": 8,
+    "large_front_recessed_pad": 1,
+    "cyan_front_handle_profiles": 2,
+    "side_logo": 0,
+    "side_text": 0
+  },
+  "asymmetric_left_landmarks": [
+    "black locator holes distributed across upper and lower rows",
+    "left-specific nonuniform silver screw sequence",
+    "large pad adjacent to physical front at screen-right"
+  ],
+  "right_comparison": [
+    "physical-right front is screen-left",
+    "physical-right lacks the left black-locator sequence",
+    "physical-right large pad has a different physical-end relationship and fastener layout"
+  ],
+  "lineage": {
+    "right_png_used": false,
+    "old_mirrored_left_used": false,
+    "old_glb_or_render_used": false,
+    "ai_derivative_used_as_reference": false,
+    "binding_real_sources": 3,
+    "binding_official_diagram": 1
+  },
+  "physical_ratio": {
+    "expected": 7.505062,
+    "actual_content": 7.508557,
+    "error_percent": 0.0466
+  },
+  "comparison_sheets": [
+    "repair-v2/qa/comparisons/left-evidence-contact-sheet.png",
+    "repair-v2/qa/comparisons/left-before-vs-repair.png",
+    "repair-v2/qa/comparisons/left-right-asymmetric-landmarks.png",
+    "repair-v2/qa/comparisons/orthographic-left.png"
+  ]
+}

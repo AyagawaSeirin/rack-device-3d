@@ -1,0 +1,111 @@
+{
+  "schema": "rack-device-exact-appearance-repair-qa-v2",
+  "final_status": "PASS_WITH_BOTTOM_FALLBACK",
+  "repair_subject": "Juniper MX304 physical-left non-mirror repair",
+  "delivery_directory": "/root/Project/rack-device-3d/Juniper-MX304",
+  "repair_directory": "/root/Project/rack-device-3d/Juniper-MX304/repair-v2",
+  "before_state": {
+    "status": "REWORK",
+    "reason": "Previous final physical-left face mirrored the right generation, an immediate-rejection condition.",
+    "path": "/root/Project/rack-device-3d/Juniper-MX304/repair-v2/before",
+    "checksummed_files": 109
+  },
+  "identity": {
+    "status": "VERIFIED",
+    "full_pid_and_variant": "MX304-PREM-AC-FS physical configuration",
+    "assembly": "MX304-PREM chassis; 2x JNP304-RE; 2x MX304-LMIC16-BASE; 2x JNP-PWR2200-AC; 3x JNP-FAN-2RU",
+    "power": "AC",
+    "u_height": 2
+  },
+  "left_repair": {
+    "status": "PASS",
+    "production_mode": "MULTI_REFERENCE_RECONSTRUCTION",
+    "primary_real_source": "source/originals/mx304-left-high.jpg",
+    "binding_physical_left_real_source": "source/third-party/ebay-357632213474-01.webp",
+    "supporting_target_config_real_source": "source/originals/community-mx304-01.png",
+    "binding_official_geometry": "source/pdf-pages/mx304-actual-p109.png",
+    "right_or_mirror_input_used": false,
+    "old_glb_or_ai_render_input_used": false,
+    "repair_imagegen_attempts": 3,
+    "selected_attempt": "r1",
+    "rejected_attempts": ["r2 ratio 6.06:1", "r3 2x3 slots and visible top"],
+    "rectification": "Only visually inspected feature-free gray sheet-metal spans were lengthened 2.5x. Slot, screw, locator, pad, ear, handle and rear-projection feature spans retained original horizontal pixel scale; final resize was uniform.",
+    "final_view": "/root/Project/rack-device-3d/Juniper-MX304/views/left.png",
+    "final_view_sha256": "11a6d4c632cddea4b677730f5173aefbb240f7e1201fb930cd4047bd32b6ce64",
+    "final_ratio_error_percent": 0.0466,
+    "feature_counts": {"rows": 2, "columns": 4, "rail_recess_total": 8, "large_front_pad": 1, "cyan_front_handles": 2},
+    "asymmetric_landmarks_verified": true
+  },
+  "views": {
+    "audit_status": "PASS",
+    "errors": 0,
+    "warnings": 6,
+    "warning_resolution": "Warnings are anti-aliased external silhouettes/real ear openings. Every face has zero fully transparent core pixels; repaired left core transparency is zero.",
+    "maximum_ratio_error_percent": 0.0792,
+    "left_ratio_error_percent": 0.0466,
+    "front_rear_elevation_audit": "PASS, 0 errors, 0 warnings"
+  },
+  "standard_glb": {
+    "path": "/root/Project/rack-device-3d/Juniper-MX304/model/Juniper-MX304.glb",
+    "byte_size": 15984340,
+    "sha256": "4b77096055dcda142bd725186ba58ce76bef6d18cd704385e51c224d62309db0",
+    "audit_status": "PASS",
+    "errors": 0,
+    "warnings": 0,
+    "counts": {"scenes": 1, "nodes": 120, "meshes": 22, "primitives": 22, "materials": 19, "textures": 6, "images": 6},
+    "bounds_m": [0.4826, 0.0889, 0.66719999],
+    "nonuniform_ratio_error_percent": 0.0
+  },
+  "web_glb": {
+    "path": "/root/Project/rack-device-3d/Juniper-MX304/model/Juniper-MX304-web.glb",
+    "byte_size": 2405508,
+    "sha256": "5d0ea0fc54662d475ff3c01d7a92064169a2525b3d12fa8128eb08a5134b7882",
+    "audit_status": "PASS",
+    "errors": 0,
+    "warnings": 0,
+    "counts": {"scenes": 1, "nodes": 120, "meshes": 22, "primitives": 22, "materials": 19, "textures": 6, "images": 6},
+    "bounds_m": [0.4826, 0.0889, 0.66719999],
+    "nonuniform_ratio_error_percent": 0.0
+  },
+  "non_mirror_gate": {
+    "status": "PASS",
+    "report": "/root/Project/rack-device-3d/Juniper-MX304/repair-v2/qa/non-mirror-audit.json",
+    "standard_left_embedded_texture_matches_repair": true,
+    "web_left_embedded_texture_matches_repair": true,
+    "left_and_right_texture_hashes_distinct": true,
+    "left_not_equal_rejected_mirror": true,
+    "negative_or_mirrored_nodes": 0,
+    "left_transform": {"translation": [0,0,0], "rotation": [0,0,0,1], "scale": [1,1,1], "determinant_sign": 1},
+    "left_uv": {"physical_front_z": 0.305, "front_u": 1, "rear_u": 0},
+    "right_uv": {"physical_front_z": 0.305, "front_u": 0, "rear_u": 1}
+  },
+  "independent_viewers": {
+    "paths": ["Three.js WebGLRenderer plus GLTFLoader", "Babylon.js Engine plus glTF 2 loader"],
+    "six_orthographic_each": true,
+    "three_quarter_views": ["front_left", "front_right", "rear_left", "rear_right", "front_top"],
+    "maximum_three_vs_babylon_mean_rgb_difference_0_to_255": 6.572205,
+    "left_three_vs_babylon_mean_rgb_difference_0_to_255": 1.578883,
+    "orientation_and_opacity_agree": true
+  },
+  "web_equivalence": {
+    "checked_views": ["front", "rear", "left", "right", "top", "bottom", "front_left", "rear_right"],
+    "maximum_standard_vs_web_mean_rgb_difference_0_to_255": 1.490990,
+    "left_standard_vs_web_mean_rgb_difference_0_to_255": 0.713187,
+    "silhouette_and_feature_counts_unchanged": true
+  },
+  "artifacts": {
+    "renders": 42,
+    "comparisons": 30,
+    "left_evidence_contact_sheet": "repair-v2/qa/comparisons/left-evidence-contact-sheet.png",
+    "left_before_after": "repair-v2/qa/comparisons/left-before-vs-repair.png",
+    "left_right_landmarks": "repair-v2/qa/comparisons/left-right-asymmetric-landmarks.png",
+    "embedded_left_standard": "repair-v2/qa/extracted/left-from-Juniper-MX304.glb.png",
+    "embedded_left_web": "repair-v2/qa/extracted/left-from-Juniper-MX304-web.glb.jpg"
+  },
+  "bottom": {
+    "mode": "GENERIC_BOTTOM_FALLBACK",
+    "unchanged": true,
+    "reason": "No exact MX304 underside found after documented search escalation."
+  },
+  "unresolved_non_bottom_evidence": []
+}

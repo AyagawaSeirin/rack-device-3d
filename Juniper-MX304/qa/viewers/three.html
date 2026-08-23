@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Juniper MX304 Three.js QA Viewer</title>
+  <style>html,body,canvas{width:100%;height:100%;margin:0;overflow:hidden;display:block}</style>
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.min.js"}}</script>
+</head>
+<body>
+<canvas id="viewer"></canvas>
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from './vendor/GLTFLoader.js';
+
+const params = new URLSearchParams(location.search);
+const view = params.get('view') || 'front';
+const modelURL = params.get('model') || '../../model/Juniper-MX304.glb';
+const background = '#' + (params.get('bg') || 'eef0f2').replace('#', '');
+const checker = params.get('checker');
+const vectors = {
+  front: [[0,0,1],[0,1,0]], rear: [[0,0,-1],[0,1,0]],
+  right: [[1,0,0],[0,1,0]], left: [[-1,0,0],[0,1,0]],
+  top: [[0,1,0],[0,0,-1]], bottom: [[0,-1,0],[0,0,1]],
+  front_top: [[0,0.62,1.35],[0,1,0]],
+  front_left: [[-0.9,0.55,1.1],[0,1,0]], front_right: [[0.9,0.55,1.1],[0,1,0]],
+  rear_left: [[-0.9,0.55,-1.1],[0,1,0]], rear_right: [[0.9,0.55,-1.1],[0,1,0]]
+};
+
+const canvas = document.getElementById('viewer');
+const renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha:Boolean(checker), preserveDrawingBuffer:true});
+renderer.setPixelRatio(1);
+renderer.setSize(innerWidth, innerHeight, false);
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.toneMapping = THREE.NoToneMapping;
+const scene = new THREE.Scene();
+if (checker) {
+  const colors = checker === 'dark' ? ['#101214','#34383c'] : ['#ffffff','#c8cdd1'];
+  document.body.style.backgroundColor = colors[0];
+  document.body.style.backgroundImage = 'conic-gradient(' + colors[1] + ' 25%, ' + colors[0] + ' 0 50%, ' + colors[1] + ' 0 75%, ' + colors[0] + ' 0)';
+  document.body.style.backgroundSize = '32px 32px';
+  renderer.setClearColor(0x000000, 0);
+  scene.background = null;
+} else {
+  renderer.setClearColor(background, 1);
+  scene.background = new THREE.Color(background);
+}
+scene.add(new THREE.HemisphereLight(0xffffff, 0x7c8388, 2.1));
+const key = new THREE.DirectionalLight(0xffffff, 2.2); key.position.set(1.8,2.2,2.5); scene.add(key);
+const fill = new THREE.DirectionalLight(0xbfd8ff, 0.8); fill.position.set(-2,0.8,-1.5); scene.add(fill);
+const camera = new THREE.OrthographicCamera(-1,1,1,-1,0.001,10);
+
+function fitCamera(root) {
+  const box = new THREE.Box3().setFromObject(root);
+  const center = box.getCenter(new THREE.Vector3());
+  const [directionArray, upArray] = vectors[view] || vectors.front;
+  const direction = new THREE.Vector3(...directionArray).normalize();
+  camera.position.copy(center).addScaledVector(direction, 2.0);
+  camera.up.set(...upArray).normalize();
+  camera.lookAt(center);
+  camera.updateMatrixWorld(true);
+  const corners = [];
+  for (const x of [box.min.x, box.max.x]) for (const y of [box.min.y, box.max.y]) for (const z of [box.min.z, box.max.z]) {
+    corners.push(new THREE.Vector3(x,y,z).applyMatrix4(camera.matrixWorldInverse));
+  }
+  let halfWidth = Math.max(...corners.map((point) => Math.abs(point.x))) * 1.10;
+  let halfHeight = Math.max(...corners.map((point) => Math.abs(point.y))) * 1.10;
+  const aspect = innerWidth / innerHeight;
+  if (halfWidth / halfHeight < aspect) halfWidth = halfHeight * aspect;
+  else halfHeight = halfWidth / aspect;
+  camera.left = -halfWidth; camera.right = halfWidth;
+  camera.top = halfHeight; camera.bottom = -halfHeight;
+  camera.near = 0.001; camera.far = 10;
+  camera.updateProjectionMatrix();
+}
+
+new GLTFLoader().load(modelURL, (gltf) => {
+  scene.add(gltf.scene);
+  fitCamera(gltf.scene);
+  renderer.render(scene, camera);
+  requestAnimationFrame(() => {
+    renderer.render(scene, camera);
+    document.body.dataset.ready = 'true';
+    window.__qaReady = true;
+  });
+}, undefined, (error) => {
+  document.body.dataset.error = String(error);
+  console.error(error);
+});
+</script>
+</body>
+</html>
