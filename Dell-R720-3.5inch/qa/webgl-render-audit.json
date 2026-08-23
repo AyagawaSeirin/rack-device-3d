@@ -1,0 +1,586 @@
+{
+  "status": "PASS",
+  "render_count": 40,
+  "engines": [
+    "Three.js",
+    "Babylon.js"
+  ],
+  "profiles": [
+    "standard",
+    "web"
+  ],
+  "views_per_profile": [
+    "front",
+    "rear",
+    "left",
+    "right",
+    "top",
+    "bottom",
+    "front-left",
+    "front-right",
+    "rear-left",
+    "rear-right"
+  ],
+  "orthographic_reference_body_bboxes": {
+    "front": [
+      110,
+      475,
+      1490,
+      725
+    ],
+    "rear": [
+      165,
+      475,
+      1435,
+      725
+    ],
+    "left": [
+      183,
+      518,
+      1490,
+      682
+    ],
+    "right": [
+      110,
+      518,
+      1417,
+      682
+    ],
+    "top": [
+      490,
+      137,
+      1110,
+      1118
+    ],
+    "bottom": [
+      490,
+      137,
+      1110,
+      1118
+    ]
+  },
+  "comparison_rows": 10,
+  "failures": [],
+  "renders": [
+    {
+      "engine": "threejs",
+      "profile": "standard",
+      "view": "front",
+      "path": "qa/viewer-threejs/standard/front.png",
+      "byte_size": 396209,
+      "sha256": "a30fa6072b81e1791d0dee38ed9574bf3741091b1ecc0df622a8ff13ab6bf13f",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "threejs",
+      "profile": "standard",
+      "view": "rear",
+      "path": "qa/viewer-threejs/standard/rear.png",
+      "byte_size": 476468,
+      "sha256": "9d25433d5e276e4875b030c9dd616f6bc204d0f9361d38533337cab82166b6e2",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "threejs",
+      "profile": "standard",
+      "view": "left",
+      "path": "qa/viewer-threejs/standard/left.png",
+      "byte_size": 213708,
+      "sha256": "9a38fac095805d8ece77e1017cffd3efab3957515a7aa6af219e0d475ea4838f",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "threejs",
+      "profile": "standard",
+      "view": "right",
+      "path": "qa/viewer-threejs/standard/right.png",
+      "byte_size": 226429,
+      "sha256": "cfcb9e7fbfc288eb03e243b38a376436818e88566d479861eb14bc7abc623e79",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "threejs",
+      "profile": "standard",
+      "view": "top",
+      "path": "qa/viewer-threejs/standard/top.png",
+      "byte_size": 618685,
+      "sha256": "a2e46f4972321d5699069901eb56837b44f3dc51ea3425104d1beef14ace5e7b",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "threejs",
+      "profile": "standard",
+      "view": "bottom",
+      "path": "qa/viewer-threejs/standard/bottom.png",
+      "byte_size": 1082586,
+      "sha256": "630454365b394a37089b71887459de9a87a787ac11178f85a424e5f94283f95a",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "threejs",
+      "profile": "standard",
+      "view": "front-left",
+      "path": "qa/viewer-threejs/standard/front-left.png",
+      "byte_size": 458238,
+      "sha256": "563fb49c12d2a2a7d6d780d4fb48559ad521b846d880c00e42d44ce3debdf757",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "threejs",
+      "profile": "standard",
+      "view": "front-right",
+      "path": "qa/viewer-threejs/standard/front-right.png",
+      "byte_size": 469529,
+      "sha256": "2779b0b95a320cb7abc8ba96118c45ed557b9a16e43fb18171cec74a355b3281",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "threejs",
+      "profile": "standard",
+      "view": "rear-left",
+      "path": "qa/viewer-threejs/standard/rear-left.png",
+      "byte_size": 459578,
+      "sha256": "811632a4055963cc3d8c599227698a71c1335210203d46601e915344415b8463",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "threejs",
+      "profile": "standard",
+      "view": "rear-right",
+      "path": "qa/viewer-threejs/standard/rear-right.png",
+      "byte_size": 470970,
+      "sha256": "6e9dcd84c9dd3bfc980358d19db00c9a9ecaa9e89f346e99520d268b4bff69ce",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "threejs",
+      "profile": "web",
+      "view": "front",
+      "path": "qa/viewer-threejs/web/front.png",
+      "byte_size": 398456,
+      "sha256": "3c0c731d3ecd161ec783d958e4dd9b3a18438f6b90ccd19f0d8974e6c2c449a2",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "threejs",
+      "profile": "web",
+      "view": "rear",
+      "path": "qa/viewer-threejs/web/rear.png",
+      "byte_size": 482423,
+      "sha256": "2aab7f26b4183079712e3b2b134d63f250928b5473aec9c11f7d5b2828b925d3",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "threejs",
+      "profile": "web",
+      "view": "left",
+      "path": "qa/viewer-threejs/web/left.png",
+      "byte_size": 214583,
+      "sha256": "08ecbf9e7ccc2d943c9e8cb8fed82f6dd46166d366998cf304ec1acd08b22fd1",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "threejs",
+      "profile": "web",
+      "view": "right",
+      "path": "qa/viewer-threejs/web/right.png",
+      "byte_size": 227409,
+      "sha256": "2629c6214327d8b84e15f89616474fc68f9c8c82a4e764b9c2d2719128a460a8",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "threejs",
+      "profile": "web",
+      "view": "top",
+      "path": "qa/viewer-threejs/web/top.png",
+      "byte_size": 631690,
+      "sha256": "50b09eef650295a1f9422ff41bb4e0f38d23285ee096886a293929ba193567f6",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "threejs",
+      "profile": "web",
+      "view": "bottom",
+      "path": "qa/viewer-threejs/web/bottom.png",
+      "byte_size": 1110258,
+      "sha256": "941cb80c9a7b53bc7628dc229211eeb4cc779fa87559a0b36a57cb6d969a46eb",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "threejs",
+      "profile": "web",
+      "view": "front-left",
+      "path": "qa/viewer-threejs/web/front-left.png",
+      "byte_size": 461372,
+      "sha256": "c96b4df206248f641fb206b7740a7f2df880b15617fbc15ac77cb289b0855dbf",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "threejs",
+      "profile": "web",
+      "view": "front-right",
+      "path": "qa/viewer-threejs/web/front-right.png",
+      "byte_size": 473840,
+      "sha256": "eb57093674a88ee009eb1f67886064a2b0c5f803b654ce3130063d4b8ea2f111",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "threejs",
+      "profile": "web",
+      "view": "rear-left",
+      "path": "qa/viewer-threejs/web/rear-left.png",
+      "byte_size": 463279,
+      "sha256": "6f3bd03d8cf772e4ed5e5281f46246814d674279fea5611550757fe849f016eb",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "threejs",
+      "profile": "web",
+      "view": "rear-right",
+      "path": "qa/viewer-threejs/web/rear-right.png",
+      "byte_size": 473938,
+      "sha256": "0835f6e375babf4846dc1a079c0024a1f16e4fd7fe57ec72863223c615cf3078",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "babylonjs",
+      "profile": "standard",
+      "view": "front",
+      "path": "qa/viewer-babylonjs/standard/front.png",
+      "byte_size": 408424,
+      "sha256": "46d0041c47c917072ed961ff0d21f6adc47934c50f4a29ee3b4846c43f7a8d49",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "babylonjs",
+      "profile": "standard",
+      "view": "rear",
+      "path": "qa/viewer-babylonjs/standard/rear.png",
+      "byte_size": 473841,
+      "sha256": "7c9153c4694303139f21162a3029923e6b19a1638455ed4139fc3d14b9420561",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "babylonjs",
+      "profile": "standard",
+      "view": "left",
+      "path": "qa/viewer-babylonjs/standard/left.png",
+      "byte_size": 213926,
+      "sha256": "3966cd46dbec860cd3204b9c5164633a5b4d0f11ae5512bf32cf21573998d62d",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "babylonjs",
+      "profile": "standard",
+      "view": "right",
+      "path": "qa/viewer-babylonjs/standard/right.png",
+      "byte_size": 224628,
+      "sha256": "d0d14a6059365ea4b7b269c377bf204d99cee5756d02753212d629bb8429de5c",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "babylonjs",
+      "profile": "standard",
+      "view": "top",
+      "path": "qa/viewer-babylonjs/standard/top.png",
+      "byte_size": 622759,
+      "sha256": "a073fa1f30e52555745b4a526848aa183c9f07781027f964b59a7fede0195cb9",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "babylonjs",
+      "profile": "standard",
+      "view": "bottom",
+      "path": "qa/viewer-babylonjs/standard/bottom.png",
+      "byte_size": 1062974,
+      "sha256": "8fc8178400dd08d42a9fee3317cdd8ed7cfb74788c5a552dd6eef03fd3c7ea62",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "babylonjs",
+      "profile": "standard",
+      "view": "front-left",
+      "path": "qa/viewer-babylonjs/standard/front-left.png",
+      "byte_size": 529178,
+      "sha256": "c888bf8c101aec9aa3cecf4201b363a4ffbff84b2e69f8428729d86799abc13c",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "babylonjs",
+      "profile": "standard",
+      "view": "front-right",
+      "path": "qa/viewer-babylonjs/standard/front-right.png",
+      "byte_size": 543073,
+      "sha256": "226fd0f91b23dd365b1e6d21f986130913573440ec69e6e9880a2d1b29342ce2",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "babylonjs",
+      "profile": "standard",
+      "view": "rear-left",
+      "path": "qa/viewer-babylonjs/standard/rear-left.png",
+      "byte_size": 531132,
+      "sha256": "15a7a28944affb0ba494c57d07c817eda99e05b7328971066696b6daee6a72a4",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "babylonjs",
+      "profile": "standard",
+      "view": "rear-right",
+      "path": "qa/viewer-babylonjs/standard/rear-right.png",
+      "byte_size": 539132,
+      "sha256": "2d0a38ae388a279b82b9cbe6787c048f4bf633f8b478d75f67bdbc22eac56916",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "babylonjs",
+      "profile": "web",
+      "view": "front",
+      "path": "qa/viewer-babylonjs/web/front.png",
+      "byte_size": 412750,
+      "sha256": "96e1624da7e0d44560cd56f0b6ce1c33d24dac105f3a03a40a081111766e100c",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "babylonjs",
+      "profile": "web",
+      "view": "rear",
+      "path": "qa/viewer-babylonjs/web/rear.png",
+      "byte_size": 480254,
+      "sha256": "a3454634413d254a01f17eb7dd42df4eceaa2447e56d3b65c23ab5244a7bc7fc",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "babylonjs",
+      "profile": "web",
+      "view": "left",
+      "path": "qa/viewer-babylonjs/web/left.png",
+      "byte_size": 215457,
+      "sha256": "4bce95d84dfd4a39fd3efde5d0067515841a849b569ad5845046b3cc90409b63",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "babylonjs",
+      "profile": "web",
+      "view": "right",
+      "path": "qa/viewer-babylonjs/web/right.png",
+      "byte_size": 226387,
+      "sha256": "7537ac94ad7dcc54784da44f84499c1b15602193b299e58ce8c712c98c2415c7",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "babylonjs",
+      "profile": "web",
+      "view": "top",
+      "path": "qa/viewer-babylonjs/web/top.png",
+      "byte_size": 633271,
+      "sha256": "d9bd1f1fd30acdf171f7d4934fa0f21e95c3e265dba0aaf2c651c067cc6edf40",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "babylonjs",
+      "profile": "web",
+      "view": "bottom",
+      "path": "qa/viewer-babylonjs/web/bottom.png",
+      "byte_size": 1088658,
+      "sha256": "1cadf9e5458526ece846ef00b9e32ca2b293de4f97a24712086f3087e46ab39a",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "babylonjs",
+      "profile": "web",
+      "view": "front-left",
+      "path": "qa/viewer-babylonjs/web/front-left.png",
+      "byte_size": 532651,
+      "sha256": "6f89b2cac22384044bccad919cd72202c89c7764c3b4089669717f35f8c551ae",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "babylonjs",
+      "profile": "web",
+      "view": "front-right",
+      "path": "qa/viewer-babylonjs/web/front-right.png",
+      "byte_size": 547037,
+      "sha256": "fbcd7a2fb4886d3c0ce46fe1add2052884526f9731aecb0b3a2a4076e467d248",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "babylonjs",
+      "profile": "web",
+      "view": "rear-left",
+      "path": "qa/viewer-babylonjs/web/rear-left.png",
+      "byte_size": 535260,
+      "sha256": "93da46ddd0ff646ce9fb65304f1db7ba6312496c3aea8644c86e656f21a487ff",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "babylonjs",
+      "profile": "web",
+      "view": "rear-right",
+      "path": "qa/viewer-babylonjs/web/rear-right.png",
+      "byte_size": 543306,
+      "sha256": "d5e2e17042c51e94a975f3b402c014df72b5c57eff7832226d6c354d02b40ed4",
+      "dimensions": [
+        1600,
+        1200
+      ],
+      "status": "PASS"
+    }
+  ]
+}

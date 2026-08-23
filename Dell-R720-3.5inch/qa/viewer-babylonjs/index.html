@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="data:,"><title>Dell PowerEdge R720 8LFF — Babylon.js QA</title>
+  <style>html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#dfe3e6}canvas{display:block;width:100%;height:100%;touch-action:none}</style>
+</head>
+<body>
+<canvas id="renderCanvas" width="1600" height="1200"></canvas>
+<script src="../../node_modules/babylonjs/babylon.js"></script>
+<script src="../../node_modules/babylonjs-loaders/babylonjs.loaders.min.js"></script>
+<script>
+const WIDTH=1600,HEIGHT=1200,ASPECT=WIDTH/HEIGHT,query=new URLSearchParams(location.search);
+const modelUrl=query.get("model")||"../../model/Dell-R720-3.5inch.glb",view=query.get("view")||"front",background=query.get("background")||"neutral";
+const canvas=document.getElementById("renderCanvas"),engine=new BABYLON.Engine(canvas,true,{preserveDrawingBuffer:true,stencil:true},true);engine.setSize(WIDTH,HEIGHT);
+BABYLON.SceneLoader.ShowLoadingScreen=false;const scene=new BABYLON.Scene(engine);scene.useRightHandedSystem=true;
+scene.clearColor=background==="dark"?new BABYLON.Color4(.145,.157,.169,1):new BABYLON.Color4(.8745,.8902,.9020,1);
+scene.imageProcessingConfiguration.toneMappingEnabled=false;scene.imageProcessingConfiguration.exposure=1;scene.imageProcessingConfiguration.contrast=1;
+const hemi=new BABYLON.HemisphericLight("hemi",new BABYLON.Vector3(-.4,1,.6),scene);hemi.intensity=1.40;hemi.groundColor=new BABYLON.Color3(.45,.48,.50);
+const key=new BABYLON.DirectionalLight("key",new BABYLON.Vector3(.4,-.8,-.7),scene);key.intensity=.98;
+const fill=new BABYLON.DirectionalLight("fill",new BABYLON.Vector3(-.7,-.2,.7),scene);fill.intensity=.42;
+const orthographic={front:{dir:[0,0,1],up:[0,1,0],axes:["x","y"]},rear:{dir:[0,0,-1],up:[0,1,0],axes:["x","y"]},left:{dir:[-1,0,0],up:[0,1,0],axes:["z","y"]},right:{dir:[1,0,0],up:[0,1,0],axes:["z","y"]},top:{dir:[0,1,0],up:[0,0,-1],axes:["x","z"]},bottom:{dir:[0,-1,0],up:[0,0,-1],axes:["x","z"]}};
+const perspective={"front-left":[-1,.62,1.15],"front-right":[1,.62,1.15],"rear-left":[-1,.62,-1.15],"rear-right":[1,.62,-1.15]},vector=a=>new BABYLON.Vector3(a[0],a[1],a[2]);
+function cameraFor(center,size){const c=new BABYLON.FreeCamera("qa-camera",new BABYLON.Vector3(0,0,2),scene);c.minZ=.01;c.maxZ=20;
+ if(orthographic[view]){const s=orthographic[view],pw=size[s.axes[0]],ph=size[s.axes[1]],halfH=Math.max(ph*.58,pw/ASPECT*.58),halfW=halfH*ASPECT;c.mode=BABYLON.Camera.ORTHOGRAPHIC_CAMERA;c.orthoLeft=-halfW;c.orthoRight=halfW;c.orthoTop=halfH;c.orthoBottom=-halfH;c.position=center.add(vector(s.dir).scale(2));c.upVector=vector(s.up);}else{const dir=vector(perspective[view]||perspective["front-left"]).normalize(),radius=Math.max(size.x,size.y,size.z)*.5,fov=28*Math.PI/180;c.fov=fov;c.position=center.add(dir.scale(radius/Math.tan(fov/2)*1.16));c.upVector=new BABYLON.Vector3(0,1,0);}c.setTarget(center);return c;}
+BABYLON.SceneLoader.AppendAsync("",modelUrl,scene).then(()=>{const ext=scene.getWorldExtends(m=>m.isEnabled()&&m.getTotalVertices()>0),center=ext.min.add(ext.max).scale(.5),size=ext.max.subtract(ext.min);scene.activeCamera=cameraFor(center,size);engine.hideLoadingUI();let frames=0;engine.runRenderLoop(()=>{scene.render();if(window.qaReady!==true&&++frames>=8){window.qaReady=true;document.body.dataset.ready="true";}});}).catch(error=>{console.error(error);window.qaError=String(error);});
+</script>
+</body>
+</html>

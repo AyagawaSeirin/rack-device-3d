@@ -1,0 +1,92 @@
+{
+  "status": "PASS_WITH_BOTTOM_FALLBACK",
+  "completed_at": "2026-08-24T01:45:20+08:00",
+  "scope": "Dell-R720-3.5inch only",
+  "identity": {
+    "manufacturer": "Dell",
+    "product_id": "PowerEdge R720",
+    "variant": "2U, 8 x 3.5-inch LFF in 2x4 layout, no bezel, not R720xd",
+    "rear_configuration": "standard seven-slot rear, 3 low-profile + 4 full-height blanks, iDRAC7, DB9, VGA, 2 USB2, quad RJ45 NDC",
+    "power": "2 x matching Dell 750W hot-plug AC PSU, each with IEC inlet and visible fan",
+    "branding": "factory DELL and PowerEdge R720 marks retained"
+  },
+  "dimensions_mm": {
+    "body": [444.0, 87.3, 702.0],
+    "installed_bounds": [482.4, 87.3, 741.0],
+    "installed_bounds_order": "width, height, depth"
+  },
+  "models": [
+    {
+      "profile": "standard",
+      "path": "model/Dell-R720-3.5inch.glb",
+      "byte_size": 19085704,
+      "size_mib": 18.20,
+      "sha256": "ed797eeae6d3daf3fb553479fe1b4a8e92157e383bd69596b4d9c5adfc8b64cf",
+      "skill_glb_audit": "PASS"
+    },
+    {
+      "profile": "web",
+      "path": "model/Dell-R720-3.5inch-web.glb",
+      "byte_size": 11344552,
+      "size_mib": 10.82,
+      "sha256": "3fb84bc99c2164863f1fdecf2fcb035be5e1010872efe8b6cd76e0e04947ce0b",
+      "skill_glb_audit": "PASS"
+    }
+  ],
+  "six_faces": {
+    "count": 6,
+    "independent_source_lock": true,
+    "left_right_mirrored": false,
+    "transparent_png_audit": "PASS",
+    "transparent_png_warnings": 3,
+    "warning_resolution": "front/rear/right warnings were visually inspected and are limited to antialiased silhouette/true aperture edge pixels; inset chassis core transparency is zero or effectively zero",
+    "bottom_mode": "GENERIC_BOTTOM_FALLBACK",
+    "lineage": "source/face-source-lock.csv"
+  },
+  "model_structure": {
+    "audit": "qa/structure-audit.json",
+    "status": "PASS",
+    "checks_passed": 45,
+    "errors": 0,
+    "node_count_each": 121,
+    "embedded_images_each": 8,
+    "external_resources": 0,
+    "mirrored_nodes": 0,
+    "standard_web_node_names_identical": true
+  },
+  "webgl": {
+    "status": "PASS",
+    "actual_load_render_count": 40,
+    "engines": ["Three.js", "Babylon.js"],
+    "profiles": ["standard", "web"],
+    "views_each": ["front", "rear", "left", "right", "top", "bottom", "front-left", "front-right", "rear-left", "rear-right"],
+    "capture_dimensions_px": [1600, 1200],
+    "failed_renders": 0,
+    "audit": "qa/webgl-render-audit.json",
+    "cross_check": "qa/comparison-table.csv"
+  },
+  "official_optional_3d": {
+    "status": "NOT_FOUND_AFTER_EXHAUSTIVE_PUBLIC_SEARCH",
+    "preserved_binary_count": 0,
+    "record": "source/optional-3d/official-3d-search.md",
+    "note": "no public official exact R720 8-LFF 3D/CAD/AR file or interactive model was available to preserve"
+  },
+  "final_gates": {
+    "identity_manifest": "VERIFIED",
+    "source_lock": "PASS",
+    "six_face_png": "PASS_WITH_3_VISUALLY_RESOLVED_EDGE_WARNINGS",
+    "standard_glb": "PASS",
+    "web_glb": "PASS",
+    "configuration_structure": "PASS",
+    "threejs_actual_loads": "20/20 PASS",
+    "babylonjs_actual_loads": "20/20 PASS",
+    "reference_render_comparisons": "PASS",
+    "bottom_exception_disclosed": true,
+    "git_commit_or_push": false
+  },
+  "remaining_risks": [
+    "No exact R720 underside photograph or underside drawing was found; the bottom is a deliberately conservative galvanized-sheet fallback with no unsupported mechanics.",
+    "The six photographic face masters are source-locked AI reconstructions from inspected real/official evidence, not Dell factory CAD or direct six-camera photography.",
+    "No public official exact-model 3D asset was found, so dimensional and external-detail reconstruction remains evidence-led rather than OEM mesh-derived."
+  ]
+}
