@@ -2,7 +2,7 @@
 
 Access date: 2026-08-24 (Asia/Singapore)
 
-Result: **no public exact matching official 3D file was found for any identity candidate**. No file is stored in `source/optional-3d/`.
+Result: **no public exact matching official 3D file was found for `N9K-C93180YC-FX`**. No file is stored in `source/optional-3d/`.
 
 ## Official Cisco searches
 
@@ -41,10 +41,16 @@ Results were reseller pages, product photographs, manuals, and NetBox metadata. 
 - Exact EX used-equipment gallery rendered successfully and five originals were downloaded. Evidence: `qa/browser/pios-ex-product-snapshot.yml`.
 - One attempted headed launch failed because no X server is present; the documented headless path then succeeded.
 
+## Cisco Kaon WebGL catalog audit
+
+Cisco's public Kaon application was enumerated at `https://apps.kaonadn.net/4357027/product.html`. All 214 publicly enumerated `catalog/*/*/lepton/app.xml` manifests were downloaded unchanged under `qa/reference/kaon-app-index/` and searched for `93180`, `93180YC`, `C93180YC`, `N9K-C93180YC`, `FX`, and related geometry identifiers.
+
+The sole 93180 3D catalog application was `catalog/19/1961`, explicitly named **Cisco Nexus 93180LC-EX** / **Cisco 93180 Switch 2D**. It is a materially different 93180LC-EX product and is rejected. One unrelated VxBlock manifest contains text mentioning 93180YC-EX but no exact FX product geometry. No manifest names or references `N9K-C93180YC-FX`; no exact official Kaon asset was downloaded to `source/optional-3d/`.
+
 ## Local repository search
 
 `rg --files` was searched for `N9K.?C93180YC`, `93180YC`, and `Cisco.*93180`. No pre-existing model, mesh, texture set, or official 3D file was found outside this new model directory.
 
 ## Conclusion
 
-Official 3D status is `NOT_FOUND`. Even if an official file had been found, the skill requires a separate newly constructed standard/web GLB after identity verification; an official file would not replace that build.
+Official 3D status is `NOT_FOUND` for the exact selected PID. Even if an official file had been found, the skill requires a separate newly constructed standard/web GLB after identity verification; an official file would not replace that build.

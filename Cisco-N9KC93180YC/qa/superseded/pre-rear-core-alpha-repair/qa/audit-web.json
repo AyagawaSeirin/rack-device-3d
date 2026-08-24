@@ -1,0 +1,93 @@
+{
+  "status": "PASS",
+  "model": {
+    "path": "models/Cisco-N9K-C93180YC-FX-web.glb",
+    "bytes": 3492936,
+    "sha256": "b6b6c52837561cd427c22a1c1026915c3e9d3d56507b00387fd97c9f6eb61037",
+    "geometry_signature": "c8d3be0fe17d6d290d73f55f15b0f1f464f13aa827d6a2640da863f330355b1b",
+    "nodes": 418,
+    "meshes": 95,
+    "materials": 15,
+    "images": 6,
+    "embedded_images": {
+      "FACE_FRONT_SOURCE_LOCKED_Image": {
+        "bytes": 376389,
+        "sha256": "153e9d79f9e9f3abd6f141776299c82bfe0173da746c8671ea490a95a8ee2e17",
+        "size_px": [
+          1600,
+          146
+        ],
+        "mode": "RGBA",
+        "format": "PNG"
+      },
+      "FACE_REAR_SOURCE_LOCKED_Image": {
+        "bytes": 472348,
+        "sha256": "f8bd1f4be020f486fd168f7cdc2f8703ae013608d121b3b4bc8056efd819f3da",
+        "size_px": [
+          1600,
+          161
+        ],
+        "mode": "RGBA",
+        "format": "PNG"
+      },
+      "FACE_LEFT_SOURCE_LOCKED_Image": {
+        "bytes": 292676,
+        "sha256": "bd16cbe3badb2e12398a98993a22b9f641b55b0cffc45bae40aea0dde26714db",
+        "size_px": [
+          1600,
+          123
+        ],
+        "mode": "RGBA",
+        "format": "PNG"
+      },
+      "FACE_RIGHT_SOURCE_LOCKED_Image": {
+        "bytes": 276067,
+        "sha256": "3f2c049c79b488650151e0845d75bafc2c1a9cb40ecb2e8898d4091a776ae4f2",
+        "size_px": [
+          1600,
+          123
+        ],
+        "mode": "RGBA",
+        "format": "PNG"
+      },
+      "FACE_TOP_SOURCE_LOCKED_Image": {
+        "bytes": 853918,
+        "sha256": "e4965abfb834fcf355876703cd230e9fe3432a0ff8529db06886dcaa624fc67d",
+        "size_px": [
+          800,
+          946
+        ],
+        "mode": "RGBA",
+        "format": "PNG"
+      },
+      "FACE_BOTTOM_SOURCE_LOCKED_Image": {
+        "bytes": 976625,
+        "sha256": "0a4922d70052749fe7c554549912fe0635406efd107934bc29e85091dd0918a4",
+        "size_px": [
+          800,
+          946
+        ],
+        "mode": "RGBA",
+        "format": "PNG"
+      }
+    }
+  },
+  "checks": {
+    "model_hashes_exact": true,
+    "model_bytes_exact": true,
+    "standard_web_geometry_identical": true,
+    "self_contained_no_external_buffer_uri": true,
+    "all_materials_opaque": true,
+    "all_materials_single_sided": true,
+    "six_embedded_images_each": true,
+    "standard_embeds_exact_six_views": true,
+    "feature_counts_exact": true,
+    "left_right_not_mirrored": true,
+    "exact_identity_metadata": true,
+    "official_body_dimensions_metadata": true,
+    "forty_hash_proven_loads": true,
+    "load_report_pass": true,
+    "bottom_fallback_declared": true,
+    "official_3d_negative_result_recorded": true
+  }
+}

@@ -2,94 +2,47 @@
 
 Audit date: 2026-08-24 (Asia/Singapore)
 
-Final identity gate: **BLOCKED**
+Identity gate: **VERIFIED**
 
 ## Requested subject and screenshot lock
 
-The user-provided table row is preserved unchanged at `source/originals/user-screenshot.png` (SHA-256 `00861cf47eb85ee4f20fc3dc3fc850820368df4e3db7b2721b3226dfca8c1921`). The extracted row is `source/originals/user-screenshot-N9KC93180YC-row.png` (SHA-256 `dc4f35b16756256b9c9768a3ca2ed59bf0cc064a315ea53a39795a0fd7e01e32`).
+The user-provided table is preserved unchanged at `source/originals/user-screenshot.png` (SHA-256 `00861cf47eb85ee4f20fc3dc3fc850820368df4e3db7b2721b3226dfca8c1921`). The target row is preserved at `source/originals/user-screenshot-N9KC93180YC-row.png` (SHA-256 `dc4f35b16756256b9c9768a3ca2ed59bf0cc064a315ea53a39795a0fd7e01e32`).
 
-The row proves these common visible facts:
+The user subsequently fixed the exact chassis identity as **Cisco Nexus 9000 C93180YC-FX**, PID `N9K-C93180YC-FX`, and required AC power. The target rear thumbnail visibly contains two installed AC PSUs, four installed fan trays, and burgundy/dark-magenta latch pixels on all four fans. The front shows all 48 SFP28 and 6 QSFP28 cages empty, with no bezel.
 
-- Cisco/思科 branding and normalized display name `N9KC93180YC`;
-- 1 RU fixed switch silhouette;
-- 48 small front cages in two rows and 6 larger cages in two rows at device right;
-- rear/power-supply side with two IEC AC power inputs, four fan trays, and a right-side control/I/O cluster;
-- no front optics and no bezel.
+## Exact installed configuration
 
-It does **not** prove a complete Cisco PID, airflow direction, AC PSU wattage/PID, fan PID, or exact rear management-port configuration. The extracted device face is only about 204 × 34 source pixels. Nearest-neighbor crops are preserved in `qa/reference/` and were visually inspected. No amount of upscaling restores the missing badge/label information.
+Official Cisco FX documentation identifies two airflow families. Burgundy is port-side intake and blue is port-side exhaust; Cisco requires every fan and PSU in the chassis to have the same airflow direction. The screenshot's four burgundy fan latches lock the physical intake configuration. The preserved legacy guide names that fan `NXA-FAN-30CFM-B`; the user's final exact configuration lock specifies the ordering PID `NXA-FAN-30CFM-PI`. With user-required AC power and matched port-side intake airflow, the FX support matrix locks the power supplies as 2 × `NXA-PAC-500W-PI`.
 
-The rear cluster looks more compatible with EX/FX than the materially different FX3 rear, and its pixel pattern may be compatible with FX L1/L2 ports. This is only a likelihood. It is not reliable exact-PID evidence and cannot satisfy the assembly-identity gate.
+The delivery assembly is:
 
-## Official Cisco evidence
+- chassis `N9K-C93180YC-FX`, full 48-port base PID, 1 RU;
+- front: 48 empty SFP28 cages plus 6 empty QSFP28 cages, no optics or bezel;
+- rear: 4 × `NXA-FAN-30CFM-PI`, 2 × `NXA-PAC-500W-PI`;
+- airflow: port-side intake, burgundy-coded;
+- rear I/O: FX L1/L2 software-defined ports, BCN/STS, console, USB, and RJ-45 out-of-band management;
+- front rack ears present; no rear ears inferred.
 
-### Candidate `N9K-C93180YC-EX`
+## Authoritative dimensions and visual evidence
 
-Official hardware guide:
-https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/hw/n93180ycex_hig/guide/b_n93180ycex_nxos_mode_hardware_install_guide.pdf
+The selected Cisco hardware guide is preserved unchanged at `source/originals/cisco-n93180yc-fx-nxos-hig.pdf`. It establishes a body envelope of 439 × 571 × 44 mm and the exact FX front/rear layout. The nominal front-ear span is modeled at 482.6 mm; each front-only ear extends about 21.8 mm beyond the 439 mm body. Relevant official pages are preserved as high-resolution renders in `source/pdf-pages/` and were inspected at original detail.
 
-- Cisco identifies a 1-RU `N9K-C93180YC-EX` with 48 × 1/10/25G SFP28 and 6 × 40/100G QSFP28 ports.
-- Published switch dimensions: 17.5 × 22.5 × 1.72 inches (44.5 × 57.1 × 4.4 cm).
-- Four fans: `NXA-FAN-30CFM-F` blue port-side exhaust or `NXA-FAN-30CFM-B` burgundy port-side intake.
-- Two AC PSUs: `NXA-PAC-650W-PE` blue exhaust or `NXA-PAC-650W-PI` burgundy intake.
-- Cisco also documents a 24-port ordering configuration `N9K-C93180YC-EX-24`, which retains the fixed front cage silhouette.
-- Visual PDF pages inspected: printed pages 3, 45, and 46 in `source/pdf-pages/`.
+Real exact-FX used-equipment photography supplies the color/material/top/front source lock. The rear is a multi-reference reconstruction: the user screenshot binds installed PI module count/order/color; a high-resolution exact FX PE rear image supplies only FX sheet-metal, L1/L2, fan-tray, and 500W PSU geometry; an exact FX listing with loose PI modules supplies the burgundy PI color/material. Blue PE parts are explicitly excluded.
 
-### Candidate `N9K-C93180YC-FX`
+One reseller image claimed FX but visibly showed the EX management-port cluster and 650W modules. It is rejected as mismatched stock and cannot override Cisco or the screenshot.
 
-Official hardware guide:
-https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/hw/n93180ycfx_hig/guide/b_n93180ycFX_nxos_hardware_installation_guide.pdf
+## Bottom-face escalation
 
-- Cisco identifies a 1-RU `N9K-C93180YC-FX` with the same 48 + 6 front cage pattern.
-- Published switch dimensions: 17.3 × 22.5 × 1.72 inches (43.9 × 57.1 × 4.4 cm).
-- Four fans: `NXA-FAN-30CFM-F` blue port-side exhaust or `NXA-FAN-30CFM-B` burgundy port-side intake.
-- Two AC PSUs: `NXA-PAC-500W-PE` blue exhaust or `NXA-PAC-500W-PI` burgundy intake.
-- The rear I/O cluster includes L1 and L2 software-defined ports, console, USB, and out-of-band RJ45; this differs from EX but is below reliable screenshot resolution.
-- Cisco also documents 24-port ordering variants whose cage silhouette does not disambiguate the screenshot.
-- Visual PDF pages inspected: printed pages 3, 4, 61, and 62 in `source/pdf-pages/`.
+Exact-model underside, bottom, teardown, disassembly, auction, recycler, and multilingual searches found no trustworthy `N9K-C93180YC-FX` bottom photograph or diagram. The permitted bottom fallback therefore uses only generic Cisco 1RU silver sheet-metal material and a conservative folded perimeter lip. All non-exact holes, feet, rails, labels, bosses, and protrusions are forbidden. Full details are in `source/bottom-search-log.md`.
 
-### Candidate `N9K-C93180YC-FX3`
+## Official/public 3D
 
-Official hardware guide:
-https://www.cisco.com/c/en/us/td/docs/dcn/hw/nx-os/nexus9000/93180yc-fx3/cisco-nexus-93180yc-fx3-nx-os-mode-switch-hardware-installation-guide.pdf
+Official Cisco support and public-web searches found no exact `N9K-C93180YC-FX` GLB/glTF/OBJ/FBX/STEP/CAD file. Cisco's public 76 MB Nexus 9000 Visio archive is 2D and was not stored as 3D. An exhaustive scan of all 214 publicly enumerated Cisco Kaon WebGL application manifests found only the distinct Nexus 93180LC-EX application and unrelated textual references, never C93180YC-FX geometry. See `source/official-3d-search-log.md`.
 
-- Cisco identifies a 1-RU `N9K-C93180YC-FX3` with 48 × SFP28 and 6 × QSFP28 cages.
-- Published switch dimensions: 17.3 × 19.5 × 1.72 inches (43.9 × 49.6 × 4.4 cm), 75 mm shorter than EX/FX.
-- Four `NXA-FAN-35CFM-PE` blue exhaust or `NXA-FAN-35CFM-PI` burgundy intake fan modules.
-- Two `NXA-PAC-650W-PE` blue exhaust or `NXA-PAC-650W-PI` burgundy intake AC PSUs.
-- Front timing/GNSS connectors and rear ToD port are visible differentiators. The screenshot seems less compatible but is not readable enough for a formal exclusion.
-- Visual PDF pages inspected: printed pages 3, 4, 49, and 50 in `source/pdf-pages/`.
+## Processing note
 
-## PDF processing note
+The workflow-requested PDF skill was unavailable in this session. The official PDFs were still preserved unchanged, text-extracted using Ghostscript `txtwrite`, and relevant pages rendered to PNG at 150 dpi. Every selected render was visually inspected. Playwright headless browser inspection was used for dynamic Cisco and reseller pages; preserved snapshots are under `qa/browser/`.
 
-The workflow-requested `pdf` skill is not installed in this session. The three official PDFs were still preserved unchanged, text-extracted with Ghostscript `txtwrite`, and the relevant pages rendered at 150 dpi with Ghostscript `png16m`. Every selected page render was inspected at original detail. The extraction warning `finalizing subclassing device while child refcount > 1` occurred after output generation; the text files were created and the cited dimension/module rows were verified against the page renders.
+## Gate decision
 
-## Dynamic page and third-party escalation
-
-Playwright headless browser inspection was used because Cisco pages and the reseller gallery are script-rendered:
-
-- Cisco EX guide: extracted official front/rear figure URLs and verified current content. `qa/browser/cisco-ex-overview-snapshot.yml`.
-- Cisco FX guide: extracted distinct FX figure URLs and rear L1/L2 inventory. `qa/browser/cisco-fx-overview-snapshot.yml`.
-- Cisco FX3 support page: found only the 2D Visio stencil, no 3D/CAD asset. `qa/browser/cisco-fx3-support-snapshot.yml`.
-- Piospartslap EX gallery: verified exact `N9K-C93180YC-EX`, blue 650W AC PSUs, blue fan latches, top cover, and rear management cluster across five 2000 × 2000 photos. `qa/browser/pios-ex-product-snapshot.yml`.
-
-Third-party FX/FX3 photos were cross-checked against the official diagrams:
-
-- exact FX rear photograph shows 500W AC labels and an L1/L2 2×2 rear cluster;
-- exact FX3 rear photograph shows the ToD/control cluster between the fan bank and PSU2 and a shorter top;
-- one FX3S marketplace image was rejected because it visibly shows the wrong port family;
-- one FX3 reseller composite was rejected because it shows detached components, bags, and a watermark rather than a complete device face.
-
-Failed public image fetches are recorded as limitations: the Northsoar host presented a certificate-name mismatch, ServerOrbit returned HTTP 403, CloudAppliances returned HTTP 403, and one NetworkOutlet CDN URL returned HTTP 404. No authentication, certificate bypass, or anti-bot bypass was attempted.
-
-## Exactness decision
-
-Selecting EX, FX, FX3, a 24-port ordering PID, or a PI/PE airflow bundle would change body width/depth, rear I/O, top/service-cover geometry, fan/PDU colors, and PSU labels. Those are identity-bearing exterior facts. Therefore:
-
-- `source/identity-manifest.md` remains `BLOCKED`;
-- all six rows in `source/face-source-lock.csv` remain unselected;
-- built-in image generation was not invoked;
-- no bottom fallback search was started because the non-bottom assembly identity failed first;
-- no standard or web GLB was created;
-- no viewer-load or comparison evidence was fabricated.
-
-The exact unblock requirements are listed in `source/identity-manifest.md`.
+Assembly identity is resolved and all six face-production modes are locked. The only permitted approximation is the explicitly documented bottom fallback. The expected final classification, if all modeling and QA gates pass, is `PASS_WITH_BOTTOM_FALLBACK`.
