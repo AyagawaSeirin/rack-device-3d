@@ -1,0 +1,92 @@
+{
+  "audit_date": "2026-08-24",
+  "project": "Cisco-N9KC9336",
+  "requested_label": "N9KC9336",
+  "resolved_chassis": {
+    "canonical_pid": "N9K-C9336C-FX2",
+    "resolution_method": "Screenshot 36-port front layout and rear PSU + 3 fans + management cluster + PSU layout matched feature-for-feature to Cisco official N9336C-FX2 figures and HIG.",
+    "u_height": "1 RU",
+    "ports": "36 x 40/100G QSFP28"
+  },
+  "status": "BLOCKED",
+  "blocking_gate": "assembly_identity",
+  "blocking_reason": "The chassis name and low-resolution rear screenshot do not uniquely identify the installed AC PI PSU PID or PI fan PID.",
+  "unresolved_variants": {
+    "power_supply": [
+      "NXA-PAC-750W-PI",
+      "NXA-PAC-1100W-PI2",
+      "NXA-PAC-1100W-PI3"
+    ],
+    "fan": [
+      "NXA-FAN-65CFM-PI",
+      "NXA-SFAN-65CFM-PI"
+    ]
+  },
+  "gates": {
+    "chassis_identity": {
+      "status": "PASS",
+      "evidence": "Screenshot front/rear physical layout plus official exact-PID HIG figures"
+    },
+    "installed_configuration": {
+      "status": "BLOCKED",
+      "known": "2 AC PSUs, 3 fans, port-side-intake airflow",
+      "unknown": "exact PSU and fan PIDs"
+    },
+    "official_3d_search": {
+      "status": "PASS",
+      "result": "No public exact-PID official 3D file found",
+      "log": "source/optional-3d/SEARCH-LOG.md"
+    },
+    "six_face_image_generation": {
+      "status": "NOT_RUN",
+      "reason": "Forbidden after assembly-identity BLOCKED"
+    },
+    "model_build": {
+      "status": "NOT_RUN",
+      "reason": "Forbidden after assembly-identity BLOCKED"
+    },
+    "glb_structural_audit": {
+      "status": "NOT_RUN",
+      "reason": "No GLBs were produced"
+    },
+    "two_viewer_actual_loads": {
+      "status": "NOT_RUN",
+      "required_loads_if_models_exist": 40,
+      "performed_loads": 0,
+      "reason": "No GLBs may be built or loaded while identity is BLOCKED"
+    }
+  },
+  "deliverables": {
+    "standard_glb": {
+      "path": null,
+      "exists": false,
+      "bytes": null,
+      "sha256": null
+    },
+    "web_glb": {
+      "path": null,
+      "exists": false,
+      "bytes": null,
+      "sha256": null
+    },
+    "official_3d": {
+      "path": null,
+      "exists": false,
+      "bytes": null,
+      "sha256": null,
+      "result": "not found after documented search"
+    }
+  },
+  "rejected_identity": {
+    "pid": "N9K-C9336PQ",
+    "quarantine_path": "qa/rejected/wrong-identity-9336PQ/",
+    "eligible_as_source": false,
+    "active_source_or_qa_assets_named_for_pq": 0,
+    "official_texture_quarantine": "qa/rejected/wrong-identity-9336PQ/reference/official-textures-png/"
+  },
+  "delivery_hygiene": {
+    "playwright_runtime_cache_included": false,
+    "vendored_python_runtime_dependencies_included": false
+  },
+  "unblock_requirement": "Provide exact PSU and fan BOM/PIDs, readable module labels, or an explicit exact variant selection."
+}

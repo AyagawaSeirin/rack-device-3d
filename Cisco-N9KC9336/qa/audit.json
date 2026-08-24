@@ -1,92 +1,102 @@
 {
-  "audit_date": "2026-08-24",
-  "project": "Cisco-N9KC9336",
-  "requested_label": "N9KC9336",
-  "resolved_chassis": {
-    "canonical_pid": "N9K-C9336C-FX2",
-    "resolution_method": "Screenshot 36-port front layout and rear PSU + 3 fans + management cluster + PSU layout matched feature-for-feature to Cisco official N9336C-FX2 figures and HIG.",
-    "u_height": "1 RU",
-    "ports": "36 x 40/100G QSFP28"
+  "status": "PASS_WITH_BOTTOM_FALLBACK",
+  "generated_at": "2026-08-24T15:41:55+08:00",
+  "identity": {
+    "status": "VERIFIED",
+    "chassis_pid": "N9K-C9336C-FX2",
+    "installed_psu": "2 x NXA-PAC-1100W-PI2 AC",
+    "installed_fan": "3 x NXA-FAN-65CFM-PI",
+    "airflow": "port-side intake",
+    "front_ports": "36 x QSFP28 in 18 vertical two-port cages",
+    "rack_ears_installed": false
   },
-  "status": "BLOCKED",
-  "blocking_gate": "assembly_identity",
-  "blocking_reason": "The chassis name and low-resolution rear screenshot do not uniquely identify the installed AC PI PSU PID or PI fan PID.",
-  "unresolved_variants": {
-    "power_supply": [
-      "NXA-PAC-750W-PI",
-      "NXA-PAC-1100W-PI2",
-      "NXA-PAC-1100W-PI3"
-    ],
-    "fan": [
-      "NXA-FAN-65CFM-PI",
-      "NXA-SFAN-65CFM-PI"
+  "six_face_gate": {
+    "status": "PASS",
+    "audit": "qa/views-audit.json",
+    "error_count": 0,
+    "warning_count": 0,
+    "independent_face_calls": 6,
+    "additional_rejected_front_call": 1,
+    "left_right_sha256_different": true,
+    "bottom_mode": "GENERIC_BOTTOM_FALLBACK"
+  },
+  "models": {
+    "standard": {
+      "path": "models/Cisco-N9K-C9336C-FX2-standard.glb",
+      "bytes": 25463576,
+      "sha256": "80dc0f2030145a0b2320c2d4fbc76a5144d1af62ceb0ad0be91974d6b3043c66",
+      "structural_audit": "qa/standard-glb-audit.json",
+      "status": "PASS"
+    },
+    "web": {
+      "path": "models/Cisco-N9K-C9336C-FX2-web.glb",
+      "bytes": 1282004,
+      "sha256": "18f0cb525689dfea1df6dd5ee4c18a1ffa34b0ff0d95df97f980b32beb5a4d1b",
+      "structural_audit": "qa/web-glb-audit.json",
+      "status": "PASS"
+    },
+    "world_bounds_xyz_mm": [439.0, 44.0, 623.0],
+    "node_count_including_root": 655,
+    "rendered_mesh_node_count": 654,
+    "unique_meshes": 18,
+    "materials": 15,
+    "embedded_face_images": 6,
+    "mirrored_nodes": 0,
+    "external_buffers": 0
+  },
+  "webgl_gate": {
+    "status": "PASS",
+    "required_loads": 40,
+    "actual_loads": 40,
+    "full_body_transfer_proofs": 40,
+    "renderers": ["Three.js r180", "Babylon.js 9.22.0"],
+    "webgl_versions": ["WebGL2"],
+    "loads_per_renderer": 20,
+    "loads_per_model": 20,
+    "views_per_renderer_model": 10,
+    "view_set": ["front", "rear", "left", "right", "top", "bottom", "front-left", "front-right", "rear-left", "rear-right"],
+    "load_duration_ms_min": 286,
+    "load_duration_ms_max": 1197,
+    "total_transfer_bytes": 534923600,
+    "event_log": "qa/webgl-loads/load-events.json",
+    "csv": "qa/viewer-load-evidence.csv",
+    "screenshots": 40
+  },
+  "visual_audit": {
+    "status": "PASS",
+    "three_standard_contact": "qa/comparison/three-standard-10views.png",
+    "babylon_web_contact": "qa/comparison/babylon-web-10views.png",
+    "standard_web_comparison": "qa/comparison/standard-vs-web-keyviews.png",
+    "verified": [
+      "36 front port recesses in 18 cages",
+      "rear PSU + 3 fan + management + PSU order",
+      "burgundy PI latches and protruding handles",
+      "left caution label without grounding pad",
+      "right two-hole grounding pad without left label",
+      "top port-side vent band",
+      "conservative featureless bottom"
     ]
   },
-  "gates": {
-    "chassis_identity": {
-      "status": "PASS",
-      "evidence": "Screenshot front/rear physical layout plus official exact-PID HIG figures"
-    },
-    "installed_configuration": {
-      "status": "BLOCKED",
-      "known": "2 AC PSUs, 3 fans, port-side-intake airflow",
-      "unknown": "exact PSU and fan PIDs"
-    },
-    "official_3d_search": {
-      "status": "PASS",
-      "result": "No public exact-PID official 3D file found",
-      "log": "source/optional-3d/SEARCH-LOG.md"
-    },
-    "six_face_image_generation": {
-      "status": "NOT_RUN",
-      "reason": "Forbidden after assembly-identity BLOCKED"
-    },
-    "model_build": {
-      "status": "NOT_RUN",
-      "reason": "Forbidden after assembly-identity BLOCKED"
-    },
-    "glb_structural_audit": {
-      "status": "NOT_RUN",
-      "reason": "No GLBs were produced"
-    },
-    "two_viewer_actual_loads": {
-      "status": "NOT_RUN",
-      "required_loads_if_models_exist": 40,
-      "performed_loads": 0,
-      "reason": "No GLBs may be built or loaded while identity is BLOCKED"
-    }
+  "official_public_3d": {
+    "found": false,
+    "search_log": "source/optional-3d/SEARCH-LOG.md",
+    "preserved_files": []
   },
-  "deliverables": {
-    "standard_glb": {
-      "path": null,
-      "exists": false,
-      "bytes": null,
-      "sha256": null
-    },
-    "web_glb": {
-      "path": null,
-      "exists": false,
-      "bytes": null,
-      "sha256": null
-    },
-    "official_3d": {
-      "path": null,
-      "exists": false,
-      "bytes": null,
-      "sha256": null,
-      "result": "not found after documented search"
-    }
-  },
-  "rejected_identity": {
-    "pid": "N9K-C9336PQ",
-    "quarantine_path": "qa/rejected/wrong-identity-9336PQ/",
-    "eligible_as_source": false,
-    "active_source_or_qa_assets_named_for_pq": 0,
-    "official_texture_quarantine": "qa/rejected/wrong-identity-9336PQ/reference/official-textures-png/"
+  "wrong_identity_assets": {
+    "active_pq_assets": 0,
+    "quarantine": "qa/rejected/wrong-identity-9336PQ/",
+    "participates_in_delivery": false
   },
   "delivery_hygiene": {
-    "playwright_runtime_cache_included": false,
-    "vendored_python_runtime_dependencies_included": false
+    "playwright_runtime_cache_in_project": false,
+    "python_bytecode_or_vendored_python_lib_in_project": false,
+    "smoke_images_in_project": false,
+    "batch_status_touched": false,
+    "git_commit_or_push_performed": false
   },
-  "unblock_requirement": "Provide exact PSU and fan BOM/PIDs, readable module labels, or an explicit exact variant selection."
+  "residual_risks": [
+    "No exact underside image was found; the bottom is the skill-defined conservative fallback.",
+    "Exterior relief placement is photograph-scaled rather than service-CAD dimensional data.",
+    "This is a web-ready exterior replica, not engineering CAD and not an internal-component model."
+  ]
 }

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Three.js · Cisco N9K-C9336C-FX2 GLB gate</title>
+  <style>
+    html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#dfe4ea;font:14px system-ui,sans-serif;color:#12202c}
+    #stage{position:absolute;inset:0;background-color:#eef1f5;background-image:linear-gradient(45deg,#dfe5eb 25%,transparent 25%),linear-gradient(-45deg,#dfe5eb 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#dfe5eb 75%),linear-gradient(-45deg,transparent 75%,#dfe5eb 75%);background-size:32px 32px;background-position:0 0,0 16px,16px -16px,-16px 0}
+    canvas{display:block;width:100%;height:100%}#badge{position:absolute;left:18px;top:16px;padding:9px 12px;border-radius:8px;background:#ffffffdf;box-shadow:0 3px 18px #0002;font-weight:700}#status{position:absolute;left:18px;bottom:16px;padding:7px 10px;border-radius:7px;background:#0a1721df;color:#dff7e7;font-size:12px}
+  </style>
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js"}}</script>
+</head>
+<body><div id="stage"></div><div id="badge"></div><div id="status">Loading actual GLB…</div>
+<script type="module">
+  import * as THREE from "three";
+  import {GLTFLoader} from "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/loaders/GLTFLoader.js";
+  const q=new URLSearchParams(location.search),flavor=q.get("model")==="web"?"web":"standard",view=q.get("view")||"front",run=q.get("run")||"0";
+  const modelBase=flavor==="web"?"../../models/Cisco-N9K-C9336C-FX2-web.glb":"../../models/Cisco-N9K-C9336C-FX2-standard.glb",modelURL=`${modelBase}?gate=${encodeURIComponent(run)}`;
+  const directions={front:[0,0,1],rear:[0,0,-1],left:[-1,0,0],right:[1,0,0],top:[0,1,0],bottom:[0,-1,0],"front-left":[-1,.55,1],"front-right":[1,.55,1],"rear-left":[-1,.55,-1],"rear-right":[1,.55,-1]};
+  const stage=document.querySelector("#stage"),badge=document.querySelector("#badge"),status=document.querySelector("#status");badge.textContent=`Three.js r${THREE.REVISION} · ${flavor} · ${view} · run ${run}`;
+  const scene=new THREE.Scene(),renderer=new THREE.WebGLRenderer({antialias:true,alpha:true,preserveDrawingBuffer:true});renderer.setPixelRatio(1);renderer.setSize(innerWidth,innerHeight);renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.setClearColor(0,0);stage.appendChild(renderer.domElement);scene.add(new THREE.HemisphereLight(0xffffff,0x66717c,2.2));const key=new THREE.DirectionalLight(0xffffff,2.4);key.position.set(2,4,5);scene.add(key);const fill=new THREE.DirectionalLight(0xb8d6ff,1.2);fill.position.set(-4,1,-3);scene.add(fill);
+  const camera=new THREE.OrthographicCamera(-1,1,1,-1,.1,10000);
+  function fit(root){
+    const box=new THREE.Box3().setFromObject(root),center=box.getCenter(new THREE.Vector3()),size=box.getSize(new THREE.Vector3()),maxDim=Math.max(size.x,size.y,size.z),dir=new THREE.Vector3(...(directions[view]||directions.front)).normalize();camera.position.copy(center).addScaledVector(dir,maxDim*2.4);camera.up.set(0,1,0);if(view==="top")camera.up.set(0,0,-1);if(view==="bottom")camera.up.set(0,0,1);camera.near=.1;camera.far=maxDim*6;camera.lookAt(center);camera.updateMatrixWorld(true);camera.matrixWorldInverse.copy(camera.matrixWorld).invert();
+    let maxX=0,maxY=0;for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z]){const p=new THREE.Vector3(x,y,z).applyMatrix4(camera.matrixWorldInverse);maxX=Math.max(maxX,Math.abs(p.x));maxY=Math.max(maxY,Math.abs(p.y));}const aspect=innerWidth/innerHeight,halfH=Math.max(maxY,maxX/aspect)*1.12,halfW=halfH*aspect;Object.assign(camera,{left:-halfW,right:halfW,top:halfH,bottom:-halfH});camera.updateProjectionMatrix();return{min:box.min.toArray(),max:box.max.toArray(),size:size.toArray(),camera:camera.position.toArray()};
+  }
+  const started=performance.now();new GLTFLoader().load(modelURL,gltf=>{scene.add(gltf.scene);gltf.scene.updateMatrixWorld(true);const bounds=fit(gltf.scene);renderer.render(scene,camera);const meshes=[];gltf.scene.traverse(o=>{if(o.isMesh)meshes.push(o.name)});const absolute=new URL(modelURL,location.href).href,resource=performance.getEntriesByName(absolute).at(-1);status.textContent=`PASS · actual ${flavor} GLB · ${meshes.length} mesh nodes · ${view}`;window.viewerInfo={renderer:`Three.js r${THREE.REVISION}`,model:absolute,flavor,view,run,bounds,meshCount:meshes.length,webgl:renderer.capabilities.isWebGL2?"WebGL2":"WebGL1",loadDurationMs:Math.round(performance.now()-started),resourceDurationMs:resource?Math.round(resource.duration):null,transferSize:resource?.transferSize??null,decodedBodySize:resource?.decodedBodySize??null};window.__RENDER_DONE__=true;},undefined,e=>{console.error(e);status.textContent=`ERROR · ${e.message}`;window.__RENDER_DONE__="error";});
+</script></body></html>

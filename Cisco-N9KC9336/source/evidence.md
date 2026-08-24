@@ -46,7 +46,7 @@ The official PDF was rendered locally with Ghostscript because a PDF-specific sk
 - Both PSU pull tabs are burgundy/red, which Cisco defines as port-side-intake airflow. Cisco requires all installed PSUs and fan modules to use the same airflow direction, so the assembly is PI.
 - The rear thumbnail is only 210 × 55 pixels. Upscaling does not recover labels, wattage, efficiency generation, or fan PID.
 
-## Official variant matrix causing the block
+## Initial module ambiguity and explicit resolution
 
 Cisco's exact-model guide supports all of the following visible PI configurations:
 
@@ -56,7 +56,22 @@ Cisco's exact-model guide supports all of the following visible PI configuration
 - Fan: `NXA-FAN-65CFM-PI`
 - Fan: `NXA-SFAN-65CFM-PI`
 
-The screenshot shorthand and unreadable module labels do not distinguish among these PIDs. A reseller bundle was found with 2 × 750W PI, while a separate exact-model intake listing described 2 × 1100W, confirming that more than one real AC intake assembly exists. Those reseller statements are corroborative only; the official Cisco compatibility list is the binding reason that no default can be assumed.
+The screenshot shorthand and unreadable module labels alone do not distinguish among these PIDs. The current task now explicitly locks the installed configuration to 2 × `NXA-PAC-1100W-PI2` and 3 × `NXA-FAN-65CFM-PI`. This is supported by the exact-config Dedicated Networks BOM and by the inspected ETB intake photograph, where the three fan PID labels and burgundy handles are visible. The earlier ambiguity is therefore resolved without inference.
+
+Exact configuration corroboration:
+
+- https://dedicatednetworksinc.com/product/cisco-n9k-c9336c-fx2-managed-switch-36x-100gb-qsfp28-40gb-qsfp28-intake/ — explicitly lists 2 × `NXA-PAC-1100W-PI2` and 3 × `NXA-FAN-65CFM-PI`.
+- https://www.etb-tech.com/cisco-nexus-n9k-c9336c-fx2-switch-lan-enterprise-port-side-air-intake-sw00114.html — exact model, 2 × 1100W hot-swap PSU, port-side intake.
+- `source/third-party/etb-intake-rear-pi2.jpg` — inspected real photo; three `NXA-FAN-65CFM-PI` labels and PI hardware are visible.
+
+## Six-face source outcome
+
+- Front: direct exact-model real photograph plus official front diagram.
+- Rear: direct straight real photograph plus an exact-config 2×1100W intake oblique and official rear diagram.
+- Physical left: exact-model front-left-top real photograph; no grounding pad; independent source, not mirrored.
+- Physical right: exact-model front-right-top real photograph plus official bracket/grounding diagram; independent source, not mirrored.
+- Top: three exact-model real oblique photographs jointly cover the cover, vent band, seams, labels and fasteners.
+- Bottom: no exact underside after official, Browser-assisted, reseller, marketplace, used-equipment, video, and English/Chinese/Japanese searches. The controlled `GENERIC_BOTTOM_FALLBACK` is documented in `source/bottom-search-log.md`.
 
 Primary official sources:
 
@@ -67,4 +82,4 @@ Primary official sources:
 
 ## Decision
 
-Status is `BLOCKED` at the assembly-identity gate. No face image generation, mesh construction, GLB export, or WebGL acceptance loading is permitted until the exact installed PSU and fan PIDs are supplied.
+Assembly status is `VERIFIED`. Image generation and modeling may proceed with the exact configuration above. Because only the bottom uses the documented exception, the final acceptance target is `PASS_WITH_BOTTOM_FALLBACK`.
