@@ -13,3 +13,4 @@ The download button for the photo/Visio package redirects to Huawei Uniportal au
 
 Searches performed on 2026-08-23 included official-domain combinations of the exact EI and HI PIDs with `3D`, `GLB`, `glTF`, `CAD`, `STEP`, `AR`, `Visio`, and `VSS`. No exact official 3D result was found.
 
+Current recheck on 2026-08-27 reached the same result. Huawei's current Hardware Center still identifies the exact EI PID, but the public photo-package metadata and product-3D surfaces expose no exact downloadable GLB/glTF/OBJ/FBX/STEP binary. No official file was available to preserve, and no access control was bypassed.

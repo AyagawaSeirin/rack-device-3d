@@ -61,3 +61,10 @@ Final model status is therefore `PASS_WITH_BOTTOM_FALLBACK`, not ordinary `PASS`
 ## Public official 3D search
 
 Huawei Info-Finder metadata for the exact EI photo package exposed `threeDUrl: null` and `customThreedUrl: null`. Official-domain searches for the exact EI/HI PIDs with 3D, GLB, glTF, CAD, STEP, AR, Visio, and VSS produced no public downloadable exact model. The Visio package is a stencil/diagram asset, not 3D. Details are retained in `source/optional-3d/README.md`.
+
+## 2026-08-27 current reverse review
+
+- Reopened Huawei Info-Finder Hardware Center PID `22460464`; it still resolves the exact `CE5850-48T4S2Q-EI` product rather than the nearby HI chassis.
+- Rechecked the exact `02359104` photo package, current official product-3D surfaces, and public 3D/CAD/GLB/glTF searches. The exact package still exposes no public downloadable official 3D binary; the official six-photo package remains the primary visual authority.
+- Re-inspection of the retained original-detail port and power faces reconfirmed 48 GE RJ45 + 4 SFP+ + 2 QSFP+, no HI breakout-lamp row, and the installed `PAC-150WA / FAN-40EA-F / management / FAN-40EA-F / PAC-150WA` power-side order.
+- The final GLB preserves the user-facing port side as +Z/front, while retaining Huawei's opposite front/rear naming in the evidence notes. No current source contradicted the 442 × 43.6 × 420 mm appliance or the separate front-ear geometry.

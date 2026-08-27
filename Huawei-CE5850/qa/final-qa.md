@@ -1,5 +1,7 @@
 # Final QA — Huawei CE5850-EI-B00
 
+> Superseded for the current GLB hashes by `qa/rotation-review-20260827/final-report.md`.
+
 Final status: **PASS_WITH_BOTTOM_FALLBACK**
 
 Review date: 2026-08-23  

@@ -11,7 +11,10 @@ const m = (value) => value * MM;
 const BODY_W = 442.0;
 const BODY_H = 43.6;
 const OVERALL_D = 420.0;
-const FACE_CLEARANCE = 0.2;
+// 0.2 mm was visually stable in the old static cameras but leaves too little
+// depth separation for continuous cross-viewer orbiting. Inset only the hidden
+// watertight backing shell; external cards, relief and dimensions stay fixed.
+const FACE_CLEARANCE = 0.8;
 const SHELL_W = BODY_W - FACE_CLEARANCE * 2;
 const SHELL_H = BODY_H - FACE_CLEARANCE * 2;
 const SHELL_D = 412.0;
@@ -112,6 +115,13 @@ function addQuad(context, name, positionsMM, uvs, indices, mat) {
   return nodeWithGeometry(context, name, geometry, mat);
 }
 
+function addCardFrame(context, parent, name, centerX, centerY, width, height, centerZ, depth, bar, mat) {
+  addBox(context, `${name} top rail`, [width, bar, depth], [centerX, centerY + height / 2 - bar / 2, centerZ], mat, parent);
+  addBox(context, `${name} bottom rail`, [width, bar, depth], [centerX, centerY - height / 2 + bar / 2, centerZ], mat, parent);
+  addBox(context, `${name} left rail`, [bar, height - 2 * bar, depth], [centerX - width / 2 + bar / 2, centerY, centerZ], mat, parent);
+  addBox(context, `${name} right rail`, [bar, height - 2 * bar, depth], [centerX + width / 2 - bar / 2, centerY, centerZ], mat, parent);
+}
+
 function addFaceQuads(context, faces) {
   const x0 = -BODY_W / 2, x1 = BODY_W / 2;
   const y0 = -BODY_H / 2, y1 = BODY_H / 2;
@@ -148,7 +158,10 @@ function addFaceQuads(context, faces) {
 function addRackEars(context, mat) {
   for (const side of [-1, 1]) {
     const shape = new THREE.Shape();
-    const width = m(EAR_W);
+    // Leave the main ear 0.4 mm clear of the body-side plane, then bridge it
+    // with a smaller intersecting tongue. This preserves the outer span and
+    // full ear silhouette without any ear face coplanar with a body card.
+    const width = m(EAR_W - 0.4);
     const height = m(BODY_H);
     shape.moveTo(-width / 2, -height / 2);
     shape.lineTo(width / 2, -height / 2);
@@ -169,8 +182,11 @@ function addRackEars(context, mat) {
       side < 0 ? 'RackEarLeft exact separate part with two openings' : 'RackEarRight exact separate part with two openings',
       geometry,
       mat,
-      [side * (BODY_W / 2 + EAR_W / 2), 0, 208.8]
+      [side * (BODY_W / 2 + EAR_W / 2 + 0.2), 0, 208.8]
     );
+    addBox(context,
+      side < 0 ? 'RackEarLeft intersecting anti-coplanar tongue' : 'RackEarRight intersecting anti-coplanar tongue',
+      [0.8, BODY_H - 0.6, 2.2], [side * (BODY_W / 2), 0, 208.8], mat);
   }
 }
 
@@ -190,8 +206,7 @@ function addFrontPortGeometry(context, mats) {
         const index = block * 12 + column * 2 + row + 1;
         const x = blockCenters[block] + (column - 2.5) * 13.6;
         const y = row === 0 ? 9.4 : -9.4;
-        addBox(context, `GE RJ45 ${index} raised cage rim`, [12.5, 12.0, 2.0], [x, y, 208.2], mats.silver, blockNode);
-        addBox(context, `GE RJ45 ${index} recessed dark cavity`, [10.1, 8.4, 2.1], [x, y, 208.95], mats.black, blockNode);
+        addCardFrame(context, blockNode, `GE RJ45 ${index} cage`, x, y, 12.5, 12.0, 208.9, 2.2, 0.85, mats.silver);
       }
     }
   }
@@ -201,7 +216,7 @@ function addFrontPortGeometry(context, mats) {
   let sfpIndex = 1;
   for (const y of [8.2, -8.2]) {
     for (const x of [176.2, 188.1]) {
-      addBox(context, `10GE SFP+ ${sfpIndex} cage`, [10.5, 9.4, 2.0], [x, y, 209.0], mats.black, sfpRoot);
+      addCardFrame(context, sfpRoot, `10GE SFP+ ${sfpIndex} cage`, x, y, 10.5, 9.4, 208.9, 2.2, 0.8, mats.black);
       sfpIndex++;
     }
   }
@@ -209,7 +224,7 @@ function addFrontPortGeometry(context, mats) {
   const qsfpRoot = context.document.createNode('Two 40GE QSFP+ cages EI no breakout lamps');
   root.addChild(qsfpRoot);
   for (const [index, y] of [[1, 8.2], [2, -8.2]]) {
-    addBox(context, `40GE QSFP+ ${index} cage`, [15.2, 10.5, 2.0], [208.6, y, 209.0], mats.black, qsfpRoot);
+    addCardFrame(context, qsfpRoot, `40GE QSFP+ ${index} cage`, 208.6, y, 15.2, 10.5, 208.9, 2.2, 0.8, mats.black);
   }
 
   const status = context.document.createNode('Front Huawei status and MODE-ID controls');
@@ -246,18 +261,18 @@ function addRearGeometry(context, mats) {
   const fan2 = context.document.createNode('FAN2 FAN-40EA-F module'); rear.addChild(fan2);
   const psu2 = context.document.createNode('PWR2 PAC-150WA AC PSU'); rear.addChild(psu2);
 
-  addRearModuleFrame(context, psu1, 'PWR1', -169.5, 103.0, mats);
+  addRearModuleFrame(context, psu1, 'PWR1', -169.5, 102.2, mats);
   addRearModuleFrame(context, fan1, 'FAN1', -67.5, 98.0, mats);
   addRearModuleFrame(context, management, 'Management', 0, 42.0, mats);
   addRearModuleFrame(context, fan2, 'FAN2', 69.5, 96.0, mats);
-  addRearModuleFrame(context, psu2, 'PWR2', 170.0, 102.0, mats);
+  addRearModuleFrame(context, psu2, 'PWR2', 170.0, 101.2, mats);
 
-  addBox(context, 'PWR1 IEC C14 inlet recess', [25, 23, 2.8], [-147.0, 0, -208.6], mats.black, psu1, 0.5);
-  addBox(context, 'PWR2 IEC C14 inlet recess', [25, 23, 2.8], [193.0, 0, -208.6], mats.black, psu2, 0.5);
+  addBox(context, 'PWR1 IEC C14 backing recess', [25, 23, 1.0], [-147.0, 0, -207.0], mats.black, psu1, 0.5);
+  addBox(context, 'PWR2 IEC C14 backing recess', [25, 23, 1.0], [193.0, 0, -207.0], mats.black, psu2, 0.5);
 
   for (const [parent, center, tag] of [[fan1, -67.5, 'FAN1'], [fan2, 69.5, 'FAN2']]) {
-    addBox(context, `${tag} honeycomb field A relief`, [39, 27, 2.0], [center - 22, 0, -208.8], mats.black, parent);
-    addBox(context, `${tag} honeycomb field B relief`, [39, 27, 2.0], [center + 22, 0, -208.8], mats.black, parent);
+    addBox(context, `${tag} honeycomb field A backing`, [39, 27, 1.0], [center - 22, 0, -207.0], mats.black, parent);
+    addBox(context, `${tag} honeycomb field B backing`, [39, 27, 1.0], [center + 22, 0, -207.0], mats.black, parent);
   }
 
   for (const [parent, x, name] of [
@@ -267,10 +282,10 @@ function addRearGeometry(context, mats) {
       [0, 0, 0], parent, 24);
   }
 
-  addBox(context, 'Console RJ45 recessed port', [14.0, 12.0, 2.8], [-8.5, 8.2, -208.6], mats.black, management);
-  addBox(context, 'ETH management RJ45 recessed port', [14.0, 12.0, 2.8], [-8.5, -8.2, -208.6], mats.black, management);
-  addBox(context, 'Vertical USB port recess', [5.0, 14.0, 2.8], [14.0, -1.0, -208.6], mats.usb, management);
-  addBox(context, 'Pull-out serial label tab', [15.0, 2.0, 2.0], [0, -19.0, -209.0], mats.silver, management);
+  addBox(context, 'Console RJ45 backing port', [14.0, 12.0, 1.0], [-8.5, 8.2, -207.0], mats.black, management);
+  addBox(context, 'ETH management RJ45 backing port', [14.0, 12.0, 1.0], [-8.5, -8.2, -207.0], mats.black, management);
+  addBox(context, 'Vertical USB backing port', [5.0, 14.0, 1.0], [14.0, -1.0, -207.0], mats.usb, management);
+  addBox(context, 'Pull-out serial label tab', [15.0, 2.0, 2.4], [0, -19.0, -208.8], mats.silver, management);
 }
 
 function addSideAndTopGeometry(context, mats) {
@@ -291,7 +306,7 @@ function addSideAndTopGeometry(context, mats) {
   }
   addCylinder(context, 'Right-side grounding screw relief', 3.0, 1.4, [222.0, 0, -10], mats.chrome,
     [0, 0, Math.PI / 2], sides, 28);
-  addBox(context, 'Top port-side perforated band relief', [438.0, 1.0, 18.0], [0, 21.3, 200.5], mats.vent, sides);
+  addBox(context, 'Top port-side perforated band backing', [438.0, 1.0, 18.0], [0, 20.8, 200.5], mats.vent, sides);
 }
 
 async function build(variant, outputName) {
