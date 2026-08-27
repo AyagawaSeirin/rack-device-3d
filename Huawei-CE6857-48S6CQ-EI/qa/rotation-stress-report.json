@@ -1,0 +1,378 @@
+{
+  "schema": "rack-device-rotation-stress-report-v1",
+  "review_date": "2026-08-27",
+  "model": "Huawei-CE6857-48S6CQ-EI",
+  "identity": "Huawei CE6857-48S6CQ-EI, PID 02352CHS, CE6857-EI-F-B0B with 4 FAN-031A-F and 2 x 600 W AC",
+  "old_glb_sha256": {
+    "standard": "0060e73351e81431a7afc11fb3525ad5e14f035fb9abe63cc370a617be386edf",
+    "web": "e8b4e5d40c743a854c03a4b2f04cec871af1103e331222c088b0270a76788803"
+  },
+  "new_glb_sha256": {
+    "standard": "a84042056c5a897f5f64e0b7c2da769ff444558c2254e5c173587fd9589ffd37",
+    "web": "87f20106ab0370c704cafc9c5eff1c01a953927d0be374b0336f33f471768b4a"
+  },
+  "reproduction": "No whole-shell alpha jump appeared in the correct v3/v4 visual baseline, but the old asset exported millimetre-valued positions into a metre-based web pipeline and reproducibly failed structural/material gates (670 web render-risk coplanar pairs; non-white BottomZinc baseColorFactor in standard).",
+  "root_cause": "Millimetre coordinate export damaged cross-viewer depth precision; bottom stamp caps, rear module relief and side details were coplanar/near-coplanar with source-locked faces; the old bottom material violated the required main-face factor.",
+  "fixes": [
+    "Exported all glTF positions in metres and recorded metre units while preserving the exact 442 x 43.6 x 457.9 mm installed envelope.",
+    "Rebuilt bottom stamps as uncapped walls with separated photographic caps; separated rear module/handle/ground and side relief from canonical faces.",
+    "Shrank the hidden core, normalized all main face materials to OPAQUE/[1,1,1,1]/single-sided, and retained the exact official PARM6039 GLB unchanged as source-only lineage."
+  ],
+  "glb_audits": {
+    "standard": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "dimensions": {
+        "expected_mm": [
+          442.0,
+          43.6,
+          457.9
+        ],
+        "errors": [],
+        "warnings": [],
+        "actual_xyz": [
+          0.44280002,
+          0.04385,
+          0.45825501
+        ],
+        "units_per_mm_xyz": [
+          0.00100181,
+          0.001005734,
+          0.0010007753
+        ],
+        "nonuniform_ratio_error_percent": 0.2953
+      }
+    },
+    "web": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "dimensions": {
+        "expected_mm": [
+          442.0,
+          43.6,
+          457.9
+        ],
+        "errors": [],
+        "warnings": [],
+        "actual_xyz": [
+          0.44280002,
+          0.04385,
+          0.45825501
+        ],
+        "units_per_mm_xyz": [
+          0.00100181,
+          0.001005734,
+          0.0010007753
+        ],
+        "nonuniform_ratio_error_percent": 0.2953
+      }
+    }
+  },
+  "view_audit": {
+    "status": "PASS",
+    "errors": 0,
+    "warnings": 6,
+    "warning_resolution": [
+      {
+        "face": "front",
+        "warnings": [
+          "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+        ],
+        "core_alpha_below_250_percent": 0.0,
+        "core_transparent_percent": 0.0,
+        "resolution": "Verified as true through-hole/silhouette anti-aliasing only; opaque product core is intact.",
+        "resolved": true
+      },
+      {
+        "face": "rear",
+        "warnings": [
+          "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+        ],
+        "core_alpha_below_250_percent": 0.0,
+        "core_transparent_percent": 0.0,
+        "resolution": "Verified as true through-hole/silhouette anti-aliasing only; opaque product core is intact.",
+        "resolved": true
+      },
+      {
+        "face": "left",
+        "warnings": [
+          "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+        ],
+        "core_alpha_below_250_percent": 0.0,
+        "core_transparent_percent": 0.0,
+        "resolution": "Verified as true through-hole/silhouette anti-aliasing only; opaque product core is intact.",
+        "resolved": true
+      },
+      {
+        "face": "right",
+        "warnings": [
+          "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+        ],
+        "core_alpha_below_250_percent": 0.0,
+        "core_transparent_percent": 0.0,
+        "resolution": "Verified as true through-hole/silhouette anti-aliasing only; opaque product core is intact.",
+        "resolved": true
+      },
+      {
+        "face": "top",
+        "warnings": [
+          "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+        ],
+        "core_alpha_below_250_percent": 0.0,
+        "core_transparent_percent": 0.0,
+        "resolution": "Verified as true through-hole/silhouette anti-aliasing only; opaque product core is intact.",
+        "resolved": true
+      },
+      {
+        "face": "bottom",
+        "warnings": [
+          "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+        ],
+        "core_alpha_below_250_percent": 0.0,
+        "core_transparent_percent": 0.0,
+        "resolution": "Verified as true through-hole/silhouette anti-aliasing only; opaque product core is intact.",
+        "resolved": true
+      }
+    ]
+  },
+  "structural_rotation_checks": {
+    "before": {
+      "standard": {
+        "triangles": 10596,
+        "duplicate_triangle_groups": 0,
+        "opposite_duplicate_groups": 0,
+        "source_surface_coplanar_hazard_pairs": null,
+        "informational_opaque_solid_coplanar_contacts": null,
+        "degenerate_triangles": 0,
+        "normal_mismatches": 0,
+        "negative_transform_count": 0,
+        "face_material_violations": 1,
+        "images_with_partial_alpha": 0,
+        "closed_core_pass": true,
+        "pass": false
+      },
+      "web": {
+        "triangles": 10596,
+        "duplicate_triangle_groups": 0,
+        "opposite_duplicate_groups": 0,
+        "source_surface_coplanar_hazard_pairs": null,
+        "informational_opaque_solid_coplanar_contacts": null,
+        "degenerate_triangles": 0,
+        "normal_mismatches": 0,
+        "negative_transform_count": 0,
+        "face_material_violations": 0,
+        "images_with_partial_alpha": 0,
+        "closed_core_pass": true,
+        "pass": false
+      }
+    },
+    "after": {
+      "standard": {
+        "triangles": 10564,
+        "duplicate_triangle_groups": 0,
+        "opposite_duplicate_groups": 0,
+        "source_surface_coplanar_hazard_pairs": 0,
+        "informational_opaque_solid_coplanar_contacts": 704,
+        "degenerate_triangles": 0,
+        "normal_mismatches": 0,
+        "negative_transform_count": 0,
+        "face_material_violations": 0,
+        "images_with_partial_alpha": 0,
+        "closed_core_pass": true,
+        "pass": true
+      },
+      "web": {
+        "triangles": 10564,
+        "duplicate_triangle_groups": 0,
+        "opposite_duplicate_groups": 0,
+        "source_surface_coplanar_hazard_pairs": 0,
+        "informational_opaque_solid_coplanar_contacts": 704,
+        "degenerate_triangles": 0,
+        "normal_mismatches": 0,
+        "negative_transform_count": 0,
+        "face_material_violations": 0,
+        "images_with_partial_alpha": 0,
+        "closed_core_pass": true,
+        "pass": true
+      }
+    }
+  },
+  "standard_web_geometry_parity": {
+    "pass": true,
+    "checks": {
+      "geometry_transform_uv_fingerprint_equal": true,
+      "bounds_equal": true,
+      "no_negative_transform_standard": true,
+      "no_negative_transform_web": true
+    },
+    "fingerprint": "355c1f9961de73d61f31a5590202c69400f11dc0f11ad782e7ec3df162f90fd5"
+  },
+  "static_gate": {
+    "required_loads": 40,
+    "observed_loads": 40,
+    "pass": true,
+    "report": "/root/Project/rack-device-3d/Huawei-CE6857-48S6CQ-EI/qa/rotation-review/after/static-loads/static-40-loads.json"
+  },
+  "rotation_gate": {
+    "frames_per_viewer_model_combination": 96,
+    "yaw_frames_per_combination": 72,
+    "pitch_frames_per_combination": 24,
+    "final_combinations": 4,
+    "final_total_frames": 384,
+    "before": {
+      "three-standard": {
+        "asset_sha256": "0060e73351e81431a7afc11fb3525ad5e14f035fb9abe63cc370a617be386edf",
+        "viewer": "three",
+        "engine": "Three.js r180",
+        "viewer_code_version": "rotation-review-20260827-v3",
+        "webgl2": true,
+        "yaw_frames": 72,
+        "pitch_light_frames": 12,
+        "pitch_dark_frames": 12,
+        "total_frames": 96,
+        "abrupt_frame_candidates": [],
+        "automated_pass": true,
+        "manual_contact_sheet_review": "PASS",
+        "yaw_contact_sheet": "/root/Project/rack-device-3d/Huawei-CE6857-48S6CQ-EI/qa/rotation-review/before/three-standard/yaw-contact-sheet.png",
+        "checker_contact_sheet": "/root/Project/rack-device-3d/Huawei-CE6857-48S6CQ-EI/qa/rotation-review/before/three-standard/checker-pair-contact-sheet.png"
+      },
+      "three-web": {
+        "asset_sha256": "e8b4e5d40c743a854c03a4b2f04cec871af1103e331222c088b0270a76788803",
+        "viewer": "three",
+        "engine": "Three.js r180",
+        "viewer_code_version": "rotation-review-20260827-v3",
+        "webgl2": true,
+        "yaw_frames": 72,
+        "pitch_light_frames": 12,
+        "pitch_dark_frames": 12,
+        "total_frames": 96,
+        "abrupt_frame_candidates": [],
+        "automated_pass": true,
+        "manual_contact_sheet_review": "PASS",
+        "yaw_contact_sheet": "/root/Project/rack-device-3d/Huawei-CE6857-48S6CQ-EI/qa/rotation-review/before/three-web/yaw-contact-sheet.png",
+        "checker_contact_sheet": "/root/Project/rack-device-3d/Huawei-CE6857-48S6CQ-EI/qa/rotation-review/before/three-web/checker-pair-contact-sheet.png"
+      },
+      "babylon-standard": {
+        "asset_sha256": "0060e73351e81431a7afc11fb3525ad5e14f035fb9abe63cc370a617be386edf",
+        "viewer": "babylon",
+        "engine": "Babylon.js 8.26.0",
+        "viewer_code_version": "rotation-review-20260827-v4",
+        "webgl2": true,
+        "yaw_frames": 72,
+        "pitch_light_frames": 12,
+        "pitch_dark_frames": 12,
+        "total_frames": 96,
+        "abrupt_frame_candidates": [],
+        "automated_pass": true,
+        "manual_contact_sheet_review": "PASS",
+        "yaw_contact_sheet": "/root/Project/rack-device-3d/Huawei-CE6857-48S6CQ-EI/qa/rotation-review/before/babylon-standard/yaw-contact-sheet.png",
+        "checker_contact_sheet": "/root/Project/rack-device-3d/Huawei-CE6857-48S6CQ-EI/qa/rotation-review/before/babylon-standard/checker-pair-contact-sheet.png"
+      },
+      "babylon-web": {
+        "asset_sha256": "e8b4e5d40c743a854c03a4b2f04cec871af1103e331222c088b0270a76788803",
+        "viewer": "babylon",
+        "engine": "Babylon.js 8.26.0",
+        "viewer_code_version": "rotation-review-20260827-v4",
+        "webgl2": true,
+        "yaw_frames": 72,
+        "pitch_light_frames": 12,
+        "pitch_dark_frames": 12,
+        "total_frames": 96,
+        "abrupt_frame_candidates": [],
+        "automated_pass": true,
+        "manual_contact_sheet_review": "PASS",
+        "yaw_contact_sheet": "/root/Project/rack-device-3d/Huawei-CE6857-48S6CQ-EI/qa/rotation-review/before/babylon-web/yaw-contact-sheet.png",
+        "checker_contact_sheet": "/root/Project/rack-device-3d/Huawei-CE6857-48S6CQ-EI/qa/rotation-review/before/babylon-web/checker-pair-contact-sheet.png"
+      }
+    },
+    "after": {
+      "three-standard": {
+        "asset_sha256": "a84042056c5a897f5f64e0b7c2da769ff444558c2254e5c173587fd9589ffd37",
+        "viewer": "three",
+        "engine": "Three.js r180",
+        "viewer_code_version": "rotation-review-20260827-v3",
+        "webgl2": true,
+        "yaw_frames": 72,
+        "pitch_light_frames": 12,
+        "pitch_dark_frames": 12,
+        "total_frames": 96,
+        "abrupt_frame_candidates": [],
+        "automated_pass": true,
+        "manual_contact_sheet_review": "PASS",
+        "yaw_contact_sheet": "/root/Project/rack-device-3d/Huawei-CE6857-48S6CQ-EI/qa/rotation-review/after/three-standard/yaw-contact-sheet.png",
+        "checker_contact_sheet": "/root/Project/rack-device-3d/Huawei-CE6857-48S6CQ-EI/qa/rotation-review/after/three-standard/checker-pair-contact-sheet.png"
+      },
+      "three-web": {
+        "asset_sha256": "87f20106ab0370c704cafc9c5eff1c01a953927d0be374b0336f33f471768b4a",
+        "viewer": "three",
+        "engine": "Three.js r180",
+        "viewer_code_version": "rotation-review-20260827-v3",
+        "webgl2": true,
+        "yaw_frames": 72,
+        "pitch_light_frames": 12,
+        "pitch_dark_frames": 12,
+        "total_frames": 96,
+        "abrupt_frame_candidates": [],
+        "automated_pass": true,
+        "manual_contact_sheet_review": "PASS",
+        "yaw_contact_sheet": "/root/Project/rack-device-3d/Huawei-CE6857-48S6CQ-EI/qa/rotation-review/after/three-web/yaw-contact-sheet.png",
+        "checker_contact_sheet": "/root/Project/rack-device-3d/Huawei-CE6857-48S6CQ-EI/qa/rotation-review/after/three-web/checker-pair-contact-sheet.png"
+      },
+      "babylon-standard": {
+        "asset_sha256": "a84042056c5a897f5f64e0b7c2da769ff444558c2254e5c173587fd9589ffd37",
+        "viewer": "babylon",
+        "engine": "Babylon.js 8.26.0",
+        "viewer_code_version": "rotation-review-20260827-v4",
+        "webgl2": true,
+        "yaw_frames": 72,
+        "pitch_light_frames": 12,
+        "pitch_dark_frames": 12,
+        "total_frames": 96,
+        "abrupt_frame_candidates": [],
+        "automated_pass": true,
+        "manual_contact_sheet_review": "PASS",
+        "yaw_contact_sheet": "/root/Project/rack-device-3d/Huawei-CE6857-48S6CQ-EI/qa/rotation-review/after/babylon-standard/yaw-contact-sheet.png",
+        "checker_contact_sheet": "/root/Project/rack-device-3d/Huawei-CE6857-48S6CQ-EI/qa/rotation-review/after/babylon-standard/checker-pair-contact-sheet.png"
+      },
+      "babylon-web": {
+        "asset_sha256": "87f20106ab0370c704cafc9c5eff1c01a953927d0be374b0336f33f471768b4a",
+        "viewer": "babylon",
+        "engine": "Babylon.js 8.26.0",
+        "viewer_code_version": "rotation-review-20260827-v4",
+        "webgl2": true,
+        "yaw_frames": 72,
+        "pitch_light_frames": 12,
+        "pitch_dark_frames": 12,
+        "total_frames": 96,
+        "abrupt_frame_candidates": [],
+        "automated_pass": true,
+        "manual_contact_sheet_review": "PASS",
+        "yaw_contact_sheet": "/root/Project/rack-device-3d/Huawei-CE6857-48S6CQ-EI/qa/rotation-review/after/babylon-web/yaw-contact-sheet.png",
+        "checker_contact_sheet": "/root/Project/rack-device-3d/Huawei-CE6857-48S6CQ-EI/qa/rotation-review/after/babylon-web/checker-pair-contact-sheet.png"
+      }
+    },
+    "manual_result": "All final sheets reviewed: no surface flicker, transparency jump, checkerboard leakage, disappearing face, mirroring, texture switch, or sudden gray frame."
+  },
+  "matched_camera_and_feature_inventory": {
+    "pass": true,
+    "comparison_count": 10,
+    "matched_orthographic_count": 6,
+    "authoritative_three_quarter_supporting_count": 4,
+    "feature_rows": 32,
+    "manifest": "/root/Project/rack-device-3d/Huawei-CE6857-48S6CQ-EI/qa/rotation-review/after/matched-camera/matched-camera-manifest.json",
+    "feature_review": "/root/Project/rack-device-3d/Huawei-CE6857-48S6CQ-EI/qa/rotation-review/after/matched-camera/feature-inventory-final-review.csv"
+  },
+  "authenticity_conclusion": "Exact 48-SFP+/6-QSFP28 front, four blue fan modules, two blue-handled AC PSUs, U-brackets, non-mirrored sides and official stamped underside passed.",
+  "warnings_and_residual_risk": [
+    "Opaque solid/interior coplanar contact counts are retained as informational mechanical intersections; source-surface hazard count is zero in both final GLBs."
+  ],
+  "evidence_archives": [
+    "/root/Project/rack-device-3d/Huawei-CE6857-48S6CQ-EI/qa/superseded/pre-rotation-review-20260827",
+    "/root/Project/rack-device-3d/Huawei-CE6857-48S6CQ-EI/qa/rotation-review/superseded"
+  ],
+  "validation_errors": [],
+  "status": "PASS",
+  "pass": true
+}

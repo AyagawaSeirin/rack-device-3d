@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Huawei CE6857-48S6CQ-EI Babylon.js QA Viewer</title>
+  <style>
+    html,body,#c{width:100%;height:100%;margin:0;overflow:hidden;display:block}
+    body.light{background-color:#d9dde0;background-image:linear-gradient(45deg,#f5f6f7 25%,transparent 25%),linear-gradient(-45deg,#f5f6f7 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#f5f6f7 75%),linear-gradient(-45deg,transparent 75%,#f5f6f7 75%);background-size:36px 36px;background-position:0 0,0 18px,18px -18px,-18px 0}
+    body.dark{background-color:#25282b;background-image:linear-gradient(45deg,#3b3f43 25%,transparent 25%),linear-gradient(-45deg,#3b3f43 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#3b3f43 75%),linear-gradient(-45deg,transparent 75%,#3b3f43 75%);background-size:36px 36px;background-position:0 0,0 18px,18px -18px,0}
+  </style>
+  <script src="./vendor/babylon.js"></script>
+  <script src="./vendor/babylonjs.loaders.min.js"></script>
+</head>
+<body><canvas id="c"></canvas>
+<script>
+const q=new URLSearchParams(location.search); document.body.className=q.get('bg')==='dark'?'dark':'light';
+const view=q.get('view')||'front', model=q.get('model')||'/Huawei-CE6857-48S6CQ-EI/model/Huawei-CE6857-48S6CQ-EI.glb';
+const canvas=document.getElementById('c'), engine=new BABYLON.Engine(canvas,true,{preserveDrawingBuffer:true,stencil:true,alpha:true},false);
+BABYLON.SceneLoader.ShowLoadingScreen=false; engine.loadingScreen={displayLoadingUI(){},hideLoadingUI(){}};
+const scene=new BABYLON.Scene(engine); scene.useRightHandedSystem=true; scene.clearColor=new BABYLON.Color4(0,0,0,0); scene.imageProcessingConfiguration.toneMappingEnabled=false;
+const hemi=new BABYLON.HemisphericLight('hemi',new BABYLON.Vector3(0,1,0),scene); hemi.intensity=1.55; hemi.groundColor=new BABYLON.Color3(.34,.37,.41);
+const key=new BABYLON.DirectionalLight('key',new BABYLON.Vector3(-1,-1.2,-1.5),scene); key.intensity=1.65;
+const fill=new BABYLON.DirectionalLight('fill',new BABYLON.Vector3(1,-.3,1.2),scene); fill.intensity=.75;
+const under=new BABYLON.DirectionalLight('under',new BABYLON.Vector3(0,1,0),scene); under.intensity=.9;
+const defs={front:{f:[0,0,-1],u:[0,1,0]},rear:{f:[0,0,1],u:[0,1,0]},left:{f:[1,0,0],u:[0,1,0]},right:{f:[-1,0,0],u:[0,1,0]},top:{f:[0,-1,0],u:[0,0,1]},bottom:{f:[0,1,0],u:[0,0,-1]},'front-left':{e:[-1,.48,1]},'front-right':{e:[1,.48,1]},'rear-left':{e:[-1,.48,-1]},'rear-right':{e:[1,.48,-1]}};
+function corners(min,max){const a=[];for(const x of [min.x,max.x])for(const y of [min.y,max.y])for(const z of [min.z,max.z])a.push(new BABYLON.Vector3(x,y,z));return a}
+function cameraFor(min,max,def){
+ const center=min.add(max).scale(.5), radius=max.subtract(min).length()*.5, c=new BABYLON.FreeCamera('camera',new BABYLON.Vector3(0,0,1),scene);
+ if(def.f){
+  const f=new BABYLON.Vector3(...def.f).normalize(), up=new BABYLON.Vector3(...def.u).normalize(), right=BABYLON.Vector3.Cross(f,up).normalize(), cs=corners(min,max);
+  const px=cs.map(p=>BABYLON.Vector3.Dot(p.subtract(center),right)),py=cs.map(p=>BABYLON.Vector3.Dot(p.subtract(center),up));
+  let hw=(Math.max(...px)-Math.min(...px))*.53,hh=(Math.max(...py)-Math.min(...py))*.53,aspect=engine.getRenderWidth()/engine.getRenderHeight();
+  if(hw/hh<aspect)hw=hh*aspect;else hh=hw/aspect;
+  c.mode=BABYLON.Camera.ORTHOGRAPHIC_CAMERA;c.orthoLeft=-hw;c.orthoRight=hw;c.orthoTop=hh;c.orthoBottom=-hh;c.position=center.subtract(f.scale(radius*3));c.upVector=up;
+ }else{const e=new BABYLON.Vector3(...def.e).normalize();c.fov=.61;c.position=center.add(e.scale(radius/Math.sin(c.fov/2)*1.20));c.upVector=new BABYLON.Vector3(0,1,0)}
+ c.setTarget(center); return c;
+}
+BABYLON.SceneLoader.AppendAsync('',model,scene).then(()=>{
+ engine.hideLoadingUI();
+ for(const node of [...scene.transformNodes,...scene.meshes]) if((node.name||'').includes('热点')) node.setEnabled(false);
+ for(const light of [...scene.lights]) if(!['hemi','key','fill','under'].includes(light.name)) light.dispose();
+ const ext=scene.getWorldExtends(); scene.activeCamera=cameraFor(ext.min,ext.max,defs[view]||defs.front);
+ let frames=0;engine.runRenderLoop(()=>{scene.render();if(++frames===8)window.__READY=true});
+}).catch(e=>{window.__ERROR=String(e);document.body.dataset.error=String(e)});
+</script></body></html>
