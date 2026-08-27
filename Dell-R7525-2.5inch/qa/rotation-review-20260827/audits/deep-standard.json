@@ -1,0 +1,327 @@
+{
+  "input": "Dell-R7525-2.5inch/model/Dell-R7525-2.5inch.glb",
+  "byte_size": 10863692,
+  "thresholds": {
+    "exact_duplicate_m": 1e-7,
+    "exact_coplanar_m": 1e-7,
+    "near_coplanar_m": 0.0002
+  },
+  "counts": {
+    "nodes": 250,
+    "meshes": 25,
+    "triangles_world_instances": 6642,
+    "duplicate_triangle_groups": 0,
+    "exact_coplanar_triangle_pairs": 0,
+    "near_coplanar_triangle_pairs": 0,
+    "negative_transforms": 0,
+    "singular_transforms": 0,
+    "blend_materials": 0,
+    "double_sided_materials": 0,
+    "primary_material_errors": 0,
+    "closed_core_nodes": 1,
+    "closed_core_failures": 0,
+    "watertight_mesh_instances": 239,
+    "inward_watertight_mesh_instances": 0,
+    "normal_attribute_mismatch_triangles": 0
+  },
+  "duplicate_triangle_groups": [],
+  "exact_coplanar_pairs": [],
+  "near_coplanar_pairs": [],
+  "negative_or_singular_transforms": [],
+  "materials": [
+    {
+      "name": "Galvanized_Silver",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.56,
+        0.58,
+        0.59,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "Stamped_Silver_Dark",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.34,
+        0.36,
+        0.37,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "Bezel_Graphite",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.12,
+        0.13,
+        0.14,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "Port_Black",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.018,
+        0.022,
+        0.025,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "Vent_Recess",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.006,
+        0.008,
+        0.009,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "Dell_Release_Orange",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.92,
+        0.28,
+        0.025,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "Dell_Service_Blue",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.015,
+        0.28,
+        0.68,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "Status_Green",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.01,
+        0.72,
+        0.13,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "Factory_Marking_White",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.97,
+        0.97,
+        0.96,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "LCD_Black_Glass",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.012,
+        0.018,
+        0.022,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "Face_Front_SourceLocked",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 4096,
+        "height": 812,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "Face_Rear_SourceLocked",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 4096,
+        "height": 805,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "Face_Left_SourceLocked",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 1772,
+        "height": 217,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "Face_Right_SourceLocked",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 2005,
+        "height": 275,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "Face_Top_SourceLocked",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 859,
+        "height": 1398,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "Face_Bottom_OfficialAR_MultiReference",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 831,
+        "height": 1396,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "Factory_DELL_EMC_Badge_SourceLocked",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 1024,
+        "height": 296,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    }
+  ],
+  "primary_material_errors": [],
+  "closed_core": [
+    {
+      "node": "Closed_Chassis_Body",
+      "triangle_count": 12,
+      "edge_count": 18,
+      "boundary_edge_count": 0,
+      "non_manifold_edge_count": 0,
+      "signed_volume": 0.026192008439999998,
+      "watertight": true,
+      "outward_signed_volume": true
+    }
+  ],
+  "inward_watertight_meshes": [],
+  "normal_attribute_mismatches": [],
+  "unresolved": [],
+  "status": "PASS"
+}

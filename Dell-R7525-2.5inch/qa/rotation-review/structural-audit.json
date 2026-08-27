@@ -1,0 +1,570 @@
+{
+  "modelKey": "Dell-R7525-2.5inch",
+  "coordinateConvention": "right-handed; +X device right from front; +Y up; +Z front",
+  "builds": [
+    {
+      "flavor": "standard",
+      "path": "model/Dell-R7525-2.5inch.glb",
+      "bytes": 10863692,
+      "sha256": "b12bdebef83edb474707ddb509893d8ae92c610422361c15a2c293966b567bdc",
+      "counts": {
+        "nodes": 250,
+        "meshes": 25,
+        "materials": 17,
+        "images": 7,
+        "triangles": 6642
+      },
+      "boundsMm": {
+        "actual": [
+          482.0,
+          86.8,
+          772.13
+        ],
+        "expected": [
+          482.0,
+          86.8,
+          772.13
+        ],
+        "absoluteError": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "checks": {
+        "duplicateTriangles": true,
+        "reversedDuplicateTriangles": true,
+        "negativeTransforms": true,
+        "normalsPresent": true,
+        "closedCoreGeometricallyWatertight": true,
+        "closedCoreWindingConsistent": true,
+        "mainFaceMaterialContract": true,
+        "allMaterialsOpaqueAlphaOneSingleSided": true,
+        "embeddedImagesOpaque": true,
+        "mipmappedClampSamplers": true,
+        "cardCoreClearance": true,
+        "externalResourcesAbsent": true,
+        "rightHandedNoMirror": true,
+        "dimensionsWithinOneMillimeter": true
+      },
+      "duplicates": {
+        "exactTransformedTriangles": 0,
+        "reversedExactTriangles": 0
+      },
+      "coplanar": {
+        "mainCardCoreClearances": [
+          {
+            "faceNode": "Texture_Front",
+            "gapMm": 13.54,
+            "minimumMm": 0.05,
+            "pass": true
+          },
+          {
+            "faceNode": "Texture_Rear",
+            "gapMm": 0.75,
+            "minimumMm": 0.05,
+            "pass": true
+          },
+          {
+            "faceNode": "Texture_Right",
+            "gapMm": 0.52,
+            "minimumMm": 0.05,
+            "pass": true
+          },
+          {
+            "faceNode": "Texture_Left",
+            "gapMm": 0.52,
+            "minimumMm": 0.05,
+            "pass": true
+          },
+          {
+            "faceNode": "Texture_Top",
+            "gapMm": 0.3,
+            "minimumMm": 0.05,
+            "pass": true
+          },
+          {
+            "faceNode": "Texture_Bottom",
+            "gapMm": 1.5,
+            "minimumMm": 0.05,
+            "pass": true
+          }
+        ],
+        "unresolvedVisibleNearCoplanarPairs": 0,
+        "contactDisposition": "attached solid interfaces are internal; co-visible card/core/relief layers use explicit positive clearances and are verified by the full yaw sweep"
+      },
+      "materials": {
+        "mainFaces": [
+          {
+            "node": "Texture_Front",
+            "material": "Face_Front_SourceLocked",
+            "alphaMode": "OPAQUE",
+            "baseColorFactor": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "doubleSided": false,
+            "unlit": true,
+            "contractOk": true
+          },
+          {
+            "node": "Texture_Rear",
+            "material": "Face_Rear_SourceLocked",
+            "alphaMode": "OPAQUE",
+            "baseColorFactor": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "doubleSided": false,
+            "unlit": true,
+            "contractOk": true
+          },
+          {
+            "node": "Texture_Right",
+            "material": "Face_Right_SourceLocked",
+            "alphaMode": "OPAQUE",
+            "baseColorFactor": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "doubleSided": false,
+            "unlit": true,
+            "contractOk": true
+          },
+          {
+            "node": "Texture_Left",
+            "material": "Face_Left_SourceLocked",
+            "alphaMode": "OPAQUE",
+            "baseColorFactor": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "doubleSided": false,
+            "unlit": true,
+            "contractOk": true
+          },
+          {
+            "node": "Texture_Top",
+            "material": "Face_Top_SourceLocked",
+            "alphaMode": "OPAQUE",
+            "baseColorFactor": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "doubleSided": false,
+            "unlit": true,
+            "contractOk": true
+          },
+          {
+            "node": "Texture_Bottom",
+            "material": "Face_Bottom_OfficialAR_MultiReference",
+            "alphaMode": "OPAQUE",
+            "baseColorFactor": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "doubleSided": false,
+            "unlit": true,
+            "contractOk": true
+          }
+        ],
+        "alphaErrors": []
+      },
+      "images": {
+        "embedded": [
+          {
+            "index": 0,
+            "name": "Face_Front_SourceLocked_Image",
+            "mode": "RGB",
+            "sizePx": [
+              4096,
+              812
+            ],
+            "alphaExtrema": null
+          },
+          {
+            "index": 1,
+            "name": "Face_Rear_SourceLocked_Image",
+            "mode": "RGB",
+            "sizePx": [
+              4096,
+              805
+            ],
+            "alphaExtrema": null
+          },
+          {
+            "index": 2,
+            "name": "Face_Left_SourceLocked_Image",
+            "mode": "RGB",
+            "sizePx": [
+              1772,
+              217
+            ],
+            "alphaExtrema": null
+          },
+          {
+            "index": 3,
+            "name": "Face_Right_SourceLocked_Image",
+            "mode": "RGB",
+            "sizePx": [
+              2005,
+              275
+            ],
+            "alphaExtrema": null
+          },
+          {
+            "index": 4,
+            "name": "Face_Top_SourceLocked_Image",
+            "mode": "RGB",
+            "sizePx": [
+              859,
+              1398
+            ],
+            "alphaExtrema": null
+          },
+          {
+            "index": 5,
+            "name": "Face_Bottom_OfficialAR_MultiReference_Image",
+            "mode": "RGB",
+            "sizePx": [
+              831,
+              1396
+            ],
+            "alphaExtrema": null
+          },
+          {
+            "index": 6,
+            "name": "Factory_DELL_EMC_Badge_SourceLocked_Image",
+            "mode": "RGB",
+            "sizePx": [
+              1024,
+              296
+            ],
+            "alphaExtrema": null
+          }
+        ],
+        "alphaErrors": [],
+        "atlasPolicy": "individual clamp-to-edge face images; no shared atlas, therefore no atlas bleed"
+      },
+      "samplers": {
+        "count": 1,
+        "errors": [],
+        "requiredMinFilter": 9987
+      },
+      "transforms": {
+        "negativeDeterminantNodes": []
+      },
+      "normals": {
+        "missing": []
+      },
+      "core": {
+        "node": "Closed_Chassis_Body",
+        "geometry": "UnitCube:0",
+        "indexedWatertightBeforeCoincidentVertexMerge": false,
+        "geometricallyWatertightAfterCoincidentVertexMerge": true,
+        "windingConsistent": true,
+        "interpretation": "flat-normal hard edges may duplicate coincident vertices; geometric closure is evaluated after an audit-only merge and the GLB remains unchanged"
+      },
+      "unresolved": [],
+      "status": "PASS"
+    },
+    {
+      "flavor": "web",
+      "path": "model/Dell-R7525-2.5inch-web.glb",
+      "bytes": 6448932,
+      "sha256": "3b1153912d8a0f6704003db0745e8aba8f85e1c4ac57e9baf79b6afd9ec209a5",
+      "counts": {
+        "nodes": 250,
+        "meshes": 25,
+        "materials": 17,
+        "images": 7,
+        "triangles": 6642
+      },
+      "boundsMm": {
+        "actual": [
+          482.0,
+          86.8,
+          772.13
+        ],
+        "expected": [
+          482.0,
+          86.8,
+          772.13
+        ],
+        "absoluteError": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "checks": {
+        "duplicateTriangles": true,
+        "reversedDuplicateTriangles": true,
+        "negativeTransforms": true,
+        "normalsPresent": true,
+        "closedCoreGeometricallyWatertight": true,
+        "closedCoreWindingConsistent": true,
+        "mainFaceMaterialContract": true,
+        "allMaterialsOpaqueAlphaOneSingleSided": true,
+        "embeddedImagesOpaque": true,
+        "mipmappedClampSamplers": true,
+        "cardCoreClearance": true,
+        "externalResourcesAbsent": true,
+        "rightHandedNoMirror": true,
+        "dimensionsWithinOneMillimeter": true
+      },
+      "duplicates": {
+        "exactTransformedTriangles": 0,
+        "reversedExactTriangles": 0
+      },
+      "coplanar": {
+        "mainCardCoreClearances": [
+          {
+            "faceNode": "Texture_Front",
+            "gapMm": 13.54,
+            "minimumMm": 0.05,
+            "pass": true
+          },
+          {
+            "faceNode": "Texture_Rear",
+            "gapMm": 0.75,
+            "minimumMm": 0.05,
+            "pass": true
+          },
+          {
+            "faceNode": "Texture_Right",
+            "gapMm": 0.52,
+            "minimumMm": 0.05,
+            "pass": true
+          },
+          {
+            "faceNode": "Texture_Left",
+            "gapMm": 0.52,
+            "minimumMm": 0.05,
+            "pass": true
+          },
+          {
+            "faceNode": "Texture_Top",
+            "gapMm": 0.3,
+            "minimumMm": 0.05,
+            "pass": true
+          },
+          {
+            "faceNode": "Texture_Bottom",
+            "gapMm": 1.5,
+            "minimumMm": 0.05,
+            "pass": true
+          }
+        ],
+        "unresolvedVisibleNearCoplanarPairs": 0,
+        "contactDisposition": "attached solid interfaces are internal; co-visible card/core/relief layers use explicit positive clearances and are verified by the full yaw sweep"
+      },
+      "materials": {
+        "mainFaces": [
+          {
+            "node": "Texture_Front",
+            "material": "Face_Front_SourceLocked",
+            "alphaMode": "OPAQUE",
+            "baseColorFactor": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "doubleSided": false,
+            "unlit": true,
+            "contractOk": true
+          },
+          {
+            "node": "Texture_Rear",
+            "material": "Face_Rear_SourceLocked",
+            "alphaMode": "OPAQUE",
+            "baseColorFactor": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "doubleSided": false,
+            "unlit": true,
+            "contractOk": true
+          },
+          {
+            "node": "Texture_Right",
+            "material": "Face_Right_SourceLocked",
+            "alphaMode": "OPAQUE",
+            "baseColorFactor": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "doubleSided": false,
+            "unlit": true,
+            "contractOk": true
+          },
+          {
+            "node": "Texture_Left",
+            "material": "Face_Left_SourceLocked",
+            "alphaMode": "OPAQUE",
+            "baseColorFactor": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "doubleSided": false,
+            "unlit": true,
+            "contractOk": true
+          },
+          {
+            "node": "Texture_Top",
+            "material": "Face_Top_SourceLocked",
+            "alphaMode": "OPAQUE",
+            "baseColorFactor": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "doubleSided": false,
+            "unlit": true,
+            "contractOk": true
+          },
+          {
+            "node": "Texture_Bottom",
+            "material": "Face_Bottom_OfficialAR_MultiReference",
+            "alphaMode": "OPAQUE",
+            "baseColorFactor": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "doubleSided": false,
+            "unlit": true,
+            "contractOk": true
+          }
+        ],
+        "alphaErrors": []
+      },
+      "images": {
+        "embedded": [
+          {
+            "index": 0,
+            "name": "Face_Front_SourceLocked_Image",
+            "mode": "RGB",
+            "sizePx": [
+              2048,
+              406
+            ],
+            "alphaExtrema": null
+          },
+          {
+            "index": 1,
+            "name": "Face_Rear_SourceLocked_Image",
+            "mode": "RGB",
+            "sizePx": [
+              2048,
+              403
+            ],
+            "alphaExtrema": null
+          },
+          {
+            "index": 2,
+            "name": "Face_Left_SourceLocked_Image",
+            "mode": "RGB",
+            "sizePx": [
+              1772,
+              217
+            ],
+            "alphaExtrema": null
+          },
+          {
+            "index": 3,
+            "name": "Face_Right_SourceLocked_Image",
+            "mode": "RGB",
+            "sizePx": [
+              2005,
+              275
+            ],
+            "alphaExtrema": null
+          },
+          {
+            "index": 4,
+            "name": "Face_Top_SourceLocked_Image",
+            "mode": "RGB",
+            "sizePx": [
+              859,
+              1398
+            ],
+            "alphaExtrema": null
+          },
+          {
+            "index": 5,
+            "name": "Face_Bottom_OfficialAR_MultiReference_Image",
+            "mode": "RGB",
+            "sizePx": [
+              831,
+              1396
+            ],
+            "alphaExtrema": null
+          },
+          {
+            "index": 6,
+            "name": "Factory_DELL_EMC_Badge_SourceLocked_Image",
+            "mode": "RGB",
+            "sizePx": [
+              1024,
+              296
+            ],
+            "alphaExtrema": null
+          }
+        ],
+        "alphaErrors": [],
+        "atlasPolicy": "individual clamp-to-edge face images; no shared atlas, therefore no atlas bleed"
+      },
+      "samplers": {
+        "count": 1,
+        "errors": [],
+        "requiredMinFilter": 9987
+      },
+      "transforms": {
+        "negativeDeterminantNodes": []
+      },
+      "normals": {
+        "missing": []
+      },
+      "core": {
+        "node": "Closed_Chassis_Body",
+        "geometry": "UnitCube:0",
+        "indexedWatertightBeforeCoincidentVertexMerge": false,
+        "geometricallyWatertightAfterCoincidentVertexMerge": true,
+        "windingConsistent": true,
+        "interpretation": "flat-normal hard edges may duplicate coincident vertices; geometric closure is evaluated after an audit-only merge and the GLB remains unchanged"
+      },
+      "unresolved": [],
+      "status": "PASS"
+    }
+  ],
+  "standardWebParity": {
+    "boundsEqual": true,
+    "nodesEqual": true,
+    "meshesEqual": true,
+    "trianglesEqual": true
+  },
+  "unresolved": [],
+  "status": "PASS"
+}

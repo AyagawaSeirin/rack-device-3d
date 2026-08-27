@@ -1,0 +1,138 @@
+{
+  "model": "Dell-R7525-2.5inch",
+  "camera": "Three.js standard frozen viewer; front/rear/left/right pitch 0; top/bottom pitch +/-89.9",
+  "canvasPx": [
+    640,
+    400
+  ],
+  "background": "exact 28 px checker tile sampled from the corresponding actual render",
+  "records": [
+    {
+      "face": "front",
+      "canonical": "views/front.png",
+      "render": "qa/rotation-review/orthographic/three-standard/front.png",
+      "output": "qa/rotation-review/matched-camera/source-canvas/front.png",
+      "renderBoundsPx": [
+        203,
+        179,
+        437,
+        221
+      ],
+      "canonicalCropPx": [
+        4096,
+        738
+      ],
+      "registeredSizePx": [
+        233,
+        42
+      ],
+      "registration": "aspect-preserving contain at the actual rendered silhouette center; no stretching"
+    },
+    {
+      "face": "rear",
+      "canonical": "views/rear.png",
+      "render": "qa/rotation-review/orthographic/three-standard/rear.png",
+      "output": "qa/rotation-review/matched-camera/source-canvas/rear.png",
+      "renderBoundsPx": [
+        217,
+        179,
+        423,
+        221
+      ],
+      "canonicalCropPx": [
+        4096,
+        819
+      ],
+      "registeredSizePx": [
+        206,
+        41
+      ],
+      "registration": "aspect-preserving contain at the actual rendered silhouette center; no stretching"
+    },
+    {
+      "face": "left",
+      "canonical": "views/left.png",
+      "render": "qa/rotation-review/orthographic/three-standard/left.png",
+      "output": "qa/rotation-review/matched-camera/source-canvas/left.png",
+      "renderBoundsPx": [
+        163,
+        181,
+        488,
+        219
+      ],
+      "canonicalCropPx": [
+        4096,
+        461
+      ],
+      "registeredSizePx": [
+        325,
+        37
+      ],
+      "registration": "aspect-preserving contain at the actual rendered silhouette center; no stretching"
+    },
+    {
+      "face": "right",
+      "canonical": "views/right.png",
+      "render": "qa/rotation-review/orthographic/three-standard/right.png",
+      "output": "qa/rotation-review/matched-camera/source-canvas/right.png",
+      "renderBoundsPx": [
+        152,
+        181,
+        477,
+        219
+      ],
+      "canonicalCropPx": [
+        4096,
+        461
+      ],
+      "registeredSizePx": [
+        325,
+        37
+      ],
+      "registration": "aspect-preserving contain at the actual rendered silhouette center; no stretching"
+    },
+    {
+      "face": "top",
+      "canonical": "views/top.png",
+      "render": "qa/rotation-review/orthographic/three-standard/top.png",
+      "output": "qa/rotation-review/matched-camera/source-canvas/top.png",
+      "renderBoundsPx": [
+        228,
+        57,
+        412,
+        348
+      ],
+      "canonicalCropPx": [
+        1727,
+        3072
+      ],
+      "registeredSizePx": [
+        164,
+        291
+      ],
+      "registration": "aspect-preserving contain at the actual rendered silhouette center; no stretching"
+    },
+    {
+      "face": "bottom",
+      "canonical": "views/bottom.png",
+      "render": "qa/rotation-review/orthographic/three-standard/bottom.png",
+      "output": "qa/rotation-review/matched-camera/source-canvas/bottom.png",
+      "renderBoundsPx": [
+        228,
+        53,
+        412,
+        348
+      ],
+      "canonicalCropPx": [
+        1727,
+        3072
+      ],
+      "registeredSizePx": [
+        166,
+        295
+      ],
+      "registration": "aspect-preserving contain at the actual rendered silhouette center; no stretching"
+    }
+  ],
+  "status": "PASS"
+}

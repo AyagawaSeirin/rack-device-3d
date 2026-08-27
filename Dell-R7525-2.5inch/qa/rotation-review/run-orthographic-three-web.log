@@ -1,0 +1,100 @@
+### Browser `ortho-r7525-three-web` opened with pid 362679.
+### Ran Playwright code
+```js
+await page.goto('http://127.0.0.1:8899/Dell-R7525-2.5inch/qa/rotation-review/control.html?engine=three&flavor=web&run=matched-camera-20260827');
+```
+### Page
+- Page URL: http://127.0.0.1:8899/Dell-R7525-2.5inch/qa/rotation-review/control.html?engine=three&flavor=web&run=matched-camera-20260827
+- Page Title: Rotation review control
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-08-27T14-01-24-647Z.yml)
+### Page
+- Page URL: http://127.0.0.1:8899/Dell-R7525-2.5inch/qa/rotation-review/control.html?engine=three&flavor=web&run=matched-camera-20260827
+- Page Title: Rotation review control
+### Snapshot
+```yaml
+- main [ref=e2]:
+  - heading "Rotation review control" [level=1] [ref=e3]
+  - paragraph [ref=e4]: READY_FOR_PLAYWRIGHT_NAVIGATION
+```
+### Result
+{"combo":"three-web","status":"PASS","frames":6,"errors":0}
+### Ran Playwright code
+```js
+await (async (page) => {
+  const initial = await page.evaluate(() => ({
+    basePath: `${location.origin}${location.pathname.replace(/control\.html$/, '')}`,
+    engine: new URLSearchParams(location.search).get('engine'),
+    flavor: new URLSearchParams(location.search).get('flavor'),
+    runId: new URLSearchParams(location.search).get('run')
+  }));
+  const engine = initial.engine === 'babylon' ? 'babylon' : 'three';
+  const flavor = initial.flavor === 'web' ? 'web' : 'standard';
+  const combo = `${engine}-${flavor}`;
+  const runId = initial.runId || 'matched-camera-20260827';
+  const cacheBust = `${runId}-${combo}`;
+  const viewer = `${initial.basePath}${engine}.html`;
+  const target = await page.context().newPage();
+  await target.setViewportSize({width: 640, height: 400});
+  const browserEvents = [];
+  const modelResponses = [];
+  target.on('pageerror', error => browserEvents.push({type: 'pageerror', text: String(error)}));
+  target.on('console', message => {
+    if (message.type() === 'error' || message.type() === 'warning') {
+      browserEvents.push({type: `console-${message.type()}`, text: message.text()});
+    }
+  });
+  target.on('response', response => {
+    if (response.url().includes('.glb')) modelResponses.push({url: response.url(), status: response.status()});
+  });
+  const url = `${viewer}?flavor=${flavor}&cb=${encodeURIComponent(cacheBust)}&run=${encodeURIComponent(runId)}`;
+  const response = await target.goto(url, {waitUntil: 'domcontentloaded', timeout: 120000});
+  await target.waitForFunction(() => window.__qa?.ready === true || window.__qa?.error, null, {timeout: 120000});
+  const qa = await target.evaluate(() => JSON.parse(JSON.stringify(window.__qa)));
+  if (!qa.ready || qa.error || !qa.loadingOverlayCleared || !String(qa.webglVersion).includes('WebGL 2')) {
+    throw new Error(JSON.stringify({combo, qa, browserEvents, modelResponses}));
+  }
+  await target.evaluate(() => { document.querySelector('#overlay').style.display = 'none'; });
+  const views = [
+    {face: 'front', yawDeg: 0, pitchDeg: 0},
+    {face: 'right', yawDeg: 90, pitchDeg: 0},
+    {face: 'rear', yawDeg: 180, pitchDeg: 0},
+    {face: 'left', yawDeg: 270, pitchDeg: 0},
+    {face: 'top', yawDeg: 0, pitchDeg: 89.9},
+    {face: 'bottom', yawDeg: 0, pitchDeg: -89.9}
+  ];
+  const frames = [];
+  for (const view of views) {
+    const camera = await target.evaluate(view => window.__rotation.setView(view.yawDeg, view.pitchDeg, 'light'), view);
+    const path = `orthographic/${combo}/${view.face}.png`;
+    await target.screenshot({path, type: 'png', animations: 'disabled'});
+    frames.push({...view, checker: 'light', path, camera});
+  }
+  await target.close();
+  const errors = browserEvents.filter(event => /error/.test(event.type));
+  const manifest = {
+    runId, combo, engine, flavor, cacheBust, url,
+    viewport: {width: 640, height: 400},
+    httpStatus: response?.status() || null,
+    qa, modelResponses, browserEvents, frames,
+    status: response?.status() === 200 && modelResponses.length === 1 && modelResponses[0].status === 200 && frames.length === 6 && errors.length === 0 ? 'PASS' : 'REWORK'
+  };
+  const pending = page.waitForEvent('download', {timeout: 30000});
+  await page.evaluate(data => {
+    const anchor = document.createElement('a');
+    anchor.href = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], {type: 'application/json'}));
+    anchor.download = 'orthographic-evidence.json';
+    anchor.click();
+    setTimeout(() => URL.revokeObjectURL(anchor.href), 1000);
+  }, manifest);
+  const download = await pending;
+  await download.saveAs(`orthographic-evidence-${combo}.json`);
+  return {combo, status: manifest.status, frames: frames.length, errors: errors.length};
+}
+)(page);
+```
+### Events
+- Downloading file orthographic-evidence.json ...
+- Downloaded file orthographic-evidence.json to ".playwright-cli/orthographic-evidence.json"
+Browser 'ortho-r7525-three-web' closed
+
