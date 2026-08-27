@@ -1,0 +1,79 @@
+{
+  "status": "PASS_WITH_BOTTOM_FALLBACK",
+  "product_identity": "Dell PowerEdge R720 2U 16x2.5-inch SFF, no bezel",
+  "configuration": {
+    "front_carriers": 16,
+    "front_carrier_arrangement": "one horizontal row of sixteen vertical carriers",
+    "rear_pcie_blanks": 7,
+    "rear_ndc_rj45": 4,
+    "rear_psus": "two matched Dell 750W AC hot-plug modules",
+    "factory_marks_retained": ["DELL", "PowerEdge R720"],
+    "excluded_variants": ["R720xd", "8-SFF", "24-SFF", "LFF", "R730 family", "DC PSU", "mixed PSU"]
+  },
+  "gates": {
+    "six_independent_face_locks": "PASS",
+    "left_right_not_mirrored": "PASS",
+    "transparent_canonical_views": "PASS",
+    "view_audit": "PASS",
+    "standard_glb_audit": "PASS",
+    "web_glb_audit": "PASS",
+    "actual_geometry_and_true_holes": "PASS",
+    "factory_branding": "PASS",
+    "matched_ac_psus": "PASS",
+    "threejs_load_matrix": "PASS",
+    "babylonjs_load_matrix": "PASS",
+    "cross_viewer_orientation": "PASS",
+    "orthographic_comparisons": "PASS",
+    "official_exact_3d_search": "PASS_NONE_FOUND",
+    "bottom": "GENERIC_BOTTOM_FALLBACK"
+  },
+  "dimensions_mm": {
+    "expected": [482.4, 87.3, 723.0],
+    "standard_actual": [482.4, 87.3, 723.0],
+    "web_actual": [482.4, 87.3, 723.0],
+    "nonuniform_ratio_error_percent": 0.0
+  },
+  "audits": {
+    "views": {
+      "path": "qa/views-audit.json",
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 6,
+      "warning_scope": "anti-aliased silhouette edges and verified true holes only"
+    },
+    "standard_glb": {
+      "path": "qa/glb-standard-audit.json",
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 1,
+      "warning_scope": "intentional non-neutral unlit colors on solid mechanical materials"
+    },
+    "web_glb": {
+      "path": "qa/glb-web-audit.json",
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 1,
+      "warning_scope": "intentional non-neutral unlit colors on solid mechanical materials"
+    }
+  },
+  "actual_glb_render_loads": 46,
+  "orthographic_mean_absolute_rgb_difference_0_to_255": {
+    "front": 8.678827,
+    "rear": 9.288399,
+    "left": 2.188602,
+    "right": 3.342199,
+    "top": 5.972471,
+    "bottom": 13.38152
+  },
+  "official_3d": {
+    "exact_public_official_model_found": false,
+    "preserved_files": [],
+    "search_record": "source/optional-3d/README.md",
+    "community_model_substituted": false
+  },
+  "remaining_risks": [
+    "No exact public underside photograph or official underside CAD was found; the bottom is a deliberately plain, dimension-anchored galvanized plate and is not asserted to reproduce hidden underside details.",
+    "Some very small labels and connector legends are texture-level details and may soften at distant website camera scales, especially in the web GLB.",
+    "Transparent-view audit warnings are limited to anti-aliasing and true apertures; embedded GLB textures are opaque for cross-viewer stability."
+  ]
+}

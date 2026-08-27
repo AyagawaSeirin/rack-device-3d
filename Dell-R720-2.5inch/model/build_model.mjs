@@ -20,7 +20,7 @@ const gltf = {
       product: "PowerEdge R720",
       configuration: "2U 16x2.5-inch SFF, no bezel, seven PCIe blanks, four-RJ45 NDC, dual matched 750W AC PSU",
       coordinateConvention: "+X device right from front, +Y up, +Z front",
-      dimensionsMm: { bodyWidth: 444, overallWidth: 482.4, height: 87.3, flangeToRearBody: 684, overallDepth: 723 },
+      dimensionsMm: { bodyWidth: 444, overallWidth: 482.4, height: 87.3, frontProjectionWithoutBezel: 18, flangeToRearBody: 684, bodyDepth: 702, flangeToRearMost: 723, installedDepth: 741 },
       bottomEvidence: "GENERIC_BOTTOM_FALLBACK",
       newlyConstructed: true,
       officialMeshImported: false,
@@ -76,7 +76,9 @@ function addPrimitive(name, positions, normals, uvs, indices, material) {
 function addMaterial(name, color, textureIndex = null) {
   const pbr = { baseColorFactor: color, metallicFactor: 0, roughnessFactor: 1 };
   if (textureIndex !== null) pbr.baseColorTexture = { index: textureIndex };
-  return gltf.materials.push({ name, pbrMetallicRoughness: pbr, alphaMode: "OPAQUE", doubleSided: false, extensions: { KHR_materials_unlit: {} } }) - 1;
+  const material={name,pbrMetallicRoughness:pbr,alphaMode:"OPAQUE",doubleSided:false};
+  if(textureIndex!==null)material.extensions={KHR_materials_unlit:{}};
+  return gltf.materials.push(material)-1;
 }
 function addTexture(name) {
   const bytes = fs.readFileSync(path.join(textureDir, `${name}.png`));
@@ -127,6 +129,12 @@ function addBox(name, center, size, material) {
   }
   return addPrimitive(name,positions,normals,uvs,indices,material);
 }
+function addFrame(name,cx,cy,width,height,depth,z,rail,material){
+  addBox(`${name} top`,[cx,cy+(height-rail)/2,z],[width,rail,depth],material);
+  addBox(`${name} bottom`,[cx,cy-(height-rail)/2,z],[width,rail,depth],material);
+  addBox(`${name} left`,[cx-(width-rail)/2,cy,z],[rail,height-2*rail,depth],material);
+  addBox(`${name} right`,[cx+(width-rail)/2,cy,z],[rail,height-2*rail,depth],material);
+}
 function addCylinderZ(name, center, radius, depth, segments, material) {
   const [cx,cy,cz]=center, positions=[], normals=[], indices=[];
   for (let i=0;i<segments;i++) {
@@ -143,17 +151,17 @@ function addCylinderZ(name, center, radius, depth, segments, material) {
   return addPrimitive(name,positions,normals,null,indices,material);
 }
 
-const BODY_W=0.444, OVERALL_W=0.4824, H=0.0873, BODY_D=0.684;
-const FRONT_PROJ=0.018, REAR_PROJ=0.021, OVERALL_D=0.723;
-const Z_FLANGE=BODY_D/2, Z_REAR=-BODY_D/2, Z_FRONT_OUT=Z_FLANGE+FRONT_PROJ, Z_REAR_OUT=Z_REAR-REAR_PROJ;
+const BODY_W=0.444, OVERALL_W=0.4824, H=0.0873, BODY_D=0.702;
+const FRONT_PROJ=0.018, FLANGE_TO_REAR_BODY=0.684, FLANGE_TO_REAR_MOST=0.723, REAR_PROJ=FLANGE_TO_REAR_MOST-FLANGE_TO_REAR_BODY, OVERALL_D=FRONT_PROJ+FLANGE_TO_REAR_MOST;
+const Z_FRONT_OUT=BODY_D/2, Z_FLANGE=Z_FRONT_OUT-FRONT_PROJ, Z_REAR=-BODY_D/2, Z_REAR_OUT=Z_REAR-REAR_PROJ;
 const Y_TOP=H/2, Y_BOTTOM=-H/2;
 
 // Closed opaque body and four canonical body planes.
-addBox("Closed chassis core",[0,0,0],[BODY_W,H-0.001,BODY_D],MAT.silver);
-addQuad("Physical left source face","-X",[-BODY_W/2-0.0001,0,(Z_FRONT_OUT+Z_REAR_OUT)/2],[0,H,OVERALL_D],faceMaterials.left);
-addQuad("Physical right source face","+X",[BODY_W/2+0.0001,0,(Z_FRONT_OUT+Z_REAR_OUT)/2],[0,H,OVERALL_D],faceMaterials.right);
-addQuad("Top source face","+Y",[0,Y_TOP-0.00005,0],[BODY_W,0,BODY_D],faceMaterials.top);
-addQuad("Bottom generic-fallback source face","-Y",[0,Y_BOTTOM+0.00005,0],[BODY_W,0,BODY_D],faceMaterials.bottom);
+addBox("Closed chassis core",[0,0,0],[BODY_W-0.002,H-0.002,BODY_D-0.004],MAT.silver);
+addQuad("Physical left source face","-X",[-BODY_W/2+0.0005,0,0],[0,H,BODY_D],faceMaterials.left);
+addQuad("Physical right source face","+X",[BODY_W/2-0.0005,0,0],[0,H,BODY_D],faceMaterials.right);
+addQuad("Top source face","+Y",[0,Y_TOP-0.0005,0],[BODY_W,0,BODY_D],faceMaterials.top);
+addQuad("Bottom generic-fallback source face","-Y",[0,Y_BOTTOM+0.0005,0],[BODY_W,0,BODY_D],faceMaterials.bottom);
 
 // True open rack-ear holes: each ear is assembled from 64 horizontal bands around two circular voids.
 for (const side of [-1,1]) {
@@ -163,11 +171,11 @@ for (const side of [-1,1]) {
     const y=Y_BOTTOM+bandH*(i+0.5);
     let half=0;
     for(const hy of [-0.029,0.029]){const dy=Math.abs(y-hy);if(dy<radius)half=Math.max(half,Math.sqrt(radius*radius-dy*dy));}
-    if(!half){addBox(`Front ${side<0?'left':'right'} ear band ${i+1}`,[holeX,y,Z_FLANGE+0.006],[(xMax-xMin),bandH,0.012],MAT.black);}
+    if(!half){addBox(`Front ${side<0?'left':'right'} ear band ${i+1}`,[holeX,y,(Z_FLANGE+Z_FRONT_OUT)/2],[(xMax-xMin),bandH,FRONT_PROJ],MAT.black);}
     else{
       const lw=holeX-half-xMin,rw=xMax-(holeX+half);
-      if(lw>0)addBox(`Front ${side<0?'left':'right'} ear hole-left ${i+1}`,[xMin+lw/2,y,Z_FLANGE+0.006],[lw,bandH,0.012],MAT.black);
-      if(rw>0)addBox(`Front ${side<0?'left':'right'} ear hole-right ${i+1}`,[holeX+half+rw/2,y,Z_FLANGE+0.006],[rw,bandH,0.012],MAT.black);
+      if(lw>0)addBox(`Front ${side<0?'left':'right'} ear hole-left ${i+1}`,[xMin+lw/2,y,(Z_FLANGE+Z_FRONT_OUT)/2],[lw,bandH,FRONT_PROJ],MAT.black);
+      if(rw>0)addBox(`Front ${side<0?'left':'right'} ear hole-right ${i+1}`,[holeX+half+rw/2,y,(Z_FLANGE+Z_FRONT_OUT)/2],[rw,bandH,FRONT_PROJ],MAT.black);
     }
   }
 }
@@ -175,7 +183,7 @@ for (const side of [-1,1]) {
 // Front control/media block preserves DELL and PowerEdge R720 from the source-locked texture.
 const frontUToX=u=>-OVERALL_W/2+u*OVERALL_W;
 const controlU0=0.055,controlU1=0.355;
-addBox("Front control and media zone body",[(frontUToX(controlU0)+frontUToX(controlU1))/2,0,Z_FLANGE+(FRONT_PROJ-0.0004)/2],[frontUToX(controlU1)-frontUToX(controlU0),H-0.002,FRONT_PROJ-0.0004],MAT.black);
+addBox("Front control and media zone body",[(frontUToX(controlU0)+frontUToX(controlU1))/2,0,Z_FLANGE+(FRONT_PROJ-0.0004)/2],[frontUToX(controlU1)-frontUToX(controlU0),H-0.003,FRONT_PROJ-0.0004],MAT.black);
 addQuad("Front control source face","+Z",[(frontUToX(controlU0)+frontUToX(controlU1))/2,0,Z_FRONT_OUT],[frontUToX(controlU1)-frontUToX(controlU0),H-0.001,0],faceMaterials.front,[controlU0,0,controlU1,1]);
 
 // Sixteen independent 2.5-inch SFF carriers with individual recessed bodies and handles.
@@ -190,11 +198,10 @@ for(let i=0;i<16;i++){
 // Rear canonical photograph and independent visible rear assemblies.
 addQuad("Rear source face","-Z",[0,0,Z_REAR-0.00005],[BODY_W,H,0],faceMaterials.rear);
 const rearX=u=>BODY_W/2-u*BODY_W;
-function addRearPlate(name,u0,u1,y,h){const x0=rearX(u0),x1=rearX(u1),cx=(x0+x1)/2,w=Math.abs(x1-x0);addBox(`${name} body`,[cx,y,Z_REAR-0.003],[w,h,0.006],MAT.silver);addQuad(`${name} source face`,`-Z`,[cx,y,Z_REAR-0.00601],[w,h,0],faceMaterials.rear,[u0,Math.max(0,0.5-y/H-h/(2*H)),u1,Math.min(1,0.5-y/H+h/(2*H))]);}
+function addRearPlate(name,u0,u1,y,h){const x0=rearX(u0),x1=rearX(u1),cx=(x0+x1)/2,w=Math.abs(x1-x0);addFrame(name,cx,y,w,h,0.0007,Z_REAR-0.00045,0.0008,MAT.silver);}
 function addRearTexturedPort(name,u0,v0,u1,v1,sideMaterial){
-  const cx=rearX((u0+u1)/2),cy=H/2-((v0+v1)/2)*H,w=(u1-u0)*BODY_W,h=(v1-v0)*H,depth=0.0045;
-  addBox(`${name} recessed body`,[cx,cy,Z_REAR-depth/2],[w,h,depth],sideMaterial);
-  addQuad(`${name} exact source face`,`-Z`,[cx,cy,Z_REAR-depth-0.00001],[w,h,0],faceMaterials.rear,[u0,v0,u1,v1]);
+  const cx=rearX((u0+u1)/2),cy=H/2-((v0+v1)/2)*H,w=(u1-u0)*BODY_W,h=(v1-v0)*H;
+  addFrame(name,cx,cy,w,h,0.0007,Z_REAR-0.00045,Math.min(0.001,w/5,h/5),sideMaterial);
 }
 for(let i=0;i<3;i++)addRearPlate(`Low-profile PCIe blank ${i+1}`,0.026,0.225,0.028-i*0.027,0.019);
 for(const [slot,u0,u1,y] of [[4,0.27,0.52,0.028],[5,0.27,0.52,0.001],[6,0.56,0.80,0.028],[7,0.56,0.80,0.001]])addRearPlate(`Full-height PCIe blank ${slot}`,u0,u1,y,0.019);
@@ -202,38 +209,33 @@ for(const [slot,u,y] of [[4,0.255,0.028],[5,0.255,0.001],[6,0.545,0.028],[7,0.54
 
 // Management and I/O groups, ordered exactly from physical-left to physical-right in rear-camera space.
 addCylinderZ("Rear system-ID button",[rearX(0.035),-0.030,Z_REAR-0.006],0.004,0.004,20,MAT.darkSilver);
-addRearTexturedPort("Rear status connector",0.045,0.73,0.064,0.92,MAT.grille);
-addRearTexturedPort("Dedicated iDRAC7 RJ45",0.074,0.67,0.137,0.95,MAT.grille);
-addRearTexturedPort("DB9 serial",0.147,0.70,0.220,0.94,MAT.teal);
-addRearTexturedPort("Rear VGA",0.225,0.70,0.294,0.94,MAT.blue);
-addRearTexturedPort("Rear USB upper",0.302,0.68,0.340,0.805,MAT.grille);
-addRearTexturedPort("Rear USB lower",0.302,0.815,0.340,0.95,MAT.grille);
-for(let i=0;i<4;i++){const u0=0.355+i*0.055;addRearTexturedPort(`Integrated NDC RJ45 ${i+1}`,u0,0.70,u0+0.045,0.95,MAT.grille);}
+// Flush status/iDRAC/serial/VGA/USB/quad-RJ45 groups remain in the exact rear
+// photograph. Their former overlapping frames crossed the lowest PCIe blank.
 
 // Central U retention handle: real protruding geometry, not a texture-only stripe.
-addBox("Rear central retention handle bar",[rearX(0.445),-0.008,Z_REAR_OUT+0.003],[0.145,0.008,0.006],MAT.black);
-addBox("Rear central retention handle left post",[rearX(0.445)-0.069,-0.008,Z_REAR-0.010],[0.007,0.008,0.020],MAT.black);
-addBox("Rear central retention handle right post",[rearX(0.445)+0.069,-0.008,Z_REAR-0.010],[0.007,0.008,0.020],MAT.black);
+const handleInnerZ=Z_REAR_OUT+0.003,handlePostDepth=(Z_REAR-0.001)-handleInnerZ,handlePostZ=(Z_REAR-0.001+handleInnerZ)/2;
+addBox("Rear central retention handle bar",[rearX(0.445),-0.008,Z_REAR_OUT+0.0015],[0.145,0.008,0.003],MAT.black);
+addBox("Rear central retention handle left post",[rearX(0.445)-0.069,-0.008,handlePostZ],[0.007,0.008,handlePostDepth],MAT.black);
+addBox("Rear central retention handle right post",[rearX(0.445)+0.069,-0.008,handlePostZ],[0.007,0.008,handlePostDepth],MAT.black);
 
 // Two matched, side-by-side 750W AC PSU modules with IEC inlet, orange latch, translucent handle and guarded fan.
-for(const [index,u0,u1] of [[1,0.625,0.805],[2,0.815,0.995]]){
+for(const [index,u0,u1] of [[1,0.630,0.805],[2,0.815,0.995]]){
   const x0=rearX(u0),x1=rearX(u1),cx=(x0+x1)/2,w=Math.abs(x1-x0);
   const psuY=-0.0235;
-  addBox(`750W AC PSU ${index} module`,[cx,psuY,Z_REAR-(REAR_PROJ-0.0004)/2],[w,0.040,REAR_PROJ-0.0004],MAT.silver);
-  addQuad(`750W AC PSU ${index} source face`,`-Z`,[cx,psuY,Z_REAR_OUT],[w,0.040,0],faceMaterials.rear,[u0,0.53,u1,0.99]);
-  addBox(`750W AC PSU ${index} IEC inlet`,[cx-w*0.28,psuY,Z_REAR_OUT+0.00001],[0.027,0.025,0.00002],MAT.black);
-  addBox(`750W AC PSU ${index} orange release`,[cx-w*0.47,psuY,Z_REAR_OUT+0.00001],[0.007,0.027,0.00002],MAT.orange);
-  addCylinderZ(`750W AC PSU ${index} fan`,[cx+w*0.23,psuY,Z_REAR_OUT+0.00002],0.016,0.00003,32,MAT.grille);
-  addCylinderZ(`750W AC PSU ${index} fan hub`,[cx+w*0.23,psuY,Z_REAR_OUT+0.00001],0.0065,0.00002,24,MAT.darkSilver);
-  for(const [sx,sy] of [[-1,-1],[-1,1],[1,-1],[1,1]])addCylinderZ(`750W AC PSU ${index} fan screw ${sx},${sy}`,[cx+w*0.23+sx*0.013,psuY+sy*0.013,Z_REAR_OUT+0.00001],0.0018,0.00002,12,MAT.silver);
-  addBox(`750W AC PSU ${index} translucent handle bar`,[cx-w*0.02,psuY,Z_REAR_OUT+0.00001],[0.008,0.034,0.00002],MAT.translucentHandle);
+  addFrame(`750W AC PSU ${index} module`,cx,psuY,w,0.040,REAR_PROJ-0.0004,(Z_REAR-0.0004+Z_REAR_OUT)/2,0.0012,MAT.silver);
+  addQuad(`750W AC PSU ${index} source face`,`-Z`,[cx,psuY,Z_REAR_OUT+0.00045],[w-0.0024,0.0376,0],faceMaterials.rear,[u0,0.53,u1,0.99]);
+  // The exact IEC inlet, orange latch, guarded fan, hub and screws remain in
+  // the locked PSU photograph.  A shallow U handle reaches the official rear
+  // envelope with 0.45 mm separation from that source plane.
+  addBox(`750W AC PSU ${index} handle vertical`,[cx-w*0.02,psuY,Z_REAR_OUT+0.0002],[0.004,0.022,0.0004],MAT.translucentHandle);
+  addBox(`750W AC PSU ${index} handle top`,[cx-w*0.012,psuY+0.013,Z_REAR_OUT+0.0002],[0.016,0.004,0.0004],MAT.translucentHandle);
+  addBox(`750W AC PSU ${index} handle bottom`,[cx-w*0.012,psuY-0.013,Z_REAR_OUT+0.0002],[0.016,0.004,0.0004],MAT.translucentHandle);
 }
 
-// Upper-right perforated filler and top/side relief that remains visible in oblique views.
-for(let row=0;row<6;row++)for(let col=0;col<11;col++)addBox(`Rear upper-right vent ${row+1}-${col+1}`,[rearX(0.82+col*0.015),0.036-row*0.006,Z_REAR-0.0062],[0.0045,0.004,0.0004],MAT.grille);
+// Upper-right perforation stays in the locked rear photograph.
 addBox("Top front fixed-strip seam",[0,Y_TOP-0.00002,0.292],[BODY_W,0.00004,0.003],MAT.darkSilver);
 for(const [side,x,zs] of [["left",-BODY_W/2,[0.275,0.135,-0.055,-0.235]],["right",BODY_W/2,[0.245,0.075,-0.095,-0.265]]]){
-  zs.forEach((z,i)=>addBox(`${side} side J-hook ${i+1}`,[x,0.004,z],[0.00002,0.012,0.024],MAT.darkSilver));
+  const sign=x<0?-1:1;zs.forEach((z,i)=>addBox(`${side} side J-hook ${i+1}`,[x+sign*0.0004,0.004,z],[0.0008,0.012,0.024],MAT.darkSilver));
 }
 
 const bin=Buffer.concat(binaryParts); gltf.buffers[0].byteLength=bin.length;

@@ -35,7 +35,7 @@ The delivery subject is one complete Dell PowerEdge R720 2U server in the 16×2.
 
 ## Dimension interpretation
 
-`Xa` is the 482.4 mm rack-flange outer width; `Xb` is the 444.0 mm sheet-metal body width. `Y` is the actual 87.3 mm chassis height. `Zb` is 684.0 mm from the EIA flange to the rear body plane. `Za=18.0 mm` is the bezel-absent front projection. `Zc=723.0 mm` is the overall depth to the rear-most installed protrusion. The self-made GLB therefore uses a 444×87.3×684 mm body, 19.2 mm front-ear extension per side, 18 mm maximum front projection and rear protrusions sized so the installed envelope reaches 723 mm.
+`Xa` is the 482.4 mm rack-flange outer width; `Xb` is the 444.0 mm sheet-metal body width. `Y` is the actual 87.3 mm chassis height. Figure 18 draws `Zb=684.0 mm` and `Zc=723.0 mm` from the EIA flange, and draws bezel-absent `Za=18.0 mm` forward from that flange. Therefore the real body depth is `Za+Zb=702.0 mm` and the installed front-to-rear envelope is `Za+Zc=741.0 mm`. The prior 723.0 mm GLB bound omitted the front projection and was corrected during the 2026-08-27 rotation review. Final construction uses a 444×87.3×702 mm body, 19.2 mm front-ear extension per side, an 18 mm front section, and 39 mm rear projection to the 741 mm installed bound.
 
 ## Face evidence decisions
 

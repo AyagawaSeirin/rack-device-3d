@@ -1,0 +1,3290 @@
+{
+  "input": "Dell-R720-2.5inch/model/Dell-R720-2.5inch-web.glb",
+  "byte_size": 6517296,
+  "thresholds": {
+    "exact_duplicate_m": 1e-7,
+    "exact_coplanar_m": 1e-7,
+    "near_coplanar_m": 0.0002
+  },
+  "counts": {
+    "nodes": 293,
+    "meshes": 293,
+    "triangles_world_instances": 3324,
+    "duplicate_triangle_groups": 0,
+    "exact_coplanar_triangle_pairs": 120,
+    "near_coplanar_triangle_pairs": 16,
+    "negative_transforms": 0,
+    "singular_transforms": 0,
+    "blend_materials": 0,
+    "double_sided_materials": 0,
+    "primary_material_errors": 0,
+    "closed_core_nodes": 1,
+    "closed_core_failures": 0,
+    "watertight_mesh_instances": 268,
+    "inward_watertight_mesh_instances": 0,
+    "normal_attribute_mismatch_triangles": 0
+  },
+  "duplicate_triangle_groups": [],
+  "exact_coplanar_pairs": [
+    {
+      "node_a": "Closed chassis core",
+      "node_b": "Front control and media zone body",
+      "plane_m": 0.042649999260902405,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.002315520427684792,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "node_a": "Closed chassis core",
+      "node_b": "Front control and media zone body",
+      "plane_m": 0.042649999260902405,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.002315520427684792,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "node_a": "Closed chassis core",
+      "node_b": "Front control and media zone body",
+      "plane_m": 0.042649999260902405,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.002315520427684792,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "node_a": "Closed chassis core",
+      "node_b": "Front control and media zone body",
+      "plane_m": 0.042649999260902405,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.002315520427684792,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "node_a": "Closed chassis core",
+      "node_b": "Front control and media zone body",
+      "plane_m": -0.042649999260902405,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.002315520427684792,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        -1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "node_a": "Closed chassis core",
+      "node_b": "Front control and media zone body",
+      "plane_m": -0.042649999260902405,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.002315520427684792,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        -1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "node_a": "Closed chassis core",
+      "node_b": "Front control and media zone body",
+      "plane_m": -0.042649999260902405,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.002315520427684792,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        -1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "node_a": "Closed chassis core",
+      "node_b": "Front control and media zone body",
+      "plane_m": -0.042649999260902405,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.002315520427684792,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        -1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 top",
+      "node_b": "Dedicated iDRAC7 RJ45 left",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000021249066069e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 top",
+      "node_b": "Dedicated iDRAC7 RJ45 left",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000021249066069e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 top",
+      "node_b": "Dedicated iDRAC7 RJ45 right",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000021249066069e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 top",
+      "node_b": "Dedicated iDRAC7 RJ45 right",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000021249066069e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 top",
+      "node_b": "Dedicated iDRAC7 RJ45 left",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000021249066069e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 top",
+      "node_b": "Dedicated iDRAC7 RJ45 left",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000021249066069e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 top",
+      "node_b": "Dedicated iDRAC7 RJ45 right",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000021249066069e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 top",
+      "node_b": "Dedicated iDRAC7 RJ45 right",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000021249066069e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 top",
+      "node_b": "Dedicated iDRAC7 RJ45 left",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000021249066069e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 top",
+      "node_b": "Dedicated iDRAC7 RJ45 left",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000021249066069e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 top",
+      "node_b": "Dedicated iDRAC7 RJ45 right",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000021249066069e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 top",
+      "node_b": "Dedicated iDRAC7 RJ45 right",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000021249066069e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 top",
+      "node_b": "Dedicated iDRAC7 RJ45 left",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000021249066069e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 top",
+      "node_b": "Dedicated iDRAC7 RJ45 left",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000021249066069e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 top",
+      "node_b": "Dedicated iDRAC7 RJ45 right",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000021249066069e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 top",
+      "node_b": "Dedicated iDRAC7 RJ45 right",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000021249066069e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Rear status connector left",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Rear status connector left",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Rear status connector right",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Rear status connector right",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Dedicated iDRAC7 RJ45 left",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Dedicated iDRAC7 RJ45 left",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Dedicated iDRAC7 RJ45 right",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Dedicated iDRAC7 RJ45 right",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "DB9 serial left",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "DB9 serial left",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "DB9 serial right",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 7.999920665913152e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "DB9 serial right",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 7.999920665913152e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Rear status connector left",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Rear status connector left",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Rear status connector right",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Rear status connector right",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Dedicated iDRAC7 RJ45 left",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Dedicated iDRAC7 RJ45 left",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Dedicated iDRAC7 RJ45 right",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Dedicated iDRAC7 RJ45 right",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "DB9 serial left",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "DB9 serial left",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "DB9 serial right",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 7.999920665913152e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "DB9 serial right",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 7.999920665913152e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Rear status connector left",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Rear status connector left",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Rear status connector right",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Rear status connector right",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Dedicated iDRAC7 RJ45 left",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Dedicated iDRAC7 RJ45 left",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Dedicated iDRAC7 RJ45 right",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Dedicated iDRAC7 RJ45 right",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "DB9 serial left",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "DB9 serial left",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "DB9 serial right",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 7.999920665913152e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "DB9 serial right",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 7.999920665913152e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Rear status connector left",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Rear status connector left",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Rear status connector right",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Rear status connector right",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Dedicated iDRAC7 RJ45 left",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Dedicated iDRAC7 RJ45 left",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Dedicated iDRAC7 RJ45 right",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Dedicated iDRAC7 RJ45 right",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "DB9 serial left",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "DB9 serial left",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 8.000039875555309e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "DB9 serial right",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 7.999920665913152e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "DB9 serial right",
+      "plane_m": -0.35179999470710754,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 7.999920665913152e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 1 handle vertical",
+      "node_b": "750W AC PSU 1 handle top",
+      "plane_m": -0.008500000461935997,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.0000015999081373063717,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 1 handle vertical",
+      "node_b": "750W AC PSU 1 handle top",
+      "plane_m": -0.008500000461935997,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.0000015999081373063717,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 1 handle vertical",
+      "node_b": "750W AC PSU 1 handle top",
+      "plane_m": -0.008500000461935997,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.0000015999081373063717,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 1 handle vertical",
+      "node_b": "750W AC PSU 1 handle top",
+      "plane_m": -0.008500000461935997,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.0000015999081373063717,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 1 handle vertical",
+      "node_b": "750W AC PSU 1 handle bottom",
+      "plane_m": -0.03849999979138374,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.0000015999081373063717,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        -1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 1 handle vertical",
+      "node_b": "750W AC PSU 1 handle bottom",
+      "plane_m": -0.03849999979138374,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.0000015999081373063717,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        -1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 1 handle vertical",
+      "node_b": "750W AC PSU 1 handle bottom",
+      "plane_m": -0.03849999979138374,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.0000015999081373063717,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        -1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 1 handle vertical",
+      "node_b": "750W AC PSU 1 handle bottom",
+      "plane_m": -0.03849999979138374,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.0000015999081373063717,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        -1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 1 handle vertical",
+      "node_b": "750W AC PSU 1 handle top",
+      "plane_m": -0.38960000872612,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.00001600000151991826,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 1 handle vertical",
+      "node_b": "750W AC PSU 1 handle top",
+      "plane_m": -0.38960000872612,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.00001600000151991826,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 1 handle vertical",
+      "node_b": "750W AC PSU 1 handle bottom",
+      "plane_m": -0.38960000872612,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.00001600000524520917,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 1 handle vertical",
+      "node_b": "750W AC PSU 1 handle bottom",
+      "plane_m": -0.38960000872612,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.00001600000524520917,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 1 handle vertical",
+      "node_b": "750W AC PSU 1 handle top",
+      "plane_m": -0.38960000872612,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.00001600000151991826,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 1 handle vertical",
+      "node_b": "750W AC PSU 1 handle top",
+      "plane_m": -0.38960000872612,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.00001600000151991826,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 1 handle vertical",
+      "node_b": "750W AC PSU 1 handle bottom",
+      "plane_m": -0.38960000872612,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.00001600000524520917,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 1 handle vertical",
+      "node_b": "750W AC PSU 1 handle bottom",
+      "plane_m": -0.38960000872612,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.00001600000524520917,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 1 handle vertical",
+      "node_b": "750W AC PSU 1 handle top",
+      "plane_m": -0.38999998569488525,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.00001600000151991826,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 1 handle vertical",
+      "node_b": "750W AC PSU 1 handle top",
+      "plane_m": -0.38999998569488525,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.00001600000151991826,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 1 handle vertical",
+      "node_b": "750W AC PSU 1 handle bottom",
+      "plane_m": -0.38999998569488525,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.00001600000524520917,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 1 handle vertical",
+      "node_b": "750W AC PSU 1 handle bottom",
+      "plane_m": -0.38999998569488525,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.00001600000524520917,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 1 handle vertical",
+      "node_b": "750W AC PSU 1 handle top",
+      "plane_m": -0.38999998569488525,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.00001600000151991826,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 1 handle vertical",
+      "node_b": "750W AC PSU 1 handle top",
+      "plane_m": -0.38999998569488525,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.00001600000151991826,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 1 handle vertical",
+      "node_b": "750W AC PSU 1 handle bottom",
+      "plane_m": -0.38999998569488525,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.00001600000524520917,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 1 handle vertical",
+      "node_b": "750W AC PSU 1 handle bottom",
+      "plane_m": -0.38999998569488525,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.00001600000524520917,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 2 handle vertical",
+      "node_b": "750W AC PSU 2 handle top",
+      "plane_m": -0.008500000461935997,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.000001599905157245729,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 2 handle vertical",
+      "node_b": "750W AC PSU 2 handle top",
+      "plane_m": -0.008500000461935997,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.000001599905157245729,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 2 handle vertical",
+      "node_b": "750W AC PSU 2 handle top",
+      "plane_m": -0.008500000461935997,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.000001599905157245729,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 2 handle vertical",
+      "node_b": "750W AC PSU 2 handle top",
+      "plane_m": -0.008500000461935997,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.000001599905157245729,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 2 handle vertical",
+      "node_b": "750W AC PSU 2 handle bottom",
+      "plane_m": -0.03849999979138374,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.000001599905157245729,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        -1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 2 handle vertical",
+      "node_b": "750W AC PSU 2 handle bottom",
+      "plane_m": -0.03849999979138374,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.000001599905157245729,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        -1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 2 handle vertical",
+      "node_b": "750W AC PSU 2 handle bottom",
+      "plane_m": -0.03849999979138374,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.000001599905157245729,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        -1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 2 handle vertical",
+      "node_b": "750W AC PSU 2 handle bottom",
+      "plane_m": -0.03849999979138374,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.000001599905157245729,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        -1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 2 handle vertical",
+      "node_b": "750W AC PSU 2 handle top",
+      "plane_m": -0.38960000872612,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.000015999971717597927,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 2 handle vertical",
+      "node_b": "750W AC PSU 2 handle top",
+      "plane_m": -0.38960000872612,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.000015999971717597927,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 2 handle vertical",
+      "node_b": "750W AC PSU 2 handle bottom",
+      "plane_m": -0.38960000872612,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.000015999975442881897,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 2 handle vertical",
+      "node_b": "750W AC PSU 2 handle bottom",
+      "plane_m": -0.38960000872612,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.000015999975442881897,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 2 handle vertical",
+      "node_b": "750W AC PSU 2 handle top",
+      "plane_m": -0.38960000872612,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.000015999971717597927,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 2 handle vertical",
+      "node_b": "750W AC PSU 2 handle top",
+      "plane_m": -0.38960000872612,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.000015999971717597927,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 2 handle vertical",
+      "node_b": "750W AC PSU 2 handle bottom",
+      "plane_m": -0.38960000872612,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.000015999975442881897,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 2 handle vertical",
+      "node_b": "750W AC PSU 2 handle bottom",
+      "plane_m": -0.38960000872612,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.000015999975442881897,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 2 handle vertical",
+      "node_b": "750W AC PSU 2 handle top",
+      "plane_m": -0.38999998569488525,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.000015999971717597927,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 2 handle vertical",
+      "node_b": "750W AC PSU 2 handle top",
+      "plane_m": -0.38999998569488525,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.000015999971717597927,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 2 handle vertical",
+      "node_b": "750W AC PSU 2 handle bottom",
+      "plane_m": -0.38999998569488525,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.000015999975442881897,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 2 handle vertical",
+      "node_b": "750W AC PSU 2 handle bottom",
+      "plane_m": -0.38999998569488525,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.000015999975442881897,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 2 handle vertical",
+      "node_b": "750W AC PSU 2 handle top",
+      "plane_m": -0.38999998569488525,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.000015999971717597927,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 2 handle vertical",
+      "node_b": "750W AC PSU 2 handle top",
+      "plane_m": -0.38999998569488525,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.000015999971717597927,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 2 handle vertical",
+      "node_b": "750W AC PSU 2 handle bottom",
+      "plane_m": -0.38999998569488525,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.000015999975442881897,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    },
+    {
+      "node_a": "750W AC PSU 2 handle vertical",
+      "node_b": "750W AC PSU 2 handle bottom",
+      "plane_m": -0.38999998569488525,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.000015999975442881897,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        -1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        -1
+      ]
+    }
+  ],
+  "near_coplanar_pairs": [
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Rear status connector left",
+      "plane_m": -0.03550000116229057,
+      "plane_distance_m": 0.0001659989356994629,
+      "overlap_aabb_area_m2": 6.999983668265486e-7,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        -1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Rear status connector left",
+      "plane_m": -0.03550000116229057,
+      "plane_distance_m": 0.0001659989356994629,
+      "overlap_aabb_area_m2": 6.999983668265486e-7,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        -1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Rear status connector right",
+      "plane_m": -0.03550000116229057,
+      "plane_distance_m": 0.0001659989356994629,
+      "overlap_aabb_area_m2": 6.999983668265486e-7,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        -1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Rear status connector right",
+      "plane_m": -0.03550000116229057,
+      "plane_distance_m": 0.0001659989356994629,
+      "overlap_aabb_area_m2": 6.999983668265486e-7,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        -1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Rear status connector left",
+      "plane_m": -0.03550000116229057,
+      "plane_distance_m": 0.0001659989356994629,
+      "overlap_aabb_area_m2": 6.999983668265486e-7,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        -1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Rear status connector left",
+      "plane_m": -0.03550000116229057,
+      "plane_distance_m": 0.0001659989356994629,
+      "overlap_aabb_area_m2": 6.999983668265486e-7,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        -1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Rear status connector right",
+      "plane_m": -0.03550000116229057,
+      "plane_distance_m": 0.0001659989356994629,
+      "overlap_aabb_area_m2": 6.999983668265486e-7,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        -1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "node_a": "Low-profile PCIe blank 3 bottom",
+      "node_b": "Rear status connector right",
+      "plane_m": -0.03550000116229057,
+      "plane_distance_m": 0.0001659989356994629,
+      "overlap_aabb_area_m2": 6.999983668265486e-7,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        -1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "node_a": "Full-height PCIe blank 7 bottom",
+      "node_b": "750W AC PSU 1 module right",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0.00009998679161071777,
+      "overlap_aabb_area_m2": 9.599989736069903e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Full-height PCIe blank 7 bottom",
+      "node_b": "750W AC PSU 1 module right",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0.00009998679161071777,
+      "overlap_aabb_area_m2": 9.599989736069903e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Full-height PCIe blank 7 bottom",
+      "node_b": "750W AC PSU 1 module right",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0.00009998679161071777,
+      "overlap_aabb_area_m2": 9.599989736069903e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Full-height PCIe blank 7 bottom",
+      "node_b": "750W AC PSU 1 module right",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0.00009998679161071777,
+      "overlap_aabb_area_m2": 9.599989736069903e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Full-height PCIe blank 7 left",
+      "node_b": "750W AC PSU 1 module top",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0.00009998679161071777,
+      "overlap_aabb_area_m2": 9.599982285501962e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Full-height PCIe blank 7 left",
+      "node_b": "750W AC PSU 1 module top",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0.00009998679161071777,
+      "overlap_aabb_area_m2": 9.599982285501962e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Full-height PCIe blank 7 left",
+      "node_b": "750W AC PSU 1 module top",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0.00009998679161071777,
+      "overlap_aabb_area_m2": 9.599982285501962e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node_a": "Full-height PCIe blank 7 left",
+      "node_b": "750W AC PSU 1 module top",
+      "plane_m": -0.35109999775886536,
+      "plane_distance_m": 0.00009998679161071777,
+      "overlap_aabb_area_m2": 9.599982285501962e-7,
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_a": [
+        0,
+        0,
+        1
+      ],
+      "direction_normal_b": [
+        0,
+        0,
+        1
+      ]
+    }
+  ],
+  "negative_or_singular_transforms": [],
+  "materials": [
+    {
+      "name": "front source-locked unlit",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 1600,
+        "height": 285,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "rear source-locked unlit",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 1600,
+        "height": 319,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "left source-locked unlit",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 1600,
+        "height": 199,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "right source-locked unlit",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 1600,
+        "height": 199,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "top source-locked unlit",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 1012,
+        "height": 1600,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "bottom source-locked unlit",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 1012,
+        "height": 1600,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "Galvanized steel",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.58,
+        0.6,
+        0.61,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": null
+    },
+    {
+      "name": "Dark galvanized recess",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.2,
+        0.22,
+        0.23,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": null
+    },
+    {
+      "name": "Dell matte black polymer",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.018,
+        0.022,
+        0.026,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": null
+    },
+    {
+      "name": "Opaque port and grille recess",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.004,
+        0.005,
+        0.006,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": null
+    },
+    {
+      "name": "Dell blue latch and VGA",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.02,
+        0.25,
+        0.58,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": null
+    },
+    {
+      "name": "Dell teal management panel",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0,
+        0.48,
+        0.56,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": null
+    },
+    {
+      "name": "Dell AC PSU release orange",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.94,
+        0.23,
+        0.025,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": null
+    },
+    {
+      "name": "Translucent-looking PSU handle",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.68,
+        0.74,
+        0.76,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": null
+    },
+    {
+      "name": "Blue LCD",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.1,
+        0.3,
+        0.74,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": null
+    }
+  ],
+  "primary_material_errors": [],
+  "closed_core": [
+    {
+      "node": "Closed chassis core",
+      "triangle_count": 12,
+      "edge_count": 18,
+      "boundary_edge_count": 0,
+      "non_manifold_edge_count": 0,
+      "signed_volume": 0.026316414964682244,
+      "watertight": true,
+      "outward_signed_volume": true
+    }
+  ],
+  "inward_watertight_meshes": [],
+  "normal_attribute_mismatches": [],
+  "unresolved": [
+    "overlapping exact-coplanar triangle pairs exist across nodes",
+    "overlapping near-coplanar triangle pairs exist within 0.2 mm across nodes"
+  ],
+  "status": "REWORK"
+}

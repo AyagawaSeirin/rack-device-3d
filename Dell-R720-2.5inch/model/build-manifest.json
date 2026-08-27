@@ -6,46 +6,51 @@
     "overall_width": 482.4,
     "body_width": 444.0,
     "height": 87.3,
+    "front_projection_without_bezel": 18.0,
     "flange_to_rear_body": 684.0,
-    "overall_depth": 723.0
+    "body_depth": 702.0,
+    "flange_to_rear_most": 723.0,
+    "installed_depth": 741.0
   },
   "builder": "model/build_model.mjs",
+  "texture_preprocessor": "model/prepare_textures.py",
+  "view_repair_record": "qa/repair_rotation_views.py",
   "newly_constructed": true,
   "official_mesh_imported": false,
   "models": {
     "standard": {
       "path": "model/Dell-R720-2.5inch.glb",
-      "bytes": 11721868,
-      "sha256": "9ddcb84c29ef9c30cf1537389b0a6d84136fc72f2639049c17f59d7fbe413650",
+      "bytes": 11368272,
+      "sha256": "20956b037d3f6ff179e6174f7d8c6081b2e739bdde2be13a5d738717d608469b",
       "texture_directory": "model/textures/standard",
       "embedded_texture_sizes_px": {
         "front": [2400, 427],
         "rear": [2400, 478],
-        "left": [2400, 290],
-        "right": [2400, 283],
-        "top": [1490, 2400],
-        "bottom": [1463, 2400]
+        "left": [2400, 298],
+        "right": [2400, 298],
+        "top": [1518, 2400],
+        "bottom": [1518, 2400]
       }
     },
     "web": {
       "path": "model/Dell-R720-2.5inch-web.glb",
-      "bytes": 6032448,
-      "sha256": "e716ea7193259aedf361bdb15afa6a4c0143de181ca792989b38b874b3d35aaf",
+      "bytes": 6442488,
+      "sha256": "2fae80ebdef8f0cba6d2bb3cada080524294f77fcebdc4dd72b92f1304914c3a",
       "texture_directory": "model/textures/web",
       "embedded_texture_sizes_px": {
         "front": [1600, 285],
         "rear": [1600, 319],
-        "left": [1600, 193],
-        "right": [1600, 189],
-        "top": [993, 1600],
-        "bottom": [975, 1600]
+        "left": [1600, 199],
+        "right": [1600, 199],
+        "top": [1012, 1600],
+        "bottom": [1012, 1600]
       }
     }
   },
   "gltf": {
-    "nodes": 331,
-    "meshes": 331,
-    "primitives": 331,
+    "nodes": 253,
+    "meshes": 253,
+    "primitives": 253,
     "materials": 15,
     "textures": 6,
     "images": 6,
