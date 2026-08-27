@@ -1,0 +1,328 @@
+{
+  "model_key": "HPE-DL360G9-3.5inch",
+  "status": "PASS_WITH_BOTTOM_FALLBACK",
+  "errors": [],
+  "warnings": [],
+  "capture_only_readpixels_warning_count": 10,
+  "hashes": {
+    "old": {
+      "standard": "cdc9a32363bf2cfcdfa3027533c9dbaca4fb897c62d325bdef7affa47bd39b04",
+      "web": "b2dbde391730bd77a86813a803f3e68201c532f6ea5664ba2f558e348426531e"
+    },
+    "new": {
+      "standard": "08b5bb28fa61f21b73d56c7280fcd202c03db4346c49ba417a12af50babfaf6f",
+      "web": "d80090ead95a1f3de27369633c1ad265dd44eae7409cf7d148442f33a9aa5f96"
+    },
+    "viewers": {
+      "three": "949b9bb2bb83b0a9668496cfb3ae986192b50e28151490011947447f4d181812",
+      "babylon": "957a34b4bed337545f0459eecba7f8e8b471f2b64aec8fa68b620c29673dac02"
+    },
+    "build_scripts": {
+      "model/build_model.py": "15d241006cecbee2f36ab5098822ec25b20d555e8b8dbf24d0f0316396cc75b4"
+    }
+  },
+  "audits": {
+    "views-audit": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 6
+    },
+    "glb-standard-audit": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0
+    },
+    "glb-web-audit": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0
+    },
+    "standard/duplicate-coplanar": {
+      "status": "PASS",
+      "unresolved": 0
+    },
+    "standard/material-alpha": {
+      "status": "PASS",
+      "unresolved": 0
+    },
+    "standard/negative-transform": {
+      "status": "PASS",
+      "unresolved": 0
+    },
+    "standard/closed-core": {
+      "status": "PASS",
+      "unresolved": 0
+    },
+    "web/duplicate-coplanar": {
+      "status": "PASS",
+      "unresolved": 0
+    },
+    "web/material-alpha": {
+      "status": "PASS",
+      "unresolved": 0
+    },
+    "web/negative-transform": {
+      "status": "PASS",
+      "unresolved": 0
+    },
+    "web/closed-core": {
+      "status": "PASS",
+      "unresolved": 0
+    }
+  },
+  "loads": {
+    "completed": 40,
+    "dimensions": {
+      "1200x800": 40
+    }
+  },
+  "rotations": {
+    "three/standard": {
+      "status": "PASS",
+      "yaw": 72,
+      "pitch": 12,
+      "stability": 16,
+      "unique_yaw_hashes": 72,
+      "frame_dimensions": {
+        "600x400": 100
+      },
+      "stability_pairs": [
+        {
+          "yaw": 0,
+          "pixel_equal": true,
+          "sha_a": "566efeeb6cec15579c3f13f2d5dc44fedd1f854b39600ff3b1960bc1f844cf82",
+          "sha_b": "566efeeb6cec15579c3f13f2d5dc44fedd1f854b39600ff3b1960bc1f844cf82"
+        },
+        {
+          "yaw": 45,
+          "pixel_equal": true,
+          "sha_a": "4fcdd1fcaa752962587c65443f444fd3d58b750db5649fc9f9f548deadf1ccf5",
+          "sha_b": "4fcdd1fcaa752962587c65443f444fd3d58b750db5649fc9f9f548deadf1ccf5"
+        },
+        {
+          "yaw": 90,
+          "pixel_equal": true,
+          "sha_a": "ff1681ce652392e84d3b8a8c49cc9603bfec53963b2658305afdb8e3b1738c95",
+          "sha_b": "ff1681ce652392e84d3b8a8c49cc9603bfec53963b2658305afdb8e3b1738c95"
+        },
+        {
+          "yaw": 135,
+          "pixel_equal": true,
+          "sha_a": "5c8c25dab02e706ce4295d8fecc7ff1050c4b2b232fae44a79d4e6834c7630ac",
+          "sha_b": "5c8c25dab02e706ce4295d8fecc7ff1050c4b2b232fae44a79d4e6834c7630ac"
+        },
+        {
+          "yaw": 180,
+          "pixel_equal": true,
+          "sha_a": "3db5e4452c8ba31bd1d1efeb51f2c5ed44dbb716c71bc7513ef96f4a79fd74cd",
+          "sha_b": "3db5e4452c8ba31bd1d1efeb51f2c5ed44dbb716c71bc7513ef96f4a79fd74cd"
+        },
+        {
+          "yaw": 225,
+          "pixel_equal": true,
+          "sha_a": "7979acb0f5950da456edfc9273aa1f1f4afb536c7e8fe8875b4a7f6e663eea30",
+          "sha_b": "7979acb0f5950da456edfc9273aa1f1f4afb536c7e8fe8875b4a7f6e663eea30"
+        },
+        {
+          "yaw": 270,
+          "pixel_equal": true,
+          "sha_a": "3bd4e589349e519e9a9d28815cb81477c1e121b863f31334eb79d5845cee5199",
+          "sha_b": "3bd4e589349e519e9a9d28815cb81477c1e121b863f31334eb79d5845cee5199"
+        },
+        {
+          "yaw": 315,
+          "pixel_equal": true,
+          "sha_a": "32b287dc6f4b5a9ce560542b4b1cc3925eafbd96c97ef6c249c2c28dfde15e62",
+          "sha_b": "32b287dc6f4b5a9ce560542b4b1cc3925eafbd96c97ef6c249c2c28dfde15e62"
+        }
+      ],
+      "near_far_ratio": 485.6859016145326
+    },
+    "three/web": {
+      "status": "PASS",
+      "yaw": 72,
+      "pitch": 12,
+      "stability": 16,
+      "unique_yaw_hashes": 72,
+      "frame_dimensions": {
+        "600x400": 100
+      },
+      "stability_pairs": [
+        {
+          "yaw": 0,
+          "pixel_equal": true,
+          "sha_a": "8f54492fffdc647b7e4f50d1b64029c26bfa053d82e1ed3a2bb103fee5be8781",
+          "sha_b": "6dce676d9f20f00c163a7721d054675090f4d65cc6ff00a6bcc0bdfb1c2aae18"
+        },
+        {
+          "yaw": 45,
+          "pixel_equal": true,
+          "sha_a": "940f37098eafffff538ae7f1b7a3953131d2b6e667c4fe6a0785622caa25051f",
+          "sha_b": "940f37098eafffff538ae7f1b7a3953131d2b6e667c4fe6a0785622caa25051f"
+        },
+        {
+          "yaw": 90,
+          "pixel_equal": true,
+          "sha_a": "c428078de1e77eb8669daa36d70c284af3d8197327152ef52421dd4898108d87",
+          "sha_b": "c428078de1e77eb8669daa36d70c284af3d8197327152ef52421dd4898108d87"
+        },
+        {
+          "yaw": 135,
+          "pixel_equal": true,
+          "sha_a": "4efb59a5f7a61c7d1c21f4788ecfa7ead67ed3b6e922262bf94fc0d9cd6200ac",
+          "sha_b": "4efb59a5f7a61c7d1c21f4788ecfa7ead67ed3b6e922262bf94fc0d9cd6200ac"
+        },
+        {
+          "yaw": 180,
+          "pixel_equal": true,
+          "sha_a": "82952fa9ccaaeced8400baf3f82cac86d8fe7d705337dc023bc72b5efcb7ac35",
+          "sha_b": "82952fa9ccaaeced8400baf3f82cac86d8fe7d705337dc023bc72b5efcb7ac35"
+        },
+        {
+          "yaw": 225,
+          "pixel_equal": true,
+          "sha_a": "88840ffca8e2034ff98cecf6400b0909b512978acc2ee78110f2cb7bceb051ba",
+          "sha_b": "88840ffca8e2034ff98cecf6400b0909b512978acc2ee78110f2cb7bceb051ba"
+        },
+        {
+          "yaw": 270,
+          "pixel_equal": true,
+          "sha_a": "cd33ee83d7bfa9b7fab998a9ed63cee60d35ea48731ec0787a369719aa6ad066",
+          "sha_b": "cd33ee83d7bfa9b7fab998a9ed63cee60d35ea48731ec0787a369719aa6ad066"
+        },
+        {
+          "yaw": 315,
+          "pixel_equal": true,
+          "sha_a": "75b51f2b75b4b7487f0ca7483bcf52677b44eaf13b461149bbec18108784b04e",
+          "sha_b": "75b51f2b75b4b7487f0ca7483bcf52677b44eaf13b461149bbec18108784b04e"
+        }
+      ],
+      "near_far_ratio": 485.6859016145326
+    },
+    "babylon/standard": {
+      "status": "PASS",
+      "yaw": 72,
+      "pitch": 12,
+      "stability": 16,
+      "unique_yaw_hashes": 72,
+      "frame_dimensions": {
+        "600x400": 100
+      },
+      "stability_pairs": [
+        {
+          "yaw": 0,
+          "pixel_equal": true,
+          "sha_a": "5df6a83ea011fe490e5df67826767eae9306c7fc149a349af9caefb913cd36cd",
+          "sha_b": "5df6a83ea011fe490e5df67826767eae9306c7fc149a349af9caefb913cd36cd"
+        },
+        {
+          "yaw": 45,
+          "pixel_equal": true,
+          "sha_a": "761b2d908cc706a2266c399aef1c02f8f0ddf218a554a7a651e02d6139e6fda2",
+          "sha_b": "761b2d908cc706a2266c399aef1c02f8f0ddf218a554a7a651e02d6139e6fda2"
+        },
+        {
+          "yaw": 90,
+          "pixel_equal": true,
+          "sha_a": "349b9c7c70fd5c3b7d5f9ae58ef5a0c29e8bb47c2d96152e13d00ec7be26eb5a",
+          "sha_b": "349b9c7c70fd5c3b7d5f9ae58ef5a0c29e8bb47c2d96152e13d00ec7be26eb5a"
+        },
+        {
+          "yaw": 135,
+          "pixel_equal": true,
+          "sha_a": "b3a9d50c0bf56a55f17f6b0d0df296b4ea466b36649837948981c58951305d5e",
+          "sha_b": "b3a9d50c0bf56a55f17f6b0d0df296b4ea466b36649837948981c58951305d5e"
+        },
+        {
+          "yaw": 180,
+          "pixel_equal": true,
+          "sha_a": "eea8785217c55221e32e70c3da7933c96257a8f456564b8f57b4385e8d67e80f",
+          "sha_b": "eea8785217c55221e32e70c3da7933c96257a8f456564b8f57b4385e8d67e80f"
+        },
+        {
+          "yaw": 225,
+          "pixel_equal": true,
+          "sha_a": "7024b7bd95e11fbe05fb0c68ce3f15dfb36b78b9ab70de17d6f221728720ee01",
+          "sha_b": "7024b7bd95e11fbe05fb0c68ce3f15dfb36b78b9ab70de17d6f221728720ee01"
+        },
+        {
+          "yaw": 270,
+          "pixel_equal": true,
+          "sha_a": "a88c6d614a1806640889d1b4972a92ab4d8d2a9accecfce0931c3b211c103cd2",
+          "sha_b": "a88c6d614a1806640889d1b4972a92ab4d8d2a9accecfce0931c3b211c103cd2"
+        },
+        {
+          "yaw": 315,
+          "pixel_equal": true,
+          "sha_a": "d341b376dd9f2ebad28e58825cfc6e070c6984732837d491b9abed3f04cc5df3",
+          "sha_b": "c71f0ea63929dfa571b9654946e4ef708d37565767042042c986e5749f41a5b9"
+        }
+      ],
+      "near_far_ratio": 485.6859016145326
+    },
+    "babylon/web": {
+      "status": "PASS",
+      "yaw": 72,
+      "pitch": 12,
+      "stability": 16,
+      "unique_yaw_hashes": 72,
+      "frame_dimensions": {
+        "600x400": 100
+      },
+      "stability_pairs": [
+        {
+          "yaw": 0,
+          "pixel_equal": true,
+          "sha_a": "8c879a277d4a3a4d1778fbea9c19e73720b58c3fb6dbadaf0507ac46aefa1fcd",
+          "sha_b": "8c879a277d4a3a4d1778fbea9c19e73720b58c3fb6dbadaf0507ac46aefa1fcd"
+        },
+        {
+          "yaw": 45,
+          "pixel_equal": true,
+          "sha_a": "790a1cd520359996a9091654045d891c0902651c656abe4bb3c355435a461e0b",
+          "sha_b": "790a1cd520359996a9091654045d891c0902651c656abe4bb3c355435a461e0b"
+        },
+        {
+          "yaw": 90,
+          "pixel_equal": true,
+          "sha_a": "30c4356c40c57076dadddec0124912d11baba902ae62be72f32fd6ae4c52dbb4",
+          "sha_b": "30c4356c40c57076dadddec0124912d11baba902ae62be72f32fd6ae4c52dbb4"
+        },
+        {
+          "yaw": 135,
+          "pixel_equal": true,
+          "sha_a": "e9fd4ab3e17a9cbfa0a7684e64808cea996cb2697b2cd93a4dc9569194fcb584",
+          "sha_b": "e9fd4ab3e17a9cbfa0a7684e64808cea996cb2697b2cd93a4dc9569194fcb584"
+        },
+        {
+          "yaw": 180,
+          "pixel_equal": true,
+          "sha_a": "ecfb0639e17d00e8bc73a9b55e637ebd8c876099a5994705ca82f3e6b00480d0",
+          "sha_b": "ecfb0639e17d00e8bc73a9b55e637ebd8c876099a5994705ca82f3e6b00480d0"
+        },
+        {
+          "yaw": 225,
+          "pixel_equal": true,
+          "sha_a": "3537747b3b8d4b5a5f2981bcbc564fe3bffc00f25d93020b3c6c5c97fcb0fae4",
+          "sha_b": "3537747b3b8d4b5a5f2981bcbc564fe3bffc00f25d93020b3c6c5c97fcb0fae4"
+        },
+        {
+          "yaw": 270,
+          "pixel_equal": true,
+          "sha_a": "d3a49d2ced60ea5d148aefa83bd692191f94f7523b9a0898cf4ced708c35d86e",
+          "sha_b": "d3a49d2ced60ea5d148aefa83bd692191f94f7523b9a0898cf4ced708c35d86e"
+        },
+        {
+          "yaw": 315,
+          "pixel_equal": true,
+          "sha_a": "8d3402a370ee1e373e67788958d2420edc8d097202d47d93c85b90681133cece",
+          "sha_b": "8d3402a370ee1e373e67788958d2420edc8d097202d47d93c85b90681133cece"
+        }
+      ],
+      "near_far_ratio": 485.6859016145326
+    }
+  },
+  "matched_camera_comparisons": 12,
+  "feature_inventory_rows": 23,
+  "bottom_mode": "GENERIC_BOTTOM_FALLBACK"
+}

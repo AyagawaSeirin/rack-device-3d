@@ -1,0 +1,61 @@
+{
+  "model_key": "HPE-DL360G9-3.5inch",
+  "status": "PASS_WITH_BOTTOM_FALLBACK",
+  "identity": {
+    "manufacturer": "Hewlett Packard Enterprise",
+    "product": "HPE ProLiant DL360 Gen9",
+    "variant": "1U 4LFF / 3.5-inch",
+    "power": "2 x HPE 500W Flex Slot hot-plug AC PSU",
+    "configuration_status": "VERIFIED"
+  },
+  "deliverables": [
+    {
+      "profile": "standard",
+      "path": "model/HPE-DL360G9-3.5inch.glb",
+      "bytes": 17376584,
+      "sha256": "cdc9a32363bf2cfcdfa3027533c9dbaca4fb897c62d325bdef7affa47bd39b04"
+    },
+    {
+      "profile": "web",
+      "path": "model/HPE-DL360G9-3.5inch-web.glb",
+      "bytes": 6402956,
+      "sha256": "b2dbde391730bd77a86813a803f3e68201c532f6ea5664ba2f558e348426531e"
+    }
+  ],
+  "bounds_mm": {
+    "expected": [482.6, 43.2, 770.0],
+    "actual": [482.600003, 43.460000, 770.060003],
+    "nonuniform_ratio_error_percent": 0.3978
+  },
+  "audits": {
+    "views": "PASS",
+    "alpha_manual_resolution": "PASS",
+    "standard_glb": "PASS",
+    "web_glb": "PASS",
+    "viewer_load": "PASS",
+    "required_webgl_captures": 40,
+    "dark_background_captures": 4,
+    "source_camera_captures": 6,
+    "comparison_sheets": 40,
+    "glb_errors": 0,
+    "glb_warnings": 0
+  },
+  "viewers": [
+    "Three.js WebGL2",
+    "Babylon.js WebGL2"
+  ],
+  "official_exact_3d": {
+    "found": false,
+    "result": "No exact public HPE-authored GLB/glTF/STEP/OBJ/FBX/CAD/AR asset found; no community model substituted."
+  },
+  "bottom": {
+    "mode": "GENERIC_BOTTOM_FALLBACK",
+    "reason": "No usable exact DL360 Gen9 4LFF underside remained after documented official, dynamic-page, PDF, reseller, marketplace, auction, used-equipment, teardown, video, English, Chinese, and German searches."
+  },
+  "remaining_risks": [
+    "Bottom is a conservative non-identifying controlled fallback, so ordinary PASS is not claimed.",
+    "Small protrusion dimensions are source-measured with an explicit plus/minus 2 mm tolerance.",
+    "Fine connector interiors and tiny flush markings are photographic relief rather than engineering/internal CAD."
+  ],
+  "git_commit_or_push": false
+}

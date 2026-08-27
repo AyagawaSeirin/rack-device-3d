@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Babylon.js WebGL2 rotation audit</title>
+  <style>
+    html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#dfe3e6}
+    body.checker-light{background-color:#f4f5f6;background-image:linear-gradient(45deg,#d8dce0 25%,transparent 25%),linear-gradient(-45deg,#d8dce0 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#d8dce0 75%),linear-gradient(-45deg,transparent 75%,#d8dce0 75%);background-size:32px 32px;background-position:0 0,0 16px,16px -16px,-16px 0}
+    body.checker-dark{background-color:#17202a;background-image:linear-gradient(45deg,#34404d 25%,transparent 25%),linear-gradient(-45deg,#34404d 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#34404d 75%),linear-gradient(-45deg,transparent 75%,#34404d 75%);background-size:32px 32px;background-position:0 0,0 16px,16px -16px,-16px 0}
+    canvas{display:block;width:100%;height:100%;outline:0}
+    #status{position:fixed;inset:0;display:grid;place-items:center;background:#111827;color:white;font:14px ui-monospace,monospace;z-index:5}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/babylonjs@7.44.0/babylon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/babylonjs-loaders@7.44.0/babylonjs.loaders.min.js"></script>
+</head>
+<body>
+  <div id="status">loading Babylon.js / WebGL2…</div>
+  <canvas id="canvas"></canvas>
+  <script>
+  (async()=>{
+    const query=new URLSearchParams(location.search),modelUrl=query.get('model');if(!modelUrl)throw new Error('model query parameter required');
+    const canvas=document.getElementById('canvas'),status=document.getElementById('status');
+    const engine=new BABYLON.Engine(canvas,true,{preserveDrawingBuffer:true,stencil:false,premultipliedAlpha:false,disableWebGL2Support:false},false);engine.setHardwareScalingLevel(1);engine.setSize(innerWidth,innerHeight);
+    const gl=engine._gl;if(!(gl instanceof WebGL2RenderingContext))throw new Error('WebGL2 unavailable');
+    BABYLON.SceneLoader.ShowLoadingScreen=false;const scene=new BABYLON.Scene(engine);scene.useRightHandedSystem=true;scene.clearColor=new BABYLON.Color4(0,0,0,0);scene.imageProcessingConfiguration.toneMappingEnabled=false;scene.imageProcessingConfiguration.exposure=1;scene.imageProcessingConfiguration.contrast=1;
+    const hemi=new BABYLON.HemisphericLight('hemi',new BABYLON.Vector3(0,1,0),scene);hemi.intensity=1.35;hemi.groundColor=new BABYLON.Color3(.47,.51,.54);
+    const key=new BABYLON.DirectionalLight('key',new BABYLON.Vector3(1.8,-2.5,-2.8),scene);key.intensity=1.05;
+    const fill=new BABYLON.DirectionalLight('fill',new BABYLON.Vector3(-2.2,-.8,2),scene);fill.intensity=.42;
+    let min,max,center,size,camera,last={};
+    const named={front:[0,0,'ortho'],rear:[180,0,'ortho'],left:[-90,0,'ortho'],right:[90,0,'ortho'],top:[0,90,'ortho'],bottom:[0,-90,'ortho'],'front-left':[-45,24,'perspective'],'front-right':[45,24,'perspective'],'rear-left':[-135,24,'perspective'],'rear-right':[135,24,'perspective']};
+    const deg=x=>x*Math.PI/180,vector=a=>new BABYLON.Vector3(a[0],a[1],a[2]);
+    function direction(yaw,pitch){const y=deg(yaw),p=deg(pitch);return new BABYLON.Vector3(Math.sin(y)*Math.cos(p),Math.sin(p),Math.cos(y)*Math.cos(p)).normalize();}
+    function setBackground(bg){document.body.className=bg==='dark'?'checker-dark':bg==='light'?'checker-light':'';document.body.style.backgroundColor=bg==='neutral'?'#dfe3e6':'';}
+    function cameraFor(yaw,pitch,projection){
+      const dir=direction(yaw,pitch),up=Math.abs(pitch)>89?new BABYLON.Vector3(0,0,-1):new BABYLON.Vector3(0,1,0),aspect=innerWidth/innerHeight,radius=size.length()/2,distance=radius/Math.sin(deg(15))*1.22,near=Math.max(radius*.02,1e-5),far=distance+radius*5;
+      const cam=new BABYLON.FreeCamera('qa-camera',center.add(dir.scale(distance)),scene);cam.upVector=up;cam.setTarget(center);cam.minZ=near;cam.maxZ=far;
+      if(projection==='ortho'){
+        cam.mode=BABYLON.Camera.ORTHOGRAPHIC_CAMERA;const forward=dir.scale(-1),right=BABYLON.Vector3.Cross(forward,up).normalize(),trueUp=BABYLON.Vector3.Cross(right,forward).normalize();let halfW=0,halfH=0;
+        for(const x of[min.x,max.x])for(const y of[min.y,max.y])for(const z of[min.z,max.z]){const rel=new BABYLON.Vector3(x,y,z).subtract(center);halfW=Math.max(halfW,Math.abs(BABYLON.Vector3.Dot(rel,right)));halfH=Math.max(halfH,Math.abs(BABYLON.Vector3.Dot(rel,trueUp)));}
+        const h=Math.max(halfH,halfW/aspect)*1.08;cam.orthoLeft=-h*aspect;cam.orthoRight=h*aspect;cam.orthoTop=h;cam.orthoBottom=-h;
+      }else cam.fov=deg(30);
+      cam.metadata={near,far,distance,ratio:far/near,projection};return cam;
+    }
+    async function renderFrames(count=4){for(let i=0;i<count;i++)scene.render();gl.finish();await Promise.resolve();}
+    window.qaSetOrbit=async(yaw,pitch,bg='light',projection='perspective')=>{setBackground(bg);const old=camera;camera=cameraFor(yaw,pitch,projection);scene.activeCamera=camera;if(old)old.dispose();last={yaw,pitch,bg,projection};await renderFrames(4);window.__QA__.camera={...camera.metadata,...last};return window.__QA__.camera;};
+    window.__QA__={ready:false,error:null,engine:'Babylon.js 7.44.0',webgl:'WebGL2',model:modelUrl,overlayHidden:false,canvas:[innerWidth,innerHeight],rightHanded:true,toneMapping:'none'};
+    await BABYLON.SceneLoader.AppendAsync('',modelUrl,scene);
+    const ext=scene.getWorldExtends(mesh=>mesh.isEnabled()&&mesh.getTotalVertices()>0);min=ext.min;max=ext.max;center=min.add(max).scale(.5);size=max.subtract(min);window.__QA__.bounds={min:min.asArray(),max:max.asArray(),size:size.asArray()};window.__QA__.meshes=scene.meshes.filter(m=>m.getTotalVertices()>0).length;
+    const spec=named[query.get('view')]||[Number(query.get('yaw')||0),Number(query.get('pitch')||8),query.get('projection')||'perspective'];await window.qaSetOrbit(spec[0],spec[1],query.get('bg')||'light',spec[2]);status.style.display='none';window.__QA__.overlayHidden=true;window.__QA__.ready=true;document.body.dataset.ready='true';await renderFrames(2);
+  })().catch(error=>{window.__QA__=window.__QA__||{};window.__QA__.error=String(error);document.getElementById('status').textContent='ERROR '+error;console.error(error);});
+  </script>
+</body>
+</html>

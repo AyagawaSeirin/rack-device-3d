@@ -1,0 +1,414 @@
+{
+  "model_key": "HPE-DL360G9-3.5inch",
+  "phase": "rotation-atlas-chunk",
+  "chunk": 5,
+  "engine": "babylon",
+  "tier": "standard",
+  "model_file": "HPE-DL360G9-3.5inch.glb",
+  "model_sha256": "08b5bb28fa61f21b73d56c7280fcd202c03db4346c49ba417a12af50babfaf6f",
+  "viewer_url": "http://127.0.0.1:8893/qa/rotation-review/viewers/babylon.html?model=%2Fmodel%2FHPE-DL360G9-3.5inch.glb%3Fcb%3D08b5bb28fa61f21b73d56c7280fcd202c03db4346c49ba417a12af50babfaf6f-rotation-atlas-babylon-standard-chunk-5&yaw=0&pitch=8&projection=perspective&bg=light&nonce=08b5bb28fa61f21b73d56c7280fcd202c03db4346c49ba417a12af50babfaf6f-rotation-atlas-babylon-standard-chunk-5",
+  "http_status": 200,
+  "source_viewport": [
+    600,
+    400
+  ],
+  "frame_resolution": [
+    600,
+    400
+  ],
+  "yaw_step_degrees": 5,
+  "elapsed_ms": 6615,
+  "initial": {
+    "ready": true,
+    "error": null,
+    "engine": "Babylon.js 7.44.0",
+    "webgl": "WebGL2",
+    "model": "/model/HPE-DL360G9-3.5inch.glb?cb=08b5bb28fa61f21b73d56c7280fcd202c03db4346c49ba417a12af50babfaf6f-rotation-atlas-babylon-standard-chunk-5",
+    "overlayHidden": true,
+    "canvas": [
+      600,
+      400
+    ],
+    "rightHanded": true,
+    "toneMapping": "none",
+    "bounds": {
+      "min": [
+        -0.24130000174045563,
+        -0.02160000056028366,
+        -0.3869999945163727
+      ],
+      "max": [
+        0.24130000174045563,
+        0.02160000056028366,
+        0.3830600082874298
+      ],
+      "size": [
+        0.48260000348091125,
+        0.04320000112056732,
+        0.7700600028038025
+      ]
+    },
+    "meshes": 85,
+    "camera": {
+      "near": 0.009098139432734503,
+      "far": 4.418838053402389,
+      "distance": 2.144303195218764,
+      "ratio": 485.6859016145326,
+      "projection": "perspective",
+      "yaw": 0,
+      "pitch": 8,
+      "bg": "light"
+    }
+  },
+  "model_responses": [
+    {
+      "url": "http://127.0.0.1:8893/qa/rotation-review/viewers/babylon.html?model=%2Fmodel%2FHPE-DL360G9-3.5inch.glb%3Fcb%3D08b5bb28fa61f21b73d56c7280fcd202c03db4346c49ba417a12af50babfaf6f-rotation-atlas-babylon-standard-chunk-5&yaw=0&pitch=8&projection=perspective&bg=light&nonce=08b5bb28fa61f21b73d56c7280fcd202c03db4346c49ba417a12af50babfaf6f-rotation-atlas-babylon-standard-chunk-5",
+      "status": 200,
+      "fromServiceWorker": false
+    },
+    {
+      "url": "http://127.0.0.1:8893/model/HPE-DL360G9-3.5inch.glb?cb=08b5bb28fa61f21b73d56c7280fcd202c03db4346c49ba417a12af50babfaf6f-rotation-atlas-babylon-standard-chunk-5",
+      "status": 200,
+      "fromServiceWorker": false
+    }
+  ],
+  "console_messages": [],
+  "page_errors": [],
+  "atlases": [
+    {
+      "kind": "stability",
+      "path": "final/evidence/rotation/babylon/standard/atlases/stability-contact.png",
+      "cols": 4,
+      "rows": 4,
+      "count": 16,
+      "cell": [
+        600,
+        400
+      ]
+    }
+  ],
+  "frames": [
+    {
+      "kind": "stability",
+      "atlas_kind": "stability",
+      "atlas_index": 0,
+      "yaw": 0,
+      "pitch": 8,
+      "bg": "light",
+      "repeat": "a",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 0,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/standard/stability/yaw-000-a.png"
+    },
+    {
+      "kind": "stability",
+      "atlas_kind": "stability",
+      "atlas_index": 1,
+      "yaw": 0,
+      "pitch": 8,
+      "bg": "light",
+      "repeat": "b",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 0,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/standard/stability/yaw-000-b.png"
+    },
+    {
+      "kind": "stability",
+      "atlas_kind": "stability",
+      "atlas_index": 2,
+      "yaw": 45,
+      "pitch": 8,
+      "bg": "light",
+      "repeat": "a",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 45,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/standard/stability/yaw-045-a.png"
+    },
+    {
+      "kind": "stability",
+      "atlas_kind": "stability",
+      "atlas_index": 3,
+      "yaw": 45,
+      "pitch": 8,
+      "bg": "light",
+      "repeat": "b",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 45,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/standard/stability/yaw-045-b.png"
+    },
+    {
+      "kind": "stability",
+      "atlas_kind": "stability",
+      "atlas_index": 4,
+      "yaw": 90,
+      "pitch": 8,
+      "bg": "light",
+      "repeat": "a",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 90,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/standard/stability/yaw-090-a.png"
+    },
+    {
+      "kind": "stability",
+      "atlas_kind": "stability",
+      "atlas_index": 5,
+      "yaw": 90,
+      "pitch": 8,
+      "bg": "light",
+      "repeat": "b",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 90,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/standard/stability/yaw-090-b.png"
+    },
+    {
+      "kind": "stability",
+      "atlas_kind": "stability",
+      "atlas_index": 6,
+      "yaw": 135,
+      "pitch": 8,
+      "bg": "light",
+      "repeat": "a",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 135,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/standard/stability/yaw-135-a.png"
+    },
+    {
+      "kind": "stability",
+      "atlas_kind": "stability",
+      "atlas_index": 7,
+      "yaw": 135,
+      "pitch": 8,
+      "bg": "light",
+      "repeat": "b",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 135,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/standard/stability/yaw-135-b.png"
+    },
+    {
+      "kind": "stability",
+      "atlas_kind": "stability",
+      "atlas_index": 8,
+      "yaw": 180,
+      "pitch": 8,
+      "bg": "light",
+      "repeat": "a",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 180,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/standard/stability/yaw-180-a.png"
+    },
+    {
+      "kind": "stability",
+      "atlas_kind": "stability",
+      "atlas_index": 9,
+      "yaw": 180,
+      "pitch": 8,
+      "bg": "light",
+      "repeat": "b",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 180,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/standard/stability/yaw-180-b.png"
+    },
+    {
+      "kind": "stability",
+      "atlas_kind": "stability",
+      "atlas_index": 10,
+      "yaw": 225,
+      "pitch": 8,
+      "bg": "light",
+      "repeat": "a",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 225,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/standard/stability/yaw-225-a.png"
+    },
+    {
+      "kind": "stability",
+      "atlas_kind": "stability",
+      "atlas_index": 11,
+      "yaw": 225,
+      "pitch": 8,
+      "bg": "light",
+      "repeat": "b",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 225,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/standard/stability/yaw-225-b.png"
+    },
+    {
+      "kind": "stability",
+      "atlas_kind": "stability",
+      "atlas_index": 12,
+      "yaw": 270,
+      "pitch": 8,
+      "bg": "light",
+      "repeat": "a",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 270,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/standard/stability/yaw-270-a.png"
+    },
+    {
+      "kind": "stability",
+      "atlas_kind": "stability",
+      "atlas_index": 13,
+      "yaw": 270,
+      "pitch": 8,
+      "bg": "light",
+      "repeat": "b",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 270,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/standard/stability/yaw-270-b.png"
+    },
+    {
+      "kind": "stability",
+      "atlas_kind": "stability",
+      "atlas_index": 14,
+      "yaw": 315,
+      "pitch": 8,
+      "bg": "light",
+      "repeat": "a",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 315,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/standard/stability/yaw-315-a.png"
+    },
+    {
+      "kind": "stability",
+      "atlas_kind": "stability",
+      "atlas_index": 15,
+      "yaw": 315,
+      "pitch": 8,
+      "bg": "light",
+      "repeat": "b",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 315,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/standard/stability/yaw-315-b.png"
+    }
+  ],
+  "status": "PASS",
+  "frame_count": 16
+}

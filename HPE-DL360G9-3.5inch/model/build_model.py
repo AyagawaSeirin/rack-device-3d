@@ -195,11 +195,14 @@ def textured_quad(face: str, image: Image.Image,
         vertices = [[x1 + 0.00006, y0, z1], [x1 + 0.00006, y0, z0],
                     [x1 + 0.00006, y1, z0], [x1 + 0.00006, y1, z1]]
     elif face == "top":
-        vertices = [[x0, y1 + 0.00006, z1], [x1, y1 + 0.00006, z1],
-                    [x1, y1 + 0.00006, z0], [x0, y1 + 0.00006, z0]]
+        # Keep the primary photograph 0.12 mm below the verified outer top
+        # envelope.  Shallow seam/latch/vent relief occupies that stable depth
+        # layer without inflating the official 43.2 mm chassis height.
+        vertices = [[x0, y1 - 0.00012, z1], [x1, y1 - 0.00012, z1],
+                    [x1, y1 - 0.00012, z0], [x0, y1 - 0.00012, z0]]
     elif face == "bottom":
-        vertices = [[x1, y0 - 0.00006, z1], [x0, y0 - 0.00006, z1],
-                    [x0, y0 - 0.00006, z0], [x1, y0 - 0.00006, z0]]
+        vertices = [[x1, y0, z1], [x0, y0, z1],
+                    [x0, y0, z0], [x1, y0, z0]]
     else:
         raise ValueError(face)
     mesh = trimesh.Trimesh(
@@ -382,7 +385,9 @@ def add_rear(scene: trimesh.Scene, sections: int,
     """Add source-projected rear relief without obscuring exact rear details."""
     # Large PCIe panels are shallow, independently shaped assemblies. Their
     # outward surfaces sample the same locked rear pixels as the base plane.
-    slot_specs = [(0.151, 0.011, 0.105, 0.011),
+    # Slot 1 previously extended 8 mm into slot 2, putting two photo patches
+    # on the same plane.  The corrected width ends at slot 2's verified edge.
+    slot_specs = [(0.151, 0.011, 0.089, 0.011),
                   (0.079, 0.011, 0.055, 0.011),
                   (-0.001, 0.011, 0.096, 0.011)]
     for index, (x, y, w, h) in enumerate(slot_specs, start=1):
@@ -463,7 +468,7 @@ def top_hole_group(cx, cz, cols, rows, spacing_x, spacing_z, sections):
     holes = []
     for col in range(cols):
         for row in range(rows):
-            holes.append(make_cylinder(0.0017, 0.0009,
+            holes.append(make_cylinder(0.0017, 0.0008,
                                        [cx + (col - (cols - 1) / 2) * spacing_x,
                                         BODY_H / 2.0 - 0.0004,
                                         cz + (row - (rows - 1) / 2) * spacing_z],
@@ -473,8 +478,8 @@ def top_hole_group(cx, cz, cols, rows, spacing_x, spacing_z, sections):
 
 def add_top_and_internal(scene: trimesh.Scene, sections: int) -> None:
     add(scene, "Top_Transverse_Cover_Seam",
-        make_box([BODY_W - 0.004, 0.0010, 0.0014],
-                 [0, BODY_H / 2.0 - 0.0003, 0.270], MAT_DARK_SILVER))
+        make_box([BODY_W - 0.004, 0.0002, 0.0014],
+                 [0, BODY_H / 2.0 - 0.0001, 0.270], MAT_DARK_SILVER))
     add(scene, "Top_Hood_Latch",
         make_box([0.027, 0.0018, 0.055],
                  [0.090, BODY_H / 2.0 - 0.0009, -0.050], MAT_DARK_SILVER))

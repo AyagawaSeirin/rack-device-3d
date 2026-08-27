@@ -1,0 +1,445 @@
+{
+  "model_key": "HPE-DL360G9-3.5inch",
+  "phase": "rotation-atlas-chunk",
+  "chunk": 0,
+  "engine": "babylon",
+  "tier": "web",
+  "model_file": "HPE-DL360G9-3.5inch-web.glb",
+  "model_sha256": "d80090ead95a1f3de27369633c1ad265dd44eae7409cf7d148442f33a9aa5f96",
+  "viewer_url": "http://127.0.0.1:8893/qa/rotation-review/viewers/babylon.html?model=%2Fmodel%2FHPE-DL360G9-3.5inch-web.glb%3Fcb%3Dd80090ead95a1f3de27369633c1ad265dd44eae7409cf7d148442f33a9aa5f96-rotation-atlas-babylon-web-chunk-0&yaw=0&pitch=8&projection=perspective&bg=light&nonce=d80090ead95a1f3de27369633c1ad265dd44eae7409cf7d148442f33a9aa5f96-rotation-atlas-babylon-web-chunk-0",
+  "http_status": 200,
+  "source_viewport": [
+    600,
+    400
+  ],
+  "frame_resolution": [
+    600,
+    400
+  ],
+  "yaw_step_degrees": 5,
+  "elapsed_ms": 7621,
+  "initial": {
+    "ready": true,
+    "error": null,
+    "engine": "Babylon.js 7.44.0",
+    "webgl": "WebGL2",
+    "model": "/model/HPE-DL360G9-3.5inch-web.glb?cb=d80090ead95a1f3de27369633c1ad265dd44eae7409cf7d148442f33a9aa5f96-rotation-atlas-babylon-web-chunk-0",
+    "overlayHidden": true,
+    "canvas": [
+      600,
+      400
+    ],
+    "rightHanded": true,
+    "toneMapping": "none",
+    "bounds": {
+      "min": [
+        -0.24130000174045563,
+        -0.02160000056028366,
+        -0.3869999945163727
+      ],
+      "max": [
+        0.24130000174045563,
+        0.02160000056028366,
+        0.3830600082874298
+      ],
+      "size": [
+        0.48260000348091125,
+        0.04320000112056732,
+        0.7700600028038025
+      ]
+    },
+    "meshes": 85,
+    "camera": {
+      "near": 0.009098139432734503,
+      "far": 4.418838053402389,
+      "distance": 2.144303195218764,
+      "ratio": 485.6859016145326,
+      "projection": "perspective",
+      "yaw": 0,
+      "pitch": 8,
+      "bg": "light"
+    }
+  },
+  "model_responses": [
+    {
+      "url": "http://127.0.0.1:8893/qa/rotation-review/viewers/babylon.html?model=%2Fmodel%2FHPE-DL360G9-3.5inch-web.glb%3Fcb%3Dd80090ead95a1f3de27369633c1ad265dd44eae7409cf7d148442f33a9aa5f96-rotation-atlas-babylon-web-chunk-0&yaw=0&pitch=8&projection=perspective&bg=light&nonce=d80090ead95a1f3de27369633c1ad265dd44eae7409cf7d148442f33a9aa5f96-rotation-atlas-babylon-web-chunk-0",
+      "status": 200,
+      "fromServiceWorker": false
+    },
+    {
+      "url": "http://127.0.0.1:8893/model/HPE-DL360G9-3.5inch-web.glb?cb=d80090ead95a1f3de27369633c1ad265dd44eae7409cf7d148442f33a9aa5f96-rotation-atlas-babylon-web-chunk-0",
+      "status": 200,
+      "fromServiceWorker": false
+    }
+  ],
+  "console_messages": [
+    {
+      "type": "warning",
+      "text": "[.WebGL-0xc4400193e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0xc4400193e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+    }
+  ],
+  "page_errors": [],
+  "atlases": [
+    {
+      "kind": "yaw-0",
+      "path": "final/evidence/rotation/babylon/web/atlases/yaw-contact-chunk-0.png",
+      "cols": 6,
+      "rows": 3,
+      "count": 18,
+      "cell": [
+        600,
+        400
+      ]
+    }
+  ],
+  "frames": [
+    {
+      "kind": "yaw",
+      "atlas_kind": "yaw-0",
+      "atlas_index": 0,
+      "yaw": 0,
+      "pitch": 8,
+      "bg": "light",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 0,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/web/yaw/yaw-000.png"
+    },
+    {
+      "kind": "yaw",
+      "atlas_kind": "yaw-0",
+      "atlas_index": 1,
+      "yaw": 5,
+      "pitch": 8,
+      "bg": "light",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 5,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/web/yaw/yaw-005.png"
+    },
+    {
+      "kind": "yaw",
+      "atlas_kind": "yaw-0",
+      "atlas_index": 2,
+      "yaw": 10,
+      "pitch": 8,
+      "bg": "light",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 10,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/web/yaw/yaw-010.png"
+    },
+    {
+      "kind": "yaw",
+      "atlas_kind": "yaw-0",
+      "atlas_index": 3,
+      "yaw": 15,
+      "pitch": 8,
+      "bg": "light",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 15,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/web/yaw/yaw-015.png"
+    },
+    {
+      "kind": "yaw",
+      "atlas_kind": "yaw-0",
+      "atlas_index": 4,
+      "yaw": 20,
+      "pitch": 8,
+      "bg": "light",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 20,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/web/yaw/yaw-020.png"
+    },
+    {
+      "kind": "yaw",
+      "atlas_kind": "yaw-0",
+      "atlas_index": 5,
+      "yaw": 25,
+      "pitch": 8,
+      "bg": "light",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 25,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/web/yaw/yaw-025.png"
+    },
+    {
+      "kind": "yaw",
+      "atlas_kind": "yaw-0",
+      "atlas_index": 6,
+      "yaw": 30,
+      "pitch": 8,
+      "bg": "light",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 30,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/web/yaw/yaw-030.png"
+    },
+    {
+      "kind": "yaw",
+      "atlas_kind": "yaw-0",
+      "atlas_index": 7,
+      "yaw": 35,
+      "pitch": 8,
+      "bg": "light",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 35,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/web/yaw/yaw-035.png"
+    },
+    {
+      "kind": "yaw",
+      "atlas_kind": "yaw-0",
+      "atlas_index": 8,
+      "yaw": 40,
+      "pitch": 8,
+      "bg": "light",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 40,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/web/yaw/yaw-040.png"
+    },
+    {
+      "kind": "yaw",
+      "atlas_kind": "yaw-0",
+      "atlas_index": 9,
+      "yaw": 45,
+      "pitch": 8,
+      "bg": "light",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 45,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/web/yaw/yaw-045.png"
+    },
+    {
+      "kind": "yaw",
+      "atlas_kind": "yaw-0",
+      "atlas_index": 10,
+      "yaw": 50,
+      "pitch": 8,
+      "bg": "light",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 50,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/web/yaw/yaw-050.png"
+    },
+    {
+      "kind": "yaw",
+      "atlas_kind": "yaw-0",
+      "atlas_index": 11,
+      "yaw": 55,
+      "pitch": 8,
+      "bg": "light",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 55,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/web/yaw/yaw-055.png"
+    },
+    {
+      "kind": "yaw",
+      "atlas_kind": "yaw-0",
+      "atlas_index": 12,
+      "yaw": 60,
+      "pitch": 8,
+      "bg": "light",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 60,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/web/yaw/yaw-060.png"
+    },
+    {
+      "kind": "yaw",
+      "atlas_kind": "yaw-0",
+      "atlas_index": 13,
+      "yaw": 65,
+      "pitch": 8,
+      "bg": "light",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 65,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/web/yaw/yaw-065.png"
+    },
+    {
+      "kind": "yaw",
+      "atlas_kind": "yaw-0",
+      "atlas_index": 14,
+      "yaw": 70,
+      "pitch": 8,
+      "bg": "light",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 70,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/web/yaw/yaw-070.png"
+    },
+    {
+      "kind": "yaw",
+      "atlas_kind": "yaw-0",
+      "atlas_index": 15,
+      "yaw": 75,
+      "pitch": 8,
+      "bg": "light",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 75,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/web/yaw/yaw-075.png"
+    },
+    {
+      "kind": "yaw",
+      "atlas_kind": "yaw-0",
+      "atlas_index": 16,
+      "yaw": 80,
+      "pitch": 8,
+      "bg": "light",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 80,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/web/yaw/yaw-080.png"
+    },
+    {
+      "kind": "yaw",
+      "atlas_kind": "yaw-0",
+      "atlas_index": 17,
+      "yaw": 85,
+      "pitch": 8,
+      "bg": "light",
+      "camera": {
+        "near": 0.009098139432734503,
+        "far": 4.418838053402389,
+        "distance": 2.144303195218764,
+        "ratio": 485.6859016145326,
+        "projection": "perspective",
+        "yaw": 85,
+        "pitch": 8,
+        "bg": "light"
+      },
+      "screenshot": "final/evidence/rotation/babylon/web/yaw/yaw-085.png"
+    }
+  ],
+  "status": "PASS",
+  "frame_count": 18
+}

@@ -1,6 +1,6 @@
 # HPE ProLiant DL360 Gen9 4LFF / 3.5-inch — Final QA report
 
-Date: 2026-08-23  
+Completed: 2026-08-24 (source access and build began 2026-08-23)
 Final status: **PASS_WITH_BOTTOM_FALLBACK**
 
 The self-built standard and web GLBs pass identity, source-lineage, dimensions, structure, opacity, orientation, source-photo comparison, two-viewer WebGL loading, and standard-versus-web exterior-equivalence gates. Ordinary `PASS` is intentionally not claimed because no usable exact-model underside was found after the required search escalation; `bottom.png` uses the skill-defined conservative `GENERIC_BOTTOM_FALLBACK` exception.

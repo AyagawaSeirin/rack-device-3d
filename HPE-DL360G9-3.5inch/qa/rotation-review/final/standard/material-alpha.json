@@ -1,0 +1,531 @@
+{
+  "model": "/root/Project/rack-device-3d/HPE-DL360G9-3.5inch/model/HPE-DL360G9-3.5inch.glb",
+  "sha256": "08b5bb28fa61f21b73d56c7280fcd202c03db4346c49ba417a12af50babfaf6f",
+  "generated_at": "2026-08-27T13:43:45.279Z",
+  "status": "PASS",
+  "materials": [
+    {
+      "index": 0,
+      "name": "HPE galvanized chassis steel",
+      "users": [
+        "Closed_Chassis_Core"
+      ],
+      "main_face": false,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": null,
+      "base_color_factor": [
+        0.7294117647058823,
+        0.7411764705882353,
+        0.7294117647058823,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "texture_index": null,
+      "image_index": null,
+      "issues": []
+    },
+    {
+      "index": 1,
+      "name": "FACE_FRONT_SOURCE_LOCKED_PHOTOGRAPHIC",
+      "users": [
+        "Face_Front_Approved_Imagegen",
+        "Front_Ear_Left_SourceLocked_Surface",
+        "Front_Ear_Right_SourceLocked_Surface",
+        "Front_LFF_Carrier_1_SourceLocked_Surface",
+        "Front_LFF_Carrier_2_SourceLocked_Surface",
+        "Front_LFF_Carrier_3_SourceLocked_Surface",
+        "Front_LFF_Carrier_4_SourceLocked_Surface"
+      ],
+      "main_face": true,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": null,
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "texture_index": 0,
+      "image_index": 0,
+      "image_alpha": {
+        "width": 4086,
+        "height": 357,
+        "bit_depth": 8,
+        "color_type": 2,
+        "decoded": true,
+        "alpha_min": 255,
+        "alpha_zero_pixels": 0,
+        "alpha_partial_pixels": 0,
+        "alpha_opaque_pixels": 1458702,
+        "total_pixels": 1458702
+      },
+      "issues": []
+    },
+    {
+      "index": 2,
+      "name": "FACE_REAR_SOURCE_LOCKED_PHOTOGRAPHIC",
+      "users": [
+        "Face_Rear_Approved_Imagegen",
+        "Rear_PCIe_Slot_1_SourceLocked_Surface",
+        "Rear_PCIe_Slot_2_SourceLocked_Surface",
+        "Rear_PCIe_Slot_3_SourceLocked_Surface",
+        "Rear_AC_PSU_1_SourceLocked_Surface",
+        "Rear_AC_PSU_2_SourceLocked_Surface"
+      ],
+      "main_face": false,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": null,
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "texture_index": 1,
+      "image_index": 1,
+      "image_alpha": {
+        "width": 4090,
+        "height": 400,
+        "bit_depth": 8,
+        "color_type": 2,
+        "decoded": true,
+        "alpha_min": 255,
+        "alpha_zero_pixels": 0,
+        "alpha_partial_pixels": 0,
+        "alpha_opaque_pixels": 1636000,
+        "total_pixels": 1636000
+      },
+      "issues": []
+    },
+    {
+      "index": 3,
+      "name": "FACE_LEFT_SOURCE_LOCKED_PHOTOGRAPHIC",
+      "users": [
+        "Face_Left_Approved_Imagegen"
+      ],
+      "main_face": true,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": null,
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "texture_index": 2,
+      "image_index": 2,
+      "image_alpha": {
+        "width": 4086,
+        "height": 230,
+        "bit_depth": 8,
+        "color_type": 2,
+        "decoded": true,
+        "alpha_min": 255,
+        "alpha_zero_pixels": 0,
+        "alpha_partial_pixels": 0,
+        "alpha_opaque_pixels": 939780,
+        "total_pixels": 939780
+      },
+      "issues": []
+    },
+    {
+      "index": 4,
+      "name": "FACE_RIGHT_SOURCE_LOCKED_PHOTOGRAPHIC",
+      "users": [
+        "Face_Right_Approved_Imagegen"
+      ],
+      "main_face": true,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": null,
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "texture_index": 3,
+      "image_index": 3,
+      "image_alpha": {
+        "width": 4084,
+        "height": 230,
+        "bit_depth": 8,
+        "color_type": 2,
+        "decoded": true,
+        "alpha_min": 255,
+        "alpha_zero_pixels": 0,
+        "alpha_partial_pixels": 0,
+        "alpha_opaque_pixels": 939320,
+        "total_pixels": 939320
+      },
+      "issues": []
+    },
+    {
+      "index": 5,
+      "name": "FACE_TOP_SOURCE_LOCKED_PHOTOGRAPHIC",
+      "users": [
+        "Face_Top_Approved_Imagegen"
+      ],
+      "main_face": true,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": null,
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "texture_index": 4,
+      "image_index": 4,
+      "image_alpha": {
+        "width": 2048,
+        "height": 3534,
+        "bit_depth": 8,
+        "color_type": 2,
+        "decoded": true,
+        "alpha_min": 255,
+        "alpha_zero_pixels": 0,
+        "alpha_partial_pixels": 0,
+        "alpha_opaque_pixels": 7237632,
+        "total_pixels": 7237632
+      },
+      "issues": []
+    },
+    {
+      "index": 6,
+      "name": "FACE_BOTTOM_GENERIC_BOTTOM_FALLBACK_PHOTOGRAPHIC",
+      "users": [
+        "Face_Bottom_Approved_Imagegen"
+      ],
+      "main_face": true,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": null,
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "texture_index": 5,
+      "image_index": 5,
+      "image_alpha": {
+        "width": 2048,
+        "height": 3534,
+        "bit_depth": 8,
+        "color_type": 2,
+        "decoded": true,
+        "alpha_min": 255,
+        "alpha_zero_pixels": 0,
+        "alpha_partial_pixels": 0,
+        "alpha_opaque_pixels": 7237632,
+        "total_pixels": 7237632
+      },
+      "issues": []
+    },
+    {
+      "index": 7,
+      "name": "HPE plated carrier and connector steel",
+      "users": [
+        "Front_Ear_Left_Independent",
+        "Front_Ear_Right_Independent",
+        "Rear_PCIe_Slot_1_Blank",
+        "Rear_PCIe_Slot_2_Blank",
+        "Rear_PCIe_Slot_3_Blank",
+        "Side_Left_Rail_Mount_Pin_1",
+        "Side_Left_Rail_Mount_Pin_2",
+        "Side_Left_Rail_Mount_Pin_3",
+        "Side_Left_Rail_Mount_Pin_4",
+        "Side_Left_Lower_Fold",
+        "Side_Right_Rail_Mount_Pin_1",
+        "Side_Right_Rail_Mount_Pin_2",
+        "Side_Right_Rail_Mount_Pin_3",
+        "Side_Right_Rail_Mount_Pin_4",
+        "Side_Right_Lower_Fold"
+      ],
+      "main_face": false,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": null,
+      "base_color_factor": [
+        0.6941176470588235,
+        0.7058823529411765,
+        0.6901960784313725,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "texture_index": null,
+      "image_index": null,
+      "issues": []
+    },
+    {
+      "index": 8,
+      "name": "HPE black polymer and connector cavities",
+      "users": [
+        "Front_LFF_Bay_1_Recess",
+        "Front_LFF_Bay_2_Recess",
+        "Front_LFF_Bay_3_Recess",
+        "Front_LFF_Bay_4_Recess",
+        "Rear_AC_PSU_1_Handle_Bar",
+        "Rear_AC_PSU_1_Handle_Arm_1",
+        "Rear_AC_PSU_1_Handle_Arm_2",
+        "Rear_AC_PSU_2_Handle_Bar",
+        "Rear_AC_PSU_2_Handle_Arm_1",
+        "Rear_AC_PSU_2_Handle_Arm_2",
+        "Internal_HotPlug_Fan_1_Module",
+        "Internal_HotPlug_Fan_2_Module",
+        "Internal_HotPlug_Fan_3_Module",
+        "Internal_HotPlug_Fan_4_Module",
+        "Internal_HotPlug_Fan_5_Module",
+        "Internal_HotPlug_Fan_6_Module",
+        "Internal_HotPlug_Fan_7_Module"
+      ],
+      "main_face": false,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": null,
+      "base_color_factor": [
+        0.050980392156862744,
+        0.058823529411764705,
+        0.06274509803921569,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "texture_index": null,
+      "image_index": null,
+      "issues": []
+    },
+    {
+      "index": 9,
+      "name": "Deep fan and vent cavity",
+      "users": [
+        "Front_LFF_Carrier_1_Body",
+        "Front_LFF_Carrier_2_Body",
+        "Front_LFF_Carrier_3_Body",
+        "Front_LFF_Carrier_4_Body",
+        "Side_Left_Key_Slot_Recess_1",
+        "Side_Left_Key_Slot_Recess_2",
+        "Side_Left_Key_Slot_Recess_3",
+        "Side_Right_Key_Slot_Recess_1",
+        "Side_Right_Key_Slot_Recess_2",
+        "Side_Right_Key_Slot_Recess_3",
+        "Top_Front_Transverse_Vent",
+        "Top_Rear_Left_Vent",
+        "Top_Rear_Center_Vent",
+        "Top_Latch_Adjacent_Vent"
+      ],
+      "main_face": false,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": null,
+      "base_color_factor": [
+        0.09803921568627451,
+        0.10980392156862745,
+        0.11372549019607843,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "texture_index": null,
+      "image_index": null,
+      "issues": []
+    },
+    {
+      "index": 10,
+      "name": "HPE dark galvanized relief",
+      "users": [
+        "Rear_AC_PSU_1_Body",
+        "Rear_AC_PSU_2_Body",
+        "Side_Left_Upper_Pressed_Seam",
+        "Side_Right_Upper_Pressed_Seam",
+        "Top_Transverse_Cover_Seam",
+        "Top_Hood_Latch",
+        "Internal_HotPlug_Fan_1_Rotor",
+        "Internal_HotPlug_Fan_2_Rotor",
+        "Internal_HotPlug_Fan_3_Rotor",
+        "Internal_HotPlug_Fan_4_Rotor",
+        "Internal_HotPlug_Fan_5_Rotor",
+        "Internal_HotPlug_Fan_6_Rotor",
+        "Internal_HotPlug_Fan_7_Rotor"
+      ],
+      "main_face": false,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": null,
+      "base_color_factor": [
+        0.40784313725490196,
+        0.4235294117647059,
+        0.41568627450980394,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "texture_index": null,
+      "image_index": null,
+      "issues": []
+    },
+    {
+      "index": 11,
+      "name": "Top warning label yellow",
+      "users": [
+        "Top_Hot_Surface_Label_Plate"
+      ],
+      "main_face": false,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": null,
+      "base_color_factor": [
+        0.8509803921568627,
+        0.7098039215686275,
+        0.13333333333333333,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "texture_index": null,
+      "image_index": null,
+      "issues": []
+    },
+    {
+      "index": 12,
+      "name": "HPE Smart Carrier and PSU release red",
+      "users": [
+        "Internal_HotPlug_Fan_1_Red_Latch",
+        "Internal_HotPlug_Fan_2_Red_Latch",
+        "Internal_HotPlug_Fan_3_Red_Latch",
+        "Internal_HotPlug_Fan_4_Red_Latch",
+        "Internal_HotPlug_Fan_5_Red_Latch",
+        "Internal_HotPlug_Fan_6_Red_Latch",
+        "Internal_HotPlug_Fan_7_Red_Latch"
+      ],
+      "main_face": false,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": null,
+      "base_color_factor": [
+        0.592156862745098,
+        0.17647058823529413,
+        0.21568627450980393,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "texture_index": null,
+      "image_index": null,
+      "issues": []
+    }
+  ],
+  "images": [
+    {
+      "index": 0,
+      "name": null,
+      "mime_type": "image/png",
+      "alpha": {
+        "width": 4086,
+        "height": 357,
+        "bit_depth": 8,
+        "color_type": 2,
+        "decoded": true,
+        "alpha_min": 255,
+        "alpha_zero_pixels": 0,
+        "alpha_partial_pixels": 0,
+        "alpha_opaque_pixels": 1458702,
+        "total_pixels": 1458702
+      }
+    },
+    {
+      "index": 1,
+      "name": null,
+      "mime_type": "image/png",
+      "alpha": {
+        "width": 4090,
+        "height": 400,
+        "bit_depth": 8,
+        "color_type": 2,
+        "decoded": true,
+        "alpha_min": 255,
+        "alpha_zero_pixels": 0,
+        "alpha_partial_pixels": 0,
+        "alpha_opaque_pixels": 1636000,
+        "total_pixels": 1636000
+      }
+    },
+    {
+      "index": 2,
+      "name": null,
+      "mime_type": "image/png",
+      "alpha": {
+        "width": 4086,
+        "height": 230,
+        "bit_depth": 8,
+        "color_type": 2,
+        "decoded": true,
+        "alpha_min": 255,
+        "alpha_zero_pixels": 0,
+        "alpha_partial_pixels": 0,
+        "alpha_opaque_pixels": 939780,
+        "total_pixels": 939780
+      }
+    },
+    {
+      "index": 3,
+      "name": null,
+      "mime_type": "image/png",
+      "alpha": {
+        "width": 4084,
+        "height": 230,
+        "bit_depth": 8,
+        "color_type": 2,
+        "decoded": true,
+        "alpha_min": 255,
+        "alpha_zero_pixels": 0,
+        "alpha_partial_pixels": 0,
+        "alpha_opaque_pixels": 939320,
+        "total_pixels": 939320
+      }
+    },
+    {
+      "index": 4,
+      "name": null,
+      "mime_type": "image/png",
+      "alpha": {
+        "width": 2048,
+        "height": 3534,
+        "bit_depth": 8,
+        "color_type": 2,
+        "decoded": true,
+        "alpha_min": 255,
+        "alpha_zero_pixels": 0,
+        "alpha_partial_pixels": 0,
+        "alpha_opaque_pixels": 7237632,
+        "total_pixels": 7237632
+      }
+    },
+    {
+      "index": 5,
+      "name": null,
+      "mime_type": "image/png",
+      "alpha": {
+        "width": 2048,
+        "height": 3534,
+        "bit_depth": 8,
+        "color_type": 2,
+        "decoded": true,
+        "alpha_min": 255,
+        "alpha_zero_pixels": 0,
+        "alpha_partial_pixels": 0,
+        "alpha_opaque_pixels": 7237632,
+        "total_pixels": 7237632
+      }
+    }
+  ],
+  "allowed_nonopaque": [],
+  "unresolved": []
+}
