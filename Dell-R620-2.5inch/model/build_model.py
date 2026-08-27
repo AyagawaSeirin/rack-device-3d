@@ -28,12 +28,20 @@ MODEL = ROOT / "model"
 
 BODY_W = 0.4340
 BODY_H = 0.0428
-BODY_D = 0.7310
+FLANGE_TO_REAR_BODY = 0.7310
+FRONT_PROJECTION = 0.0204
+FLANGE_TO_REAR_MOST = 0.7521
+# Dell Figure 14 measures Zb/Zc from the EIA rack flange.  The complete body
+# and installed envelope must therefore include Za as well.
+BODY_D = FRONT_PROJECTION + FLANGE_TO_REAR_BODY
+INSTALLED_D = FRONT_PROJECTION + FLANGE_TO_REAR_MOST
 RACK_W = 0.4824
 EAR_EXT = (RACK_W - BODY_W) / 2.0
-RACK_FLANGE_Z = BODY_D / 2.0
-FRONT_MOST_Z = RACK_FLANGE_Z + 0.0204
-REAR_MOST_Z = FRONT_MOST_Z - 0.7521
+FRONT_MOST_Z = BODY_D / 2.0
+RACK_FLANGE_Z = FRONT_MOST_Z - FRONT_PROJECTION
+REAR_BODY_Z = -BODY_D / 2.0
+REAR_MOST_Z = RACK_FLANGE_Z - FLANGE_TO_REAR_MOST
+REAR_PROJECTION = REAR_BODY_Z - REAR_MOST_Z
 
 
 def pbr(name: str, rgba, metallic: float = 0.0, roughness: float = 0.78) -> PBRMaterial:
@@ -144,10 +152,10 @@ def textured_quad(face: str, image: Image.Image) -> trimesh.Trimesh:
     z0, z1 = -BODY_D / 2.0, BODY_D / 2.0
     eps = 0.00004
     if face == "front":
-        z = RACK_FLANGE_Z + 0.0080
+        z = FRONT_MOST_Z - 0.0012
         vertices = [[x0, y0, z], [x1, y0, z], [x1, y1, z], [x0, y1, z]]
     elif face == "rear":
-        z = REAR_MOST_Z + 0.0007
+        z = REAR_BODY_Z - 0.00005
         vertices = [[x1, y0, z], [x0, y0, z], [x0, y1, z], [x1, y1, z]]
     elif face == "left":
         vertices = [[x0 - eps, y0, z0], [x0 - eps, y0, z1],
@@ -156,9 +164,11 @@ def textured_quad(face: str, image: Image.Image) -> trimesh.Trimesh:
         vertices = [[x1 + eps, y0, z1], [x1 + eps, y0, z0],
                     [x1 + eps, y1, z0], [x1 + eps, y1, z1]]
     elif face == "top":
-        vertices = [[x0, y1, z1], [x1, y1, z1], [x1, y1, z0], [x0, y1, z0]]
+        skin_y = y1 - 0.00055
+        vertices = [[x0, skin_y, z1], [x1, skin_y, z1], [x1, skin_y, z0], [x0, skin_y, z0]]
     elif face == "bottom":
-        vertices = [[x1, y0, z1], [x0, y0, z1], [x0, y0, z0], [x1, y0, z0]]
+        skin_y = y0 + 0.00055
+        vertices = [[x1, skin_y, z1], [x0, skin_y, z1], [x0, skin_y, z0], [x1, skin_y, z0]]
     else:
         raise ValueError(face)
     mesh = trimesh.Trimesh(
@@ -185,40 +195,47 @@ def add_frame(scene, prefix, cx, cy, width, height, depth, z, rail, material):
 
 
 def add_front(scene: trimesh.Scene, sections: int) -> None:
-    # Front-only rack latch assemblies, ending at the EIA flange.
+    # Front-only rack latch assemblies.  Non-overlapping horizontal bands form
+    # a solid latch around one real through-hole per ear.  The old solid body,
+    # recess frame and coplanar fasteners occupied the same front plane.
     for sign, side in ((-1, "Physical_Left"), (1, "Physical_Right")):
-        cx = sign * (BODY_W / 2.0 + EAR_EXT / 2.0)
-        add(scene, f"Front_Rack_Latch_{side}_Body",
-            make_box([EAR_EXT, BODY_H, 0.0204],
-                     [cx, 0, (RACK_FLANGE_Z + FRONT_MOST_Z) / 2.0], MAT_BLACK))
-        add_frame(scene, f"Front_Rack_Latch_{side}_Release_Recess",
-                  cx, -0.001, EAR_EXT * 0.68, BODY_H * 0.62, 0.0012,
-                  FRONT_MOST_Z - 0.0006, 0.0015, MAT_DARK_SILVER)
-        for idx, y in enumerate((-0.0155, 0.0155), start=1):
-            add(scene, f"Front_Rack_Latch_{side}_Fastener_{idx}",
-                make_cylinder(0.0015, 0.0008,
-                              [cx, y, FRONT_MOST_Z - 0.0004],
-                              MAT_SILVER, sections, (0, 0, 1)))
+        x_min = -RACK_W / 2.0 if sign < 0 else BODY_W / 2.0
+        x_max = -BODY_W / 2.0 if sign < 0 else RACK_W / 2.0
+        hole_x = (x_min + x_max) / 2.0
+        radius, bands = 0.0037, 48
+        band_h = BODY_H / bands
+        for band in range(bands):
+            y = -BODY_H / 2.0 + band_h * (band + 0.5)
+            delta = abs(y)
+            half = math.sqrt(radius * radius - delta * delta) if delta < radius else 0.0
+            if half == 0:
+                add(scene, f"Front_Rack_Latch_{side}_Band_{band + 1}",
+                    make_box([x_max - x_min, band_h, FRONT_PROJECTION - 0.0005],
+                             [hole_x, y, (RACK_FLANGE_Z + FRONT_MOST_Z - 0.0005) / 2.0], MAT_BLACK))
+            else:
+                left_w = hole_x - half - x_min
+                right_w = x_max - (hole_x + half)
+                if left_w > 0:
+                    add(scene, f"Front_Rack_Latch_{side}_Hole_Left_{band + 1}",
+                        make_box([left_w, band_h, FRONT_PROJECTION - 0.0005],
+                                 [x_min + left_w / 2.0, y, (RACK_FLANGE_Z + FRONT_MOST_Z - 0.0005) / 2.0], MAT_BLACK))
+                if right_w > 0:
+                    add(scene, f"Front_Rack_Latch_{side}_Hole_Right_{band + 1}",
+                        make_box([right_w, band_h, FRONT_PROJECTION - 0.0005],
+                                 [hole_x + half + right_w / 2.0, y, (RACK_FLANGE_Z + FRONT_MOST_Z - 0.0005) / 2.0], MAT_BLACK))
+        # One shallow raised latch bar establishes the official front envelope
+        # without overlapping the band caps.
+        add(scene, f"Front_Rack_Latch_{side}_Raised_Release",
+            make_box([EAR_EXT * 0.42, BODY_H * 0.42, 0.0005],
+                     [hole_x, -0.009, FRONT_MOST_Z - 0.00025], MAT_DARK_SILVER))
 
     # Narrow ten-drive control strip; text stays visible on the photo skin.
     control_x = -0.1980
     add_frame(scene, "Front_10Drive_Control_Strip_Frame", control_x, 0,
-              0.0320, 0.0390, 0.0030, RACK_FLANGE_Z + 0.0172,
+              0.0180, 0.0390, 0.0012, FRONT_MOST_Z - 0.0008,
               0.0012, MAT_BLACK)
-    for idx, (y, material) in enumerate(((0.010, MAT_GREEN),
-                                          (0.002, MAT_GREEN),
-                                          (-0.006, MAT_AMBER)), start=1):
-        add(scene, f"Front_Control_Status_Lens_{idx}",
-            make_cylinder(0.00155, 0.0009,
-                          [control_x - 0.006, y, FRONT_MOST_Z - 0.00045],
-                          material, 16, (0, 0, 1)))
-    add(scene, "Front_Control_Power_Button",
-        make_cylinder(0.0035, 0.0009,
-                      [control_x + 0.005, 0.010, FRONT_MOST_Z - 0.00045],
-                      MAT_DARK_SILVER, sections, (0, 0, 1)))
-    add_frame(scene, "Front_Control_MiniUSB_Recess", control_x, -0.014,
-              0.0080, 0.0065, 0.0009, FRONT_MOST_Z - 0.00045,
-              0.0012, MAT_SILVER)
+    # Flush diagnostic lenses, power control, mini-USB and factory marks stay
+    # in the locked photograph; duplicate colored caps formerly fought it.
 
     # Ten independent carrier/bay assemblies, two rows by five columns.
     x_centers = (-0.1540, -0.0780, -0.0020, 0.0740, 0.1500)
@@ -227,73 +244,82 @@ def add_front(scene: trimesh.Scene, sections: int) -> None:
         for row, cy in enumerate(y_centers):
             drive = col * 2 + row
             prefix = f"Front_SFF_Drive_{drive:02d}"
-            add(scene, f"{prefix}_Bay_Recess",
-                make_box([0.0710, 0.0190, 0.0060],
-                         [cx, cy, RACK_FLANGE_Z + 0.0110], MAT_DARK))
             add_frame(scene, f"{prefix}_Carrier_Perimeter", cx, cy,
-                      0.0690, 0.0180, 0.0038, RACK_FLANGE_Z + 0.0168,
+                      0.0690, 0.0180, 0.0008, FRONT_MOST_Z - 0.0008,
                       0.0011, MAT_BLACK)
             # Raised handle frame leaves the photographic carrier face visible.
             add_frame(scene, f"{prefix}_Handle", cx + 0.0060, cy,
-                      0.0500, 0.0120, 0.0032, RACK_FLANGE_Z + 0.0192,
+                      0.0500, 0.0120, 0.0006, FRONT_MOST_Z - 0.0003,
                       0.0017, MAT_BLACK)
-            apertures = []
-            for ap in range(4):
-                apertures.append(make_box([0.0060, 0.0075, 0.0007],
-                    [cx - 0.0090 + ap * 0.0080, cy, FRONT_MOST_Z - 0.00035], MAT_DARK))
-            add_group(scene, f"{prefix}_Four_Handle_Aperture_Relief", apertures, MAT_DARK)
-            add(scene, f"{prefix}_Orange_Release_Ring",
-                make_cylinder(0.0032, 0.0009,
-                              [cx - 0.0260, cy, FRONT_MOST_Z - 0.00045],
-                              MAT_ORANGE, sections, (0, 0, 1)))
-            add(scene, f"{prefix}_Green_Status_Lens",
-                make_box([0.0015, 0.0042, 0.0008],
-                         [cx - 0.0340, cy + 0.0030, FRONT_MOST_Z - 0.0004], MAT_GREEN))
-            add(scene, f"{prefix}_Amber_Status_Lens",
-                make_box([0.0015, 0.0030, 0.0008],
-                         [cx - 0.0340, cy - 0.0035, FRONT_MOST_Z - 0.0004], MAT_AMBER))
+            # Exact apertures, release ring and status lenses remain photo
+            # detail inside the real raised handle perimeter.
 
 
 def add_perforated_blank(scene, name, cx, cy, width, height, sections):
-    z = REAR_MOST_Z + 0.00045
-    add_frame(scene, name, cx, cy, width, height, 0.0008, z,
+    z = REAR_BODY_Z - 0.00045
+    add_frame(scene, name, cx, cy, width, height, 0.0007, z,
               0.0011, MAT_SILVER)
-    holes = []
-    for col in range(8):
-        holes.append(make_box([0.0052, 0.0060, 0.0005],
-            [cx - width / 2 + 0.008 + col * (width - 0.016) / 7.0,
-             cy, REAR_MOST_Z + 0.00028], MAT_DARK))
-    add_group(scene, f"{name}_Eight_Vent_Recesses", holes, MAT_DARK)
+    # The verified perforation pattern remains in the rear photograph visible
+    # through the open frame, avoiding a coarse repeated overlay.
 
 
 def add_port_frame(scene, name, cx, cy, width, height, material=MAT_SILVER):
     add_frame(scene, name, cx, cy, width, height, 0.0007,
-              REAR_MOST_Z + 0.0004, 0.0010, material)
-    add(scene, f"{name}_Opaque_Cavity",
-        make_box([max(0.001, width - 0.0024), max(0.001, height - 0.0024), 0.00045],
-                 [cx, cy, REAR_MOST_Z + 0.00023], MAT_DARK))
+              REAR_BODY_Z - 0.00045, 0.0010, material)
 
 
 def add_rear_fan(scene, name, cx, cy, radius, sections):
-    z = REAR_MOST_Z + 0.00035
+    z = REAR_MOST_Z + 0.00030
     add(scene, f"{name}_Cavity",
-        make_cylinder(radius, 0.0007, [cx, cy, z], MAT_DARK,
+        make_cylinder(radius, 0.0006, [cx, cy, z], MAT_DARK,
                       sections, (0, 0, 1)))
     blades = []
     for angle in np.linspace(0, 2 * math.pi, 7, endpoint=False):
-        blade = make_box([radius * 1.05, radius * 0.17, 0.00045],
-                         [cx, cy, REAR_MOST_Z + 0.00022], MAT_BLACK)
+        blade = make_box([radius * 1.05, radius * 0.17, 0.00030],
+                         [cx, cy, REAR_MOST_Z + 0.00016], MAT_BLACK)
         blade.apply_transform(trimesh.transformations.rotation_matrix(
             angle, [0, 0, 1], [cx, cy, REAR_MOST_Z + 0.00022]))
         blades.append(blade)
     add_group(scene, f"{name}_Seven_Blades", blades, MAT_BLACK)
     add(scene, f"{name}_Hub",
-        make_cylinder(radius * 0.28, 0.00055,
-                      [cx, cy, REAR_MOST_Z + 0.00027],
+        make_cylinder(radius * 0.28, 0.00040,
+                      [cx, cy, REAR_MOST_Z + 0.00020],
                       MAT_DARK_SILVER, sections, (0, 0, 1)))
 
 
-def add_rear(scene: trimesh.Scene, sections: int) -> None:
+def rear_photo_region_quad(name: str, image: Image.Image, cx: float, cy: float,
+                           width: float, height: float, z: float) -> trimesh.Trimesh:
+    """Crop an exact rear-photo region onto one protruding PSU outer face."""
+    iw, ih = image.size
+    screen_x = (BODY_W / 2.0 - cx) / BODY_W * iw
+    screen_y = (BODY_H / 2.0 - cy) / BODY_H * ih
+    crop_w = width / BODY_W * iw
+    crop_h = height / BODY_H * ih
+    crop = image.crop((max(0, round(screen_x - crop_w / 2.0)),
+                       max(0, round(screen_y - crop_h / 2.0)),
+                       min(iw, round(screen_x + crop_w / 2.0)),
+                       min(ih, round(screen_y + crop_h / 2.0))))
+    if crop.width < 1024:
+        crop = crop.resize((1024, max(1, round(crop.height * 1024 / crop.width))),
+                           Image.Resampling.LANCZOS)
+    material = PBRMaterial(
+        name=f"FACE_REAR_{name}_SOURCE_LOCKED_PHOTOGRAPHIC",
+        baseColorFactor=[255, 255, 255, 255], baseColorTexture=crop,
+        metallicFactor=0.0, roughnessFactor=0.92,
+        alphaMode="OPAQUE", doubleSided=False)
+    x0, x1 = cx - width / 2.0, cx + width / 2.0
+    y0, y1 = cy - height / 2.0, cy + height / 2.0
+    mesh = trimesh.Trimesh(
+        vertices=np.asarray([[x1, y0, z], [x0, y0, z],
+                             [x0, y1, z], [x1, y1, z]], dtype=float),
+        faces=np.asarray([[0, 1, 2], [0, 2, 3]], dtype=np.int64), process=False)
+    mesh.visual = TextureVisuals(
+        uv=np.asarray([[0, 0], [1, 0], [1, 1], [0, 1]], dtype=np.float32),
+        material=material)
+    return mesh
+
+
+def add_rear(scene: trimesh.Scene, sections: int, rear_image: Image.Image) -> None:
     # Rear screen-left is world +X; screen-right PSU block is world -X.
     for idx, cx in enumerate((0.161, 0.075, -0.011), start=1):
         add_perforated_blank(scene, f"Rear_LowProfile_PCIe_Blank_{idx}",
@@ -303,7 +329,7 @@ def add_rear(scene: trimesh.Scene, sections: int) -> None:
     for idx, (cx, cy) in enumerate(((0.205, -0.006), (0.196, -0.006)), start=1):
         add(scene, f"Rear_SystemID_Round_{idx}",
             make_cylinder(0.0022, 0.0006,
-                          [cx, cy, REAR_MOST_Z + 0.0003],
+                          [cx, cy, REAR_BODY_Z - 0.0007],
                           MAT_DARK if idx == 1 else MAT_GREEN,
                           16, (0, 0, 1)))
     add_port_frame(scene, "Rear_iDRAC7_Enterprise_RJ45", 0.173, -0.0085, 0.016, 0.013)
@@ -313,45 +339,35 @@ def add_rear(scene: trimesh.Scene, sections: int) -> None:
     add_port_frame(scene, "Rear_USB2_Lower", 0.068, -0.0130, 0.013, 0.006)
     for idx, cx in enumerate((0.041, 0.013, -0.015, -0.043), start=1):
         add_port_frame(scene, f"Rear_QuadBaseT_RJ45_{idx}", cx, -0.0090, 0.021, 0.014)
-        pins = []
-        for pin in range(4):
-            pins.append(make_box([0.0010, 0.0007, 0.00035],
-                [cx - 0.0045 + pin * 0.0030, -0.0132,
-                 REAR_MOST_Z + 0.00016], MAT_GOLD))
-        add_group(scene, f"Rear_QuadBaseT_RJ45_{idx}_Pin_Relief", pins, MAT_GOLD)
+        # Connector pins and cavities remain exact photographic detail.
 
     # Two complete 750W AC hot-plug PSUs.
     for idx, cx in enumerate((-0.1245, -0.1855), start=1):
         psu_w, psu_h = 0.0590, 0.0405
         add_frame(scene, f"Rear_750W_AC_PSU_{idx}_Frame", cx, 0,
-                  psu_w, psu_h, 0.0012, REAR_MOST_Z + 0.0006,
+                  psu_w, psu_h, REAR_PROJECTION,
+                  (REAR_BODY_Z + REAR_MOST_Z) / 2.0,
                   0.0012, MAT_DARK_SILVER)
+        add(scene, f"Rear_750W_AC_PSU_{idx}_SourceLocked_OuterFace",
+            rear_photo_region_quad(f"PSU_{idx}", rear_image, cx, 0,
+                                   psu_w - 0.0024, psu_h - 0.0024,
+                                   REAR_MOST_Z + 0.00045))
         inlet_x = cx + 0.0155
         fan_x = cx - 0.0145
-        add_port_frame(scene, f"Rear_750W_AC_PSU_{idx}_IEC_C14",
-                       inlet_x, -0.002, 0.0175, 0.0230, MAT_BLACK)
-        add_rear_fan(scene, f"Rear_750W_AC_PSU_{idx}_Fan",
-                     fan_x, 0.001, 0.0135, sections)
-        add(scene, f"Rear_750W_AC_PSU_{idx}_Orange_Release",
-            make_box([0.0048, 0.0150, 0.0008],
-                     [inlet_x + 0.0110, -0.002, REAR_MOST_Z + 0.0004], MAT_ORANGE))
+        add_frame(scene, f"Rear_750W_AC_PSU_{idx}_IEC_C14",
+                  inlet_x, -0.002, 0.0175, 0.0230, 0.0005,
+                  REAR_MOST_Z + 0.00025, 0.0010, MAT_BLACK)
+        # Fan, guarded hub, orange release and screws remain exact detail in
+        # the source-locked PSU crop, avoiding several stacked coplanar disks.
         # U-shaped translucent handle approximation, kept within depth bounds.
-        hz = REAR_MOST_Z + 0.00042
+        hz = REAR_MOST_Z + 0.00025
         hx = cx + 0.0005
         add(scene, f"Rear_750W_AC_PSU_{idx}_Handle_Top",
-            make_box([0.0032, 0.0160, 0.00075], [hx, 0.0100, hz], MAT_CLEAR_GRAY))
+            make_box([0.0032, 0.0150, 0.0004], [hx, 0.0100, hz], MAT_CLEAR_GRAY))
         add(scene, f"Rear_750W_AC_PSU_{idx}_Handle_Bottom",
-            make_box([0.0032, 0.0160, 0.00075], [hx, -0.0100, hz], MAT_CLEAR_GRAY))
+            make_box([0.0032, 0.0150, 0.0004], [hx, -0.0100, hz], MAT_CLEAR_GRAY))
         add(scene, f"Rear_750W_AC_PSU_{idx}_Handle_Bridge",
-            make_box([0.0032, 0.0050, 0.00075], [hx, 0, hz], MAT_CLEAR_GRAY))
-        for screw, (sx, sy) in enumerate(((cx - psu_w / 2 + 0.004, 0.0165),
-                                          (cx + psu_w / 2 - 0.004, 0.0165),
-                                          (cx - psu_w / 2 + 0.004, -0.0165),
-                                          (cx + psu_w / 2 - 0.004, -0.0165)), start=1):
-            add(scene, f"Rear_750W_AC_PSU_{idx}_Face_Screw_{screw}",
-                make_cylinder(0.00125, 0.0006,
-                              [sx, sy, REAR_MOST_Z + 0.0003],
-                              MAT_SILVER, 12, (0, 0, 1)))
+            make_box([0.0032, 0.0050, 0.0004], [hx, 0, hz], MAT_CLEAR_GRAY))
 
 
 def add_sides(scene: trimesh.Scene, sections: int) -> None:
@@ -376,39 +392,36 @@ def add_sides(scene: trimesh.Scene, sections: int) -> None:
         for idx, (y, z) in enumerate(data["pins"], start=1):
             add(scene, f"Side_{side}_Rail_Mount_Stud_{idx}",
                 make_cylinder(0.0022, 0.0012,
-                    [data["x"] - sign * 0.0006, y, z], MAT_SILVER,
+                    [data["x"] + sign * 0.0008, y, z], MAT_SILVER,
                     sections, data["axis"]))
         for idx, (y, z) in enumerate(data["slots"], start=1):
             add(scene, f"Side_{side}_Independent_Rail_Slot_{idx}",
                 make_box([0.00065, 0.0045, 0.0100],
-                    [data["x"] - sign * 0.00033, y, z], MAT_DARK))
-        add(scene, f"Side_{side}_Cover_Seam",
-            make_box([0.00055, 0.0010, BODY_D - 0.018],
-                     [data["x"] - sign * 0.00028, 0.0090, 0], MAT_DARK_SILVER))
-        add(scene, f"Side_{side}_Lower_Stamped_Rail_Interface",
-            make_box([0.0006, 0.0011, BODY_D - 0.040],
-                     [data["x"] - sign * 0.00030, -0.0080, 0], MAT_SILVER))
+                    [data["x"] + sign * 0.00045, y, z], MAT_DARK))
+        # Long seams and stamped strips stay in the locked side photographs;
+        # omitting redundant crossing boxes removes the side z-fighting cause.
 
 
 def add_top(scene: trimesh.Scene, sections: int) -> None:
-    y = BODY_H / 2.0 - 0.00055
+    y = BODY_H / 2.0 - 0.0002
     # Recessed latch relief, flush within the official height envelope.
-    add(scene, "Top_Cover_Latch_Recess",
-        make_box([0.025, 0.0008, 0.056], [0.055, y, 0.085], MAT_DARK_SILVER))
+    # The exact recessed rim remains in the locked top photograph; only its
+    # raised handle needs parallax geometry.  The former full recess plate was
+    # coplanar with the handle.
     add(scene, "Top_Cover_Latch_Handle",
-        make_box([0.012, 0.0010, 0.038], [0.055, y + 0.0001, 0.085], MAT_BLACK))
+        make_box([0.012, 0.0004, 0.038], [0.055, y, 0.085], MAT_BLACK))
     add(scene, "Top_Cover_Front_Perimeter_Seam",
-        make_box([BODY_W - 0.004, 0.0007, 0.0012], [0, y, 0.325], MAT_DARK_SILVER))
+        make_box([BODY_W - 0.004, 0.0004, 0.0012], [0, y, 0.345], MAT_DARK_SILVER))
     add(scene, "Top_Cover_Rear_Perimeter_Seam",
-        make_box([BODY_W - 0.004, 0.0007, 0.0012], [0, y, -0.340], MAT_DARK_SILVER))
+        make_box([BODY_W - 0.004, 0.0004, 0.0012], [0, y, -0.360], MAT_DARK_SILVER))
 
     # Faithful relief for dense vent fields; source-locked texture supplies
     # the exact photographic hole edges while these shallow recesses add depth.
     front_holes = []
     for row in range(3):
         for col in range(40):
-            front_holes.append(make_cylinder(0.00115, 0.00055,
-                [-0.205 + col * 0.0105, y + 0.0001, 0.310 + row * 0.0060],
+            front_holes.append(make_cylinder(0.00115, 0.0004,
+                [-0.205 + col * 0.0105, y, 0.350 + row * 0.0060],
                 MAT_DARK, 10, (0, 1, 0)))
     add_group(scene, "Top_Front_Vent_Relief_3x40", front_holes, MAT_DARK)
     rear_holes = []
@@ -417,8 +430,8 @@ def add_top(scene: trimesh.Scene, sections: int) -> None:
             x = -0.105 + col * 0.0072
             if 8 <= col <= 12 and row == 1:
                 continue
-            rear_holes.append(make_cylinder(0.0011, 0.00055,
-                [x, y + 0.0001, -0.325 + row * 0.0060],
+            rear_holes.append(make_cylinder(0.0011, 0.0004,
+                [x, y, -0.350 + row * 0.0060],
                 MAT_DARK, 10, (0, 1, 0)))
     add_group(scene, "Top_Rear_Asymmetric_Vent_Relief", rear_holes, MAT_DARK)
 
@@ -440,13 +453,13 @@ def build_scene(profile: str) -> trimesh.Scene:
         "profile": profile,
     })
     add(scene, "Closed_Chassis_Core",
-        make_box([BODY_W - 0.0020, BODY_H - 0.0020, BODY_D - 0.0030],
+        make_box([BODY_W - 0.0020, BODY_H - 0.0020, BODY_D - 0.0040],
                  [0, 0, 0], MAT_BODY))
     for face in ("front", "rear", "left", "right", "top", "bottom"):
         add(scene, f"Face_{face.title()}_Approved_Imagegen",
             textured_quad(face, textures[face]))
     add_front(scene, sections)
-    add_rear(scene, sections)
+    add_rear(scene, sections, textures["rear"])
     add_sides(scene, sections)
     add_top(scene, sections)
     return scene
@@ -470,8 +483,8 @@ def add_unlit_and_metadata(path: Path, profile: str) -> None:
         "product_id": "PowerEdge R620",
         "variant": "10x2.5-inch SFF no bezel",
         "profile": profile,
-        "body_dimensions_mm": [434.0, 42.8, 731.0],
-        "installed_bounds_mm": [482.4, 42.8, 752.1],
+        "body_dimensions_mm": [434.0, 42.8, 751.4],
+        "installed_bounds_mm": [482.4, 42.8, 772.5],
         "coordinate_convention": "+X device right from front; +Y up; +Z front",
         "source_model_used": False,
         "bottom_mode": "GENERIC_BOTTOM_FALLBACK",

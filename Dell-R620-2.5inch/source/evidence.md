@@ -38,7 +38,7 @@ The user screenshot and official page 11 agree on the 10-drive face. The screens
 
 ## Dimension interpretation
 
-The 482.4 mm value includes the front rack latch assemblies; the 434.0 mm body width excludes them. The 42.8 mm value is actual chassis height. Zb is the rack-flange-to-rear body span; Zc is the authoritative maximum 10-drive depth. The bare-front Za of 20.4 mm is used because the screenshot has no bezel. The GLB audit therefore uses 482.4×42.8×752.1 mm overall bounds, while the main steel body remains 434.0 mm wide.
+The 482.4 mm value includes the front rack latch assemblies; the 434.0 mm body width excludes them. The 42.8 mm value is actual chassis height. Figure 14 draws both `Zb=731.0 mm` and `Zc=752.1 mm` from the EIA rack flange, while `Za=20.4 mm` runs from the bezel-absent front outermost feature to that flange. Therefore the real body depth is `Za+Zb=751.4 mm` and the installed front-to-rear envelope is `Za+Zc=772.5 mm`. The prior 752.1 mm GLB bound omitted the entire front projection and was corrected during the 2026-08-27 rotation review. Final GLB audit bounds are 482.4×42.8×772.5 mm, with a 434.0×42.8×751.4 mm main body.
 
 ## Source exclusions
 

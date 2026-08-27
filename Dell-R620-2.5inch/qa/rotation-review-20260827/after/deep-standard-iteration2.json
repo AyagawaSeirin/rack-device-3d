@@ -1,0 +1,514 @@
+{
+  "input": "Dell-R620-2.5inch/model/Dell-R620-2.5inch.glb",
+  "byte_size": 17091316,
+  "thresholds": {
+    "exact_duplicate_m": 1e-7,
+    "exact_coplanar_m": 1e-7,
+    "near_coplanar_m": 0.0002
+  },
+  "counts": {
+    "nodes": 303,
+    "meshes": 303,
+    "triangles_world_instances": 12596,
+    "duplicate_triangle_groups": 0,
+    "exact_coplanar_triangle_pairs": 8,
+    "near_coplanar_triangle_pairs": 0,
+    "negative_transforms": 0,
+    "singular_transforms": 0,
+    "blend_materials": 0,
+    "double_sided_materials": 0,
+    "primary_material_errors": 0,
+    "closed_core_nodes": 1,
+    "closed_core_failures": 0,
+    "watertight_mesh_instances": 295,
+    "inward_watertight_mesh_instances": 0,
+    "normal_attribute_mismatch_triangles": 0
+  },
+  "duplicate_triangle_groups": [],
+  "exact_coplanar_pairs": [
+    {
+      "node_a": "Top_Cover_Latch_Recess",
+      "node_b": "Top_Cover_Latch_Handle",
+      "plane_m": 0.020999999716877937,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.00045600010478497044,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        -1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "node_a": "Top_Cover_Latch_Recess",
+      "node_b": "Top_Cover_Latch_Handle",
+      "plane_m": 0.020999999716877937,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.00045600010478497044,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        -1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "node_a": "Top_Cover_Latch_Recess",
+      "node_b": "Top_Cover_Latch_Handle",
+      "plane_m": 0.020999999716877937,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.00045600010478497044,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        -1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "node_a": "Top_Cover_Latch_Recess",
+      "node_b": "Top_Cover_Latch_Handle",
+      "plane_m": 0.020999999716877937,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.00045600010478497044,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        -1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "node_a": "Top_Cover_Latch_Recess",
+      "node_b": "Top_Cover_Latch_Handle",
+      "plane_m": 0.021400000900030136,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.00045600010478497044,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "node_a": "Top_Cover_Latch_Recess",
+      "node_b": "Top_Cover_Latch_Handle",
+      "plane_m": 0.021400000900030136,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.00045600010478497044,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "node_a": "Top_Cover_Latch_Recess",
+      "node_b": "Top_Cover_Latch_Handle",
+      "plane_m": 0.021400000900030136,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.00045600010478497044,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "node_a": "Top_Cover_Latch_Recess",
+      "node_b": "Top_Cover_Latch_Handle",
+      "plane_m": 0.021400000900030136,
+      "plane_distance_m": 0,
+      "overlap_aabb_area_m2": 0.00045600010478497044,
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_a": [
+        0,
+        1,
+        0
+      ],
+      "direction_normal_b": [
+        0,
+        1,
+        0
+      ]
+    }
+  ],
+  "near_coplanar_pairs": [],
+  "negative_or_singular_transforms": [],
+  "materials": [
+    {
+      "name": "Dell R620 galvanized chassis steel",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.7215686274509804,
+        0.7333333333333333,
+        0.7254901960784313,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "FACE_FRONT_SOURCE_LOCKED_IMAGEGEN_PHOTOGRAPHIC",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 2764,
+        "height": 273,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "FACE_REAR_SOURCE_LOCKED_IMAGEGEN_PHOTOGRAPHIC",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 3072,
+        "height": 303,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "FACE_LEFT_SOURCE_LOCKED_IMAGEGEN_PHOTOGRAPHIC",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 3072,
+        "height": 175,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "FACE_RIGHT_SOURCE_LOCKED_IMAGEGEN_PHOTOGRAPHIC",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 3072,
+        "height": 175,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "FACE_TOP_SOURCE_LOCKED_IMAGEGEN_PHOTOGRAPHIC",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 1773,
+        "height": 3072,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "FACE_BOTTOM_GENERIC_BOTTOM_FALLBACK_PHOTOGRAPHIC",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 1773,
+        "height": 3072,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "Dell black polymer",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.054901960784313725,
+        0.06274509803921569,
+        0.06666666666666667,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "Dell dark galvanized relief",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.3568627450980392,
+        0.3764705882352941,
+        0.37254901960784315,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "Dell plated carrier and connector steel",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.6627450980392157,
+        0.6784313725490196,
+        0.6745098039215687,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "Opaque port and fan cavity",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.08235294117647059,
+        0.09411764705882353,
+        0.09803921568627451,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "Dell green status lens",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.16470588235294117,
+        0.7450980392156863,
+        0.28627450980392155,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "Dell serial teal",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.12156862745098039,
+        0.5686274509803921,
+        0.5529411764705883,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "Dell VGA blue",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.12549019607843137,
+        0.4666666666666667,
+        0.7058823529411765,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "FACE_REAR_PSU_1_SOURCE_LOCKED_PHOTOGRAPHIC",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 1024,
+        "height": 687,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "AC PSU translucent handle approximation",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.6509803921568628,
+        0.6823529411764706,
+        0.6901960784313725,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "FACE_REAR_PSU_2_SOURCE_LOCKED_PHOTOGRAPHIC",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 1024,
+        "height": 689,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    }
+  ],
+  "primary_material_errors": [],
+  "closed_core": [
+    {
+      "node": "Closed_Chassis_Core",
+      "triangle_count": 12,
+      "edge_count": 18,
+      "boundary_edge_count": 0,
+      "non_manifold_edge_count": 0,
+      "signed_volume": 0.013173374006600016,
+      "watertight": true,
+      "outward_signed_volume": true
+    }
+  ],
+  "inward_watertight_meshes": [],
+  "normal_attribute_mismatches": [],
+  "unresolved": [
+    "overlapping exact-coplanar triangle pairs exist across nodes"
+  ],
+  "status": "REWORK"
+}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Three.js WebGL2 rotation review</title>
+  <style>
+    html,body{margin:0;width:100%;height:100%;overflow:hidden}
+    body[data-bg="light"]{background:conic-gradient(#f5f6f7 25%,#cfd5da 0 50%,#f5f6f7 0 75%,#cfd5da 0) 0 0/32px 32px}
+    body[data-bg="dark"]{background:conic-gradient(#111820 25%,#3b4652 0 50%,#111820 0 75%,#3b4652 0) 0 0/32px 32px}
+    canvas{display:block;width:100%;height:100%}
+    #overlay{position:fixed;inset:0;display:grid;place-items:center;background:#111;color:#fff;font:600 18px system-ui;z-index:5}
+    #hud{position:fixed;left:10px;top:10px;padding:6px 8px;background:#000c;color:#fff;font:12px ui-monospace,monospace;z-index:4;white-space:pre}
+  </style>
+  <script type="importmap">{"imports":{"three":"/Dell-R620-2.5inch/node_modules/three/build/three.module.js","three/addons/":"/Dell-R620-2.5inch/node_modules/three/examples/jsm/"}}</script>
+</head>
+<body data-bg="light"><div id="overlay">LOADING</div><div id="hud"></div><canvas id="c"></canvas>
+<script type="module">
+import * as THREE from 'three';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+
+const params=new URLSearchParams(location.search),modelUrl=params.get('model'),expected=params.get('expected')||'';
+const canvas=document.querySelector('#c'),overlay=document.querySelector('#overlay'),hud=document.querySelector('#hud');
+const context=canvas.getContext('webgl2',{alpha:true,antialias:true,preserveDrawingBuffer:true,premultipliedAlpha:false});
+if(!context)throw new Error('WebGL2 unavailable');
+const renderer=new THREE.WebGLRenderer({canvas,context,alpha:true,antialias:true,preserveDrawingBuffer:true,premultipliedAlpha:false,powerPreference:'high-performance'});
+renderer.setPixelRatio(1);renderer.setSize(innerWidth,innerHeight,false);renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.NoToneMapping;renderer.setClearColor(0,0);
+const scene=new THREE.Scene();scene.add(new THREE.AmbientLight(0xffffff,1));
+const camera=new THREE.PerspectiveCamera(42,innerWidth/innerHeight,.01,10);
+let center=new THREE.Vector3(),radius=1,maxDim=1,currentYaw=0,currentPitch=8,actualHash='',object=null;
+const hex=buffer=>Array.from(new Uint8Array(buffer),v=>v.toString(16).padStart(2,'0')).join('');
+const renderStable=async()=>{renderer.render(scene,camera);await new Promise(requestAnimationFrame);renderer.render(scene,camera);await new Promise(requestAnimationFrame);renderer.render(scene,camera);};
+function updateHud(){hud.textContent=`Three.js r${THREE.REVISION} · WebGL2\n${modelUrl?.split('/').pop()?.split('?')[0]}\nyaw=${currentYaw} pitch=${currentPitch}\nsha256=${actualHash.slice(0,16)}`;}
+window.qaSetOrbit=async(yaw,pitch,bg='light')=>{currentYaw=Number(yaw);currentPitch=Number(pitch);document.body.dataset.bg=bg;const yr=THREE.MathUtils.degToRad(currentYaw),pr=THREE.MathUtils.degToRad(currentPitch),horizontal=radius*Math.cos(pr);camera.position.set(center.x+horizontal*Math.sin(yr),center.y+radius*Math.sin(pr),center.z+horizontal*Math.cos(yr));camera.up.set(0,1,0);camera.lookAt(center);camera.updateProjectionMatrix();updateHud();await renderStable();return{position:camera.position.toArray(),target:center.toArray(),near:camera.near,far:camera.far,yaw:currentYaw,pitch:currentPitch,bg};};
+window.__QA__={ready:false,error:null,engine:'three',webgl:'WebGL2',overlayHidden:false};
+try{
+  const started=performance.now(),response=await fetch(modelUrl,{cache:'no-store'});if(!response.ok)throw new Error(`model HTTP ${response.status}`);const bytes=await response.arrayBuffer();actualHash=hex(await crypto.subtle.digest('SHA-256',bytes));if(expected&&actualHash!==expected)throw new Error(`hash mismatch ${actualHash} != ${expected}`);
+  const gltf=await new GLTFLoader().parseAsync(bytes,'');object=gltf.scene;scene.add(object);object.updateMatrixWorld(true);
+  const box=new THREE.Box3().setFromObject(object);box.getCenter(center);const size=box.getSize(new THREE.Vector3());maxDim=Math.max(size.x,size.y,size.z);radius=maxDim*1.25;camera.near=maxDim/16;camera.far=maxDim*8;camera.updateProjectionMatrix();
+  const materials=[],violations=[];object.traverse(node=>{if(!node.isMesh)return;for(const material of(Array.isArray(node.material)?node.material:[node.material])){if(!material)continue;materials.push({name:material.name,transparent:material.transparent,opacity:material.opacity,side:material.side,alphaTest:material.alphaTest});if(material.transparent||material.opacity!==1||material.side!==THREE.FrontSide)violations.push(material.name||node.name);}});
+  await window.qaSetOrbit(params.get('yaw')||0,params.get('pitch')||8,params.get('bg')||'light');overlay.style.display='none';await renderStable();
+  window.__QA__={ready:true,error:null,engine:`Three.js r${THREE.REVISION}`,webgl:`WebGL${renderer.capabilities.isWebGL2?'2':'1'}`,overlayHidden:getComputedStyle(overlay).display==='none',actualHash,expectedHash:expected,bounds:{min:box.min.toArray(),max:box.max.toArray(),size:size.toArray()},near:camera.near,far:camera.far,nearFarRatio:camera.far/camera.near,meshCount:object.getObjectsByProperty('isMesh',true).length,materialCount:materials.length,materialViolations:violations,loadMs:performance.now()-started};
+}catch(error){overlay.textContent=`ERROR ${error}`;window.__QA__={ready:false,error:String(error),engine:'three',webgl:'WebGL2',overlayHidden:false,actualHash};}
+addEventListener('pagehide',()=>{renderer.dispose();},{once:true});
+</script></body></html>

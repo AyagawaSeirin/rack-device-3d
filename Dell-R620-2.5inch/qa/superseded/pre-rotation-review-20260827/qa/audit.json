@@ -1,0 +1,154 @@
+{
+  "schema": "rack-device-3d-final-audit-v1",
+  "audited_at": "2026-08-24T02:09:06+08:00",
+  "subject": {
+    "manufacturer": "Dell",
+    "product": "PowerEdge R620",
+    "form_factor": "1U",
+    "configuration": "10 x 2.5-inch SFF, two rows x five columns, all carriers installed, security bezel absent",
+    "rear": "10-drive three-low-profile-slot R620 rear; no R620xd/R720 mixing",
+    "network": "iDRAC7 Enterprise, DB9, VGA, 2 x USB 2.0, 4 x Base-T RJ45; no SFP",
+    "power": "2 x matching Dell 750W hot-plug AC PSU with IEC C14 inlets",
+    "branding": "real DELL and PowerEdge R620 markings retained"
+  },
+  "verdict": "PASS_WITH_BOTTOM_FALLBACK",
+  "identity_and_source_lock": {
+    "status": "PASS",
+    "manifest": "source/identity-manifest.md",
+    "face_lock": "source/face-source-lock.csv",
+    "evidence": "source/evidence.md",
+    "dimensions": "source/dimension-ledger.csv",
+    "features": "source/feature-inventory.csv",
+    "user_configuration_lock": "source/originals/user-config-lock-screenshot.png",
+    "excluded_lookalikes": [
+      "PowerEdge R620 8-drive chassis",
+      "PowerEdge R620 two-slot rear",
+      "PowerEdge R620 2xSFP+ plus 2xRJ45 RNDC",
+      "PowerEdge R620 DC or single-PSU configuration",
+      "PowerEdge R620xd",
+      "PowerEdge R720/R720xd"
+    ]
+  },
+  "face_assets": {
+    "status": "PASS_WITH_BOTTOM_FALLBACK",
+    "independent_faces": 6,
+    "left_right_mirrored": false,
+    "entries": {
+      "front": {"mode": "SOURCE_LOCKED_GENERATION", "path": "views/front.png", "sha256": "e379d0f6ed39807d65a52d77cc1ab2895ea90cdee3424a49120f57eb0ec55097"},
+      "rear": {"mode": "SOURCE_LOCKED_GENERATION", "path": "views/rear.png", "sha256": "0a1c84203f230542846e91328b55c887d6fb0b4c2aaff84206ce989c0a481c0b"},
+      "left": {"mode": "MULTI_REFERENCE_RECONSTRUCTION", "path": "views/left.png", "sha256": "3df448319b241ef714948ea749d27138bbe4bc582513c02522cfb3748d833263"},
+      "right": {"mode": "MULTI_REFERENCE_RECONSTRUCTION", "path": "views/right.png", "sha256": "e724b21a096aa77d772b7366c3e42dd6cddac2e9fb89a9bdfbebc51f5172f0d3"},
+      "top": {"mode": "SOURCE_LOCKED_GENERATION", "path": "views/top.png", "sha256": "d69b58769482dbca2db772cb55f2d9e06ff499b58211c202b6e5f3c351c29f43"},
+      "bottom": {
+        "mode": "GENERIC_BOTTOM_FALLBACK",
+        "path": "views/bottom.png",
+        "sha256": "b16065b8a83eee21aa8993411c8178a130011ca0a86d7a26067e4b1d40c91c67",
+        "reason": "No exact R620 underside remained available after the documented official, manual, real-device, video, marketplace, English, and Chinese search."
+      }
+    },
+    "view_audit": {"path": "qa/views-audit.json", "status": "PASS", "errors": 0, "warnings": 0}
+  },
+  "custom_glbs": {
+    "standard": {
+      "path": "model/Dell-R620-2.5inch.glb",
+      "bytes": 16096672,
+      "sha256": "ef61dfa7b5765bb565a81b26d464ca9f2bd7f2b5cf2224a20c3fabbf6b33bbfe",
+      "audit": "qa/glb-standard-audit.json",
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0
+    },
+    "web": {
+      "path": "model/Dell-R620-2.5inch-web.glb",
+      "bytes": 9283536,
+      "sha256": "0fcb1b0adb4fe9199ba183eae01265c48c14d5a186e8e41e11e7d8ccfee71d96",
+      "audit": "qa/glb-web-audit.json",
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0
+    },
+    "common_structure": {
+      "dimensions_xyz_m": [0.48240000009536743, 0.04285000078380108, 0.7525149881839752],
+      "dimensions_xyz_mm_nominal": [482.4, 42.8, 752.1],
+      "nodes": 297,
+      "meshes": 297,
+      "primitives": 297,
+      "materials": 18,
+      "textures": 6,
+      "unique_basecolor_images": 6,
+      "mirrored_nodes": 0,
+      "external_resources": 0,
+      "visible_feature_gate": "qa/feature-acceptance.md",
+      "structure_gate": "qa/structure-audit.json"
+    }
+  },
+  "webgl": {
+    "status": "PASS",
+    "run_after_final_glb_rebuild": true,
+    "runner": "qa/run_webgl_batch.mjs",
+    "browser": "Chromium 151.0.7922.34",
+    "viewers": {"Three.js": "qa/viewers/three.html", "Babylon.js": "qa/viewers/babylon.html"},
+    "unique_loads": 40,
+    "direct_page_state_and_screenshot": 40,
+    "recovered_or_inferred": 0,
+    "errors": 0,
+    "breakdown": {
+      "viewers": {"three": 20, "babylon": 20},
+      "models": {"standard": 20, "web": 20},
+      "views": {"front": 4, "rear": 4, "left": 4, "right": 4, "top": 4, "bottom": 4, "front-left": 4, "front-right": 4, "rear-left": 4, "rear-right": 4}
+    },
+    "evidence": {
+      "summary": "qa/load-evidence/summary.json",
+      "ndjson": "qa/load-evidence/final-load-events.ndjson",
+      "event_json_count": 40,
+      "screenshot_count": 40,
+      "comparison_sheet_count": 40,
+      "contact_sheet_count": 4
+    }
+  },
+  "visual_review": {
+    "status": "PASS_WITH_BOTTOM_FALLBACK",
+    "reviewed_contact_sheets": [
+      "qa/contact-sheets/three-standard.png",
+      "qa/contact-sheets/three-web.png",
+      "qa/contact-sheets/babylon-standard.png",
+      "qa/contact-sheets/babylon-web.png"
+    ],
+    "findings": [
+      "Two independent viewers and both GLB profiles agree across six orthographic and four oblique views.",
+      "Front remains a 2 x 5 ten-carrier R620 face with DELL and PowerEdge R620 marks.",
+      "Rear remains the three-slot, four-RJ45, dual-750W-AC installed configuration.",
+      "Physical left and right have independent source locks and are not mirrored.",
+      "The bottom remains intentionally plain under the documented fallback."
+    ]
+  },
+  "official_3d": {
+    "exact_downloadable_model_found": false,
+    "status": "NO_EXACT_DOWNLOADABLE_OFFICIAL_MODEL",
+    "preserved_path": "source/optional-3d/",
+    "details": "No exact official Dell PowerEdge R620 10SFF GLB/glTF/OBJ/FBX/STEP/CAD was exposed after the recorded search. The negative reproducible log is preserved; no third-party file is labeled official and no optional model replaces either custom GLB."
+  },
+  "residual_risks": [
+    "The underside is a conservative generic Dell-family 1U material fallback, not a verified exact R620 underside.",
+    "Left, right, and some top details are reconstructed from exact real-device photographs and official diagrams rather than official CAD.",
+    "Generated source-locked faces were dimension-normalized to official ratios after background removal; tiny printed label text is appearance-level rather than engineering-legibility data.",
+    "This is an exterior website replica, not engineering/internal CAD.",
+    "No exact downloadable official installed-configuration mesh was available for mesh-to-mesh comparison."
+  ],
+  "gates": {
+    "exact_variant_lock": "PASS",
+    "six_independent_face_lock": "PASS_WITH_BOTTOM_FALLBACK",
+    "real_branding_retained": "PASS",
+    "uniform_dual_ac_psu": "PASS",
+    "custom_standard_glb": "PASS",
+    "custom_web_glb": "PASS",
+    "structural_audit": "PASS",
+    "dimension_audit": "PASS",
+    "two_independent_webgl_viewers": "PASS",
+    "forty_live_loads": "PASS",
+    "visual_parity_review": "PASS_WITH_BOTTOM_FALLBACK",
+    "official_model_preservation": "PASS_NOT_FOUND",
+    "final": "PASS_WITH_BOTTOM_FALLBACK"
+  },
+  "git_commit_or_push_performed": false
+}

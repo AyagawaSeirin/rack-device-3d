@@ -1,77 +1,77 @@
-# Dell PowerEdge R620 2.5-inch / 10SFF 最终报告
+# Dell PowerEdge R620 2.5-inch / 10SFF 独立复核最终报告
 
-## 结论
+复核日期：2026-08-27
 
-**PASS_WITH_BOTTOM_FALLBACK**
+最终状态：`PASS_WITH_BOTTOM_FALLBACK`
 
-两份必需的自制 GLB 已完成并通过身份、配置、尺寸、六面、结构、材质、双 WebGL 和视觉门禁。锁定对象为 Dell PowerEdge R620 1U 十盘位机箱：10 × 2.5 英寸 SFF，2 × 5 排列，十个托架均安装，无安全面板；十盘位专属三低矮 PCIe 槽后部；iDRAC7、DB9、VGA、2 × USB 2.0、4 × Base-T RJ45；两只相同 Dell 750W 热插拔 AC PSU。真实 DELL 与 PowerEdge R620 标识已保留。
+除底面没有可核验的精确 R620 10SFF 实机来源外，身份、配置、尺寸、六面、standard/web GLB、旋转稳定性、双引擎实载和逐项 inventory 均已通过。底面只使用闭合不透明的保守镀锌钢板，不虚构孔、脚、标签、通风、导轨或 Logo；不存在非底面缺口。
 
-唯一的限定项是底面。依照技能顺序穷尽 Dell 官方、手册、实机、视频、二手渠道及中英文检索后，未找到可验证的精确 R620 底面，因此使用不带虚构孔位、脚垫、标签、导轨或 Logo 的保守镀锌钢板 `GENERIC_BOTTOM_FALLBACK`。
+## 精确身份、代际与安装配置
 
-## 交付文件
+- Dell PowerEdge R620，Dell 第 12 代，1U，10 × 2.5-inch SFF；前部两行五列，10 个托架全部安装，无安全面罩。
+- 明确排除 8SFF 短机身、R720/R720xd、2 × SFP+ 混合 NDC、两 PCIe 槽后部和 DC PSU。
+- 10SFF 专属后部为 3 个低矮型 PCIe 挡板；iDRAC7、DB9、VGA、2 × USB、4 × Base-T RJ45 RNDC。
+- 电源锁定为 2 个匹配的 Dell 750 W 热插拔 AC PSU；两套 IEC C14、橙色释放件、把手和可见 PSU 风扇均保留。七个内部系统风扇不从闭合外壳外露，因此不虚构为外表面几何。
+- 保留真实 DELL 与 PowerEdge R620 工厂标识；前耳为独立突出结构并保留真实开孔。
+- 官方 Figure 14 的 `Za=20.4`、`Zb=731`、`Zc=752.1` 以机架法兰为基准，而不是三个互相替代的总深度。10SFF 主体深度为 `Za+Zb=751.4 mm`，完整安装包络为 `Za+Zc=772.5 mm`。最终 GLB 为 482.4 × 42.8 × 772.5 mm，误差 0。
 
-| 文件 | 大小 | SHA-256 | 结果 |
-|---|---:|---|---|
-| `model/Dell-R620-2.5inch.glb` | 16,096,672 bytes（15.35 MiB） | `ef61dfa7b5765bb565a81b26d464ca9f2bd7f2b5cf2224a20c3fabbf6b33bbfe` | PASS |
-| `model/Dell-R620-2.5inch-web.glb` | 9,283,536 bytes（8.85 MiB） | `0fcb1b0adb4fe9199ba183eae01265c48c14d5a186e8e41e11e7d8ccfee71d96` | PASS |
+## 冻结交付物与哈希
 
-两份文件均从零自制；没有复制、改包或用任何官方/第三方模型替代。
+| 对象 | 字节 | SHA-256 |
+|---|---:|---|
+| `model/Dell-R620-2.5inch.glb` | 17,090,656 | `ae3523f8ad0be17c38c7ac74ab3b2a340bcd66088ae8434a8731c00ff1591fb8` |
+| `model/Dell-R620-2.5inch-web.glb` | 10,299,896 | `72958073d37626c79b7c83a2b4207429154b61dcbb92e08194f4ab83663dd2e6` |
+| `model/build_model.py` | — | `e7bc9121b888f4e9c4558ca85c7afcbf97b8e7180241022a832a878baa283ddf` |
+| Three.js 最终查看器 | — | `46aaa42db740588f0d7d5ce017e61e394047af69ea2f0c9d70ec229ace48eb2a` |
+| Babylon.js 最终查看器 | — | `b755375b1bc11e68853591f3f3aee0cd6058c0801345f8ee936126d8b780d9a2` |
 
-## 尺寸与结构
+完整冻结清单在 `qa/rotation-review-20260827/final/frozen-hashes.sha256`；最终证据完成后复核全部 `OK`，不存在模型/viewer 哈希变化后继续沿用旧证据的情况。
 
-- 官方名义安装包络：482.4 × 42.8 × 752.1 mm（X/Y/Z）；主体 434.0 × 42.8 × 731.0 mm。
-- GLB 审计实测：482.400 × 42.850 × 752.515 mm，比例误差 0.0595%，在技能容差内。
-- 每份 GLB：297 nodes、297 meshes/primitives、18 materials、6 textures、6 unique base-color images。
-- 两份 GLB 的结构、节点名和材质名一致；无镜像节点、无外部资源。
-- 可见几何包括：封闭机箱核心、两只前把手/耳、十套独立 SFF 盘位/托架/把手/孔/释放环/状态灯、控制条、三块低矮 PCIe 挡板、独立后部端口、两套完整 750W AC PSU、左右独立挂钉/槽/接缝、顶盖锁扣和通风凹槽。
-- GLB 两次技能审计与结构审计均为 0 错误；六面图审计为 0 错误、0 警告。
+## 问题复现、根因与因果修复
 
-## 六面锁定
+修复前的 GLB、构建器、六面、审计、加载证据与报告已完整归档到 `qa/superseded/pre-rotation-review-20260827/`，没有覆盖或删除旧成果。
 
-| 面 | 模式 | SHA-256 | 结果 |
-|---|---|---|---|
-| Front | `SOURCE_LOCKED_GENERATION` | `e379d0f6ed39807d65a52d77cc1ab2895ea90cdee3424a49120f57eb0ec55097` | PASS |
-| Rear | `SOURCE_LOCKED_GENERATION` | `0a1c84203f230542846e91328b55c887d6fb0b4c2aaff84206ce989c0a481c0b` | PASS |
-| Left | `MULTI_REFERENCE_RECONSTRUCTION` | `3df448319b241ef714948ea749d27138bbe4bc582513c02522cfb3748d833263` | PASS |
-| Right | `MULTI_REFERENCE_RECONSTRUCTION` | `e724b21a096aa77d772b7366c3e42dd6cddac2e9fb89a9bdfbebc51f5172f0d3` | PASS |
-| Top | `SOURCE_LOCKED_GENERATION` | `d69b58769482dbca2db772cb55f2d9e06ff499b58211c202b6e5f3c351c29f43` | PASS |
-| Bottom | `GENERIC_BOTTOM_FALLBACK` | `b16065b8a83eee21aa8993411c8178a130011ca0a86d7a26067e4b1d40c91c67` | FALLBACK |
+修复前两引擎 × 两 GLB 已各完成 72 × 5° yaw、16 个多俯仰和 8 个稳定帧。当前 Chromium/WebGL2 环境的同角度 A/B 为逐像素一致，没有捕获到随机 alpha 跳变；但深层审计直接复现了模型缺陷：standard 有 1,172 对精确共面和 7,136 对近共面三角形，web 有 808/5,984 对，均留下 2 个 unresolved 类别。主要来自照片面与端口/PSU/风扇/紧固件、侧面卡与挂钉/槽、耳框与闭合片的重复或近共面层。这种深度竞争会随视角、深度精度和引擎实现改变，不能被同角度稳定帧洗白。
 
-六个面来自六次独立生成链；左右分别锁定物理 -X/+X 实机证据并使用独立图像，没有镜像。最终图在去背景后只做官方物理比例归一化，原始生成、中间图、提示词与拒绝版本均留在 `qa/reference/`、`qa/imagegen-prompts/`。
+模型侧修复包括：按正确 751.4/772.5 深度重建闭合核心；以非重叠带状几何重建两只前耳与穿透开孔；把后部主体照片与突出 PSU 精确照片分置于不同真实深度；删除冗余覆盖层、共面风扇圆片和 flush 细节；让侧面/顶面照片与凹凸 relief 有明确深度顺序。standard/web 由同一构建器同步重建。
 
-## 双 WebGL 门禁
+查看器侧的旧证据链也有独立风险：没有同时强制 WebGL2、Babylon 右手坐标、模型哈希核验、透明棋盘、受控 near/far、串行捕获和 overlay 隔离。最终查看器显式使用 WebGL2，Babylon 采用右手坐标，关闭 tone mapping，near/far 比固定为 128，浅/深棋盘背景，ready+哈希确认后才隐藏 overlay，并等待 3 个稳定 RAF 后串行截图。模型审计归零后才生成最终证据，没有以灯光或查看器设置掩盖错误。
 
-最终 GLB 重建后重新执行完整实载：
+## 最终审计
 
-- Three.js：20 次。
-- Babylon.js：20 次。
-- Standard GLB：20 次。
-- Web GLB：20 次。
-- Front、rear、left、right、top、bottom、front-left、front-right、rear-left、rear-right：每个视角 4 次。
+- 两份技能 GLB 审计：均 `PASS`，0 error / 0 warning；各 302 nodes、302 meshes/primitives、17 materials、8 个嵌入图像、0 外链资源。
+- 两份深层审计：duplicate triangle groups、exact coplanar、near-coplanar、negative/singular transform、BLEND、doubleSided、primary-face material error、closed-core failure、inward watertight mesh 和 normal mismatch 全部为 0；`unresolved=[]`。
+- 主六面材质均为 `OPAQUE`、`baseColorFactor=[1,1,1,1]`、`doubleSided=false`；主机身没有 `BLEND`。
+- `audit_views` 为 `PASS`，0 error / 0 warning。
+- inventory 44/44 已逐项映射到最终 GLB 和 matched-camera 证据：42 `PASS`，2 个底面约束行 `PASS_WITH_BOTTOM_FALLBACK`。
 
-结果为 **40/40 真实页面状态与截图加载**，全部 `loaded=true`、`error=null`，包络一致，无恢复或推断事件。浏览器为 Chromium 151.0.7922.34。最终证据包含 40 个原子事件 JSON、40 张截图、40 张参考/渲染对照图和 4 张十视角拼图。
+## 最终真实 WebGL2 验收
 
-## 官方 3D 状态
+- Three.js × standard/web、Babylon.js × standard/web 共 4 个组合。
+- 每组合 72 个 5° yaw + 16 个多俯仰 + 8 个稳定帧；每型号合计 288 yaw、64 pitch、32 stability，即 384 帧。多俯仰覆盖浅/深棋盘；4 个基准角的 A/B 稳定帧在每组合均为 `AE=0`。
+- 冻结后完成 40 次 cache-busted 独立真实页面加载：2 引擎 × 2 GLB × 10 规定视角。全部 HTTP 200、WebGL2、实际哈希=期望哈希、overlay 已隐藏、`page_errors=[]`、材质违规为 0。
+- 已生成 12 张 matched-camera 捕获（6 面 × 浅/深）及 6 张 source/render/overlay/difference 四联图；接触表人工复核未见闪烁、透明跳变、棋盘泄漏、面消失、镜像、纹理切换、灰白跳变或遮罩混帧。
 
-未找到可公开下载、来源可验证且精确匹配 Dell PowerEdge R620 10SFF 安装配置的官方 GLB/glTF/OBJ/FBX/STEP/CAD。完整检索范围和阴性结果保存于 `source/optional-3d/README.md`；没有把第三方或 AI 重建文件标作官方，也没有用可选模型替代自制 standard/web GLB。
+核心证据：
 
-## 核心证据与门禁文件
+- `qa/rotation-review-20260827/final/rotation/`
+- `qa/rotation-review-20260827/final/loads/load-manifest.json`
+- `qa/rotation-review-20260827/final/contact-sheets/rotation-all-combos.png`
+- `qa/rotation-review-20260827/final/contact-sheets/loads-all-40.png`
+- `qa/rotation-review-20260827/final/comparisons/`
+- `qa/rotation-review-20260827/final/inventory-verification.csv`
+- `qa/rotation-review-20260827/after/deep-standard.json` 与 `deep-web.json`
 
-- `qa/audit.json`：最终机器可读总门禁。
-- `qa/glb-standard-audit.json`、`qa/glb-web-audit.json`：两份 GLB 结构/尺寸/材质审计。
-- `qa/structure-audit.json`：身份、节点、可见配置与双版本结构一致性审计。
-- `qa/views-audit.json`：六面分辨率、比例、透明度审计。
-- `qa/feature-acceptance.md`：可见特征到几何/视觉证据验收矩阵。
-- `qa/load-evidence/summary.json`、`final-load-events.ndjson`：40 次真实加载汇总与逐项证据。
-- `qa/renders/final/`、`qa/comparisons/final/`、`qa/contact-sheets/`：最终实载截图、对照图和拼图。
-- `source/identity-manifest.md`、`face-source-lock.csv`、`evidence.md`、`bottom-search-log.md`：身份、来源与 fallback 追溯。
+## 官方/公共精确 3D 检索与真实性
 
-## 剩余风险
+截至 2026-08-27，已复核 Dell 当前 R620 支持、手册、驱动、视频和公开资源，并按 exact PID 搜索 3D/CAD/STEP/IGES/GLB/glTF/OBJ/FBX/BIM/Visio/AR；也检查了 GrabCAD、3DContentCentral、Sketchfab 和公共索引。没有找到可验证且精确匹配 R620 10SFF、三低矮槽、四 Base-T RJ45、双 750 W AC 安装配置的官方外观模型或权威公共模型；搜索中的 Scania R620、家族级或无安装配置社区模型均被排除。没有可下载并原样保留的官方二进制文件。记录在 `source/optional-3d/recheck-20260827.md`。
 
-1. 底面是证据约束下的保守 fallback，不是经实机确认的精确 R620 底面。
-2. 左右侧与部分顶面细节由精确实机照片和官方图示重建，不是官方 CAD。
-3. 生成的源锁定面在去背景后做了官方尺寸比例归一化；极小标签文字只用于外观表达，不应视作工程级可读数据。
-4. 这是网站用外观副本，不是内部结构或工程 CAD。
-5. 没有可用于网格对网格比较的精确官方安装配置模型。
+最终两份 GLB 是依据官方尺寸、官方手册、用户配置锁和多角度精确实机证据重建的网站外观副本，不是 OEM CAD。六面来源、物理左右方向和不可镜像约束记录在 `source/face-source-lock.csv`；品牌 Logo 因真实性要求保留。
 
-本任务未执行 `git commit` 或 `git push`，且未修改其他型号目录。
+## 残余风险
+
+1. 精确 R620 10SFF 底面仍无权威实机来源，只能采用明确披露的保守 fallback。
+2. 模型是外观/DCIM 用重建，不包含内部工程结构；极小印刷文字不应视为工程级可读数据。
+3. 没有官方精确 3D 可做网格对网格比较。
+
+本任务未修改 `BATCH-STATUS.md`，未执行 git commit 或 push，也未处理其他型号。

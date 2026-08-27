@@ -1,0 +1,542 @@
+{
+  "status": "PASS",
+  "error_count": 0,
+  "errors": [],
+  "expected_configuration": {
+    "identity": "Dell PowerEdge R620, not R620xd/R720",
+    "front": "10 x 2.5-inch SFF, two rows by five columns, all carriers installed, no bezel",
+    "rear": "3 low-profile PCIe positions; iDRAC7; DB9; VGA; 2 USB2; 4 Base-T RJ45",
+    "power": "2 x matching Dell 750W hot-plug AC PSU",
+    "bottom": "GENERIC_BOTTOM_FALLBACK"
+  },
+  "profiles": {
+    "standard": {
+      "profile": "standard",
+      "path": "model/Dell-R620-2.5inch.glb",
+      "image_dimensions": [
+        [
+          2764,
+          273
+        ],
+        [
+          3072,
+          303
+        ],
+        [
+          3072,
+          175
+        ],
+        [
+          3072,
+          175
+        ],
+        [
+          1773,
+          3072
+        ],
+        [
+          1773,
+          3072
+        ]
+      ],
+      "external_images": [],
+      "external_buffers": [],
+      "mirrored": [],
+      "counts": {
+        "scenes": 1,
+        "nodes": 297,
+        "meshes": 297,
+        "materials": 18,
+        "textures": 6,
+        "images": 6
+      }
+    },
+    "web": {
+      "profile": "web",
+      "path": "model/Dell-R620-2.5inch-web.glb",
+      "image_dimensions": [
+        [
+          2048,
+          202
+        ],
+        [
+          2048,
+          202
+        ],
+        [
+          2048,
+          117
+        ],
+        [
+          2048,
+          117
+        ],
+        [
+          1182,
+          2048
+        ],
+        [
+          1182,
+          2048
+        ]
+      ],
+      "external_images": [],
+      "external_buffers": [],
+      "mirrored": [],
+      "counts": {
+        "scenes": 1,
+        "nodes": 297,
+        "meshes": 297,
+        "materials": 18,
+        "textures": 6,
+        "images": 6
+      }
+    }
+  },
+  "checks": [
+    {
+      "check": "standard_identity",
+      "status": "PASS",
+      "detail": {
+        "manufacturer": "Dell",
+        "product_id": "PowerEdge R620",
+        "variant": "10x2.5-inch SFF no bezel",
+        "profile": "standard",
+        "body_dimensions_mm": [
+          434.0,
+          42.8,
+          731.0
+        ],
+        "installed_bounds_mm": [
+          482.4,
+          42.8,
+          752.1
+        ],
+        "coordinate_convention": "+X device right from front; +Y up; +Z front",
+        "source_model_used": false,
+        "bottom_mode": "GENERIC_BOTTOM_FALLBACK",
+        "visible_counts": {
+          "SFF_carriers": 10,
+          "front_rack_latches": 2,
+          "PCIe_low_profile_blanks": 3,
+          "iDRAC7_RJ45": 1,
+          "DB9_serial": 1,
+          "rear_VGA": 1,
+          "rear_USB2": 2,
+          "network_adapter_RJ45": 4,
+          "network_adapter_SFP": 0,
+          "AC_PSU_750W": 2,
+          "DC_PSU": 0,
+          "IEC_AC_inlets": 2,
+          "PSU_visible_fans": 2,
+          "rear_rack_ears": 0
+        }
+      }
+    },
+    {
+      "check": "standard_variant",
+      "status": "PASS",
+      "detail": "10x2.5-inch SFF no bezel"
+    },
+    {
+      "check": "standard_profile_marker",
+      "status": "PASS",
+      "detail": "standard"
+    },
+    {
+      "check": "standard_self_built",
+      "status": "PASS",
+      "detail": false
+    },
+    {
+      "check": "standard_bottom_mode",
+      "status": "PASS",
+      "detail": "GENERIC_BOTTOM_FALLBACK"
+    },
+    {
+      "check": "standard_visible_counts",
+      "status": "PASS",
+      "detail": {
+        "SFF_carriers": 10,
+        "front_rack_latches": 2,
+        "PCIe_low_profile_blanks": 3,
+        "iDRAC7_RJ45": 1,
+        "DB9_serial": 1,
+        "rear_VGA": 1,
+        "rear_USB2": 2,
+        "network_adapter_RJ45": 4,
+        "network_adapter_SFP": 0,
+        "AC_PSU_750W": 2,
+        "DC_PSU": 0,
+        "IEC_AC_inlets": 2,
+        "PSU_visible_fans": 2,
+        "rear_rack_ears": 0
+      }
+    },
+    {
+      "check": "standard_closed_core",
+      "status": "PASS",
+      "detail": 1
+    },
+    {
+      "check": "standard_six_faces",
+      "status": "PASS",
+      "detail": [
+        "Closed_Chassis_Core",
+        "Face_Front_Approved_Imagegen",
+        "Face_Rear_Approved_Imagegen",
+        "Face_Left_Approved_Imagegen",
+        "Face_Right_Approved_Imagegen",
+        "Face_Top_Approved_Imagegen",
+        "Face_Bottom_Approved_Imagegen",
+        "Front_Rack_Latch_Physical_Left_Body"
+      ]
+    },
+    {
+      "check": "standard_ten_sff_carriers",
+      "status": "PASS",
+      "detail": 10
+    },
+    {
+      "check": "standard_three_low_profile_slots",
+      "status": "PASS",
+      "detail": 3
+    },
+    {
+      "check": "standard_dual_ac_psus",
+      "status": "PASS",
+      "detail": 2
+    },
+    {
+      "check": "standard_no_mirroring",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "check": "standard_no_external_resources",
+      "status": "PASS",
+      "detail": {
+        "images": [],
+        "buffers": []
+      }
+    },
+    {
+      "check": "standard_six_embedded_images",
+      "status": "PASS",
+      "detail": [
+        [
+          2764,
+          273
+        ],
+        [
+          3072,
+          303
+        ],
+        [
+          3072,
+          175
+        ],
+        [
+          3072,
+          175
+        ],
+        [
+          1773,
+          3072
+        ],
+        [
+          1773,
+          3072
+        ]
+      ]
+    },
+    {
+      "check": "standard_six_face_materials",
+      "status": "PASS",
+      "detail": [
+        "Dell R620 galvanized chassis steel",
+        "FACE_FRONT_SOURCE_LOCKED_IMAGEGEN_PHOTOGRAPHIC",
+        "FACE_REAR_SOURCE_LOCKED_IMAGEGEN_PHOTOGRAPHIC",
+        "FACE_LEFT_SOURCE_LOCKED_IMAGEGEN_PHOTOGRAPHIC",
+        "FACE_RIGHT_SOURCE_LOCKED_IMAGEGEN_PHOTOGRAPHIC",
+        "FACE_TOP_SOURCE_LOCKED_IMAGEGEN_PHOTOGRAPHIC",
+        "FACE_BOTTOM_GENERIC_BOTTOM_FALLBACK_PHOTOGRAPHIC",
+        "Dell black polymer",
+        "Dell dark galvanized relief",
+        "Dell plated carrier and connector steel",
+        "Dell green status lens",
+        "Dell amber status lens",
+        "Opaque port and fan cavity",
+        "Dell release orange",
+        "Dell serial teal",
+        "Dell VGA blue",
+        "Connector pin gold",
+        "AC PSU translucent handle approximation"
+      ]
+    },
+    {
+      "check": "standard_no_wrong_model_tokens",
+      "status": "PASS",
+      "detail": "no R620xd/R720/8SFF node or material names"
+    },
+    {
+      "check": "web_identity",
+      "status": "PASS",
+      "detail": {
+        "manufacturer": "Dell",
+        "product_id": "PowerEdge R620",
+        "variant": "10x2.5-inch SFF no bezel",
+        "profile": "web",
+        "body_dimensions_mm": [
+          434.0,
+          42.8,
+          731.0
+        ],
+        "installed_bounds_mm": [
+          482.4,
+          42.8,
+          752.1
+        ],
+        "coordinate_convention": "+X device right from front; +Y up; +Z front",
+        "source_model_used": false,
+        "bottom_mode": "GENERIC_BOTTOM_FALLBACK",
+        "visible_counts": {
+          "SFF_carriers": 10,
+          "front_rack_latches": 2,
+          "PCIe_low_profile_blanks": 3,
+          "iDRAC7_RJ45": 1,
+          "DB9_serial": 1,
+          "rear_VGA": 1,
+          "rear_USB2": 2,
+          "network_adapter_RJ45": 4,
+          "network_adapter_SFP": 0,
+          "AC_PSU_750W": 2,
+          "DC_PSU": 0,
+          "IEC_AC_inlets": 2,
+          "PSU_visible_fans": 2,
+          "rear_rack_ears": 0
+        }
+      }
+    },
+    {
+      "check": "web_variant",
+      "status": "PASS",
+      "detail": "10x2.5-inch SFF no bezel"
+    },
+    {
+      "check": "web_profile_marker",
+      "status": "PASS",
+      "detail": "web"
+    },
+    {
+      "check": "web_self_built",
+      "status": "PASS",
+      "detail": false
+    },
+    {
+      "check": "web_bottom_mode",
+      "status": "PASS",
+      "detail": "GENERIC_BOTTOM_FALLBACK"
+    },
+    {
+      "check": "web_visible_counts",
+      "status": "PASS",
+      "detail": {
+        "SFF_carriers": 10,
+        "front_rack_latches": 2,
+        "PCIe_low_profile_blanks": 3,
+        "iDRAC7_RJ45": 1,
+        "DB9_serial": 1,
+        "rear_VGA": 1,
+        "rear_USB2": 2,
+        "network_adapter_RJ45": 4,
+        "network_adapter_SFP": 0,
+        "AC_PSU_750W": 2,
+        "DC_PSU": 0,
+        "IEC_AC_inlets": 2,
+        "PSU_visible_fans": 2,
+        "rear_rack_ears": 0
+      }
+    },
+    {
+      "check": "web_closed_core",
+      "status": "PASS",
+      "detail": 1
+    },
+    {
+      "check": "web_six_faces",
+      "status": "PASS",
+      "detail": [
+        "Closed_Chassis_Core",
+        "Face_Front_Approved_Imagegen",
+        "Face_Rear_Approved_Imagegen",
+        "Face_Left_Approved_Imagegen",
+        "Face_Right_Approved_Imagegen",
+        "Face_Top_Approved_Imagegen",
+        "Face_Bottom_Approved_Imagegen",
+        "Front_Rack_Latch_Physical_Left_Body"
+      ]
+    },
+    {
+      "check": "web_ten_sff_carriers",
+      "status": "PASS",
+      "detail": 10
+    },
+    {
+      "check": "web_three_low_profile_slots",
+      "status": "PASS",
+      "detail": 3
+    },
+    {
+      "check": "web_dual_ac_psus",
+      "status": "PASS",
+      "detail": 2
+    },
+    {
+      "check": "web_no_mirroring",
+      "status": "PASS",
+      "detail": []
+    },
+    {
+      "check": "web_no_external_resources",
+      "status": "PASS",
+      "detail": {
+        "images": [],
+        "buffers": []
+      }
+    },
+    {
+      "check": "web_six_embedded_images",
+      "status": "PASS",
+      "detail": [
+        [
+          2048,
+          202
+        ],
+        [
+          2048,
+          202
+        ],
+        [
+          2048,
+          117
+        ],
+        [
+          2048,
+          117
+        ],
+        [
+          1182,
+          2048
+        ],
+        [
+          1182,
+          2048
+        ]
+      ]
+    },
+    {
+      "check": "web_six_face_materials",
+      "status": "PASS",
+      "detail": [
+        "Dell R620 galvanized chassis steel",
+        "FACE_FRONT_SOURCE_LOCKED_IMAGEGEN_PHOTOGRAPHIC",
+        "FACE_REAR_SOURCE_LOCKED_IMAGEGEN_PHOTOGRAPHIC",
+        "FACE_LEFT_SOURCE_LOCKED_IMAGEGEN_PHOTOGRAPHIC",
+        "FACE_RIGHT_SOURCE_LOCKED_IMAGEGEN_PHOTOGRAPHIC",
+        "FACE_TOP_SOURCE_LOCKED_IMAGEGEN_PHOTOGRAPHIC",
+        "FACE_BOTTOM_GENERIC_BOTTOM_FALLBACK_PHOTOGRAPHIC",
+        "Dell black polymer",
+        "Dell dark galvanized relief",
+        "Dell plated carrier and connector steel",
+        "Dell green status lens",
+        "Dell amber status lens",
+        "Opaque port and fan cavity",
+        "Dell release orange",
+        "Dell serial teal",
+        "Dell VGA blue",
+        "Connector pin gold",
+        "AC PSU translucent handle approximation"
+      ]
+    },
+    {
+      "check": "web_no_wrong_model_tokens",
+      "status": "PASS",
+      "detail": "no R620xd/R720/8SFF node or material names"
+    },
+    {
+      "check": "same_nodes_between_profiles",
+      "status": "PASS",
+      "detail": {
+        "standard": 297,
+        "web": 297
+      }
+    },
+    {
+      "check": "same_materials_between_profiles",
+      "status": "PASS",
+      "detail": {
+        "standard": 18,
+        "web": 18
+      }
+    },
+    {
+      "check": "same_counts_between_profiles",
+      "status": "PASS",
+      "detail": {
+        "standard": {
+          "scenes": 1,
+          "nodes": 297,
+          "meshes": 297,
+          "materials": 18,
+          "textures": 6,
+          "images": 6
+        },
+        "web": {
+          "scenes": 1,
+          "nodes": 297,
+          "meshes": 297,
+          "materials": 18,
+          "textures": 6,
+          "images": 6
+        }
+      }
+    },
+    {
+      "check": "standard_installed_dimensions",
+      "status": "PASS",
+      "detail": [
+        0.48240000009536743,
+        0.04285000078380108,
+        0.7525149881839752
+      ]
+    },
+    {
+      "check": "standard_skill_glb_audit",
+      "status": "PASS",
+      "detail": {
+        "status": "PASS",
+        "errors": 0,
+        "warnings": 0
+      }
+    },
+    {
+      "check": "web_installed_dimensions",
+      "status": "PASS",
+      "detail": [
+        0.48240000009536743,
+        0.04285000078380108,
+        0.7525149881839752
+      ]
+    },
+    {
+      "check": "web_skill_glb_audit",
+      "status": "PASS",
+      "detail": {
+        "status": "PASS",
+        "errors": 0,
+        "warnings": 0
+      }
+    }
+  ]
+}
