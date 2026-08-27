@@ -1,5 +1,7 @@
 # Final QA — Huawei FusionServer RH1288 V3 / H12M-03 / 8-SFF
 
+> Superseded for the current GLB hashes by `qa/rotation-review-20260827/final-report.md`.
+
 Final status: **PASS_WITH_BOTTOM_FALLBACK**
 
 The standard and web GLBs pass the identity, structure, orientation, opacity, feature-count, two-viewer and matched-camera gates. The status is not ordinary `PASS` only because no exact RH1288 V3 underside evidence was publicly available after the documented search; the bottom uses the permitted conservative fallback.

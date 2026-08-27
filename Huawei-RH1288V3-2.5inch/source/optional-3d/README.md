@@ -11,3 +11,5 @@ Official gallery API record:
 No direct public GLB, glTF, OBJ, FBX, STEP, CAD or other exact model file was exposed by the current page, network resources or public search. The viewer was not bypassed through an internal host, access-controlled API or private object store. Therefore there is no official 3D binary that can be lawfully preserved here at this time.
 
 The official `Download All` archive is preserved unchanged at `source/originals/huawei-gallery-rh1288-v3.zip`; it contains two official PNG product views only and is not called a 3D model.
+
+On 2026-08-27 the exact legacy URL was checked again with Playwright. It redirected to Huawei's migrated public product-3D landing page; the page offered a public old-version link, but that link failed in the browser and the migrated page did not expose an RH1288 V3 downloadable model. The status therefore remains: exact official interactive visual source known, no public exact 3D binary available to preserve.

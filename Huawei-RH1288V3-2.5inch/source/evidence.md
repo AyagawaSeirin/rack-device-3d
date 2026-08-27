@@ -83,3 +83,10 @@ That route previously exposed RH1288 V3 original/exploded/component views. As of
 ## PDF workflow note
 
 No dedicated PDF skill/tool is installed in this session. The required fallback was used: Ghostscript text extraction, page rasterization to high-resolution PNG, and original-detail visual inspection with the image viewer. Every relevant local PDF page named above was inspected before generation.
+
+## 2026-08-27 current reverse review
+
+- Reopened Huawei's exact RH1288 V3 product gallery and legacy 3D viewer URL in a real browser. The gallery still identifies `RH1288 V3 Rack Server` and the historic exact viewer route still exists as an indexed Huawei visual source.
+- The legacy route now redirects to Huawei's migrated product-3D landing page. That current landing page did not surface RH1288 V3 as a directly retrievable public model, and its public old-version link failed. No downloadable GLB/glTF/OBJ/FBX/STEP/CAD binary was exposed and no access control was bypassed.
+- The preserved official gallery ZIP remains the only exact official downloadable visual archive found; it contains PNG product views, not 3D geometry.
+- Original-detail re-inspection reconfirmed H12M-03, 1U, eight 2.5-inch carriers in the asymmetric 3-upper/5-lower layout, the SM212-visible four-GE rear, two installed 750 W AC PSUs, front-only ears and the 436 × 43 × 708 mm body.

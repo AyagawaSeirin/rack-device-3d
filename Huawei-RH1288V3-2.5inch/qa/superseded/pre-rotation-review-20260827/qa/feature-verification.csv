@@ -1,0 +1,21 @@
+gate,expected,actual_glb_evidence,status
+identity,"Huawei FusionServer RH1288 V3 / H12M-03 / 1U / 8-SFF","asset metadata and source/identity-manifest.md",PASS
+front_bays,"8 closed SFF carriers; upper 3 lower 5","eight FRONT_SFF_Carrier groups; front renders",PASS
+front_service,"DVD; status/control area; 2 USB 2.0; 1 VGA","named geometry and front renders",PASS
+front_branding,"HUAWEI; RH1288 V3; Intel Xeon; front-only ears","approved front texture embedded; separate single-sided ear planes",PASS
+rear_network,"4 GE RJ45 plus 1 management RJ45","four REAR_SM212_GE_RJ45 groups plus REAR_Mgmt_RJ45",PASS
+rear_io,"2 USB 3.0; VGA; serial; UID","named recessed geometry and rear renders",PASS
+rear_pcie,"one full-height and one half-height perforated blank","two independent REAR_PCIe groups",PASS
+rear_power,"2 x 750 W hot-swap AC PSU; fans/inlets/green releases","two REAR_AC_PSU groups; rear/oblique renders",PASS
+rear_ears,"no rear mounting ears","rear view contains only 436 mm rear face plus verified side-pin silhouettes",PASS
+left_side,"independent pins/slot; no right-side rail strip or vent","LEFT nodes and left render",PASS
+right_side,"long lower rail channel; rear-side vent; independent pins","RIGHT nodes and right render",PASS
+top,"two seams; centered narrow recessed latch; labels","TOP nodes and matched comparison",PASS
+bottom,"bottom-only conservative fallback; no unsupported identity detail","opaque plain bottom plus two verified folded edge reliefs",PASS_WITH_BOTTOM_FALLBACK
+closed_mesh,"closed exterior; no visible empty interior","closed body plus six outward face planes; four oblique views",PASS
+uv_orientation,"no mirrored text; correct face assignment; left/right independent","both viewer ten-view matrices",PASS
+material_alpha,"six main faces OPAQUE; embedded images RGB; no alpha haze","both glb audit JSON files",PASS
+dimensions,"published body 436 x 43 x 708 mm; visible bounds 482.6 x 43-44 x relief depth","482.6 x 43.53 x 715.7 mm",PASS
+web_parity,"same exterior and identifying detail","maximum normalized render RMSE 0.00655894",PASS
+viewer_independence,"actual load in two independent WebGL engines","Three.js and Babylon.js; 40 READY captures",PASS
+official_3d,"preserve exact public official file if available","viewer unavailable during 2026-08-23 maintenance; no lawful public binary found; README retained",PASS_NOT_AVAILABLE

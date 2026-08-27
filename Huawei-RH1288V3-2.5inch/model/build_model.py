@@ -13,6 +13,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 import trimesh
+from pygltflib import GLTF2
 from trimesh.visual import TextureVisuals
 from trimesh.visual.material import PBRMaterial
 
@@ -32,6 +33,7 @@ BODY_W = 436.0
 OVERALL_W = 482.6
 HEIGHT = 43.0
 DEPTH = 708.0
+SHELL_INSET = 1.0
 FRONT_Z = DEPTH / 2.0
 REAR_Z = -DEPTH / 2.0
 
@@ -135,13 +137,15 @@ def add_frame(scene: trimesh.Scene, prefix: str, width: float, height: float,
 def add_textured_shell(scene: trimesh.Scene, web: bool) -> None:
     tex = {face: texture_material(face, web) for face in
            ("front", "rear", "left", "right", "top", "bottom")}
-    add_box(scene, "Closed_Chassis_436x708x43mm", (BODY_W, HEIGHT, DEPTH), (0, 0, 0), ZINC)
+    # Keep the watertight core 0.5 mm behind each main OPAQUE face. The prior
+    # 0.1 mm card-to-shell gap was vulnerable to viewer-dependent depth ties.
+    add_box(scene, "Closed_Chassis_436x708x43mm", (BODY_W - SHELL_INSET, HEIGHT - SHELL_INSET, DEPTH - SHELL_INSET), (0, 0, 0), ZINC)
 
     # Split the front image into a body panel and two separate front-only ear
     # planes.  Single-sided ear planes disappear correctly from the rear camera,
     # unlike solid ear boxes, while retaining the approved source pixels.
     ear_u = ((OVERALL_W - BODY_W) / 2.0) / OVERALL_W
-    front_z = FRONT_Z + 0.10
+    front_z = FRONT_Z
     add_quad(scene, "Texture_FRONT_8SFF_3over5_Body",
              [(-BODY_W / 2, -HEIGHT / 2, front_z),
               (BODY_W / 2, -HEIGHT / 2, front_z),
@@ -164,33 +168,33 @@ def add_textured_shell(scene: trimesh.Scene, web: bool) -> None:
               [1.0, 1.0], [1.0 - ear_u, 1.0]])
     # Rear screen-left maps to physical +X, so this winding is both outward and unmirrored.
     add_quad(scene, "Texture_REAR_SM212_4GE_Dual_AC",
-             [(BODY_W / 2, -HEIGHT / 2, REAR_Z - 0.10),
-              (-BODY_W / 2, -HEIGHT / 2, REAR_Z - 0.10),
-              (-BODY_W / 2, HEIGHT / 2, REAR_Z - 0.10),
-              (BODY_W / 2, HEIGHT / 2, REAR_Z - 0.10)], tex["rear"])
+             [(BODY_W / 2, -HEIGHT / 2, REAR_Z),
+              (-BODY_W / 2, -HEIGHT / 2, REAR_Z),
+              (-BODY_W / 2, HEIGHT / 2, REAR_Z),
+              (BODY_W / 2, HEIGHT / 2, REAR_Z)], tex["rear"])
     # Physical-left evidence was generated rear-left/front-right for the -X camera.
     add_quad(scene, "Texture_LEFT_Independent_RearLeft_FrontRight",
-             [(-BODY_W / 2 - 0.10, -HEIGHT / 2, REAR_Z),
-              (-BODY_W / 2 - 0.10, -HEIGHT / 2, FRONT_Z),
-              (-BODY_W / 2 - 0.10, HEIGHT / 2, FRONT_Z),
-              (-BODY_W / 2 - 0.10, HEIGHT / 2, REAR_Z)], tex["left"])
+             [(-BODY_W / 2, -HEIGHT / 2, REAR_Z),
+              (-BODY_W / 2, -HEIGHT / 2, FRONT_Z),
+              (-BODY_W / 2, HEIGHT / 2, FRONT_Z),
+              (-BODY_W / 2, HEIGHT / 2, REAR_Z)], tex["left"])
     # Physical-right evidence was generated front-left/rear-right for the +X camera.
     add_quad(scene, "Texture_RIGHT_Independent_FrontLeft_RearRight",
-             [(BODY_W / 2 + 0.10, -HEIGHT / 2, FRONT_Z),
-              (BODY_W / 2 + 0.10, -HEIGHT / 2, REAR_Z),
-              (BODY_W / 2 + 0.10, HEIGHT / 2, REAR_Z),
-              (BODY_W / 2 + 0.10, HEIGHT / 2, FRONT_Z)], tex["right"])
+             [(BODY_W / 2, -HEIGHT / 2, FRONT_Z),
+              (BODY_W / 2, -HEIGHT / 2, REAR_Z),
+              (BODY_W / 2, HEIGHT / 2, REAR_Z),
+              (BODY_W / 2, HEIGHT / 2, FRONT_Z)], tex["right"])
     # Top and bottom assets use front at image bottom, rear at image top.
     add_quad(scene, "Texture_TOP_Closed_Cover",
-             [(-BODY_W / 2, HEIGHT / 2 + 0.10, FRONT_Z),
-              (BODY_W / 2, HEIGHT / 2 + 0.10, FRONT_Z),
-              (BODY_W / 2, HEIGHT / 2 + 0.10, REAR_Z),
-              (-BODY_W / 2, HEIGHT / 2 + 0.10, REAR_Z)], tex["top"])
+             [(-BODY_W / 2, HEIGHT / 2, FRONT_Z),
+              (BODY_W / 2, HEIGHT / 2, FRONT_Z),
+              (BODY_W / 2, HEIGHT / 2, REAR_Z),
+              (-BODY_W / 2, HEIGHT / 2, REAR_Z)], tex["top"])
     add_quad(scene, "Texture_BOTTOM_Generic_Fallback",
-             [(BODY_W / 2, -HEIGHT / 2 - 0.10, FRONT_Z),
-              (-BODY_W / 2, -HEIGHT / 2 - 0.10, FRONT_Z),
-              (-BODY_W / 2, -HEIGHT / 2 - 0.10, REAR_Z),
-              (BODY_W / 2, -HEIGHT / 2 - 0.10, REAR_Z)], tex["bottom"])
+             [(BODY_W / 2, -HEIGHT / 2, FRONT_Z),
+              (-BODY_W / 2, -HEIGHT / 2, FRONT_Z),
+              (-BODY_W / 2, -HEIGHT / 2, REAR_Z),
+              (BODY_W / 2, -HEIGHT / 2, REAR_Z)], tex["bottom"])
 
 
 def add_drive_carrier(scene: trimesh.Scene, index: int, x: float, y: float) -> None:
@@ -390,6 +394,25 @@ def build_scene(web: bool) -> trimesh.Scene:
     return scene
 
 
+def patch_source_locked_unlit(path: Path) -> None:
+    """Keep photo-derived main faces identical under independent viewers."""
+    document = GLTF2().load_binary(str(path))
+    used = list(document.extensionsUsed or [])
+    if "KHR_materials_unlit" not in used:
+        used.append("KHR_materials_unlit")
+    document.extensionsUsed = used
+    for gltf_material in document.materials or []:
+        if gltf_material.name and "source-locked photo" in gltf_material.name:
+            extensions = dict(gltf_material.extensions or {})
+            extensions["KHR_materials_unlit"] = {}
+            gltf_material.extensions = extensions
+            gltf_material.alphaMode = "OPAQUE"
+            gltf_material.doubleSided = False
+            if gltf_material.pbrMetallicRoughness:
+                gltf_material.pbrMetallicRoughness.baseColorFactor = [1.0, 1.0, 1.0, 1.0]
+    document.save_binary(str(path))
+
+
 def main() -> None:
     MODEL.mkdir(parents=True, exist_ok=True)
     outputs = (
@@ -399,6 +422,7 @@ def main() -> None:
     for web, path in outputs:
         scene = build_scene(web)
         path.write_bytes(scene.export(file_type="glb", include_normals=True))
+        patch_source_locked_unlit(path)
         print(path, path.stat().st_size, "bytes", len(scene.geometry), "geometry objects")
 
 
