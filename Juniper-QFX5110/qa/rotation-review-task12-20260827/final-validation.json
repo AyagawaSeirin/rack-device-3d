@@ -1,0 +1,200 @@
+{
+  "schema": "task12-final-validation-v1",
+  "model": "Juniper-QFX5110",
+  "identity": "Juniper QFX5110-48S-AFI (AC, Air In)",
+  "frozen_artifacts": {
+    "standard": {
+      "path": "model/Juniper-QFX5110.glb",
+      "sha256": "079472babeefd92349789edeb28f33635c04fcb9086dfd900e7fcb0e4325ac59",
+      "bytes": 19620376
+    },
+    "web": {
+      "path": "model/Juniper-QFX5110-web.glb",
+      "sha256": "cdd30d96cfe04c2ba44cfe27176c89fcb5267b266ccb6543f3ddbac04a9ee53d",
+      "bytes": 7272784
+    },
+    "builder": {
+      "path": "source/build_model.py",
+      "sha256": "0d151f7ea73130fb19ddf0bbfa5df010c3331603445d8db093cdfe0113819f13",
+      "bytes": 17159
+    }
+  },
+  "audits": {
+    "standard": {
+      "glb_audit": "PASS",
+      "glb_errors": 0,
+      "structural_audit": "PASS",
+      "structural_errors": 0,
+      "material_alpha_violations": 0,
+      "embedded_image_errors": 0,
+      "sampler_violations": 0,
+      "negative_transforms": 0,
+      "degenerate_triangles": 0,
+      "exact_duplicate_triangle_groups": 0,
+      "opposite_duplicate_triangle_pairs": 0,
+      "unresolved_visible_coplanar_pairs_below_0_05mm": 0,
+      "primitives_without_normals": 0,
+      "closed_core_winding_consistent": true,
+      "closed_core_pass": true
+    },
+    "web": {
+      "glb_audit": "PASS",
+      "glb_errors": 0,
+      "structural_audit": "PASS",
+      "structural_errors": 0,
+      "material_alpha_violations": 0,
+      "embedded_image_errors": 0,
+      "sampler_violations": 0,
+      "negative_transforms": 0,
+      "degenerate_triangles": 0,
+      "exact_duplicate_triangle_groups": 0,
+      "opposite_duplicate_triangle_pairs": 0,
+      "unresolved_visible_coplanar_pairs_below_0_05mm": 0,
+      "primitives_without_normals": 0,
+      "closed_core_winding_consistent": true,
+      "closed_core_pass": true
+    }
+  },
+  "independent_loads": {
+    "three-standard": {
+      "loads": 10,
+      "unique_cache_busters": 10,
+      "sha256": "079472babeefd92349789edeb28f33635c04fcb9086dfd900e7fcb0e4325ac59",
+      "bytes": 19620376,
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "all_materials_opaque": true,
+      "result": "PASS"
+    },
+    "three-web": {
+      "loads": 10,
+      "unique_cache_busters": 10,
+      "sha256": "cdd30d96cfe04c2ba44cfe27176c89fcb5267b266ccb6543f3ddbac04a9ee53d",
+      "bytes": 7272784,
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "all_materials_opaque": true,
+      "result": "PASS"
+    },
+    "babylon-standard": {
+      "loads": 10,
+      "unique_cache_busters": 10,
+      "sha256": "079472babeefd92349789edeb28f33635c04fcb9086dfd900e7fcb0e4325ac59",
+      "bytes": 19620376,
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "all_materials_opaque": true,
+      "result": "PASS"
+    },
+    "babylon-web": {
+      "loads": 10,
+      "unique_cache_busters": 10,
+      "sha256": "cdd30d96cfe04c2ba44cfe27176c89fcb5267b266ccb6543f3ddbac04a9ee53d",
+      "bytes": 7272784,
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "all_materials_opaque": true,
+      "result": "PASS"
+    }
+  },
+  "load_totals": {
+    "required": 40,
+    "actual": 40
+  },
+  "rotation": {
+    "three-standard": {
+      "yaw_frames": 72,
+      "yaw_step_degrees": 5,
+      "pitch_frames": 4,
+      "checkerboards": [
+        "light",
+        "dark"
+      ],
+      "same_angle_frames": 3,
+      "same_angle_sha256": "7f9c045b65bc0eb458c08c4d5f0677b268c0181ef20a85ce4583604d2cd2cb19",
+      "same_angle_byte_identical": true,
+      "sha256": "079472babeefd92349789edeb28f33635c04fcb9086dfd900e7fcb0e4325ac59",
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "result": "PASS"
+    },
+    "three-web": {
+      "yaw_frames": 72,
+      "yaw_step_degrees": 5,
+      "pitch_frames": 4,
+      "checkerboards": [
+        "light",
+        "dark"
+      ],
+      "same_angle_frames": 3,
+      "same_angle_sha256": "b33cdcb302cad143f6595b231aa1f4dc5460f37e85dea7fc63d14a3fdce05c74",
+      "same_angle_byte_identical": true,
+      "sha256": "cdd30d96cfe04c2ba44cfe27176c89fcb5267b266ccb6543f3ddbac04a9ee53d",
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "result": "PASS"
+    },
+    "babylon-standard": {
+      "yaw_frames": 72,
+      "yaw_step_degrees": 5,
+      "pitch_frames": 4,
+      "checkerboards": [
+        "light",
+        "dark"
+      ],
+      "same_angle_frames": 3,
+      "same_angle_sha256": "c3f418111f968e7637a0780c9bf554b5d44a8540c51c29715f5c093071837d52",
+      "same_angle_byte_identical": true,
+      "sha256": "079472babeefd92349789edeb28f33635c04fcb9086dfd900e7fcb0e4325ac59",
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "result": "PASS"
+    },
+    "babylon-web": {
+      "yaw_frames": 72,
+      "yaw_step_degrees": 5,
+      "pitch_frames": 4,
+      "checkerboards": [
+        "light",
+        "dark"
+      ],
+      "same_angle_frames": 3,
+      "same_angle_sha256": "9a98c23a62136ece2125ebdf71e5f9740f5e1ed94a361b394d4e097a66287f11",
+      "same_angle_byte_identical": true,
+      "sha256": "cdd30d96cfe04c2ba44cfe27176c89fcb5267b266ccb6543f3ddbac04a9ee53d",
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "result": "PASS"
+    }
+  },
+  "rotation_totals": {
+    "yaw": 288,
+    "pitch": 16,
+    "same_angle_stability": 12,
+    "all_frames": 316
+  },
+  "orthographic": {
+    "standard": {
+      "faces": 6,
+      "proof_hash_matches": true,
+      "result": "PASS"
+    },
+    "web": {
+      "faces": 6,
+      "proof_hash_matches": true,
+      "result": "PASS"
+    }
+  },
+  "matched_camera_comparisons": {
+    "standard": 6,
+    "web": 6,
+    "manual_review": {
+      "result": "PASS_SECOND_INDEPENDENT_CROSS_REVIEW",
+      "notes": [
+        "48 SFP+, four QSFP28, five AFI fans, two 650W AC-AFI PSUs, Juniper logo/model badge and management order match the locked official evidence.",
+        "Left/right/top source locks remain correctly oriented in the new independent comparisons.",
+        "Only the documented bottom face uses a generic closed-sheet fallback."
+      ]
+    }
+  },
+  "inventory": {
+    "rows_reviewed": 30,
+    "matched": 30,
+    "unresolved": 0
+  },
+  "task_configuration_conflicts": [],
+  "model_and_viewer_evidence_result": "PASS",
+  "task_status": "PASS_WITH_BOTTOM_FALLBACK"
+}

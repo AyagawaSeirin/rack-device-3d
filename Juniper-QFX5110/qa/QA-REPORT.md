@@ -1,5 +1,7 @@
 # Juniper QFX5110 final QA report
 
+> **2026-08-27 Task-12 second-cross-review supersession:** current hashes and independent browser evidence are in `qa/rotation-review-task12-20260827/FINAL-REPORT.md`. The report below remains as the earlier rotation-review history.
+
 Final status: **PASS_WITH_BOTTOM_FALLBACK**
 
 This report supersedes the pre-rotation report preserved at

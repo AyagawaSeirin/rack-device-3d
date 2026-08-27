@@ -1,0 +1,92 @@
+{
+  "schema": "task12-view-alpha-warning-review-v1",
+  "warnings_reviewed": 6,
+  "unresolved": 0,
+  "result": "PASS",
+  "rows": [
+    {
+      "face": "front",
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "core_alpha_below_250_percent": 0.0,
+      "classification": "TRUE_CONNECTOR_OR_VENT_HOLES_AND_ANTI_ALIASED_SILHOUETTE_ONLY",
+      "basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/front.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/front.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/front.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "face": "rear",
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "core_alpha_below_250_percent": 0.00221,
+      "classification": "TRUE_CONNECTOR_OR_VENT_HOLES_AND_ANTI_ALIASED_SILHOUETTE_ONLY",
+      "basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/rear.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/rear.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/rear.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "face": "left",
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "core_alpha_below_250_percent": 0.0,
+      "classification": "TRUE_CONNECTOR_OR_VENT_HOLES_AND_ANTI_ALIASED_SILHOUETTE_ONLY",
+      "basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/left.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/left.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/left.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "face": "right",
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "core_alpha_below_250_percent": 0.0,
+      "classification": "TRUE_CONNECTOR_OR_VENT_HOLES_AND_ANTI_ALIASED_SILHOUETTE_ONLY",
+      "basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/right.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/right.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/right.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "face": "top",
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "core_alpha_below_250_percent": 0.0,
+      "classification": "TRUE_CONNECTOR_OR_VENT_HOLES_AND_ANTI_ALIASED_SILHOUETTE_ONLY",
+      "basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/top.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/top.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/top.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "face": "bottom",
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "core_alpha_below_250_percent": 0.0,
+      "classification": "TRUE_CONNECTOR_OR_VENT_HOLES_AND_ANTI_ALIASED_SILHOUETTE_ONLY",
+      "basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/bottom.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/bottom.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/bottom.png"
+      ],
+      "unresolved": false
+    }
+  ]
+}

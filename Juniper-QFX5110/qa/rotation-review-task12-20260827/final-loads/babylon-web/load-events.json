@@ -1,0 +1,466 @@
+{
+  "schema": "task12-playwright-independent-loads-v1",
+  "capturedAt": "2026-08-27T15:08:49.169Z",
+  "engine": "Babylon.js",
+  "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+  "viewer": "Juniper-QFX5110/qa/rotation-review-20260827/viewers/babylon.html",
+  "model": "/Juniper-QFX5110/model/Juniper-QFX5110-web.glb",
+  "requiredLoads": 10,
+  "actualLoads": 10,
+  "uniqueCacheBusters": 10,
+  "allHashEqual": true,
+  "allBytesEqual": true,
+  "allMaterialsOpaque": true,
+  "events": [
+    {
+      "index": 1,
+      "view": "front",
+      "yaw": 0,
+      "pitch": 0,
+      "pageUrl": "http://127.0.0.1:8123/Juniper-QFX5110/qa/rotation-review-20260827/viewers/babylon.html?model=%2FJuniper-QFX5110%2Fmodel%2FJuniper-QFX5110-web.glb%3Fgate%3Dload-1787843309528-0-1d3c27c450ccb&bg=light",
+      "cacheBustedModel": "/Juniper-QFX5110/model/Juniper-QFX5110-web.glb?gate=load-1787843309528-0-1d3c27c450ccb",
+      "engine": "Babylon.js",
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "bounds": {
+        "min": [
+          -0.24130000174045563,
+          -0.02192400023341179,
+          -0.2870959937572479
+        ],
+        "max": [
+          0.24130000174045563,
+          0.02192400023341179,
+          0.2648960053920746
+        ]
+      },
+      "proof": {
+        "sha256": "cdd30d96cfe04c2ba44cfe27176c89fcb5267b266ccb6543f3ddbac04a9ee53d",
+        "bytes": 7272784,
+        "lastModified": "Thu, 27 Aug 2026 09:56:01 GMT"
+      },
+      "performanceEntries": [
+        {
+          "durationMs": 59.5,
+          "transferSize": 7273084,
+          "encodedBodySize": 7272784,
+          "decodedBodySize": 7272784
+        },
+        {
+          "durationMs": 92.10000000149012,
+          "transferSize": 7273084,
+          "encodedBodySize": 7272784,
+          "decodedBodySize": 7272784
+        }
+      ],
+      "materialViolationCount": 0,
+      "screenshot": "/root/Project/rack-device-3d/Juniper-QFX5110/qa/rotation-review-task12-20260827/final-loads/babylon-web/01-front.png",
+      "elapsedMs": 2447,
+      "loadError": null
+    },
+    {
+      "index": 2,
+      "view": "rear",
+      "yaw": 180,
+      "pitch": 0,
+      "pageUrl": "http://127.0.0.1:8123/Juniper-QFX5110/qa/rotation-review-20260827/viewers/babylon.html?model=%2FJuniper-QFX5110%2Fmodel%2FJuniper-QFX5110-web.glb%3Fgate%3Dload-1787843311975-1-069920f8bcc0d&bg=dark",
+      "cacheBustedModel": "/Juniper-QFX5110/model/Juniper-QFX5110-web.glb?gate=load-1787843311975-1-069920f8bcc0d",
+      "engine": "Babylon.js",
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "bounds": {
+        "min": [
+          -0.24130000174045563,
+          -0.02192400023341179,
+          -0.2870959937572479
+        ],
+        "max": [
+          0.24130000174045563,
+          0.02192400023341179,
+          0.2648960053920746
+        ]
+      },
+      "proof": {
+        "sha256": "cdd30d96cfe04c2ba44cfe27176c89fcb5267b266ccb6543f3ddbac04a9ee53d",
+        "bytes": 7272784,
+        "lastModified": "Thu, 27 Aug 2026 09:56:01 GMT"
+      },
+      "performanceEntries": [
+        {
+          "durationMs": 58.29999999701977,
+          "transferSize": 7273084,
+          "encodedBodySize": 7272784,
+          "decodedBodySize": 7272784
+        },
+        {
+          "durationMs": 57.100000001490116,
+          "transferSize": 7273084,
+          "encodedBodySize": 7272784,
+          "decodedBodySize": 7272784
+        }
+      ],
+      "materialViolationCount": 0,
+      "screenshot": "/root/Project/rack-device-3d/Juniper-QFX5110/qa/rotation-review-task12-20260827/final-loads/babylon-web/02-rear.png",
+      "elapsedMs": 1887,
+      "loadError": null
+    },
+    {
+      "index": 3,
+      "view": "left",
+      "yaw": 270,
+      "pitch": 0,
+      "pageUrl": "http://127.0.0.1:8123/Juniper-QFX5110/qa/rotation-review-20260827/viewers/babylon.html?model=%2FJuniper-QFX5110%2Fmodel%2FJuniper-QFX5110-web.glb%3Fgate%3Dload-1787843313862-2-81a293340f33b&bg=light",
+      "cacheBustedModel": "/Juniper-QFX5110/model/Juniper-QFX5110-web.glb?gate=load-1787843313862-2-81a293340f33b",
+      "engine": "Babylon.js",
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "bounds": {
+        "min": [
+          -0.24130000174045563,
+          -0.02192400023341179,
+          -0.2870959937572479
+        ],
+        "max": [
+          0.24130000174045563,
+          0.02192400023341179,
+          0.2648960053920746
+        ]
+      },
+      "proof": {
+        "sha256": "cdd30d96cfe04c2ba44cfe27176c89fcb5267b266ccb6543f3ddbac04a9ee53d",
+        "bytes": 7272784,
+        "lastModified": "Thu, 27 Aug 2026 09:56:01 GMT"
+      },
+      "performanceEntries": [
+        {
+          "durationMs": 63.30000000074506,
+          "transferSize": 7273084,
+          "encodedBodySize": 7272784,
+          "decodedBodySize": 7272784
+        },
+        {
+          "durationMs": 81.90000000223517,
+          "transferSize": 7273084,
+          "encodedBodySize": 7272784,
+          "decodedBodySize": 7272784
+        }
+      ],
+      "materialViolationCount": 0,
+      "screenshot": "/root/Project/rack-device-3d/Juniper-QFX5110/qa/rotation-review-task12-20260827/final-loads/babylon-web/03-left.png",
+      "elapsedMs": 1730,
+      "loadError": null
+    },
+    {
+      "index": 4,
+      "view": "right",
+      "yaw": 90,
+      "pitch": 0,
+      "pageUrl": "http://127.0.0.1:8123/Juniper-QFX5110/qa/rotation-review-20260827/viewers/babylon.html?model=%2FJuniper-QFX5110%2Fmodel%2FJuniper-QFX5110-web.glb%3Fgate%3Dload-1787843315592-3-712c07ec2fef3&bg=dark",
+      "cacheBustedModel": "/Juniper-QFX5110/model/Juniper-QFX5110-web.glb?gate=load-1787843315592-3-712c07ec2fef3",
+      "engine": "Babylon.js",
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "bounds": {
+        "min": [
+          -0.24130000174045563,
+          -0.02192400023341179,
+          -0.2870959937572479
+        ],
+        "max": [
+          0.24130000174045563,
+          0.02192400023341179,
+          0.2648960053920746
+        ]
+      },
+      "proof": {
+        "sha256": "cdd30d96cfe04c2ba44cfe27176c89fcb5267b266ccb6543f3ddbac04a9ee53d",
+        "bytes": 7272784,
+        "lastModified": "Thu, 27 Aug 2026 09:56:01 GMT"
+      },
+      "performanceEntries": [
+        {
+          "durationMs": 61.69999999925494,
+          "transferSize": 7273084,
+          "encodedBodySize": 7272784,
+          "decodedBodySize": 7272784
+        },
+        {
+          "durationMs": 101.39999999850988,
+          "transferSize": 7273084,
+          "encodedBodySize": 7272784,
+          "decodedBodySize": 7272784
+        }
+      ],
+      "materialViolationCount": 0,
+      "screenshot": "/root/Project/rack-device-3d/Juniper-QFX5110/qa/rotation-review-task12-20260827/final-loads/babylon-web/04-right.png",
+      "elapsedMs": 1923,
+      "loadError": null
+    },
+    {
+      "index": 5,
+      "view": "top",
+      "yaw": 0,
+      "pitch": 80,
+      "pageUrl": "http://127.0.0.1:8123/Juniper-QFX5110/qa/rotation-review-20260827/viewers/babylon.html?model=%2FJuniper-QFX5110%2Fmodel%2FJuniper-QFX5110-web.glb%3Fgate%3Dload-1787843317515-4-8f1722ff339cf&bg=light",
+      "cacheBustedModel": "/Juniper-QFX5110/model/Juniper-QFX5110-web.glb?gate=load-1787843317515-4-8f1722ff339cf",
+      "engine": "Babylon.js",
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "bounds": {
+        "min": [
+          -0.24130000174045563,
+          -0.02192400023341179,
+          -0.2870959937572479
+        ],
+        "max": [
+          0.24130000174045563,
+          0.02192400023341179,
+          0.2648960053920746
+        ]
+      },
+      "proof": {
+        "sha256": "cdd30d96cfe04c2ba44cfe27176c89fcb5267b266ccb6543f3ddbac04a9ee53d",
+        "bytes": 7272784,
+        "lastModified": "Thu, 27 Aug 2026 09:56:01 GMT"
+      },
+      "performanceEntries": [
+        {
+          "durationMs": 144.30000000074506,
+          "transferSize": 7273084,
+          "encodedBodySize": 7272784,
+          "decodedBodySize": 7272784
+        },
+        {
+          "durationMs": 88.5,
+          "transferSize": 7273084,
+          "encodedBodySize": 7272784,
+          "decodedBodySize": 7272784
+        }
+      ],
+      "materialViolationCount": 0,
+      "screenshot": "/root/Project/rack-device-3d/Juniper-QFX5110/qa/rotation-review-task12-20260827/final-loads/babylon-web/05-top.png",
+      "elapsedMs": 2117,
+      "loadError": null
+    },
+    {
+      "index": 6,
+      "view": "bottom",
+      "yaw": 0,
+      "pitch": -80,
+      "pageUrl": "http://127.0.0.1:8123/Juniper-QFX5110/qa/rotation-review-20260827/viewers/babylon.html?model=%2FJuniper-QFX5110%2Fmodel%2FJuniper-QFX5110-web.glb%3Fgate%3Dload-1787843319632-5-9976ccce9b2dc&bg=dark",
+      "cacheBustedModel": "/Juniper-QFX5110/model/Juniper-QFX5110-web.glb?gate=load-1787843319632-5-9976ccce9b2dc",
+      "engine": "Babylon.js",
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "bounds": {
+        "min": [
+          -0.24130000174045563,
+          -0.02192400023341179,
+          -0.2870959937572479
+        ],
+        "max": [
+          0.24130000174045563,
+          0.02192400023341179,
+          0.2648960053920746
+        ]
+      },
+      "proof": {
+        "sha256": "cdd30d96cfe04c2ba44cfe27176c89fcb5267b266ccb6543f3ddbac04a9ee53d",
+        "bytes": 7272784,
+        "lastModified": "Thu, 27 Aug 2026 09:56:01 GMT"
+      },
+      "performanceEntries": [
+        {
+          "durationMs": 70.69999999925494,
+          "transferSize": 7273084,
+          "encodedBodySize": 7272784,
+          "decodedBodySize": 7272784
+        },
+        {
+          "durationMs": 74.30000000074506,
+          "transferSize": 7273084,
+          "encodedBodySize": 7272784,
+          "decodedBodySize": 7272784
+        }
+      ],
+      "materialViolationCount": 0,
+      "screenshot": "/root/Project/rack-device-3d/Juniper-QFX5110/qa/rotation-review-task12-20260827/final-loads/babylon-web/06-bottom.png",
+      "elapsedMs": 1879,
+      "loadError": null
+    },
+    {
+      "index": 7,
+      "view": "front-left",
+      "yaw": 315,
+      "pitch": 28,
+      "pageUrl": "http://127.0.0.1:8123/Juniper-QFX5110/qa/rotation-review-20260827/viewers/babylon.html?model=%2FJuniper-QFX5110%2Fmodel%2FJuniper-QFX5110-web.glb%3Fgate%3Dload-1787843321511-6-e6196de0f1118&bg=light",
+      "cacheBustedModel": "/Juniper-QFX5110/model/Juniper-QFX5110-web.glb?gate=load-1787843321511-6-e6196de0f1118",
+      "engine": "Babylon.js",
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "bounds": {
+        "min": [
+          -0.24130000174045563,
+          -0.02192400023341179,
+          -0.2870959937572479
+        ],
+        "max": [
+          0.24130000174045563,
+          0.02192400023341179,
+          0.2648960053920746
+        ]
+      },
+      "proof": {
+        "sha256": "cdd30d96cfe04c2ba44cfe27176c89fcb5267b266ccb6543f3ddbac04a9ee53d",
+        "bytes": 7272784,
+        "lastModified": "Thu, 27 Aug 2026 09:56:01 GMT"
+      },
+      "performanceEntries": [
+        {
+          "durationMs": 64.10000000149012,
+          "transferSize": 7273084,
+          "encodedBodySize": 7272784,
+          "decodedBodySize": 7272784
+        },
+        {
+          "durationMs": 81.39999999850988,
+          "transferSize": 7273084,
+          "encodedBodySize": 7272784,
+          "decodedBodySize": 7272784
+        }
+      ],
+      "materialViolationCount": 0,
+      "screenshot": "/root/Project/rack-device-3d/Juniper-QFX5110/qa/rotation-review-task12-20260827/final-loads/babylon-web/07-front-left.png",
+      "elapsedMs": 1710,
+      "loadError": null
+    },
+    {
+      "index": 8,
+      "view": "front-right",
+      "yaw": 45,
+      "pitch": 28,
+      "pageUrl": "http://127.0.0.1:8123/Juniper-QFX5110/qa/rotation-review-20260827/viewers/babylon.html?model=%2FJuniper-QFX5110%2Fmodel%2FJuniper-QFX5110-web.glb%3Fgate%3Dload-1787843323221-7-e71b4530e9b72&bg=dark",
+      "cacheBustedModel": "/Juniper-QFX5110/model/Juniper-QFX5110-web.glb?gate=load-1787843323221-7-e71b4530e9b72",
+      "engine": "Babylon.js",
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "bounds": {
+        "min": [
+          -0.24130000174045563,
+          -0.02192400023341179,
+          -0.2870959937572479
+        ],
+        "max": [
+          0.24130000174045563,
+          0.02192400023341179,
+          0.2648960053920746
+        ]
+      },
+      "proof": {
+        "sha256": "cdd30d96cfe04c2ba44cfe27176c89fcb5267b266ccb6543f3ddbac04a9ee53d",
+        "bytes": 7272784,
+        "lastModified": "Thu, 27 Aug 2026 09:56:01 GMT"
+      },
+      "performanceEntries": [
+        {
+          "durationMs": 64.19999999925494,
+          "transferSize": 7273084,
+          "encodedBodySize": 7272784,
+          "decodedBodySize": 7272784
+        },
+        {
+          "durationMs": 74.5,
+          "transferSize": 7273084,
+          "encodedBodySize": 7272784,
+          "decodedBodySize": 7272784
+        }
+      ],
+      "materialViolationCount": 0,
+      "screenshot": "/root/Project/rack-device-3d/Juniper-QFX5110/qa/rotation-review-task12-20260827/final-loads/babylon-web/08-front-right.png",
+      "elapsedMs": 2081,
+      "loadError": null
+    },
+    {
+      "index": 9,
+      "view": "rear-left",
+      "yaw": 225,
+      "pitch": 28,
+      "pageUrl": "http://127.0.0.1:8123/Juniper-QFX5110/qa/rotation-review-20260827/viewers/babylon.html?model=%2FJuniper-QFX5110%2Fmodel%2FJuniper-QFX5110-web.glb%3Fgate%3Dload-1787843325302-8-d4bfc9ab7bc38&bg=light",
+      "cacheBustedModel": "/Juniper-QFX5110/model/Juniper-QFX5110-web.glb?gate=load-1787843325302-8-d4bfc9ab7bc38",
+      "engine": "Babylon.js",
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "bounds": {
+        "min": [
+          -0.24130000174045563,
+          -0.02192400023341179,
+          -0.2870959937572479
+        ],
+        "max": [
+          0.24130000174045563,
+          0.02192400023341179,
+          0.2648960053920746
+        ]
+      },
+      "proof": {
+        "sha256": "cdd30d96cfe04c2ba44cfe27176c89fcb5267b266ccb6543f3ddbac04a9ee53d",
+        "bytes": 7272784,
+        "lastModified": "Thu, 27 Aug 2026 09:56:01 GMT"
+      },
+      "performanceEntries": [
+        {
+          "durationMs": 68.59999999776483,
+          "transferSize": 7273084,
+          "encodedBodySize": 7272784,
+          "decodedBodySize": 7272784
+        },
+        {
+          "durationMs": 88.69999999925494,
+          "transferSize": 7273084,
+          "encodedBodySize": 7272784,
+          "decodedBodySize": 7272784
+        }
+      ],
+      "materialViolationCount": 0,
+      "screenshot": "/root/Project/rack-device-3d/Juniper-QFX5110/qa/rotation-review-task12-20260827/final-loads/babylon-web/09-rear-left.png",
+      "elapsedMs": 1858,
+      "loadError": null
+    },
+    {
+      "index": 10,
+      "view": "rear-right",
+      "yaw": 135,
+      "pitch": 28,
+      "pageUrl": "http://127.0.0.1:8123/Juniper-QFX5110/qa/rotation-review-20260827/viewers/babylon.html?model=%2FJuniper-QFX5110%2Fmodel%2FJuniper-QFX5110-web.glb%3Fgate%3Dload-1787843327160-9-a03209272d38b&bg=dark",
+      "cacheBustedModel": "/Juniper-QFX5110/model/Juniper-QFX5110-web.glb?gate=load-1787843327160-9-a03209272d38b",
+      "engine": "Babylon.js",
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "bounds": {
+        "min": [
+          -0.24130000174045563,
+          -0.02192400023341179,
+          -0.2870959937572479
+        ],
+        "max": [
+          0.24130000174045563,
+          0.02192400023341179,
+          0.2648960053920746
+        ]
+      },
+      "proof": {
+        "sha256": "cdd30d96cfe04c2ba44cfe27176c89fcb5267b266ccb6543f3ddbac04a9ee53d",
+        "bytes": 7272784,
+        "lastModified": "Thu, 27 Aug 2026 09:56:01 GMT"
+      },
+      "performanceEntries": [
+        {
+          "durationMs": 77.09999999776483,
+          "transferSize": 7273084,
+          "encodedBodySize": 7272784,
+          "decodedBodySize": 7272784
+        },
+        {
+          "durationMs": 81.30000000074506,
+          "transferSize": 7273084,
+          "encodedBodySize": 7272784,
+          "decodedBodySize": 7272784
+        }
+      ],
+      "materialViolationCount": 0,
+      "screenshot": "/root/Project/rack-device-3d/Juniper-QFX5110/qa/rotation-review-task12-20260827/final-loads/babylon-web/10-rear-right.png",
+      "elapsedMs": 2009,
+      "loadError": null
+    }
+  ]
+}
