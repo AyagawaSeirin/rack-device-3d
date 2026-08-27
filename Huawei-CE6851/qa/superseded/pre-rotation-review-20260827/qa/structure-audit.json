@@ -1,0 +1,108 @@
+{
+  "status": "PASS",
+  "identity": "Huawei 02350JAS / CE6851-HI-B-B0A",
+  "installed_configuration": "48x10GE SFP+; 6x40GE QSFP+; 2xPAC-600WA-B AC; 2xFAN-40EA-B; port-side intake",
+  "files": {
+    "standard": {
+      "path": "/root/Project/rack-device-3d/Huawei-CE6851/model/Huawei-CE6851.glb",
+      "bytes": 16579548,
+      "sha256": "8fb2e08ad9937d8d8bbdb524f6a83ca6c1d2882c19299289b9e28282e556531f"
+    },
+    "web": {
+      "path": "/root/Project/rack-device-3d/Huawei-CE6851/model/Huawei-CE6851-web.glb",
+      "bytes": 10129052,
+      "sha256": "f3ab68606febe15ed6be49147e58590f58f7537bfcb012629a261ec3e63519a8"
+    }
+  },
+  "counts": {
+    "nodes": 49,
+    "source_locked_faces": 6,
+    "sfp_plus_ports": 48,
+    "qsfp_plus_ports": 6,
+    "business_ports_total": 54,
+    "ac_psus": 2,
+    "fan_modules": 2
+  },
+  "component_counts": {
+    "Front_SFPplus_Cages_48": 48,
+    "Front_QSFPplus_Cages_6": 6,
+    "Front_SYS_MST_ID_Indicators": 3,
+    "Rear_HotSwap_Module_Seams": 4,
+    "Rear_ACT_LA_ID_LEDs": 3,
+    "Rear_Captive_Screws": 6,
+    "Left_Side_Mounting_Fasteners": 8,
+    "Right_Side_Mounting_Fasteners": 8,
+    "Top_Vent_Field_Dividers_2": 2,
+    "Bottom_Longitudinal_Stamped_Ribs_5": 5,
+    "Bottom_Visible_Fasteners": 15
+  },
+  "bounds_mm": [
+    482.6,
+    45.65,
+    427.0
+  ],
+  "rack_ear_euler_numbers": {
+    "left": -2,
+    "right": -2
+  },
+  "checks": {
+    "required_geometry_present": true,
+    "standard_web_geometry_identical": true,
+    "closed_shell_watertight": true,
+    "closed_shell_positive_volume": true,
+    "rack_ears_watertight": true,
+    "rack_ears_two_true_holes_each": true,
+    "component_counts_exact": true,
+    "metadata_exact": true,
+    "no_false_rear_ear_nodes": true,
+    "six_independent_source_locked_faces": true,
+    "world_bounds_within_audited_tolerance": true
+  },
+  "metadata": {
+    "standard": {
+      "generator": "Huawei CE6851 exact-exterior new-build / trimesh+pygltflib / standard",
+      "extras": {
+        "manufacturer": "Huawei Technologies Co., Ltd.",
+        "exact_product_id": "CE6851-48S6Q-HI",
+        "ordering_part_number": "02350JAS",
+        "part_model": "CE6851-HI-B-B0A",
+        "installed_configuration": "48x10GE SFP+; 6x40GE QSFP+; dual PAC-600WA-B AC; dual FAN-40EA-B; port-side intake",
+        "source_model_used": false,
+        "bottom_mode": "SOURCE_LOCKED_GENERATION",
+        "coordinate_convention": "+X device-right from port side; +Y up; +Z port side/front"
+      },
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "node_count": 49,
+      "mesh_count": 49,
+      "material_count": 12,
+      "texture_count": 6,
+      "image_count": 6
+    },
+    "web": {
+      "generator": "Huawei CE6851 exact-exterior new-build / trimesh+pygltflib / web",
+      "extras": {
+        "manufacturer": "Huawei Technologies Co., Ltd.",
+        "exact_product_id": "CE6851-48S6Q-HI",
+        "ordering_part_number": "02350JAS",
+        "part_model": "CE6851-HI-B-B0A",
+        "installed_configuration": "48x10GE SFP+; 6x40GE QSFP+; dual PAC-600WA-B AC; dual FAN-40EA-B; port-side intake",
+        "source_model_used": false,
+        "bottom_mode": "SOURCE_LOCKED_GENERATION",
+        "coordinate_convention": "+X device-right from port side; +Y up; +Z port side/front"
+      },
+      "extensions_used": [
+        "KHR_materials_unlit"
+      ],
+      "extensions_required": [],
+      "node_count": 49,
+      "mesh_count": 49,
+      "material_count": 12,
+      "texture_count": 6,
+      "image_count": 6
+    }
+  },
+  "errors": []
+}

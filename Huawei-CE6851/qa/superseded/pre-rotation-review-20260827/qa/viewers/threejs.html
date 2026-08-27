@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Huawei CE6851 Three.js QA Viewer</title>
+  <style>
+    html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#eef1f3}
+    canvas{display:block;width:100%;height:100%}
+    body.checker-light{background-color:#e8ebed;background-image:linear-gradient(45deg,#c9ced2 25%,transparent 25%),linear-gradient(-45deg,#c9ced2 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#c9ced2 75%),linear-gradient(-45deg,transparent 75%,#c9ced2 75%);background-size:36px 36px;background-position:0 0,0 18px,18px -18px,-18px 0}
+    body.checker-dark{background-color:#262a2d;background-image:linear-gradient(45deg,#44494d 25%,transparent 25%),linear-gradient(-45deg,#44494d 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#44494d 75%),linear-gradient(-45deg,transparent 75%,#44494d 75%);background-size:36px 36px;background-position:0 0,0 18px,18px -18px,-18px 0}
+    #badge{position:fixed;left:12px;top:10px;padding:5px 8px;border-radius:4px;background:#111b;color:#fff;font:12px/1.2 system-ui;z-index:2}
+  </style>
+  <script type="importmap">
+    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"}}
+  </script>
+</head>
+<body>
+<div id="badge">Three.js actual GLB</div>
+<script type="module">
+  import * as THREE from 'three';
+  import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+
+  const params=new URLSearchParams(location.search);
+  const model=params.get('model')||'../../model/Huawei-CE6851.glb';
+  const view=params.get('view')||'front';
+  const bg=params.get('bg')||'light';
+  document.getElementById('badge').textContent=`Three.js · ${model.includes('-web')?'web':'standard'} · ${view}`;
+  if(bg.startsWith('checker')) document.body.classList.add(bg);
+
+  const renderer=new THREE.WebGLRenderer({antialias:true,alpha:bg.startsWith('checker'),preserveDrawingBuffer:true});
+  renderer.setPixelRatio(1);
+  renderer.setSize(innerWidth,innerHeight);
+  renderer.outputColorSpace=THREE.SRGBColorSpace;
+  renderer.toneMapping=THREE.NoToneMapping;
+  renderer.setClearAlpha(bg.startsWith('checker')?0:1);
+  document.body.appendChild(renderer.domElement);
+
+  const scene=new THREE.Scene();
+  if(!bg.startsWith('checker')) scene.background=new THREE.Color(bg==='dark'?0x25292c:0xf2f4f5);
+  scene.add(new THREE.HemisphereLight(0xffffff,0x505860,2.1));
+  const key=new THREE.DirectionalLight(0xffffff,2.0); key.position.set(1.1,1.5,1.0); scene.add(key);
+  const fill=new THREE.DirectionalLight(0xffffff,0.8); fill.position.set(-1.0,0.2,-1.0); scene.add(fill);
+
+  const loader=new GLTFLoader();
+  const gltf=await loader.loadAsync(model);
+  const object=gltf.scene;
+  scene.add(object);
+  object.updateMatrixWorld(true);
+  let box=new THREE.Box3().setFromObject(object);
+  const center=box.getCenter(new THREE.Vector3());
+  object.position.sub(center);
+  object.updateMatrixWorld(true);
+  box=new THREE.Box3().setFromObject(object);
+
+  const aspect=innerWidth/innerHeight;
+  const ortho=(halfWidth,pos,up,target=new THREE.Vector3())=>{
+    const c=new THREE.OrthographicCamera(-halfWidth,halfWidth,halfWidth/aspect,-halfWidth/aspect,0.01,5);
+    c.position.copy(pos); c.up.copy(up); c.lookAt(target); c.updateProjectionMatrix(); return c;
+  };
+  const persp=(pos,target=new THREE.Vector3())=>{
+    const c=new THREE.PerspectiveCamera(28,aspect,0.01,8); c.position.copy(pos); c.up.set(0,1,0); c.lookAt(target); c.updateProjectionMatrix(); return c;
+  };
+  const V={
+    front:()=>ortho(.275,new THREE.Vector3(0,0,1.2),new THREE.Vector3(0,1,0)),
+    rear:()=>ortho(.255,new THREE.Vector3(0,0,-1.2),new THREE.Vector3(0,1,0)),
+    left:()=>ortho(.245,new THREE.Vector3(-1.2,0,0),new THREE.Vector3(0,1,0)),
+    right:()=>ortho(.245,new THREE.Vector3(1.2,0,0),new THREE.Vector3(0,1,0)),
+    top:()=>ortho(.390,new THREE.Vector3(0,1.2,0),new THREE.Vector3(0,0,-1)),
+    bottom:()=>ortho(.390,new THREE.Vector3(0,-1.2,0),new THREE.Vector3(0,0,-1)),
+    front_left:()=>persp(new THREE.Vector3(-.72,.30,.76)),
+    front_right:()=>persp(new THREE.Vector3(.72,.30,.76)),
+    rear_left:()=>persp(new THREE.Vector3(-.72,.30,-.76)),
+    rear_right:()=>persp(new THREE.Vector3(.72,.30,-.76)),
+    front_ear_left:()=>ortho(.045,new THREE.Vector3(0,0,1.2),new THREE.Vector3(0,1,0),new THREE.Vector3(-.220,0,0)),
+    front_ear_right:()=>ortho(.045,new THREE.Vector3(0,0,1.2),new THREE.Vector3(0,1,0),new THREE.Vector3(.220,0,0)),
+    front_logo:()=>ortho(.070,new THREE.Vector3(0,0,1.2),new THREE.Vector3(0,1,0),new THREE.Vector3(-.155,-.006,0)),
+    rear_management:()=>ortho(.060,new THREE.Vector3(0,0,-1.2),new THREE.Vector3(0,1,0),new THREE.Vector3(0,0,0)),
+  };
+  const camera=(V[view]||V.front)();
+  renderer.render(scene,camera);
+  window.__viewerReady=true;
+  window.__viewerAudit={engine:'Three.js r180',model,view,meshes:object.children.length,bounds:box.getSize(new THREE.Vector3()).toArray()};
+  window.addEventListener('resize',()=>{renderer.setSize(innerWidth,innerHeight);renderer.render(scene,camera)});
+</script>
+</body>
+</html>

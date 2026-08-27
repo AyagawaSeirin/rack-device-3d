@@ -241,7 +241,9 @@ def build_scene(textures: dict[str, Image.Image]) -> trimesh.Scene:
     })
 
     # Closed shell. Rear modules occupy the remaining depth to the -210 mm envelope.
-    add(scene, "Closed_Chassis_Shell", make_box([BODY_W, BODY_H, 0.414], [0, 0, 0.003], MAT_BODY))
+    # Keep the watertight core safely behind all six OPAQUE canonical surfaces.
+    # The earlier 0.08 mm face/core gap was below stable browser depth precision.
+    add(scene, "Closed_Chassis_Shell", make_box([BODY_W - 0.0024, BODY_H - 0.0024, 0.410], [0, 0, 0], MAT_BODY))
     for face in ("front", "rear", "left", "right", "top", "bottom"):
         add(scene, f"Face_{face.title()}_SourceLocked", textured_quad(face, textures[face]))
 
@@ -293,7 +295,7 @@ def build_scene(textures: dict[str, Image.Image]) -> trimesh.Scene:
         ("PSU2_PAC-600WA-B", -0.169, 0.104),
     ]
     for name, x, width in rear_modules:
-        add(scene, f"Rear_Module_{name}", make_box([width - 0.0012, 0.0414, 0.0060], [x, 0, -0.2070], MAT_BODY))
+        add(scene, f"Rear_Module_{name}", make_box([width - 0.0012, 0.0410, 0.0048], [x, 0, -0.2065], MAT_BODY))
 
     # Module seams create real parallax beyond the source-locked rear plane.
     seam_x = (0.117, 0.025, -0.025, -0.117)
@@ -357,9 +359,12 @@ def build_scene(textures: dict[str, Image.Image]) -> trimesh.Scene:
         add_group(scene, f"{label}_Side_Mounting_Fasteners", meshes, MAT_DARK_SILVER)
 
     # Top port-side perforation panel relief and three exact field divisions.
-    add(scene, "Top_PortSide_Vent_Recess", make_box([BODY_W - 0.004, 0.0007, 0.065], [0, BODY_H/2 + 0.0002, FRONT_Z - 0.0325], MAT_BLACK))
+    add(scene, "Top_PortSide_Vent_Recess", make_box([BODY_W - 0.004, 0.0007, 0.065], [0, BODY_H/2 + 0.00035, FRONT_Z - 0.0325], MAT_BLACK))
     add_group(scene, "Top_Vent_Field_Dividers_2", [
-        make_box([0.0014, 0.0009, 0.064], [x, BODY_H/2 + 0.00055, FRONT_Z - 0.0325], MAT_DARK_SILVER)
+        # Sit on the vent's outer surface without interpenetrating it.  The
+        # 0.6 mm relief preserves the photographed divisions while keeping
+        # both outward and hidden planes outside the near-coplanar hazard band.
+        make_box([0.0014, 0.0006, 0.064], [x, BODY_H/2 + 0.0010, FRONT_Z - 0.0325], MAT_DARK_SILVER)
         for x in (-0.060, 0.100)
     ], MAT_DARK_SILVER)
     add(scene, "Top_Transverse_Cover_Seam", make_box([BODY_W - 0.004, 0.00065, 0.0015], [0, BODY_H/2 + 0.00045, FRONT_Z - 0.067], MAT_DARK_SILVER))

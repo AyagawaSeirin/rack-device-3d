@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Huawei CE6851 Babylon.js QA Viewer</title>
+  <style>
+    html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#eef1f3}
+    canvas{display:block;width:100%;height:100%;touch-action:none}
+    body.checker-light{background-color:#e8ebed;background-image:linear-gradient(45deg,#c9ced2 25%,transparent 25%),linear-gradient(-45deg,#c9ced2 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#c9ced2 75%),linear-gradient(-45deg,transparent 75%,#c9ced2 75%);background-size:36px 36px;background-position:0 0,0 18px,18px -18px,-18px 0}
+    body.checker-dark{background-color:#262a2d;background-image:linear-gradient(45deg,#44494d 25%,transparent 25%),linear-gradient(-45deg,#44494d 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#44494d 75%),linear-gradient(-45deg,transparent 75%,#44494d 75%);background-size:36px 36px;background-position:0 0,0 18px,18px -18px,-18px 0}
+    #badge{position:fixed;left:12px;top:10px;padding:5px 8px;border-radius:4px;background:#111b;color:#fff;font:12px/1.2 system-ui;z-index:2}
+  </style>
+  <script src="https://cdn.babylonjs.com/babylon.js"></script>
+  <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+</head>
+<body>
+<div id="badge">Babylon.js actual GLB</div><canvas id="renderCanvas"></canvas>
+<script>
+(async()=>{
+  const params=new URLSearchParams(location.search);
+  const model=params.get('model')||'../../model/Huawei-CE6851-web.glb';
+  const view=params.get('view')||'front';
+  const bg=params.get('bg')||'light';
+  document.getElementById('badge').textContent=`Babylon.js · ${model.includes('-web')?'web':'standard'} · ${view}`;
+  if(bg.startsWith('checker')) document.body.classList.add(bg);
+  const canvas=document.getElementById('renderCanvas');
+  BABYLON.SceneLoader.ShowLoadingScreen=false;
+  const engine=new BABYLON.Engine(canvas,true,{preserveDrawingBuffer:true,stencil:true,alpha:bg.startsWith('checker')});
+  engine.setHardwareScalingLevel(1);
+  const scene=new BABYLON.Scene(engine);
+  // glTF is right-handed. Keep the scene right-handed so physical +X/-X and
+  // +Z/-Z camera labels agree exactly with the authored model convention.
+  scene.useRightHandedSystem=true;
+  scene.clearColor=bg.startsWith('checker')?new BABYLON.Color4(0,0,0,0):(bg==='dark'?new BABYLON.Color4(.145,.16,.17,1):new BABYLON.Color4(.95,.96,.965,1));
+  scene.imageProcessingConfiguration.toneMappingEnabled=false;
+  scene.imageProcessingConfiguration.contrast=1;
+  scene.imageProcessingConfiguration.exposure=1;
+  const hemi=new BABYLON.HemisphericLight('hemi',new BABYLON.Vector3(0,1,0),scene); hemi.intensity=1.4;
+  const light=new BABYLON.DirectionalLight('key',new BABYLON.Vector3(-1,-1,-1),scene); light.position=new BABYLON.Vector3(1,1,1); light.intensity=1.0;
+  await BABYLON.SceneLoader.AppendAsync('',model,scene);
+  engine.hideLoadingUI();
+  const aspect=engine.getRenderWidth()/engine.getRenderHeight();
+  const ortho=(halfWidth,pos,up,target)=>{
+    const c=new BABYLON.FreeCamera('camera',pos,scene); c.upVector=up; c.setTarget(target||BABYLON.Vector3.Zero()); c.mode=BABYLON.Camera.ORTHOGRAPHIC_CAMERA;
+    c.orthoLeft=-halfWidth;c.orthoRight=halfWidth;c.orthoTop=halfWidth/aspect;c.orthoBottom=-halfWidth/aspect;c.minZ=.01;c.maxZ=5;return c;
+  };
+  const persp=(pos)=>{const c=new BABYLON.FreeCamera('camera',pos,scene);c.upVector=new BABYLON.Vector3(0,1,0);c.setTarget(BABYLON.Vector3.Zero());c.fov=.50;c.minZ=.01;c.maxZ=8;return c;};
+  const B=BABYLON.Vector3;
+  const V={
+    front:()=>ortho(.275,new B(0,0,1.2),new B(0,1,0)), rear:()=>ortho(.255,new B(0,0,-1.2),new B(0,1,0)),
+    left:()=>ortho(.245,new B(-1.2,0,0),new B(0,1,0)), right:()=>ortho(.245,new B(1.2,0,0),new B(0,1,0)),
+    top:()=>ortho(.390,new B(0,1.2,0),new B(0,0,-1)), bottom:()=>ortho(.390,new B(0,-1.2,0),new B(0,0,-1)),
+    front_left:()=>persp(new B(-.72,.30,.76)),front_right:()=>persp(new B(.72,.30,.76)),
+    rear_left:()=>persp(new B(-.72,.30,-.76)),rear_right:()=>persp(new B(.72,.30,-.76)),
+    front_ear_left:()=>ortho(.045,new B(0,0,1.2),new B(0,1,0),new B(-.220,0,0)),
+    front_ear_right:()=>ortho(.045,new B(0,0,1.2),new B(0,1,0),new B(.220,0,0)),
+    front_logo:()=>ortho(.070,new B(0,0,1.2),new B(0,1,0),new B(-.155,-.006,0)),
+    rear_management:()=>ortho(.060,new B(0,0,-1.2),new B(0,1,0),B.Zero()),
+  };
+  scene.activeCamera=(V[view]||V.front)();
+  scene.render();
+  const meshes=scene.meshes.filter(m=>m.getTotalVertices&&m.getTotalVertices()>0);
+  window.__viewerReady=true;
+  window.__viewerAudit={engine:`Babylon.js ${BABYLON.Engine.Version}`,model,view,meshes:meshes.length};
+  engine.runRenderLoop(()=>scene.render());
+  addEventListener('resize',()=>engine.resize());
+})();
+</script>
+</body>
+</html>

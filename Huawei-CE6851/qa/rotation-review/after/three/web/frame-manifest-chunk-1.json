@@ -1,0 +1,794 @@
+{
+  "generatedAt": "2026-08-27T13:50:45.788Z",
+  "pageUrl": "http://127.0.0.1:8877/Huawei-CE6851/qa/rotation-review/viewers/three.html?model=/Huawei-CE6851/model/Huawei-CE6851-web.glb%3Fhash=ed3b6000&variant=web&output=/Huawei-CE6851/qa/rotation-review/after/three/web&chunk=1",
+  "viewer": {
+    "engine": "Three.js r180",
+    "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "model": "/Huawei-CE6851/model/Huawei-CE6851-web.glb?hash=ed3b6000",
+    "variant": "web",
+    "pose": {
+      "yaw": 175,
+      "pitch": 15,
+      "bg": "light"
+    },
+    "bounds": [
+      0.48260000348091125,
+      0.04594999924302101,
+      0.4270000010728836
+    ],
+    "camera": {
+      "position": [
+        0.06988042764317574,
+        0.2148384439559326,
+        -0.7987369429008282
+      ],
+      "near": 0.005,
+      "far": 9.960864071846007
+    },
+    "materials": [
+      {
+        "mesh": "Closed_Chassis_Shell",
+        "material": "Huawei black powder-coated chassis",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Face_Front_SourceLocked",
+        "material": "tex_front",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Face_Rear_SourceLocked",
+        "material": "tex_rear",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Face_Left_SourceLocked",
+        "material": "tex_left",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Face_Right_SourceLocked",
+        "material": "tex_right",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Face_Top_SourceLocked",
+        "material": "tex_top",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Face_Bottom_SourceLocked",
+        "material": "tex_bottom",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Port_Side_Rack_Bracket_Left_2_Holes",
+        "material": "Huawei black powder-coated chassis",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Port_Side_Rack_Bracket_Right_2_Holes",
+        "material": "Huawei black powder-coated chassis",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Front_SFPplus_Cages_48",
+        "material": "Connector and honeycomb black",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Front_SFPplus_Cage_Lips_48",
+        "material": "Stamped and plated silver metal",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Front_SFPplus_Bank_Frames_3",
+        "material": "Stamped and plated silver metal",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Front_QSFPplus_Cages_6",
+        "material": "Connector and honeycomb black",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Front_QSFPplus_Cage_Lips_6",
+        "material": "Stamped and plated silver metal",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Front_QSFPplus_Frames_3",
+        "material": "Stamped and plated silver metal",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Front_SYS_MST_ID_Indicators",
+        "material": "Status green",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Rear_Module_PSU1_PAC-600WA-B",
+        "material": "Huawei black powder-coated chassis",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Rear_Module_FAN1_FAN-40EA-B",
+        "material": "Huawei black powder-coated chassis",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Rear_Module_Management",
+        "material": "Huawei black powder-coated chassis",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Rear_Module_FAN2_FAN-40EA-B",
+        "material": "Huawei black powder-coated chassis",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Rear_Module_PSU2_PAC-600WA-B",
+        "material": "Huawei black powder-coated chassis",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Rear_HotSwap_Module_Seams",
+        "material": "Connector and honeycomb black",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Rear_HotSwap_Silver_Handle_1",
+        "material": "Stamped and plated silver metal",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Rear_HotSwap_Silver_Handle_2",
+        "material": "Stamped and plated silver metal",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Rear_HotSwap_Silver_Handle_3",
+        "material": "Stamped and plated silver metal",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Rear_HotSwap_Silver_Handle_4",
+        "material": "Stamped and plated silver metal",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Rear_PSU_1_IEC_C14_Inlet",
+        "material": "Connector and honeycomb black",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Rear_PSU_1_Power_Switch",
+        "material": "Connector and honeycomb black",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Rear_PSU_1_Cord_Retainer",
+        "material": "Dark galvanized frame",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Rear_PSU_2_IEC_C14_Inlet",
+        "material": "Connector and honeycomb black",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Rear_PSU_2_Power_Switch",
+        "material": "Connector and honeycomb black",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Rear_PSU_2_Cord_Retainer",
+        "material": "Dark galvanized frame",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Rear_Console_RJ45",
+        "material": "Connector and honeycomb black",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Rear_ETH_Management_RJ45",
+        "material": "Connector and honeycomb black",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Rear_USB_Type_A",
+        "material": "Connector and honeycomb black",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Rear_Barcode_Pull_Tab",
+        "material": "Stamped and plated silver metal",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Rear_ACT_LA_ID_LEDs",
+        "material": "Status green",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Rear_Captive_Screws",
+        "material": "Dark galvanized frame",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Right_Side_Ground_Washer",
+        "material": "Stamped and plated silver metal",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Right_Side_Ground_Stud",
+        "material": "Dark galvanized frame",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Right_Side_Yellow_Earth_Mark",
+        "material": "Grounding yellow",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Left_Side_Mounting_Fasteners",
+        "material": "Dark galvanized frame",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Right_Side_Mounting_Fasteners",
+        "material": "Dark galvanized frame",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Top_PortSide_Vent_Recess",
+        "material": "Connector and honeycomb black",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Top_Vent_Field_Dividers_2",
+        "material": "Dark galvanized frame",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Top_Transverse_Cover_Seam",
+        "material": "Dark galvanized frame",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Bottom_Longitudinal_Stamped_Ribs_5",
+        "material": "Dark galvanized frame",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Bottom_Transverse_Stamped_Rib_1",
+        "material": "Dark galvanized frame",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Bottom_Visible_Fasteners",
+        "material": "Dark galvanized frame",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      }
+    ],
+    "renderer": {
+      "alpha": true,
+      "outputColorSpace": "srgb",
+      "toneMapping": 0
+    }
+  },
+  "yawStepDegrees": 5,
+  "chunk": 1,
+  "yawFrameCount": 18,
+  "pitchKeyframeCount": 0,
+  "totalFrameCount": 18,
+  "backgrounds": [
+    "light-checkerboard",
+    "dark-checkerboard"
+  ],
+  "frames": [
+    {
+      "index": 18,
+      "kind": "yaw",
+      "yaw": 90,
+      "pitch": 15,
+      "bg": "light",
+      "filename": "018-yaw-090-pitch-015-light.png",
+      "camera": {
+        "position": [
+          0.8017879882625791,
+          0.21483844395593255,
+          4.9095354671028156e-17
+        ],
+        "near": 0.005,
+        "far": 9.960864071846007
+      }
+    },
+    {
+      "index": 19,
+      "kind": "yaw",
+      "yaw": 95,
+      "pitch": 15,
+      "bg": "light",
+      "filename": "019-yaw-095-pitch-015-light.png",
+      "camera": {
+        "position": [
+          0.7987369429008282,
+          0.2148384439559326,
+          -0.06988042764317577
+        ],
+        "near": 0.005,
+        "far": 9.960864071846007
+      }
+    },
+    {
+      "index": 20,
+      "kind": "yaw",
+      "yaw": 100,
+      "pitch": 15,
+      "bg": "light",
+      "filename": "020-yaw-100-pitch-015-light.png",
+      "camera": {
+        "position": [
+          0.7896070271130492,
+          0.21483844395593255,
+          -0.13922902303703097
+        ],
+        "near": 0.005,
+        "far": 9.960864071846007
+      }
+    },
+    {
+      "index": 21,
+      "kind": "yaw",
+      "yaw": 105,
+      "pitch": 15,
+      "bg": "light",
+      "filename": "021-yaw-105-pitch-015-light.png",
+      "camera": {
+        "position": [
+          0.7744677250711817,
+          0.2148384439559326,
+          -0.20751800149679195
+        ],
+        "near": 0.005,
+        "far": 9.960864071846007
+      }
+    },
+    {
+      "index": 22,
+      "kind": "yaw",
+      "yaw": 110,
+      "pitch": 15,
+      "bg": "light",
+      "filename": "022-yaw-110-pitch-015-light.png",
+      "camera": {
+        "position": [
+          0.7534342560051243,
+          0.2148384439559326,
+          -0.27422764266236693
+        ],
+        "near": 0.005,
+        "far": 9.960864071846007
+      }
+    },
+    {
+      "index": 23,
+      "kind": "yaw",
+      "yaw": 115,
+      "pitch": 15,
+      "bg": "light",
+      "filename": "023-yaw-115-pitch-015-light.png",
+      "camera": {
+        "position": [
+          0.7266666973148256,
+          0.21483844395593255,
+          -0.33885024588410345
+        ],
+        "near": 0.005,
+        "far": 9.960864071846007
+      }
+    },
+    {
+      "index": 24,
+      "kind": "yaw",
+      "yaw": 120,
+      "pitch": 15,
+      "bg": "light",
+      "filename": "024-yaw-120-pitch-015-light.png",
+      "camera": {
+        "position": [
+          0.6943687662846129,
+          0.21483844395593255,
+          -0.4008939941312894
+        ],
+        "near": 0.005,
+        "far": 9.960864071846007
+      }
+    },
+    {
+      "index": 25,
+      "kind": "yaw",
+      "yaw": 125,
+      "pitch": 15,
+      "bg": "light",
+      "filename": "025-yaw-125-pitch-015-light.png",
+      "camera": {
+        "position": [
+          0.6567862696716498,
+          0.21483844395593255,
+          -0.4598866970167246
+        ],
+        "near": 0.005,
+        "far": 9.960864071846007
+      }
+    },
+    {
+      "index": 26,
+      "kind": "yaw",
+      "yaw": 130,
+      "pitch": 15,
+      "bg": "light",
+      "filename": "026-yaw-130-pitch-015-light.png",
+      "camera": {
+        "position": [
+          0.6142052329680932,
+          0.2148384439559326,
+          -0.5153793844506824
+        ],
+        "near": 0.005,
+        "far": 9.960864071846007
+      }
+    },
+    {
+      "index": 27,
+      "kind": "yaw",
+      "yaw": 135,
+      "pitch": 15,
+      "bg": "light",
+      "filename": "027-yaw-135-pitch-015-light.png",
+      "camera": {
+        "position": [
+          0.5669497235743897,
+          0.21483844395593255,
+          -0.5669497235743897
+        ],
+        "near": 0.005,
+        "far": 9.960864071846007
+      }
+    },
+    {
+      "index": 28,
+      "kind": "yaw",
+      "yaw": 140,
+      "pitch": 15,
+      "bg": "light",
+      "filename": "028-yaw-140-pitch-015-light.png",
+      "camera": {
+        "position": [
+          0.5153793844506824,
+          0.2148384439559326,
+          -0.6142052329680932
+        ],
+        "near": 0.005,
+        "far": 9.960864071846007
+      }
+    },
+    {
+      "index": 29,
+      "kind": "yaw",
+      "yaw": 145,
+      "pitch": 15,
+      "bg": "light",
+      "filename": "029-yaw-145-pitch-015-light.png",
+      "camera": {
+        "position": [
+          0.45988669701672447,
+          0.21483844395593257,
+          -0.65678626967165
+        ],
+        "near": 0.005,
+        "far": 9.960864071846007
+      }
+    },
+    {
+      "index": 30,
+      "kind": "yaw",
+      "yaw": 150,
+      "pitch": 15,
+      "bg": "light",
+      "filename": "030-yaw-150-pitch-015-light.png",
+      "camera": {
+        "position": [
+          0.4008939941312895,
+          0.21483844395593255,
+          -0.6943687662846129
+        ],
+        "near": 0.005,
+        "far": 9.960864071846007
+      }
+    },
+    {
+      "index": 31,
+      "kind": "yaw",
+      "yaw": 155,
+      "pitch": 15,
+      "bg": "light",
+      "filename": "031-yaw-155-pitch-015-light.png",
+      "camera": {
+        "position": [
+          0.3388502458841036,
+          0.2148384439559326,
+          -0.7266666973148257
+        ],
+        "near": 0.005,
+        "far": 9.960864071846007
+      }
+    },
+    {
+      "index": 32,
+      "kind": "yaw",
+      "yaw": 160,
+      "pitch": 15,
+      "bg": "light",
+      "filename": "032-yaw-160-pitch-015-light.png",
+      "camera": {
+        "position": [
+          0.27422764266236704,
+          0.21483844395593255,
+          -0.753434256005124
+        ],
+        "near": 0.005,
+        "far": 9.960864071846007
+      }
+    },
+    {
+      "index": 33,
+      "kind": "yaw",
+      "yaw": 165,
+      "pitch": 15,
+      "bg": "light",
+      "filename": "033-yaw-165-pitch-015-light.png",
+      "camera": {
+        "position": [
+          0.20751800149679206,
+          0.21483844395593255,
+          -0.7744677250711814
+        ],
+        "near": 0.005,
+        "far": 9.960864071846007
+      }
+    },
+    {
+      "index": 34,
+      "kind": "yaw",
+      "yaw": 170,
+      "pitch": 15,
+      "bg": "light",
+      "filename": "034-yaw-170-pitch-015-light.png",
+      "camera": {
+        "position": [
+          0.13922902303703094,
+          0.21483844395593255,
+          -0.7896070271130492
+        ],
+        "near": 0.005,
+        "far": 9.960864071846007
+      }
+    },
+    {
+      "index": 35,
+      "kind": "yaw",
+      "yaw": 175,
+      "pitch": 15,
+      "bg": "light",
+      "filename": "035-yaw-175-pitch-015-light.png",
+      "camera": {
+        "position": [
+          0.06988042764317574,
+          0.2148384439559326,
+          -0.7987369429008282
+        ],
+        "near": 0.005,
+        "far": 9.960864071846007
+      }
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "model": "Huawei-CE6851",
+  "review_date": "2026-08-27",
+  "frozen_identity": {
+    "pid": "Huawei CE6851-48S6Q-HI",
+    "ordering_part_number": "02350JAS",
+    "part_model": "CE6851-HI-B-B0A",
+    "height": "1U",
+    "installed_configuration": "48x10GE SFP+, 6x40GE QSFP+, 2x PAC-600WA-B, 2x FAN-40EA-B, back-to-front airflow, port-side brackets installed",
+    "bottom_mode": "SOURCE_LOCKED_GENERATION"
+  },
+  "glb_hashes": {
+    "before_standard": "8fb2e08ad9937d8d8bbdb524f6a83ca6c1d2882c19299289b9e28282e556531f",
+    "before_web": "f3ab68606febe15ed6be49147e58590f58f7537bfcb012629a261ec3e63519a8",
+    "after_standard": "1558860afd7f3f036593fe22bcf16bc3407bd05e936b79eb7651e58c33b447a1",
+    "after_web": "ed3b60003d5771eeca43364910e6e51eb7b648abe0ad4925543e86967be6d7aa"
+  },
+  "before_reproduction": {
+    "viewer_combinations": 4,
+    "frames_per_combination": 84,
+    "total_frames": 336,
+    "gross_whole_device_disappearance_observed": false,
+    "result": "REWORK",
+    "finding": "Both engines loaded the model, but the canonical face cards and closed core were separated by only about 0.08 mm and the rear/top relief contained additional coplanar or near-coplanar overlaps. This reproduced the model-side source of subpixel shimmer/draw-order instability."
+  },
+  "root_causes": [
+    "The six canonical evidence cards were too close to the previous full-size core.",
+    "Rear module bodies competed with the source-locked rear card.",
+    "Top vent/seam/divider relief used intersecting or near-parallel planes; a first repair checkpoint still left one 0.35 mm divider overlap and was superseded."
+  ],
+  "repairs": [
+    "Inset the watertight core to 439.6 x 41.2 x 410 mm while preserving all official exterior dimensions and source card planes.",
+    "Inset rear module bodies behind the source-locked rear card.",
+    "Separated top vent and seam layers, then seated the two visible vent dividers on the vent outer surface as stable 0.6 mm relief without interpenetration.",
+    "Preserved all six correct source-locked PNGs unchanged and regenerated both standard and web GLBs from the same scene."
+  ],
+  "final_structural_gate": {
+    "status": "PASS",
+    "standard_and_web": {
+      "materials": "OPAQUE only; baseColor alpha 1; doubleSided false",
+      "embedded_alpha_lt_255_pixels": 0,
+      "negative_transforms": 0,
+      "exact_duplicate_triangle_groups": 0,
+      "opposite_orientation_duplicate_groups": 0,
+      "hazardous_coplanar_pairs": 0,
+      "hazardous_near_coplanar_pairs": 0,
+      "raw_internal_or_sub_1mm2_coplanar_pairs": 1,
+      "raw_internal_core_or_solid_joint_near_pairs": 18,
+      "closed_core": "watertight, winding-consistent, positive volume"
+    }
+  },
+  "standard_audits": {
+    "views": {"status": "PASS", "errors": 0, "warnings": 6, "warning_scope": "anti-aliased silhouette-edge alpha only; physical-left source-lock ratio error 3.873% is inside the recorded 4% tolerance"},
+    "standard_glb": {"status": "PASS", "errors": 0, "warnings": 0},
+    "web_glb": {"status": "PASS", "errors": 0, "warnings": 0},
+    "standard_web_visible_geometry_parity": "PASS"
+  },
+  "final_browser_gate": {
+    "evidence_bound_to_hash_prefixes": ["1558860a", "ed3b6000"],
+    "viewers": ["Three.js r180 / WebGL 2.0 Chromium", "Babylon.js 9.23.0 / WebGL 2"],
+    "combinations": 4,
+    "yaw_step_degrees": 5,
+    "yaw_frames_per_combination": 72,
+    "pitch_keyframes_per_combination": 12,
+    "rotation_frames_per_combination": 84,
+    "total_rotation_frames": 336,
+    "specified_static_loads_per_combination": 10,
+    "total_specified_static_loads": 40,
+    "light_and_dark_checkerboards": true,
+    "visual_findings": {
+      "surface_flicker": false,
+      "transparency_jump": false,
+      "checkerboard_leak": false,
+      "face_disappearance": false,
+      "mirroring": false,
+      "texture_switch": false,
+      "sudden_gray": false
+    },
+    "status": "PASS"
+  },
+  "evidence": {
+    "before": "qa/rotation-review/before/{three,babylon}/{standard,web}/",
+    "after": "qa/rotation-review/after/{three,babylon}/{standard,web}/",
+    "matched_camera": "qa/rotation-review/after/matched-camera/contact-sheet.png",
+    "feature_inventory_review": "qa/rotation-review/after/feature-inventory-review.csv",
+    "structural_audit": "qa/rotation-review/after/structural-rotation-audit.json",
+    "superseded_intermediate_failure": "qa/superseded/post-repair-divider-rework-20260827/"
+  },
+  "authenticity_conclusion": "PASS: exact CE6851-48S6Q-HI / 02350JAS / CE6851-HI-B-B0A identity, installed modules, directions, six faces, brackets, port order, and full underside remain source-locked. No identity gap or bottom fallback remains.",
+  "warnings_and_residual_risk": [
+    "The physical-left elevation silhouette differs from the pure 420:43.6 body ratio by 3.873% because the locked photograph includes proven protrusions; the final GLB dimensions independently audit to the authored exterior bounds.",
+    "All raw sub-threshold pairs remaining in the structural report are classified internal-core or sub-1 mm^2 solid-junction contacts; hazardous visible parallel-surface count is zero."
+  ],
+  "status": "PASS"
+}
+

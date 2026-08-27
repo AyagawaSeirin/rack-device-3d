@@ -1,0 +1,854 @@
+{
+  "near_coplanar_threshold_mm": 0.5,
+  "models": [
+    {
+      "path": "Huawei-CE6851/model/Huawei-CE6851.glb",
+      "bytes": 16579604,
+      "sha256": "648b84245a3af6e52b6c41b285e527e136120d8f37dfecb9f5e6a4234830bdfc",
+      "materials": [
+        {
+          "index": 0,
+          "name": "Huawei black powder-coated chassis",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            0.07450980392156863,
+            0.0784313725490196,
+            0.0784313725490196,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 1,
+          "name": "tex_front",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 2,
+          "name": "tex_rear",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 3,
+          "name": "tex_left",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 4,
+          "name": "tex_right",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 5,
+          "name": "tex_top",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 6,
+          "name": "tex_bottom",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 7,
+          "name": "Connector and honeycomb black",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            0.011764705882352941,
+            0.011764705882352941,
+            0.011764705882352941,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 8,
+          "name": "Stamped and plated silver metal",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            0.6313725490196078,
+            0.6392156862745098,
+            0.611764705882353,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 9,
+          "name": "Status green",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            0.0784313725490196,
+            0.47843137254901963,
+            0.16862745098039217,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 10,
+          "name": "Dark galvanized frame",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            0.30980392156862746,
+            0.3215686274509804,
+            0.2980392156862745,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 11,
+          "name": "Grounding yellow",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            0.9607843137254902,
+            0.7215686274509804,
+            0.03137254901960784,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        }
+      ],
+      "images": [
+        {
+          "index": 0,
+          "size": [
+            3072,
+            337
+          ],
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "alpha_lt_255_pixels": 0,
+          "alpha_between_0_255_pixels": 0
+        },
+        {
+          "index": 1,
+          "size": [
+            3072,
+            310
+          ],
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "alpha_lt_255_pixels": 0,
+          "alpha_between_0_255_pixels": 0
+        },
+        {
+          "index": 2,
+          "size": [
+            3072,
+            332
+          ],
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "alpha_lt_255_pixels": 0,
+          "alpha_between_0_255_pixels": 0
+        },
+        {
+          "index": 3,
+          "size": [
+            3072,
+            319
+          ],
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "alpha_lt_255_pixels": 0,
+          "alpha_between_0_255_pixels": 0
+        },
+        {
+          "index": 4,
+          "size": [
+            2048,
+            1918
+          ],
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "alpha_lt_255_pixels": 0,
+          "alpha_between_0_255_pixels": 0
+        },
+        {
+          "index": 5,
+          "size": [
+            2048,
+            1945
+          ],
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "alpha_lt_255_pixels": 0,
+          "alpha_between_0_255_pixels": 0
+        }
+      ],
+      "negative_world_transforms": [],
+      "closed_core_candidates": [
+        {
+          "name": "Closed_Chassis_Shell",
+          "watertight": true,
+          "winding_consistent": true,
+          "volume": 0.0074257231234578815,
+          "bounds": [
+            [
+              -0.2198,
+              -0.0206,
+              -0.205
+            ],
+            [
+              0.2198,
+              0.0206,
+              0.205
+            ]
+          ]
+        }
+      ],
+      "geometry": {
+        "triangle_count": 7568,
+        "exact_duplicate_triangle_groups": [],
+        "opposite_orientation_duplicate_groups": [],
+        "coplanar_overlap_pairs": [
+          {
+            "mesh_a": "Right_Side_Yellow_Earth_Mark",
+            "mesh_b": "Right_Side_Ground_Washer",
+            "axis": 0,
+            "separation_mm": 0.0,
+            "overlap_area_mm2": 0.099813
+          }
+        ],
+        "near_coplanar_overlap_pairs_under_threshold": [
+          {
+            "mesh_a": "Right_Side_Yellow_Earth_Mark",
+            "mesh_b": "Right_Side_Ground_Washer",
+            "axis": 0,
+            "separation_mm": 0.400007,
+            "overlap_area_mm2": 0.099813
+          },
+          {
+            "mesh_a": "Bottom_Longitudinal_Stamped_Ribs_5",
+            "mesh_b": "Bottom_Visible_Fasteners",
+            "axis": 1,
+            "separation_mm": 0.1,
+            "overlap_area_mm2": 0.430519
+          },
+          {
+            "mesh_a": "Face_Bottom_SourceLocked",
+            "mesh_b": "Rear_Barcode_Pull_Tab",
+            "axis": 1,
+            "separation_mm": 0.18,
+            "overlap_area_mm2": 0.08999
+          },
+          {
+            "mesh_a": "Closed_Chassis_Shell",
+            "mesh_b": "Rear_Module_PSU2_PAC-600WA-B",
+            "axis": 1,
+            "separation_mm": 0.1,
+            "overlap_area_mm2": 8.14214
+          },
+          {
+            "mesh_a": "Closed_Chassis_Shell",
+            "mesh_b": "Rear_Module_FAN2_FAN-40EA-B",
+            "axis": 1,
+            "separation_mm": 0.1,
+            "overlap_area_mm2": 7.661245
+          },
+          {
+            "mesh_a": "Closed_Chassis_Shell",
+            "mesh_b": "Rear_Module_Management",
+            "axis": 1,
+            "separation_mm": 0.1,
+            "overlap_area_mm2": 4.117497
+          },
+          {
+            "mesh_a": "Closed_Chassis_Shell",
+            "mesh_b": "Rear_Module_FAN1_FAN-40EA-B",
+            "axis": 1,
+            "separation_mm": 0.1,
+            "overlap_area_mm2": 7.661245
+          },
+          {
+            "mesh_a": "Closed_Chassis_Shell",
+            "mesh_b": "Rear_Module_PSU1_PAC-600WA-B",
+            "axis": 1,
+            "separation_mm": 0.1,
+            "overlap_area_mm2": 8.673745
+          },
+          {
+            "mesh_a": "Top_PortSide_Vent_Recess",
+            "mesh_b": "Top_Vent_Field_Dividers_2",
+            "axis": 1,
+            "separation_mm": 0.35,
+            "overlap_area_mm2": 38.999179
+          },
+          {
+            "mesh_a": "Bottom_Visible_Fasteners",
+            "mesh_b": "Bottom_Longitudinal_Stamped_Ribs_5",
+            "axis": 1,
+            "separation_mm": 0.400001,
+            "overlap_area_mm2": 0.430519
+          },
+          {
+            "mesh_a": "Rear_Module_PSU2_PAC-600WA-B",
+            "mesh_b": "Closed_Chassis_Shell",
+            "axis": 1,
+            "separation_mm": 0.1,
+            "overlap_area_mm2": 0.434239
+          },
+          {
+            "mesh_a": "Rear_Module_FAN2_FAN-40EA-B",
+            "mesh_b": "Closed_Chassis_Shell",
+            "axis": 1,
+            "separation_mm": 0.1,
+            "overlap_area_mm2": 74.058789
+          },
+          {
+            "mesh_a": "Rear_Module_Management",
+            "mesh_b": "Closed_Chassis_Shell",
+            "axis": 1,
+            "separation_mm": 0.1,
+            "overlap_area_mm2": 39.802518
+          },
+          {
+            "mesh_a": "Rear_Module_FAN1_FAN-40EA-B",
+            "mesh_b": "Closed_Chassis_Shell",
+            "axis": 1,
+            "separation_mm": 0.1,
+            "overlap_area_mm2": 74.058789
+          },
+          {
+            "mesh_a": "Rear_Module_PSU1_PAC-600WA-B",
+            "mesh_b": "Closed_Chassis_Shell",
+            "axis": 1,
+            "separation_mm": 0.1,
+            "overlap_area_mm2": 83.837889
+          },
+          {
+            "mesh_a": "Rear_Captive_Screws",
+            "mesh_b": "Rear_HotSwap_Module_Seams",
+            "axis": 2,
+            "separation_mm": 0.149995,
+            "overlap_area_mm2": 0.077184
+          },
+          {
+            "mesh_a": "Front_SFPplus_Bank_Frames_3",
+            "mesh_b": "Front_SYS_MST_ID_Indicators",
+            "axis": 2,
+            "separation_mm": 0.200003,
+            "overlap_area_mm2": 0.008232
+          },
+          {
+            "mesh_a": "Rear_Captive_Screws",
+            "mesh_b": "Rear_HotSwap_Module_Seams",
+            "axis": 2,
+            "separation_mm": 0.349998,
+            "overlap_area_mm2": 0.412132
+          },
+          {
+            "mesh_a": "Top_Vent_Field_Dividers_2",
+            "mesh_b": "Top_PortSide_Vent_Recess",
+            "axis": 2,
+            "separation_mm": 0.499994,
+            "overlap_area_mm2": 0.095278
+          },
+          {
+            "mesh_a": "Front_SFPplus_Bank_Frames_3",
+            "mesh_b": "Front_SYS_MST_ID_Indicators",
+            "axis": 2,
+            "separation_mm": 0.29999,
+            "overlap_area_mm2": 0.003727
+          }
+        ],
+        "near_coplanar_threshold_mm": 0.5,
+        "hazardous_coplanar_overlap_pairs": [],
+        "hazardous_near_coplanar_overlap_pairs": [
+          {
+            "mesh_a": "Top_PortSide_Vent_Recess",
+            "mesh_b": "Top_Vent_Field_Dividers_2",
+            "axis": 1,
+            "separation_mm": 0.35,
+            "overlap_area_mm2": 38.999179
+          }
+        ],
+        "tolerance_note": "Sub-1 mm^2 solid-junction contacts and internal closed-core contacts are reported but are not draw-order hazards."
+      },
+      "failures": [
+        "near-coplanar-risk"
+      ],
+      "status": "REWORK"
+    },
+    {
+      "path": "Huawei-CE6851/model/Huawei-CE6851-web.glb",
+      "bytes": 10129108,
+      "sha256": "e0dc87270ea5072cd00f7f9880fce8134fd58c9063f8b4d28918d4afb4048655",
+      "materials": [
+        {
+          "index": 0,
+          "name": "Huawei black powder-coated chassis",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            0.07450980392156863,
+            0.0784313725490196,
+            0.0784313725490196,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 1,
+          "name": "tex_front",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 2,
+          "name": "tex_rear",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 3,
+          "name": "tex_left",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 4,
+          "name": "tex_right",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 5,
+          "name": "tex_top",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 6,
+          "name": "tex_bottom",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 7,
+          "name": "Connector and honeycomb black",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            0.011764705882352941,
+            0.011764705882352941,
+            0.011764705882352941,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 8,
+          "name": "Stamped and plated silver metal",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            0.6313725490196078,
+            0.6392156862745098,
+            0.611764705882353,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 9,
+          "name": "Status green",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            0.0784313725490196,
+            0.47843137254901963,
+            0.16862745098039217,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 10,
+          "name": "Dark galvanized frame",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            0.30980392156862746,
+            0.3215686274509804,
+            0.2980392156862745,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 11,
+          "name": "Grounding yellow",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            0.9607843137254902,
+            0.7215686274509804,
+            0.03137254901960784,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        }
+      ],
+      "images": [
+        {
+          "index": 0,
+          "size": [
+            2048,
+            225
+          ],
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "alpha_lt_255_pixels": 0,
+          "alpha_between_0_255_pixels": 0
+        },
+        {
+          "index": 1,
+          "size": [
+            2048,
+            207
+          ],
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "alpha_lt_255_pixels": 0,
+          "alpha_between_0_255_pixels": 0
+        },
+        {
+          "index": 2,
+          "size": [
+            2048,
+            221
+          ],
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "alpha_lt_255_pixels": 0,
+          "alpha_between_0_255_pixels": 0
+        },
+        {
+          "index": 3,
+          "size": [
+            2048,
+            213
+          ],
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "alpha_lt_255_pixels": 0,
+          "alpha_between_0_255_pixels": 0
+        },
+        {
+          "index": 4,
+          "size": [
+            1536,
+            1439
+          ],
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "alpha_lt_255_pixels": 0,
+          "alpha_between_0_255_pixels": 0
+        },
+        {
+          "index": 5,
+          "size": [
+            1536,
+            1459
+          ],
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "alpha_lt_255_pixels": 0,
+          "alpha_between_0_255_pixels": 0
+        }
+      ],
+      "negative_world_transforms": [],
+      "closed_core_candidates": [
+        {
+          "name": "Closed_Chassis_Shell",
+          "watertight": true,
+          "winding_consistent": true,
+          "volume": 0.0074257231234578815,
+          "bounds": [
+            [
+              -0.2198,
+              -0.0206,
+              -0.205
+            ],
+            [
+              0.2198,
+              0.0206,
+              0.205
+            ]
+          ]
+        }
+      ],
+      "geometry": {
+        "triangle_count": 7568,
+        "exact_duplicate_triangle_groups": [],
+        "opposite_orientation_duplicate_groups": [],
+        "coplanar_overlap_pairs": [
+          {
+            "mesh_a": "Right_Side_Yellow_Earth_Mark",
+            "mesh_b": "Right_Side_Ground_Washer",
+            "axis": 0,
+            "separation_mm": 0.0,
+            "overlap_area_mm2": 0.099813
+          }
+        ],
+        "near_coplanar_overlap_pairs_under_threshold": [
+          {
+            "mesh_a": "Right_Side_Yellow_Earth_Mark",
+            "mesh_b": "Right_Side_Ground_Washer",
+            "axis": 0,
+            "separation_mm": 0.400007,
+            "overlap_area_mm2": 0.099813
+          },
+          {
+            "mesh_a": "Bottom_Longitudinal_Stamped_Ribs_5",
+            "mesh_b": "Bottom_Visible_Fasteners",
+            "axis": 1,
+            "separation_mm": 0.1,
+            "overlap_area_mm2": 0.430519
+          },
+          {
+            "mesh_a": "Face_Bottom_SourceLocked",
+            "mesh_b": "Rear_Barcode_Pull_Tab",
+            "axis": 1,
+            "separation_mm": 0.18,
+            "overlap_area_mm2": 0.08999
+          },
+          {
+            "mesh_a": "Closed_Chassis_Shell",
+            "mesh_b": "Rear_Module_PSU2_PAC-600WA-B",
+            "axis": 1,
+            "separation_mm": 0.1,
+            "overlap_area_mm2": 8.14214
+          },
+          {
+            "mesh_a": "Closed_Chassis_Shell",
+            "mesh_b": "Rear_Module_FAN2_FAN-40EA-B",
+            "axis": 1,
+            "separation_mm": 0.1,
+            "overlap_area_mm2": 7.661245
+          },
+          {
+            "mesh_a": "Closed_Chassis_Shell",
+            "mesh_b": "Rear_Module_Management",
+            "axis": 1,
+            "separation_mm": 0.1,
+            "overlap_area_mm2": 4.117497
+          },
+          {
+            "mesh_a": "Closed_Chassis_Shell",
+            "mesh_b": "Rear_Module_FAN1_FAN-40EA-B",
+            "axis": 1,
+            "separation_mm": 0.1,
+            "overlap_area_mm2": 7.661245
+          },
+          {
+            "mesh_a": "Closed_Chassis_Shell",
+            "mesh_b": "Rear_Module_PSU1_PAC-600WA-B",
+            "axis": 1,
+            "separation_mm": 0.1,
+            "overlap_area_mm2": 8.673745
+          },
+          {
+            "mesh_a": "Top_PortSide_Vent_Recess",
+            "mesh_b": "Top_Vent_Field_Dividers_2",
+            "axis": 1,
+            "separation_mm": 0.35,
+            "overlap_area_mm2": 38.999179
+          },
+          {
+            "mesh_a": "Bottom_Visible_Fasteners",
+            "mesh_b": "Bottom_Longitudinal_Stamped_Ribs_5",
+            "axis": 1,
+            "separation_mm": 0.400001,
+            "overlap_area_mm2": 0.430519
+          },
+          {
+            "mesh_a": "Rear_Module_PSU2_PAC-600WA-B",
+            "mesh_b": "Closed_Chassis_Shell",
+            "axis": 1,
+            "separation_mm": 0.1,
+            "overlap_area_mm2": 0.434239
+          },
+          {
+            "mesh_a": "Rear_Module_FAN2_FAN-40EA-B",
+            "mesh_b": "Closed_Chassis_Shell",
+            "axis": 1,
+            "separation_mm": 0.1,
+            "overlap_area_mm2": 74.058789
+          },
+          {
+            "mesh_a": "Rear_Module_Management",
+            "mesh_b": "Closed_Chassis_Shell",
+            "axis": 1,
+            "separation_mm": 0.1,
+            "overlap_area_mm2": 39.802518
+          },
+          {
+            "mesh_a": "Rear_Module_FAN1_FAN-40EA-B",
+            "mesh_b": "Closed_Chassis_Shell",
+            "axis": 1,
+            "separation_mm": 0.1,
+            "overlap_area_mm2": 74.058789
+          },
+          {
+            "mesh_a": "Rear_Module_PSU1_PAC-600WA-B",
+            "mesh_b": "Closed_Chassis_Shell",
+            "axis": 1,
+            "separation_mm": 0.1,
+            "overlap_area_mm2": 83.837889
+          },
+          {
+            "mesh_a": "Rear_Captive_Screws",
+            "mesh_b": "Rear_HotSwap_Module_Seams",
+            "axis": 2,
+            "separation_mm": 0.149995,
+            "overlap_area_mm2": 0.077184
+          },
+          {
+            "mesh_a": "Front_SFPplus_Bank_Frames_3",
+            "mesh_b": "Front_SYS_MST_ID_Indicators",
+            "axis": 2,
+            "separation_mm": 0.200003,
+            "overlap_area_mm2": 0.008232
+          },
+          {
+            "mesh_a": "Rear_Captive_Screws",
+            "mesh_b": "Rear_HotSwap_Module_Seams",
+            "axis": 2,
+            "separation_mm": 0.349998,
+            "overlap_area_mm2": 0.412132
+          },
+          {
+            "mesh_a": "Top_Vent_Field_Dividers_2",
+            "mesh_b": "Top_PortSide_Vent_Recess",
+            "axis": 2,
+            "separation_mm": 0.499994,
+            "overlap_area_mm2": 0.095278
+          },
+          {
+            "mesh_a": "Front_SFPplus_Bank_Frames_3",
+            "mesh_b": "Front_SYS_MST_ID_Indicators",
+            "axis": 2,
+            "separation_mm": 0.29999,
+            "overlap_area_mm2": 0.003727
+          }
+        ],
+        "near_coplanar_threshold_mm": 0.5,
+        "hazardous_coplanar_overlap_pairs": [],
+        "hazardous_near_coplanar_overlap_pairs": [
+          {
+            "mesh_a": "Top_PortSide_Vent_Recess",
+            "mesh_b": "Top_Vent_Field_Dividers_2",
+            "axis": 1,
+            "separation_mm": 0.35,
+            "overlap_area_mm2": 38.999179
+          }
+        ],
+        "tolerance_note": "Sub-1 mm^2 solid-junction contacts and internal closed-core contacts are reported but are not draw-order hazards."
+      },
+      "failures": [
+        "near-coplanar-risk"
+      ],
+      "status": "REWORK"
+    }
+  ],
+  "status": "REWORK"
+}
