@@ -1,0 +1,212 @@
+{
+  "schema": "task12-final-validation-v1",
+  "model": "Cisco-N9KC93180YC",
+  "identity": "Cisco Nexus 9000 N9K-C93180YC-FX Chassis",
+  "frozen_artifacts": {
+    "standard": {
+      "path": "models/Cisco-N9K-C93180YC-FX-standard.glb",
+      "sha256": "e12c36ec0b7c803edba7a1fa886a749b058f4d29b831ebcd6b40ce9d06ca172c",
+      "bytes": 8440568
+    },
+    "web": {
+      "path": "models/Cisco-N9K-C93180YC-FX-web.glb",
+      "sha256": "7d3f9e81ae32da28b1c0c313cf2ecccf4dcc13ab5cc87bb997f9923041da242c",
+      "bytes": 6277940
+    },
+    "builder": {
+      "path": "tools/build_glb.py",
+      "sha256": "9043e117e01eae87fe9877b3b32d296f226117f74806a702df72b14fea701db7",
+      "bytes": 26760
+    }
+  },
+  "audits": {
+    "standard": {
+      "glb_audit": "PASS",
+      "glb_errors": 0,
+      "structural_audit": "PASS",
+      "structural_errors": 0,
+      "material_alpha_violations": 0,
+      "embedded_image_errors": 0,
+      "sampler_violations": 0,
+      "negative_transforms": 0,
+      "degenerate_triangles": 0,
+      "exact_duplicate_triangle_groups": 0,
+      "opposite_duplicate_triangle_pairs": 0,
+      "unresolved_visible_coplanar_pairs_below_0_05mm": 0,
+      "primitives_without_normals": 0,
+      "closed_core_winding_consistent": true,
+      "closed_core_pass": true
+    },
+    "web": {
+      "glb_audit": "PASS",
+      "glb_errors": 0,
+      "structural_audit": "PASS",
+      "structural_errors": 0,
+      "material_alpha_violations": 0,
+      "embedded_image_errors": 0,
+      "sampler_violations": 0,
+      "negative_transforms": 0,
+      "degenerate_triangles": 0,
+      "exact_duplicate_triangle_groups": 0,
+      "opposite_duplicate_triangle_pairs": 0,
+      "unresolved_visible_coplanar_pairs_below_0_05mm": 0,
+      "primitives_without_normals": 0,
+      "closed_core_winding_consistent": true,
+      "closed_core_pass": true
+    }
+  },
+  "independent_loads": {
+    "three-standard": {
+      "loads": 10,
+      "unique_cache_busters": 10,
+      "sha256": "e12c36ec0b7c803edba7a1fa886a749b058f4d29b831ebcd6b40ce9d06ca172c",
+      "bytes": 8440568,
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "all_materials_opaque": true,
+      "result": "PASS"
+    },
+    "three-web": {
+      "loads": 10,
+      "unique_cache_busters": 10,
+      "sha256": "7d3f9e81ae32da28b1c0c313cf2ecccf4dcc13ab5cc87bb997f9923041da242c",
+      "bytes": 6277940,
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "all_materials_opaque": true,
+      "result": "PASS"
+    },
+    "babylon-standard": {
+      "loads": 10,
+      "unique_cache_busters": 10,
+      "sha256": "e12c36ec0b7c803edba7a1fa886a749b058f4d29b831ebcd6b40ce9d06ca172c",
+      "bytes": 8440568,
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "all_materials_opaque": true,
+      "result": "PASS"
+    },
+    "babylon-web": {
+      "loads": 10,
+      "unique_cache_busters": 10,
+      "sha256": "7d3f9e81ae32da28b1c0c313cf2ecccf4dcc13ab5cc87bb997f9923041da242c",
+      "bytes": 6277940,
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "all_materials_opaque": true,
+      "result": "PASS"
+    }
+  },
+  "load_totals": {
+    "required": 40,
+    "actual": 40
+  },
+  "rotation": {
+    "three-standard": {
+      "yaw_frames": 72,
+      "yaw_step_degrees": 5,
+      "pitch_frames": 4,
+      "checkerboards": [
+        "light",
+        "dark"
+      ],
+      "same_angle_frames": 3,
+      "same_angle_sha256": "3013924eaa8a8da5ebe76bf57f2aae5823337a02664d8005c887d1845851fb69",
+      "same_angle_byte_identical": true,
+      "sha256": "e12c36ec0b7c803edba7a1fa886a749b058f4d29b831ebcd6b40ce9d06ca172c",
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "result": "PASS"
+    },
+    "three-web": {
+      "yaw_frames": 72,
+      "yaw_step_degrees": 5,
+      "pitch_frames": 4,
+      "checkerboards": [
+        "light",
+        "dark"
+      ],
+      "same_angle_frames": 3,
+      "same_angle_sha256": "98aea27c0db3e3d19dd7719b9bc12cc75cbb0eb89e7fae744c5891dcac81435c",
+      "same_angle_byte_identical": true,
+      "sha256": "7d3f9e81ae32da28b1c0c313cf2ecccf4dcc13ab5cc87bb997f9923041da242c",
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "result": "PASS"
+    },
+    "babylon-standard": {
+      "yaw_frames": 72,
+      "yaw_step_degrees": 5,
+      "pitch_frames": 4,
+      "checkerboards": [
+        "light",
+        "dark"
+      ],
+      "same_angle_frames": 3,
+      "same_angle_sha256": "0f1e67ffae769faf72548337d148329582487cdc9a5ce9d1197f3f3b203f2975",
+      "same_angle_byte_identical": true,
+      "sha256": "e12c36ec0b7c803edba7a1fa886a749b058f4d29b831ebcd6b40ce9d06ca172c",
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "result": "PASS"
+    },
+    "babylon-web": {
+      "yaw_frames": 72,
+      "yaw_step_degrees": 5,
+      "pitch_frames": 4,
+      "checkerboards": [
+        "light",
+        "dark"
+      ],
+      "same_angle_frames": 3,
+      "same_angle_sha256": "e34a123a0cdf8f0275b2506d4af0dcc23951c6a9d08c70831c127f342b9a8455",
+      "same_angle_byte_identical": true,
+      "sha256": "7d3f9e81ae32da28b1c0c313cf2ecccf4dcc13ab5cc87bb997f9923041da242c",
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "result": "PASS"
+    }
+  },
+  "rotation_totals": {
+    "yaw": 288,
+    "pitch": 16,
+    "same_angle_stability": 12,
+    "all_frames": 316
+  },
+  "orthographic": {
+    "standard": {
+      "faces": 6,
+      "proof_hash_matches": true,
+      "result": "PASS"
+    },
+    "web": {
+      "faces": 6,
+      "proof_hash_matches": true,
+      "result": "PASS"
+    }
+  },
+  "matched_camera_comparisons": {
+    "standard": 6,
+    "web": 6,
+    "manual_review": {
+      "result": "PASS",
+      "notes": [
+        "48 SFP/SFP28 and six QSFP/QSFP28 cages, front ears and rear management order match the locked FX evidence.",
+        "The left/right coordinate swap is corrected; neither matched-camera comparison is mirrored.",
+        "The rectified top is body-proportional; only the documented bottom face uses a generic closed-sheet fallback.",
+        "The rendered chassis correctly retains two NXA-PAC-500W-PI AC PSUs and four NXA-FAN-30CFM-PI intake fans."
+      ]
+    }
+  },
+  "inventory": {
+    "rows_reviewed": 15,
+    "matched": 15,
+    "unresolved": 0
+  },
+  "task_configuration_conflicts": [],
+  "compatibility_notes": [
+    {
+      "scope": "The common requirement for all devices is AC power; the NXA-PAC-1100W-PI2 and NXA-FAN-65CFM-PI clarification applies only to N9K-C9336C-FX2.",
+      "result": "ACCEPTED_SCOPE_CLARIFICATION"
+    },
+    {
+      "excluded_modules": "NXA-PAC-1100W-PI2 and NXA-FAN-65CFM-PI",
+      "reason": "They are physically incompatible with the N9K-C93180YC-FX two-500W/four-30CFM rear architecture and belong to the separately scoped C9336C-FX2 configuration.",
+      "result": "CORRECTLY_NOT_INSTALLED"
+    }
+  ],
+  "model_and_viewer_evidence_result": "PASS",
+  "task_status": "PASS_WITH_BOTTOM_FALLBACK"
+}

@@ -54,3 +54,9 @@ The sole 93180 3D catalog application was `catalog/19/1961`, explicitly named **
 ## Conclusion
 
 Official 3D status is `NOT_FOUND` for the exact selected PID. Even if an official file had been found, the skill requires a separate newly constructed standard/web GLB after identity verification; an official file would not replace that build.
+
+## Task-12 current cross-check — 2026-08-27
+
+The exact `N9K-C93180YC-FX` Cisco support/guide and public-index searches were repeated. No exact public official GLB, glTF, OBJ, FBX, STEP/STP, CAD payload or public interactive 3D package was found, so there is no official 3D byte stream to add under `source/optional-3d/`.
+
+The same current official hardware guide also reconfirmed that this locked PID uses the 500 W PSU and four-slot 30 CFM fan families. The controller clarified on 2026-08-28 that `NXA-PAC-1100W-PI2` and `NXA-FAN-65CFM-PI` apply only to the separately scoped C9336C-FX2. They are therefore correctly excluded from this exact 93180YC-FX build and do not block acceptance.

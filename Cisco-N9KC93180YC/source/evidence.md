@@ -3,6 +3,7 @@
 Audit date: 2026-08-24 (Asia/Singapore)
 
 Identity gate: **VERIFIED**
+Delivery status: **PASS_WITH_BOTTOM_FALLBACK**
 
 ## Requested subject and screenshot lock
 
@@ -45,4 +46,12 @@ The workflow-requested PDF skill was unavailable in this session. The official P
 
 ## Gate decision
 
-Assembly identity is resolved and all six face-production modes are locked. The only permitted approximation is the explicitly documented bottom fallback. The expected final classification, if all modeling and QA gates pass, is `PASS_WITH_BOTTOM_FALLBACK`.
+Assembly identity, valid FX exterior sources, and all six face-production modes
+are resolved. The active model truthfully represents the Cisco-supported
+port-side-intake AC configuration: four 30CFM intake fans and two 500W intake
+AC PSUs. The controller clarified on 2026-08-28 that the exact 65CFM fan and
+1100W-PI2 PSU requirement applies only to N9336C-FX2; the common requirement
+for this model is AC power. Those physically incompatible modules are correctly
+excluded from C93180YC-FX rather than relabeled into the wrong rear architecture.
+All non-bottom authenticity and QA gates pass. The sole limitation is the
+documented generic bottom fallback, so the status is `PASS_WITH_BOTTOM_FALLBACK`.

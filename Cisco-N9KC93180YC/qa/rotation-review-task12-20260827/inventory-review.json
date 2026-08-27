@@ -1,0 +1,291 @@
+{
+  "schema": "task12-per-row-inventory-review-v1",
+  "model": "Cisco-N9KC93180YC",
+  "rows_reviewed": 15,
+  "matched": 15,
+  "unresolved": 0,
+  "task_configuration_conflicts": [],
+  "compatibility_notes": [
+    {
+      "scope": "The common requirement for all devices is AC power; the NXA-PAC-1100W-PI2 and NXA-FAN-65CFM-PI clarification applies only to N9K-C9336C-FX2.",
+      "result": "ACCEPTED_SCOPE_CLARIFICATION"
+    },
+    {
+      "excluded_modules": "NXA-PAC-1100W-PI2 and NXA-FAN-65CFM-PI",
+      "reason": "They are physically incompatible with the N9K-C93180YC-FX two-500W/four-30CFM rear architecture and belong to the separately scoped C9336C-FX2 configuration.",
+      "result": "CORRECTLY_NOT_INSTALLED"
+    }
+  ],
+  "rows": [
+    {
+      "row": 1,
+      "face": "front",
+      "component": "SFP/SFP28 fixed cages",
+      "expected_count": "48",
+      "expected_order": "ports 1-48; three visible 16-port blocks",
+      "expected_relief": "recessed cages with metal latches",
+      "source_url": "source/third-party/ebay-187543569351-03.jpg; source/pdf-pages/cisco-fx-overview-physical-009.png",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/front.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/front.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/front.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/front.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 2,
+      "face": "front",
+      "component": "QSFP/QSFP28 fixed cages",
+      "expected_count": "6",
+      "expected_order": "ports 49-54",
+      "expected_relief": "recessed cages",
+      "source_url": "source/third-party/ebay-187543569351-03.jpg; source/pdf-pages/cisco-fx-overview-physical-009.png",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/front.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/front.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/front.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/front.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 3,
+      "face": "front",
+      "component": "status LEDs",
+      "expected_count": "3",
+      "expected_order": "BCN; STS; ENV top-to-bottom",
+      "expected_relief": "flush circular lenses",
+      "source_url": "source/pdf-pages/cisco-fx-overview-physical-009.png; source/third-party/ebay-187543569351-05.jpg",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/front.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/front.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/front.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/front.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 4,
+      "face": "front",
+      "component": "rack ears",
+      "expected_count": "2",
+      "expected_order": "left ear and right ear",
+      "expected_relief": "separate stamped metal with three vertical rack openings per ear",
+      "source_url": "source/third-party/ebay-187543569351-03.jpg; source/third-party/ebay-187543569351-05.jpg",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/front.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/front.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/front.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/front.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 5,
+      "face": "rear",
+      "component": "AC power supply modules",
+      "expected_count": "2",
+      "expected_order": "PSU 1 device-left; PSU 2 after fan slot 4",
+      "expected_relief": "recessed hot-swap modules with circular fan grille, IEC inlet, black pull handle and burgundy release tab",
+      "source_url": "source/originals/user-screenshot-N9KC93180YC-row.png; source/pdf-pages/cisco-fx-modules-physical-068.png; source/third-party/switchshop-fx-01.jpg",
+      "source_confidence": "VERIFIED_NXA-PAC-500W-PI",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/rear.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/rear.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/rear.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/rear.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 6,
+      "face": "rear",
+      "component": "fan modules",
+      "expected_count": "4",
+      "expected_order": "fan slots 1-4 left-to-right",
+      "expected_relief": "recessed hot-swap trays with honeycomb grille and burgundy horizontal latch",
+      "source_url": "source/originals/user-screenshot-N9KC93180YC-row.png; source/pdf-pages/cisco-fx-overview-rear-physical-010.png; source/third-party/switchshop-fx-01.jpg",
+      "source_confidence": "VERIFIED_NXA-FAN-30CFM-PI",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/rear.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/rear.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/rear.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/rear.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 7,
+      "face": "rear",
+      "component": "L1 software-defined ports",
+      "expected_count": "2",
+      "expected_order": "two upper RJ-45-form sockets",
+      "expected_relief": "recessed dark sockets",
+      "source_url": "source/pdf-pages/cisco-fx-overview-rear-physical-010.png; source/third-party/made-in-china-fx-rear.webp",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/rear.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/rear.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/rear.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/rear.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 8,
+      "face": "rear",
+      "component": "L2 software-defined ports",
+      "expected_count": "2",
+      "expected_order": "two lower RJ-45-form sockets",
+      "expected_relief": "recessed dark sockets",
+      "source_url": "source/pdf-pages/cisco-fx-overview-rear-physical-010.png; source/third-party/made-in-china-fx-rear.webp",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/rear.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/rear.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/rear.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/rear.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 9,
+      "face": "rear",
+      "component": "console USB management and status group",
+      "expected_count": "5",
+      "expected_order": "BCN/STS LEDs; RS-232 console; USB; out-of-band RJ-45",
+      "expected_relief": "mixed recessed connectors and flush LEDs",
+      "source_url": "source/pdf-pages/cisco-fx-overview-rear-physical-010.png; source/third-party/made-in-china-fx-rear.webp",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/rear.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/rear.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/rear.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/rear.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 10,
+      "face": "rear",
+      "component": "rack ears",
+      "expected_count": "0",
+      "expected_order": "none on rear plane",
+      "expected_relief": "none",
+      "source_url": "official FX front/rear three-quarter diagrams",
+      "source_confidence": "VERIFIED_NO_REAR_EARS",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/rear.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/rear.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/rear.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/rear.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 11,
+      "face": "left",
+      "component": "side rail slots and screw holes",
+      "expected_count": "8",
+      "expected_order": "documented bracket screw-hole groups along body",
+      "expected_relief": "flush holes and shallow stamped channel",
+      "source_url": "source/originals/cisco-fx-port-side-501191.jpg; source/originals/cisco-fx-psu-side-501192.jpg; source/third-party/ebay-187543569351-04.jpg",
+      "source_confidence": "VERIFIED_FROM_MULTI_ANGLE",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/left.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/left.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/left.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/left.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 12,
+      "face": "right",
+      "component": "side rail slots grounding pad and screw holes",
+      "expected_count": "10",
+      "expected_order": "bracket screw holes plus two-hole grounding pad",
+      "expected_relief": "flush holes and shallow stamped channel",
+      "source_url": "source/originals/cisco-fx-port-side-501191.jpg; source/originals/cisco-fx-psu-side-501192.jpg; source/third-party/made-in-china-fx-rear.webp",
+      "source_confidence": "VERIFIED_FROM_MULTI_ANGLE",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/right.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/right.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/right.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/right.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 13,
+      "face": "top",
+      "component": "front perforated ventilation band",
+      "expected_count": "1",
+      "expected_order": "continuous honeycomb band",
+      "expected_relief": "real perforation opening pattern",
+      "source_url": "source/third-party/ebay-187543569351-04.jpg",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/top.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/top.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/top.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/top.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 14,
+      "face": "top",
+      "component": "main cover and service hatches",
+      "expected_count": "3",
+      "expected_order": "large main cover; small left-front hatch; large rear/right outlined hatch",
+      "expected_relief": "flush seams with visible screws",
+      "source_url": "source/third-party/ebay-187543569351-04.jpg; source/third-party/made-in-china-fx-rear.webp",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/top.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/top.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/top.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/top.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 15,
+      "face": "bottom",
+      "component": "conservative underside",
+      "expected_count": "1",
+      "expected_order": "neutral sheet-metal plate only",
+      "expected_relief": "flat closed surface preserving verified body silhouette",
+      "source_url": "documented exact-model bottom search log; same-vendor 1U fallback",
+      "source_confidence": "GENERIC_BOTTOM_FALLBACK",
+      "review_status": "MATCHED_DECLARED_BOTTOM_FALLBACK",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/bottom.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/bottom.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/bottom.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/bottom.png"
+      ],
+      "unresolved": false
+    }
+  ]
+}

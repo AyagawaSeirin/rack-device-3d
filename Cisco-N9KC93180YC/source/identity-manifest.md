@@ -19,6 +19,7 @@
   - https://www.cisco.com/c/en/us/support/switches/nexus-93180yc-fx-switch/model.html
   - https://www.cisco.com/c/en/us/td/docs/dcn/nx-os/nexus9000/106x/release-notes/cisco-nexus-9000-nxos-release-notes-1063F.html
 - status: VERIFIED
+- delivery_status: PASS_WITH_BOTTOM_FALLBACK
 
 ## Identity resolution
 
@@ -39,4 +40,19 @@ The exact installed configuration is therefore:
 
 A reseller page labels a photographed unit as FX with 650W PI modules, but the photographed rear has the EX-style RJ-45/SFP/USB management cluster rather than the official FX L1/L2 cluster. It is classified as a mismatched stock image and is not used to override the Cisco FX support matrix or the user screenshot.
 
-Identity gate is cleared for six-face source locking and generation.
+The valid-FX build gate is cleared for six-face source locking, generation and
+delivery. The only evidence exception is the documented generic bottom fallback.
+
+## Task-12 scope clarification — corrected 2026-08-28
+
+The common Task-12 requirement for all devices is AC power. The later exact-FRU
+clarification for `NXA-PAC-1100W-PI2` and `NXA-FAN-65CFM-PI` applies only to
+the separately scoped `N9K-C9336C-FX2`; it is not an installed-configuration
+requirement for this chassis.
+
+The active GLBs correctly retain the physically supported, source-locked FX
+exterior: 4 x 30CFM PI intake fans and 2 x 500W PI AC PSUs. The incompatible
+65CFM/1100W-PI2 modules are intentionally not installed because their size,
+slot count and rear architecture belong to C9336C-FX2. This exclusion preserves
+exactness rather than creating a blocker. With all non-bottom evidence and QA
+gates resolved, the delivery status is `PASS_WITH_BOTTOM_FALLBACK`.

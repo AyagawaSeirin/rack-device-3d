@@ -294,19 +294,21 @@ class GLBBuilder:
 
 def prepare_textures(variant):
     faces=("front","rear","left","right","top","bottom")
-    if variant == "standard":
-        return {face: VIEWS / f"{face}.png" for face in faces}
     out=INTERMEDIATE/variant/"views"
     out.mkdir(parents=True,exist_ok=True)
-    targets={
-        "front":(1600,146), "rear":(1600,161),
-        "left":(1600,123), "right":(1600,123),
-        "top":(800,946), "bottom":(800,946),
+    targets=None if variant == "standard" else {
+        "front":(2048,187), "rear":(2048,206),
+        "left":(2048,158), "right":(2048,158),
+        "top":(1298,1536), "bottom":(1298,1536),
     }
     result={}
-    for face,size in targets.items():
-        image=Image.open(VIEWS/f"{face}.png").convert("RGBA")
-        image=image.resize(size,Image.Resampling.LANCZOS)
+    for face in faces:
+        # Canonical elevations remain RGBA project assets.  The GLBs embed
+        # RGB-only base color images so unused PNG alpha can never trigger a
+        # loader-specific transparency path despite alphaMode=OPAQUE.
+        image=Image.open(VIEWS/f"{face}.png").convert("RGB")
+        if targets is not None:
+            image=image.resize(targets[face],Image.Resampling.LANCZOS)
         path=out/f"{face}.png"
         image.save(path,optimize=True)
         result[face]=path
@@ -333,42 +335,42 @@ def build(variant):
         {"pid":"N9K-C93180YC-FX","closed_manifold_core":True,"body_dimensions_mm":[BODY_W,H,D]},
     )
 
-    # Six independently generated and oriented source-lock skins. The front/top/
-    # bottom UVs crop front-ear pixels away from the 439 mm body; ears are geometry.
-    crop=(W-BODY_W)/(2*W)
-    body_uv=[(crop,1),(1-crop,1),(1-crop,0),(crop,0)]
+    # Six independently generated and oriented source-lock skins.  The front
+    # elevation contains the verified ears and is explicitly sampled by body
+    # coordinates.  The top/bottom canonical assets were physically rectified
+    # to the 439:571 body ratio, so they use full 0..1 UVs; ears remain geometry.
     def front_uv(x,y):
         return (.5+x/W,.5-y/H)
-    def front_photo_plane(name,x0,x1,y0,y1,z=Z_OUTER+1.41,extras=None):
+    def front_photo_plane(name,x0,x1,y0,y1,z=Z_OUTER+1.70,extras=None):
         return b.plane(name,photos["front"],[(x0,y0,z),(x1,y0,z),(x1,y1,z),(x0,y1,z)],(0,0,1),[
             front_uv(x0,y0),front_uv(x1,y0),front_uv(x1,y1),front_uv(x0,y1)],extras=extras)
-    # Split around the port field so each cage remains a real recess while its
-    # own source-locked photo patch supplies the visible face.
-    front_photo_plane("Front_Photo_LeftControl",-X_BODY,-182.5,-Y_OUTER,Y_OUTER,extras={"source_lock":"front"})
-    front_photo_plane("Front_Photo_TopLegendStrip",-182.5,X_BODY,15.0,Y_OUTER,extras={"source_lock":"front"})
-    front_photo_plane("Front_Photo_BottomVentStrip",-182.5,X_BODY,-Y_OUTER,-15.0,extras={"source_lock":"front"})
-    for index,(x0,x1) in enumerate(((-182.5,-178.0),(-86,-80),(12,18),(110,124)),1):
-        front_photo_plane(f"Front_Photo_PortDivider_{index}",x0,x1,-15,15,extras={"source_lock":"front"})
+    # A single body crop is the non-overlapping source-locked base.  The prior
+    # implementation tiled coplanar strips and port patches with overlapping
+    # rectangles, which allowed depth-buffer winners to change during yaw.
+    front_photo_plane(
+        "Front_SourceLocked_BaseTexture",-X_BODY,X_BODY,-Y_OUTER,Y_OUTER,
+        z=Z_OUTER+.20,extras={"source_lock":"front","non_overlapping_base":True},
+    )
     b.plane("Rear_SourceLocked_Texture",photos["rear"],[
         (X_BODY,-Y_OUTER,-Z_OUTER-3.1),(-X_BODY,-Y_OUTER,-Z_OUTER-3.1),
         (-X_BODY,Y_OUTER,-Z_OUTER-3.1),(X_BODY,Y_OUTER,-Z_OUTER-3.1)],(0,0,-1),
         extras={"source_lock":"rear","airflow":"PI burgundy"})
-    b.plane("Physical_Left_Independent_Texture",photos["left"],[
+    b.plane("Physical_Right_Independent_Texture",photos["right"],[
         (X_BODY,-Y_OUTER,Z_OUTER),(X_BODY,-Y_OUTER,-Z_OUTER),
         (X_BODY,Y_OUTER,-Z_OUTER),(X_BODY,Y_OUTER,Z_OUTER)],(1,0,0),
-        extras={"front_in_image":"left","not_mirrored":True})
-    b.plane("Physical_Right_Independent_Texture",photos["right"],[
+        extras={"side":"physical-right","front_in_image":"right","not_mirrored":True})
+    b.plane("Physical_Left_Independent_Texture",photos["left"],[
         (-X_BODY,-Y_OUTER,-Z_OUTER),(-X_BODY,-Y_OUTER,Z_OUTER),
         (-X_BODY,Y_OUTER,Z_OUTER),(-X_BODY,Y_OUTER,-Z_OUTER)],(-1,0,0),
-        extras={"front_in_image":"right","not_mirrored":True})
+        extras={"side":"physical-left","front_in_image":"left","not_mirrored":True})
     b.plane("Top_SourceLocked_Texture",photos["top"],[
         (-X_BODY,Y_OUTER+.7,Z_OUTER),(X_BODY,Y_OUTER+.7,Z_OUTER),
-        (X_BODY,Y_OUTER+.7,-Z_OUTER),(-X_BODY,Y_OUTER+.7,-Z_OUTER)],(0,1,0),body_uv,
-        {"front_in_image":"bottom","source_lock":"top"})
+        (X_BODY,Y_OUTER+.7,-Z_OUTER),(-X_BODY,Y_OUTER+.7,-Z_OUTER)],(0,1,0),
+        extras={"front_in_image":"bottom","source_lock":"top"})
     b.plane("Bottom_GenericFallback_Texture",photos["bottom"],[
         (X_BODY,-Y_OUTER,Z_OUTER),(-X_BODY,-Y_OUTER,Z_OUTER),
-        (-X_BODY,-Y_OUTER,-Z_OUTER),(X_BODY,-Y_OUTER,-Z_OUTER)],(0,-1,0),body_uv,
-        {"front_in_image":"bottom","status":"GENERIC_BOTTOM_FALLBACK"})
+        (-X_BODY,-Y_OUTER,-Z_OUTER),(X_BODY,-Y_OUTER,-Z_OUTER)],(0,-1,0),
+        extras={"front_in_image":"bottom","status":"GENERIC_BOTTOM_FALLBACK"})
 
     # Front-only rack ears assembled around six true openings (three per ear).
     ear_span=X_OUTER-X_BODY
@@ -399,7 +401,8 @@ def build(variant):
                 extras={"front_only":True,"bottom_surface":True})
 
     # Front control strip and all 54 port cages are individual visible geometry.
-    b.box("Front_LED_and_Brand_Panel",chassis,(-202,0,Z_OUTER+.55),(31,40,1.1),{"branding_in_source_texture":True})
+    # Branding stays visible in the exact source-locked base; only the verified
+    # lenses protrude as relief.  A solid overpaint panel would hide the logo.
     for index,y in enumerate((9,1,-7),1):
         b.cylinder(f"Front_Status_LED_{index}",green if index<3 else amber,(-207,y,Z_OUTER+1.15),(2.1,2.1,.6))
     sfp_start=-178.0
@@ -414,18 +417,16 @@ def build(variant):
                   {"port_index":index,"port_family":"SFP28","empty":True,"group":group})
             front_photo_plane(p+"_SourceTexture",x-5.3,x+5.3,y-7,y+7,
                               extras={"port_index":index,"source_lock":"front","recessed_geometry":True})
-            b.box(p+"_LatchRelief",silver,(x,y-2.0,Z_OUTER+1.3),(7.8,2.2,.18))
+            b.box(p+"_LatchRelief",silver,(x,y-2.0,Z_OUTER+2.05),(7.8,2.2,.20))
     for column,x in enumerate((137.5,170.5,203.5),1):
         for row,y in enumerate((9.0,-8.0),1):
             index=48+(column-1)*2+row
             p=f"Front_QSFP28_{index:02d}"
             b.box(p+"_Recess",dark,(x,y,Z_OUTER+.75),(26.0,14.5,1.5),
                   {"port_index":index,"port_family":"QSFP28","empty":True})
-            front_photo_plane(p+"_SourceTexture",x-13,x+13,y-7.25,y+7.25,z=Z_OUTER+1.56,
+            front_photo_plane(p+"_SourceTexture",x-13,x+13,y-7.25,y+7.25,z=Z_OUTER+1.80,
                               extras={"port_index":index,"source_lock":"front","recessed_geometry":True})
-            b.box(p+"_LatchRelief",silver,(x,y-1.5,Z_OUTER+1.3),(14.0,2.2,.2))
-    front_photo_plane("Front_QSFP28_Continuous_SourceTexture",124.0,X_BODY,-15.0,15.0,z=Z_OUTER+1.58,
-                      extras={"source_lock":"front","ports":"49-54","continuous_exact_photo":True})
+            b.box(p+"_LatchRelief",silver,(x,y-1.5,Z_OUTER+2.15),(14.0,2.2,.2))
     for index,x in enumerate([(-180+i*6.4) for i in range(62)],1):
         b.box(f"Front_LowerVent_{index:02d}",dark,(x,-18.7,Z_OUTER+.5),(3.0,2.2,.5),{"vent_relief":True})
 
@@ -465,13 +466,13 @@ def build(variant):
 
     # Side-specific relief: unique node names and different positions prove no mirror.
     for index,z in enumerate((240,160,70,-40,-135,-230),1):
-        b.box(f"Physical_Left_RailSlot_{index}",dark,(X_BODY+.2,-10,z),(.7,5,12),{"side":"left","not_mirrored":True})
+        b.box(f"Physical_Left_RailSlot_{index}",dark,(-X_BODY-.2,-10,z),(.7,5,12),{"side":"left","not_mirrored":True})
     for index,z in enumerate((225,120,15,-100,-205),1):
-        b.box(f"Physical_Right_RailSlot_{index}",dark,(-X_BODY-.2,-9,z),(.7,5,14),{"side":"right","not_mirrored":True})
-    b.box("Physical_Left_GroundingPad",silver,(X_BODY+.35,2,105),(.8,15,29),{"two_hole_pad":True,"side":"left"})
+        b.box(f"Physical_Right_RailSlot_{index}",dark,(X_BODY+.2,-9,z),(.7,5,14),{"side":"right","not_mirrored":True})
+    b.box("Physical_Left_GroundingPad",silver,(-X_BODY-.35,2,105),(.8,15,29),{"two_hole_pad":True,"side":"left"})
     for index,z in enumerate((98,112),1):
-        b.box(f"Physical_Left_GroundingHole_{index}",dark,(X_BODY+.78,2,z),(.2,4,4),{"side":"left"})
-    for side,x,zs in (("Left",X_BODY,(252,184,26,-170,-250)),("Right",-X_BODY,(245,132,-20,-160,-244))):
+        b.box(f"Physical_Left_GroundingHole_{index}",dark,(-X_BODY-.78,2,z),(.2,4,4),{"side":"left"})
+    for side,x,zs in (("Left",-X_BODY,(252,184,26,-170,-250)),("Right",X_BODY,(245,132,-20,-160,-244))):
         for index,z in enumerate(zs,1):
             b.box(f"Physical_{side}_Fastener_{index}",silver,(x+(0.35 if x>0 else -0.35),8,z),(.8,4.5,4.5),{"side":side.lower()})
 
@@ -489,8 +490,9 @@ def build(variant):
             b.box(f"Top_Hatch_{name}_{edge}",dark,center,size,{"service_hatch_seam":True})
     for index,(x,z) in enumerate(((-205,250),(-150,250),(-80,250),(0,250),(80,250),(150,250),(205,250),(-120,40),(120,40)),1):
         b.box(f"Top_Fastener_{index}",silver,(x,Y_OUTER+.55,z),(4,.25,4),{"visible_fastener":True})
-    b.box("Bottom_Conservative_FrontLip",silver,(0,-Y_OUTER-.2,Z_OUTER-1.5),(BODY_W,.5,3),{"fallback":True})
-    b.box("Bottom_Conservative_RearLip",silver,(0,-Y_OUTER-.2,-Z_OUTER+1.5),(BODY_W,.5,3),{"fallback":True})
+    # The bottom fallback is intentionally texture-only and non-identifying.
+    # Redundant edge boxes previously ended exactly on both side texture planes
+    # and also introduced unsupported underside detail.
 
     output=MODELS/f"Cisco-N9K-C93180YC-FX-{variant}.glb"
     size,digest=b.save(output)

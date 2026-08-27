@@ -1,5 +1,7 @@
 # Cisco N9K-C93180YC-FX 最终报告
 
+> **2026-08-28 Task-12 corrected acceptance:** 当前权威报告、哈希和浏览器证据位于 `qa/rotation-review-task12-20260827/FINAL-REPORT.md`。1100W PI2/65CFM PI 约束只适用于 C9336C-FX2；本型号保持真实兼容的 2×500W AC/4×30CFM 配置，当前状态为 `PASS_WITH_BOTTOM_FALLBACK`。下文仅作为早期修复历史记录保留。
+
 审计日期：2026-08-24（Asia/Singapore）
 
 ## 最终结论
@@ -101,7 +103,7 @@
 - 6 张 source-lock 对实际 standard GLB 正交比较；
 - 3 张精确 FX 实拍对前/后斜视和顶视比较。
 
-人工检查确认 front、rear、left、right 和四个斜视均未退化。与归档前 40 张同视角截图去除动态标签后比较：standard 20/20 完全一致；仅 web 的 rear/rear-left/rear-right 出现肉眼不可见的下采样差异，单张最多变化 137/960,000 像素，最大 RGB 平均绝对差 0.000084（0–255 标度）。不存在几何、部件计数、方向、变体、品牌、颜色布局或 relief 退化。
+人工检查确认 front、rear、left、right 和四个斜视均未退化。与归档前 40 张同视角截图去除动态标签后比较：standard 20/20 完全一致；仅 web 的 rear/rear-left/rear-right 出现肉眼不可见的下采样差异，单张最多变化 74/960,000 像素，最大 RGB 平均绝对差 0.000084（0–255 标度）。不存在几何、部件计数、方向、变体、品牌、颜色布局或 relief 退化。
 
 人工记录：`qa/visual-inspection.md`。
 

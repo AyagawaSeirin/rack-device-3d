@@ -1,0 +1,466 @@
+{
+  "schema": "rotation-risk-structural-audit-v1",
+  "path": "Cisco-N9KC93180YC/models/Cisco-N9K-C93180YC-FX-web.glb",
+  "byte_size": 6277940,
+  "triangle_count": 5936,
+  "node_geometry_count": 407,
+  "textured_materials": [
+    {
+      "index": 9,
+      "name": "FACE_FRONT_SOURCE_LOCKED",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    },
+    {
+      "index": 10,
+      "name": "FACE_REAR_SOURCE_LOCKED",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    },
+    {
+      "index": 11,
+      "name": "FACE_LEFT_SOURCE_LOCKED",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    },
+    {
+      "index": 12,
+      "name": "FACE_RIGHT_SOURCE_LOCKED",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    },
+    {
+      "index": 13,
+      "name": "FACE_TOP_SOURCE_LOCKED",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    },
+    {
+      "index": 14,
+      "name": "FACE_BOTTOM_SOURCE_LOCKED",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    }
+  ],
+  "material_violations": [],
+  "embedded_image_alpha": [
+    {
+      "index": 0,
+      "mode": "RGB",
+      "size": [
+        2048,
+        187
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    },
+    {
+      "index": 1,
+      "mode": "RGB",
+      "size": [
+        2048,
+        206
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    },
+    {
+      "index": 2,
+      "mode": "RGB",
+      "size": [
+        2048,
+        158
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    },
+    {
+      "index": 3,
+      "mode": "RGB",
+      "size": [
+        2048,
+        158
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    },
+    {
+      "index": 4,
+      "mode": "RGB",
+      "size": [
+        1298,
+        1536
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    },
+    {
+      "index": 5,
+      "mode": "RGB",
+      "size": [
+        1298,
+        1536
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    }
+  ],
+  "image_errors": [],
+  "samplers": [
+    {
+      "index": 0,
+      "wrapS": 33071,
+      "wrapT": 33071
+    }
+  ],
+  "sampler_violations": [],
+  "negative_transforms": [],
+  "degenerate_triangles": [],
+  "exact_duplicate_triangle_groups": [],
+  "opposite_duplicate_triangle_pairs": [],
+  "coplanar_or_near_pairs_within_0_25mm": [
+    {
+      "node_a": "Front_Right_Ear_BottomBridge",
+      "node_b": "Front_Right_Ear_InnerRail",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 21.119820861844346,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_Right_Ear_BottomBridge",
+      "node_b": "Front_Right_Ear_OuterRail",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 21.119820861844346,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_Right_Ear_TopBridge",
+      "node_b": "Front_Right_Ear_InnerRail",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 21.119820861844346,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_Right_Ear_TopBridge",
+      "node_b": "Front_Right_Ear_OuterRail",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 21.119820861844346,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_Left_Ear_BottomBridge",
+      "node_b": "Front_Left_Ear_InnerRail",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 21.119820861844346,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_Left_Ear_BottomBridge",
+      "node_b": "Front_Left_Ear_OuterRail",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 21.119820861844346,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_Left_Ear_TopBridge",
+      "node_b": "Front_Left_Ear_InnerRail",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 21.119820861844346,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_Left_Ear_TopBridge",
+      "node_b": "Front_Left_Ear_OuterRail",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 21.119820861844346,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_Right_Ear_MidBridge_+6.5",
+      "node_b": "Front_Right_Ear_InnerRail",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 15.839869842515327,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_Right_Ear_MidBridge_+6.5",
+      "node_b": "Front_Right_Ear_OuterRail",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 15.839869842515327,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_Right_Ear_MidBridge_-6.5",
+      "node_b": "Front_Right_Ear_InnerRail",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 15.839869842515327,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_Right_Ear_MidBridge_-6.5",
+      "node_b": "Front_Right_Ear_OuterRail",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 15.839869842515327,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_Left_Ear_MidBridge_+6.5",
+      "node_b": "Front_Left_Ear_InnerRail",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 15.839869842515327,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_Left_Ear_MidBridge_+6.5",
+      "node_b": "Front_Left_Ear_OuterRail",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 15.839869842515327,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_Left_Ear_MidBridge_-6.5",
+      "node_b": "Front_Left_Ear_InnerRail",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 15.839869842515327,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_Left_Ear_MidBridge_-6.5",
+      "node_b": "Front_Left_Ear_OuterRail",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 15.839869842515327,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Top_Hatch_Small_Left_Front_Right",
+      "node_b": "Top_Hatch_Small_Left_Front_Rear",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 3.920000000000031,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Top_Hatch_Large_Rear_Right_Left",
+      "node_b": "Top_Hatch_Large_Rear_Right_Front",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 3.920000000000012,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Top_Hatch_Large_Rear_Right_Left",
+      "node_b": "Top_Hatch_Large_Rear_Right_Rear",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 3.9199999999999524,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Top_Hatch_Small_Left_Front_Right",
+      "node_b": "Top_Hatch_Small_Left_Front_Front",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 3.9199999999999524,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Top_Hatch_Small_Left_Front_Left",
+      "node_b": "Top_Hatch_Small_Left_Front_Rear",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 3.9199999999999524,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Top_Hatch_Large_Rear_Right_Right",
+      "node_b": "Top_Hatch_Large_Rear_Right_Front",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 3.9199999999999315,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Top_Hatch_Large_Rear_Right_Right",
+      "node_b": "Top_Hatch_Large_Rear_Right_Rear",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 3.919999999999873,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Top_Hatch_Small_Left_Front_Left",
+      "node_b": "Top_Hatch_Small_Left_Front_Front",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 3.919999999999873,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_Right_Ear_BottomBridge",
+      "node_b": "Front_Right_Ear_RackOpening_3",
+      "axis": 2,
+      "gap_mm": 0.012207031261368684,
+      "overlap_area_m2": 38.002937026216756,
+      "triangle_pairs": 38
+    },
+    {
+      "node_a": "Front_Right_Ear_TopBridge",
+      "node_b": "Front_Right_Ear_RackOpening_1",
+      "axis": 2,
+      "gap_mm": 0.012207031261368684,
+      "overlap_area_m2": 38.002937026216756,
+      "triangle_pairs": 38
+    },
+    {
+      "node_a": "Front_Left_Ear_BottomBridge",
+      "node_b": "Front_Left_Ear_RackOpening_3",
+      "axis": 2,
+      "gap_mm": 0.012207031261368684,
+      "overlap_area_m2": 38.002937026216756,
+      "triangle_pairs": 38
+    },
+    {
+      "node_a": "Front_Left_Ear_TopBridge",
+      "node_b": "Front_Left_Ear_RackOpening_1",
+      "axis": 2,
+      "gap_mm": 0.012207031261368684,
+      "overlap_area_m2": 38.002937026216756,
+      "triangle_pairs": 38
+    },
+    {
+      "node_a": "Front_Right_Ear_MidBridge_+6.5",
+      "node_b": "Front_Right_Ear_RackOpening_2",
+      "axis": 2,
+      "gap_mm": 0.012207031261368684,
+      "overlap_area_m2": 17.44884938299467,
+      "triangle_pairs": 30
+    },
+    {
+      "node_a": "Front_Right_Ear_MidBridge_+6.5",
+      "node_b": "Front_Right_Ear_RackOpening_1",
+      "axis": 2,
+      "gap_mm": 0.012207031261368684,
+      "overlap_area_m2": 17.44884938299467,
+      "triangle_pairs": 30
+    },
+    {
+      "node_a": "Front_Right_Ear_MidBridge_-6.5",
+      "node_b": "Front_Right_Ear_RackOpening_3",
+      "axis": 2,
+      "gap_mm": 0.012207031261368684,
+      "overlap_area_m2": 17.44884938299467,
+      "triangle_pairs": 30
+    },
+    {
+      "node_a": "Front_Right_Ear_MidBridge_-6.5",
+      "node_b": "Front_Right_Ear_RackOpening_2",
+      "axis": 2,
+      "gap_mm": 0.012207031261368684,
+      "overlap_area_m2": 17.44884938299467,
+      "triangle_pairs": 30
+    },
+    {
+      "node_a": "Front_Left_Ear_MidBridge_+6.5",
+      "node_b": "Front_Left_Ear_RackOpening_2",
+      "axis": 2,
+      "gap_mm": 0.012207031261368684,
+      "overlap_area_m2": 17.44884938299467,
+      "triangle_pairs": 30
+    },
+    {
+      "node_a": "Front_Left_Ear_MidBridge_+6.5",
+      "node_b": "Front_Left_Ear_RackOpening_1",
+      "axis": 2,
+      "gap_mm": 0.012207031261368684,
+      "overlap_area_m2": 17.44884938299467,
+      "triangle_pairs": 30
+    },
+    {
+      "node_a": "Front_Left_Ear_MidBridge_-6.5",
+      "node_b": "Front_Left_Ear_RackOpening_3",
+      "axis": 2,
+      "gap_mm": 0.012207031261368684,
+      "overlap_area_m2": 17.44884938299467,
+      "triangle_pairs": 30
+    },
+    {
+      "node_a": "Front_Left_Ear_MidBridge_-6.5",
+      "node_b": "Front_Left_Ear_RackOpening_2",
+      "axis": 2,
+      "gap_mm": 0.012207031261368684,
+      "overlap_area_m2": 17.44884938299467,
+      "triangle_pairs": 30
+    }
+  ],
+  "unresolved_visible_coplanar_pairs_below_0_05mm": [],
+  "closed_core_nodes": [
+    {
+      "node": "Closed_1RU_FX_Chassis_Core",
+      "watertight": true,
+      "winding_consistent": true,
+      "volume_m3": 10794022.848000001
+    }
+  ],
+  "closed_core_pass": true,
+  "errors": [],
+  "error_count": 0,
+  "status": "PASS"
+}
