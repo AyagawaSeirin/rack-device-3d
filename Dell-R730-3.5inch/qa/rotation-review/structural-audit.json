@@ -1,0 +1,550 @@
+{
+  "modelKey": "Dell-R730-3.5inch",
+  "coordinateConvention": "right-handed; +X device right from front; +Y up; +Z front",
+  "builds": [
+    {
+      "flavor": "standard",
+      "path": "model/Dell-R730-3.5inch.glb",
+      "bytes": 13050744,
+      "sha256": "3cd64d33d2ae498a5f1a86ca0515b226f9e1ecd0c8a24eddcea7c6a4d6995c11",
+      "counts": {
+        "nodes": 147,
+        "meshes": 147,
+        "materials": 16,
+        "images": 6,
+        "triangles": 2998
+      },
+      "boundsMm": {
+        "actual": [
+          482.4,
+          87.300003,
+          741.000026
+        ],
+        "expected": [
+          482.4,
+          87.3,
+          741.0
+        ],
+        "absoluteError": [
+          0.0,
+          3e-06,
+          2.6e-05
+        ]
+      },
+      "checks": {
+        "duplicateTriangles": true,
+        "reversedDuplicateTriangles": true,
+        "negativeTransforms": true,
+        "normalsPresent": true,
+        "closedCoreGeometricallyWatertight": true,
+        "closedCoreWindingConsistent": true,
+        "mainFaceMaterialContract": true,
+        "allMaterialsOpaqueAlphaOneSingleSided": true,
+        "embeddedImagesOpaque": true,
+        "mipmappedClampSamplers": true,
+        "cardCoreClearance": true,
+        "externalResourcesAbsent": true,
+        "rightHandedNoMirror": true,
+        "dimensionsWithinOneMillimeter": true
+      },
+      "duplicates": {
+        "exactTransformedTriangles": 0,
+        "reversedExactTriangles": 0
+      },
+      "coplanar": {
+        "mainCardCoreClearances": [
+          {
+            "faceNode": "front-photo-surface",
+            "gapMm": 0.800014,
+            "minimumMm": 0.05,
+            "pass": true
+          },
+          {
+            "faceNode": "rear-photo-surface",
+            "gapMm": 0.649989,
+            "minimumMm": 0.05,
+            "pass": true
+          },
+          {
+            "faceNode": "right-photo-surface",
+            "gapMm": 0.400007,
+            "minimumMm": 0.05,
+            "pass": true
+          },
+          {
+            "faceNode": "left-photo-surface",
+            "gapMm": 0.400007,
+            "minimumMm": 0.05,
+            "pass": true
+          },
+          {
+            "faceNode": "top-photo-surface",
+            "gapMm": 0.700001,
+            "minimumMm": 0.05,
+            "pass": true
+          },
+          {
+            "faceNode": "bottom-photo-surface",
+            "gapMm": 1.500003,
+            "minimumMm": 0.05,
+            "pass": true
+          }
+        ],
+        "unresolvedVisibleNearCoplanarPairs": 0,
+        "contactDisposition": "attached solid interfaces are internal; co-visible card/core/relief layers use explicit positive clearances and are verified by the full yaw sweep"
+      },
+      "materials": {
+        "mainFaces": [
+          {
+            "node": "front-photo-surface",
+            "material": "photo-front",
+            "alphaMode": "OPAQUE",
+            "baseColorFactor": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "doubleSided": false,
+            "unlit": true,
+            "contractOk": true
+          },
+          {
+            "node": "rear-photo-surface",
+            "material": "photo-rear",
+            "alphaMode": "OPAQUE",
+            "baseColorFactor": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "doubleSided": false,
+            "unlit": true,
+            "contractOk": true
+          },
+          {
+            "node": "right-photo-surface",
+            "material": "photo-right",
+            "alphaMode": "OPAQUE",
+            "baseColorFactor": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "doubleSided": false,
+            "unlit": true,
+            "contractOk": true
+          },
+          {
+            "node": "left-photo-surface",
+            "material": "photo-left",
+            "alphaMode": "OPAQUE",
+            "baseColorFactor": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "doubleSided": false,
+            "unlit": true,
+            "contractOk": true
+          },
+          {
+            "node": "top-photo-surface",
+            "material": "photo-top",
+            "alphaMode": "OPAQUE",
+            "baseColorFactor": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "doubleSided": false,
+            "unlit": true,
+            "contractOk": true
+          },
+          {
+            "node": "bottom-photo-surface",
+            "material": "photo-bottom",
+            "alphaMode": "OPAQUE",
+            "baseColorFactor": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "doubleSided": false,
+            "unlit": true,
+            "contractOk": true
+          }
+        ],
+        "alphaErrors": []
+      },
+      "images": {
+        "embedded": [
+          {
+            "index": 0,
+            "name": "Dell-R730-front",
+            "mode": "RGB",
+            "sizePx": [
+              2400,
+              434
+            ],
+            "alphaExtrema": null
+          },
+          {
+            "index": 1,
+            "name": "Dell-R730-rear",
+            "mode": "RGB",
+            "sizePx": [
+              2400,
+              472
+            ],
+            "alphaExtrema": null
+          },
+          {
+            "index": 2,
+            "name": "Dell-R730-right",
+            "mode": "RGB",
+            "sizePx": [
+              2400,
+              306
+            ],
+            "alphaExtrema": null
+          },
+          {
+            "index": 3,
+            "name": "Dell-R730-left",
+            "mode": "RGB",
+            "sizePx": [
+              2400,
+              306
+            ],
+            "alphaExtrema": null
+          },
+          {
+            "index": 4,
+            "name": "Dell-R730-top",
+            "mode": "RGB",
+            "sizePx": [
+              1600,
+              2465
+            ],
+            "alphaExtrema": null
+          },
+          {
+            "index": 5,
+            "name": "Dell-R730-bottom",
+            "mode": "RGB",
+            "sizePx": [
+              1600,
+              2465
+            ],
+            "alphaExtrema": null
+          }
+        ],
+        "alphaErrors": [],
+        "atlasPolicy": "individual clamp-to-edge face images; no shared atlas, therefore no atlas bleed"
+      },
+      "samplers": {
+        "count": 1,
+        "errors": [],
+        "requiredMinFilter": 9987
+      },
+      "transforms": {
+        "negativeDeterminantNodes": []
+      },
+      "normals": {
+        "missing": []
+      },
+      "core": {
+        "node": "closed-chassis-body",
+        "geometry": "closed-chassis-body",
+        "indexedWatertightBeforeCoincidentVertexMerge": true,
+        "geometricallyWatertightAfterCoincidentVertexMerge": true,
+        "windingConsistent": true,
+        "interpretation": "flat-normal hard edges may duplicate coincident vertices; geometric closure is evaluated after an audit-only merge and the GLB remains unchanged"
+      },
+      "unresolved": [],
+      "status": "PASS"
+    },
+    {
+      "flavor": "web",
+      "path": "model/Dell-R730-3.5inch-web.glb",
+      "bytes": 9024632,
+      "sha256": "cb1bc616eef8b5fd24234540c24cf6c0d393dfead616593ba0e51b53c32f1c95",
+      "counts": {
+        "nodes": 147,
+        "meshes": 147,
+        "materials": 16,
+        "images": 6,
+        "triangles": 2998
+      },
+      "boundsMm": {
+        "actual": [
+          482.4,
+          87.300003,
+          741.000026
+        ],
+        "expected": [
+          482.4,
+          87.3,
+          741.0
+        ],
+        "absoluteError": [
+          0.0,
+          3e-06,
+          2.6e-05
+        ]
+      },
+      "checks": {
+        "duplicateTriangles": true,
+        "reversedDuplicateTriangles": true,
+        "negativeTransforms": true,
+        "normalsPresent": true,
+        "closedCoreGeometricallyWatertight": true,
+        "closedCoreWindingConsistent": true,
+        "mainFaceMaterialContract": true,
+        "allMaterialsOpaqueAlphaOneSingleSided": true,
+        "embeddedImagesOpaque": true,
+        "mipmappedClampSamplers": true,
+        "cardCoreClearance": true,
+        "externalResourcesAbsent": true,
+        "rightHandedNoMirror": true,
+        "dimensionsWithinOneMillimeter": true
+      },
+      "duplicates": {
+        "exactTransformedTriangles": 0,
+        "reversedExactTriangles": 0
+      },
+      "coplanar": {
+        "mainCardCoreClearances": [
+          {
+            "faceNode": "front-photo-surface",
+            "gapMm": 0.800014,
+            "minimumMm": 0.05,
+            "pass": true
+          },
+          {
+            "faceNode": "rear-photo-surface",
+            "gapMm": 0.649989,
+            "minimumMm": 0.05,
+            "pass": true
+          },
+          {
+            "faceNode": "right-photo-surface",
+            "gapMm": 0.400007,
+            "minimumMm": 0.05,
+            "pass": true
+          },
+          {
+            "faceNode": "left-photo-surface",
+            "gapMm": 0.400007,
+            "minimumMm": 0.05,
+            "pass": true
+          },
+          {
+            "faceNode": "top-photo-surface",
+            "gapMm": 0.700001,
+            "minimumMm": 0.05,
+            "pass": true
+          },
+          {
+            "faceNode": "bottom-photo-surface",
+            "gapMm": 1.500003,
+            "minimumMm": 0.05,
+            "pass": true
+          }
+        ],
+        "unresolvedVisibleNearCoplanarPairs": 0,
+        "contactDisposition": "attached solid interfaces are internal; co-visible card/core/relief layers use explicit positive clearances and are verified by the full yaw sweep"
+      },
+      "materials": {
+        "mainFaces": [
+          {
+            "node": "front-photo-surface",
+            "material": "photo-front",
+            "alphaMode": "OPAQUE",
+            "baseColorFactor": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "doubleSided": false,
+            "unlit": true,
+            "contractOk": true
+          },
+          {
+            "node": "rear-photo-surface",
+            "material": "photo-rear",
+            "alphaMode": "OPAQUE",
+            "baseColorFactor": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "doubleSided": false,
+            "unlit": true,
+            "contractOk": true
+          },
+          {
+            "node": "right-photo-surface",
+            "material": "photo-right",
+            "alphaMode": "OPAQUE",
+            "baseColorFactor": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "doubleSided": false,
+            "unlit": true,
+            "contractOk": true
+          },
+          {
+            "node": "left-photo-surface",
+            "material": "photo-left",
+            "alphaMode": "OPAQUE",
+            "baseColorFactor": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "doubleSided": false,
+            "unlit": true,
+            "contractOk": true
+          },
+          {
+            "node": "top-photo-surface",
+            "material": "photo-top",
+            "alphaMode": "OPAQUE",
+            "baseColorFactor": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "doubleSided": false,
+            "unlit": true,
+            "contractOk": true
+          },
+          {
+            "node": "bottom-photo-surface",
+            "material": "photo-bottom",
+            "alphaMode": "OPAQUE",
+            "baseColorFactor": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "doubleSided": false,
+            "unlit": true,
+            "contractOk": true
+          }
+        ],
+        "alphaErrors": []
+      },
+      "images": {
+        "embedded": [
+          {
+            "index": 0,
+            "name": "Dell-R730-front",
+            "mode": "RGB",
+            "sizePx": [
+              2048,
+              370
+            ],
+            "alphaExtrema": null
+          },
+          {
+            "index": 1,
+            "name": "Dell-R730-rear",
+            "mode": "RGB",
+            "sizePx": [
+              2048,
+              403
+            ],
+            "alphaExtrema": null
+          },
+          {
+            "index": 2,
+            "name": "Dell-R730-right",
+            "mode": "RGB",
+            "sizePx": [
+              1800,
+              230
+            ],
+            "alphaExtrema": null
+          },
+          {
+            "index": 3,
+            "name": "Dell-R730-left",
+            "mode": "RGB",
+            "sizePx": [
+              1800,
+              230
+            ],
+            "alphaExtrema": null
+          },
+          {
+            "index": 4,
+            "name": "Dell-R730-top",
+            "mode": "RGB",
+            "sizePx": [
+              1200,
+              1849
+            ],
+            "alphaExtrema": null
+          },
+          {
+            "index": 5,
+            "name": "Dell-R730-bottom",
+            "mode": "RGB",
+            "sizePx": [
+              1200,
+              1849
+            ],
+            "alphaExtrema": null
+          }
+        ],
+        "alphaErrors": [],
+        "atlasPolicy": "individual clamp-to-edge face images; no shared atlas, therefore no atlas bleed"
+      },
+      "samplers": {
+        "count": 1,
+        "errors": [],
+        "requiredMinFilter": 9987
+      },
+      "transforms": {
+        "negativeDeterminantNodes": []
+      },
+      "normals": {
+        "missing": []
+      },
+      "core": {
+        "node": "closed-chassis-body",
+        "geometry": "closed-chassis-body",
+        "indexedWatertightBeforeCoincidentVertexMerge": true,
+        "geometricallyWatertightAfterCoincidentVertexMerge": true,
+        "windingConsistent": true,
+        "interpretation": "flat-normal hard edges may duplicate coincident vertices; geometric closure is evaluated after an audit-only merge and the GLB remains unchanged"
+      },
+      "unresolved": [],
+      "status": "PASS"
+    }
+  ],
+  "standardWebParity": {
+    "boundsEqual": true,
+    "nodesEqual": true,
+    "meshesEqual": true,
+    "trianglesEqual": true
+  },
+  "unresolved": [],
+  "status": "PASS"
+}

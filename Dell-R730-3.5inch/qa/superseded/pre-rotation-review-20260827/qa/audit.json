@@ -1,0 +1,206 @@
+{
+  "schema": "rack-device-3d-final-audit-v1",
+  "audited_at": "2026-08-24T00:54:02+08:00",
+  "subject": {
+    "manufacturer": "Dell",
+    "product": "PowerEdge R730",
+    "regulatory_model": "E31S / E31S001",
+    "form_factor": "2U",
+    "configuration": "8 x 3.5-inch LFF, 2 x 4, all carriers installed, security bezel absent",
+    "rear": "standard R730 rear, seven PCIe positions blanked, no R730xd rear flex bays",
+    "network": "iDRAC8 Enterprise, DB9, VGA, 2 x USB 3.0, 4 x RJ45 NDC",
+    "power": "2 x uniform EPP 750W hot-swap AC PSU with IEC C14 inlets",
+    "branding": "real DELL and PowerEdge R730 markings retained"
+  },
+  "verdict": "PASS_WITH_BOTTOM_FALLBACK",
+  "identity_and_source_lock": {
+    "status": "PASS",
+    "manifest": "source/identity-manifest.md",
+    "face_lock": "source/face-source-lock.csv",
+    "evidence": "source/evidence.md",
+    "dimensions": "source/dimension-ledger.csv",
+    "features": "source/feature-inventory.csv",
+    "user_configuration_lock": "source/originals/user-row12-r730-lff.png",
+    "excluded_lookalikes": [
+      "PowerEdge R730xd",
+      "PowerEdge R730 SFF/2.5-inch",
+      "PowerEdge R720/R720xd",
+      "rear-drive-bay variants",
+      "DC, single-PSU, or PSU-blank configurations"
+    ]
+  },
+  "face_assets": {
+    "status": "PASS_WITH_BOTTOM_FALLBACK",
+    "independent_faces": 6,
+    "left_right_mirrored": false,
+    "entries": {
+      "front": {
+        "mode": "SOURCE_LOCKED_GENERATION",
+        "path": "views/front.png",
+        "sha256": "b2e7383e4ed2c2d2be27a0bcb6fc63c1018c5ca295af73c6a501e252f641cf13"
+      },
+      "rear": {
+        "mode": "SOURCE_LOCKED_GENERATION",
+        "path": "views/rear.png",
+        "sha256": "edb5ccfe53779711becd5c19bbd3c82be1e42df69733959b03f1eab8772b680c"
+      },
+      "left": {
+        "mode": "MULTI_REFERENCE_RECONSTRUCTION",
+        "path": "views/left.png",
+        "sha256": "41e8f6a4cb4f941fca9ff4339cc805fd22f65e93d6fed30aa92299680089f3d6"
+      },
+      "right": {
+        "mode": "MULTI_REFERENCE_RECONSTRUCTION",
+        "path": "views/right.png",
+        "sha256": "6f366e0e9ef56d6b36feb23b06d87a249d5023dde497ed7e380b33f00645f447"
+      },
+      "top": {
+        "mode": "SOURCE_LOCKED_GENERATION",
+        "path": "views/top.png",
+        "sha256": "2b0f8ead1ff64d6718d47df4b4171a8c6f5b1998e6478e7e772bd37b8627dba3"
+      },
+      "bottom": {
+        "mode": "GENERIC_BOTTOM_FALLBACK",
+        "path": "views/bottom.png",
+        "sha256": "8c513fabb899721f0ecb6b0c46601ed47a2a0b90b655d01dc1301ef510a1fce7",
+        "reason": "No exact underside remained available after the documented official, marketplace, video, English, and Chinese search."
+      }
+    },
+    "view_audit": {
+      "path": "qa/views-audit.json",
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 5,
+      "warning_resolution": "Manually inspected; warnings are limited to antialiased external silhouette pixels. Every face has 0% transparent core."
+    }
+  },
+  "custom_glbs": {
+    "standard": {
+      "path": "model/Dell-R730-3.5inch.glb",
+      "bytes": 13053336,
+      "sha256": "09bf01fc36fe5406e04db43be32993a17b4f29fa233da155efa902b15d7cabda",
+      "audit": "qa/glb-standard-audit.json",
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0
+    },
+    "web": {
+      "path": "model/Dell-R730-3.5inch-web.glb",
+      "bytes": 9027224,
+      "sha256": "8f63924a3fab07f4b143e4a4735b9fe05bfc55cc0433f3110eaa083f66a787fa",
+      "audit": "qa/glb-web-audit.json",
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0
+    },
+    "common_structure": {
+      "dimensions_xyz_m": [
+        0.48240000009536743,
+        0.08730000257492065,
+        0.7410000264644623
+      ],
+      "dimensions_xyz_mm_nominal": [482.4, 87.3, 741.0],
+      "nodes": 148,
+      "meshes": 148,
+      "primitives": 148,
+      "materials": 16,
+      "textures": 6,
+      "unique_basecolor_images": 6,
+      "mirrored_nodes": 0,
+      "external_resources": 0,
+      "visible_feature_gate": "qa/feature-acceptance.md"
+    }
+  },
+  "webgl": {
+    "status": "PASS",
+    "run_after_final_glb_rebuild": true,
+    "runner": "qa/run_webgl_qa.mjs",
+    "runner_log": "qa/final-run.log",
+    "browser": "Chromium 151.0.7922.34",
+    "viewers": {
+      "Three.js": "qa/viewers/three.html",
+      "Babylon.js": "qa/viewers/babylon.html"
+    },
+    "unique_loads": 40,
+    "direct_page_state_and_screenshot": 40,
+    "recovered_or_inferred": 0,
+    "attempt_one": 40,
+    "errors": 0,
+    "page_errors": 0,
+    "breakdown": {
+      "viewers": {"three": 20, "babylon": 20},
+      "models": {"standard": 20, "web": 20},
+      "views": {
+        "front": 4,
+        "rear": 4,
+        "left": 4,
+        "right": 4,
+        "top": 4,
+        "bottom": 4,
+        "front-left": 4,
+        "front-right": 4,
+        "rear-left": 4,
+        "rear-right": 4
+      }
+    },
+    "evidence": {
+      "summary": "qa/load-evidence/summary.json",
+      "ndjson": "qa/load-evidence/final-load-events.ndjson",
+      "event_json_count": 40,
+      "screenshot_count": 40,
+      "comparison_sheet_count": 40,
+      "contact_sheet_count": 4
+    },
+    "request_failure_note": "The runner recorded 44 net::ERR_ABORTED notices for /qa-log or superseded GLB requests during page close/navigation after READY state and screenshot capture. All 40 atomic events were already written loaded=true with correct bounds and error=null; these lifecycle aborts are non-gating."
+  },
+  "visual_review": {
+    "status": "PASS",
+    "reviewed_contact_sheets": [
+      "qa/contact-sheets/three-standard.png",
+      "qa/contact-sheets/three-web.png",
+      "qa/contact-sheets/babylon-standard.png",
+      "qa/contact-sheets/babylon-web.png"
+    ],
+    "reviewed_detail_renders": [
+      "qa/renders/final/three-standard-rear.png",
+      "qa/renders/final/three-standard-right.png",
+      "qa/renders/final/babylon-web-rear.png",
+      "qa/renders/final/babylon-web-right.png"
+    ],
+    "findings": [
+      "Two viewers and both GLBs agree across six orthographic and four oblique views.",
+      "Front 2 x 4 LFF carriers and DELL/PowerEdge R730 branding remain readable.",
+      "Rear seven-slot layout, I/O bank, four RJ45 ports, and dual EPP 750W AC PSUs are visible.",
+      "Physical left and right are different and are not mirrored.",
+      "Right-side rail-stud geometry was aligned to source pixel centers before the final rebuild and load run.",
+      "Bottom remains intentionally plain and conservative under the documented fallback."
+    ]
+  },
+  "official_3d": {
+    "exact_downloadable_model_found": false,
+    "status": "NO_EXACT_DOWNLOADABLE_OFFICIAL_MODEL",
+    "preserved_path": "source/optional-3d/",
+    "details": "Dell publishes R730 interactive service 3D Guide pages, but no exact installed 8LFF GLB/glTF/STEP/OBJ/FBX was exposed. The viewer routes returned HTTP 403; the response HTML, headers, and discovery README are preserved unchanged. No official model replaces either custom GLB."
+  },
+  "residual_risks": [
+    "The underside is a generic evidence-bounded fallback, not a verified exact underside.",
+    "Left, right, and some top detail are photo/diagram reconstructions rather than official CAD.",
+    "Primary seller photographs include watermarks; generated face assets exclude seller marks while preserving device material and configuration evidence.",
+    "The model is an exterior web replica, not engineering/internal CAD.",
+    "No exact downloadable official installed-configuration mesh was available for mesh-to-mesh comparison."
+  ],
+  "gates": {
+    "exact_variant_lock": "PASS",
+    "six_independent_face_lock": "PASS_WITH_BOTTOM_FALLBACK",
+    "real_branding_retained": "PASS",
+    "uniform_dual_ac_psu": "PASS",
+    "custom_standard_glb": "PASS",
+    "custom_web_glb": "PASS",
+    "structural_audit": "PASS",
+    "two_independent_webgl_viewers": "PASS",
+    "forty_live_loads": "PASS",
+    "visual_parity_review": "PASS",
+    "official_model_preservation": "PASS_NOT_FOUND",
+    "final": "PASS_WITH_BOTTOM_FALLBACK"
+  }
+}

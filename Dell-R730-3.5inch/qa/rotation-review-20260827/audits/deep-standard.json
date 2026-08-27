@@ -1,0 +1,306 @@
+{
+  "input": "Dell-R730-3.5inch/model/Dell-R730-3.5inch.glb",
+  "byte_size": 13050744,
+  "thresholds": {
+    "exact_duplicate_m": 1e-7,
+    "exact_coplanar_m": 1e-7,
+    "near_coplanar_m": 0.0002
+  },
+  "counts": {
+    "nodes": 147,
+    "meshes": 147,
+    "triangles_world_instances": 2998,
+    "duplicate_triangle_groups": 0,
+    "exact_coplanar_triangle_pairs": 0,
+    "near_coplanar_triangle_pairs": 0,
+    "negative_transforms": 0,
+    "singular_transforms": 0,
+    "blend_materials": 0,
+    "double_sided_materials": 0,
+    "primary_material_errors": 0,
+    "closed_core_nodes": 1,
+    "closed_core_failures": 0,
+    "watertight_mesh_instances": 122,
+    "inward_watertight_mesh_instances": 0,
+    "normal_attribute_mismatch_triangles": 0
+  },
+  "duplicate_triangle_groups": [],
+  "exact_coplanar_pairs": [],
+  "near_coplanar_pairs": [],
+  "negative_or_singular_transforms": [],
+  "materials": [
+    {
+      "name": "galvanized-steel",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.64,
+        0.67,
+        0.69,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "light-galvanized-steel",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.78,
+        0.8,
+        0.81,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "brushed-silver",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.72,
+        0.74,
+        0.75,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "black-molded-metal-and-plastic",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.035,
+        0.038,
+        0.041,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "connector-black",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.075,
+        0.082,
+        0.088,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "psu-release-orange",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.98,
+        0.31,
+        0.035,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "dell-release-blue",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.08,
+        0.33,
+        0.72,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "serial-teal",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.03,
+        0.38,
+        0.34,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "mounting-stud-green-zinc",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.08,
+        0.42,
+        0.3,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "fan-hub-label",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.91,
+        0.92,
+        0.91,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "photo-front",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 2400,
+        "height": 434,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "photo-rear",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 2400,
+        "height": 472,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "photo-right",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 2400,
+        "height": 306,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "photo-left",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 2400,
+        "height": 306,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "photo-top",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 1600,
+        "height": 2465,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "photo-bottom",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 1600,
+        "height": 2465,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    }
+  ],
+  "primary_material_errors": [],
+  "closed_core": [
+    {
+      "node": "closed-chassis-body",
+      "triangle_count": 12,
+      "edge_count": 18,
+      "boundary_edge_count": 0,
+      "non_manifold_edge_count": 0,
+      "signed_volume": 0.02552555298452602,
+      "watertight": true,
+      "outward_signed_volume": true
+    }
+  ],
+  "inward_watertight_meshes": [],
+  "normal_attribute_mismatches": [],
+  "unresolved": [],
+  "status": "PASS"
+}

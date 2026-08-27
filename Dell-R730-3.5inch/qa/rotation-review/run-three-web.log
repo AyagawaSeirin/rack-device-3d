@@ -1,0 +1,177 @@
+### Browser `rr-r730-three-web` opened with pid 298263.
+### Ran Playwright code
+```js
+await page.goto('http://127.0.0.1:8899/Dell-R730-3.5inch/qa/rotation-review/control.html?engine=three&flavor=web&run=rotation-review-20260827');
+```
+### Page
+- Page URL: http://127.0.0.1:8899/Dell-R730-3.5inch/qa/rotation-review/control.html?engine=three&flavor=web&run=rotation-review-20260827
+- Page Title: Rotation review control
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-08-27T13-33-35-426Z.yml)
+### Page
+- Page URL: http://127.0.0.1:8899/Dell-R730-3.5inch/qa/rotation-review/control.html?engine=three&flavor=web&run=rotation-review-20260827
+- Page Title: Rotation review control
+### Snapshot
+```yaml
+- main [ref=e2]:
+  - heading "Rotation review control" [level=1] [ref=e3]
+  - paragraph [ref=e4]: READY_FOR_PLAYWRIGHT_NAVIGATION
+```
+### Result
+{"combo":"three-web","status":"PASS","loads":10,"yawFrames":72,"diagnostics":16,"frameFailures":0,"loadFailures":0}
+### Ran Playwright code
+```js
+await (async (page) => {
+  const initial = await page.evaluate(() => ({
+    basePath: `${location.origin}${location.pathname.replace(/control\.html$/, '')}`,
+    engine: new URLSearchParams(location.search).get('engine'),
+    flavor: new URLSearchParams(location.search).get('flavor'),
+    runId: new URLSearchParams(location.search).get('run')
+  }));
+  const engine = initial.engine === 'babylon' ? 'babylon' : 'three';
+  const flavor = initial.flavor === 'web' ? 'web' : 'standard';
+  const combo = `${engine}-${flavor}`;
+  const runId = initial.runId || 'rotation-review-20260827';
+  const viewer = `${initial.basePath}${engine}.html`;
+  const pitches = [12, -12, 28, -28, 55, -55];
+  const loads = [];
+  const frames = [];
+  const diagnostics = [];
+  const browserEvents = [];
+
+  const captureMetrics = async target => target.evaluate(() => {
+    const canvas = document.querySelector('canvas');
+    const gl = canvas?.getContext('webgl2');
+    if (!gl) throw new Error('WebGL2 metrics context unavailable');
+    const width = gl.drawingBufferWidth;
+    const height = gl.drawingBufferHeight;
+    const pixels = new Uint8Array(width * height * 4);
+    gl.readPixels(0, 0, width, height, gl.RGBA, gl.UNSIGNED_BYTE, pixels);
+    let hash = 2166136261;
+    let alphaZero = 0, alphaPartial = 0, alphaOpaque = 0, edgeAlpha = 0;
+    let luma = 0, visible = 0, minX = width, minY = height, maxX = -1, maxY = -1;
+    for (let pixel = 0; pixel < width * height; pixel += 1) {
+      const offset = pixel * 4;
+      const r = pixels[offset], g = pixels[offset + 1], b = pixels[offset + 2], a = pixels[offset + 3];
+      hash ^= r; hash = Math.imul(hash, 16777619);
+      hash ^= g; hash = Math.imul(hash, 16777619);
+      hash ^= b; hash = Math.imul(hash, 16777619);
+      hash ^= a; hash = Math.imul(hash, 16777619);
+      if (a === 0) alphaZero += 1;
+      else {
+        visible += 1;
+        if (a === 255) alphaOpaque += 1; else alphaPartial += 1;
+        luma += 0.2126 * r + 0.7152 * g + 0.0722 * b;
+        const x = pixel % width, y = Math.floor(pixel / width);
+        minX = Math.min(minX, x); minY = Math.min(minY, y); maxX = Math.max(maxX, x); maxY = Math.max(maxY, y);
+        if (x === 0 || y === 0 || x === width - 1 || y === height - 1) edgeAlpha += 1;
+      }
+    }
+    return {
+      width, height,
+      signatureFNV1a: (hash >>> 0).toString(16).padStart(8, '0'),
+      alphaZeroPixels: alphaZero,
+      alphaPartialPixels: alphaPartial,
+      alphaOpaquePixels: alphaOpaque,
+      visiblePixels: visible,
+      edgeAlphaPixels: edgeAlpha,
+      visibleBounds: visible ? [minX, minY, maxX, maxY] : null,
+      meanVisibleLuma: visible ? Number((luma / visible).toFixed(4)) : null,
+      glError: gl.getError()
+    };
+  });
+
+  async function openIndependent(loadIndex) {
+    const target = await page.context().newPage();
+    await target.setViewportSize({width: 640, height: 400});
+    const events = [];
+    const responses = [];
+    target.on('pageerror', error => events.push({type: 'pageerror', text: String(error)}));
+    target.on('console', message => {
+      if (message.type() === 'error' || message.type() === 'warning') events.push({type: `console-${message.type()}`, text: message.text()});
+    });
+    target.on('response', response => {
+      if (response.url().includes('.glb')) responses.push({url: response.url(), status: response.status()});
+    });
+    const cacheBust = `${runId}-${combo}-load-${String(loadIndex).padStart(2, '0')}`;
+    const url = `${viewer}?flavor=${flavor}&cb=${encodeURIComponent(cacheBust)}&run=${encodeURIComponent(runId)}&load=${loadIndex}`;
+    const started = Date.now();
+    const response = await target.goto(url, {waitUntil: 'domcontentloaded', timeout: 120000});
+    await target.waitForFunction(() => window.__qa?.ready === true || window.__qa?.error, null, {timeout: 120000});
+    const qa = await target.evaluate(() => JSON.parse(JSON.stringify(window.__qa)));
+    if (!qa.ready || qa.error || !qa.loadingOverlayCleared || !String(qa.webglVersion).includes('WebGL 2')) {
+      throw new Error(JSON.stringify({loadIndex, combo, qa, events, responses}));
+    }
+    await target.evaluate(({yaw, pitch, bg}) => window.__rotation.setView(yaw, pitch, bg), {
+      yaw: (loadIndex * 37) % 360,
+      pitch: [12, -12, 28, -28][(loadIndex - 1) % 4],
+      bg: loadIndex % 2 ? 'light' : 'dark'
+    });
+    const metrics = await captureMetrics(target);
+    const record = {
+      loadIndex, cacheBust, url, httpStatus: response?.status() || null,
+      elapsedMs: Date.now() - started, qa, metrics, modelResponses: responses, browserEvents: events
+    };
+    loads.push(record);
+    browserEvents.push(...events.map(event => ({loadIndex, ...event})));
+    return target;
+  }
+
+  const rotationPage = await openIndependent(1);
+  for (let index = 0; index < 72; index += 1) {
+    const yawDeg = index * 5;
+    const pitchDeg = pitches[Math.floor(index / 12)];
+    const checker = index % 2 === 0 ? 'light' : 'dark';
+    const camera = await rotationPage.evaluate(({yawDeg, pitchDeg, checker}) => window.__rotation.setView(yawDeg, pitchDeg, checker), {yawDeg, pitchDeg, checker});
+    const metrics = await captureMetrics(rotationPage);
+    frames.push({queueIndex: index, yawDeg, pitchDeg, checker, camera, metrics});
+  }
+  const diagnosticViews = [
+    {yawDeg: 0, pitchDeg: 12}, {yawDeg: 90, pitchDeg: 12},
+    {yawDeg: 180, pitchDeg: -12}, {yawDeg: 270, pitchDeg: -12},
+    {yawDeg: 45, pitchDeg: 55}, {yawDeg: 135, pitchDeg: 55},
+    {yawDeg: 225, pitchDeg: -55}, {yawDeg: 315, pitchDeg: -55}
+  ];
+  for (const view of diagnosticViews) {
+    for (const checker of ['light', 'dark']) {
+      const camera = await rotationPage.evaluate(({view, checker}) => window.__rotation.setView(view.yawDeg, view.pitchDeg, checker), {view, checker});
+      const screenshot = `diagnostics/${combo}/yaw-${String(view.yawDeg).padStart(3, '0')}-pitch-${String(view.pitchDeg).replace('-', 'm')}-${checker}.png`;
+      await rotationPage.screenshot({path: screenshot, type: 'png', animations: 'disabled'});
+      diagnostics.push({screenshot, ...view, checker, camera, metrics: await captureMetrics(rotationPage)});
+    }
+  }
+  await rotationPage.close();
+  for (let loadIndex = 2; loadIndex <= 10; loadIndex += 1) {
+    const target = await openIndependent(loadIndex);
+    await target.close();
+  }
+
+  const frameFailures = frames.filter(frame => !frame.metrics.visiblePixels || frame.metrics.edgeAlphaPixels || frame.metrics.glError);
+  const loadFailures = loads.filter(load => load.httpStatus !== 200 || load.modelResponses.length !== 1 || load.modelResponses[0].status !== 200 || !load.metrics.visiblePixels || load.metrics.edgeAlphaPixels || load.metrics.glError || load.qa.error);
+  const manifest = {
+    runId, combo, engine, flavor, viewport: {width: 640, height: 400},
+    independentPages: true, cacheBusted: true,
+    loadCount: loads.length, yawStepDegrees: 5, yawFrameCount: frames.length,
+    diagnosticFrameCount: diagnostics.length, loads, frames, diagnostics,
+    browserEvents, frameFailures, loadFailures,
+    status: loads.length === 10 && frames.length === 72 && diagnostics.length === 16 && !frameFailures.length && !loadFailures.length ? 'PASS' : 'REWORK'
+  };
+  const pending = page.waitForEvent('download', {timeout: 30000});
+  await page.evaluate(data => {
+    const anchor = document.createElement('a');
+    anchor.href = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], {type: 'application/json'}));
+    anchor.download = 'rotation-evidence.json';
+    anchor.click();
+    setTimeout(() => URL.revokeObjectURL(anchor.href), 1000);
+  }, manifest);
+  const download = await pending;
+  await download.saveAs(`evidence-${combo}.json`);
+  return {combo, status: manifest.status, loads: loads.length, yawFrames: frames.length, diagnostics: diagnostics.length, frameFailures: frameFailures.length, loadFailures: loadFailures.length};
+}
+)(page);
+```
+### Events
+- Downloading file rotation-evidence.json ...
+- Downloaded file rotation-evidence.json to ".playwright-cli/rotation-evidence.json"
+Browser 'rr-r730-three-web' closed
+

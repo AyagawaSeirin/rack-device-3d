@@ -1,0 +1,12 @@
+{
+  "label": "Dell PowerEdge R730 8LFF",
+  "modelKey": "Dell-R730-3.5inch",
+  "statusConstraint": "PASS_WITH_BOTTOM_FALLBACK",
+  "models": {
+    "standard": "../../model/Dell-R730-3.5inch.glb",
+    "web": "../../model/Dell-R730-3.5inch-web.glb"
+  },
+  "expectedDimensionsMm": [482.4, 87.3, 741.0],
+  "coreNode": "closed-chassis-body",
+  "faceNodes": ["front-photo-surface", "rear-photo-surface", "right-photo-surface", "left-photo-surface", "top-photo-surface", "bottom-photo-surface"]
+}

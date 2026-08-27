@@ -1,0 +1,37 @@
+LOAD final-three-standard-front attempt=1
+LOAD final-three-standard-rear attempt=1
+LOAD final-three-standard-left attempt=1
+LOAD final-three-standard-right attempt=1
+LOAD final-three-standard-top attempt=1
+LOAD final-three-standard-bottom attempt=1
+LOAD final-three-standard-front-left attempt=1
+LOAD final-three-standard-front-right attempt=1
+LOAD final-three-standard-rear-left attempt=1
+LOAD final-three-standard-rear-right attempt=1
+LOAD final-three-web-front attempt=1
+LOAD final-three-web-rear attempt=1
+LOAD final-three-web-left attempt=1
+LOAD final-three-web-right attempt=1
+LOAD final-three-web-top attempt=1
+LOAD final-three-web-bottom attempt=1
+LOAD final-three-web-front-left attempt=1
+LOAD final-three-web-front-right attempt=1
+LOAD final-three-web-rear-left attempt=1
+LOAD final-three-web-rear-right attempt=1
+LOAD final-babylon-standard-front attempt=1
+LOAD final-babylon-standard-rear attempt=1
+LOAD final-babylon-standard-left attempt=1
+LOAD final-babylon-standard-right attempt=1
+LOAD final-babylon-standard-top attempt=1
+LOAD final-babylon-standard-bottom attempt=1
+RETRY final-babylon-standard-bottom Error: page.waitForFunction: Target page, context or browser has been closed
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+browserContext.newPage: Target page, context or browser has been closed
+    at /root/Project/rack-device-3d/Dell-R730-3.5inch/qa/run_webgl_qa.mjs:57:34 {
+  log: []
+}
+
+Node.js v22.23.1

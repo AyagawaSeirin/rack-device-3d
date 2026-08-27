@@ -1,0 +1,183 @@
+{
+  "runId": "matched-camera-20260827",
+  "combo": "babylon-standard",
+  "engine": "babylon",
+  "flavor": "standard",
+  "cacheBust": "matched-camera-20260827-babylon-standard",
+  "url": "http://127.0.0.1:8899/Dell-R730-3.5inch/qa/rotation-review/babylon.html?flavor=standard&cb=matched-camera-20260827-babylon-standard&run=matched-camera-20260827",
+  "viewport": {
+    "width": 640,
+    "height": 400
+  },
+  "httpStatus": 200,
+  "qa": {
+    "ready": true,
+    "engine": "babylon",
+    "engineVersion": "8.56.2",
+    "flavor": "standard",
+    "modelUrl": "../../model/Dell-R730-3.5inch.glb?cb=matched-camera-20260827-babylon-standard",
+    "cacheBust": "matched-camera-20260827-babylon-standard",
+    "webglVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "renderer": "WebKit WebGL",
+    "rightHanded": true,
+    "loadingOverlayCleared": true,
+    "queueReady": true,
+    "colorSpace": "sRGB glTF loader",
+    "toneMapping": "disabled",
+    "stats": {
+      "meshes": 147,
+      "materials": 16,
+      "textures": 7,
+      "boundsMin": [
+        -0.24120000004768372,
+        -0.04365000128746033,
+        -0.38100001215934753
+      ],
+      "boundsMax": [
+        0.24120000004768372,
+        0.04365000128746033,
+        0.36000001430511475
+      ]
+    },
+    "loadMs": 693.3000000007451,
+    "currentFrame": {
+      "yawDeg": 0,
+      "pitchDeg": 12,
+      "checker": "light",
+      "near": 1.0103875811795908,
+      "far": 2.2098472652003207,
+      "nearFarRatio": 2.1871282925116757,
+      "width": 640,
+      "height": 400
+    }
+  },
+  "modelResponses": [
+    {
+      "url": "http://127.0.0.1:8899/Dell-R730-3.5inch/model/Dell-R730-3.5inch.glb?cb=matched-camera-20260827-babylon-standard",
+      "status": 200
+    }
+  ],
+  "browserEvents": [
+    {
+      "type": "console-warning",
+      "text": "[.WebGL-0x2e6c001aac00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "console-warning",
+      "text": "[.WebGL-0x2e6c001aac00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "console-warning",
+      "text": "[.WebGL-0x2e6c001aac00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "console-warning",
+      "text": "[.WebGL-0x2e6c001aac00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+    }
+  ],
+  "frames": [
+    {
+      "face": "front",
+      "yawDeg": 0,
+      "pitchDeg": 0,
+      "checker": "light",
+      "path": "orthographic/babylon-standard/front.png",
+      "camera": {
+        "yawDeg": 0,
+        "pitchDeg": 0,
+        "checker": "light",
+        "near": 1.0103875811795908,
+        "far": 2.2098472652003207,
+        "nearFarRatio": 2.1871282925116757,
+        "width": 640,
+        "height": 400
+      }
+    },
+    {
+      "face": "right",
+      "yawDeg": 90,
+      "pitchDeg": 0,
+      "checker": "light",
+      "path": "orthographic/babylon-standard/right.png",
+      "camera": {
+        "yawDeg": 90,
+        "pitchDeg": 0,
+        "checker": "light",
+        "near": 1.0103875811795908,
+        "far": 2.2098472652003207,
+        "nearFarRatio": 2.1871282925116757,
+        "width": 640,
+        "height": 400
+      }
+    },
+    {
+      "face": "rear",
+      "yawDeg": 180,
+      "pitchDeg": 0,
+      "checker": "light",
+      "path": "orthographic/babylon-standard/rear.png",
+      "camera": {
+        "yawDeg": 180,
+        "pitchDeg": 0,
+        "checker": "light",
+        "near": 1.0103875811795908,
+        "far": 2.2098472652003207,
+        "nearFarRatio": 2.1871282925116757,
+        "width": 640,
+        "height": 400
+      }
+    },
+    {
+      "face": "left",
+      "yawDeg": 270,
+      "pitchDeg": 0,
+      "checker": "light",
+      "path": "orthographic/babylon-standard/left.png",
+      "camera": {
+        "yawDeg": 270,
+        "pitchDeg": 0,
+        "checker": "light",
+        "near": 1.0103875811795908,
+        "far": 2.2098472652003207,
+        "nearFarRatio": 2.1871282925116757,
+        "width": 640,
+        "height": 400
+      }
+    },
+    {
+      "face": "top",
+      "yawDeg": 0,
+      "pitchDeg": 89.9,
+      "checker": "light",
+      "path": "orthographic/babylon-standard/top.png",
+      "camera": {
+        "yawDeg": 0,
+        "pitchDeg": 89.9,
+        "checker": "light",
+        "near": 1.0103875811795908,
+        "far": 2.2098472652003207,
+        "nearFarRatio": 2.1871282925116757,
+        "width": 640,
+        "height": 400
+      }
+    },
+    {
+      "face": "bottom",
+      "yawDeg": 0,
+      "pitchDeg": -89.9,
+      "checker": "light",
+      "path": "orthographic/babylon-standard/bottom.png",
+      "camera": {
+        "yawDeg": 0,
+        "pitchDeg": -89.9,
+        "checker": "light",
+        "near": 1.0103875811795908,
+        "far": 2.2098472652003207,
+        "nearFarRatio": 2.1871282925116757,
+        "width": 640,
+        "height": 400
+      }
+    }
+  ],
+  "status": "PASS"
+}

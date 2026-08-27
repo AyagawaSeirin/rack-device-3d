@@ -83,6 +83,11 @@ function makeBuilder(textureDir) {
       .setAlphaMode('OPAQUE')
       .setDoubleSided(false);
     m.setExtension('KHR_materials_unlit', unlit.createUnlit());
+    m.getBaseColorTextureInfo()
+      .setMagFilter(9729)
+      .setMinFilter(9987)
+      .setWrapS(33071)
+      .setWrapT(33071);
     materials.set(key, m);
     return m;
   }
@@ -132,12 +137,12 @@ function makeBuilder(textureDir) {
     const [sx, sy, sz] = size;
     const hx = sx / 2, hy = sy / 2, hz = sz / 2;
     const rawFaces = [
-      [[hx,-hy,-hz],[hx,-hy,hz],[hx,hy,hz],[hx,hy,-hz]],
-      [[-hx,-hy,hz],[-hx,-hy,-hz],[-hx,hy,-hz],[-hx,hy,hz]],
-      [[-hx,hy,-hz],[hx,hy,-hz],[hx,hy,hz],[-hx,hy,hz]],
-      [[-hx,-hy,hz],[hx,-hy,hz],[hx,-hy,-hz],[-hx,-hy,-hz]],
-      [[-hx,-hy,hz],[-hx,hy,hz],[hx,hy,hz],[hx,-hy,hz]],
-      [[hx,-hy,-hz],[hx,hy,-hz],[-hx,hy,-hz],[-hx,-hy,-hz]],
+      [[-hx,-hy, hz],[ hx,-hy, hz],[ hx, hy, hz],[-hx, hy, hz]],
+      [[ hx,-hy,-hz],[-hx,-hy,-hz],[-hx, hy,-hz],[ hx, hy,-hz]],
+      [[ hx,-hy, hz],[ hx,-hy,-hz],[ hx, hy,-hz],[ hx, hy, hz]],
+      [[-hx,-hy,-hz],[-hx,-hy, hz],[-hx, hy, hz],[-hx, hy,-hz]],
+      [[-hx, hy, hz],[ hx, hy, hz],[ hx, hy,-hz],[-hx, hy,-hz]],
+      [[-hx,-hy,-hz],[ hx,-hy,-hz],[ hx,-hy, hz],[-hx,-hy, hz]],
     ];
     const positions = [], normals = [], uvs = [], indices = [];
     const cs = Math.cos(rotZ), sn = Math.sin(rotZ);
@@ -152,6 +157,29 @@ function makeBuilder(textureDir) {
       indices.push(base, base+1, base+2, base, base+2, base+3);
     });
     return addPrimitive(name, positions, normals, uvs, indices, material);
+  }
+
+  function addWatertightCore(name, center, size, material) {
+    const [cx, cy, cz] = center;
+    const [sx, sy, sz] = size;
+    const hx = sx / 2, hy = sy / 2, hz = sz / 2;
+    const positions = [
+      cx-hx,cy-hy,cz-hz, cx+hx,cy-hy,cz-hz,
+      cx+hx,cy+hy,cz-hz, cx-hx,cy+hy,cz-hz,
+      cx-hx,cy-hy,cz+hz, cx+hx,cy-hy,cz+hz,
+      cx+hx,cy+hy,cz+hz, cx-hx,cy+hy,cz+hz,
+    ];
+    const q = 1 / Math.sqrt(3);
+    const normals = [
+      -q,-q,-q, q,-q,-q, q,q,-q, -q,q,-q,
+      -q,-q,q, q,-q,q, q,q,q, -q,q,q,
+    ];
+    const indices = [
+      0,3,2, 0,2,1, 4,5,6, 4,6,7,
+      0,4,7, 0,7,3, 1,2,6, 1,6,5,
+      0,1,5, 0,5,4, 3,7,6, 3,6,2,
+    ];
+    return addPrimitive(name, positions, normals, null, indices, material);
   }
 
   function addCylinder(name, center, radius, length, axis, segments, material) {
@@ -177,7 +205,7 @@ function makeBuilder(textureDir) {
     }
     for (let i = 0; i < segments; i++) {
       const b = i * 2;
-      indices.push(b, b+1, b+3, b, b+3, b+2);
+      indices.push(b, b+3, b+1, b, b+2, b+3);
     }
     for (const side of [-1, 1]) {
       const centerIndex = positions.length / 3;
@@ -206,27 +234,29 @@ function makeBuilder(textureDir) {
   const uv = (x0,y0,x1,y1,W,H) => [x0/W,y0/H,x1/W,y1/H];
 
   // Closed body and six canonical photo-locked surfaces.
-  addBox('closed-chassis-body', [0,0,0], [D.bodyW,D.H-0.003,D.bodyD], steel);
+  addWatertightCore('closed-chassis-body', [0,0,0], [D.bodyW-0.0008,D.H-0.003,D.bodyD-0.0008], steel);
   addQuad('front-photo-surface', [[-D.overallW/2,-D.H/2,0.3424],[D.overallW/2,-D.H/2,0.3424],[D.overallW/2,D.H/2,0.3424],[-D.overallW/2,D.H/2,0.3424]], textureMaterial('front'));
-  addQuad('rear-photo-surface', [[D.bodyW/2,-D.H/2,-0.3424],[-D.bodyW/2,-D.H/2,-0.3424],[-D.bodyW/2,D.H/2,-0.3424],[D.bodyW/2,D.H/2,-0.3424]], textureMaterial('rear'));
-  addQuad('right-photo-surface', [[D.bodyW/2,-D.H/2,D.bodyD/2],[D.bodyW/2,-D.H/2,-D.bodyD/2],[D.bodyW/2,D.H/2,-D.bodyD/2],[D.bodyW/2,D.H/2,D.bodyD/2]], textureMaterial('right'));
-  addQuad('left-photo-surface', [[-D.bodyW/2,-D.H/2,-D.bodyD/2],[-D.bodyW/2,-D.H/2,D.bodyD/2],[-D.bodyW/2,D.H/2,D.bodyD/2],[-D.bodyW/2,D.H/2,-D.bodyD/2]], textureMaterial('left'));
-  addQuad('top-photo-surface', [[-D.bodyW/2,D.H/2,D.bodyD/2],[D.bodyW/2,D.H/2,D.bodyD/2],[D.bodyW/2,D.H/2,-D.bodyD/2],[-D.bodyW/2,D.H/2,-D.bodyD/2]], textureMaterial('top'));
+  addQuad('rear-photo-surface', [[D.bodyW/2,-D.H/2,-0.34225],[-D.bodyW/2,-D.H/2,-0.34225],[-D.bodyW/2,D.H/2,-0.34225],[D.bodyW/2,D.H/2,-0.34225]], textureMaterial('rear'));
+  const sideCardX = D.bodyW/2;
+  addQuad('right-photo-surface', [[sideCardX,-D.H/2,D.bodyD/2],[sideCardX,-D.H/2,-D.bodyD/2],[sideCardX,D.H/2,-D.bodyD/2],[sideCardX,D.H/2,D.bodyD/2]], textureMaterial('right'));
+  addQuad('left-photo-surface', [[-sideCardX,-D.H/2,-D.bodyD/2],[-sideCardX,-D.H/2,D.bodyD/2],[-sideCardX,D.H/2,D.bodyD/2],[-sideCardX,D.H/2,-D.bodyD/2]], textureMaterial('left'));
+  const topPhotoY = D.H/2 - 0.00080;
+  addQuad('top-photo-surface', [[-D.bodyW/2,topPhotoY,D.bodyD/2],[D.bodyW/2,topPhotoY,D.bodyD/2],[D.bodyW/2,topPhotoY,-D.bodyD/2],[-D.bodyW/2,topPhotoY,-D.bodyD/2]], textureMaterial('top'));
   addQuad('bottom-photo-surface', [[-D.bodyW/2,-D.H/2,-D.bodyD/2],[D.bodyW/2,-D.H/2,-D.bodyD/2],[D.bodyW/2,-D.H/2,D.bodyD/2],[-D.bodyW/2,-D.H/2,D.bodyD/2]], textureMaterial('bottom'));
 
   // Separate front-only rack ears and latches; no rear ears.
   const earW = (D.overallW-D.bodyW)/2;
   for (const s of [-1,1]) {
-    addBox(`front-${s<0?'left':'right'}-rack-ear`, [s*(D.bodyW/2+earW/2),0,0.351], [earW,D.H,0.018], black);
+    addBox(`front-${s<0?'left':'right'}-rack-ear`, [s*(D.bodyW/2+earW/2),0,0.3508], [earW,D.H,0.0176], black);
     addBox(`front-${s<0?'left':'right'}-ear-release`, [s*(D.bodyW/2+earW*0.52),-0.017,0.357], [earW*0.62,0.028,0.006], dark);
   }
 
   // Upper control, iDRAC Direct, ventilation and optical-drive relief.
   const upper = [
-    ['front-control-branding-block',-0.126,0.027,0.174,0.030,uv(105,0,825,155,2400,434)],
-    ['front-idrac-direct-usb-block',0.012,0.027,0.066,0.030,uv(825,0,1090,155,2400,434)],
-    ['front-upper-ventilation-block',0.088,0.027,0.086,0.030,uv(1090,0,1570,155,2400,434)],
-    ['front-optical-drive',0.162,0.027,0.116,0.030,uv(1570,0,2275,155,2400,434)],
+    ['front-control-branding-block',-0.14235,0.027,0.14130,0.030,uv(105,0,825,155,2400,434)],
+    ['front-idrac-direct-usb-block',-0.04570,0.027,0.05200,0.030,uv(825,0,1090,155,2400,434)],
+    ['front-upper-ventilation-block',0.02740,0.027,0.09420,0.030,uv(1090,0,1570,155,2400,434)],
+    ['front-optical-drive',0.14375,0.027,0.13850,0.030,uv(1570,0,2275,155,2400,434)],
   ];
   for (const [name,cx,cy,w,h,texUV] of upper) {
     addBox(`${name}-depth`,[cx,cy,0.347],[w,h,0.009],black);
@@ -244,9 +274,9 @@ function makeBuilder(textureDir) {
     const cx=colX[c], cy=rows[r].y, name=`front-lff-carrier-${r*4+c}`;
     addBox(`${name}-bay-recess`,[cx,cy,0.348],[0.103,0.0265,0.012],dark);
     frontRect(`${name}-photo-face`,cx,cy,0.101,0.0258,0.355,uv(imgX[c][0],rows[r].img[0],imgX[c][1],rows[r].img[1],2400,434));
-    addBox(`${name}-swing-handle`,[cx+0.041,cy,0.354],[0.012,0.023,0.012],black);
-    addBox(`${name}-silver-latch`,[cx+0.037,cy+0.004,0.3585],[0.004,0.010,0.003],silver);
-    addBox(`${name}-grille-relief`,[cx-0.012,cy,0.356],[0.054,0.016,0.008],dark);
+    addBox(`${name}-swing-handle`,[cx+0.041,cy,0.3578],[0.012,0.023,0.0036],black);
+    addBox(`${name}-silver-latch`,[cx+0.0373,cy+0.004,0.3585],[0.004,0.010,0.003],silver);
+    addBox(`${name}-grille-relief`,[cx-0.012,cy,0.358],[0.054,0.016,0.004],dark);
   }
 
   // A shallow six-fan row behind the verified front airflow path.
@@ -259,8 +289,8 @@ function makeBuilder(textureDir) {
   // Rear PCIe blank relief frames: 3 half-height and 4 full-height slots.
   const frame = (name,cx,cy,w,h) => {
     const z=-0.3428, t=0.0005, d=0.0008;
-    addBox(`${name}-top`,[cx,cy+h/2-t/2,z],[w,t,d],lightSteel);
-    addBox(`${name}-bottom`,[cx,cy-h/2+t/2,z],[w,t,d],lightSteel);
+    addBox(`${name}-top`,[cx,cy+h/2-t/2,z],[w-2*t,t,d],lightSteel);
+    addBox(`${name}-bottom`,[cx,cy-h/2+t/2,z],[w-2*t,t,d],lightSteel);
     addBox(`${name}-left`,[cx-w/2+t/2,cy,z],[t,h,d],lightSteel);
     addBox(`${name}-right`,[cx+w/2-t/2,cy,z],[t,h,d],lightSteel);
   };
@@ -297,32 +327,35 @@ function makeBuilder(textureDir) {
   ];
   for (const p of psus) {
     addBox(`rear-psu-${p.i}-module`,[p.cx,-0.022,-0.359],[0.076,0.043,0.034],silver);
-    rearRect(`rear-psu-${p.i}-photo-face`,p.cx,-0.022,0.075,0.042,-0.3810,p.uv);
+    // The source photo is a backing layer; mechanical fan, inlet, guards and
+    // handles must sit outward of it instead of being hidden behind an opaque
+    // card.  Preserve the authoritative -0.381 m envelope with the handles.
+    rearRect(`rear-psu-${p.i}-photo-face`,p.cx,-0.022,0.075,0.042,-0.3764,p.uv);
     const inletX=p.cx+0.018, fanX=p.cx-0.018;
-    addBox(`rear-psu-${p.i}-iec-c14-inlet`,[inletX,-0.020,-0.3770],[0.026,0.028,0.006],black);
-    addBox(`rear-psu-${p.i}-orange-release`,[inletX+0.017,-0.020,-0.3775],[0.005,0.025,0.006],orange);
-    addCylinder(`rear-psu-${p.i}-axial-fan`,[fanX,-0.020,-0.3770],0.018,0.007,'z',24,black);
-    addCylinder(`rear-psu-${p.i}-750w-hub`,[fanX,-0.020,-0.3797],0.007,0.002,'z',24,white);
-    addBox(`rear-psu-${p.i}-fan-guard-a`,[fanX,-0.020,-0.3794],[0.041,0.0022,0.0025],silver,Math.PI/4);
-    addBox(`rear-psu-${p.i}-fan-guard-b`,[fanX,-0.020,-0.3794],[0.041,0.0022,0.0025],silver,-Math.PI/4);
-    addBox(`rear-psu-${p.i}-handle-left`,[p.cx+0.004,-0.020,-0.3780],[0.004,0.035,0.005],silver);
-    addBox(`rear-psu-${p.i}-handle-right`,[p.cx-0.005,-0.020,-0.3780],[0.004,0.035,0.005],silver);
-    addBox(`rear-psu-${p.i}-handle-crossbar`,[p.cx-0.0005,0.000,-0.3780],[0.013,0.004,0.005],silver);
+    addBox(`rear-psu-${p.i}-iec-c14-inlet`,[inletX,-0.020,-0.3785],[0.026,0.028,0.003],black);
+    addBox(`rear-psu-${p.i}-orange-release`,[inletX+0.017,-0.020,-0.3785],[0.005,0.025,0.003],orange);
+    addCylinder(`rear-psu-${p.i}-axial-fan`,[fanX,-0.020,-0.3779],0.018,0.003,'z',24,black);
+    addCylinder(`rear-psu-${p.i}-750w-hub`,[fanX,-0.020,-0.3791],0.007,0.0014,'z',24,white);
+    addBox(`rear-psu-${p.i}-fan-guard-a`,[fanX,-0.020,-0.3796],[0.041,0.0022,0.0012],silver,Math.PI/4);
+    addBox(`rear-psu-${p.i}-fan-guard-b`,[fanX,-0.020,-0.3800],[0.041,0.0022,0.0012],silver,-Math.PI/4);
+    addBox(`rear-psu-${p.i}-handle-left`,[p.cx+0.004,-0.020,-0.3789],[0.004,0.035,0.0042],silver);
+    addBox(`rear-psu-${p.i}-handle-right`,[p.cx-0.005,-0.020,-0.3789],[0.004,0.035,0.0042],silver);
+    addBox(`rear-psu-${p.i}-handle-crossbar`,[p.cx-0.0005,0.000,-0.3789],[0.013,0.004,0.0042],silver);
   }
 
-  // Top-cover seam, stamped rib and latch relief inside the verified height envelope.
-  addBox('top-cover-front-label-band',[0,0.0428,0.265],[D.bodyW,0.0010,0.096],lightSteel);
-  addBox('top-long-stamped-rib',[0,0.0429,0.170],[0.330,0.0010,0.007],lightSteel);
-  addBox('top-cover-latch-pocket',[0.000,0.0430,0.040],[0.033,0.0010,0.055],black);
-  addBox('top-cover-latch-lever',[0.000,0.0432,0.040],[0.020,0.0008,0.038],dark);
+  // The photo card carries the flush factory labels.  Verified raised relief
+  // sits above the card but stays inside the official 87.3 mm height envelope.
+  addBox('top-long-stamped-rib',[0,0.04335,0.170],[0.330,0.0006,0.007],lightSteel);
+  addBox('top-cover-latch-pocket',[0.000,0.04320,0.040],[0.033,0.0003,0.055],black);
+  addBox('top-cover-latch-lever',[0.000,0.04350,0.040],[0.020,0.0003,0.038],dark);
 
   // Side-cover lips; three right-side green-zinc rail mounting studs only.
-  addBox('left-upper-cover-lip',[-D.bodyW/2+0.001,0.034,0],[0.002,0.010,D.bodyD-0.018],lightSteel);
-  addBox('right-upper-cover-lip',[D.bodyW/2-0.001,0.034,0],[0.002,0.010,D.bodyD-0.018],lightSteel);
+  addBox('left-upper-cover-lip',[-(D.bodyW/2+0.0004),0.034,0],[0.0008,0.010,D.bodyD-0.018],lightSteel);
+  addBox('right-upper-cover-lip',[D.bodyW/2+0.0004,0.034,0],[0.0008,0.010,D.bodyD-0.018],lightSteel);
   // Centers measured from the independent right-face source (2400 px wide):
   // x = 866, 1356, 2012 -> z = +0.095, -0.044, -0.231 m.
   for (const [i,z] of [0.095,-0.044,-0.231].entries()) {
-    addCylinder(`right-green-rail-stud-${i+1}`,[D.bodyW/2+0.0015,-0.013,z],0.0032,0.003,'x',18,green);
+    addCylinder(`right-green-rail-stud-${i+1}`,[D.bodyW/2+0.0018,-0.013,z],0.0032,0.0024,'x',18,green);
     addCylinder(`right-stud-washer-${i+1}`,[D.bodyW/2+0.0005,-0.013,z],0.0043,0.0012,'x',18,silver);
   }
 

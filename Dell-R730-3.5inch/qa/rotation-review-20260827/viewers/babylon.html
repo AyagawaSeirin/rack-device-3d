@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Babylon.js rotation review</title>
+  <style>
+    html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#dfe3e6}
+    body[data-bg="light"]{background:conic-gradient(#f4f5f6 25%,#d8dce0 0 50%,#f4f5f6 0 75%,#d8dce0 0) 0 0/32px 32px}
+    body[data-bg="dark"]{background:conic-gradient(#17202a 25%,#34404d 0 50%,#17202a 0 75%,#34404d 0) 0 0/32px 32px}
+    canvas{display:block;width:100%;height:100%;touch-action:none}
+    #overlay{position:fixed;inset:0;display:grid;place-items:center;background:#111;color:#fff;font:600 18px system-ui;z-index:5}
+    #hud{position:fixed;left:10px;top:10px;padding:6px 8px;background:#000b;color:#fff;font:12px ui-monospace,monospace;z-index:4;white-space:pre}
+  </style>
+  <script src="/Dell-R730-3.5inch/node_modules/babylonjs/babylon.js"></script>
+  <script src="/Dell-R730-3.5inch/node_modules/babylonjs-loaders/babylonjs.loaders.min.js"></script>
+</head>
+<body data-bg="light"><div id="overlay">LOADING</div><div id="hud"></div><canvas id="c"></canvas>
+<script>
+(async()=>{
+const params=new URLSearchParams(location.search),modelUrl=params.get('model'),expected=params.get('expected')||'',canvas=document.getElementById('c'),overlay=document.getElementById('overlay'),hud=document.getElementById('hud');
+const engine=new BABYLON.Engine(canvas,true,{preserveDrawingBuffer:true,stencil:true,disableWebGL2Support:false,premultipliedAlpha:false},true);engine.setHardwareScalingLevel(1);
+const scene=new BABYLON.Scene(engine);scene.useRightHandedSystem=true;scene.clearColor=new BABYLON.Color4(0,0,0,0);scene.ambientColor=new BABYLON.Color3(1,1,1);const light=new BABYLON.HemisphericLight('neutral',new BABYLON.Vector3(0,1,0),scene);light.intensity=1.5;light.groundColor=new BABYLON.Color3(0.75,0.75,0.75);
+const camera=new BABYLON.FreeCamera('camera',new BABYLON.Vector3(0,0,1),scene);camera.upVector=new BABYLON.Vector3(0,1,0);scene.activeCamera=camera;
+let center=BABYLON.Vector3.Zero(),radius=1,currentYaw=0,currentPitch=8,actualHash='';const hex=buffer=>Array.from(new Uint8Array(buffer)).map(v=>v.toString(16).padStart(2,'0')).join('');
+function updateHud(){hud.textContent=`BABYLON WebGL${engine.webGLVersion}\n${modelUrl?.split('/').pop()?.split('?')[0]}\nyaw=${currentYaw} pitch=${currentPitch}\nsha256=${actualHash.slice(0,16)}`;}
+window.qaSetOrbit=async(yaw,pitch,bg='light')=>{currentYaw=Number(yaw);currentPitch=Number(pitch);document.body.dataset.bg=bg;const yr=currentYaw*Math.PI/180,pr=currentPitch*Math.PI/180,horizontal=radius*Math.cos(pr);camera.position.set(center.x+horizontal*Math.sin(yr),center.y+radius*Math.sin(pr),center.z+horizontal*Math.cos(yr));camera.setTarget(center);updateHud();scene.render();await new Promise(requestAnimationFrame);scene.render();await new Promise(requestAnimationFrame);return {position:camera.position.asArray(),target:center.asArray(),near:camera.minZ,far:camera.maxZ,yaw:currentYaw,pitch:currentPitch,bg};};
+window.__QA__={ready:false,error:null,engine:'babylon',webgl:`WebGL${engine.webGLVersion}`,overlayHidden:false};
+try{
+ const started=performance.now(),response=await fetch(modelUrl,{cache:'no-store'});if(!response.ok)throw new Error(`model HTTP ${response.status}`);const bytes=await response.arrayBuffer();actualHash=hex(await crypto.subtle.digest('SHA-256',bytes));if(expected&&actualHash!==expected)throw new Error(`hash mismatch ${actualHash} != ${expected}`);
+ const blobUrl=URL.createObjectURL(new Blob([bytes],{type:'model/gltf-binary'}));const imported=await BABYLON.SceneLoader.ImportMeshAsync(null,'',blobUrl,scene,undefined,'.glb');URL.revokeObjectURL(blobUrl);const meshes=imported.meshes.filter(m=>m.getTotalVertices&&m.getTotalVertices()>0);const mm=BABYLON.Mesh.MinMax(meshes);center=BABYLON.Vector3.Center(mm.min,mm.max);const size=mm.max.subtract(mm.min),maxDim=Math.max(size.x,size.y,size.z);radius=maxDim*1.25;camera.minZ=Math.max(maxDim/100,0.001);camera.maxZ=maxDim*12;
+ await window.qaSetOrbit(Number(params.get('yaw')||0),Number(params.get('pitch')||8),params.get('bg')||'light');overlay.style.display='none';scene.render();
+ window.__QA__={ready:true,error:null,engine:'babylon',webgl:`WebGL${engine.webGLVersion}`,overlayHidden:getComputedStyle(overlay).display==='none',actualHash,expectedHash:expected,bounds:{min:mm.min.asArray(),max:mm.max.asArray(),size:size.asArray()},near:camera.minZ,far:camera.maxZ,nearFarRatio:camera.maxZ/camera.minZ,meshCount:meshes.length,loadMs:performance.now()-started};
+}catch(error){overlay.textContent=`ERROR ${error}`;window.__QA__={ready:false,error:String(error),engine:'babylon',webgl:`WebGL${engine.webGLVersion}`,overlayHidden:false,actualHash};}
+})();
+</script></body></html>

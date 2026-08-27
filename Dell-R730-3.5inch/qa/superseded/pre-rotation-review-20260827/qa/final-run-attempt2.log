@@ -1,0 +1,30 @@
+SKIP final-three-standard-front
+SKIP final-three-standard-rear
+LOAD final-three-standard-left attempt=1
+LOAD final-three-standard-right attempt=1
+LOAD final-three-standard-top attempt=1
+LOAD final-three-standard-bottom attempt=1
+RETRY final-three-standard-bottom Error: page.screenshot: Target crashed 
+Call log:
+[2m  - taking page screenshot[22m
+[2m  - waiting for fonts to load...[22m
+[2m  - fonts loaded[22m
+
+LOAD final-three-standard-bottom attempt=2
+RETRY final-three-standard-bottom Error: page.screenshot: Target page, context or browser has been closed
+Call log:
+[2m  - taking page screenshot[22m
+[2m  - waiting for fonts to load...[22m
+[2m  - fonts loaded[22m
+
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+browserContext.newPage: Protocol error (Target.createTarget): Not supported
+    at /root/Project/rack-device-3d/Dell-R730-3.5inch/qa/run_webgl_qa.mjs:57:34 {
+  log: [],
+  name: 'Error'
+}
+
+Node.js v22.23.1

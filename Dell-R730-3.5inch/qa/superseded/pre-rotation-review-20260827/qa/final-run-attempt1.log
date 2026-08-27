@@ -1,0 +1,21 @@
+LOAD final-three-standard-front
+LOAD final-three-standard-rear
+LOAD final-three-standard-left
+LOAD final-three-standard-right
+LOAD final-three-standard-top
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+page.goto: net::ERR_ABORTED; maybe frame was detached?
+Call log:
+[2m  - navigating to "http://127.0.0.1:36893/qa/viewers/three.html?model=standard&view=top&run=final-three-standard-top", waiting until "domcontentloaded"[22m
+
+    at /root/Project/rack-device-3d/Dell-R730-3.5inch/qa/run_webgl_qa.mjs:47:18 {
+  log: [
+    '  - navigating to "http://127.0.0.1:36893/qa/viewers/three.html?model=standard&view=top&run=final-three-standard-top", waiting until "domcontentloaded"'
+  ],
+  name: 'Error'
+}
+
+Node.js v22.23.1
