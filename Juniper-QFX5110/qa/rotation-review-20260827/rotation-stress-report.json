@@ -1,0 +1,39 @@
+{
+  "schema": "rotation-stress-report-v1",
+  "model": "Juniper-QFX5110",
+  "reported_user_symptom": "surface flicker / intermittent disappearance / transparency-like appearance while orbiting",
+  "reproduced_on_pre_rotation_checkpoint": false,
+  "before_observation": "The preserved 2026-08-27 checkpoint stayed visually continuous in both engines; earlier user symptom was not fabricated as a before failure.",
+  "structural_risk_found": "Reduced front relief/texture depth precision risk by increasing the verified overlay clearance to 0.20 mm; clamped all face samplers to stop mip-edge wrap.",
+  "final_glb_hashes": {
+    "standard": "079472babeefd92349789edeb28f33635c04fcb9086dfd900e7fcb0e4325ac59",
+    "web": "cdd30d96cfe04c2ba44cfe27176c89fcb5267b266ccb6543f3ddbac04a9ee53d"
+  },
+  "static_load_gate": {
+    "loads": 40,
+    "views_per_engine_variant": 10,
+    "status": "PASS"
+  },
+  "rotation_gate": {
+    "combinations": 4,
+    "yaw_step_degrees": 5,
+    "yaw_frames_per_combination": 72,
+    "pitch_frames_per_combination": 4,
+    "total_final_frames": 304,
+    "light_checker": true,
+    "dark_checker": true,
+    "surface_flicker": false,
+    "transparency_jump": false,
+    "checkerboard_leak": false,
+    "face_disappearance": false,
+    "mirroring": false,
+    "texture_switch": false,
+    "sudden_gray": false,
+    "viewer_loading_overlay": false,
+    "status": "PASS"
+  },
+  "browser_console_errors": 0,
+  "browser_warnings": "Chromium ReadPixels performance warnings only; expected during screenshot capture.",
+  "final_status": "PASS_WITH_BOTTOM_FALLBACK",
+  "residual_risk": "Exact underside imagery remains unavailable; controlled generic-bottom fallback only."
+}

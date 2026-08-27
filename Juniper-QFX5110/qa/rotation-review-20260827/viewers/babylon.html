@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Babylon.js WebGL2 rotation stress viewer</title>
+  <style>
+    html,body,#canvas{width:100%;height:100%;margin:0;overflow:hidden;display:block}
+    body.light{background-color:#d9dde1;background-image:linear-gradient(45deg,#f7f8f9 25%,transparent 25%),linear-gradient(-45deg,#f7f8f9 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#f7f8f9 75%),linear-gradient(-45deg,transparent 75%,#f7f8f9 75%);background-size:32px 32px;background-position:0 0,0 16px,16px -16px,-16px 0}
+    body.dark{background-color:#202428;background-image:linear-gradient(45deg,#41474d 25%,transparent 25%),linear-gradient(-45deg,#41474d 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#41474d 75%),linear-gradient(-45deg,transparent 75%,#41474d 75%);background-size:32px 32px;background-position:0 0,0 16px,16px -16px,-16px 0}
+  </style>
+  <script src="/Juniper-MX304/qa/viewers/vendor/babylon.js"></script>
+  <script src="/Juniper-MX304/qa/viewers/vendor/babylonjs.loaders.min.js"></script>
+</head>
+<body><canvas id="canvas"></canvas>
+<script>
+(async()=>{
+  const query=new URLSearchParams(location.search),model=query.get('model');
+  if(!model)throw new Error('missing ?model=/absolute/server/path.glb');
+  document.body.className=query.get('bg')==='dark'?'dark':'light';
+  const canvas=document.getElementById('canvas'),engine=new BABYLON.Engine(canvas,true,{preserveDrawingBuffer:true,stencil:true,alpha:true,antialias:true},false);
+  // Babylon's default animated loading emblem remains visible briefly after
+  // AppendAsync resolves and can be mistaken for model transparency in the
+  // first rotation frames.  QA captures must contain only the WebGL scene.
+  BABYLON.SceneLoader.ShowLoadingScreen=false;
+  engine.loadingScreen={displayLoadingUI(){},hideLoadingUI(){}};
+  const gl=engine._gl;if(!(gl instanceof WebGL2RenderingContext))throw new Error('WebGL2 required');
+  const scene=new BABYLON.Scene(engine);scene.useRightHandedSystem=true;scene.clearColor=new BABYLON.Color4(0,0,0,0);scene.imageProcessingConfiguration.toneMappingEnabled=false;scene.imageProcessingConfiguration.exposure=1;scene.imageProcessingConfiguration.contrast=1;
+  const hemi=new BABYLON.HemisphericLight('hemi',new BABYLON.Vector3(0,1,0),scene);hemi.intensity=1.55;hemi.groundColor=new BABYLON.Color3(.35,.38,.41);
+  const key=new BABYLON.DirectionalLight('key',new BABYLON.Vector3(-1,-1.4,-1.8),scene);key.intensity=1.35;
+  await BABYLON.SceneLoader.AppendAsync('',model,scene);
+  const ext=scene.getWorldExtends(m=>m.getTotalVertices&&m.getTotalVertices()>0),center=ext.min.add(ext.max).scale(.5),radius=ext.max.subtract(ext.min).length()*.5;
+  const camera=new BABYLON.ArcRotateCamera('orbit',Math.PI/2,Math.PI/2-BABYLON.Tools.ToRadians(16),radius*3.15,center,scene);
+  camera.minZ=Math.max(radius/100,.001);camera.maxZ=radius*30;camera.lowerRadiusLimit=radius*1.2;camera.upperRadiusLimit=radius*8;camera.attachControl(canvas,true);scene.activeCamera=camera;
+  let stableFrames=0;engine.runRenderLoop(()=>{scene.render();if(++stableFrames===5)window.__READY=true});
+  window.qaSetPose=async(yawDeg,pitchDeg)=>{camera.alpha=Math.PI/2+BABYLON.Tools.ToRadians(Number(yawDeg));camera.beta=Math.PI/2-BABYLON.Tools.ToRadians(Math.max(-82,Math.min(82,Number(pitchDeg))));for(let i=0;i<3;i++){scene.render();await new Promise(requestAnimationFrame)}return{yaw:Number(yawDeg),pitch:Number(pitchDeg)}};
+  window.qaGetStatus=()=>({ready:true,engine:'Babylon.js',webgl:gl.getParameter(gl.VERSION),model,bounds:{min:ext.min.asArray(),max:ext.max.asArray()},materials:scene.materials.map(m=>({material:m.name,alpha:m.alpha,transparencyMode:m.transparencyMode,backFaceCulling:m.backFaceCulling,separateCullingPass:m.separateCullingPass,needDepthPrePass:m.needDepthPrePass}))});
+  addEventListener('resize',()=>engine.resize());
+})().catch(error=>{window.__ERROR=String(error);console.error(error)});
+</script>
+</body>
+</html>

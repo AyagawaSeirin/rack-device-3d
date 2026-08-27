@@ -1,0 +1,672 @@
+{
+  "schema": "rotation-risk-structural-audit-v1",
+  "path": "Juniper-QFX5110/model/Juniper-QFX5110-web.glb",
+  "byte_size": 7272784,
+  "triangle_count": 5018,
+  "node_geometry_count": 39,
+  "textured_materials": [
+    {
+      "index": 1,
+      "name": "tex_front",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    },
+    {
+      "index": 2,
+      "name": "tex_rear",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    },
+    {
+      "index": 3,
+      "name": "tex_left",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    },
+    {
+      "index": 4,
+      "name": "tex_right",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    },
+    {
+      "index": 5,
+      "name": "tex_top",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    },
+    {
+      "index": 6,
+      "name": "tex_bottom",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    },
+    {
+      "index": 9,
+      "name": "tex_front_modules",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    },
+    {
+      "index": 12,
+      "name": "tex_rear_modules",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    }
+  ],
+  "material_violations": [],
+  "embedded_image_alpha": [
+    {
+      "index": 0,
+      "mode": "RGB",
+      "size": [
+        2048,
+        203
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    },
+    {
+      "index": 1,
+      "mode": "RGB",
+      "size": [
+        2048,
+        203
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    },
+    {
+      "index": 2,
+      "mode": "RGB",
+      "size": [
+        2048,
+        172
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    },
+    {
+      "index": 3,
+      "mode": "RGB",
+      "size": [
+        2048,
+        172
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    },
+    {
+      "index": 4,
+      "mode": "RGB",
+      "size": [
+        1302,
+        1536
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    },
+    {
+      "index": 5,
+      "mode": "RGB",
+      "size": [
+        1302,
+        1536
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    },
+    {
+      "index": 6,
+      "mode": "RGB",
+      "size": [
+        2048,
+        203
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    },
+    {
+      "index": 7,
+      "mode": "RGB",
+      "size": [
+        2048,
+        203
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    }
+  ],
+  "image_errors": [],
+  "samplers": [
+    {
+      "index": 0,
+      "wrapS": 33071,
+      "wrapT": 33071
+    }
+  ],
+  "sampler_violations": [],
+  "negative_transforms": [],
+  "degenerate_triangles": [],
+  "exact_duplicate_triangle_groups": [],
+  "opposite_duplicate_triangle_pairs": [],
+  "coplanar_or_near_pairs_within_0_25mm": [
+    {
+      "node_a": "Front_SFP_Cage_Relief_48",
+      "node_b": "Closed_Chassis_Body",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.01920767988710816,
+      "triangle_pairs": 192
+    },
+    {
+      "node_a": "Rear_Management_Panel",
+      "node_b": "Closed_Chassis_Body",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.00988799812746044,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_AC_PSU_1",
+      "node_b": "Closed_Chassis_Body",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.00979200074243547,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_AC_PSU_0",
+      "node_b": "Closed_Chassis_Body",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.00979200074243547,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_Fan_Module_1",
+      "node_b": "Closed_Chassis_Body",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.007311360611095441,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_Fan_Module_2",
+      "node_b": "Closed_Chassis_Body",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.007311360307111742,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_Fan_Module_3",
+      "node_b": "Closed_Chassis_Body",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.007311360231115817,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_Fan_Module_4",
+      "node_b": "Closed_Chassis_Body",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.007311360003128042,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_Fan_Module_0",
+      "node_b": "Closed_Chassis_Body",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.007311358787193245,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Top_Rear_Cover_Seam",
+      "node_b": "Closed_Chassis_Body",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.005243312676498135,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Top_Front_Cover_Seam",
+      "node_b": "Closed_Chassis_Body",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.005243312676498135,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_Relief_4",
+      "node_b": "Closed_Chassis_Body",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.002559360283359291,
+      "triangle_pairs": 16
+    },
+    {
+      "node_a": "Front_GM_RJ45_Relief",
+      "node_b": "Closed_Chassis_Body",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.0008989996660142188,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Right_Side_Mount_Slots",
+      "node_b": "Closed_Chassis_Body",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.0007280007154941703,
+      "triangle_pairs": 56
+    },
+    {
+      "node_a": "Left_Side_Mount_Slots",
+      "node_b": "Closed_Chassis_Body",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.0006760002216100736,
+      "triangle_pairs": 52
+    },
+    {
+      "node_a": "Front_PPS_OUT",
+      "node_b": "Closed_Chassis_Body",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.00028079749406415,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "Front_10M_OUT",
+      "node_b": "Closed_Chassis_Body",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.0002807971239740248,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "Top_Cover_Fasteners",
+      "node_b": "Closed_Chassis_Body",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.0002589914553276784,
+      "triangle_pairs": 320
+    },
+    {
+      "node_a": "Front_ESD_Terminal",
+      "node_b": "Closed_Chassis_Body",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.00020821450794136775,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "Face_Rear_SourceLocked",
+      "node_b": "Closed_Chassis_Body",
+      "axis": 2,
+      "gap_mm": 0.07998943328857422,
+      "overlap_area_m2": 0.07705584214701133,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed_Chassis_Body",
+      "node_b": "Face_Front_SourceLocked",
+      "axis": 2,
+      "gap_mm": 0.07998943328857422,
+      "overlap_area_m2": 0.07705584214701133,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_SFP_Cage_Relief_48",
+      "node_b": "Face_Front_SourceLocked",
+      "axis": 2,
+      "gap_mm": 0.07998943328857422,
+      "overlap_area_m2": 0.01920767988710816,
+      "triangle_pairs": 192
+    },
+    {
+      "node_a": "Face_Rear_SourceLocked",
+      "node_b": "Rear_Management_Panel",
+      "axis": 2,
+      "gap_mm": 0.07998943328857422,
+      "overlap_area_m2": 0.00988799812746044,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Face_Rear_SourceLocked",
+      "node_b": "Rear_AC_PSU_1",
+      "axis": 2,
+      "gap_mm": 0.07998943328857422,
+      "overlap_area_m2": 0.00979200074243547,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Face_Rear_SourceLocked",
+      "node_b": "Rear_AC_PSU_0",
+      "axis": 2,
+      "gap_mm": 0.07998943328857422,
+      "overlap_area_m2": 0.00979200074243547,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Face_Rear_SourceLocked",
+      "node_b": "Rear_Fan_Module_1",
+      "axis": 2,
+      "gap_mm": 0.07998943328857422,
+      "overlap_area_m2": 0.007311360611095441,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Face_Rear_SourceLocked",
+      "node_b": "Rear_Fan_Module_2",
+      "axis": 2,
+      "gap_mm": 0.07998943328857422,
+      "overlap_area_m2": 0.007311360307111742,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Face_Rear_SourceLocked",
+      "node_b": "Rear_Fan_Module_3",
+      "axis": 2,
+      "gap_mm": 0.07998943328857422,
+      "overlap_area_m2": 0.007311360231115817,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Face_Rear_SourceLocked",
+      "node_b": "Rear_Fan_Module_4",
+      "axis": 2,
+      "gap_mm": 0.07998943328857422,
+      "overlap_area_m2": 0.007311360003128042,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Face_Rear_SourceLocked",
+      "node_b": "Rear_Fan_Module_0",
+      "axis": 2,
+      "gap_mm": 0.07998943328857422,
+      "overlap_area_m2": 0.007311358787193245,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_Relief_4",
+      "node_b": "Face_Front_SourceLocked",
+      "axis": 2,
+      "gap_mm": 0.07998943328857422,
+      "overlap_area_m2": 0.002559360283359291,
+      "triangle_pairs": 16
+    },
+    {
+      "node_a": "Front_GM_RJ45_Relief",
+      "node_b": "Face_Front_SourceLocked",
+      "axis": 2,
+      "gap_mm": 0.07998943328857422,
+      "overlap_area_m2": 0.0008989996660142188,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_PPS_OUT",
+      "node_b": "Face_Front_SourceLocked",
+      "axis": 2,
+      "gap_mm": 0.07998943328857422,
+      "overlap_area_m2": 0.00028079749406415,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "Front_10M_OUT",
+      "node_b": "Face_Front_SourceLocked",
+      "axis": 2,
+      "gap_mm": 0.07998943328857422,
+      "overlap_area_m2": 0.0002807971239740248,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "Front_ESD_Terminal",
+      "node_b": "Face_Front_SourceLocked",
+      "axis": 2,
+      "gap_mm": 0.07998943328857422,
+      "overlap_area_m2": 0.00020821450794136775,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "Face_Bottom_SourceLocked",
+      "node_b": "Closed_Chassis_Body",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 0.9175021840146513,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed_Chassis_Body",
+      "node_b": "Face_Top_SourceLocked",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 0.9175021840146513,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Top_Rear_Cover_Seam",
+      "node_b": "Face_Top_SourceLocked",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 0.005243312676498135,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Top_Front_Cover_Seam",
+      "node_b": "Face_Top_SourceLocked",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 0.005243312676498135,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Top_Cover_Fasteners",
+      "node_b": "Face_Top_SourceLocked",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 0.0002589914553276784,
+      "triangle_pairs": 320
+    },
+    {
+      "node_a": "Face_Left_SourceLocked",
+      "node_b": "Closed_Chassis_Body",
+      "axis": 0,
+      "gap_mm": 0.08000433444976807,
+      "overlap_area_m2": 0.0909045955546901,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed_Chassis_Body",
+      "node_b": "Face_Right_SourceLocked",
+      "axis": 0,
+      "gap_mm": 0.08000433444976807,
+      "overlap_area_m2": 0.0909045955546901,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Right_Side_Mount_Slots",
+      "node_b": "Face_Right_SourceLocked",
+      "axis": 0,
+      "gap_mm": 0.08000433444976807,
+      "overlap_area_m2": 0.0007280007154941703,
+      "triangle_pairs": 56
+    },
+    {
+      "node_a": "Face_Left_SourceLocked",
+      "node_b": "Left_Side_Mount_Slots",
+      "axis": 0,
+      "gap_mm": 0.08000433444976807,
+      "overlap_area_m2": 0.0006760002216100736,
+      "triangle_pairs": 52
+    },
+    {
+      "node_a": "Rear_PSU_SourceLocked_Overlay_1",
+      "node_b": "Rear_AC_PSU_1",
+      "axis": 2,
+      "gap_mm": 0.15997886657714844,
+      "overlap_area_m2": 0.00979200074243547,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_PSU_SourceLocked_Overlay_0",
+      "node_b": "Rear_AC_PSU_0",
+      "axis": 2,
+      "gap_mm": 0.15997886657714844,
+      "overlap_area_m2": 0.00979200074243547,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_Management_SourceLocked_Overlay",
+      "node_b": "Rear_Management_Panel",
+      "axis": 2,
+      "gap_mm": 0.15997886657714844,
+      "overlap_area_m2": 0.009791998310565875,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_Fan_SourceLocked_Overlay_1",
+      "node_b": "Rear_Fan_Module_1",
+      "axis": 2,
+      "gap_mm": 0.16000866889953613,
+      "overlap_area_m2": 0.007311360611095441,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_Fan_SourceLocked_Overlay_2",
+      "node_b": "Rear_Fan_Module_2",
+      "axis": 2,
+      "gap_mm": 0.16000866889953613,
+      "overlap_area_m2": 0.007311360307111742,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_Fan_SourceLocked_Overlay_3",
+      "node_b": "Rear_Fan_Module_3",
+      "axis": 2,
+      "gap_mm": 0.16000866889953613,
+      "overlap_area_m2": 0.007311360231115817,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_Fan_SourceLocked_Overlay_4",
+      "node_b": "Rear_Fan_Module_4",
+      "axis": 2,
+      "gap_mm": 0.16000866889953613,
+      "overlap_area_m2": 0.007311360003128042,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_Fan_SourceLocked_Overlay_0",
+      "node_b": "Rear_Fan_Module_0",
+      "axis": 2,
+      "gap_mm": 0.16000866889953613,
+      "overlap_area_m2": 0.007311358787193245,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Top_Cover_Fasteners",
+      "node_b": "Closed_Chassis_Body",
+      "axis": 1,
+      "gap_mm": 0.19999966025352478,
+      "overlap_area_m2": 0.0002589914553276784,
+      "triangle_pairs": 320
+    },
+    {
+      "node_a": "Front_SFP_Cage_Relief_48",
+      "node_b": "Front_SFP_SourceLocked_Overlay_48",
+      "axis": 2,
+      "gap_mm": 0.20000338554382324,
+      "overlap_area_m2": 0.01920767988710816,
+      "triangle_pairs": 192
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_Relief_4",
+      "node_b": "Front_QSFP28_SourceLocked_Overlay_4",
+      "axis": 2,
+      "gap_mm": 0.20000338554382324,
+      "overlap_area_m2": 0.002559360283359291,
+      "triangle_pairs": 16
+    },
+    {
+      "node_a": "Front_GM_RJ45_Relief",
+      "node_b": "Front_GM_RJ45_SourceLocked_Overlay",
+      "axis": 2,
+      "gap_mm": 0.20000338554382324,
+      "overlap_area_m2": 0.0008989996660142188,
+      "triangle_pairs": 4
+    }
+  ],
+  "unresolved_visible_coplanar_pairs_below_0_05mm": [],
+  "closed_core_nodes": [
+    {
+      "node": "Closed_Chassis_Body",
+      "watertight": true,
+      "winding_consistent": true,
+      "volume_m3": 0.010020958681433363
+    }
+  ],
+  "closed_core_pass": true,
+  "errors": [],
+  "error_count": 0,
+  "status": "PASS"
+}

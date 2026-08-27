@@ -8,7 +8,7 @@ from pathlib import Path
 
 import numpy as np
 from PIL import Image
-from pygltflib import GLTF2
+from pygltflib import GLTF2, Sampler
 from shapely.geometry import Point, box as shapely_box
 import trimesh
 from trimesh.visual import TextureVisuals
@@ -169,6 +169,37 @@ def rear_overlay_quad(x_center: float, width: float, z: float, material: PBRMate
     return mesh
 
 
+def front_overlay_group(
+    rects: list[tuple[float, float, float, float]],
+    z: float,
+    material: PBRMaterial,
+) -> trimesh.Trimesh:
+    """Project exact locked front-photo crops onto shallow port relief faces."""
+    vertices: list[list[float]] = []
+    faces: list[list[int]] = []
+    uvs: list[list[float]] = []
+    for x_center, y_center, width, height in rects:
+        x0 = x_center - width / 2.0
+        x1 = x_center + width / 2.0
+        y0 = y_center - height / 2.0
+        y1 = y_center + height / 2.0
+        u0 = (x0 + BODY_W / 2.0) / BODY_W
+        u1 = (x1 + BODY_W / 2.0) / BODY_W
+        v0 = (y0 + BODY_H / 2.0) / BODY_H
+        v1 = (y1 + BODY_H / 2.0) / BODY_H
+        base = len(vertices)
+        vertices.extend([[x0, y0, z], [x1, y0, z], [x1, y1, z], [x0, y1, z]])
+        faces.extend([[base, base + 1, base + 2], [base, base + 2, base + 3]])
+        uvs.extend([[u0, v0], [u1, v0], [u1, v1], [u0, v1]])
+    mesh = trimesh.Trimesh(
+        vertices=np.asarray(vertices),
+        faces=np.asarray(faces),
+        process=False,
+    )
+    mesh.visual = TextureVisuals(uv=np.asarray(uvs, dtype=np.float32), material=material)
+    return mesh
+
+
 def add(scene: trimesh.Scene, name: str, mesh: trimesh.Trimesh) -> None:
     scene.add_geometry(mesh, node_name=name, geom_name=name)
 
@@ -209,81 +240,67 @@ def build_scene(textures: dict[str, Image.Image]) -> trimesh.Scene:
     # One shared copy of the locked rear photograph is also projected onto the outer planes of
     # independently projecting management, fan and PSU geometry. This retains real labels/materials
     # while the separate blocks and handles create the required parallax and depth.
+    front_module_material = texture_material("front_modules", textures["front"])
     rear_module_material = texture_material("rear_modules", textures["rear"])
 
     add(scene, "Front_Rack_Ear_Left", rack_ear(-1))
     add(scene, "Front_Rack_Ear_Right", rack_ear(1))
 
-    # Front port depth and connector relief. Exact positions follow the locked front photo.
+    # Front port depth and connector relief. The exact source-photo crops are placed on the
+    # shallow outer relief faces so generic black boxes cannot obscure the real cage pixels.
     front_black: list[trimesh.Trimesh] = []
-    front_lips: list[trimesh.Trimesh] = []
+    front_rects: list[tuple[float, float, float, float]] = []
     x_positions = np.linspace(-0.168, 0.161, 24)
     for y in (0.0072, -0.0072):
         for x in x_positions:
-            front_black.append(make_box([0.0122, 0.0082, 0.0012], [x, y, FRONT_Z + 0.0010], MAT_BLACK))
-            front_lips.append(make_box([0.0128, 0.00055, 0.0017], [x, y + 0.00445, FRONT_Z + 0.00125], MAT_SILVER))
-            front_lips.append(make_box([0.0128, 0.00055, 0.0017], [x, y - 0.00445, FRONT_Z + 0.00125], MAT_SILVER))
-    add_group(scene, "Front_SFP_Cages_48", front_black, MAT_BLACK)
-    add_group(scene, "Front_SFP_Cage_Lips_48", front_lips, MAT_SILVER)
+            front_black.append(make_box([0.0122, 0.0082, 0.0008], [x, y, FRONT_Z + 0.0004], MAT_BLACK))
+            front_rects.append((x, y, 0.0122, 0.0082))
+    add_group(scene, "Front_SFP_Cage_Relief_48", front_black, MAT_BLACK)
+    add(
+        scene,
+        "Front_SFP_SourceLocked_Overlay_48",
+        # Keep a deterministic 0.20 mm clearance beyond the relief-box outer
+        # surface (FRONT_Z + 0.00080).  The previous 0.06 mm separation was
+        # needlessly close to the WebGL depth precision used by orbit viewers.
+        front_overlay_group(front_rects, FRONT_Z + 0.00100, front_module_material),
+    )
 
     qsfp_black: list[trimesh.Trimesh] = []
-    qsfp_lips: list[trimesh.Trimesh] = []
+    qsfp_rects: list[tuple[float, float, float, float]] = []
     for x in (0.1835, 0.2050):
         for y in (0.0072, -0.0072):
-            qsfp_black.append(make_box([0.0186, 0.0086, 0.0014], [x, y, FRONT_Z + 0.0011], MAT_BLACK))
-            qsfp_lips.append(make_box([0.0192, 0.00065, 0.0018], [x, y + 0.0047, FRONT_Z + 0.00135], MAT_SILVER))
-            qsfp_lips.append(make_box([0.0192, 0.00065, 0.0018], [x, y - 0.0047, FRONT_Z + 0.00135], MAT_SILVER))
-    add_group(scene, "Front_QSFP28_Cages_4", qsfp_black, MAT_BLACK)
-    add_group(scene, "Front_QSFP28_Cage_Lips_4", qsfp_lips, MAT_SILVER)
+            qsfp_black.append(make_box([0.0186, 0.0086, 0.0008], [x, y, FRONT_Z + 0.0004], MAT_BLACK))
+            qsfp_rects.append((x, y, 0.0186, 0.0086))
+    add_group(scene, "Front_QSFP28_Cage_Relief_4", qsfp_black, MAT_BLACK)
+    add(
+        scene,
+        "Front_QSFP28_SourceLocked_Overlay_4",
+        front_overlay_group(qsfp_rects, FRONT_Z + 0.00100, front_module_material),
+    )
 
-    add(scene, "Front_GM_RJ45", make_box([0.0155, 0.0145, 0.0020], [-0.201, 0.0075, FRONT_Z + 0.0014], MAT_BLACK))
+    add(scene, "Front_GM_RJ45_Relief", make_box([0.0155, 0.0145, 0.0008], [-0.201, 0.0075, FRONT_Z + 0.0004], MAT_BLACK))
+    add(
+        scene,
+        "Front_GM_RJ45_SourceLocked_Overlay",
+        front_overlay_group([(-0.201, 0.0075, 0.0155, 0.0145)], FRONT_Z + 0.00100, front_module_material),
+    )
     add(scene, "Front_PPS_OUT", make_cylinder(0.0036, 0.0048, [-0.201, -0.0097, FRONT_Z + 0.0024], MAT_GOLD))
     add(scene, "Front_10M_OUT", make_cylinder(0.0036, 0.0048, [-0.1835, -0.0097, FRONT_Z + 0.0024], MAT_GOLD))
     add(scene, "Front_ESD_Terminal", make_cylinder(0.0031, 0.0022, [-0.216, -0.0160, FRONT_Z + 0.0011], MAT_BLACK))
 
     # Rear management block and port relief. Management is screen-left in the rear reference, physical +X.
-    add(scene, "Rear_Management_Panel", make_box([0.060, 0.0412, 0.0020], [0.188, 0, REAR_Z - 0.0010], MAT_EDGE))
-    add(scene, "Rear_Management_SourceLocked_Overlay", rear_overlay_quad(0.188, 0.060, REAR_Z - 0.00208, rear_module_material))
-    mgmt_ports = [
-        make_box([0.015, 0.011, 0.0020], [0.202, 0.008, REAR_Z - 0.0021], MAT_BLACK),
-        make_box([0.015, 0.011, 0.0020], [0.181, 0.008, REAR_Z - 0.0021], MAT_BLACK),
-        make_box([0.015, 0.011, 0.0020], [0.181, -0.007, REAR_Z - 0.0021], MAT_BLACK),
-        make_box([0.006, 0.016, 0.0020], [0.160, -0.001, REAR_Z - 0.0021], MAT_BLACK),
-    ]
-    add_group(scene, "Rear_Management_Ports", mgmt_ports, MAT_BLACK)
-    led_meshes = [make_cylinder(0.0013, 0.0010, [0.214, 0.010 - i*0.006, REAR_Z - 0.0026], MAT_GREEN, sections=16) for i in range(4)]
-    add_group(scene, "Rear_Status_LEDs_4", led_meshes, MAT_GREEN)
+    add(scene, "Rear_Management_Panel", make_box([0.060, 0.0412, 0.00309], [0.188, 0, REAR_Z - 0.001545], MAT_EDGE))
+    add(scene, "Rear_Management_SourceLocked_Overlay", rear_overlay_quad(0.188, 0.060, REAR_Z - 0.00325, rear_module_material))
 
     fan_x = [0.126, 0.079, 0.032, -0.015, -0.062]
     for index, x in enumerate(fan_x):
-        add(scene, f"Rear_Fan_Module_{index}", make_box([0.0448, 0.0408, 0.0145], [x, 0, REAR_Z - 0.00725], MAT_BLACK))
-        add(scene, f"Rear_Fan_SourceLocked_Overlay_{index}", rear_overlay_quad(x, 0.0448, REAR_Z - 0.01458, rear_module_material))
-        bars = [
-            make_box([0.0040, 0.0350, 0.0040], [x-0.0180, 0, REAR_Z-0.0160], MAT_BLUE),
-            make_box([0.0040, 0.0350, 0.0040], [x+0.0180, 0, REAR_Z-0.0160], MAT_BLUE),
-            make_box([0.0320, 0.0040, 0.0040], [x, 0.0000, REAR_Z-0.0190], MAT_BLUE),
-            make_box([0.0310, 0.0032, 0.0032], [x, 0.0155, REAR_Z-0.0165], MAT_BLUE),
-            make_box([0.0310, 0.0032, 0.0032], [x, -0.0155, REAR_Z-0.0165], MAT_BLUE),
-        ]
-        add_group(scene, f"Rear_Fan_Handle_{index}", bars, MAT_BLUE)
-        add(scene, f"Rear_Fan_Screw_{index}", make_cylinder(0.0018, 0.0012, [x-0.017, 0.0165, REAR_Z-0.0152], MAT_BLACK, sections=16))
+        add(scene, f"Rear_Fan_Module_{index}", make_box([0.0448, 0.0408, 0.02064], [x, 0, REAR_Z - 0.01032], MAT_BLACK))
+        add(scene, f"Rear_Fan_SourceLocked_Overlay_{index}", rear_overlay_quad(x, 0.0448, REAR_Z - 0.02080, rear_module_material))
 
     psu_x = [-0.126, -0.190]
     for index, x in enumerate(psu_x):
-        add(scene, f"Rear_AC_PSU_{index}", make_box([0.0600, 0.0408, 0.0160], [x, 0, REAR_Z - 0.0080], MAT_BLACK))
-        add(scene, f"Rear_PSU_SourceLocked_Overlay_{index}", rear_overlay_quad(x, 0.0600, REAR_Z - 0.01608, rear_module_material))
-        handle = [
-            make_box([0.0040, 0.0300, 0.0060], [x-0.018, 0, REAR_Z-0.0210], MAT_BLACK),
-            make_box([0.0040, 0.0300, 0.0060], [x+0.018, 0, REAR_Z-0.0210], MAT_BLACK),
-            make_box([0.0360, 0.0040, 0.0060], [x, -0.013, REAR_Z-0.0240], MAT_BLACK),
-        ]
-        add_group(scene, f"Rear_PSU_Handle_{index}", handle, MAT_BLACK)
-        wire = [
-            make_box([0.0016, 0.0260, 0.0016], [x-0.010, -0.001, REAR_Z-0.0255], MAT_SILVER),
-            make_box([0.0016, 0.0260, 0.0016], [x+0.010, -0.001, REAR_Z-0.0255], MAT_SILVER),
-            make_box([0.0216, 0.0016, 0.0016], [x, -0.0135, REAR_Z-0.0255], MAT_SILVER),
-        ]
-        add_group(scene, f"Rear_PSU_Cord_Retainer_{index}", wire, MAT_SILVER)
+        add(scene, f"Rear_AC_PSU_{index}", make_box([0.0600, 0.0408, 0.02684], [x, 0, REAR_Z - 0.01342], MAT_BLACK))
+        add(scene, f"Rear_PSU_SourceLocked_Overlay_{index}", rear_overlay_quad(x, 0.0600, REAR_Z - 0.02700, rear_module_material))
 
     # Side mounting/rail slots as shallow real relief; each side keeps its distinct locked pattern.
     left_slots = []
@@ -323,6 +340,11 @@ def patch_unlit_and_metadata(path: Path, profile: str) -> None:
                 material.pbrMetallicRoughness.metallicFactor = 0.0
                 material.pbrMetallicRoughness.roughnessFactor = 0.88
                 material.pbrMetallicRoughness.baseColorFactor = [1.0, 1.0, 1.0, 1.0]
+    # Face UVs reach their exact 0/1 borders.  Clamp prevents mip/bilinear
+    # sampling from wrapping the opposite edge into a grazing-angle seam.
+    gltf.samplers = [Sampler(wrapS=33071, wrapT=33071)]
+    for texture in gltf.textures or []:
+        texture.sampler = 0
     gltf.asset.generator = f"QFX5110 exact-exterior new-build / trimesh+pygltflib / {profile}"
     gltf.asset.extras = {
         "manufacturer": "Juniper Networks",

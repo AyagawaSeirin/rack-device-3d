@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QFX5110 Three.js Hash Review</title>
+  <style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#eef1f4}canvas{display:block;width:100%;height:100%}</style>
+  <script type="importmap">
+    {"imports":{"three":"https://unpkg.com/three@0.180.0/build/three.module.js"}}
+  </script>
+</head>
+<body>
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'https://unpkg.com/three@0.180.0/examples/jsm/loaders/GLTFLoader.js';
+
+const params = new URLSearchParams(location.search);
+const view = params.get('view') || 'front';
+const model = params.get('model');
+const expectedSha = params.get('expected_sha');
+const loadId = params.get('load_id');
+const renderer = new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});
+renderer.setPixelRatio(1); renderer.setSize(innerWidth,innerHeight);
+renderer.outputColorSpace=THREE.SRGBColorSpace; renderer.toneMapping=THREE.NoToneMapping;
+renderer.setClearColor(0xeef1f4,1); document.body.appendChild(renderer.domElement);
+const scene=new THREE.Scene(); scene.add(new THREE.HemisphereLight(0xffffff,0x5f6872,2.0));
+const key=new THREE.DirectionalLight(0xffffff,2.2); key.position.set(2,3,4); scene.add(key);
+const fill=new THREE.DirectionalLight(0xffffff,1.1); fill.position.set(-3,1,-2); scene.add(fill);
+
+function hex(buffer){return Array.from(new Uint8Array(buffer),b=>b.toString(16).padStart(2,'0')).join('')}
+function renderModel(gltf, byteSize, actualSha){
+  scene.add(gltf.scene);
+  const box=new THREE.Box3().setFromObject(gltf.scene); const center=box.getCenter(new THREE.Vector3()); const size=box.getSize(new THREE.Vector3());
+  const directions={front:[0,0,1],rear:[0,0,-1],left:[-1,0,0],right:[1,0,0],top:[0,1,0],bottom:[0,-1,0],'front-left':[-1,0.55,1],'front-right':[1,0.55,1],'rear-left':[-1,0.55,-1],'rear-right':[1,0.55,-1]};
+  const d=new THREE.Vector3(...directions[view]).normalize();
+  const up=view==='top'?new THREE.Vector3(0,0,-1):(view==='bottom'?new THREE.Vector3(0,0,1):new THREE.Vector3(0,1,0));
+  const aspect=innerWidth/innerHeight; let axes;
+  if(view==='front'||view==='rear') axes=[size.x,size.y]; else if(view==='left'||view==='right') axes=[size.z,size.y]; else if(view==='top'||view==='bottom') axes=[size.x,size.z]; else axes=[Math.hypot(size.x,size.z),Math.max(size.y,Math.hypot(size.x,size.z)*0.72)];
+  let halfW=axes[0]*0.55,halfH=axes[1]*0.58; if(halfW/halfH<aspect)halfW=halfH*aspect;else halfH=halfW/aspect;
+  const camera=new THREE.OrthographicCamera(-halfW,halfW,halfH,-halfH,0.01,20); camera.position.copy(center).addScaledVector(d,2.0); camera.up.copy(up); camera.lookAt(center); camera.updateProjectionMatrix(); renderer.render(scene,camera);
+  let nodes=0,meshes=0,materials=0; gltf.scene.traverse(o=>{nodes++;if(o.isMesh){meshes++;materials+=Array.isArray(o.material)?o.material.length:1;}});
+  window.__REVIEW={ready:true,loader:'Three.js GLTFLoader 0.180.0',load_id:loadId,view,model,expected_sha256:expectedSha,actual_sha256:actualSha,sha_match:actualSha===expectedSha,byte_size:byteSize,node_count:nodes,mesh_count:meshes,material_bindings:materials,bounds_xyz:[size.x,size.y,size.z],page_url:location.href};
+}
+
+(async()=>{
+  if(!model||!expectedSha||!loadId) throw new Error('missing review query parameters');
+  const response=await fetch(model,{cache:'no-store'}); if(!response.ok) throw new Error(`HTTP ${response.status}`);
+  const bytes=await response.arrayBuffer(); const actualSha=hex(await crypto.subtle.digest('SHA-256',bytes));
+  if(actualSha!==expectedSha) throw new Error(`SHA mismatch ${actualSha}`);
+  new GLTFLoader().parse(bytes,'',gltf=>renderModel(gltf,bytes.byteLength,actualSha),error=>{throw error});
+})().catch(error=>{window.__REVIEW={ready:false,loader:'Three.js GLTFLoader 0.180.0',load_id:loadId,view,model,expected_sha256:expectedSha,error:String(error),page_url:location.href};});
+</script>
+</body>
+</html>

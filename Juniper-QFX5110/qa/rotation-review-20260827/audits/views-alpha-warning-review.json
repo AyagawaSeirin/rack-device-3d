@@ -1,0 +1,55 @@
+{
+  "model": "Juniper-QFX5110",
+  "status": "PASS",
+  "unresolved": 0,
+  "faces": {
+    "front": {
+      "core_transparent_percent": 0.0,
+      "core_alpha_below_250_percent": 0.0,
+      "automated_warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "review": "RESOLVED: canonical PNG alpha is limited to external antialiasing and verified silhouette/ear openings; both final GLBs embed RGB-only base-color images and use OPAQUE materials."
+    },
+    "rear": {
+      "core_transparent_percent": 0.0,
+      "core_alpha_below_250_percent": 0.00221,
+      "automated_warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "review": "RESOLVED: canonical PNG alpha is limited to external antialiasing and verified silhouette/ear openings; both final GLBs embed RGB-only base-color images and use OPAQUE materials."
+    },
+    "left": {
+      "core_transparent_percent": 0.0,
+      "core_alpha_below_250_percent": 0.0,
+      "automated_warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "review": "RESOLVED: canonical PNG alpha is limited to external antialiasing and verified silhouette/ear openings; both final GLBs embed RGB-only base-color images and use OPAQUE materials."
+    },
+    "right": {
+      "core_transparent_percent": 0.0,
+      "core_alpha_below_250_percent": 0.0,
+      "automated_warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "review": "RESOLVED: canonical PNG alpha is limited to external antialiasing and verified silhouette/ear openings; both final GLBs embed RGB-only base-color images and use OPAQUE materials."
+    },
+    "top": {
+      "core_transparent_percent": 0.0,
+      "core_alpha_below_250_percent": 0.0,
+      "automated_warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "review": "RESOLVED: canonical PNG alpha is limited to external antialiasing and verified silhouette/ear openings; both final GLBs embed RGB-only base-color images and use OPAQUE materials."
+    },
+    "bottom": {
+      "core_transparent_percent": 0.0,
+      "core_alpha_below_250_percent": 0.0,
+      "automated_warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "review": "RESOLVED: canonical PNG alpha is limited to external antialiasing and verified silhouette/ear openings; both final GLBs embed RGB-only base-color images and use OPAQUE materials."
+    }
+  }
+}

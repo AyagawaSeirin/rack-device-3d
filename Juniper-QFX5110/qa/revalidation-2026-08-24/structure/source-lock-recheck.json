@@ -1,0 +1,114 @@
+{
+  "face_row_count": 6,
+  "faces": [
+    "front",
+    "rear",
+    "left",
+    "right",
+    "top",
+    "bottom"
+  ],
+  "all_primary_hashes_match": true,
+  "rows": [
+    {
+      "face": "front",
+      "production_mode": "SOURCE_LOCKED_GENERATION",
+      "primary_source_path": "source/originals/qfx5110-48s-front-high.jpg",
+      "recorded_primary_sha256": "24ac6ee1ab5ef9b5f122814304729489d4ba2d689fb7e531565faeafc1382acb",
+      "actual_primary_sha256": "24ac6ee1ab5ef9b5f122814304729489d4ba2d689fb7e531565faeafc1382acb",
+      "primary_sha_match": true,
+      "final_output_path": "views/front.png",
+      "final_sha256": "515481b0ebe64954797be506134b5eb8b654a459f196bf8cc2bb1507d0563a95",
+      "final_dimensions_px": [
+        4096,
+        371
+      ],
+      "final_mode": "RGBA"
+    },
+    {
+      "face": "rear",
+      "production_mode": "SOURCE_LOCKED_GENERATION",
+      "primary_source_path": "source/originals/qfx5110-48s-rear-high-afi-ac.jpg",
+      "recorded_primary_sha256": "08ceacb17ccbc78060f6664907eae5f5d4865f44130ee40f31564bf31ebb7942",
+      "actual_primary_sha256": "08ceacb17ccbc78060f6664907eae5f5d4865f44130ee40f31564bf31ebb7942",
+      "primary_sha_match": true,
+      "final_output_path": "views/rear.png",
+      "final_sha256": "95b354195a0e00f340e540e5f5ed6884a3d53060535bb2c99541e238f0645e10",
+      "final_dimensions_px": [
+        4096,
+        406
+      ],
+      "final_mode": "RGBA"
+    },
+    {
+      "face": "left",
+      "production_mode": "MULTI_REFERENCE_RECONSTRUCTION",
+      "primary_source_path": "source/originals/qfx5110-48s-left-high.jpg",
+      "recorded_primary_sha256": "8f21c1312fab6a3f94b4e11de0aa2125c19a758546a2e011916eb1a75d9a1530",
+      "actual_primary_sha256": "8f21c1312fab6a3f94b4e11de0aa2125c19a758546a2e011916eb1a75d9a1530",
+      "primary_sha_match": true,
+      "final_output_path": "views/left.png",
+      "final_sha256": "1447fcacde4cf7df923ed5c38ebcc3463f52f7f085b4f7f754355e729e927f69",
+      "final_dimensions_px": [
+        4096,
+        344
+      ],
+      "final_mode": "RGBA"
+    },
+    {
+      "face": "right",
+      "production_mode": "MULTI_REFERENCE_RECONSTRUCTION",
+      "primary_source_path": "source/originals/qfx5110-48s-right-high.jpg",
+      "recorded_primary_sha256": "474907940a73be145c4b4b620ecd44d192c97cd927dd7e563565cba9151bee1f",
+      "actual_primary_sha256": "474907940a73be145c4b4b620ecd44d192c97cd927dd7e563565cba9151bee1f",
+      "primary_sha_match": true,
+      "final_output_path": "views/right.png",
+      "final_sha256": "ad319584b62be5baea15a5796854ae63e17a09be8eb3ac7e095e830da94495ef",
+      "final_dimensions_px": [
+        4096,
+        344
+      ],
+      "final_mode": "RGBA"
+    },
+    {
+      "face": "top",
+      "production_mode": "MULTI_REFERENCE_RECONSTRUCTION",
+      "primary_source_path": "source/originals/qfx5110-48s-frontwtop-high.jpg",
+      "recorded_primary_sha256": "27c7e8ff2079570ba699e0b3d7874b241247a78e8e5a07820805cd8fc3942e0f",
+      "actual_primary_sha256": "27c7e8ff2079570ba699e0b3d7874b241247a78e8e5a07820805cd8fc3942e0f",
+      "primary_sha_match": true,
+      "final_output_path": "views/top.png",
+      "final_sha256": "fed6bbcedcd6fa34e5760d249fca0fcc260cae8e65b4e85ee50a662a4758d477",
+      "final_dimensions_px": [
+        2604,
+        3072
+      ],
+      "final_mode": "RGBA"
+    },
+    {
+      "face": "bottom",
+      "production_mode": "GENERIC_BOTTOM_FALLBACK",
+      "primary_source_path": "source/originals/qfx5110-48s-frontwtop-high.jpg",
+      "recorded_primary_sha256": "27c7e8ff2079570ba699e0b3d7874b241247a78e8e5a07820805cd8fc3942e0f",
+      "actual_primary_sha256": "27c7e8ff2079570ba699e0b3d7874b241247a78e8e5a07820805cd8fc3942e0f",
+      "primary_sha_match": true,
+      "final_output_path": "views/bottom.png",
+      "final_sha256": "977c148c0c17a472c78a07ef6676d07291f9ddb4491026c69a1609d9dc1be711",
+      "final_dimensions_px": [
+        2604,
+        3072
+      ],
+      "final_mode": "RGBA"
+    }
+  ],
+  "left_right": {
+    "left_sha256": "1447fcacde4cf7df923ed5c38ebcc3463f52f7f085b4f7f754355e729e927f69",
+    "right_sha256": "ad319584b62be5baea15a5796854ae63e17a09be8eb3ac7e095e830da94495ef",
+    "byte_identical": false,
+    "pixel_nrmse_direct": 0.12348471581935883,
+    "pixel_nrmse_right_mirrored": 0.12341295927762985,
+    "edge_nrmse_direct": 0.11156974732875824,
+    "edge_nrmse_right_mirrored": 0.10649959743022919,
+    "not_mirrored": true
+  }
+}
