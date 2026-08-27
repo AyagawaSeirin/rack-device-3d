@@ -1,0 +1,39 @@
+{
+  "schema": "rotation-stress-report-v1",
+  "model": "Juniper-MX204",
+  "reported_user_symptom": "surface flicker / intermittent disappearance / transparency-like appearance while orbiting",
+  "reproduced_on_pre_rotation_checkpoint": false,
+  "before_observation": "The preserved 2026-08-27 checkpoint stayed visually continuous in both engines; earlier user symptom was not fabricated as a before failure.",
+  "structural_risk_found": "Flattened embedded face images to RGB, made all six baked photographic faces OPAQUE/unlit, and clamped face samplers.",
+  "final_glb_hashes": {
+    "standard": "c927683dfb231b67684a2c7b903b5a1b94df259484b50b7092108960f87561e7",
+    "web": "7a4d94e867ea741dee197c26fc9e22bd28c3625ff832d4fbcbce99d4bf247506"
+  },
+  "static_load_gate": {
+    "loads": 40,
+    "views_per_engine_variant": 10,
+    "status": "PASS"
+  },
+  "rotation_gate": {
+    "combinations": 4,
+    "yaw_step_degrees": 5,
+    "yaw_frames_per_combination": 72,
+    "pitch_frames_per_combination": 4,
+    "total_final_frames": 304,
+    "light_checker": true,
+    "dark_checker": true,
+    "surface_flicker": false,
+    "transparency_jump": false,
+    "checkerboard_leak": false,
+    "face_disappearance": false,
+    "mirroring": false,
+    "texture_switch": false,
+    "sudden_gray": false,
+    "viewer_loading_overlay": false,
+    "status": "PASS"
+  },
+  "browser_console_errors": 0,
+  "browser_warnings": "Chromium ReadPixels performance warnings only; expected during screenshot capture.",
+  "final_status": "PASS_WITH_BOTTOM_FALLBACK",
+  "residual_risk": "Exact underside imagery remains unavailable; controlled generic-bottom fallback only."
+}

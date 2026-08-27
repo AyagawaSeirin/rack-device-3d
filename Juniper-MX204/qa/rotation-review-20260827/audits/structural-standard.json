@@ -1,0 +1,1490 @@
+{
+  "schema": "rotation-risk-structural-audit-v1",
+  "path": "Juniper-MX204/model/Juniper-MX204.glb",
+  "byte_size": 10689952,
+  "triangle_count": 10340,
+  "node_geometry_count": 168,
+  "textured_materials": [
+    {
+      "index": 1,
+      "name": "FRONT source-locked photographic texture",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    },
+    {
+      "index": 2,
+      "name": "REAR source-locked photographic texture",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    },
+    {
+      "index": 3,
+      "name": "LEFT source-locked photographic texture",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    },
+    {
+      "index": 4,
+      "name": "RIGHT source-locked photographic texture",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    },
+    {
+      "index": 5,
+      "name": "TOP source-locked photographic texture",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    },
+    {
+      "index": 6,
+      "name": "BOTTOM source-locked photographic texture",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    }
+  ],
+  "material_violations": [],
+  "embedded_image_alpha": [
+    {
+      "index": 0,
+      "mode": "RGB",
+      "size": [
+        4112,
+        387
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    },
+    {
+      "index": 1,
+      "mode": "RGB",
+      "size": [
+        4112,
+        387
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    },
+    {
+      "index": 2,
+      "mode": "RGB",
+      "size": [
+        4112,
+        397
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    },
+    {
+      "index": 3,
+      "mode": "RGB",
+      "size": [
+        4112,
+        397
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    },
+    {
+      "index": 4,
+      "mode": "RGB",
+      "size": [
+        1964,
+        2064
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    },
+    {
+      "index": 5,
+      "mode": "RGB",
+      "size": [
+        1964,
+        2064
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    }
+  ],
+  "image_errors": [],
+  "samplers": [
+    {
+      "index": 0,
+      "wrapS": 33071,
+      "wrapT": 33071
+    }
+  ],
+  "sampler_violations": [],
+  "negative_transforms": [],
+  "degenerate_triangles": [],
+  "exact_duplicate_triangle_groups": [],
+  "opposite_duplicate_triangle_pairs": [],
+  "coplanar_or_near_pairs_within_0_25mm": [
+    {
+      "node_a": "LEFT_Mounting_Rail_Base",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.05903999694347384,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "RIGHT_Mounting_Rail_Base",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.05903999694347384,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "TOP_Long_Raised_Channel",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.013440001783370903,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "REAR_Fixed_Central_Panel",
+      "node_b": "REAR_Fan_Module_2_Housing",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.0004920010106563844,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "REAR_Grounding_ESD_Panel",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.0004920010106563844,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "REAR_Mounting_Flange_L_Two_Rounded_Holes",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.00034960069575307173,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "FRONT_Mounting_Flange_L_Two_Rounded_Holes",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.00034960069575307173,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "REAR_Mounting_Flange_R_Two_Rounded_Holes",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.00034960069575307173,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "FRONT_Mounting_Flange_R_Two_Rounded_Holes",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.00034960069575307173,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "REAR_AC_PSU_1_Black_Ejector_Connector_1",
+      "node_b": "REAR_AC_PSU_1_Black_Ejector",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.00019999980479479262,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "REAR_AC_PSU_1_Black_Ejector_Connector_0",
+      "node_b": "REAR_AC_PSU_1_Black_Ejector",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.00019999980479479262,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "REAR_AC_PSU_1_Orange_Handle_Connector_1",
+      "node_b": "REAR_AC_PSU_1_Orange_Handle",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.00019999980479479262,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "REAR_AC_PSU_1_Orange_Handle_Connector_0",
+      "node_b": "REAR_AC_PSU_1_Orange_Handle",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.00019999980479479262,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "REAR_AC_PSU_0_Black_Ejector_Connector_1",
+      "node_b": "REAR_AC_PSU_0_Black_Ejector",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.00019999980479479262,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "REAR_AC_PSU_0_Black_Ejector_Connector_0",
+      "node_b": "REAR_AC_PSU_0_Black_Ejector",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.00019999980479479262,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "REAR_AC_PSU_0_Orange_Handle_Connector_1",
+      "node_b": "REAR_AC_PSU_0_Orange_Handle",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.00019999980479479262,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "REAR_AC_PSU_0_Orange_Handle_Connector_0",
+      "node_b": "REAR_AC_PSU_0_Orange_Handle",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.00019999980479479262,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "REAR_Fan_0_Handle_Connector_R",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.00012800026547910015,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "REAR_Fan_2_Handle_Connector_R",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.00012800002706050972,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "REAR_Fan_1_Handle_Connector_R",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.00012800002706050972,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "REAR_Fan_1_Handle_Connector_L",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.00012800002706050972,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "REAR_Fan_0_Handle_Connector_L",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.00012800002706050972,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "REAR_Fan_2_Handle_Connector_L",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.00012799999725818592,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "REAR_ESD_Point",
+      "node_b": "REAR_Grounding_ESD_Panel",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.00010486584963310952,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "REAR_Fan_0_Captive_Screw",
+      "node_b": "REAR_Fan_Module_0_Housing",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.0001048657899231642,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "REAR_Fan_2_Captive_Screw",
+      "node_b": "REAR_Fan_Module_2_Housing",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.00010486573214481612,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "REAR_Fan_1_Captive_Screw",
+      "node_b": "REAR_Fan_Module_1_Housing",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.00010486570035954379,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "REAR_AC_PSU_1_Orange_Handle_Connector_1",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.0001039999700188643,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "REAR_AC_PSU_1_Orange_Handle_Connector_0",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.0001039999700188643,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "REAR_AC_PSU_0_Orange_Handle_Connector_1",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.0001039999700188643,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "REAR_AC_PSU_0_Orange_Handle_Connector_0",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.0001039999700188643,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "REAR_AC_PSU_1_Black_Ejector_Connector_1",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 9.999990239739631e-05,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "REAR_AC_PSU_1_Black_Ejector_Connector_0",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 9.999990239739631e-05,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "REAR_AC_PSU_0_Black_Ejector_Connector_1",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 9.999990239739631e-05,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "REAR_AC_PSU_0_Black_Ejector_Connector_0",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 9.999990239739631e-05,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "REAR_Grounding_ESD_Panel",
+      "node_b": "REAR_Mounting_Flange_R_Two_Rounded_Holes",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 8.200139033798237e-05,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "TOP_Front_Edge_Empty_Hole_4",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 6.261611123936639e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Front_Edge_Empty_Hole_6",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 6.261610340185797e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Front_Edge_Empty_Hole_2",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 6.261610340185797e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Front_Edge_Empty_Hole_8",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 6.261608485758074e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Front_Edge_Empty_Hole_7",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 6.261608485758074e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Front_Edge_Empty_Hole_1",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 6.261608485758074e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Front_Edge_Empty_Hole_0",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 6.261608485758074e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Front_Edge_Empty_Hole_5",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 6.261607806989922e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Front_Edge_Empty_Hole_3",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 6.261607806989922e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_25",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 5.205383201012381e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_24",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 5.205383201012381e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_23",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 5.205383201012381e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_16",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 5.205383201012381e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_15",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 5.205383201012381e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_14",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 5.205383201012381e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_02",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 5.2053775677404074e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_20",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 5.2053773773264034e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_19",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 5.2053773773264034e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_04",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 5.20537666823806e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_00",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 5.20537666823806e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_22",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 5.2053749774350067e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_17",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 5.2053749774350067e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_21",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 5.205372667749231e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_18",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 5.205372667749231e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_03",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 5.205370358063455e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_01",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 5.205370358063455e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_13",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 5.205368785717729e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_10",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 5.2053684534092426e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_07",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 5.2053660535067436e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_11",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 5.205362475554573e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_08",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 5.20536214324574e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_05",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 5.205359743365445e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_12",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 5.205356165391417e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_09",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 5.205355833082237e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_06",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 5.205353433224147e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "LEFT_Rail_Section_1_Rear_End",
+      "node_b": "LEFT_Rail_Section_1_Bottom",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 1.5679978020183283e-05,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "LEFT_Rail_Section_1_Rear_End",
+      "node_b": "LEFT_Rail_Section_1_Top",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 1.5679978020183283e-05,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "LEFT_Rail_Section_1_Front_End",
+      "node_b": "LEFT_Rail_Section_1_Bottom",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 1.5679978020183283e-05,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "LEFT_Rail_Section_1_Front_End",
+      "node_b": "LEFT_Rail_Section_1_Top",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 1.5679978020183283e-05,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "RIGHT_Rail_Section_1_Rear_End",
+      "node_b": "RIGHT_Rail_Section_1_Bottom",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 1.5679978020183283e-05,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "RIGHT_Rail_Section_1_Rear_End",
+      "node_b": "RIGHT_Rail_Section_1_Top",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 1.5679978020183283e-05,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "RIGHT_Rail_Section_1_Front_End",
+      "node_b": "RIGHT_Rail_Section_1_Bottom",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 1.5679978020183283e-05,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "RIGHT_Rail_Section_1_Front_End",
+      "node_b": "RIGHT_Rail_Section_1_Top",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 1.5679978020183283e-05,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "LEFT_Rail_Section_2_Rear_End",
+      "node_b": "LEFT_Rail_Section_2_Bottom",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 1.567993629691955e-05,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "LEFT_Rail_Section_2_Rear_End",
+      "node_b": "LEFT_Rail_Section_2_Top",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 1.567993629691955e-05,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "LEFT_Rail_Section_2_Front_End",
+      "node_b": "LEFT_Rail_Section_2_Bottom",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 1.567993629691955e-05,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "LEFT_Rail_Section_2_Front_End",
+      "node_b": "LEFT_Rail_Section_2_Top",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 1.567993629691955e-05,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "LEFT_Rail_Section_0_Rear_End",
+      "node_b": "LEFT_Rail_Section_0_Bottom",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 1.567993629691955e-05,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "LEFT_Rail_Section_0_Rear_End",
+      "node_b": "LEFT_Rail_Section_0_Top",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 1.567993629691955e-05,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "LEFT_Rail_Section_0_Front_End",
+      "node_b": "LEFT_Rail_Section_0_Bottom",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 1.567993629691955e-05,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "LEFT_Rail_Section_0_Front_End",
+      "node_b": "LEFT_Rail_Section_0_Top",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 1.567993629691955e-05,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "RIGHT_Rail_Section_2_Rear_End",
+      "node_b": "RIGHT_Rail_Section_2_Bottom",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 1.567993629691955e-05,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "RIGHT_Rail_Section_2_Rear_End",
+      "node_b": "RIGHT_Rail_Section_2_Top",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 1.567993629691955e-05,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "RIGHT_Rail_Section_2_Front_End",
+      "node_b": "RIGHT_Rail_Section_2_Bottom",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 1.567993629691955e-05,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "RIGHT_Rail_Section_2_Front_End",
+      "node_b": "RIGHT_Rail_Section_2_Top",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 1.567993629691955e-05,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "RIGHT_Rail_Section_0_Rear_End",
+      "node_b": "RIGHT_Rail_Section_0_Bottom",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 1.567993629691955e-05,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "RIGHT_Rail_Section_0_Rear_End",
+      "node_b": "RIGHT_Rail_Section_0_Top",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 1.567993629691955e-05,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "RIGHT_Rail_Section_0_Front_End",
+      "node_b": "RIGHT_Rail_Section_0_Bottom",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 1.567993629691955e-05,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "RIGHT_Rail_Section_0_Front_End",
+      "node_b": "RIGHT_Rail_Section_0_Top",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 1.567993629691955e-05,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Texture_BOTTOM_Fallback",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 0.8403599920415878,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Chassis_Closed_Sheet_Metal",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 0.8403599920415878,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "TOP_Long_Raised_Channel",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 0.013440001783370903,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "TOP_Front_Edge_Empty_Hole_4",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 6.261611123936639e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Front_Edge_Empty_Hole_6",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 6.261610340185797e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Front_Edge_Empty_Hole_2",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 6.261610340185797e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Front_Edge_Empty_Hole_8",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 6.261608485758074e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Front_Edge_Empty_Hole_7",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 6.261608485758074e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Front_Edge_Empty_Hole_1",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 6.261608485758074e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Front_Edge_Empty_Hole_0",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 6.261608485758074e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Front_Edge_Empty_Hole_5",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 6.261607806989922e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Front_Edge_Empty_Hole_3",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 6.261607806989922e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_25",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 5.205383201012381e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_24",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 5.205383201012381e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_23",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 5.205383201012381e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_16",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 5.205383201012381e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_15",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 5.205383201012381e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_14",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 5.205383201012381e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_02",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 5.2053775677404074e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_20",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 5.2053773773264034e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_19",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 5.2053773773264034e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_04",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 5.20537666823806e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_00",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 5.20537666823806e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_22",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 5.2053749774350067e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_17",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 5.2053749774350067e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_21",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 5.205372667749231e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_18",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 5.205372667749231e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_03",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 5.205370358063455e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_01",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 5.205370358063455e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_13",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 5.205368785717729e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_10",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 5.2053684534092426e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_07",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 5.2053660535067436e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_11",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 5.205362475554573e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_08",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 5.20536214324574e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_05",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 5.205359743365445e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_12",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 5.205356165391417e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_09",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 5.205355833082237e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "TOP_Cover_Screw_06",
+      "node_b": "Texture_TOP_Cover",
+      "axis": 1,
+      "gap_mm": 0.0800006091594696,
+      "overlap_area_m2": 5.205353433224147e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "Texture_LEFT_Body",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 0,
+      "gap_mm": 0.08000433444976807,
+      "overlap_area_m2": 0.08215599679970742,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Chassis_Closed_Sheet_Metal",
+      "node_b": "Texture_RIGHT_Body",
+      "axis": 0,
+      "gap_mm": 0.08000433444976807,
+      "overlap_area_m2": 0.08215599679970742,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Texture_REAR_Body",
+      "node_b": "Chassis_Closed_Sheet_Metal",
+      "axis": 2,
+      "gap_mm": 0.08000433444976807,
+      "overlap_area_m2": 0.07813559661271574,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Chassis_Closed_Sheet_Metal",
+      "node_b": "Texture_FRONT_Body",
+      "axis": 2,
+      "gap_mm": 0.08000433444976807,
+      "overlap_area_m2": 0.07813559661271574,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Texture_LEFT_Body",
+      "node_b": "LEFT_Mounting_Rail_Base",
+      "axis": 0,
+      "gap_mm": 0.08000433444976807,
+      "overlap_area_m2": 0.05903999694347384,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "RIGHT_Mounting_Rail_Base",
+      "node_b": "Texture_RIGHT_Body",
+      "axis": 0,
+      "gap_mm": 0.08000433444976807,
+      "overlap_area_m2": 0.05903999694347384,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "REAR_Grounding_ESD_Panel",
+      "node_b": "Texture_RIGHT_Body",
+      "axis": 0,
+      "gap_mm": 0.08000433444976807,
+      "overlap_area_m2": 0.0004920010106563844,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Texture_LEFT_Body",
+      "node_b": "REAR_Mounting_Flange_L_Two_Rounded_Holes",
+      "axis": 0,
+      "gap_mm": 0.08000433444976807,
+      "overlap_area_m2": 0.00034960069575307173,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Texture_LEFT_Body",
+      "node_b": "FRONT_Mounting_Flange_L_Two_Rounded_Holes",
+      "axis": 0,
+      "gap_mm": 0.08000433444976807,
+      "overlap_area_m2": 0.00034960069575307173,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "REAR_Mounting_Flange_R_Two_Rounded_Holes",
+      "node_b": "Texture_RIGHT_Body",
+      "axis": 0,
+      "gap_mm": 0.08000433444976807,
+      "overlap_area_m2": 0.00034960069575307173,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "FRONT_Mounting_Flange_R_Two_Rounded_Holes",
+      "node_b": "Texture_RIGHT_Body",
+      "axis": 0,
+      "gap_mm": 0.08000433444976807,
+      "overlap_area_m2": 0.00034960069575307173,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Texture_REAR_Body",
+      "node_b": "REAR_Fan_0_Handle_Connector_R",
+      "axis": 2,
+      "gap_mm": 0.08000433444976807,
+      "overlap_area_m2": 0.00012800026547910015,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Texture_REAR_Body",
+      "node_b": "REAR_Fan_2_Handle_Connector_R",
+      "axis": 2,
+      "gap_mm": 0.08000433444976807,
+      "overlap_area_m2": 0.00012800002706050972,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Texture_REAR_Body",
+      "node_b": "REAR_Fan_1_Handle_Connector_R",
+      "axis": 2,
+      "gap_mm": 0.08000433444976807,
+      "overlap_area_m2": 0.00012800002706050972,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Texture_REAR_Body",
+      "node_b": "REAR_Fan_1_Handle_Connector_L",
+      "axis": 2,
+      "gap_mm": 0.08000433444976807,
+      "overlap_area_m2": 0.00012800002706050972,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Texture_REAR_Body",
+      "node_b": "REAR_Fan_0_Handle_Connector_L",
+      "axis": 2,
+      "gap_mm": 0.08000433444976807,
+      "overlap_area_m2": 0.00012800002706050972,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Texture_REAR_Body",
+      "node_b": "REAR_Fan_2_Handle_Connector_L",
+      "axis": 2,
+      "gap_mm": 0.08000433444976807,
+      "overlap_area_m2": 0.00012799999725818592,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Texture_REAR_Body",
+      "node_b": "REAR_AC_PSU_1_Orange_Handle_Connector_1",
+      "axis": 2,
+      "gap_mm": 0.08000433444976807,
+      "overlap_area_m2": 0.0001039999700188643,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Texture_REAR_Body",
+      "node_b": "REAR_AC_PSU_1_Orange_Handle_Connector_0",
+      "axis": 2,
+      "gap_mm": 0.08000433444976807,
+      "overlap_area_m2": 0.0001039999700188643,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Texture_REAR_Body",
+      "node_b": "REAR_AC_PSU_0_Orange_Handle_Connector_1",
+      "axis": 2,
+      "gap_mm": 0.08000433444976807,
+      "overlap_area_m2": 0.0001039999700188643,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Texture_REAR_Body",
+      "node_b": "REAR_AC_PSU_0_Orange_Handle_Connector_0",
+      "axis": 2,
+      "gap_mm": 0.08000433444976807,
+      "overlap_area_m2": 0.0001039999700188643,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Texture_REAR_Body",
+      "node_b": "REAR_AC_PSU_1_Black_Ejector_Connector_1",
+      "axis": 2,
+      "gap_mm": 0.08000433444976807,
+      "overlap_area_m2": 9.999990239739631e-05,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Texture_REAR_Body",
+      "node_b": "REAR_AC_PSU_1_Black_Ejector_Connector_0",
+      "axis": 2,
+      "gap_mm": 0.08000433444976807,
+      "overlap_area_m2": 9.999990239739631e-05,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Texture_REAR_Body",
+      "node_b": "REAR_AC_PSU_0_Black_Ejector_Connector_1",
+      "axis": 2,
+      "gap_mm": 0.08000433444976807,
+      "overlap_area_m2": 9.999990239739631e-05,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Texture_REAR_Body",
+      "node_b": "REAR_AC_PSU_0_Black_Ejector_Connector_0",
+      "axis": 2,
+      "gap_mm": 0.08000433444976807,
+      "overlap_area_m2": 9.999990239739631e-05,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "REAR_Grounding_Stud_1",
+      "node_b": "REAR_Grounding_ESD_Panel",
+      "axis": 2,
+      "gap_mm": 0.10000169277191162,
+      "overlap_area_m2": 0.00019499810150531462,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "REAR_Grounding_Stud_0",
+      "node_b": "REAR_Grounding_ESD_Panel",
+      "axis": 2,
+      "gap_mm": 0.10000169277191162,
+      "overlap_area_m2": 0.00019499810150531462,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "REAR_AC_PSU_1_LED_Green",
+      "node_b": "REAR_AC_PSU_1_Status_Grille",
+      "axis": 2,
+      "gap_mm": 0.20000338554382324,
+      "overlap_area_m2": 4.874961632021779e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "REAR_AC_PSU_1_LED_Amber",
+      "node_b": "REAR_AC_PSU_1_Status_Grille",
+      "axis": 2,
+      "gap_mm": 0.20000338554382324,
+      "overlap_area_m2": 4.874961536724398e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "REAR_AC_PSU_0_LED_Green",
+      "node_b": "REAR_AC_PSU_0_Status_Grille",
+      "axis": 2,
+      "gap_mm": 0.20000338554382324,
+      "overlap_area_m2": 4.8749520374730126e-05,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "REAR_AC_PSU_0_LED_Amber",
+      "node_b": "REAR_AC_PSU_0_Status_Grille",
+      "axis": 2,
+      "gap_mm": 0.20000338554382324,
+      "overlap_area_m2": 4.8749519421756315e-05,
+      "triangle_pairs": 48
+    }
+  ],
+  "unresolved_visible_coplanar_pairs_below_0_05mm": [],
+  "closed_core_nodes": [
+    {
+      "node": "Chassis_Closed_Sheet_Metal",
+      "watertight": true,
+      "winding_consistent": true,
+      "volume_m3": 0.009180932578707878
+    }
+  ],
+  "closed_core_pass": true,
+  "errors": [],
+  "error_count": 0,
+  "status": "PASS"
+}

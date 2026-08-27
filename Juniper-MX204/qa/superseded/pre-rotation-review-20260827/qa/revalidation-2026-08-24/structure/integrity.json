@@ -1,0 +1,269 @@
+{
+  "status": "PASS",
+  "checks": {
+    "six_face_locks_present": true,
+    "all_primary_source_hashes_match": true,
+    "left_right_primary_sources_independent": true,
+    "left_right_final_not_mirrored": true,
+    "standard_embeds_current_view_pixels": true,
+    "web_embeds_expected_downscaled_current_pixels": true,
+    "same_external_geometry_names": true,
+    "standard_components_exact": true,
+    "web_components_exact": true,
+    "both_self_contained": true
+  },
+  "face_source_locks": {
+    "front": {
+      "production_mode": "SOURCE_LOCKED_GENERATION",
+      "primary_source_path": "source/originals/mx204-front-high.jpg",
+      "primary_source_declared_sha256": "41160618a6d21d36dd35d7776995504e39ece97d929dd88328fce9ff12c72ab9",
+      "primary_source_actual_sha256": "41160618a6d21d36dd35d7776995504e39ece97d929dd88328fce9ff12c72ab9",
+      "primary_source_hash_match": true,
+      "final_output_path": "views/front.png",
+      "final_output_sha256": "f519a61c6a526a64ea59d143fb835b1301d04b32365b010d6f660c7aa73df55c"
+    },
+    "rear": {
+      "production_mode": "SOURCE_LOCKED_GENERATION",
+      "primary_source_path": "source/originals/mx204-rear-high.jpg",
+      "primary_source_declared_sha256": "bf34896da6bc4a760f973083f6fc5df933c76236361bffe2e93b80a3f403b071",
+      "primary_source_actual_sha256": "bf34896da6bc4a760f973083f6fc5df933c76236361bffe2e93b80a3f403b071",
+      "primary_source_hash_match": true,
+      "final_output_path": "views/rear.png",
+      "final_output_sha256": "0b22340936ec76b3af5b40c12e6a2c1f4847b117e50d2c26e59c0c396909c72f"
+    },
+    "left": {
+      "production_mode": "MULTI_REFERENCE_RECONSTRUCTION",
+      "primary_source_path": "source/originals/mx204-left-high.jpg",
+      "primary_source_declared_sha256": "dbb9997ef2dd8b03871f9a226f998888379a45491d118c1605d5e150ce27914d",
+      "primary_source_actual_sha256": "dbb9997ef2dd8b03871f9a226f998888379a45491d118c1605d5e150ce27914d",
+      "primary_source_hash_match": true,
+      "final_output_path": "views/left.png",
+      "final_output_sha256": "c70e4729646e5e3fc0035ea61b1394fcfe5c306f43b5f8ba1597dadb0f1d0de3"
+    },
+    "right": {
+      "production_mode": "MULTI_REFERENCE_RECONSTRUCTION",
+      "primary_source_path": "source/originals/mx204-right-high.jpg",
+      "primary_source_declared_sha256": "7f3a3a52a6dfe2074aab9c5177f8fdcf89e226550fbd051993d1e75791b966d3",
+      "primary_source_actual_sha256": "7f3a3a52a6dfe2074aab9c5177f8fdcf89e226550fbd051993d1e75791b966d3",
+      "primary_source_hash_match": true,
+      "final_output_path": "views/right.png",
+      "final_output_sha256": "a69f212650ece0aa941c3b86ffd08263c87920c3554ba75d4259b5aba726ef84"
+    },
+    "top": {
+      "production_mode": "SOURCE_LOCKED_GENERATION",
+      "primary_source_path": "source/third-party/ebay-356815936914-top.png",
+      "primary_source_declared_sha256": "de1380cb26923c81b303289306cfd3a6da4a60168303f526f5e61090a2552278",
+      "primary_source_actual_sha256": "de1380cb26923c81b303289306cfd3a6da4a60168303f526f5e61090a2552278",
+      "primary_source_hash_match": true,
+      "final_output_path": "views/top.png",
+      "final_output_sha256": "81a99fdf260d7211e2f4894dc0a34cfe78dde677fdb5c0629927b2b908937401"
+    },
+    "bottom": {
+      "production_mode": "GENERIC_BOTTOM_FALLBACK",
+      "primary_source_path": "source/originals/mx204-frontwtop-high.jpg",
+      "primary_source_declared_sha256": "a14e9aa3ee4112458edb143f9697babb2c817a0fdebc2e3862405e9c5977a55b",
+      "primary_source_actual_sha256": "a14e9aa3ee4112458edb143f9697babb2c817a0fdebc2e3862405e9c5977a55b",
+      "primary_source_hash_match": true,
+      "final_output_path": "views/bottom.png",
+      "final_output_sha256": "92d93131f329fdaf4e33df65d2ea415f1b58e630b312fe467a2e993682888e69"
+    }
+  },
+  "left_right_independence": {
+    "comparison": "views/left.png versus horizontal flip of views/right.png, opaque-union RGB pixels",
+    "pearson_correlation": 0.064731,
+    "rmse_0_to_255": 71.89518,
+    "old_pre_revalidation_imagemagick_ncc": 0.999204,
+    "conclusion": "independent, not mirrored"
+  },
+  "expected_component_counts": {
+    "front_qsfp_ports": 4,
+    "front_sfp_ports": 8,
+    "rear_fan_housings": 3,
+    "rear_fan_handles": 3,
+    "rear_ac_psu_housings": 2,
+    "rear_iec_c14_inlets": 2,
+    "left_rail_sections": 3,
+    "right_rail_sections": 3,
+    "top_cover_screws": 26
+  },
+  "standard_glb": {
+    "path": "/root/Project/rack-device-3d/Juniper-MX204/model/Juniper-MX204.glb",
+    "byte_size": 12190384,
+    "sha256": "ebb52cb184647cf599e33fd3fdd7b441d15b85f367e4233a91ad9f494732d696",
+    "declared_length": 12190384,
+    "counts": {
+      "scenes": 1,
+      "nodes": 169,
+      "meshes": 168,
+      "materials": 15,
+      "textures": 6,
+      "images": 6
+    },
+    "external_buffer_uris": [],
+    "external_image_uris": [],
+    "component_counts": {
+      "front_qsfp_ports": 4,
+      "front_sfp_ports": 8,
+      "rear_fan_housings": 3,
+      "rear_fan_handles": 3,
+      "rear_ac_psu_housings": 2,
+      "rear_iec_c14_inlets": 2,
+      "left_rail_sections": 3,
+      "right_rail_sections": 3,
+      "top_cover_screws": 26
+    },
+    "node_names_sha256": "92ece789e2ddcdb241b1160f79a277273c58bc7aad3f2709d39c1443a82783ea",
+    "face_images": {
+      "front": {
+        "embedded_png_sha256": "6821e7788f288176317ea0e6cc1aaeeac0d0160926e7c7e46ff599dc35724e3e",
+        "embedded_size_px": [
+          4112,
+          387
+        ],
+        "embedded_pixel_sha256": "4edc8f5b74c6bcc01e5956c54630d05a0cbd104fbdf44e6b2502b887d5658953",
+        "expected_pixel_sha256": "4edc8f5b74c6bcc01e5956c54630d05a0cbd104fbdf44e6b2502b887d5658953",
+        "pixel_match": true
+      },
+      "rear": {
+        "embedded_png_sha256": "839c668716a947345d35489c9242f855f2456c8db2c438ec6517d7e5da68becc",
+        "embedded_size_px": [
+          4112,
+          387
+        ],
+        "embedded_pixel_sha256": "2b7ba5ea145f5b34e6ec714f570071ff8b0331c09c9ad1545e56a73940457dea",
+        "expected_pixel_sha256": "2b7ba5ea145f5b34e6ec714f570071ff8b0331c09c9ad1545e56a73940457dea",
+        "pixel_match": true
+      },
+      "left": {
+        "embedded_png_sha256": "c70e4729646e5e3fc0035ea61b1394fcfe5c306f43b5f8ba1597dadb0f1d0de3",
+        "embedded_size_px": [
+          4112,
+          397
+        ],
+        "embedded_pixel_sha256": "8324807ba93132857dbb9d53d9eea24788cb0c012956f8dee0ddfa7da2d10ab0",
+        "expected_pixel_sha256": "8324807ba93132857dbb9d53d9eea24788cb0c012956f8dee0ddfa7da2d10ab0",
+        "pixel_match": true
+      },
+      "right": {
+        "embedded_png_sha256": "a69f212650ece0aa941c3b86ffd08263c87920c3554ba75d4259b5aba726ef84",
+        "embedded_size_px": [
+          4112,
+          397
+        ],
+        "embedded_pixel_sha256": "821a95845bf000b408cba1eb0b17cff88b38c563950762fb860965b7059e3e05",
+        "expected_pixel_sha256": "821a95845bf000b408cba1eb0b17cff88b38c563950762fb860965b7059e3e05",
+        "pixel_match": true
+      },
+      "top": {
+        "embedded_png_sha256": "3bd7767289dcca8aa13629dde41329cfcc237236be6ed4ede52e1c618853b905",
+        "embedded_size_px": [
+          1964,
+          2064
+        ],
+        "embedded_pixel_sha256": "84cc07352949bd6356c3141495d49cf71a3ab1adfc4eb4e2f27868fae78bc597",
+        "expected_pixel_sha256": "84cc07352949bd6356c3141495d49cf71a3ab1adfc4eb4e2f27868fae78bc597",
+        "pixel_match": true
+      },
+      "bottom": {
+        "embedded_png_sha256": "ccf86d3375da29159a2e257a35924d32c9a208bac05bd59e05519a9bd4824004",
+        "embedded_size_px": [
+          1964,
+          2064
+        ],
+        "embedded_pixel_sha256": "686e11fa71128a595118da82cef1c6ee9a6f949c732f13b3e948c3d2249ed249",
+        "expected_pixel_sha256": "686e11fa71128a595118da82cef1c6ee9a6f949c732f13b3e948c3d2249ed249",
+        "pixel_match": true
+      }
+    }
+  },
+  "web_glb": {
+    "path": "/root/Project/rack-device-3d/Juniper-MX204/model/Juniper-MX204-web.glb",
+    "byte_size": 7845472,
+    "sha256": "ceada7361c08e13c88ee6435ab75566c108c0539021f2d90845b9189f3c6c0a7",
+    "declared_length": 7845472,
+    "counts": {
+      "scenes": 1,
+      "nodes": 169,
+      "meshes": 168,
+      "materials": 15,
+      "textures": 6,
+      "images": 6
+    },
+    "external_buffer_uris": [],
+    "external_image_uris": [],
+    "component_counts": {
+      "front_qsfp_ports": 4,
+      "front_sfp_ports": 8,
+      "rear_fan_housings": 3,
+      "rear_fan_handles": 3,
+      "rear_ac_psu_housings": 2,
+      "rear_iec_c14_inlets": 2,
+      "left_rail_sections": 3,
+      "right_rail_sections": 3,
+      "top_cover_screws": 26
+    },
+    "node_names_sha256": "92ece789e2ddcdb241b1160f79a277273c58bc7aad3f2709d39c1443a82783ea",
+    "face_images": {
+      "front": {
+        "embedded_png_sha256": "a3758aaac60ae626a5705455e014bd23ff916bb41c7ad5ff1a70c3f6cedaf8f2",
+        "embedded_size_px": [
+          2048,
+          193
+        ],
+        "embedded_pixel_sha256": "e54005c92368fa17447f2c5ae650b56de9ed4332f95f978d2d585573a575d691",
+        "expected_pixel_sha256": "e54005c92368fa17447f2c5ae650b56de9ed4332f95f978d2d585573a575d691",
+        "pixel_match": true
+      },
+      "rear": {
+        "embedded_png_sha256": "3756024e41a573fa927167f1b8658f92921dd470cc5d91393e91ba658080502d",
+        "embedded_size_px": [
+          2048,
+          193
+        ],
+        "embedded_pixel_sha256": "bd8430b9efb0b96e7dadb492ed402f499b3748e10be2ef55809b361be033a46b",
+        "expected_pixel_sha256": "bd8430b9efb0b96e7dadb492ed402f499b3748e10be2ef55809b361be033a46b",
+        "pixel_match": true
+      },
+      "left": {
+        "embedded_png_sha256": "75d925fd270ef0ab9871bd78191d41290e1d50e6c00e52eb8cbd432935b85228",
+        "embedded_size_px": [
+          2048,
+          198
+        ],
+        "embedded_pixel_sha256": "9ee4d2ea5fbc513a022156fe6cbabcf8089cc963399dc35a9969c164f24af288",
+        "expected_pixel_sha256": "9ee4d2ea5fbc513a022156fe6cbabcf8089cc963399dc35a9969c164f24af288",
+        "pixel_match": true
+      },
+      "right": {
+        "embedded_png_sha256": "31a00ac30342302befba8aeb634d436030d4b5d67e4aacd99b5816f372bcf87c",
+        "embedded_size_px": [
+          2048,
+          198
+        ],
+        "embedded_pixel_sha256": "4a15efca9d9314f08499c4994ff663f3908db523e117b154bf3b0fc68752aeb4",
+        "expected_pixel_sha256": "4a15efca9d9314f08499c4994ff663f3908db523e117b154bf3b0fc68752aeb4",
+        "pixel_match": true
+      },
+      "top": {
+        "embedded_png_sha256": "7b585e9b44ddf6381688560151ed957eaf1bab94782e0c3d0b5e7b2c97aada94",
+        "embedded_size_px": [
+          1949,
+          2048
+        ],
+        "embedded_pixel_sha256": "a627a7488f57ef29a4992535dfa552bbb24a523f4174c38ef34aace9c9000d8d",
+        "expected_pixel_sha256": "a627a7488f57ef29a4992535dfa552bbb24a523f4174c38ef34aace9c9000d8d",
+        "pixel_match": true
+      },
+      "bottom": {
+        "embedded_png_sha256": "44d1698fbfba24a0d66bd7edc95b421b435e574439d032788ac9bf5a338f3132",
+        "embedded_size_px": [
+          1949,
+          2048
+        ],
+        "embedded_pixel_sha256": "59ab2d2ae4ff82ffff29ba316d807a9c0960dbc3411c60707bcd1ac21a2d419a",
+        "expected_pixel_sha256": "59ab2d2ae4ff82ffff29ba316d807a9c0960dbc3411c60707bcd1ac21a2d419a",
+        "pixel_match": true
+      }
+    }
+  }
+}

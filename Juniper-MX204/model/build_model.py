@@ -13,6 +13,7 @@ import math
 import numpy as np
 from PIL import Image
 import trimesh
+from pygltflib import GLTF2, Sampler
 from trimesh.visual import TextureVisuals
 from trimesh.visual.material import PBRMaterial
 from shapely.geometry import Point, box
@@ -57,20 +58,28 @@ AMBER = mat("Status LED amber", (230, 148, 20, 255), 0.30)
 SILVER = mat("Fastener silver", (190, 195, 198, 255), 0.32, 0.62)
 
 
-def downscale(image: Image.Image, max_edge: int | None) -> Image.Image:
+def flatten_face(image: Image.Image) -> Image.Image:
+    """Embed RGB only; external canvas alpha must never affect GLB surfaces."""
     rgba = image.convert("RGBA")
-    if max_edge is None or max(rgba.size) <= max_edge:
-        return rgba
-    scale = max_edge / max(rgba.size)
-    return rgba.resize((max(1, round(rgba.width * scale)),
-                        max(1, round(rgba.height * scale))), Image.Resampling.LANCZOS)
+    background = Image.new("RGBA", rgba.size, (83, 88, 92, 255))
+    background.alpha_composite(rgba)
+    return background.convert("RGB")
+
+
+def downscale(image: Image.Image, max_edge: int | None) -> Image.Image:
+    rgb = flatten_face(image)
+    if max_edge is None or max(rgb.size) <= max_edge:
+        return rgb
+    scale = max_edge / max(rgb.size)
+    return rgb.resize((max(1, round(rgb.width * scale)),
+                       max(1, round(rgb.height * scale))), Image.Resampling.LANCZOS)
 
 
 def texture_material(face: str, web: bool) -> PBRMaterial:
     image = downscale(Image.open(VIEWS / f"{face}.png"), 2048 if web else None)
     return PBRMaterial(
         name=f"{face.upper()} source-locked photographic texture" + (" WEB" if web else ""),
-        baseColorFactor=[255, 255, 255, 255],
+        baseColorFactor=[1.0, 1.0, 1.0, 1.0],
         baseColorTexture=image,
         metallicFactor=0.0,
         roughnessFactor=0.76,
@@ -323,6 +332,29 @@ def build_scene(web: bool) -> trimesh.Scene:
     return scene
 
 
+def patch_unlit(path: Path) -> None:
+    """Make the six baked photographic faces viewer-independent and opaque."""
+    gltf = GLTF2().load(str(path))
+    if "KHR_materials_unlit" not in (gltf.extensionsUsed or []):
+        gltf.extensionsUsed = list(gltf.extensionsUsed or []) + ["KHR_materials_unlit"]
+    for material in gltf.materials or []:
+        if "photographic texture" not in (material.name or ""):
+            continue
+        material.extensions = dict(material.extensions or {})
+        material.extensions["KHR_materials_unlit"] = {}
+        material.alphaMode = "OPAQUE"
+        material.doubleSided = False
+        if material.pbrMetallicRoughness:
+            material.pbrMetallicRoughness.baseColorFactor = [1.0, 1.0, 1.0, 1.0]
+            material.pbrMetallicRoughness.metallicFactor = 0.0
+            material.pbrMetallicRoughness.roughnessFactor = 0.76
+    gltf.samplers = [Sampler(wrapS=33071, wrapT=33071)]
+    for texture in gltf.textures or []:
+        texture.sampler = 0
+    gltf.asset.generator = "MX204 exact-exterior build / trimesh+pygltflib / opaque-unlit faces"
+    gltf.save_binary(str(path))
+
+
 def export() -> None:
     MODEL.mkdir(parents=True, exist_ok=True)
     outputs = ((False, MODEL / "Juniper-MX204.glb"),
@@ -331,7 +363,8 @@ def export() -> None:
         scene = build_scene(web)
         payload = trimesh.exchange.gltf.export_glb(scene, include_normals=True)
         path.write_bytes(payload)
-        print(f"wrote {path} ({len(payload)} bytes), geometries={len(scene.geometry)}")
+        patch_unlit(path)
+        print(f"wrote {path} ({path.stat().st_size} bytes), geometries={len(scene.geometry)}")
 
 
 if __name__ == "__main__":

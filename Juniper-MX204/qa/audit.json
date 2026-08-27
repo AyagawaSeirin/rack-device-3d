@@ -1,123 +1,15 @@
 {
-  "model_key": "Juniper-MX204",
+  "schema": "rotation-review-final-index-v1",
+  "model": "Juniper-MX204",
   "status": "PASS_WITH_BOTTOM_FALLBACK",
-  "identity": {
-    "manufacturer": "Juniper Networks",
-    "exact_pid": "MX204-HW-BASE (AC exterior variant)",
-    "chassis": "JNP204-CHAS",
-    "u_height": "1U",
-    "configuration": "3 x JNP-FAN-1RU AFO fans; 2 x JPSU-650W-AC-AO PSUs; all front network ports empty; factory front mounting brackets; side rails; screenshot-matched rear bracket ends",
-    "status": "VERIFIED"
-  },
-  "bottom": {
-    "mode": "GENERIC_BOTTOM_FALLBACK",
-    "reason": "No exact MX204 underside view remained after documented official, PDF, Browser, third-party, marketplace, video, teardown, and local-language searches.",
-    "constraints_passed": true,
-    "unsupported_detail_added": false
-  },
-  "views": {
-    "audit_path": "qa/views-audit.json",
-    "status": "PASS",
-    "error_count": 0,
-    "automated_warning_count": 5,
-    "automated_warnings_resolved": true,
-    "warning_resolution": "The only warnings are partial alpha at anti-aliased exterior edges and the four real through-holes per front/rear face; every inset chassis core is 100% alpha 255.",
-    "maximum_ratio_error_percent": 1.5576,
-    "minimum_long_edges_px": {
-      "front_rear_sides": 4096,
-      "top_bottom": 2048
-    }
-  },
-  "standard_glb": {
-    "path": "model/Juniper-MX204.glb",
-    "byte_size": 12160388,
-    "sha256": "d9a933eeefa4905c10b5256b0505e61fd9ecdd2237154132bf0cde64b59f79a2",
-    "audit_path": "qa/glb-standard-audit.json",
-    "status": "PASS",
-    "error_count": 0,
-    "nodes": 168,
-    "meshes": 168,
-    "primitives": 168,
-    "materials": 15,
-    "textures": 6,
-    "embedded_images": 6,
-    "embedded_image_pixel_identity": "All six standard-GLB embedded images are pixel-identical to views/*.png.",
-    "external_resources": 0,
-    "mirrored_nodes": 0,
-    "material_alpha_mode": "OPAQUE for all materials",
-    "normals_present": true,
-    "uv_present_on_textured_primitives": true
-  },
-  "web_glb": {
-    "path": "model/Juniper-MX204-web.glb",
-    "byte_size": 7829716,
-    "sha256": "a0f03859097b35021df2ca5436ae70404c62de849eb40b9a530a774cef3d759b",
-    "audit_path": "qa/glb-web-audit.json",
-    "status": "PASS",
-    "error_count": 0,
-    "nodes": 168,
-    "meshes": 168,
-    "primitives": 168,
-    "materials": 15,
-    "textures": 6,
-    "embedded_images": 6,
-    "optimization": "Same exterior geometry; source-locked textures downscaled only to a 2048 px maximum edge.",
-    "external_resources": 0,
-    "mirrored_nodes": 0,
-    "material_alpha_mode": "OPAQUE for all materials",
-    "normals_present": true,
-    "uv_present_on_textured_primitives": true
-  },
-  "bounds": {
-    "actual_m": [0.4826000035, 0.0438599996, 0.5195999891],
-    "expected_mm": [482.6, 43.7, 518.9],
-    "dimension_audit_status": "PASS",
-    "nonuniform_ratio_error_percent": 0.3138
-  },
-  "viewer_validation": {
-    "three_js": {
-      "engine": "Three.js 0.169 GLTFLoader",
-      "standard_captures": 12,
-      "web_check_captures": 4,
-      "path": "qa/renders/three-standard/",
-      "status": "PASS"
-    },
-    "babylon_js": {
-      "engine": "Babylon.js glTF loader",
-      "web_captures": 12,
-      "standard_check_captures": 4,
-      "path": "qa/renders/babylon-web/",
-      "status": "PASS"
-    },
-    "standard_web_same_camera_mae_0_to_255": {
-      "three_mean": 0.162402,
-      "three_max": 0.334315,
-      "babylon_mean": 0.155772,
-      "babylon_max": 0.333143
-    },
-    "orientation_agreement": true,
-    "opacity_agreement": true,
-    "light_dark_checkerboard_pass": true
-  },
-  "comparisons": {
-    "orthographic_three": 6,
-    "orthographic_babylon": 6,
-    "authoritative_three_quarter": 4,
-    "standard_vs_web": 8,
-    "total_sheets": 24,
-    "path": "qa/comparisons/",
-    "status": "PASS_BY_FEATURE_REVIEW"
-  },
-  "manual_feature_review": {
-    "front": "PASS: correct branding direction; 4 QSFP28/QSFP+; 8 SFP+ in 2x4; MGMT/BITS/CON/ToD; USB; four timing connectors; correct status group; two front ears with two true holes each.",
-    "rear": "PASS: AC; two grounding studs and ESD point; fan slots 0-2; central panel; PSU slots 0-1 with IEC inlets, AC status columns, orange handles, black ejectors and metal cord loops; rear flange ends have two true holes each.",
-    "left_right": "PASS: closed sheet-metal bodies; three relief rail sections per side; no invented side vents or labels; correct physical orientation.",
-    "top": "PASS: real exact-model photo texture; stamped channel; verified screw/hole pattern; embossed Juniper Networks mark in factory orientation; factory labels retained from binding real photo.",
-    "bottom": "PASS_WITH_BOTTOM_FALLBACK: plain gray closed sheet metal only; no unsupported identifying detail.",
-    "geometry": "PASS: closed chassis, separate ears, real through-holes, port recess groups, three removable fan assemblies, two removable AC PSUs, projecting handles/ejectors/loops, paired three-section side rails, top channel and screw relief.",
-    "texture_style": "PASS: standard GLB uses pixel-identical approved face assets; no earlier generated preview outranks a real photograph; no mirror, face swap, or stale texture.",
-    "standard_web_equivalence": "PASS"
-  },
-  "unresolved_errors": [],
-  "unresolved_non_bottom_evidence_gaps": []
+  "final_standard_sha256": "c927683dfb231b67684a2c7b903b5a1b94df259484b50b7092108960f87561e7",
+  "final_web_sha256": "7a4d94e867ea741dee197c26fc9e22bd28c3625ff832d4fbcbce99d4bf247506",
+  "views_audit": "qa/rotation-review-20260827/audits/views-audit.json",
+  "standard_glb_audit": "qa/rotation-review-20260827/audits/glb-standard-audit.json",
+  "web_glb_audit": "qa/rotation-review-20260827/audits/glb-web-audit.json",
+  "standard_structural_audit": "qa/rotation-review-20260827/audits/structural-standard.json",
+  "web_structural_audit": "qa/rotation-review-20260827/audits/structural-web.json",
+  "rotation_report": "qa/rotation-review-20260827/rotation-stress-report.json",
+  "unresolved_errors": 0,
+  "residual_warning": "GENERIC_BOTTOM_FALLBACK only"
 }
