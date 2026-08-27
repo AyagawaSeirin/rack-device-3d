@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { spawnSync } from 'node:child_process';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(HERE, '..');
@@ -130,10 +131,12 @@ class Builder {
       },
       doubleSided: options.doubleSided ?? false,
       alphaMode: options.alphaMode ?? 'OPAQUE',
-      extensions: { KHR_materials_unlit: {} },
     };
     if (texture !== null) {
       mat.pbrMetallicRoughness.baseColorTexture = { index: texture, texCoord: 0 };
+      // Photo-derived surfaces are unlit with a neutral factor; solid relief
+      // keeps ordinary PBR shading so non-neutral colors are not double-baked.
+      mat.extensions = { KHR_materials_unlit: {} };
     }
     if (mat.alphaMode === 'MASK') mat.alphaCutoff = options.alphaCutoff ?? 0.45;
     this.json.materials.push(mat);
@@ -301,7 +304,9 @@ function cylinderGeometry(segments = 32) {
   }
   for (let i = 0; i < segments; i++) {
     const k = i*2;
-    idx.push(k,k+1,k+3, k,k+3,k+2);
+    // Counter-clockwise from outside. The former order made every cylinder
+    // side back-facing while its exported normals pointed outward.
+    idx.push(k,k+3,k+1, k,k+2,k+3);
   }
   const frontCenter = p.length/3;
   p.push(0,0,.5); n.push(0,0,1); uv.push(.5,.5);
@@ -344,6 +349,23 @@ function rectHoleGeometry(w = 1, h = 1, depth = 1, radius = 0.2, segments = 40, 
   return [p,n,uv,idx];
 }
 
+function rectHoleFaceGeometry(w = 1, h = 1, radius = 0.2, segments = 48, holeY = 0) {
+  const p = [], n = [], uv = [], idx = [], outer = [], inner = [];
+  for (let i = 0; i < segments; i++) {
+    const a = i / segments * Math.PI * 2, c = Math.cos(a), s = Math.sin(a);
+    const tx = Math.abs(c) < 1e-6 ? Infinity : (c > 0 ? (w/2)/c : (-w/2)/c);
+    const ty = Math.abs(s) < 1e-6 ? Infinity : (s > 0 ? (h/2-holeY)/s : (-h/2-holeY)/s);
+    const t = Math.min(tx, ty), ox = c*t, oy = holeY+s*t, ix = c*radius, iy = holeY+s*radius;
+    outer.push(p.length/3); p.push(ox,oy,0); n.push(0,0,1); uv.push(ox/w+.5,.5-oy/h);
+    inner.push(p.length/3); p.push(ix,iy,0); n.push(0,0,1); uv.push(ix/w+.5,.5-iy/h);
+  }
+  for (let i = 0; i < segments; i++) {
+    const j = (i+1)%segments;
+    idx.push(outer[i],outer[j],inner[j], outer[i],inner[j],inner[i]);
+  }
+  return [p,n,uv,idx];
+}
+
 function qz(angle) { return [0,0,Math.sin(angle/2),Math.cos(angle/2)]; }
 function qy(angle) { return [0,Math.sin(angle/2),0,Math.cos(angle/2)]; }
 function qx(angle) { return [Math.sin(angle/2),0,0,Math.cos(angle/2)]; }
@@ -354,6 +376,7 @@ function buildVariant(label, textureDir, outFile) {
   b.addGeometry('cylinder', ...cylinderGeometry());
   for (const type of ['front','rear','left','right','top','bottom']) b.addGeometry(`plane-${type}`, ...planeGeometry(type));
   b.addGeometry('ear-ring', ...rectHoleGeometry(24,42.9,6,4.8,48,10));
+  b.addGeometry('ear-face-ring', ...rectHoleFaceGeometry(24,42.9,4.8,48,10));
 
   const tex = {};
   for (const name of ['front-body','front-ear-left','front-ear-right','rear','left','right','top','bottom']) {
@@ -370,8 +393,8 @@ function buildVariant(label, textureDir, outFile) {
   const blue = b.addMaterial('Connector_Blue', [0.03,0.30,0.68,1]);
   const teal = b.addMaterial('Serial_Teal', [0.05,0.34,0.31,1]);
   const frontBodyMat = b.addMaterial('Front_Body_Texture_sRGB', [1,1,1,1], tex['front-body']);
-  const earLeftMat = b.addMaterial('Front_Ear_Left_Texture_MASK', [1,1,1,1], tex['front-ear-left'], {alphaMode:'MASK'});
-  const earRightMat = b.addMaterial('Front_Ear_Right_Texture_MASK', [1,1,1,1], tex['front-ear-right'], {alphaMode:'MASK'});
+  const earLeftMat = b.addMaterial('Front_Ear_Left_Texture_OPAQUE', [1,1,1,1], tex['front-ear-left']);
+  const earRightMat = b.addMaterial('Front_Ear_Right_Texture_OPAQUE', [1,1,1,1], tex['front-ear-right']);
   const rearMat = b.addMaterial('Rear_Texture_sRGB', [1,1,1,1], tex.rear);
   const leftMat = b.addMaterial('Left_Texture_sRGB', [1,1,1,1], tex.left);
   const rightMat = b.addMaterial('Right_Texture_sRGB', [1,1,1,1], tex.right);
@@ -398,7 +421,7 @@ function buildVariant(label, textureDir, outFile) {
       translation: [x,0,350.35],
     }, g, 'geometric-through-hole-ear');
     b.addBox(`RackEar_${side}_LowerPlate`, [x,-10.725,350.35], [24,21.45,6], silver, g, 'ear-lower-plate');
-    b.addPlane(`RackEar_${side}_TexturePlane`, 'plane-front', [x,0,353.42], [24,42.9,1], mat, g, 'ear-only-alpha-mask');
+    b.addPlane(`RackEar_${side}_SourceLocked_OpaqueRing`, 'ear-face-ring', [x,0,353.42], [1,1,1], mat, g, 'geometric-through-hole-source-surface');
     b.addBox(`RackEar_${side}_InnerBlackTrim`, [x + (side==='Left'?10.5:-10.5),0,352.0], [3,39,2.5], black, g, 'ear-trim');
   }
   b.addCylinder('RackEar_Left_Lower_StatusDisc', [-229.3,-7.0,353.20], 4.2, .55, gray, ears, 'non-through-status-disc');
@@ -515,5 +538,16 @@ const standardTextures=path.join(ROOT,'work','geometry','textures-standard');
 const webTextures=path.join(ROOT,'work','geometry','textures-web');
 buildVariant('standard',standardTextures,path.join(HERE,'HPE-DL360G10-2.5inch.glb'));
 buildVariant('web',webTextures,path.join(HERE,'HPE-DL360G10-2.5inch-web.glb'));
+
+// A single invocation must reproduce the actual deliverables, including the
+// deterministic source-texture/relief ordering pass used by final QA.
+const repairScript=path.join(ROOT,'work','geometry','repair_source_texture_relief.py');
+for (const output of [
+  path.join(HERE,'HPE-DL360G10-2.5inch.glb'),
+  path.join(HERE,'HPE-DL360G10-2.5inch-web.glb'),
+]) {
+  const repaired=spawnSync('python3',[repairScript,output,output],{stdio:'inherit'});
+  if (repaired.status !== 0) throw new Error(`source-texture relief repair failed for ${output}`);
+}
 
 console.log('Built standard and web GLBs.');

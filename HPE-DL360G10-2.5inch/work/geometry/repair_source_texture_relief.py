@@ -128,11 +128,14 @@ def repair(document: dict) -> dict:
     existing_names = {node.get("name") for node in nodes}
     for psu_number, center_x in ((1, -119.0), (2, -168.0)):
         parent = by_name[f"PSU_{psu_number}_500W_AC"]
+        # Non-overlapping strips with the inward faces 0.05 mm clear of the
+        # rear photo card. The former corner overlaps and exact inward-plane
+        # contact created a deterministic coplanar-depth hazard.
         frame_specs = (
-            ("Top", [center_x, 18.5, -351.1], [46.0, 1.2, 1.0]),
-            ("Bottom", [center_x, -18.5, -351.1], [46.0, 1.2, 1.0]),
-            ("Left", [center_x + 22.4, 0.0, -351.1], [1.2, 38.0, 1.0]),
-            ("Right", [center_x - 22.4, 0.0, -351.1], [1.2, 38.0, 1.0]),
+            ("Top", [center_x, 18.5, -351.15], [43.6, 1.2, 1.0]),
+            ("Bottom", [center_x, -18.5, -351.15], [43.6, 1.2, 1.0]),
+            ("Left", [center_x + 22.4, 0.0, -351.15], [1.2, 35.6, 1.0]),
+            ("Right", [center_x - 22.4, 0.0, -351.15], [1.2, 35.6, 1.0]),
         )
         for side, translation, scale in frame_specs:
             name = f"PSU_{psu_number}_Frame{side}_SourceTextureReveal"

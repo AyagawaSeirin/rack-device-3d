@@ -1,0 +1,1437 @@
+{
+  "variant": "web",
+  "output": "HPE-DL360G10-2.5inch-web.glb",
+  "bytes": 6383624,
+  "nodes": 356,
+  "meshes": 22,
+  "primitives": 22,
+  "materials": 17,
+  "textures": 8,
+  "images": 8,
+  "visibleParts": [
+    {
+      "node": "HPE_ProLiant_DL360_Gen10_8SFF_Assembly",
+      "type": "complete-appliance"
+    },
+    {
+      "node": "Chassis",
+      "type": "closed-chassis"
+    },
+    {
+      "node": "ChassisBody_Closed",
+      "type": "closed-body"
+    },
+    {
+      "node": "Canonical_Face_Surfaces",
+      "type": "six-face-texture-set"
+    },
+    {
+      "node": "FrontBody_TexturePlane",
+      "type": "opaque-front-surface"
+    },
+    {
+      "node": "Rear_TexturePlane",
+      "type": "opaque-rear-surface"
+    },
+    {
+      "node": "Left_TexturePlane",
+      "type": "opaque-left-surface"
+    },
+    {
+      "node": "Right_TexturePlane",
+      "type": "opaque-right-surface"
+    },
+    {
+      "node": "Top_TexturePlane",
+      "type": "opaque-top-surface"
+    },
+    {
+      "node": "Bottom_TexturePlane_GENERIC_BOTTOM_FALLBACK",
+      "type": "opaque-bottom-surface"
+    },
+    {
+      "node": "Front_Rack_Ears",
+      "type": "separate-rack-ear-assemblies"
+    },
+    {
+      "node": "RackEar_Left",
+      "type": "front-rack-ear"
+    },
+    {
+      "node": "RackEar_Left_Plate_With_Circular_ThroughHole",
+      "type": "geometric-through-hole-ear"
+    },
+    {
+      "node": "RackEar_Left_LowerPlate",
+      "type": "ear-lower-plate"
+    },
+    {
+      "node": "RackEar_Left_TexturePlane",
+      "type": "ear-only-alpha-mask"
+    },
+    {
+      "node": "RackEar_Left_InnerBlackTrim",
+      "type": "ear-trim"
+    },
+    {
+      "node": "RackEar_Right",
+      "type": "front-rack-ear"
+    },
+    {
+      "node": "RackEar_Right_Plate_With_Circular_ThroughHole",
+      "type": "geometric-through-hole-ear"
+    },
+    {
+      "node": "RackEar_Right_LowerPlate",
+      "type": "ear-lower-plate"
+    },
+    {
+      "node": "RackEar_Right_TexturePlane",
+      "type": "ear-only-alpha-mask"
+    },
+    {
+      "node": "RackEar_Right_InnerBlackTrim",
+      "type": "ear-trim"
+    },
+    {
+      "node": "RackEar_Left_Lower_StatusDisc",
+      "type": "non-through-status-disc"
+    },
+    {
+      "node": "RackEar_Right_ProLiant_Badge_Relief",
+      "type": "HPE-ProLiant-badge-relief"
+    },
+    {
+      "node": "Front_Visible_Assemblies",
+      "type": "front-relief-assemblies"
+    },
+    {
+      "node": "Front_DriveBay_ID_PullTab",
+      "type": "drive-support-label-pulltab"
+    },
+    {
+      "node": "SFF_Carrier_01",
+      "type": "independent-SFF-carrier"
+    },
+    {
+      "node": "SFF_Carrier_01_Recess",
+      "type": "carrier-recess-behind-source-texture"
+    },
+    {
+      "node": "SFF_Carrier_01_TopRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_01_BottomRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_01_LeftRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_01_RightRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_01_PullHandle",
+      "type": "independent-carrier-handle"
+    },
+    {
+      "node": "SFF_Carrier_01_HandleHub",
+      "type": "handle-hub"
+    },
+    {
+      "node": "SFF_Carrier_01_ReleaseLatch",
+      "type": "carrier-release-latch"
+    },
+    {
+      "node": "SFF_Carrier_02",
+      "type": "independent-SFF-carrier"
+    },
+    {
+      "node": "SFF_Carrier_02_Recess",
+      "type": "carrier-recess-behind-source-texture"
+    },
+    {
+      "node": "SFF_Carrier_02_TopRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_02_BottomRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_02_LeftRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_02_RightRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_02_PullHandle",
+      "type": "independent-carrier-handle"
+    },
+    {
+      "node": "SFF_Carrier_02_HandleHub",
+      "type": "handle-hub"
+    },
+    {
+      "node": "SFF_Carrier_02_ReleaseLatch",
+      "type": "carrier-release-latch"
+    },
+    {
+      "node": "SFF_Carrier_03",
+      "type": "independent-SFF-carrier"
+    },
+    {
+      "node": "SFF_Carrier_03_Recess",
+      "type": "carrier-recess-behind-source-texture"
+    },
+    {
+      "node": "SFF_Carrier_03_TopRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_03_BottomRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_03_LeftRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_03_RightRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_03_PullHandle",
+      "type": "independent-carrier-handle"
+    },
+    {
+      "node": "SFF_Carrier_03_HandleHub",
+      "type": "handle-hub"
+    },
+    {
+      "node": "SFF_Carrier_03_ReleaseLatch",
+      "type": "carrier-release-latch"
+    },
+    {
+      "node": "SFF_Carrier_04",
+      "type": "independent-SFF-carrier"
+    },
+    {
+      "node": "SFF_Carrier_04_Recess",
+      "type": "carrier-recess-behind-source-texture"
+    },
+    {
+      "node": "SFF_Carrier_04_TopRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_04_BottomRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_04_LeftRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_04_RightRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_04_PullHandle",
+      "type": "independent-carrier-handle"
+    },
+    {
+      "node": "SFF_Carrier_04_HandleHub",
+      "type": "handle-hub"
+    },
+    {
+      "node": "SFF_Carrier_04_ReleaseLatch",
+      "type": "carrier-release-latch"
+    },
+    {
+      "node": "SFF_Carrier_05",
+      "type": "independent-SFF-carrier"
+    },
+    {
+      "node": "SFF_Carrier_05_Recess",
+      "type": "carrier-recess-behind-source-texture"
+    },
+    {
+      "node": "SFF_Carrier_05_TopRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_05_BottomRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_05_LeftRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_05_RightRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_05_PullHandle",
+      "type": "independent-carrier-handle"
+    },
+    {
+      "node": "SFF_Carrier_05_HandleHub",
+      "type": "handle-hub"
+    },
+    {
+      "node": "SFF_Carrier_05_ReleaseLatch",
+      "type": "carrier-release-latch"
+    },
+    {
+      "node": "SFF_Carrier_06",
+      "type": "independent-SFF-carrier"
+    },
+    {
+      "node": "SFF_Carrier_06_Recess",
+      "type": "carrier-recess-behind-source-texture"
+    },
+    {
+      "node": "SFF_Carrier_06_TopRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_06_BottomRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_06_LeftRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_06_RightRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_06_PullHandle",
+      "type": "independent-carrier-handle"
+    },
+    {
+      "node": "SFF_Carrier_06_HandleHub",
+      "type": "handle-hub"
+    },
+    {
+      "node": "SFF_Carrier_06_ReleaseLatch",
+      "type": "carrier-release-latch"
+    },
+    {
+      "node": "SFF_Carrier_07",
+      "type": "independent-SFF-carrier"
+    },
+    {
+      "node": "SFF_Carrier_07_Recess",
+      "type": "carrier-recess-behind-source-texture"
+    },
+    {
+      "node": "SFF_Carrier_07_TopRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_07_BottomRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_07_LeftRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_07_RightRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_07_PullHandle",
+      "type": "independent-carrier-handle"
+    },
+    {
+      "node": "SFF_Carrier_07_HandleHub",
+      "type": "handle-hub"
+    },
+    {
+      "node": "SFF_Carrier_07_ReleaseLatch",
+      "type": "carrier-release-latch"
+    },
+    {
+      "node": "SFF_Carrier_08",
+      "type": "independent-SFF-carrier"
+    },
+    {
+      "node": "SFF_Carrier_08_Recess",
+      "type": "carrier-recess-behind-source-texture"
+    },
+    {
+      "node": "SFF_Carrier_08_TopRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_08_BottomRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_08_LeftRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_08_RightRail",
+      "type": "carrier-frame"
+    },
+    {
+      "node": "SFF_Carrier_08_PullHandle",
+      "type": "independent-carrier-handle"
+    },
+    {
+      "node": "SFF_Carrier_08_HandleHub",
+      "type": "handle-hub"
+    },
+    {
+      "node": "SFF_Carrier_08_ReleaseLatch",
+      "type": "carrier-release-latch"
+    },
+    {
+      "node": "Universal_Media_Bay",
+      "type": "standard-8SFF-UMB"
+    },
+    {
+      "node": "UniversalMediaBay_Upper_OpticalDisplay_Blank",
+      "type": "upper-UMB-blank"
+    },
+    {
+      "node": "UniversalMediaBay_Upper_Blank_Lip",
+      "type": "UMB-seam"
+    },
+    {
+      "node": "Front_Control_Area",
+      "type": "front-control-area"
+    },
+    {
+      "node": "FrontControl_Backplate",
+      "type": "control-backplate"
+    },
+    {
+      "node": "Front_USB3_Port",
+      "type": "USB3-port"
+    },
+    {
+      "node": "Front_iLO_Service_Port",
+      "type": "iLO-service-port"
+    },
+    {
+      "node": "Front_Status_LED_1",
+      "type": "front-status-LED"
+    },
+    {
+      "node": "Front_Status_LED_2",
+      "type": "front-status-LED"
+    },
+    {
+      "node": "Front_Status_LED_3",
+      "type": "front-status-LED"
+    },
+    {
+      "node": "Front_Status_LED_4",
+      "type": "front-status-LED"
+    },
+    {
+      "node": "Rear_Visible_Assemblies",
+      "type": "rear-relief-assemblies"
+    },
+    {
+      "node": "PCIe_Blank_Slot1",
+      "type": "independent-PCIe-blank"
+    },
+    {
+      "node": "PCIe_Blank_Slot1_Plate",
+      "type": "blanking-plate"
+    },
+    {
+      "node": "PCIe_Blank_Slot1_Vent_1",
+      "type": "blank-vent-relief"
+    },
+    {
+      "node": "PCIe_Blank_Slot1_Vent_2",
+      "type": "blank-vent-relief"
+    },
+    {
+      "node": "PCIe_Blank_Slot1_Vent_3",
+      "type": "blank-vent-relief"
+    },
+    {
+      "node": "PCIe_Blank_Slot1_Vent_4",
+      "type": "blank-vent-relief"
+    },
+    {
+      "node": "PCIe_Blank_Slot1_Vent_5",
+      "type": "blank-vent-relief"
+    },
+    {
+      "node": "PCIe_Blank_Slot1_Vent_6",
+      "type": "blank-vent-relief"
+    },
+    {
+      "node": "PCIe_Blank_Slot2",
+      "type": "independent-PCIe-blank"
+    },
+    {
+      "node": "PCIe_Blank_Slot2_Plate",
+      "type": "blanking-plate"
+    },
+    {
+      "node": "PCIe_Blank_Slot2_Vent_1",
+      "type": "blank-vent-relief"
+    },
+    {
+      "node": "PCIe_Blank_Slot2_Vent_2",
+      "type": "blank-vent-relief"
+    },
+    {
+      "node": "PCIe_Blank_Slot2_Vent_3",
+      "type": "blank-vent-relief"
+    },
+    {
+      "node": "PCIe_Blank_Slot2_Vent_4",
+      "type": "blank-vent-relief"
+    },
+    {
+      "node": "PCIe_Blank_Slot2_Vent_5",
+      "type": "blank-vent-relief"
+    },
+    {
+      "node": "PCIe_Blank_Slot2_Vent_6",
+      "type": "blank-vent-relief"
+    },
+    {
+      "node": "PCIe_Blank_Slot3",
+      "type": "independent-PCIe-blank"
+    },
+    {
+      "node": "PCIe_Blank_Slot3_Plate",
+      "type": "blanking-plate"
+    },
+    {
+      "node": "PCIe_Blank_Slot3_Vent_1",
+      "type": "blank-vent-relief"
+    },
+    {
+      "node": "PCIe_Blank_Slot3_Vent_2",
+      "type": "blank-vent-relief"
+    },
+    {
+      "node": "PCIe_Blank_Slot3_Vent_3",
+      "type": "blank-vent-relief"
+    },
+    {
+      "node": "PCIe_Blank_Slot3_Vent_4",
+      "type": "blank-vent-relief"
+    },
+    {
+      "node": "PCIe_Blank_Slot3_Vent_5",
+      "type": "blank-vent-relief"
+    },
+    {
+      "node": "PCIe_Blank_Slot3_Vent_6",
+      "type": "blank-vent-relief"
+    },
+    {
+      "node": "FlexibleLOM_Blank_Plate",
+      "type": "FlexibleLOM-blank"
+    },
+    {
+      "node": "FlexibleLOM_Blank_Vent_1",
+      "type": "FlexibleLOM-vent-relief"
+    },
+    {
+      "node": "FlexibleLOM_Blank_Vent_2",
+      "type": "FlexibleLOM-vent-relief"
+    },
+    {
+      "node": "FlexibleLOM_Blank_Vent_3",
+      "type": "FlexibleLOM-vent-relief"
+    },
+    {
+      "node": "FlexibleLOM_Blank_Vent_4",
+      "type": "FlexibleLOM-vent-relief"
+    },
+    {
+      "node": "FlexibleLOM_Blank_Vent_5",
+      "type": "FlexibleLOM-vent-relief"
+    },
+    {
+      "node": "FlexibleLOM_Blank_Vent_6",
+      "type": "FlexibleLOM-vent-relief"
+    },
+    {
+      "node": "FlexibleLOM_Blank_Vent_7",
+      "type": "FlexibleLOM-vent-relief"
+    },
+    {
+      "node": "FlexibleLOM_Blank_Vent_8",
+      "type": "FlexibleLOM-vent-relief"
+    },
+    {
+      "node": "Rear_IO_Ports",
+      "type": "rear-port-group"
+    },
+    {
+      "node": "Rear_USB3_Port_1",
+      "type": "USB3-port"
+    },
+    {
+      "node": "Rear_USB3_Port_2",
+      "type": "USB3-port"
+    },
+    {
+      "node": "Rear_Serial_DB9",
+      "type": "serial-DB9"
+    },
+    {
+      "node": "Rear_iLO_Management_RJ45",
+      "type": "dedicated-iLO-management-port"
+    },
+    {
+      "node": "Embedded_1GbE_RJ45_1",
+      "type": "embedded-1GbE-RJ45"
+    },
+    {
+      "node": "Embedded_1GbE_LED_1",
+      "type": "NIC-status-LED"
+    },
+    {
+      "node": "Embedded_1GbE_RJ45_2",
+      "type": "embedded-1GbE-RJ45"
+    },
+    {
+      "node": "Embedded_1GbE_LED_2",
+      "type": "NIC-status-LED"
+    },
+    {
+      "node": "Embedded_1GbE_RJ45_3",
+      "type": "embedded-1GbE-RJ45"
+    },
+    {
+      "node": "Embedded_1GbE_LED_3",
+      "type": "NIC-status-LED"
+    },
+    {
+      "node": "Embedded_1GbE_RJ45_4",
+      "type": "embedded-1GbE-RJ45"
+    },
+    {
+      "node": "Embedded_1GbE_LED_4",
+      "type": "NIC-status-LED"
+    },
+    {
+      "node": "Rear_VGA_Port",
+      "type": "VGA-port"
+    },
+    {
+      "node": "Dual_AC_Power_Supplies",
+      "type": "dual-500W-AC-PSU"
+    },
+    {
+      "node": "PSU_1_500W_AC",
+      "type": "independent-500W-AC-PSU"
+    },
+    {
+      "node": "PSU_1_ModuleBody",
+      "type": "PSU-module"
+    },
+    {
+      "node": "PSU_1_Fan",
+      "type": "visible-PSU-fan"
+    },
+    {
+      "node": "PSU_1_FanHub",
+      "type": "PSU-fan-hub"
+    },
+    {
+      "node": "PSU_1_FanBlade_1",
+      "type": "PSU-fan-blade"
+    },
+    {
+      "node": "PSU_1_FanBlade_2",
+      "type": "PSU-fan-blade"
+    },
+    {
+      "node": "PSU_1_FanBlade_3",
+      "type": "PSU-fan-blade"
+    },
+    {
+      "node": "PSU_1_FanBlade_4",
+      "type": "PSU-fan-blade"
+    },
+    {
+      "node": "PSU_1_FanBlade_5",
+      "type": "PSU-fan-blade"
+    },
+    {
+      "node": "PSU_1_FanBlade_6",
+      "type": "PSU-fan-blade"
+    },
+    {
+      "node": "PSU_1_FanBlade_7",
+      "type": "PSU-fan-blade"
+    },
+    {
+      "node": "PSU_1_IEC_C14_Inlet",
+      "type": "AC-IEC-C14-inlet"
+    },
+    {
+      "node": "PSU_1_ReleaseHandle",
+      "type": "PSU-release-handle"
+    },
+    {
+      "node": "PSU_1_StatusLED",
+      "type": "PSU-status-LED"
+    },
+    {
+      "node": "PSU_2_500W_AC",
+      "type": "independent-500W-AC-PSU"
+    },
+    {
+      "node": "PSU_2_ModuleBody",
+      "type": "PSU-module"
+    },
+    {
+      "node": "PSU_2_Fan",
+      "type": "visible-PSU-fan"
+    },
+    {
+      "node": "PSU_2_FanHub",
+      "type": "PSU-fan-hub"
+    },
+    {
+      "node": "PSU_2_FanBlade_1",
+      "type": "PSU-fan-blade"
+    },
+    {
+      "node": "PSU_2_FanBlade_2",
+      "type": "PSU-fan-blade"
+    },
+    {
+      "node": "PSU_2_FanBlade_3",
+      "type": "PSU-fan-blade"
+    },
+    {
+      "node": "PSU_2_FanBlade_4",
+      "type": "PSU-fan-blade"
+    },
+    {
+      "node": "PSU_2_FanBlade_5",
+      "type": "PSU-fan-blade"
+    },
+    {
+      "node": "PSU_2_FanBlade_6",
+      "type": "PSU-fan-blade"
+    },
+    {
+      "node": "PSU_2_FanBlade_7",
+      "type": "PSU-fan-blade"
+    },
+    {
+      "node": "PSU_2_IEC_C14_Inlet",
+      "type": "AC-IEC-C14-inlet"
+    },
+    {
+      "node": "PSU_2_ReleaseHandle",
+      "type": "PSU-release-handle"
+    },
+    {
+      "node": "PSU_2_StatusLED",
+      "type": "PSU-status-LED"
+    },
+    {
+      "node": "Top_Visible_Geometry",
+      "type": "top-cover-relief"
+    },
+    {
+      "node": "Top_Fixed_Front_Panel_Seam",
+      "type": "fixed-front-cover-seam"
+    },
+    {
+      "node": "Top_Access_Panel_Release_Latch",
+      "type": "top-release-latch"
+    },
+    {
+      "node": "TopVent_RearLeft",
+      "type": "top-vent-bank"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_1_1",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_1_2",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_1_3",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_1_4",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_1_5",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_1_6",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_1_7",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_1_8",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_1_9",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_1_10",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_2_1",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_2_2",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_2_3",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_2_4",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_2_5",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_2_6",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_2_7",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_2_8",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_2_9",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_2_10",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_3_1",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_3_2",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_3_3",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_3_4",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_3_5",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_3_6",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_3_7",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_3_8",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_3_9",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_3_10",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_4_1",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_4_2",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_4_3",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_4_4",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_4_5",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_4_6",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_4_7",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_4_8",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_4_9",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearLeft_Cell_4_10",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight",
+      "type": "top-vent-bank"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_1_1",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_1_2",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_1_3",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_1_4",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_1_5",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_1_6",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_1_7",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_1_8",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_2_1",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_2_2",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_2_3",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_2_4",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_2_5",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_2_6",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_2_7",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_2_8",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_3_1",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_3_2",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_3_3",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_3_4",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_3_5",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_3_6",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_3_7",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_3_8",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_4_1",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_4_2",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_4_3",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_4_4",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_4_5",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_4_6",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_4_7",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_RearRight_Cell_4_8",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft",
+      "type": "top-vent-bank"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_1_1",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_1_2",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_1_3",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_1_4",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_1_5",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_1_6",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_1_7",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_2_1",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_2_2",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_2_3",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_2_4",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_2_5",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_2_6",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_2_7",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_3_1",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_3_2",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_3_3",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_3_4",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_3_5",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_3_6",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_3_7",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_4_1",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_4_2",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_4_3",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_4_4",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_4_5",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_4_6",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_4_7",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_5_1",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_5_2",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_5_3",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_5_4",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_5_5",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_5_6",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_MidLeft_Cell_5_7",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_FrontLeft",
+      "type": "top-vent-bank"
+    },
+    {
+      "node": "TopVent_FrontLeft_Cell_1_1",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_FrontLeft_Cell_1_2",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_FrontLeft_Cell_1_3",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_FrontLeft_Cell_1_4",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_FrontLeft_Cell_1_5",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_FrontLeft_Cell_1_6",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_FrontLeft_Cell_1_7",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_FrontLeft_Cell_1_8",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_FrontLeft_Cell_2_1",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_FrontLeft_Cell_2_2",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_FrontLeft_Cell_2_3",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_FrontLeft_Cell_2_4",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_FrontLeft_Cell_2_5",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_FrontLeft_Cell_2_6",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_FrontLeft_Cell_2_7",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_FrontLeft_Cell_2_8",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_FrontLeft_Cell_3_1",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_FrontLeft_Cell_3_2",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_FrontLeft_Cell_3_3",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_FrontLeft_Cell_3_4",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_FrontLeft_Cell_3_5",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_FrontLeft_Cell_3_6",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_FrontLeft_Cell_3_7",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "TopVent_FrontLeft_Cell_3_8",
+      "type": "closed-vent-recess"
+    },
+    {
+      "node": "Top_Service_Label_Left_Relief",
+      "type": "factory-service-label-relief"
+    },
+    {
+      "node": "Top_Service_Label_Right_Relief",
+      "type": "factory-service-label-relief"
+    },
+    {
+      "node": "Top_Front_Rivet_1",
+      "type": "top-rivet"
+    },
+    {
+      "node": "Top_Front_Rivet_2",
+      "type": "top-rivet"
+    },
+    {
+      "node": "Top_Front_Rivet_3",
+      "type": "top-rivet"
+    },
+    {
+      "node": "Top_Front_Rivet_4",
+      "type": "top-rivet"
+    },
+    {
+      "node": "Top_Front_Rivet_5",
+      "type": "top-rivet"
+    },
+    {
+      "node": "Top_Front_Rivet_6",
+      "type": "top-rivet"
+    },
+    {
+      "node": "Side_Rail_Attachment_Relief",
+      "type": "independent-left-right-side-relief"
+    },
+    {
+      "node": "Left_RailStud_1",
+      "type": "left-rail-stud"
+    },
+    {
+      "node": "Left_RailSlot_1",
+      "type": "left-rail-slot"
+    },
+    {
+      "node": "Left_RailStud_2",
+      "type": "left-rail-stud"
+    },
+    {
+      "node": "Left_RailSlot_2",
+      "type": "left-rail-slot"
+    },
+    {
+      "node": "Left_RailStud_3",
+      "type": "left-rail-stud"
+    },
+    {
+      "node": "Left_RailSlot_3",
+      "type": "left-rail-slot"
+    },
+    {
+      "node": "Left_RailStud_4",
+      "type": "left-rail-stud"
+    },
+    {
+      "node": "Left_RailSlot_4",
+      "type": "left-rail-slot"
+    },
+    {
+      "node": "Right_RailStud_1",
+      "type": "right-rail-stud"
+    },
+    {
+      "node": "Right_RailSlot_1",
+      "type": "right-rail-slot"
+    },
+    {
+      "node": "Right_RailStud_2",
+      "type": "right-rail-stud"
+    },
+    {
+      "node": "Right_RailSlot_2",
+      "type": "right-rail-slot"
+    },
+    {
+      "node": "Right_RailStud_3",
+      "type": "right-rail-stud"
+    },
+    {
+      "node": "Right_RailSlot_3",
+      "type": "right-rail-slot"
+    },
+    {
+      "node": "Right_RailStud_4",
+      "type": "right-rail-stud"
+    },
+    {
+      "node": "Right_RailSlot_4",
+      "type": "right-rail-slot"
+    },
+    {
+      "node": "PSU_1_FrameTop_SourceTextureReveal",
+      "type": "PSU-source-texture-frame-relief"
+    },
+    {
+      "node": "PSU_1_FrameBottom_SourceTextureReveal",
+      "type": "PSU-source-texture-frame-relief"
+    },
+    {
+      "node": "PSU_1_FrameLeft_SourceTextureReveal",
+      "type": "PSU-source-texture-frame-relief"
+    },
+    {
+      "node": "PSU_1_FrameRight_SourceTextureReveal",
+      "type": "PSU-source-texture-frame-relief"
+    },
+    {
+      "node": "PSU_2_FrameTop_SourceTextureReveal",
+      "type": "PSU-source-texture-frame-relief"
+    },
+    {
+      "node": "PSU_2_FrameBottom_SourceTextureReveal",
+      "type": "PSU-source-texture-frame-relief"
+    },
+    {
+      "node": "PSU_2_FrameLeft_SourceTextureReveal",
+      "type": "PSU-source-texture-frame-relief"
+    },
+    {
+      "node": "PSU_2_FrameRight_SourceTextureReveal",
+      "type": "PSU-source-texture-frame-relief"
+    }
+  ]
+}

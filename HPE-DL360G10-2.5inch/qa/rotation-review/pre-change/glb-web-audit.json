@@ -1,0 +1,772 @@
+{
+  "path": "HPE-DL360G10-2.5inch/model/HPE-DL360G10-2.5inch-web.glb",
+  "byte_size": 6383624,
+  "asset": {
+    "version": "2.0",
+    "generator": "rack-device-exact-exterior-builder/web/final-source-lock-relief-repair",
+    "copyright": "New source-built exterior replica; source lineage in ../source/evidence.md",
+    "extras": {
+      "manufacturer": "HPE",
+      "product": "ProLiant DL360 Gen10",
+      "variant": "standard 8SFF 2.5-inch, 6+2 carrier arrangement, dual 500W AC PSU",
+      "bodyDimensionsMm": [
+        434.6,
+        42.9,
+        707
+      ],
+      "overallFrontWidthMm": 482.6,
+      "coordinateConvention": "+X device right from front; +Y up; +Z front",
+      "bottomEvidence": "GENERIC_BOTTOM_FALLBACK",
+      "visibleParts": 356,
+      "surfaceRepair": "Source-locked face textures remain visually authoritative; coarse helper faces moved behind them while rack ears, carrier frames, PSU frames, top seam/latch, closed body, and separate assemblies retain visible relief."
+    }
+  },
+  "extensions_used": [
+    "KHR_materials_unlit"
+  ],
+  "extensions_required": [],
+  "counts": {
+    "scenes": 1,
+    "nodes": 356,
+    "meshes": 22,
+    "primitives": 22,
+    "materials": 17,
+    "textures": 8,
+    "images": 8,
+    "unique_basecolor_images": 8
+  },
+  "geometry": {
+    "mirrored_nodes": [],
+    "missing_accessor_bounds": [],
+    "bounds_min": [
+      -241.3,
+      -21.45,
+      -353.5
+    ],
+    "bounds_max": [
+      241.3,
+      21.474999999999998,
+      353.52000000000004
+    ],
+    "dimensions_xyz": [
+      482.6,
+      42.925,
+      707.02
+    ]
+  },
+  "dimension_check": {
+    "expected_mm": [
+      482.6,
+      42.9,
+      707.0
+    ],
+    "errors": [],
+    "warnings": [],
+    "actual_xyz": [
+      482.6,
+      42.925,
+      707.02
+    ],
+    "units_per_mm_xyz": [
+      1.0,
+      1.0005827506,
+      1.0000282885
+    ],
+    "nonuniform_ratio_error_percent": 0.0379
+  },
+  "images": [
+    {
+      "index": 0,
+      "name": "front-body",
+      "errors": [],
+      "warnings": [],
+      "format": "PNG",
+      "mode": "RGB",
+      "size_px": [
+        2048,
+        202
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    },
+    {
+      "index": 1,
+      "name": "front-ear-left",
+      "errors": [],
+      "warnings": [],
+      "format": "PNG",
+      "mode": "RGBA",
+      "size_px": [
+        574,
+        1024
+      ],
+      "transparent_percent": 11.92206,
+      "semi_transparent_percent": 0.0
+    },
+    {
+      "index": 2,
+      "name": "front-ear-right",
+      "errors": [],
+      "warnings": [],
+      "format": "PNG",
+      "mode": "RGBA",
+      "size_px": [
+        574,
+        1024
+      ],
+      "transparent_percent": 10.64708,
+      "semi_transparent_percent": 0.0
+    },
+    {
+      "index": 3,
+      "name": "rear",
+      "errors": [],
+      "warnings": [],
+      "format": "PNG",
+      "mode": "RGB",
+      "size_px": [
+        2048,
+        202
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    },
+    {
+      "index": 4,
+      "name": "left",
+      "errors": [],
+      "warnings": [],
+      "format": "PNG",
+      "mode": "RGB",
+      "size_px": [
+        2048,
+        124
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    },
+    {
+      "index": 5,
+      "name": "right",
+      "errors": [],
+      "warnings": [],
+      "format": "PNG",
+      "mode": "RGB",
+      "size_px": [
+        2048,
+        124
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    },
+    {
+      "index": 6,
+      "name": "top",
+      "errors": [],
+      "warnings": [],
+      "format": "PNG",
+      "mode": "RGB",
+      "size_px": [
+        1259,
+        2048
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    },
+    {
+      "index": 7,
+      "name": "bottom",
+      "errors": [],
+      "warnings": [],
+      "format": "PNG",
+      "mode": "RGB",
+      "size_px": [
+        1259,
+        2048
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    }
+  ],
+  "materials": [
+    {
+      "index": 0,
+      "name": "Galvanized_Silver",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.69,
+        0.7,
+        0.69,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 0.82,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [
+        "unlit material uses a non-neutral baseColorFactor"
+      ],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 1,
+      "name": "PSU_Silver",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.79,
+        0.79,
+        0.77,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 0.82,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [
+        "unlit material uses a non-neutral baseColorFactor"
+      ],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 2,
+      "name": "HPE_Black_Plastic",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.035,
+        0.04,
+        0.04,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 0.82,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [
+        "unlit material uses a non-neutral baseColorFactor"
+      ],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 3,
+      "name": "Dark_Recess",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.012,
+        0.014,
+        0.014,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 0.82,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [
+        "unlit material uses a non-neutral baseColorFactor"
+      ],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 4,
+      "name": "Handle_Gray",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.14,
+        0.15,
+        0.15,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 0.82,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [
+        "unlit material uses a non-neutral baseColorFactor"
+      ],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 5,
+      "name": "HPE_Latch_Red",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.34,
+        0.075,
+        0.07,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 0.82,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [
+        "unlit material uses a non-neutral baseColorFactor"
+      ],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 6,
+      "name": "HPE_Status_Green",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.06,
+        0.72,
+        0.29,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 0.82,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [
+        "unlit material uses a non-neutral baseColorFactor"
+      ],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 7,
+      "name": "Connector_Blue",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.03,
+        0.3,
+        0.68,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 0.82,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [
+        "unlit material uses a non-neutral baseColorFactor"
+      ],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 8,
+      "name": "Serial_Teal",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.05,
+        0.34,
+        0.31,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 0.82,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [
+        "unlit material uses a non-neutral baseColorFactor"
+      ],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 9,
+      "name": "Front_Body_Texture_sRGB",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 0.82,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 0,
+      "base_color_image": 0
+    },
+    {
+      "index": 10,
+      "name": "Front_Ear_Left_Texture_MASK",
+      "alpha_mode": "MASK",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 0.82,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [
+        "MASK must be isolated to a verified perforated part, never a full chassis face",
+        "non-opaque material exposes a large transparent area; verify it is not the chassis"
+      ],
+      "base_color_texture": 1,
+      "base_color_image": 1
+    },
+    {
+      "index": 11,
+      "name": "Front_Ear_Right_Texture_MASK",
+      "alpha_mode": "MASK",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 0.82,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [
+        "MASK must be isolated to a verified perforated part, never a full chassis face",
+        "non-opaque material exposes a large transparent area; verify it is not the chassis"
+      ],
+      "base_color_texture": 2,
+      "base_color_image": 2
+    },
+    {
+      "index": 12,
+      "name": "Rear_Texture_sRGB",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 0.82,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 3,
+      "base_color_image": 3
+    },
+    {
+      "index": 13,
+      "name": "Left_Texture_sRGB",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 0.82,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 4,
+      "base_color_image": 4
+    },
+    {
+      "index": 14,
+      "name": "Right_Texture_sRGB",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 0.82,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 5,
+      "base_color_image": 5
+    },
+    {
+      "index": 15,
+      "name": "Top_Texture_sRGB",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 0.82,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 6,
+      "base_color_image": 6
+    },
+    {
+      "index": 16,
+      "name": "Bottom_Texture_sRGB_GENERIC_FALLBACK",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 0.82,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 7,
+      "base_color_image": 7
+    }
+  ],
+  "primitives": [
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "material": 0,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 1,
+      "primitive": 0,
+      "material": 9,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 2,
+      "primitive": 0,
+      "material": 12,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 3,
+      "primitive": 0,
+      "material": 13,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 4,
+      "primitive": 0,
+      "material": 14,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 5,
+      "primitive": 0,
+      "material": 15,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 6,
+      "primitive": 0,
+      "material": 16,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 7,
+      "primitive": 0,
+      "material": 0,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 8,
+      "primitive": 0,
+      "material": 10,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 9,
+      "primitive": 0,
+      "material": 2,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 10,
+      "primitive": 0,
+      "material": 11,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 11,
+      "primitive": 0,
+      "material": 4,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 12,
+      "primitive": 0,
+      "material": 3,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 13,
+      "primitive": 0,
+      "material": 4,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 14,
+      "primitive": 0,
+      "material": 5,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 15,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 16,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 17,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 18,
+      "primitive": 0,
+      "material": 1,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 19,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 20,
+      "primitive": 0,
+      "material": 3,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 21,
+      "primitive": 0,
+      "material": 1,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    }
+  ],
+  "external_buffers": [],
+  "errors": [],
+  "warnings": [
+    "MASK must be isolated to a verified perforated part, never a full chassis face",
+    "non-opaque material exposes a large transparent area; verify it is not the chassis",
+    "unlit material uses a non-neutral baseColorFactor"
+  ],
+  "error_count": 0,
+  "warning_count": 3,
+  "status": "PASS"
+}

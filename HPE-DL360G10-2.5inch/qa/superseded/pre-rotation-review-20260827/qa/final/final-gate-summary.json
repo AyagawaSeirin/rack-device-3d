@@ -1,0 +1,543 @@
+{
+  "status": "PASS_WITH_BOTTOM_FALLBACK",
+  "generated_at": "2026-08-23T23:49:09.235879+08:00",
+  "subject": "HPE ProLiant DL360 Gen10 8SFF 2.5-inch, standard 6+2 carrier arrangement, dual 500W AC PSU",
+  "gates": {
+    "identity_verified": true,
+    "six_source_locks_valid": true,
+    "bottom_search_log_and_fallback_declared": true,
+    "formal_glbs_audit_pass": true,
+    "parts_manifests_current": true,
+    "views_audit_pass": true,
+    "six_comparisons_pass": true,
+    "dual_viewer_40_loads_current": true,
+    "light_dark_checker_evidence": true,
+    "rack_ear_logo_text_closeups": true,
+    "official_exact_3d_not_found_documented": true
+  },
+  "models": {
+    "standard": {
+      "path": "model/HPE-DL360G10-2.5inch.glb",
+      "bytes": 10584756,
+      "sha256": "36fba895befbc28185d3aeeea77c84315812fb14863fe54ca3231cb1d0e12597",
+      "audit_status": "PASS",
+      "audit_errors": 0,
+      "audit_warnings": 3,
+      "dimensions_xyz_mm": [
+        482.6,
+        42.925,
+        707.02
+      ],
+      "nodes": 356,
+      "manifest_nodes": 356,
+      "manifest_visible_parts": 356
+    },
+    "web": {
+      "path": "model/HPE-DL360G10-2.5inch-web.glb",
+      "bytes": 6383624,
+      "sha256": "785c9a0824eccb823b5be0036ea970161df776dc40312556d87151e6d4275900",
+      "audit_status": "PASS",
+      "audit_errors": 0,
+      "audit_warnings": 3,
+      "dimensions_xyz_mm": [
+        482.6,
+        42.925,
+        707.02
+      ],
+      "nodes": 356,
+      "manifest_nodes": 356,
+      "manifest_visible_parts": 356
+    }
+  },
+  "source_locks": [
+    {
+      "face": "front",
+      "mode": "SOURCE_LOCKED_GENERATION",
+      "primary": "source/originals/user-row5-front.png",
+      "declared_sha256": "a007a8fcf17fb71e862a096ad05c2c91b1d62f8710dc110389b0dfbe8522d9cb",
+      "actual_sha256": "a007a8fcf17fb71e862a096ad05c2c91b1d62f8710dc110389b0dfbe8522d9cb",
+      "sha256_match": true,
+      "output": "views/front.png",
+      "output_exists": true
+    },
+    {
+      "face": "rear",
+      "mode": "SOURCE_LOCKED_GENERATION",
+      "primary": "source/third-party/ITPro-Performance-8SFF-main.jpg",
+      "declared_sha256": "b100f7917acbc7e8747988b61b187b8631e77a99104264cfdd6900180ea6b9a3",
+      "actual_sha256": "b100f7917acbc7e8747988b61b187b8631e77a99104264cfdd6900180ea6b9a3",
+      "sha256_match": true,
+      "output": "views/rear.png",
+      "output_exists": true
+    },
+    {
+      "face": "left",
+      "mode": "MULTI_REFERENCE_RECONSTRUCTION",
+      "primary": "source/third-party/piospartslap-22257-8SFF-view2.jpg",
+      "declared_sha256": "5ecbdea2d2c3fe4e3559c34c9fcd07cbbe0f524dde060685b5f92fce6d9552f6",
+      "actual_sha256": "5ecbdea2d2c3fe4e3559c34c9fcd07cbbe0f524dde060685b5f92fce6d9552f6",
+      "sha256_match": true,
+      "output": "views/left.png",
+      "output_exists": true
+    },
+    {
+      "face": "right",
+      "mode": "MULTI_REFERENCE_RECONSTRUCTION",
+      "primary": "source/third-party/piospartslap-22257-8SFF-view4.jpg",
+      "declared_sha256": "4b8943532967350ba31a85379c70f896b12627ea74e7c0c946c2f9b66696d427",
+      "actual_sha256": "4b8943532967350ba31a85379c70f896b12627ea74e7c0c946c2f9b66696d427",
+      "sha256_match": true,
+      "output": "views/right.png",
+      "output_exists": true
+    },
+    {
+      "face": "top",
+      "mode": "MULTI_REFERENCE_RECONSTRUCTION",
+      "primary": "source/third-party/piospartslap-22257-8SFF-view2.jpg",
+      "declared_sha256": "5ecbdea2d2c3fe4e3559c34c9fcd07cbbe0f524dde060685b5f92fce6d9552f6",
+      "actual_sha256": "5ecbdea2d2c3fe4e3559c34c9fcd07cbbe0f524dde060685b5f92fce6d9552f6",
+      "sha256_match": true,
+      "output": "views/top.png",
+      "output_exists": true
+    },
+    {
+      "face": "bottom",
+      "mode": "GENERIC_BOTTOM_FALLBACK",
+      "primary": "source/third-party/piospartslap-22257-8SFF-view2.jpg",
+      "declared_sha256": "5ecbdea2d2c3fe4e3559c34c9fcd07cbbe0f524dde060685b5f92fce6d9552f6",
+      "actual_sha256": "5ecbdea2d2c3fe4e3559c34c9fcd07cbbe0f524dde060685b5f92fce6d9552f6",
+      "sha256_match": true,
+      "output": "views/bottom.png",
+      "output_exists": true
+    }
+  ],
+  "webgl": {
+    "viewer_a": "native WebGL2 GLB parser/renderer",
+    "viewer_b": "Three.js r128 GLTFLoader",
+    "required_views_per_load": [
+      "front",
+      "rear",
+      "left",
+      "right",
+      "top",
+      "bottom",
+      "front-left",
+      "front-right",
+      "rear-left",
+      "rear-right"
+    ],
+    "total_actual_loads": 40,
+    "groups": [
+      {
+        "viewer": "viewer-a",
+        "tier": "standard",
+        "load_count": 10,
+        "all_1200x800": true,
+        "all_current": true,
+        "files": [
+          {
+            "view": "front",
+            "path": "qa/final/webgl-renders/viewer-a/standard/front.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "rear",
+            "path": "qa/final/webgl-renders/viewer-a/standard/rear.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "left",
+            "path": "qa/final/webgl-renders/viewer-a/standard/left.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "right",
+            "path": "qa/final/webgl-renders/viewer-a/standard/right.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "top",
+            "path": "qa/final/webgl-renders/viewer-a/standard/top.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "bottom",
+            "path": "qa/final/webgl-renders/viewer-a/standard/bottom.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "front-left",
+            "path": "qa/final/webgl-renders/viewer-a/standard/front-left.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "front-right",
+            "path": "qa/final/webgl-renders/viewer-a/standard/front-right.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "rear-left",
+            "path": "qa/final/webgl-renders/viewer-a/standard/rear-left.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "rear-right",
+            "path": "qa/final/webgl-renders/viewer-a/standard/rear-right.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          }
+        ]
+      },
+      {
+        "viewer": "viewer-a",
+        "tier": "web",
+        "load_count": 10,
+        "all_1200x800": true,
+        "all_current": true,
+        "files": [
+          {
+            "view": "front",
+            "path": "qa/final/webgl-renders/viewer-a/web/front.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "rear",
+            "path": "qa/final/webgl-renders/viewer-a/web/rear.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "left",
+            "path": "qa/final/webgl-renders/viewer-a/web/left.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "right",
+            "path": "qa/final/webgl-renders/viewer-a/web/right.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "top",
+            "path": "qa/final/webgl-renders/viewer-a/web/top.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "bottom",
+            "path": "qa/final/webgl-renders/viewer-a/web/bottom.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "front-left",
+            "path": "qa/final/webgl-renders/viewer-a/web/front-left.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "front-right",
+            "path": "qa/final/webgl-renders/viewer-a/web/front-right.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "rear-left",
+            "path": "qa/final/webgl-renders/viewer-a/web/rear-left.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "rear-right",
+            "path": "qa/final/webgl-renders/viewer-a/web/rear-right.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          }
+        ]
+      },
+      {
+        "viewer": "viewer-b",
+        "tier": "standard",
+        "load_count": 10,
+        "all_1200x800": true,
+        "all_current": true,
+        "files": [
+          {
+            "view": "front",
+            "path": "qa/final/webgl-renders/viewer-b/standard/front.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "rear",
+            "path": "qa/final/webgl-renders/viewer-b/standard/rear.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "left",
+            "path": "qa/final/webgl-renders/viewer-b/standard/left.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "right",
+            "path": "qa/final/webgl-renders/viewer-b/standard/right.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "top",
+            "path": "qa/final/webgl-renders/viewer-b/standard/top.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "bottom",
+            "path": "qa/final/webgl-renders/viewer-b/standard/bottom.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "front-left",
+            "path": "qa/final/webgl-renders/viewer-b/standard/front-left.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "front-right",
+            "path": "qa/final/webgl-renders/viewer-b/standard/front-right.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "rear-left",
+            "path": "qa/final/webgl-renders/viewer-b/standard/rear-left.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "rear-right",
+            "path": "qa/final/webgl-renders/viewer-b/standard/rear-right.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          }
+        ]
+      },
+      {
+        "viewer": "viewer-b",
+        "tier": "web",
+        "load_count": 10,
+        "all_1200x800": true,
+        "all_current": true,
+        "files": [
+          {
+            "view": "front",
+            "path": "qa/final/webgl-renders/viewer-b/web/front.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "rear",
+            "path": "qa/final/webgl-renders/viewer-b/web/rear.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "left",
+            "path": "qa/final/webgl-renders/viewer-b/web/left.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "right",
+            "path": "qa/final/webgl-renders/viewer-b/web/right.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "top",
+            "path": "qa/final/webgl-renders/viewer-b/web/top.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "bottom",
+            "path": "qa/final/webgl-renders/viewer-b/web/bottom.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "front-left",
+            "path": "qa/final/webgl-renders/viewer-b/web/front-left.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "front-right",
+            "path": "qa/final/webgl-renders/viewer-b/web/front-right.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "rear-left",
+            "path": "qa/final/webgl-renders/viewer-b/web/rear-left.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          },
+          {
+            "view": "rear-right",
+            "path": "qa/final/webgl-renders/viewer-b/web/rear-right.png",
+            "size_px": [
+              1200,
+              800
+            ],
+            "newer_than_loaded_glb": true
+          }
+        ]
+      }
+    ]
+  },
+  "comparisons": {
+    "status": "PASS",
+    "count": 6
+  },
+  "alpha_inspection_count": 4,
+  "closeup_count": 3,
+  "official_exact_3d": {
+    "found": false,
+    "stored_files": [
+      "README.md"
+    ],
+    "note": "Only the search record is stored; no exact public official 3D/CAD/AR file was found."
+  },
+  "remaining_risk": "Exact underside evidence is unavailable after documented exhaustive search; the conservative opaque bottom is GENERIC_BOTTOM_FALLBACK."
+}

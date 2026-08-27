@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Three.js WebGL2 rotation audit</title>
+  <style>
+    html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#dfe3e6}
+    body.checker-light{background-color:#f4f5f6;background-image:linear-gradient(45deg,#d8dce0 25%,transparent 25%),linear-gradient(-45deg,#d8dce0 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#d8dce0 75%),linear-gradient(-45deg,transparent 75%,#d8dce0 75%);background-size:32px 32px;background-position:0 0,0 16px,16px -16px,-16px 0}
+    body.checker-dark{background-color:#17202a;background-image:linear-gradient(45deg,#34404d 25%,transparent 25%),linear-gradient(-45deg,#34404d 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#34404d 75%),linear-gradient(-45deg,transparent 75%,#34404d 75%);background-size:32px 32px;background-position:0 0,0 16px,16px -16px,-16px 0}
+    canvas{display:block;width:100%;height:100%}
+    #status{position:fixed;inset:0;display:grid;place-items:center;background:#111827;color:white;font:14px ui-monospace,monospace;z-index:5}
+  </style>
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"}}</script>
+</head>
+<body>
+  <div id="status">loading Three.js / WebGL2…</div>
+  <canvas id="canvas"></canvas>
+  <script type="module">
+    import * as THREE from 'three';
+    import {GLTFLoader} from 'https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/loaders/GLTFLoader.js';
+
+    const query=new URLSearchParams(location.search), modelUrl=query.get('model');
+    if(!modelUrl) throw new Error('model query parameter required');
+    const canvas=document.getElementById('canvas'), status=document.getElementById('status');
+    const gl=canvas.getContext('webgl2',{alpha:true,antialias:true,preserveDrawingBuffer:true,premultipliedAlpha:false,depth:true,stencil:false});
+    if(!gl) throw new Error('WebGL2 unavailable');
+    const renderer=new THREE.WebGLRenderer({canvas,context:gl,alpha:true,antialias:true,preserveDrawingBuffer:true,premultipliedAlpha:false});
+    renderer.setPixelRatio(1); renderer.setSize(innerWidth,innerHeight,false); renderer.setClearColor(0,0);
+    renderer.outputColorSpace=THREE.SRGBColorSpace; renderer.toneMapping=THREE.NoToneMapping;
+    const scene=new THREE.Scene();
+    scene.add(new THREE.HemisphereLight(0xffffff,0x79818a,1.35));
+    const key=new THREE.DirectionalLight(0xffffff,1.05);key.position.set(-1.8,2.5,2.8);scene.add(key);
+    const fill=new THREE.DirectionalLight(0xffffff,.42);fill.position.set(2.2,.8,-2.0);scene.add(fill);
+    let root,box,center,size,camera,last={};
+    const named={front:[0,0,'ortho'],rear:[180,0,'ortho'],left:[-90,0,'ortho'],right:[90,0,'ortho'],top:[0,90,'ortho'],bottom:[0,-90,'ortho'],'front-left':[-45,24,'perspective'],'front-right':[45,24,'perspective'],'rear-left':[-135,24,'perspective'],'rear-right':[135,24,'perspective']};
+    const deg=x=>x*Math.PI/180;
+    function direction(yaw,pitch){const y=deg(yaw),p=deg(pitch);return new THREE.Vector3(Math.sin(y)*Math.cos(p),Math.sin(p),Math.cos(y)*Math.cos(p)).normalize();}
+    function setBackground(bg){document.body.className=bg==='dark'?'checker-dark':bg==='light'?'checker-light':'';document.body.style.backgroundColor=bg==='neutral'?'#dfe3e6':'';}
+    function corners(){const out=[];for(const x of[box.min.x,box.max.x])for(const y of[box.min.y,box.max.y])for(const z of[box.min.z,box.max.z])out.push(new THREE.Vector3(x,y,z));return out;}
+    function cameraFor(yaw,pitch,projection){
+      const dir=direction(yaw,pitch),up=Math.abs(pitch)>89?new THREE.Vector3(0,0,-1):new THREE.Vector3(0,1,0),aspect=innerWidth/innerHeight,radius=size.length()/2;
+      const distance=radius/Math.sin(deg(15))*1.22,near=Math.max(radius*.02,1e-5),far=distance+radius*5;
+      let cam;
+      if(projection==='ortho'){
+        const forward=dir.clone().multiplyScalar(-1),right=new THREE.Vector3().crossVectors(forward,up).normalize(),trueUp=new THREE.Vector3().crossVectors(right,forward).normalize();let halfW=0,halfH=0;
+        for(const c of corners()){const rel=c.clone().sub(center);halfW=Math.max(halfW,Math.abs(rel.dot(right)));halfH=Math.max(halfH,Math.abs(rel.dot(trueUp)));}
+        const h=Math.max(halfH,halfW/aspect)*1.08;cam=new THREE.OrthographicCamera(-h*aspect,h*aspect,h,-h,near,far);
+      }else cam=new THREE.PerspectiveCamera(30,aspect,near,far);
+      cam.position.copy(center).addScaledVector(dir,distance);cam.up.copy(up);cam.lookAt(center);cam.updateProjectionMatrix();cam.userData={near,far,distance,ratio:far/near,projection};return cam;
+    }
+    async function renderFrames(count=4){for(let i=0;i<count;i++)renderer.render(scene,camera);gl.finish();await Promise.resolve();}
+    window.qaSetOrbit=async(yaw,pitch,bg='light',projection='perspective')=>{setBackground(bg);camera=cameraFor(yaw,pitch,projection);last={yaw,pitch,bg,projection};await renderFrames(4);window.__QA__.camera={...camera.userData,...last};return window.__QA__.camera;};
+    window.__QA__={ready:false,error:null,engine:'Three.js 0.170.0',webgl:'WebGL2',model:modelUrl,overlayHidden:false,canvas:[innerWidth,innerHeight],rightHanded:true,toneMapping:'none'};
+    new GLTFLoader().load(modelUrl,async gltf=>{
+      root=gltf.scene;scene.add(root);root.updateMatrixWorld(true);box=new THREE.Box3().setFromObject(root);center=box.getCenter(new THREE.Vector3());size=box.getSize(new THREE.Vector3());
+      const spec=named[query.get('view')]||[Number(query.get('yaw')||0),Number(query.get('pitch')||8),query.get('projection')||'perspective'];
+      window.__QA__.bounds={min:box.min.toArray(),max:box.max.toArray(),size:size.toArray()};window.__QA__.meshes=0;root.traverse(x=>{if(x.isMesh)window.__QA__.meshes++;});
+      await window.qaSetOrbit(spec[0],spec[1],query.get('bg')||'light',spec[2]);status.style.display='none';window.__QA__.overlayHidden=true;window.__QA__.ready=true;document.body.dataset.ready='true';await renderFrames(2);
+    },undefined,error=>{window.__QA__.error=String(error);status.textContent='ERROR '+error;});
+  </script>
+</body>
+</html>

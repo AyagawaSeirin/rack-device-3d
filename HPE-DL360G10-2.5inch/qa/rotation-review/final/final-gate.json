@@ -1,0 +1,328 @@
+{
+  "model_key": "HPE-DL360G10-2.5inch",
+  "status": "PASS_WITH_BOTTOM_FALLBACK",
+  "errors": [],
+  "warnings": [],
+  "capture_only_readpixels_warning_count": 12,
+  "hashes": {
+    "old": {
+      "standard": "36fba895befbc28185d3aeeea77c84315812fb14863fe54ca3231cb1d0e12597",
+      "web": "785c9a0824eccb823b5be0036ea970161df776dc40312556d87151e6d4275900"
+    },
+    "new": {
+      "standard": "aaabe38a87552e0a51f3bd3392a324884134f5a10c255967ecc8fb58b766f313",
+      "web": "6785a8a4f21ed5bb9ce741a17b7d2dc465d3dd0c033bfd20c488f181456bc72e"
+    },
+    "viewers": {
+      "three": "949b9bb2bb83b0a9668496cfb3ae986192b50e28151490011947447f4d181812",
+      "babylon": "957a34b4bed337545f0459eecba7f8e8b471f2b64aec8fa68b620c29673dac02"
+    },
+    "build_scripts": {
+      "model/build-glb.mjs": "bdbd650a122195333a0e5ee212ce3611cc38c0bddd3efb571eb3b7bf1529c561"
+    }
+  },
+  "audits": {
+    "views-audit": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 6
+    },
+    "glb-standard-audit": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0
+    },
+    "glb-web-audit": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0
+    },
+    "standard/duplicate-coplanar": {
+      "status": "PASS",
+      "unresolved": 0
+    },
+    "standard/material-alpha": {
+      "status": "PASS",
+      "unresolved": 0
+    },
+    "standard/negative-transform": {
+      "status": "PASS",
+      "unresolved": 0
+    },
+    "standard/closed-core": {
+      "status": "PASS",
+      "unresolved": 0
+    },
+    "web/duplicate-coplanar": {
+      "status": "PASS",
+      "unresolved": 0
+    },
+    "web/material-alpha": {
+      "status": "PASS",
+      "unresolved": 0
+    },
+    "web/negative-transform": {
+      "status": "PASS",
+      "unresolved": 0
+    },
+    "web/closed-core": {
+      "status": "PASS",
+      "unresolved": 0
+    }
+  },
+  "loads": {
+    "completed": 40,
+    "dimensions": {
+      "1200x800": 40
+    }
+  },
+  "rotations": {
+    "three/standard": {
+      "status": "PASS",
+      "yaw": 72,
+      "pitch": 12,
+      "stability": 16,
+      "unique_yaw_hashes": 72,
+      "frame_dimensions": {
+        "600x400": 100
+      },
+      "stability_pairs": [
+        {
+          "yaw": 0,
+          "pixel_equal": true,
+          "sha_a": "d078371a0b52d0a82f99e0de7737b6f3bf83d788203b0ab0e2abc18a94e41413",
+          "sha_b": "d078371a0b52d0a82f99e0de7737b6f3bf83d788203b0ab0e2abc18a94e41413"
+        },
+        {
+          "yaw": 45,
+          "pixel_equal": true,
+          "sha_a": "93dc7cc898ef9fbe0c7f8efeeca4e78be8c6e80c775f48e75de873e6ce0ccf1a",
+          "sha_b": "93dc7cc898ef9fbe0c7f8efeeca4e78be8c6e80c775f48e75de873e6ce0ccf1a"
+        },
+        {
+          "yaw": 90,
+          "pixel_equal": true,
+          "sha_a": "adab5dea8c7ed4f78b4b8d7d41ce181d5d1bb6ecc93b42694488ddc5500a2fd3",
+          "sha_b": "adab5dea8c7ed4f78b4b8d7d41ce181d5d1bb6ecc93b42694488ddc5500a2fd3"
+        },
+        {
+          "yaw": 135,
+          "pixel_equal": true,
+          "sha_a": "b1252d8dd4c6a0e16c7353e1e3143a987825377c851b199b3c98e2f503a2a1ef",
+          "sha_b": "b1252d8dd4c6a0e16c7353e1e3143a987825377c851b199b3c98e2f503a2a1ef"
+        },
+        {
+          "yaw": 180,
+          "pixel_equal": true,
+          "sha_a": "f8c3207919fe22c9ef962e4854053a93606d3bb3ecaf70851da451bebbca47f5",
+          "sha_b": "f8c3207919fe22c9ef962e4854053a93606d3bb3ecaf70851da451bebbca47f5"
+        },
+        {
+          "yaw": 225,
+          "pixel_equal": true,
+          "sha_a": "83b7cb703e1dc4847b10f8e53d6c965824eace9c68549bd621792c6a8e8aa494",
+          "sha_b": "e64af7befac550dcda4e784c5f3efdcad318f8681754fda5a6bfe58074c82026"
+        },
+        {
+          "yaw": 270,
+          "pixel_equal": true,
+          "sha_a": "4714c428cb99ade83b7690111811ad330beac0229a92047fc73e2411631741ab",
+          "sha_b": "4714c428cb99ade83b7690111811ad330beac0229a92047fc73e2411631741ab"
+        },
+        {
+          "yaw": 315,
+          "pixel_equal": true,
+          "sha_a": "f9e3208e0d944f5b33bf898501c594fba12b7426acc9b7a0cc84d713c2d4c1c6",
+          "sha_b": "f9e3208e0d944f5b33bf898501c594fba12b7426acc9b7a0cc84d713c2d4c1c6"
+        }
+      ],
+      "near_far_ratio": 485.68590161453267
+    },
+    "three/web": {
+      "status": "PASS",
+      "yaw": 72,
+      "pitch": 12,
+      "stability": 16,
+      "unique_yaw_hashes": 72,
+      "frame_dimensions": {
+        "600x400": 100
+      },
+      "stability_pairs": [
+        {
+          "yaw": 0,
+          "pixel_equal": true,
+          "sha_a": "c868a4a8fd9bd4416ae05c5b59c1b3a7de62a7119ad081166e3501383581301e",
+          "sha_b": "c868a4a8fd9bd4416ae05c5b59c1b3a7de62a7119ad081166e3501383581301e"
+        },
+        {
+          "yaw": 45,
+          "pixel_equal": true,
+          "sha_a": "37fad9b2c75aacdacc145d63d3116f0e6f0088c0c7d5f893f72d8b99300d6a12",
+          "sha_b": "37fad9b2c75aacdacc145d63d3116f0e6f0088c0c7d5f893f72d8b99300d6a12"
+        },
+        {
+          "yaw": 90,
+          "pixel_equal": true,
+          "sha_a": "49b072ae946384954b6446d4fd49d1bdf257e8caecae380c7438b1153c499571",
+          "sha_b": "17d71e1f591c6c97c02e01482a0ed3b9ce4e3b72840c8016e3b97c4f32fff2f4"
+        },
+        {
+          "yaw": 135,
+          "pixel_equal": true,
+          "sha_a": "312ce2ed69a2908af9eeeae1d39bdedb53fd05956d056fe5a186731f3b63c4ed",
+          "sha_b": "312ce2ed69a2908af9eeeae1d39bdedb53fd05956d056fe5a186731f3b63c4ed"
+        },
+        {
+          "yaw": 180,
+          "pixel_equal": true,
+          "sha_a": "c2d4908383c7b31168070c0f830139940809867f55cd7e23fecdb5d06718cdf9",
+          "sha_b": "c2d4908383c7b31168070c0f830139940809867f55cd7e23fecdb5d06718cdf9"
+        },
+        {
+          "yaw": 225,
+          "pixel_equal": true,
+          "sha_a": "29b3be71972d6cf8ff24e3c927c0612c8c6890991ae33456f7fe647d79d3b7ca",
+          "sha_b": "29b3be71972d6cf8ff24e3c927c0612c8c6890991ae33456f7fe647d79d3b7ca"
+        },
+        {
+          "yaw": 270,
+          "pixel_equal": true,
+          "sha_a": "f190c841de4f6aa01ec8ba3e3eba7fb2b85cd4d655707525b456fb108e4ed2d9",
+          "sha_b": "f190c841de4f6aa01ec8ba3e3eba7fb2b85cd4d655707525b456fb108e4ed2d9"
+        },
+        {
+          "yaw": 315,
+          "pixel_equal": true,
+          "sha_a": "dea998cc9c42e49440e6811c81d785ffdeb3b21d8d9b3b616071e954388fc695",
+          "sha_b": "dea998cc9c42e49440e6811c81d785ffdeb3b21d8d9b3b616071e954388fc695"
+        }
+      ],
+      "near_far_ratio": 485.68590161453267
+    },
+    "babylon/standard": {
+      "status": "PASS",
+      "yaw": 72,
+      "pitch": 12,
+      "stability": 16,
+      "unique_yaw_hashes": 72,
+      "frame_dimensions": {
+        "600x400": 100
+      },
+      "stability_pairs": [
+        {
+          "yaw": 0,
+          "pixel_equal": true,
+          "sha_a": "6b852f4366f3f86555ec20fb1b9d6020dd37702e5ac709ab137bcf6e9932017a",
+          "sha_b": "6b852f4366f3f86555ec20fb1b9d6020dd37702e5ac709ab137bcf6e9932017a"
+        },
+        {
+          "yaw": 45,
+          "pixel_equal": true,
+          "sha_a": "a901e43dae6a39361f2fd5cbcea22da1dc143d3bc610d4cf520c358593b5f786",
+          "sha_b": "a901e43dae6a39361f2fd5cbcea22da1dc143d3bc610d4cf520c358593b5f786"
+        },
+        {
+          "yaw": 90,
+          "pixel_equal": true,
+          "sha_a": "8b2f0d6e6a16680a4b5ff788ad7e685f95fcd8888152e0c0f27c6ba6fa5a1c83",
+          "sha_b": "8b2f0d6e6a16680a4b5ff788ad7e685f95fcd8888152e0c0f27c6ba6fa5a1c83"
+        },
+        {
+          "yaw": 135,
+          "pixel_equal": true,
+          "sha_a": "76dd1bede7dd4d5b11763fbd433b97a5baf16956c63adb422734ddbcd320bb34",
+          "sha_b": "76dd1bede7dd4d5b11763fbd433b97a5baf16956c63adb422734ddbcd320bb34"
+        },
+        {
+          "yaw": 180,
+          "pixel_equal": true,
+          "sha_a": "9f5de938daa6cc8754a5f8b38c92a3f1fd38c0f6087adb756c4cbeeb283a2fce",
+          "sha_b": "9f5de938daa6cc8754a5f8b38c92a3f1fd38c0f6087adb756c4cbeeb283a2fce"
+        },
+        {
+          "yaw": 225,
+          "pixel_equal": true,
+          "sha_a": "ebd7af7c1a37057029361c1ada7a5f10f9d6e7d9cd74b3828848e6ca9610d237",
+          "sha_b": "ebd7af7c1a37057029361c1ada7a5f10f9d6e7d9cd74b3828848e6ca9610d237"
+        },
+        {
+          "yaw": 270,
+          "pixel_equal": true,
+          "sha_a": "1f1f6e7bfab538ef7342ef391724c3c25929cd2083014ebaf4281a0525fbdfd1",
+          "sha_b": "1f1f6e7bfab538ef7342ef391724c3c25929cd2083014ebaf4281a0525fbdfd1"
+        },
+        {
+          "yaw": 315,
+          "pixel_equal": true,
+          "sha_a": "1ff2945b61bff9ab6792313efdc90ce7b7f71e676b024b0872dbbfbf211ba8db",
+          "sha_b": "1ff2945b61bff9ab6792313efdc90ce7b7f71e676b024b0872dbbfbf211ba8db"
+        }
+      ],
+      "near_far_ratio": 485.68590161453267
+    },
+    "babylon/web": {
+      "status": "PASS",
+      "yaw": 72,
+      "pitch": 12,
+      "stability": 16,
+      "unique_yaw_hashes": 72,
+      "frame_dimensions": {
+        "600x400": 100
+      },
+      "stability_pairs": [
+        {
+          "yaw": 0,
+          "pixel_equal": true,
+          "sha_a": "755a312ca065eff1338e6544265a9747650a61142ae0fac0959a3189507e7dc8",
+          "sha_b": "755a312ca065eff1338e6544265a9747650a61142ae0fac0959a3189507e7dc8"
+        },
+        {
+          "yaw": 45,
+          "pixel_equal": true,
+          "sha_a": "db06acc54d0dde5cddae66e13e5e9d408f9c146724722bdb25fcca9a033b14d4",
+          "sha_b": "db06acc54d0dde5cddae66e13e5e9d408f9c146724722bdb25fcca9a033b14d4"
+        },
+        {
+          "yaw": 90,
+          "pixel_equal": true,
+          "sha_a": "91fdb45d1d0a692b20eae8f34e5f93b1120b787f21af7ee3d15dc18a08b2ecee",
+          "sha_b": "91fdb45d1d0a692b20eae8f34e5f93b1120b787f21af7ee3d15dc18a08b2ecee"
+        },
+        {
+          "yaw": 135,
+          "pixel_equal": true,
+          "sha_a": "db4ec3b3b99b22db4136c7d7a3f35cda96e8b151d43f687542f7735e8671d94a",
+          "sha_b": "db4ec3b3b99b22db4136c7d7a3f35cda96e8b151d43f687542f7735e8671d94a"
+        },
+        {
+          "yaw": 180,
+          "pixel_equal": true,
+          "sha_a": "862cc6e4f4eeb16a22082223d0a6e8c6b7286035d1e625438beab95b315461e3",
+          "sha_b": "862cc6e4f4eeb16a22082223d0a6e8c6b7286035d1e625438beab95b315461e3"
+        },
+        {
+          "yaw": 225,
+          "pixel_equal": true,
+          "sha_a": "07aa43c587eb5eb0a670ff15ad73a609e16a21f4e0d899d07703af01490c44de",
+          "sha_b": "07aa43c587eb5eb0a670ff15ad73a609e16a21f4e0d899d07703af01490c44de"
+        },
+        {
+          "yaw": 270,
+          "pixel_equal": true,
+          "sha_a": "ea3ec4d6219123c58edb91146fae82a838f121cb194f43a557a836f0b7b9a4b2",
+          "sha_b": "ea3ec4d6219123c58edb91146fae82a838f121cb194f43a557a836f0b7b9a4b2"
+        },
+        {
+          "yaw": 315,
+          "pixel_equal": true,
+          "sha_a": "a40a50cb56af3c6b9653103c02befc749516b31a2414fbcffa48d4bba3e98772",
+          "sha_b": "a40a50cb56af3c6b9653103c02befc749516b31a2414fbcffa48d4bba3e98772"
+        }
+      ],
+      "near_far_ratio": 485.68590161453267
+    }
+  },
+  "matched_camera_comparisons": 12,
+  "feature_inventory_rows": 31,
+  "bottom_mode": "GENERIC_BOTTOM_FALLBACK"
+}

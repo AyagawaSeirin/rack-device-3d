@@ -1,8 +1,8 @@
 {
   "variant": "web",
   "output": "HPE-DL360G10-2.5inch-web.glb",
-  "bytes": 6383624,
-  "nodes": 356,
+  "bytes": 6386324,
+  "nodes": 348,
   "meshes": 22,
   "primitives": 22,
   "materials": 17,
@@ -66,8 +66,8 @@
       "type": "ear-lower-plate"
     },
     {
-      "node": "RackEar_Left_TexturePlane",
-      "type": "ear-only-alpha-mask"
+      "node": "RackEar_Left_SourceLocked_OpaqueRing",
+      "type": "geometric-through-hole-source-surface"
     },
     {
       "node": "RackEar_Left_InnerBlackTrim",
@@ -86,8 +86,8 @@
       "type": "ear-lower-plate"
     },
     {
-      "node": "RackEar_Right_TexturePlane",
-      "type": "ear-only-alpha-mask"
+      "node": "RackEar_Right_SourceLocked_OpaqueRing",
+      "type": "geometric-through-hole-source-surface"
     },
     {
       "node": "RackEar_Right_InnerBlackTrim",
@@ -1400,38 +1400,6 @@
     {
       "node": "Right_RailSlot_4",
       "type": "right-rail-slot"
-    },
-    {
-      "node": "PSU_1_FrameTop_SourceTextureReveal",
-      "type": "PSU-source-texture-frame-relief"
-    },
-    {
-      "node": "PSU_1_FrameBottom_SourceTextureReveal",
-      "type": "PSU-source-texture-frame-relief"
-    },
-    {
-      "node": "PSU_1_FrameLeft_SourceTextureReveal",
-      "type": "PSU-source-texture-frame-relief"
-    },
-    {
-      "node": "PSU_1_FrameRight_SourceTextureReveal",
-      "type": "PSU-source-texture-frame-relief"
-    },
-    {
-      "node": "PSU_2_FrameTop_SourceTextureReveal",
-      "type": "PSU-source-texture-frame-relief"
-    },
-    {
-      "node": "PSU_2_FrameBottom_SourceTextureReveal",
-      "type": "PSU-source-texture-frame-relief"
-    },
-    {
-      "node": "PSU_2_FrameLeft_SourceTextureReveal",
-      "type": "PSU-source-texture-frame-relief"
-    },
-    {
-      "node": "PSU_2_FrameRight_SourceTextureReveal",
-      "type": "PSU-source-texture-frame-relief"
     }
   ]
 }
