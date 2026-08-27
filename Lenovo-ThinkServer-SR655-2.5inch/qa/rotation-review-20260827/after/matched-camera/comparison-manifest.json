@@ -1,0 +1,1231 @@
+{
+  "status": "PASS",
+  "comparison_count": 24,
+  "method": "actual final-hash browser render aligned to the approved canonical face without modifying either input",
+  "comparisons": [
+    {
+      "source_view": "views/front.png",
+      "browser_render": "qa/rotation-review-20260827/after/static-40-loads/three/standard/01-front.png",
+      "background": "light",
+      "render_device_bbox_px": [
+        411,
+        319,
+        869,
+        401
+      ],
+      "comparison_crop_px": [
+        383,
+        291,
+        897,
+        429
+      ],
+      "reference_camera_transform": "none",
+      "diagnostic_mean_absolute_rgb_difference": 6.946681,
+      "files": {
+        "source": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/front/source.png",
+          "bytes": 66083,
+          "sha256": "8e01d2bf85b118e54c01e82cb0c6816a7cdd45dc8bf39664cf991e901b548163"
+        },
+        "render": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/front/render.png",
+          "bytes": 56043,
+          "sha256": "71f353dd32e383fadfa6bc505c0e063ad515ae88e70dd165722861d38eaeb17f"
+        },
+        "overlay": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/front/overlay.png",
+          "bytes": 60719,
+          "sha256": "a17a57e5baa2d0120f451af11650f7e3235924645cabaad2175a23c09abf3d14"
+        },
+        "difference": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/front/difference.png",
+          "bytes": 65100,
+          "sha256": "67125af926a3cfc84a7fd6d127934e323525ac55ef894d7325cd3b969ce0c306"
+        },
+        "sheet": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/front/sheet.png",
+          "bytes": 258799,
+          "sha256": "aebb7173c0651688cf8aaa1f112f2ae9090a987e916728a2ea3c44ae48c8ecaf"
+        }
+      },
+      "status": "PASS",
+      "review": "feature positions/orientation preserved; numeric pixel difference is diagnostic only",
+      "engine": "three",
+      "variant": "standard",
+      "face": "front"
+    },
+    {
+      "source_view": "views/rear.png",
+      "browser_render": "qa/rotation-review-20260827/after/static-40-loads/three/standard/02-rear.png",
+      "background": "dark",
+      "render_device_bbox_px": [
+        427,
+        319,
+        853,
+        401
+      ],
+      "comparison_crop_px": [
+        399,
+        291,
+        881,
+        429
+      ],
+      "reference_camera_transform": "none",
+      "diagnostic_mean_absolute_rgb_difference": 23.126902,
+      "files": {
+        "source": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/rear/source.png",
+          "bytes": 83287,
+          "sha256": "a194147f3277e0fdf43c78af1dd769440a7804007393847a186e89322375c007"
+        },
+        "render": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/rear/render.png",
+          "bytes": 64090,
+          "sha256": "d2c32d9fb1e821c84f7a1d3e31473fd13894f2fb499b2ac9340f22268d97afff"
+        },
+        "overlay": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/rear/overlay.png",
+          "bytes": 78887,
+          "sha256": "0d933f80646bb03b76faa8c021c4221fc2351a0b474a87c33da9657e757ba91b"
+        },
+        "difference": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/rear/difference.png",
+          "bytes": 62771,
+          "sha256": "f14b398e9a991cd0ace29bca4810a24ab9748721d64b8894a0d8a3b05d00e166"
+        },
+        "sheet": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/rear/sheet.png",
+          "bytes": 303391,
+          "sha256": "1f277bccfc16d74c082e96fee2bc12339442ba54461e651033771e7b268d8722"
+        }
+      },
+      "status": "PASS",
+      "review": "feature positions/orientation preserved; numeric pixel difference is diagnostic only",
+      "engine": "three",
+      "variant": "standard",
+      "face": "rear"
+    },
+    {
+      "source_view": "views/left.png",
+      "browser_render": "qa/rotation-review-20260827/after/static-40-loads/three/standard/03-left.png",
+      "background": "light",
+      "render_device_bbox_px": [
+        313,
+        322,
+        970,
+        398
+      ],
+      "comparison_crop_px": [
+        285,
+        294,
+        998,
+        426
+      ],
+      "reference_camera_transform": "none",
+      "diagnostic_mean_absolute_rgb_difference": 8.435902,
+      "files": {
+        "source": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/left/source.png",
+          "bytes": 72182,
+          "sha256": "5fefa018ed4eba418087cd1d8a884009693681e3863ded79d9e0e4e8f5f5a11a"
+        },
+        "render": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/left/render.png",
+          "bytes": 58670,
+          "sha256": "d305f077c3561fef81d795333dd4ebc980016fd9f3c70a7a8e59c64ab48eba0a"
+        },
+        "overlay": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/left/overlay.png",
+          "bytes": 63020,
+          "sha256": "a4e3e988154715603caf17fa5716d02a96e5925f10de04bbbdfffb11ac77e978"
+        },
+        "difference": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/left/difference.png",
+          "bytes": 47504,
+          "sha256": "5b5e7073b26bde940198762cfb392ab2c46eac3226bd601c103b5dbfd33df418"
+        },
+        "sheet": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/left/sheet.png",
+          "bytes": 254130,
+          "sha256": "5298679d577222a7d99f0ae33b8c5a590c3545c0dfb651506a1c28e2f49281cb"
+        }
+      },
+      "status": "PASS",
+      "review": "feature positions/orientation preserved; numeric pixel difference is diagnostic only",
+      "engine": "three",
+      "variant": "standard",
+      "face": "left"
+    },
+    {
+      "source_view": "views/right.png",
+      "browser_render": "qa/rotation-review-20260827/after/static-40-loads/three/standard/04-right.png",
+      "background": "dark",
+      "render_device_bbox_px": [
+        310,
+        323,
+        966,
+        397
+      ],
+      "comparison_crop_px": [
+        282,
+        295,
+        994,
+        425
+      ],
+      "reference_camera_transform": "none",
+      "diagnostic_mean_absolute_rgb_difference": 9.282872,
+      "files": {
+        "source": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/right/source.png",
+          "bytes": 68371,
+          "sha256": "f49aef319f2feaf6895a57b775430278654a05518ad51693471cb48b2d63048f"
+        },
+        "render": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/right/render.png",
+          "bytes": 54999,
+          "sha256": "ac74d6215f140479852b335b50dfdfae53faa7a8f77aff74816721db859d3ebc"
+        },
+        "overlay": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/right/overlay.png",
+          "bytes": 58324,
+          "sha256": "fe7a42b22a72988c0957e369c1a1fd93f9d36a07ff29628d2367bf62f1c16083"
+        },
+        "difference": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/right/difference.png",
+          "bytes": 35922,
+          "sha256": "173db04724b2eb96cb77301f6449f45003b68bcbb72c690512f824e154ccfade"
+        },
+        "sheet": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/right/sheet.png",
+          "bytes": 230851,
+          "sha256": "d1fac1ce27bd0ce25a468553be6a6c73d5db0ec8cf1f11583df587d7e4dfe616"
+        }
+      },
+      "status": "PASS",
+      "review": "feature positions/orientation preserved; numeric pixel difference is diagnostic only",
+      "engine": "three",
+      "variant": "standard",
+      "face": "right"
+    },
+    {
+      "source_view": "views/top.png",
+      "browser_render": "qa/rotation-review-20260827/after/static-40-loads/three/standard/05-top.png",
+      "background": "light",
+      "render_device_bbox_px": [
+        455,
+        68,
+        825,
+        654
+      ],
+      "comparison_crop_px": [
+        427,
+        40,
+        853,
+        682
+      ],
+      "reference_camera_transform": "rotate_source_180_to_match_top_orbit_camera",
+      "diagnostic_mean_absolute_rgb_difference": 12.613331,
+      "files": {
+        "source": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/top/source.png",
+          "bytes": 280323,
+          "sha256": "082f6be4931118db6d5e4dd8ad2bf1dd4cce68d7b05d38ab7e510337e6d0615e"
+        },
+        "render": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/top/render.png",
+          "bytes": 246630,
+          "sha256": "0ad80da57e1925bac0a9c21e059b1e3d6bc00fe4d3751683ee983c0b5456fcc0"
+        },
+        "overlay": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/top/overlay.png",
+          "bytes": 248013,
+          "sha256": "aa0cdeeb69bd8c71ac7fef768cebe08c1b7853811a1d0daf5790c13fa02d25e5"
+        },
+        "difference": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/top/difference.png",
+          "bytes": 168275,
+          "sha256": "91ce3610634a3c42fcba5cc2ef5606e9682705dd8370340e4d05c694f9e5d594"
+        },
+        "sheet": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/top/sheet.png",
+          "bytes": 971877,
+          "sha256": "b5ea671b059ddb9c950a33806796b9d4b04f36928cac34e743a52091c1eed117"
+        }
+      },
+      "status": "PASS",
+      "review": "feature positions/orientation preserved; numeric pixel difference is diagnostic only",
+      "engine": "three",
+      "variant": "standard",
+      "face": "top"
+    },
+    {
+      "source_view": "views/bottom.png",
+      "browser_render": "qa/rotation-review-20260827/after/static-40-loads/three/standard/06-bottom.png",
+      "background": "dark",
+      "render_device_bbox_px": [
+        458,
+        66,
+        825,
+        652
+      ],
+      "comparison_crop_px": [
+        430,
+        38,
+        853,
+        680
+      ],
+      "reference_camera_transform": "none",
+      "diagnostic_mean_absolute_rgb_difference": 8.088094,
+      "files": {
+        "source": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/bottom/source.png",
+          "bytes": 161419,
+          "sha256": "5b53fce34be036826d880cdf91f2d9fefd842b1236e76d4e79b39e956fcab07a"
+        },
+        "render": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/bottom/render.png",
+          "bytes": 139189,
+          "sha256": "e6fc90feb5f1bafd17c6f8967841d58098a5c0bc0c94a1b7dff46deed8285ae6"
+        },
+        "overlay": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/bottom/overlay.png",
+          "bytes": 140786,
+          "sha256": "683f233c55c793149f4f4cfe49edcca8d10a848f7ee58763bda58d9a948f7cfe"
+        },
+        "difference": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/bottom/difference.png",
+          "bytes": 35530,
+          "sha256": "74e8e3ed2a6b8003b4bfa9c9e327ed3ded6910d17af74687b09732ebc944dcd0"
+        },
+        "sheet": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/standard/bottom/sheet.png",
+          "bytes": 498245,
+          "sha256": "5105893890f7d1d16a6c05971251aba76f9a5eb6b77c3cb5e199db25be02e442"
+        }
+      },
+      "status": "PASS",
+      "review": "feature positions/orientation preserved; numeric pixel difference is diagnostic only",
+      "engine": "three",
+      "variant": "standard",
+      "face": "bottom"
+    },
+    {
+      "source_view": "views/front.png",
+      "browser_render": "qa/rotation-review-20260827/after/static-40-loads/three/web/01-front.png",
+      "background": "light",
+      "render_device_bbox_px": [
+        411,
+        319,
+        869,
+        401
+      ],
+      "comparison_crop_px": [
+        383,
+        291,
+        897,
+        429
+      ],
+      "reference_camera_transform": "none",
+      "diagnostic_mean_absolute_rgb_difference": 6.645783,
+      "files": {
+        "source": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/front/source.png",
+          "bytes": 66083,
+          "sha256": "8e01d2bf85b118e54c01e82cb0c6816a7cdd45dc8bf39664cf991e901b548163"
+        },
+        "render": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/front/render.png",
+          "bytes": 56501,
+          "sha256": "c7d3550533ab78fc120d97de8e580c940af760bf43c929323d930edd0ef7803d"
+        },
+        "overlay": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/front/overlay.png",
+          "bytes": 60969,
+          "sha256": "09d940856b407095bd731fca2d3b4be19793fbeb51e5c707ee73987e7d391a4a"
+        },
+        "difference": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/front/difference.png",
+          "bytes": 62809,
+          "sha256": "72e54d1cdc3af58fc079215a45511b2cec930d946038702dace3ece0920bb025"
+        },
+        "sheet": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/front/sheet.png",
+          "bytes": 257233,
+          "sha256": "ab53f6edf793ee5b802680eb36d09015eb50f5fcd102d13ee94a8154c43a7d26"
+        }
+      },
+      "status": "PASS",
+      "review": "feature positions/orientation preserved; numeric pixel difference is diagnostic only",
+      "engine": "three",
+      "variant": "web",
+      "face": "front"
+    },
+    {
+      "source_view": "views/rear.png",
+      "browser_render": "qa/rotation-review-20260827/after/static-40-loads/three/web/02-rear.png",
+      "background": "dark",
+      "render_device_bbox_px": [
+        427,
+        319,
+        853,
+        401
+      ],
+      "comparison_crop_px": [
+        399,
+        291,
+        881,
+        429
+      ],
+      "reference_camera_transform": "none",
+      "diagnostic_mean_absolute_rgb_difference": 23.128946,
+      "files": {
+        "source": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/rear/source.png",
+          "bytes": 83287,
+          "sha256": "a194147f3277e0fdf43c78af1dd769440a7804007393847a186e89322375c007"
+        },
+        "render": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/rear/render.png",
+          "bytes": 64334,
+          "sha256": "c2756c0b45f7a28754c778b7cbe12c67db3b56fef566a7b634a53cffa8ed56d7"
+        },
+        "overlay": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/rear/overlay.png",
+          "bytes": 78882,
+          "sha256": "a97c24ec688106547f55bb2319e84ea60694ba4ad7ad4f21dac633aa7fd9d140"
+        },
+        "difference": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/rear/difference.png",
+          "bytes": 64031,
+          "sha256": "8a1e8ca68dd9b80dccbef6c64188c7fe713a65bf1a89401b098bc0e6c83f7760"
+        },
+        "sheet": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/rear/sheet.png",
+          "bytes": 304411,
+          "sha256": "7420ac848128aa462cb6e97811fa22e630c2c3caf11823e21dfdd45a5e67f6d2"
+        }
+      },
+      "status": "PASS",
+      "review": "feature positions/orientation preserved; numeric pixel difference is diagnostic only",
+      "engine": "three",
+      "variant": "web",
+      "face": "rear"
+    },
+    {
+      "source_view": "views/left.png",
+      "browser_render": "qa/rotation-review-20260827/after/static-40-loads/three/web/03-left.png",
+      "background": "light",
+      "render_device_bbox_px": [
+        313,
+        322,
+        970,
+        398
+      ],
+      "comparison_crop_px": [
+        285,
+        294,
+        998,
+        426
+      ],
+      "reference_camera_transform": "none",
+      "diagnostic_mean_absolute_rgb_difference": 8.407153,
+      "files": {
+        "source": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/left/source.png",
+          "bytes": 72182,
+          "sha256": "5fefa018ed4eba418087cd1d8a884009693681e3863ded79d9e0e4e8f5f5a11a"
+        },
+        "render": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/left/render.png",
+          "bytes": 56547,
+          "sha256": "53fbdf193a4eca715bf20260d4b7b2594cf2626fbf13c2ff60481e36ec20c6aa"
+        },
+        "overlay": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/left/overlay.png",
+          "bytes": 62278,
+          "sha256": "70c6ae6e818509fcbe2d6d1ba1357a98a910718ba8d7b7a0f88345fce8e4b958"
+        },
+        "difference": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/left/difference.png",
+          "bytes": 46083,
+          "sha256": "77edc891c17d8cc036d657d3ae3193abad2c06bb61b76fe39dd15f313c199b8b"
+        },
+        "sheet": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/left/sheet.png",
+          "bytes": 249722,
+          "sha256": "dab66899fe531944034fb41a4ce5bc078753ffa5e4ae1f186ed452c863cbc8e1"
+        }
+      },
+      "status": "PASS",
+      "review": "feature positions/orientation preserved; numeric pixel difference is diagnostic only",
+      "engine": "three",
+      "variant": "web",
+      "face": "left"
+    },
+    {
+      "source_view": "views/right.png",
+      "browser_render": "qa/rotation-review-20260827/after/static-40-loads/three/web/04-right.png",
+      "background": "dark",
+      "render_device_bbox_px": [
+        310,
+        323,
+        966,
+        397
+      ],
+      "comparison_crop_px": [
+        282,
+        295,
+        994,
+        425
+      ],
+      "reference_camera_transform": "none",
+      "diagnostic_mean_absolute_rgb_difference": 9.304498,
+      "files": {
+        "source": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/right/source.png",
+          "bytes": 68371,
+          "sha256": "f49aef319f2feaf6895a57b775430278654a05518ad51693471cb48b2d63048f"
+        },
+        "render": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/right/render.png",
+          "bytes": 53648,
+          "sha256": "fcb5a5853b8654c06fa60ca8d2d8c1bbc02e8c1cb64853963de935fe032c9cff"
+        },
+        "overlay": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/right/overlay.png",
+          "bytes": 57953,
+          "sha256": "3bd77aae0411e390e563084c59091a675c9685eceeaecb738311c5df2824301e"
+        },
+        "difference": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/right/difference.png",
+          "bytes": 36135,
+          "sha256": "be47fd08167ed1d30321cf5af6236deffc61c79a0a286fd8d6adcbddfd4a3b37"
+        },
+        "sheet": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/right/sheet.png",
+          "bytes": 230012,
+          "sha256": "d56930f05dfa08d7242529f8101e4394432b4f923c6665ff4972b259e9af2198"
+        }
+      },
+      "status": "PASS",
+      "review": "feature positions/orientation preserved; numeric pixel difference is diagnostic only",
+      "engine": "three",
+      "variant": "web",
+      "face": "right"
+    },
+    {
+      "source_view": "views/top.png",
+      "browser_render": "qa/rotation-review-20260827/after/static-40-loads/three/web/05-top.png",
+      "background": "light",
+      "render_device_bbox_px": [
+        455,
+        68,
+        825,
+        654
+      ],
+      "comparison_crop_px": [
+        427,
+        40,
+        853,
+        682
+      ],
+      "reference_camera_transform": "rotate_source_180_to_match_top_orbit_camera",
+      "diagnostic_mean_absolute_rgb_difference": 12.574263,
+      "files": {
+        "source": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/top/source.png",
+          "bytes": 280323,
+          "sha256": "082f6be4931118db6d5e4dd8ad2bf1dd4cce68d7b05d38ab7e510337e6d0615e"
+        },
+        "render": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/top/render.png",
+          "bytes": 247162,
+          "sha256": "b2bf6855cf5aaa4ade639f7dbde3466cd15c006c0d76561029206a8200198b56"
+        },
+        "overlay": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/top/overlay.png",
+          "bytes": 248262,
+          "sha256": "254536a6f9abaf45ff8d4709c6196b4bb97fe18415e20c2767f8c0e25d187290"
+        },
+        "difference": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/top/difference.png",
+          "bytes": 167581,
+          "sha256": "ff9ebed2407223ec1b35e5ed74a952a69927050bd7f23b20737cf01e4324fd2a"
+        },
+        "sheet": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/top/sheet.png",
+          "bytes": 971445,
+          "sha256": "fc8c8aab01831d26055727ea67e65db3c23fda7e23e066471a5428070eb5f6f1"
+        }
+      },
+      "status": "PASS",
+      "review": "feature positions/orientation preserved; numeric pixel difference is diagnostic only",
+      "engine": "three",
+      "variant": "web",
+      "face": "top"
+    },
+    {
+      "source_view": "views/bottom.png",
+      "browser_render": "qa/rotation-review-20260827/after/static-40-loads/three/web/06-bottom.png",
+      "background": "dark",
+      "render_device_bbox_px": [
+        458,
+        66,
+        825,
+        652
+      ],
+      "comparison_crop_px": [
+        430,
+        38,
+        853,
+        680
+      ],
+      "reference_camera_transform": "none",
+      "diagnostic_mean_absolute_rgb_difference": 8.047194,
+      "files": {
+        "source": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/bottom/source.png",
+          "bytes": 161419,
+          "sha256": "5b53fce34be036826d880cdf91f2d9fefd842b1236e76d4e79b39e956fcab07a"
+        },
+        "render": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/bottom/render.png",
+          "bytes": 138969,
+          "sha256": "0b7092652726e52584710dc46b1f910c4496553b5ac637380d8c8709f3eab70d"
+        },
+        "overlay": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/bottom/overlay.png",
+          "bytes": 140793,
+          "sha256": "817b3196f78676452226554f99f287a3f934c062c0bc86359b93225b02a5bc5c"
+        },
+        "difference": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/bottom/difference.png",
+          "bytes": 34773,
+          "sha256": "2db5e4fbd39676e55bac0b544ac9ae887e3d5c4668cfc5da53f13f30a5cf2bd7"
+        },
+        "sheet": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/three/web/bottom/sheet.png",
+          "bytes": 497431,
+          "sha256": "5f46d8fe1f3de72d1271bcd91ee8dc21bd3c52f392ca45c3537f348bad06b20a"
+        }
+      },
+      "status": "PASS",
+      "review": "feature positions/orientation preserved; numeric pixel difference is diagnostic only",
+      "engine": "three",
+      "variant": "web",
+      "face": "bottom"
+    },
+    {
+      "source_view": "views/front.png",
+      "browser_render": "qa/rotation-review-20260827/after/static-40-loads/babylon/standard/01-front.png",
+      "background": "light",
+      "render_device_bbox_px": [
+        411,
+        319,
+        869,
+        401
+      ],
+      "comparison_crop_px": [
+        383,
+        291,
+        897,
+        429
+      ],
+      "reference_camera_transform": "none",
+      "diagnostic_mean_absolute_rgb_difference": 9.090007,
+      "files": {
+        "source": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/front/source.png",
+          "bytes": 66083,
+          "sha256": "8e01d2bf85b118e54c01e82cb0c6816a7cdd45dc8bf39664cf991e901b548163"
+        },
+        "render": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/front/render.png",
+          "bytes": 54574,
+          "sha256": "6e5ee051046423c730661bc3ab8cba0ce72b4b46b23aa0f55ee5209c00e137f8"
+        },
+        "overlay": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/front/overlay.png",
+          "bytes": 60574,
+          "sha256": "79464a2f95a4a9e87fc9af13544ee84bd8a3540b1e3f7fa6c3189fec90449192"
+        },
+        "difference": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/front/difference.png",
+          "bytes": 54984,
+          "sha256": "042a98a28dc735506c91cab6ae1e46f2a80a8ba030ff1ab8d6c4ec5e5c0a418f"
+        },
+        "sheet": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/front/sheet.png",
+          "bytes": 250559,
+          "sha256": "2c84d8c91d7c983114dd90dc871eb0b7867a64987e27ac689c75ef5f2b25e885"
+        }
+      },
+      "status": "PASS",
+      "review": "feature positions/orientation preserved; numeric pixel difference is diagnostic only",
+      "engine": "babylon",
+      "variant": "standard",
+      "face": "front"
+    },
+    {
+      "source_view": "views/rear.png",
+      "browser_render": "qa/rotation-review-20260827/after/static-40-loads/babylon/standard/02-rear.png",
+      "background": "dark",
+      "render_device_bbox_px": [
+        427,
+        319,
+        853,
+        401
+      ],
+      "comparison_crop_px": [
+        399,
+        291,
+        881,
+        429
+      ],
+      "reference_camera_transform": "none",
+      "diagnostic_mean_absolute_rgb_difference": 26.0196,
+      "files": {
+        "source": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/rear/source.png",
+          "bytes": 83287,
+          "sha256": "a194147f3277e0fdf43c78af1dd769440a7804007393847a186e89322375c007"
+        },
+        "render": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/rear/render.png",
+          "bytes": 64101,
+          "sha256": "91135b2a8fcbf2cfceea84ff745cbd1bc5667f5bb18dbb97a0f2101ddf6f0edb"
+        },
+        "overlay": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/rear/overlay.png",
+          "bytes": 79071,
+          "sha256": "6ca750a739b3d3d678c57315d3f90a78bd5dc18cec14042bc339e9aed7f20fb8"
+        },
+        "difference": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/rear/difference.png",
+          "bytes": 57522,
+          "sha256": "172b1f0648f3140be62a35aac17a8c3cac4e63dad77fbf1741dfb6b5183b31d5"
+        },
+        "sheet": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/rear/sheet.png",
+          "bytes": 300207,
+          "sha256": "abd078dc8dd73259ef3074437fd59d65dd90a3f5efc0c33a1954fd5377cfdf42"
+        }
+      },
+      "status": "PASS",
+      "review": "feature positions/orientation preserved; numeric pixel difference is diagnostic only",
+      "engine": "babylon",
+      "variant": "standard",
+      "face": "rear"
+    },
+    {
+      "source_view": "views/left.png",
+      "browser_render": "qa/rotation-review-20260827/after/static-40-loads/babylon/standard/03-left.png",
+      "background": "light",
+      "render_device_bbox_px": [
+        314,
+        322,
+        970,
+        398
+      ],
+      "comparison_crop_px": [
+        286,
+        294,
+        998,
+        426
+      ],
+      "reference_camera_transform": "none",
+      "diagnostic_mean_absolute_rgb_difference": 7.263715,
+      "files": {
+        "source": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/left/source.png",
+          "bytes": 72148,
+          "sha256": "2bf3d2aed6d1aadaf604ddd834fc9462f5438cb2d55241b11e378922e5a06a39"
+        },
+        "render": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/left/render.png",
+          "bytes": 58174,
+          "sha256": "e2043963d49770db9a4f64f081f4552966eae6a08b9570a5a2e53cf26190d3cc"
+        },
+        "overlay": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/left/overlay.png",
+          "bytes": 62575,
+          "sha256": "b6674c629f36762564f6a8d96fafd0285c124269962dc4819cc8598535dab2a1"
+        },
+        "difference": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/left/difference.png",
+          "bytes": 62052,
+          "sha256": "2af4647b7cfcb0bfc019b14c2bf084788cf87ff4a61e648137d248dce316fd79"
+        },
+        "sheet": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/left/sheet.png",
+          "bytes": 267091,
+          "sha256": "1c20de88ef49415b167f1a7d21cd8c089cd272c7396e9ad2678a8101907c556d"
+        }
+      },
+      "status": "PASS",
+      "review": "feature positions/orientation preserved; numeric pixel difference is diagnostic only",
+      "engine": "babylon",
+      "variant": "standard",
+      "face": "left"
+    },
+    {
+      "source_view": "views/right.png",
+      "browser_render": "qa/rotation-review-20260827/after/static-40-loads/babylon/standard/04-right.png",
+      "background": "dark",
+      "render_device_bbox_px": [
+        310,
+        322,
+        966,
+        397
+      ],
+      "comparison_crop_px": [
+        282,
+        294,
+        994,
+        425
+      ],
+      "reference_camera_transform": "none",
+      "diagnostic_mean_absolute_rgb_difference": 9.632594,
+      "files": {
+        "source": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/right/source.png",
+          "bytes": 68403,
+          "sha256": "35f62de63db66448b7b233c44dfe184164c5ec473572ab064f362c62e07bebc2"
+        },
+        "render": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/right/render.png",
+          "bytes": 54366,
+          "sha256": "b93fbf40d949be1133b24b42fb4d17d742f6542e71e8144eba7391133e490040"
+        },
+        "overlay": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/right/overlay.png",
+          "bytes": 59833,
+          "sha256": "45311c48fae647f2a93a9a0e0e3ed3ba916aa893022e1c838c761a844108accf"
+        },
+        "difference": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/right/difference.png",
+          "bytes": 48733,
+          "sha256": "30d4dc8bdba31c4055fd57d6eeb6d8f63676e05ea750bad59d60db20e2d11eff"
+        },
+        "sheet": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/right/sheet.png",
+          "bytes": 243606,
+          "sha256": "f768251f6073bccc4c226203c2dae3d5cfee129f6113d9600cde04140fa19e00"
+        }
+      },
+      "status": "PASS",
+      "review": "feature positions/orientation preserved; numeric pixel difference is diagnostic only",
+      "engine": "babylon",
+      "variant": "standard",
+      "face": "right"
+    },
+    {
+      "source_view": "views/top.png",
+      "browser_render": "qa/rotation-review-20260827/after/static-40-loads/babylon/standard/05-top.png",
+      "background": "light",
+      "render_device_bbox_px": [
+        455,
+        68,
+        825,
+        654
+      ],
+      "comparison_crop_px": [
+        427,
+        40,
+        853,
+        682
+      ],
+      "reference_camera_transform": "rotate_source_180_to_match_top_orbit_camera",
+      "diagnostic_mean_absolute_rgb_difference": 12.61262,
+      "files": {
+        "source": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/top/source.png",
+          "bytes": 280323,
+          "sha256": "082f6be4931118db6d5e4dd8ad2bf1dd4cce68d7b05d38ab7e510337e6d0615e"
+        },
+        "render": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/top/render.png",
+          "bytes": 243956,
+          "sha256": "7cf8f78621608b5c27978e7afa44531f55a84dc6c987464deeb3302242521df0"
+        },
+        "overlay": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/top/overlay.png",
+          "bytes": 246137,
+          "sha256": "8401100efaaa12f72bfe738fbcb7eb1fa466f9f33123aae05bebbb1000b90a97"
+        },
+        "difference": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/top/difference.png",
+          "bytes": 170633,
+          "sha256": "063d9c834215727cd25e6fac472ee0e84e20f54c797db6d7dcdb9ebab3fdcf35"
+        },
+        "sheet": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/top/sheet.png",
+          "bytes": 969697,
+          "sha256": "6b7ad72bbd1b2ee23c0211dd91db441a3ee402c0e83d1340eb12a3ee181a7ab5"
+        }
+      },
+      "status": "PASS",
+      "review": "feature positions/orientation preserved; numeric pixel difference is diagnostic only",
+      "engine": "babylon",
+      "variant": "standard",
+      "face": "top"
+    },
+    {
+      "source_view": "views/bottom.png",
+      "browser_render": "qa/rotation-review-20260827/after/static-40-loads/babylon/standard/06-bottom.png",
+      "background": "dark",
+      "render_device_bbox_px": [
+        455,
+        66,
+        825,
+        652
+      ],
+      "comparison_crop_px": [
+        427,
+        38,
+        853,
+        680
+      ],
+      "reference_camera_transform": "none",
+      "diagnostic_mean_absolute_rgb_difference": 8.398194,
+      "files": {
+        "source": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/bottom/source.png",
+          "bytes": 161465,
+          "sha256": "0c7f4f47292d92c426f97a1e1a8754f258cd2e8716c8a51703a7b54f9a2de2f2"
+        },
+        "render": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/bottom/render.png",
+          "bytes": 135504,
+          "sha256": "2f253a0d912ed6b347269803c5dfb53a743173436385f1b1f0a2fdc83feed4f8"
+        },
+        "overlay": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/bottom/overlay.png",
+          "bytes": 137345,
+          "sha256": "6ed7fa975180b3bd4e3527750b266e5d8c80a846e6a3dd2d5806b971ff9a0a5e"
+        },
+        "difference": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/bottom/difference.png",
+          "bytes": 32256,
+          "sha256": "e8ca53393a72265136f269b295a15db24e578b7b072672bb64b950297cca9b5d"
+        },
+        "sheet": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/standard/bottom/sheet.png",
+          "bytes": 488143,
+          "sha256": "a9f297e027c4b95078116005dee1d34c4fedf681337800f266bf62c9668dd75f"
+        }
+      },
+      "status": "PASS",
+      "review": "feature positions/orientation preserved; numeric pixel difference is diagnostic only",
+      "engine": "babylon",
+      "variant": "standard",
+      "face": "bottom"
+    },
+    {
+      "source_view": "views/front.png",
+      "browser_render": "qa/rotation-review-20260827/after/static-40-loads/babylon/web/01-front.png",
+      "background": "light",
+      "render_device_bbox_px": [
+        411,
+        319,
+        869,
+        401
+      ],
+      "comparison_crop_px": [
+        383,
+        291,
+        897,
+        429
+      ],
+      "reference_camera_transform": "none",
+      "diagnostic_mean_absolute_rgb_difference": 8.873818,
+      "files": {
+        "source": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/front/source.png",
+          "bytes": 66083,
+          "sha256": "8e01d2bf85b118e54c01e82cb0c6816a7cdd45dc8bf39664cf991e901b548163"
+        },
+        "render": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/front/render.png",
+          "bytes": 55052,
+          "sha256": "964ed5dcd4cc5d1bd906bc29932c3efcce564a1c51305e9ca9a01137b90cc336"
+        },
+        "overlay": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/front/overlay.png",
+          "bytes": 60692,
+          "sha256": "f65811b8c07049a9b12ae8dc06e53371f60626fc47e53ea0fe528457e923c86a"
+        },
+        "difference": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/front/difference.png",
+          "bytes": 54109,
+          "sha256": "6b649e2f0d9a0ffcce85d4c4cbf03c20d0cd34dc716f0b5830d579eb43b300c7"
+        },
+        "sheet": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/front/sheet.png",
+          "bytes": 250050,
+          "sha256": "fdd135eae6b7c07b6ef9b7fb19273b54286b94a2141d9b7ae726bfc7c1f7a5b0"
+        }
+      },
+      "status": "PASS",
+      "review": "feature positions/orientation preserved; numeric pixel difference is diagnostic only",
+      "engine": "babylon",
+      "variant": "web",
+      "face": "front"
+    },
+    {
+      "source_view": "views/rear.png",
+      "browser_render": "qa/rotation-review-20260827/after/static-40-loads/babylon/web/02-rear.png",
+      "background": "dark",
+      "render_device_bbox_px": [
+        427,
+        319,
+        853,
+        401
+      ],
+      "comparison_crop_px": [
+        399,
+        291,
+        881,
+        429
+      ],
+      "reference_camera_transform": "none",
+      "diagnostic_mean_absolute_rgb_difference": 26.005898,
+      "files": {
+        "source": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/rear/source.png",
+          "bytes": 83287,
+          "sha256": "a194147f3277e0fdf43c78af1dd769440a7804007393847a186e89322375c007"
+        },
+        "render": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/rear/render.png",
+          "bytes": 64584,
+          "sha256": "15821a65e71bd4fe7cb7c81d659a451e15cb7783a486e27b9791bb0e761f00e9"
+        },
+        "overlay": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/rear/overlay.png",
+          "bytes": 79044,
+          "sha256": "8ada00f7e7184c2977d837448d30863705d156af6af1f71314ab3916827ce7c3"
+        },
+        "difference": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/rear/difference.png",
+          "bytes": 58906,
+          "sha256": "b6e9f6bc777dbab01ae0bc7befca706e100fe72d9376c0b62726085687bc8b71"
+        },
+        "sheet": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/rear/sheet.png",
+          "bytes": 301156,
+          "sha256": "f3854638ff2ebf9a0b881d022214732d9f2b05ffdbe9dd7fe613255e67ff27f2"
+        }
+      },
+      "status": "PASS",
+      "review": "feature positions/orientation preserved; numeric pixel difference is diagnostic only",
+      "engine": "babylon",
+      "variant": "web",
+      "face": "rear"
+    },
+    {
+      "source_view": "views/left.png",
+      "browser_render": "qa/rotation-review-20260827/after/static-40-loads/babylon/web/03-left.png",
+      "background": "light",
+      "render_device_bbox_px": [
+        314,
+        322,
+        970,
+        398
+      ],
+      "comparison_crop_px": [
+        286,
+        294,
+        998,
+        426
+      ],
+      "reference_camera_transform": "none",
+      "diagnostic_mean_absolute_rgb_difference": 7.243793,
+      "files": {
+        "source": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/left/source.png",
+          "bytes": 72148,
+          "sha256": "2bf3d2aed6d1aadaf604ddd834fc9462f5438cb2d55241b11e378922e5a06a39"
+        },
+        "render": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/left/render.png",
+          "bytes": 55888,
+          "sha256": "7b0749b3aca2bffb1292af85a4c89dcd3c5e36b6be0867a1e44d903de5ef99ec"
+        },
+        "overlay": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/left/overlay.png",
+          "bytes": 61905,
+          "sha256": "832c86d4eb5489649e89d16e6153c479bb48f0bd7b147f46091d760a3ee3d225"
+        },
+        "difference": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/left/difference.png",
+          "bytes": 61127,
+          "sha256": "52b6abd184308163bd10267631debd9a876c17c4dfe6c582ac86e40d741f61e8"
+        },
+        "sheet": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/left/sheet.png",
+          "bytes": 262532,
+          "sha256": "09775c42e477db34ce194c6d711133de1c256129eb559413027ab0d5212a80cc"
+        }
+      },
+      "status": "PASS",
+      "review": "feature positions/orientation preserved; numeric pixel difference is diagnostic only",
+      "engine": "babylon",
+      "variant": "web",
+      "face": "left"
+    },
+    {
+      "source_view": "views/right.png",
+      "browser_render": "qa/rotation-review-20260827/after/static-40-loads/babylon/web/04-right.png",
+      "background": "dark",
+      "render_device_bbox_px": [
+        310,
+        322,
+        966,
+        397
+      ],
+      "comparison_crop_px": [
+        282,
+        294,
+        994,
+        425
+      ],
+      "reference_camera_transform": "none",
+      "diagnostic_mean_absolute_rgb_difference": 9.563917,
+      "files": {
+        "source": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/right/source.png",
+          "bytes": 68403,
+          "sha256": "35f62de63db66448b7b233c44dfe184164c5ec473572ab064f362c62e07bebc2"
+        },
+        "render": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/right/render.png",
+          "bytes": 52978,
+          "sha256": "c1c12544fc224f683d8c039a2e6aba07247cf20439fdeaa6b1eb9058f3d825b8"
+        },
+        "overlay": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/right/overlay.png",
+          "bytes": 59341,
+          "sha256": "5b06fb79eeeed0217c1513fe27a5deba07accecc4e4ae13f8bbc7d977673d475"
+        },
+        "difference": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/right/difference.png",
+          "bytes": 48331,
+          "sha256": "a3187427219c983319845ae49dcf8d01f2391ebb7c276b57eaf1764704be980a"
+        },
+        "sheet": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/right/sheet.png",
+          "bytes": 241770,
+          "sha256": "79e12f148a0492b10a42bdee98119fceda9130f35474f85416d72312e3be1f14"
+        }
+      },
+      "status": "PASS",
+      "review": "feature positions/orientation preserved; numeric pixel difference is diagnostic only",
+      "engine": "babylon",
+      "variant": "web",
+      "face": "right"
+    },
+    {
+      "source_view": "views/top.png",
+      "browser_render": "qa/rotation-review-20260827/after/static-40-loads/babylon/web/05-top.png",
+      "background": "light",
+      "render_device_bbox_px": [
+        455,
+        68,
+        825,
+        654
+      ],
+      "comparison_crop_px": [
+        427,
+        40,
+        853,
+        682
+      ],
+      "reference_camera_transform": "rotate_source_180_to_match_top_orbit_camera",
+      "diagnostic_mean_absolute_rgb_difference": 12.586978,
+      "files": {
+        "source": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/top/source.png",
+          "bytes": 280323,
+          "sha256": "082f6be4931118db6d5e4dd8ad2bf1dd4cce68d7b05d38ab7e510337e6d0615e"
+        },
+        "render": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/top/render.png",
+          "bytes": 243892,
+          "sha256": "8664159ef5ad27589173e46fd232e67f9e64956f4eaf59f95e5f775a4663d3d5"
+        },
+        "overlay": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/top/overlay.png",
+          "bytes": 246397,
+          "sha256": "3e399664f4d063663a63bc54b6d87ff9fc49a3511163212e1945863a028cb5e9"
+        },
+        "difference": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/top/difference.png",
+          "bytes": 170642,
+          "sha256": "0e45db39370b7dbf7eff9a0b6f8cf1becc01d916213749d2523545a8f68a01a6"
+        },
+        "sheet": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/top/sheet.png",
+          "bytes": 969711,
+          "sha256": "c05f67eb9d2273709b028a4a8385a1cf34f45323fbee56ce5147b9e3137c6391"
+        }
+      },
+      "status": "PASS",
+      "review": "feature positions/orientation preserved; numeric pixel difference is diagnostic only",
+      "engine": "babylon",
+      "variant": "web",
+      "face": "top"
+    },
+    {
+      "source_view": "views/bottom.png",
+      "browser_render": "qa/rotation-review-20260827/after/static-40-loads/babylon/web/06-bottom.png",
+      "background": "dark",
+      "render_device_bbox_px": [
+        455,
+        66,
+        825,
+        652
+      ],
+      "comparison_crop_px": [
+        427,
+        38,
+        853,
+        680
+      ],
+      "reference_camera_transform": "none",
+      "diagnostic_mean_absolute_rgb_difference": 8.451081,
+      "files": {
+        "source": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/bottom/source.png",
+          "bytes": 161465,
+          "sha256": "0c7f4f47292d92c426f97a1e1a8754f258cd2e8716c8a51703a7b54f9a2de2f2"
+        },
+        "render": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/bottom/render.png",
+          "bytes": 132651,
+          "sha256": "482b2a4645fa7f31d09496cbaef15f4ad0b3f0d81584b4da5a89c9614c6fbc13"
+        },
+        "overlay": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/bottom/overlay.png",
+          "bytes": 137681,
+          "sha256": "fe22b48336fa0257abbd18070549ca5fd813ef6280d4dbfcdbb773d52b5c901f"
+        },
+        "difference": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/bottom/difference.png",
+          "bytes": 27671,
+          "sha256": "c40d4c0fd23a8b9c5004b54763732d7af118271f6c2cc9bd5c15b49467deecaa"
+        },
+        "sheet": {
+          "path": "qa/rotation-review-20260827/after/matched-camera/babylon/web/bottom/sheet.png",
+          "bytes": 482196,
+          "sha256": "6f72726fa834ad972327fe86db8f26ef8ac6f6509f72428510c61b32c02c9148"
+        }
+      },
+      "status": "PASS",
+      "review": "feature positions/orientation preserved; numeric pixel difference is diagnostic only",
+      "engine": "babylon",
+      "variant": "web",
+      "face": "bottom"
+    }
+  ]
+}

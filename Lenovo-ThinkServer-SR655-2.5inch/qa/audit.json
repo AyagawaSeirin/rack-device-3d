@@ -12,6 +12,7 @@
   },
   "views": {
     "status": "PASS",
+    "audit_file": "qa/rotation-review-20260827/after/views-audit.json",
     "error_count": 0,
     "automated_warning_count": 6,
     "warning_resolution": "Warnings are limited to anti-aliased exterior silhouette pixels. Every face has 0 percent core alpha below 250 and 0 percent transparent core.",
@@ -26,30 +27,32 @@
   },
   "standard_glb": {
     "path": "model/Lenovo-ThinkServer-SR655-2.5inch.glb",
-    "bytes": 11964408,
-    "sha256": "51e5d5a72fb4f4471d76cb24f16627d10e7ea12993ebeec220aa2da7f7f7bc25",
+    "bytes": 12052840,
+    "sha256": "b34a0af03dcd28de63131f9e18494ac17cd4f960c18e0726c51d81da0ab2c677",
     "status": "PASS",
+    "audit_file": "qa/rotation-review-20260827/after/glb-standard-audit.json",
     "error_count": 0,
     "warning_count": 0,
-    "nodes": 261,
-    "meshes": 261,
+    "nodes": 256,
+    "meshes": 256,
     "materials": 17,
     "embedded_textures": 6,
-    "bounds_mm": [481.999993, 86.499996, 764.859974],
+    "bounds_mm": [481.999993, 86.499996, 764.699996],
     "dimension_ratio_error_percent": 0.0139
   },
   "web_glb": {
     "path": "model/Lenovo-ThinkServer-SR655-2.5inch-web.glb",
-    "bytes": 8382752,
-    "sha256": "3a721b51d754151d01b5981391318b5d74b361ef8e9f980228167dc8846f1f09",
+    "bytes": 8607280,
+    "sha256": "b2fd3bfbd4457318066a52bad42563d61f30fb7bf08d79a5a3a80512b4952011",
     "status": "PASS",
+    "audit_file": "qa/rotation-review-20260827/after/glb-web-audit.json",
     "error_count": 0,
     "warning_count": 0,
-    "nodes": 261,
-    "meshes": 261,
+    "nodes": 256,
+    "meshes": 256,
     "materials": 17,
     "embedded_textures": 6,
-    "bounds_mm": [481.999993, 86.499996, 764.859974],
+    "bounds_mm": [481.999993, 86.499996, 764.699996],
     "dimension_ratio_error_percent": 0.0139
   },
   "materials": {
@@ -61,8 +64,8 @@
     "photo_materials_unlit": true
   },
   "viewer_validation": {
-    "status": "PASS_BY_FEATURE_REVIEW",
-    "actual_glb_render_count": 24,
+    "status": "PASS",
+    "actual_glb_render_count": 40,
     "engines": [
       "Three.js 0.180 GLTFLoader",
       "Babylon.js public glTF loader"
@@ -71,6 +74,26 @@
     "standard_web_max_mean_rgb_difference_three_0_255": 0.520367,
     "standard_web_max_mean_rgb_difference_babylon_0_255": 0.494065,
     "engine_parity_note": "Raw engine-to-engine pixel differences reflect different neutral PBR lighting and antialiasing; orientation, opacity, silhouette and all feature counts agree."
+  },
+  "rotation_review": {
+    "status": "PASS",
+    "report": "qa/rotation-review-20260827/final-report.md",
+    "stress_report": "qa/rotation-review-20260827/after/rotation-stress-report.json",
+    "static_real_browser_loads": 40,
+    "final_hash_http_loads": 44,
+    "rotation_combinations": 4,
+    "yaw_frames_per_combination": 72,
+    "yaw_step_degrees": 5,
+    "structural_extra": {
+      "exact_duplicate_triangles": 0,
+      "near_coplanar_pairs_le_0_25mm": 0,
+      "material_alpha_errors": 0,
+      "negative_transforms": 0,
+      "closed_core": "PASS"
+    },
+    "matched_camera_comparisons": 24,
+    "feature_inventory_rows_verified": 32,
+    "residual_visual_defects": []
   },
   "source_comparison": {
     "status": "PASS_BY_FEATURE_REVIEW",

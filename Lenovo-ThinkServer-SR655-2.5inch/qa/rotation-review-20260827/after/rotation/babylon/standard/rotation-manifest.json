@@ -1,0 +1,771 @@
+{
+  "status": "PASS",
+  "captured_utc": "2026-08-27T10:51:27.328893+00:00",
+  "stage": "after",
+  "engine": "babylon",
+  "variant": "standard",
+  "model_path": "model/Lenovo-ThinkServer-SR655-2.5inch.glb",
+  "model_bytes": 12052840,
+  "model_sha256": "b34a0af03dcd28de63131f9e18494ac17cd4f960c18e0726c51d81da0ab2c677",
+  "viewer_provenance": {
+    "viewers/three.html": {
+      "bytes": 6236,
+      "sha256": "95dd0679eae772bec79ecbad1f4a77d21539fba16b1ed3706e57d6c7d8ba2ce9"
+    },
+    "viewers/babylon.html": {
+      "bytes": 6065,
+      "sha256": "00b1c861257958c72cd20df11f1be5e6e8fdd8e089392a70ceb604ccb8dfbddd"
+    },
+    "viewers/vendor/three.module.js": {
+      "bytes": 1304820,
+      "sha256": "0a3368c165eea773490aec7b77c22de70e3eac288503409256fdbf4d12578416"
+    },
+    "viewers/vendor/GLTFLoader.js": {
+      "bytes": 110029,
+      "sha256": "6f1719dcc6a179d30273dfb0de07a8c898a7981f7b08e600b446387f5967371f"
+    },
+    "viewers/vendor/babylon.js": {
+      "bytes": 8258950,
+      "sha256": "873f60ec6665d0de1a030918a194eb70e12937e5f93ae23107e1cffb1bdf29d8"
+    },
+    "viewers/vendor/babylonjs.loaders.min.js": {
+      "bytes": 577937,
+      "sha256": "9f7b1a7a52f1e9649614992c7e41c5cde287fc3f07ca6d6f6119a21daf2132d0"
+    },
+    "viewers/utils/BufferGeometryUtils.js": {
+      "bytes": 31768,
+      "sha256": "c25b7930e570e9ec56173cd3b866ec8d2e10016630db3937efb439daf1cedbf6"
+    }
+  },
+  "initial_browser_state": {
+    "state": {
+      "engine": "babylon",
+      "engine_revision": "9.22.0",
+      "webgl_version": 2,
+      "variant": "standard",
+      "key": "Lenovo-ThinkServer-SR655-2.5inch",
+      "expected_sha256": "b34a0af03dcd28de63131f9e18494ac17cd4f960c18e0726c51d81da0ab2c677",
+      "model_url": "/model/Lenovo-ThinkServer-SR655-2.5inch.glb?load=after-rotation-babylon-standard&sha256=b34a0af03dcd28de63131f9e18494ac17cd4f960c18e0726c51d81da0ab2c677",
+      "load_id": "after-rotation-babylon-standard",
+      "yaw": 0,
+      "pitch": 12,
+      "radius": 1.7970449894666674,
+      "bounds": [
+        0.4819999933242798,
+        0.08649999648332596,
+        0.7646999955177307
+      ],
+      "background": "light"
+    },
+    "error": null,
+    "title": "READY Babylon standard after-rotation-babylon-standard"
+  },
+  "continuous_rotation": {
+    "animation": {
+      "duration_ms": 7200,
+      "animation_frames": 31,
+      "first": {
+        "elapsed_ms": 0,
+        "yaw_deg": 0,
+        "pitch_deg": 12
+      },
+      "last": {
+        "elapsed_ms": 7200,
+        "yaw_deg": 360,
+        "pitch_deg": 12
+      },
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Lenovo-ThinkServer-SR655-2.5inch",
+        "expected_sha256": "b34a0af03dcd28de63131f9e18494ac17cd4f960c18e0726c51d81da0ab2c677",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-2.5inch.glb?load=after-rotation-babylon-standard&sha256=b34a0af03dcd28de63131f9e18494ac17cd4f960c18e0726c51d81da0ab2c677",
+        "load_id": "after-rotation-babylon-standard",
+        "yaw": 0,
+        "pitch": 12,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "light"
+      }
+    },
+    "video": {
+      "path": "after/rotation/babylon/standard/continuous-360.webm",
+      "bytes": 874324,
+      "sha256": "7109d44cf452e3a403d84f2001c2da05beb69f3a5496e9d487ee1c82d812a156",
+      "duration_requested_ms": 7200
+    }
+  },
+  "yaw_step_degrees": 5,
+  "yaw_frame_count": 72,
+  "yaw_frames": [
+    {
+      "index": 0,
+      "yaw_deg": 0,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-000-yaw-000.jpg",
+      "bytes": 38126,
+      "sha256": "d9c528a0f2691c26e122089afbc74a3165c4c11a6fbcb53812c3ab7ba76da700"
+    },
+    {
+      "index": 1,
+      "yaw_deg": 5,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-001-yaw-005.jpg",
+      "bytes": 38226,
+      "sha256": "b53f15100a7bcb351fcf1d5336b2d918217cfef99a48beac15710756808ba7a2"
+    },
+    {
+      "index": 2,
+      "yaw_deg": 10,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-002-yaw-010.jpg",
+      "bytes": 38855,
+      "sha256": "9073f9a21370a85419ee995bac8c364ce29dac2dce9e682ba8d788faecf966bb"
+    },
+    {
+      "index": 3,
+      "yaw_deg": 15,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-003-yaw-015.jpg",
+      "bytes": 39903,
+      "sha256": "e9e341852111931165cb167050b78f3ae16c7127454088602ff40550651d259e"
+    },
+    {
+      "index": 4,
+      "yaw_deg": 20,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-004-yaw-020.jpg",
+      "bytes": 40714,
+      "sha256": "35e9584afe9bbc025fc3295bb76c78352e2ba0a2501a00ad614541b634fab595"
+    },
+    {
+      "index": 5,
+      "yaw_deg": 25,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-005-yaw-025.jpg",
+      "bytes": 41451,
+      "sha256": "c758af676e6016ea1834cdb2db6261aa39b2c3de258e531f9e9e7ef89af2cfcb"
+    },
+    {
+      "index": 6,
+      "yaw_deg": 30,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-006-yaw-030.jpg",
+      "bytes": 41830,
+      "sha256": "eea54965643aac5bb71520232e0b5cf1a9b0e909095073ca80369227edfdd376"
+    },
+    {
+      "index": 7,
+      "yaw_deg": 35,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-007-yaw-035.jpg",
+      "bytes": 42140,
+      "sha256": "146e69d96ae7ea081cdeb7537981b05cc86937f80ccb23dbf4578ab0a8150cae"
+    },
+    {
+      "index": 8,
+      "yaw_deg": 40,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-008-yaw-040.jpg",
+      "bytes": 41985,
+      "sha256": "adc110dd54c8a190f613dcb12aba38f7685810c5b77c35a0c646f14f3068f3cc"
+    },
+    {
+      "index": 9,
+      "yaw_deg": 45,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-009-yaw-045.jpg",
+      "bytes": 41646,
+      "sha256": "da0496794357315a9dee9d81c254b8ce326a3cbaa38bf78165e47f4644b23e42"
+    },
+    {
+      "index": 10,
+      "yaw_deg": 50,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-010-yaw-050.jpg",
+      "bytes": 41259,
+      "sha256": "d2dc593b6588560fd7b86f32eeda610f99735f3a280183fc9590227f2b14cf7f"
+    },
+    {
+      "index": 11,
+      "yaw_deg": 55,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-011-yaw-055.jpg",
+      "bytes": 40505,
+      "sha256": "0a2260f951bb2ca0dbd0c80852528db9b980d04d02b45b7d5cbdd459875c5562"
+    },
+    {
+      "index": 12,
+      "yaw_deg": 60,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-012-yaw-060.jpg",
+      "bytes": 39881,
+      "sha256": "849e2c2937b3ebc213646cf0815609c3ac926282643d7af4bd005e1ccf36722c"
+    },
+    {
+      "index": 13,
+      "yaw_deg": 65,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-013-yaw-065.jpg",
+      "bytes": 38854,
+      "sha256": "73d23ed493b76f4b094dabbe611556e124ca3f832b0554d8dd09ccade4905cf6"
+    },
+    {
+      "index": 14,
+      "yaw_deg": 70,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-014-yaw-070.jpg",
+      "bytes": 37818,
+      "sha256": "95ead23461e1f9dce76e47f94e5a860a9eb84854243321649fd5ed4f8446c52d"
+    },
+    {
+      "index": 15,
+      "yaw_deg": 75,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-015-yaw-075.jpg",
+      "bytes": 36466,
+      "sha256": "2bb44581d62efb9af1a5ca178f87b35be896cd1aec5c21381ddab4c45c986bfd"
+    },
+    {
+      "index": 16,
+      "yaw_deg": 80,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-016-yaw-080.jpg",
+      "bytes": 35195,
+      "sha256": "e3ab5f000e416a51e10f3353861a1f239ee40d9963603fcb6a40d0f6ea524488"
+    },
+    {
+      "index": 17,
+      "yaw_deg": 85,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-017-yaw-085.jpg",
+      "bytes": 35010,
+      "sha256": "02642461f0c4cfeda6e8bc33b5fa6fe8db1c87d7d65b7140d7736d638ff7097c"
+    },
+    {
+      "index": 18,
+      "yaw_deg": 90,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-018-yaw-090.jpg",
+      "bytes": 34052,
+      "sha256": "fbce081618fba84bbc301797dd3361006a045e96302b14200ca92d174cf7aaa4"
+    },
+    {
+      "index": 19,
+      "yaw_deg": 95,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-019-yaw-095.jpg",
+      "bytes": 34920,
+      "sha256": "2a87e453caaf58cbb37884cb60878c33d76bc1aa4fb63a57a45860f015a6360b"
+    },
+    {
+      "index": 20,
+      "yaw_deg": 100,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-020-yaw-100.jpg",
+      "bytes": 35342,
+      "sha256": "2b1e0752493b62bfe28295c3a8454bc088bca743ccebbfa6eb2e9d7fe57408a8"
+    },
+    {
+      "index": 21,
+      "yaw_deg": 105,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-021-yaw-105.jpg",
+      "bytes": 36324,
+      "sha256": "8a0bbc1c87600d0ffd8c7cb04b1971deaf759b0ff21bcb482877942385776b1c"
+    },
+    {
+      "index": 22,
+      "yaw_deg": 110,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-022-yaw-110.jpg",
+      "bytes": 37409,
+      "sha256": "7bd01ef45159cb437f6069f7191dd4c95e6023e17237d5097a658f8d6b4ad112"
+    },
+    {
+      "index": 23,
+      "yaw_deg": 115,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-023-yaw-115.jpg",
+      "bytes": 38765,
+      "sha256": "a43d119631a9c97a32123c8c6950388fac3dfe6a52d46de81eca93c183c6bbca"
+    },
+    {
+      "index": 24,
+      "yaw_deg": 120,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-024-yaw-120.jpg",
+      "bytes": 40110,
+      "sha256": "21a7ded20eb744ebc83315eea4e0b10c5fd60fa53e6f4c38c0d21f84ed9a3f9e"
+    },
+    {
+      "index": 25,
+      "yaw_deg": 125,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-025-yaw-125.jpg",
+      "bytes": 41110,
+      "sha256": "b1ed29f79f5e4aa290e905f67855c307644a3796301231036669406e645d7542"
+    },
+    {
+      "index": 26,
+      "yaw_deg": 130,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-026-yaw-130.jpg",
+      "bytes": 42197,
+      "sha256": "cf218e4fdc2a47ae32c7d05340192ae2b8912f1ddeb5869e1750a97e1c67f0d3"
+    },
+    {
+      "index": 27,
+      "yaw_deg": 135,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-027-yaw-135.jpg",
+      "bytes": 43003,
+      "sha256": "094bfd85ff0a95a9d84d0f86205463fdfa9146ddf7cbc229c4dfde8601c2cf35"
+    },
+    {
+      "index": 28,
+      "yaw_deg": 140,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-028-yaw-140.jpg",
+      "bytes": 43691,
+      "sha256": "3061cf94bdd7de895c0595a21c7e8d23031bdb54f80ca3441272f015de8f2681"
+    },
+    {
+      "index": 29,
+      "yaw_deg": 145,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-029-yaw-145.jpg",
+      "bytes": 43890,
+      "sha256": "e461a034a00f348432ef2d4a138884a3396a85d538c53fcedeaca961af164329"
+    },
+    {
+      "index": 30,
+      "yaw_deg": 150,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-030-yaw-150.jpg",
+      "bytes": 44140,
+      "sha256": "335a8785864ee7bf69687be85a295f83484dcc13d5e04e4c382557ee519b8d90"
+    },
+    {
+      "index": 31,
+      "yaw_deg": 155,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-031-yaw-155.jpg",
+      "bytes": 44039,
+      "sha256": "23951b39bd18dfb4f2f35250bd8bbf3329285449a834f4d1a04fc7c2115244cc"
+    },
+    {
+      "index": 32,
+      "yaw_deg": 160,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-032-yaw-160.jpg",
+      "bytes": 43746,
+      "sha256": "c7029f8b6ee83f9502fbc0013fb5e62f1c7c6edfd92b20be0f8c071326a311a1"
+    },
+    {
+      "index": 33,
+      "yaw_deg": 165,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-033-yaw-165.jpg",
+      "bytes": 42871,
+      "sha256": "482c513eb251803bb953e319803d0ca430deeb1de96559125c04887ca55717d4"
+    },
+    {
+      "index": 34,
+      "yaw_deg": 170,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-034-yaw-170.jpg",
+      "bytes": 42128,
+      "sha256": "1b4b24176517431edf454701ddc296959a2d62876d488c227cda47f71539f79f"
+    },
+    {
+      "index": 35,
+      "yaw_deg": 175,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-035-yaw-175.jpg",
+      "bytes": 41363,
+      "sha256": "8592c0f4c90d5258b0aca45c9af597dac8a78ec6736bd388eb05377579afc2e0"
+    },
+    {
+      "index": 36,
+      "yaw_deg": 180,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-036-yaw-180.jpg",
+      "bytes": 40786,
+      "sha256": "ea7fa571b67cb73589f1771359234cfbb679e18b2113f593830aefb200af2f0a"
+    },
+    {
+      "index": 37,
+      "yaw_deg": 185,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-037-yaw-185.jpg",
+      "bytes": 41134,
+      "sha256": "33a96a64d3673cc1b7f53acd702c75d2e7e1d70478a3548cf541f36c11fccae1"
+    },
+    {
+      "index": 38,
+      "yaw_deg": 190,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-038-yaw-190.jpg",
+      "bytes": 41947,
+      "sha256": "063cfe5e0b3f194505cbf7288fb31901fa58a9b09837cef20f5df9ee4b4328dc"
+    },
+    {
+      "index": 39,
+      "yaw_deg": 195,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-039-yaw-195.jpg",
+      "bytes": 43197,
+      "sha256": "a2617888741ee28bc5b7614c52cb92f35a8ba189f2860f3e62c36bacdcc49ed0"
+    },
+    {
+      "index": 40,
+      "yaw_deg": 200,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-040-yaw-200.jpg",
+      "bytes": 44055,
+      "sha256": "a49761f6d484341c941ec0a1d28a1aec6c31d5fb7cfdcd54b6901c1c339ae0a6"
+    },
+    {
+      "index": 41,
+      "yaw_deg": 205,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-041-yaw-205.jpg",
+      "bytes": 44600,
+      "sha256": "8edeab8b4b1b8054e03c6d273db26dec1e78ab8b47baf88b75bd73793aaf6a80"
+    },
+    {
+      "index": 42,
+      "yaw_deg": 210,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-042-yaw-210.jpg",
+      "bytes": 44703,
+      "sha256": "fb8666a016fdb13a43b3ee698b44ec427aa6166f45bf135359a4cdac45932792"
+    },
+    {
+      "index": 43,
+      "yaw_deg": 215,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-043-yaw-215.jpg",
+      "bytes": 44677,
+      "sha256": "3696ccb0bf855b66234ccf02b82c3607bd4cb95e24aa5e79a2ce4283ee2e32a2"
+    },
+    {
+      "index": 44,
+      "yaw_deg": 220,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-044-yaw-220.jpg",
+      "bytes": 44380,
+      "sha256": "19d52d09b4f53efb0c20fc98ff443650ca6f0ff4200c4f372ea9a04fd5a69427"
+    },
+    {
+      "index": 45,
+      "yaw_deg": 225,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-045-yaw-225.jpg",
+      "bytes": 43637,
+      "sha256": "a8b2059cfe34001be296702587463043797314879cec9ff971de45bdf3f77391"
+    },
+    {
+      "index": 46,
+      "yaw_deg": 230,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-046-yaw-230.jpg",
+      "bytes": 42983,
+      "sha256": "421a5c6ed16f62413bcb356b9d806c14f7eba4e6d430195daac2dfae8feed951"
+    },
+    {
+      "index": 47,
+      "yaw_deg": 235,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-047-yaw-235.jpg",
+      "bytes": 41948,
+      "sha256": "be8424a8739912c7fa95dd27849bbd2c901a1ea7e5c5e8a7a23c632f239bbbf5"
+    },
+    {
+      "index": 48,
+      "yaw_deg": 240,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-048-yaw-240.jpg",
+      "bytes": 40918,
+      "sha256": "9bc6f86e9b89294670969d49c9304a0a97e597dfe89f5e8fd9a8ad1ff074693f"
+    },
+    {
+      "index": 49,
+      "yaw_deg": 245,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-049-yaw-245.jpg",
+      "bytes": 39826,
+      "sha256": "45adec83763984da0b1de0f9990a9eff573642d912785b6527d962b9c2133c9c"
+    },
+    {
+      "index": 50,
+      "yaw_deg": 250,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-050-yaw-250.jpg",
+      "bytes": 38386,
+      "sha256": "7fc300f279ca2a8e5901aaad0e124dd06fa7b4ab1b0714628aabd4aa84a78a66"
+    },
+    {
+      "index": 51,
+      "yaw_deg": 255,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-051-yaw-255.jpg",
+      "bytes": 37283,
+      "sha256": "1096cae6f6284b5d840c83044bd9ced301408f9dac39d9303102e4dfa0349e1f"
+    },
+    {
+      "index": 52,
+      "yaw_deg": 260,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-052-yaw-260.jpg",
+      "bytes": 36195,
+      "sha256": "4cd80d3ecd38c6a2ac3da8f38cc2459f181733848aa3545d8753dcc433927ba8"
+    },
+    {
+      "index": 53,
+      "yaw_deg": 265,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-053-yaw-265.jpg",
+      "bytes": 35759,
+      "sha256": "c757414644f235250d2add1626270c71128bcdb811bc3a802baeb20cb91a6ef4"
+    },
+    {
+      "index": 54,
+      "yaw_deg": 270,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-054-yaw-270.jpg",
+      "bytes": 34731,
+      "sha256": "60623c63334b4364fa5a7cec8d2539182f739d97e7f3663be882d0a92e457548"
+    },
+    {
+      "index": 55,
+      "yaw_deg": 275,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-055-yaw-275.jpg",
+      "bytes": 35518,
+      "sha256": "ac95755fb0805e48105e11097a700e3a116bc7c3f9de6aa1966a46695f407de4"
+    },
+    {
+      "index": 56,
+      "yaw_deg": 280,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-056-yaw-280.jpg",
+      "bytes": 35970,
+      "sha256": "98ddc626683100b0fa6cb447025c8e676201654ddf1d28b8a1793384015ae02a"
+    },
+    {
+      "index": 57,
+      "yaw_deg": 285,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-057-yaw-285.jpg",
+      "bytes": 37286,
+      "sha256": "031bb03a624140d16ad52bd6dc83cc54b71108271f17cadc9027e05c74db7203"
+    },
+    {
+      "index": 58,
+      "yaw_deg": 290,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-058-yaw-290.jpg",
+      "bytes": 38319,
+      "sha256": "aedf91ca6db5ade3465e02a7b72c5d140e9f95ff775830587d14c59fca99cc34"
+    },
+    {
+      "index": 59,
+      "yaw_deg": 295,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-059-yaw-295.jpg",
+      "bytes": 39473,
+      "sha256": "3b773d355bad67764445dcddac5901b2a8a14d2a8b03e696141b806834f6413e"
+    },
+    {
+      "index": 60,
+      "yaw_deg": 300,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-060-yaw-300.jpg",
+      "bytes": 40491,
+      "sha256": "d73256b6a409c9ba584d280a3047abbd66d1920beb2e73d8039efce89cbe04e3"
+    },
+    {
+      "index": 61,
+      "yaw_deg": 305,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-061-yaw-305.jpg",
+      "bytes": 41271,
+      "sha256": "9cbf496fe287328f7ef73c30cb205017dd2e8fc6f750404112342a5f83398299"
+    },
+    {
+      "index": 62,
+      "yaw_deg": 310,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-062-yaw-310.jpg",
+      "bytes": 41847,
+      "sha256": "0dc9768a261f8229ebd9a1cd41b53a68029fa9b94defbff524c6b7fc8247bc4f"
+    },
+    {
+      "index": 63,
+      "yaw_deg": 315,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-063-yaw-315.jpg",
+      "bytes": 42313,
+      "sha256": "2fdf3f8fc289da8c0d91a01ebc5ca77f16622112bd97c5e65e09b5e270f28c9b"
+    },
+    {
+      "index": 64,
+      "yaw_deg": 320,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-064-yaw-320.jpg",
+      "bytes": 42376,
+      "sha256": "df9860da1608084c818348ccc61d9375e0248c624e561e44a455327216fa4ad7"
+    },
+    {
+      "index": 65,
+      "yaw_deg": 325,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-065-yaw-325.jpg",
+      "bytes": 42605,
+      "sha256": "ba57775de1a8885c9dfa2716ac0b0336cc0565df25af02e71f011fc70ad1174f"
+    },
+    {
+      "index": 66,
+      "yaw_deg": 330,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-066-yaw-330.jpg",
+      "bytes": 42109,
+      "sha256": "a2b8e69d377ec62c6c952a07e106617120ffea71df3d901e47428c78e155d8d2"
+    },
+    {
+      "index": 67,
+      "yaw_deg": 335,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-067-yaw-335.jpg",
+      "bytes": 41614,
+      "sha256": "9f86c59aba0b0e1b9a47624a7af2412009ae74e93b4957817773fb267ad70139"
+    },
+    {
+      "index": 68,
+      "yaw_deg": 340,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-068-yaw-340.jpg",
+      "bytes": 40906,
+      "sha256": "8fb722a1545014dc8466b316ed80430ef5dd03aec9463cfb31e5145894b978cd"
+    },
+    {
+      "index": 69,
+      "yaw_deg": 345,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-069-yaw-345.jpg",
+      "bytes": 39984,
+      "sha256": "e04b1312ad7086bce36ff164890491a74a32a3042d722f97264584f5e5bb5615"
+    },
+    {
+      "index": 70,
+      "yaw_deg": 350,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-070-yaw-350.jpg",
+      "bytes": 39006,
+      "sha256": "961ed45f51cf90f2412274240db62b9cb7bbac1879b95f1f7673a40f20317e88"
+    },
+    {
+      "index": 71,
+      "yaw_deg": 355,
+      "pitch_deg": 12,
+      "path": "after/rotation/babylon/standard/yaw-frames/frame-071-yaw-355.jpg",
+      "bytes": 38320,
+      "sha256": "282c2c9e2d098e17b9852b30396f8d5bf9c8fa592d5d69a77ff90fb1bbc81f32"
+    }
+  ],
+  "pitch_frames": [
+    {
+      "name": "yaw-000-pitch-+30",
+      "yaw_deg": 0,
+      "pitch_deg": 30,
+      "path": "after/rotation/babylon/standard/pitch-frames/yaw-000-pitch-+30.png",
+      "bytes": 203730,
+      "sha256": "2a4f982e76bc7046fafdcee7ba312edbf344c4d5f8dbf064a31f532ade4e5689"
+    },
+    {
+      "name": "yaw-090-pitch-+30",
+      "yaw_deg": 90,
+      "pitch_deg": 30,
+      "path": "after/rotation/babylon/standard/pitch-frames/yaw-090-pitch-+30.png",
+      "bytes": 203387,
+      "sha256": "c3bc492fb07764b0a2b5d19115e277d0d3b9a451e800a3178365808fe703d35f"
+    },
+    {
+      "name": "yaw-180-pitch-+30",
+      "yaw_deg": 180,
+      "pitch_deg": 30,
+      "path": "after/rotation/babylon/standard/pitch-frames/yaw-180-pitch-+30.png",
+      "bytes": 215107,
+      "sha256": "ae406175714a705b805898444c7c90c8430aeb8d0b030a95baea8303102ca77c"
+    },
+    {
+      "name": "yaw-270-pitch-+30",
+      "yaw_deg": 270,
+      "pitch_deg": 30,
+      "path": "after/rotation/babylon/standard/pitch-frames/yaw-270-pitch-+30.png",
+      "bytes": 207492,
+      "sha256": "95d61d327b8ee616b7ad4723ec4c77a18370ef585819f6b1d40ca184be7a88ca"
+    },
+    {
+      "name": "yaw-000-pitch--30",
+      "yaw_deg": 0,
+      "pitch_deg": -30,
+      "path": "after/rotation/babylon/standard/pitch-frames/yaw-000-pitch--30.png",
+      "bytes": 145699,
+      "sha256": "7c6de203f5672c704251ef7f34c1bb4ffd2c11b49ff19df05d0abfc93bd89d82"
+    },
+    {
+      "name": "yaw-090-pitch--30",
+      "yaw_deg": 90,
+      "pitch_deg": -30,
+      "path": "after/rotation/babylon/standard/pitch-frames/yaw-090-pitch--30.png",
+      "bytes": 146393,
+      "sha256": "c48aec24b38cb12df051cf7df17347050cc4fbc5ce700d7237aa87258defde0e"
+    },
+    {
+      "name": "yaw-180-pitch--30",
+      "yaw_deg": 180,
+      "pitch_deg": -30,
+      "path": "after/rotation/babylon/standard/pitch-frames/yaw-180-pitch--30.png",
+      "bytes": 147932,
+      "sha256": "5fb59ffde1b27d6108bc4167e7d1fc078e08d59a5673b1de498de7c3ecac754f"
+    },
+    {
+      "name": "yaw-270-pitch--30",
+      "yaw_deg": 270,
+      "pitch_deg": -30,
+      "path": "after/rotation/babylon/standard/pitch-frames/yaw-270-pitch--30.png",
+      "bytes": 148698,
+      "sha256": "94638bdd1beae34d227f0d0f1b6e4e4f09dba3ce5e3df55dc8732540a0c41347"
+    }
+  ],
+  "contact_sheet": {
+    "path": "after/rotation/babylon/standard/yaw-72-contact-sheet.jpg",
+    "bytes": 535185,
+    "sha256": "5a81354872955afa76d9009a1256435101e497356fbccaf8cda5a125bdd3cfd0"
+  },
+  "visual_review": {
+    "reviewed": true,
+    "continuous_video_reviewed": true,
+    "yaw_contact_sheet_reviewed": true,
+    "dark_pitch_frames_reviewed": true,
+    "findings": {
+      "surface_flicker": false,
+      "transparency_jump": false,
+      "checkerboard_leak": false,
+      "face_disappearance": false,
+      "mirroring": false,
+      "texture_switch": false,
+      "sudden_gray": false
+    },
+    "pitch_contact_sheet": "qa/rotation-review-20260827/after/rotation/babylon/standard/pitch-dark-contact-sheet.png"
+  }
+}

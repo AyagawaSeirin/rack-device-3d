@@ -1,0 +1,29 @@
+{
+  "model_key": "Lenovo-ThinkServer-SR655-2.5inch",
+  "status": "PASS",
+  "standard_sha256": "b34a0af03dcd28de63131f9e18494ac17cd4f960c18e0726c51d81da0ab2c677",
+  "web_sha256": "b2fd3bfbd4457318066a52bad42563d61f30fb7bf08d79a5a3a80512b4952011",
+  "viewer_model_combinations": [
+    {"viewer": "three", "variant": "standard", "yaw_frames": 72, "yaw_step_degrees": 5, "continuous_animation_frames": 75, "dark_checker_pitch_frames": 8, "status": "PASS"},
+    {"viewer": "three", "variant": "web", "yaw_frames": 72, "yaw_step_degrees": 5, "continuous_animation_frames": 75, "dark_checker_pitch_frames": 8, "status": "PASS"},
+    {"viewer": "babylon", "variant": "standard", "yaw_frames": 72, "yaw_step_degrees": 5, "continuous_animation_frames": 31, "dark_checker_pitch_frames": 8, "status": "PASS"},
+    {"viewer": "babylon", "variant": "web", "yaw_frames": 72, "yaw_step_degrees": 5, "continuous_animation_frames": 26, "dark_checker_pitch_frames": 8, "status": "PASS"}
+  ],
+  "findings": {
+    "surface_flicker": false,
+    "opacity_jump": false,
+    "checkerboard_leakage": false,
+    "face_disappearance": false,
+    "mirroring": false,
+    "texture_switch": false,
+    "sudden_gray": false
+  },
+  "evidence": {
+    "combination_manifests": "rotation/<viewer>/<variant>/rotation-manifest.json",
+    "yaw_contact_sheets": "rotation/<viewer>/<variant>/yaw-72-contact-sheet.jpg",
+    "pitch_contact_sheets": "rotation/<viewer>/<variant>/pitch-dark-contact-sheet.png",
+    "continuous_videos": "rotation/<viewer>/<variant>/continuous-360.webm",
+    "browser_gate_summary": "browser-gate-summary.json",
+    "final_hash_http_audit": "http-final-hash-audit.json"
+  }
+}

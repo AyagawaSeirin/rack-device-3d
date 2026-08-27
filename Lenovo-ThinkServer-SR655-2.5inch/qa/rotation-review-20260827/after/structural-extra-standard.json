@@ -1,0 +1,353 @@
+{
+  "path": "Lenovo-ThinkServer-SR655-2.5inch/model/Lenovo-ThinkServer-SR655-2.5inch.glb",
+  "bytes": 12052840,
+  "sha256": "b34a0af03dcd28de63131f9e18494ac17cd4f960c18e0726c51d81da0ab2c677",
+  "status": "PASS",
+  "error_count": 0,
+  "errors": [],
+  "geometry": {
+    "mesh_count": 256,
+    "triangle_count": 5148,
+    "exact_duplicate_triangle_group_count": 0,
+    "exact_duplicate_triangle_instance_count": 0,
+    "opposite_normal_duplicate_group_count": 0,
+    "duplicate_examples": [],
+    "near_coplanar_limit_mm": 0.25,
+    "near_coplanar_photographic_pair_count": 0,
+    "near_coplanar_photographic_pairs": [],
+    "closed_core": [
+      {
+        "mesh": "ChassisBody",
+        "watertight": true,
+        "winding_consistent": true,
+        "positive_volume": true,
+        "volume": 0.02616902584946736,
+        "euler_number": 2
+      }
+    ],
+    "visible_geometry_signature": "64a1cf1eb8025de20130b59e51f37f051bf1a6b7a544d4e46e9cf1eb8105f4db"
+  },
+  "material_alpha_negative_transform": {
+    "materials": [
+      {
+        "index": 0,
+        "name": "silver",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          0.6745098039215687,
+          0.6901960784313725,
+          0.6901960784313725,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": false,
+        "texture_material": false
+      },
+      {
+        "index": 1,
+        "name": "dark",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          0.12549019607843137,
+          0.13333333333333333,
+          0.13725490196078433,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": false,
+        "texture_material": false
+      },
+      {
+        "index": 2,
+        "name": "light_silver",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          0.803921568627451,
+          0.8117647058823529,
+          0.803921568627451,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": false,
+        "texture_material": false
+      },
+      {
+        "index": 3,
+        "name": "black",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          0.07058823529411765,
+          0.07450980392156863,
+          0.0784313725490196,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": false,
+        "texture_material": false
+      },
+      {
+        "index": 4,
+        "name": "red",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          0.6784313725490196,
+          0.047058823529411764,
+          0.08235294117647059,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": false,
+        "texture_material": false
+      },
+      {
+        "index": 5,
+        "name": "dark_silver",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          0.4196078431372549,
+          0.4392156862745098,
+          0.44313725490196076,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": false,
+        "texture_material": false
+      },
+      {
+        "index": 6,
+        "name": "vent",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          0.023529411764705882,
+          0.027450980392156862,
+          0.03137254901960784,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": false,
+        "texture_material": false
+      },
+      {
+        "index": 7,
+        "name": "orange",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          0.9254901960784314,
+          0.3686274509803922,
+          0.03137254901960784,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": false,
+        "texture_material": false
+      },
+      {
+        "index": 8,
+        "name": "green",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          0.22745098039215686,
+          0.5882352941176471,
+          0.20392156862745098,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": false,
+        "texture_material": false
+      },
+      {
+        "index": 9,
+        "name": "blue",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          0.03137254901960784,
+          0.3568627450980392,
+          0.7176470588235294,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": false,
+        "texture_material": false
+      },
+      {
+        "index": 10,
+        "name": "yellow",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          0.8980392156862745,
+          0.7803921568627451,
+          0.0392156862745098,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": false,
+        "texture_material": false
+      },
+      {
+        "index": 11,
+        "name": "FrontPhotographicSurface_opaque_texture",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": true,
+        "texture_material": true
+      },
+      {
+        "index": 12,
+        "name": "RearPhotographicSurface_opaque_texture",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": true,
+        "texture_material": true
+      },
+      {
+        "index": 13,
+        "name": "RightPhotographicSurface_opaque_texture",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": true,
+        "texture_material": true
+      },
+      {
+        "index": 14,
+        "name": "LeftPhotographicSurface_opaque_texture",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": true,
+        "texture_material": true
+      },
+      {
+        "index": 15,
+        "name": "TopPhotographicSurface_opaque_texture",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": true,
+        "texture_material": true
+      },
+      {
+        "index": 16,
+        "name": "BottomPhotographicSurface_opaque_texture",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": true,
+        "texture_material": true
+      }
+    ],
+    "images": [
+      {
+        "index": 0,
+        "bytes": 1421752,
+        "sha256": "1bbbc466b30fb3d62743d93d3e6ca69c16b457b554277f2c98d0321dcf1b1a35",
+        "mode": "RGB",
+        "size_px": [
+          2600,
+          467
+        ],
+        "alpha_min": 255,
+        "alpha_below_255_pixels": 0
+      },
+      {
+        "index": 1,
+        "bytes": 1666584,
+        "sha256": "55fb9698c5c212f0bb8a6885fd54e281870a5df84e3785ed91bfa1a60c61c16d",
+        "mode": "RGB",
+        "size_px": [
+          2400,
+          467
+        ],
+        "alpha_min": 255,
+        "alpha_below_255_pixels": 0
+      },
+      {
+        "index": 2,
+        "bytes": 1116624,
+        "sha256": "a5db60ececa20c8310bb508fe95daca971492c60c545e704bd2ad7488fde2180",
+        "mode": "RGB",
+        "size_px": [
+          3000,
+          339
+        ],
+        "alpha_min": 255,
+        "alpha_below_255_pixels": 0
+      },
+      {
+        "index": 3,
+        "bytes": 1289804,
+        "sha256": "19e95f339fbfa25b87b9ab5696858ed98aebc1ca7954ed5f46b6ee9f294fd081",
+        "mode": "RGB",
+        "size_px": [
+          3000,
+          339
+        ],
+        "alpha_min": 255,
+        "alpha_below_255_pixels": 0
+      },
+      {
+        "index": 4,
+        "bytes": 3634480,
+        "sha256": "df5d4678074d8db86e1fa5a5ad04674ac9c99aef25085fd4ad16de5d216f0ec4",
+        "mode": "RGB",
+        "size_px": [
+          1512,
+          2600
+        ],
+        "alpha_min": 255,
+        "alpha_below_255_pixels": 0
+      },
+      {
+        "index": 5,
+        "bytes": 2725360,
+        "sha256": "4c3f662f01932c4e11778bcd89046923a9d2353b0f345d6e98213f89bb960244",
+        "mode": "RGB",
+        "size_px": [
+          1512,
+          2600
+        ],
+        "alpha_min": 255,
+        "alpha_below_255_pixels": 0
+      }
+    ],
+    "negative_transform_nodes": [],
+    "external_buffers": [],
+    "external_images": [],
+    "extensions_used": [
+      "KHR_materials_unlit"
+    ],
+    "errors": []
+  }
+}

@@ -2,6 +2,8 @@
 
 Status: PASS
 
+2026-08-27 rotation re-review: **PASS**. Authoritative current hashes: standard `b34a0af03dcd28de63131f9e18494ac17cd4f960c18e0726c51d81da0ab2c677`; web `b2fd3bfbd4457318066a52bad42563d61f30fb7bf08d79a5a3a80512b4952011`. The rear elevation was corrected by byte-identical reuse of the validated physical-pair rear, and both GLBs completed 40/40 final-hash loads plus four 72-frame rotation gates. See `qa/rotation-review-20260827/final-report.md`. Older hashes/counts below are superseded.
+
 Bottom status: exact official-viewer underside; no fallback.
 
 ## Identity

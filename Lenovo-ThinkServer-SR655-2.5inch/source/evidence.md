@@ -1,6 +1,7 @@
 # Evidence ledger — Lenovo ThinkSystem SR655 24x2.5
 
-Access date: 2026-08-23 (Asia/Singapore)
+Initial access date: 2026-08-23 (Asia/Singapore)
+Rotation-review official refresh: 2026-08-27
 
 ## PDF workflow
 
@@ -46,6 +47,8 @@ Captured exact-state views:
 - front-right and rear-right authoritative three-quarter views
 
 Every capture was inspected at original detail. These are official renders and geometry/color evidence, not real-photo style authorities where a real image exists.
+
+The public Lenovo 3D tour was reopened in real Chromium on 2026-08-27 and still identifies the withdrawn original ThinkSystem SR655 and exposes the same configuration viewer. The selected PCIe-rich, no-rear-drive, dual-750W-AC rear is physically identical for B5VJ and B5VK. The prior 2.5-inch rear asset had been generated at the front-ear width and failed the rear body ratio by 8.32%; it was therefore replaced byte-for-byte with the already validated 2400x467 paired rear used by the 3.5-inch variant, as required by the elevation pairing rule. No face was regenerated.
 
 The public raw geometry/texture package is retained unchanged at source/optional-3d/Lenovo-ThinkSystem-SR655-official-viewer-original-files.tar.gz.
 

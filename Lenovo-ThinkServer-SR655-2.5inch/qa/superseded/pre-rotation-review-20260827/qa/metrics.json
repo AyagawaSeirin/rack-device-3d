@@ -1,0 +1,169 @@
+{
+  "status": "PASS",
+  "views_audit": {
+    "status": "PASS",
+    "error_count": 0,
+    "warning_count": 6,
+    "max_ratio_error_percent": 0.1029,
+    "max_core_alpha_below_250_percent": 0.0
+  },
+  "standard_glb": {
+    "path": "model/Lenovo-ThinkServer-SR655-2.5inch.glb",
+    "bytes": 11964408,
+    "sha256": "51e5d5a72fb4f4471d76cb24f16627d10e7ea12993ebeec220aa2da7f7f7bc25",
+    "audit_status": "PASS",
+    "error_count": 0,
+    "warning_count": 0,
+    "counts": {
+      "scenes": 1,
+      "nodes": 261,
+      "meshes": 261,
+      "primitives": 261,
+      "materials": 17,
+      "textures": 6,
+      "images": 6,
+      "unique_basecolor_images": 6
+    },
+    "dimensions_xyz_m": [
+      0.4819999933242798,
+      0.08649999648332596,
+      0.7648599743843079
+    ],
+    "dimension_ratio_error_percent": 0.0139
+  },
+  "web_glb": {
+    "path": "model/Lenovo-ThinkServer-SR655-2.5inch-web.glb",
+    "bytes": 8382752,
+    "sha256": "3a721b51d754151d01b5981391318b5d74b361ef8e9f980228167dc8846f1f09",
+    "audit_status": "PASS",
+    "error_count": 0,
+    "warning_count": 0,
+    "counts": {
+      "scenes": 1,
+      "nodes": 261,
+      "meshes": 261,
+      "primitives": 261,
+      "materials": 17,
+      "textures": 6,
+      "images": 6,
+      "unique_basecolor_images": 6
+    },
+    "dimensions_xyz_m": [
+      0.4819999933242798,
+      0.08649999648332596,
+      0.7648599743843079
+    ],
+    "dimension_ratio_error_percent": 0.0139
+  },
+  "embedded_standard_textures": {
+    "front": {
+      "path": "qa/extracted-standard-textures/front.png",
+      "size_px": [
+        2600,
+        467
+      ],
+      "pixel_identical_to_standard_build_texture": true,
+      "sha256": "1bbbc466b30fb3d62743d93d3e6ca69c16b457b554277f2c98d0321dcf1b1a35"
+    },
+    "rear": {
+      "path": "qa/extracted-standard-textures/rear.png",
+      "size_px": [
+        2600,
+        467
+      ],
+      "pixel_identical_to_standard_build_texture": true,
+      "sha256": "0471f15a3381785099610b797036da77eab853af6c0672949d460c29b87f6d2e"
+    },
+    "right": {
+      "path": "qa/extracted-standard-textures/right.png",
+      "size_px": [
+        3000,
+        339
+      ],
+      "pixel_identical_to_standard_build_texture": true,
+      "sha256": "a5db60ececa20c8310bb508fe95daca971492c60c545e704bd2ad7488fde2180"
+    },
+    "left": {
+      "path": "qa/extracted-standard-textures/left.png",
+      "size_px": [
+        3000,
+        339
+      ],
+      "pixel_identical_to_standard_build_texture": true,
+      "sha256": "19e95f339fbfa25b87b9ab5696858ed98aebc1ca7954ed5f46b6ee9f294fd081"
+    },
+    "top": {
+      "path": "qa/extracted-standard-textures/top.png",
+      "size_px": [
+        1512,
+        2600
+      ],
+      "pixel_identical_to_standard_build_texture": true,
+      "sha256": "df5d4678074d8db86e1fa5a5ad04674ac9c99aef25085fd4ad16de5d216f0ec4"
+    },
+    "bottom": {
+      "path": "qa/extracted-standard-textures/bottom.png",
+      "size_px": [
+        1512,
+        2600
+      ],
+      "pixel_identical_to_standard_build_texture": true,
+      "sha256": "4c3f662f01932c4e11778bcd89046923a9d2353b0f345d6e98213f89bb960244"
+    }
+  },
+  "source_comparison_mean_rgb_0_255": {
+    "three-standard": {
+      "front": 0.994535,
+      "rear": 7.621456,
+      "right": 1.111518,
+      "left": 0.934599,
+      "top": 2.738462,
+      "bottom": 0.841169,
+      "frontRight": 5.523682,
+      "rearRight": 5.46116
+    },
+    "babylon-web": {
+      "front": 3.076394,
+      "rear": 12.52998,
+      "right": 6.674583,
+      "left": 5.961071,
+      "top": 4.741248,
+      "bottom": 1.640032,
+      "frontRight": 15.388142,
+      "rearRight": 13.042887
+    }
+  },
+  "viewer_parity_mean_rgb_0_255": {
+    "front": 36.587673,
+    "rear": 31.451649,
+    "right": 14.64726,
+    "left": 13.659961,
+    "top": 18.944674,
+    "bottom": 18.949833,
+    "frontRight": 14.714273,
+    "rearRight": 10.765095
+  },
+  "standard_web_mean_rgb_0_255": {
+    "three": {
+      "front": 0.326675,
+      "rear": 0.520367,
+      "top": 0.281715,
+      "frontRight": 0.237611
+    },
+    "babylon": {
+      "front": 0.35042,
+      "rear": 0.494065,
+      "top": 0.317524,
+      "frontRight": 0.121641
+    }
+  },
+  "physical_left_vs_mirrored_right_mean_rgb_0_255": 27.999523,
+  "actual_glb_render_count": 24,
+  "official_archive": {
+    "path": "source/optional-3d/Lenovo-ThinkSystem-SR655-official-viewer-original-files.tar.gz",
+    "bytes": 16590938,
+    "sha256": "2d99c8fe4bc86f0ed28575421e76630a356cb69360e1dcb09b44c2c81af24a3e"
+  },
+  "unresolved_errors": [],
+  "unresolved_non_bottom_evidence_gaps": []
+}

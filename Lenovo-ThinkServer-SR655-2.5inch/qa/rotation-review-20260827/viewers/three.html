@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Three.js WebGL2 orbit gate</title>
+  <style>
+    html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#d8dadd}
+    body.light{background-color:#e7e9eb;background-image:linear-gradient(45deg,#c9cdd1 25%,transparent 25%),linear-gradient(-45deg,#c9cdd1 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#c9cdd1 75%),linear-gradient(-45deg,transparent 75%,#c9cdd1 75%);background-size:32px 32px;background-position:0 0,0 16px,16px -16px,-16px 0}
+    body.dark{background-color:#22262b;background-image:linear-gradient(45deg,#343a40 25%,transparent 25%),linear-gradient(-45deg,#343a40 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#343a40 75%),linear-gradient(-45deg,transparent 75%,#343a40 75%);background-size:32px 32px;background-position:0 0,0 16px,16px -16px,-16px 0}
+    canvas{display:block;width:100%;height:100%;touch-action:none}
+    #hud{position:fixed;left:12px;top:10px;z-index:2;padding:6px 8px;border-radius:3px;background:#ffffffe8;color:#171b1f;font:600 12px/1.35 ui-monospace,monospace;white-space:pre}
+  </style>
+</head>
+<body class="light"><div id="hud">initializing</div><canvas id="canvas"></canvas>
+<script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import {GLTFLoader} from './vendor/GLTFLoader.js';
+
+const params=new URLSearchParams(location.search);
+const key=params.get('key')||'Lenovo-ThinkServer-SR655-3.5inch';
+const variant=params.get('model')==='web'?'web':'standard';
+const expectedHash=params.get('sha256')||'';
+const loadId=params.get('load')||'interactive';
+let yaw=Number(params.get('yaw')||0),pitch=Number(params.get('pitch')||12),radius=1,center=new THREE.Vector3(),camera;
+const canvas=document.getElementById('canvas'),hud=document.getElementById('hud');
+document.body.className=params.get('bg')==='dark'?'dark':'light';
+const context=canvas.getContext('webgl2',{alpha:true,antialias:true,depth:true,preserveDrawingBuffer:true,premultipliedAlpha:true});
+if(!context)throw new Error('WebGL2 unavailable');
+const renderer=new THREE.WebGLRenderer({canvas,context,alpha:true,antialias:true,preserveDrawingBuffer:true});
+renderer.setPixelRatio(1);renderer.setSize(innerWidth,innerHeight,false);renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.NoToneMapping;renderer.setClearColor(0x000000,0);
+const scene=new THREE.Scene();
+scene.add(new THREE.HemisphereLight(0xffffff,0x626971,1.45));
+const keyLight=new THREE.DirectionalLight(0xffffff,1.15);keyLight.position.set(2,3,4);scene.add(keyLight);
+const modelUrl=`/model/${key}${variant==='web'?'-web':''}.glb?load=${encodeURIComponent(loadId)}&sha256=${encodeURIComponent(expectedHash)}`;
+
+function render(){if(!camera)return;renderer.render(scene,camera);hud.textContent=`Three.js r${THREE.REVISION} · WebGL${renderer.capabilities.isWebGL2?'2':'1'}\n${variant} · yaw ${yaw.toFixed(2)}° · pitch ${pitch.toFixed(2)}°\n${document.body.className} checker · ${expectedHash.slice(0,12)}`}
+function setOrbit(nextYaw,nextPitch){yaw=((Number(nextYaw)%360)+360)%360;pitch=Math.max(-88,Math.min(88,Number(nextPitch)));const yr=THREE.MathUtils.degToRad(yaw),pr=THREE.MathUtils.degToRad(pitch),cp=Math.cos(pr);camera.position.set(center.x+radius*cp*Math.sin(yr),center.y+radius*Math.sin(pr),center.z+radius*cp*Math.cos(yr));camera.up.set(0,1,0);camera.lookAt(center);camera.updateMatrixWorld(true);render();return{yaw,pitch,radius}}
+function setBackground(name){document.body.className=name==='dark'?'dark':'light';render();return document.body.className}
+async function startRotation(durationMs=7200,rotationPitch=12){document.body.dataset.done='0';const samples=[];const start=performance.now();return await new Promise(resolve=>{function frame(now){const elapsed=Math.max(0,Math.min(durationMs,now-start)),angle=elapsed/durationMs*360;setOrbit(angle,rotationPitch);samples.push({elapsed_ms:Number(elapsed.toFixed(3)),yaw_deg:Number(angle.toFixed(4)),pitch_deg:Number(rotationPitch)});if(elapsed>=durationMs){document.body.dataset.done='1';resolve({duration_ms:durationMs,animation_frames:samples.length,samples})}else requestAnimationFrame(frame)}requestAnimationFrame(frame)})}
+
+let dragging=false,lastX=0,lastY=0;
+canvas.addEventListener('pointerdown',event=>{dragging=true;lastX=event.clientX;lastY=event.clientY;canvas.setPointerCapture(event.pointerId)});
+canvas.addEventListener('pointermove',event=>{if(!dragging)return;const dx=event.clientX-lastX,dy=event.clientY-lastY;lastX=event.clientX;lastY=event.clientY;setOrbit(yaw+dx*0.35,pitch-dy*0.30)});
+canvas.addEventListener('pointerup',()=>{dragging=false});canvas.addEventListener('pointercancel',()=>{dragging=false});
+canvas.addEventListener('wheel',event=>{event.preventDefault();radius*=Math.exp(event.deltaY*0.001);radius=Math.max(0.2,Math.min(8,radius));setOrbit(yaw,pitch)},{passive:false});
+addEventListener('resize',()=>{renderer.setSize(innerWidth,innerHeight,false);camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();render()});
+
+window.qaSetOrbit=setOrbit;window.qaSetBackground=setBackground;window.qaStartRotation=startRotation;
+new GLTFLoader().load(modelUrl,gltf=>{scene.add(gltf.scene);gltf.scene.updateMatrixWorld(true);const box=new THREE.Box3().setFromObject(gltf.scene),size=box.getSize(new THREE.Vector3());center=box.getCenter(new THREE.Vector3());const maxExtent=Math.max(size.x,size.y,size.z);camera=new THREE.PerspectiveCamera(30,innerWidth/innerHeight,Math.max(0.001,maxExtent/500),maxExtent*20);radius=maxExtent*2.35;setOrbit(yaw,pitch);window.qaState=()=>({engine:'three',engine_revision:THREE.REVISION,webgl_version:renderer.capabilities.isWebGL2?2:1,variant,key,expected_sha256:expectedHash,model_url:modelUrl,load_id:loadId,yaw,pitch,radius,bounds:[size.x,size.y,size.z],background:document.body.className});document.body.dataset.ready='1';document.body.dataset.done='0';document.title=`READY Three ${variant} ${loadId}`},undefined,error=>{document.body.dataset.error=String(error);document.title='ERROR Three';console.error(error)});
+</script></body></html>
