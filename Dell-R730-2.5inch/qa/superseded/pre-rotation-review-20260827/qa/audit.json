@@ -1,0 +1,284 @@
+{
+  "status": "PASS_WITH_BOTTOM_FALLBACK",
+  "generated_utc": "2026-08-23T18:14:07.609099+00:00",
+  "identity": "Dell PowerEdge R730 (E31S/E31S001), 2U, 16 x 2.5-inch SFF, no bezel, seven blank PCIe covers, 4 x 1GbE NDC, dual EPP 750W AC",
+  "bottom_mode": "GENERIC_BOTTOM_FALLBACK",
+  "source_lineage": {
+    "face_locks": [
+      {
+        "face": "front",
+        "mode": "SOURCE_LOCKED_GENERATION",
+        "primary_exists": true,
+        "primary_sha256_matches": true,
+        "final_exists": true,
+        "final_sha256": "90247fbb30d3624ba730540ce54487b08654c630998d79a894e55db37df4bd2c"
+      },
+      {
+        "face": "rear",
+        "mode": "SOURCE_LOCKED_GENERATION",
+        "primary_exists": true,
+        "primary_sha256_matches": true,
+        "final_exists": true,
+        "final_sha256": "a5b3ad8810129fe372a129dbfb69a22e922b507aa2af61c2e910344de8710cef"
+      },
+      {
+        "face": "left",
+        "mode": "SOURCE_LOCKED_GENERATION",
+        "primary_exists": true,
+        "primary_sha256_matches": true,
+        "final_exists": true,
+        "final_sha256": "230ef77e780e56ede87bcc6b1f7eee4fe2b4bc445a82fd5e27003069d0ffb172"
+      },
+      {
+        "face": "right",
+        "mode": "MULTI_REFERENCE_RECONSTRUCTION",
+        "primary_exists": true,
+        "primary_sha256_matches": true,
+        "final_exists": true,
+        "final_sha256": "1d3e72dfe7a411e7d96c5a5b52ef47d47cae8535a2fb06a3e115265711212499"
+      },
+      {
+        "face": "top",
+        "mode": "MULTI_REFERENCE_RECONSTRUCTION",
+        "primary_exists": true,
+        "primary_sha256_matches": true,
+        "final_exists": true,
+        "final_sha256": "ce30c23dbb55813d954689a7b8444ae7effb8928a6f2c0ce304c433844de2ac8"
+      },
+      {
+        "face": "bottom",
+        "mode": "GENERIC_BOTTOM_FALLBACK",
+        "primary_exists": true,
+        "primary_sha256_matches": true,
+        "final_exists": true,
+        "final_sha256": "85fa870bd367202c1bed5e5c9d3b26ff5c1bcc73248522edd052d387efa93e37"
+      }
+    ],
+    "prompt_count": 6,
+    "independent_imagegen_output_count": 6,
+    "independent_final_view_count": 6,
+    "views_audit_status": "PASS",
+    "views_audit_warnings": 6
+  },
+  "glb": {
+    "standard": {
+      "path": "model/Dell-R730-2.5inch.glb",
+      "bytes": 13671616,
+      "sha256": "9c74ffddbb943bbfab7fe47955d2035c8869e4fa9e66eedf0304da6b30059e08",
+      "audit_status": "PASS",
+      "audit_errors": 0,
+      "audit_warnings": 0,
+      "counts": {
+        "scenes": 1,
+        "nodes": 362,
+        "meshes": 362,
+        "primitives": 362,
+        "materials": 14,
+        "textures": 6,
+        "images": 6,
+        "unique_basecolor_images": 6
+      },
+      "bounds_m": {
+        "min": [
+          -0.2412,
+          -0.04377,
+          -0.3811
+        ],
+        "max": [
+          0.2412,
+          0.04377,
+          0.36005
+        ],
+        "dimensions_xyz": [
+          0.4824,
+          0.08754,
+          0.74115
+        ]
+      }
+    },
+    "web": {
+      "path": "model/Dell-R730-2.5inch-web.glb",
+      "bytes": 1855664,
+      "sha256": "a86fe63f2e27d1f0cd251e5a69c94f71057ff5733f267e22cbed4bc49de8288e",
+      "audit_status": "PASS",
+      "audit_errors": 0,
+      "audit_warnings": 0,
+      "counts": {
+        "scenes": 1,
+        "nodes": 362,
+        "meshes": 362,
+        "primitives": 362,
+        "materials": 14,
+        "textures": 6,
+        "images": 6,
+        "unique_basecolor_images": 6
+      },
+      "bounds_m": {
+        "min": [
+          -0.2412,
+          -0.04377,
+          -0.3811
+        ],
+        "max": [
+          0.2412,
+          0.04377,
+          0.36005
+        ],
+        "dimensions_xyz": [
+          0.4824,
+          0.08754,
+          0.74115
+        ]
+      }
+    }
+  },
+  "geometry_assertions": {
+    "standard": {
+      "closed_chassis_body": true,
+      "front_rack_ear_outer_depth_planes": true,
+      "drive_carriers_16": true,
+      "drive_leds_32": true,
+      "rear_blank_covers_7": true,
+      "rear_ndc_rj45_4": true,
+      "epp_750w_ac_psus_2": true,
+      "psu_cooling_fans_2": true,
+      "six_canonical_face_surfaces": true,
+      "no_mirrored_nodes": true
+    },
+    "web": {
+      "closed_chassis_body": true,
+      "front_rack_ear_outer_depth_planes": true,
+      "drive_carriers_16": true,
+      "drive_leds_32": true,
+      "rear_blank_covers_7": true,
+      "rear_ndc_rj45_4": true,
+      "epp_750w_ac_psus_2": true,
+      "psu_cooling_fans_2": true,
+      "six_canonical_face_surfaces": true,
+      "no_mirrored_nodes": true
+    }
+  },
+  "webgl": {
+    "viewer-a": {
+      "engine": "Three.js 0.170.0 + GLTFLoader",
+      "actual_model_loads": 20,
+      "all_20_model_screenshots_exist": true,
+      "all_model_screenshots_1280x720": true,
+      "models": [
+        "standard",
+        "web"
+      ],
+      "camera_set": [
+        "front",
+        "rear",
+        "left",
+        "right",
+        "top",
+        "bottom",
+        "front-left",
+        "front-right",
+        "rear-left",
+        "rear-right"
+      ],
+      "checker_screenshots": 2,
+      "checker_screenshots_exist": true,
+      "release_console_log": ".playwright-cli/console-2026-08-23T18-11-09-012Z.log",
+      "release_console_errors": 0
+    },
+    "viewer-b": {
+      "engine": "model-viewer 4.0.0 + Three.js 0.169.0",
+      "actual_model_loads": 20,
+      "all_20_model_screenshots_exist": true,
+      "all_model_screenshots_1280x720": true,
+      "models": [
+        "standard",
+        "web"
+      ],
+      "camera_set": [
+        "front",
+        "rear",
+        "left",
+        "right",
+        "top",
+        "bottom",
+        "front-left",
+        "front-right",
+        "rear-left",
+        "rear-right"
+      ],
+      "checker_screenshots": 2,
+      "checker_screenshots_exist": true,
+      "release_console_log": ".playwright-cli/console-2026-08-23T18-11-50-347Z.log",
+      "release_console_errors": 0
+    }
+  },
+  "render_evidence": {
+    "model_screenshots": 40,
+    "checker_screenshots": 4,
+    "authoritative_angle_screenshots": 2,
+    "total_actual_glb_screenshots": 46
+  },
+  "comparisons": {
+    "orthographic": [
+      "qa/comparisons/orthographic/front.png",
+      "qa/comparisons/orthographic/rear.png",
+      "qa/comparisons/orthographic/left.png",
+      "qa/comparisons/orthographic/right.png",
+      "qa/comparisons/orthographic/top.png",
+      "qa/comparisons/orthographic/GENERIC_BOTTOM_FALLBACK-bottom.png"
+    ],
+    "authoritative_angles": [
+      "qa/comparisons/source-angles/front-top-authoritative.png",
+      "qa/comparisons/source-angles/rear-top-authoritative.png"
+    ],
+    "standard_vs_web": [
+      "qa/comparisons/standard-web/front.png",
+      "qa/comparisons/standard-web/rear.png",
+      "qa/comparisons/standard-web/left.png",
+      "qa/comparisons/standard-web/right.png",
+      "qa/comparisons/standard-web/top.png",
+      "qa/comparisons/standard-web/bottom.png",
+      "qa/comparisons/standard-web/front-left.png",
+      "qa/comparisons/standard-web/front-right.png",
+      "qa/comparisons/standard-web/rear-left.png",
+      "qa/comparisons/standard-web/rear-right.png"
+    ],
+    "contact_sheets": 8
+  },
+  "official_3d": {
+    "exact_public_raw_model_found": false,
+    "official_interactive_service_guides_found": true,
+    "viewer_access_result": "Dell/Akamai HTTP 403 from this environment",
+    "preserved_evidence": [
+      "source/optional-3d/dell-r730-psu-3dviewer.html",
+      "source/optional-3d/dell-3dviewer-response-headers.txt",
+      "source/optional-3d/README.md"
+    ]
+  },
+  "gates": {
+    "exact_identity_manifest_present": true,
+    "dimension_ledger_present": true,
+    "evidence_ledger_present": true,
+    "six_face_locks_and_hashes_valid": true,
+    "six_independent_prompts": true,
+    "six_independent_generation_outputs": true,
+    "six_final_view_hashes_distinct": true,
+    "views_audit_pass": true,
+    "both_glb_audits_pass": true,
+    "visible_geometry_assertions_pass": true,
+    "both_viewers_loaded_20_model_views": true,
+    "release_browser_console_zero_errors": true,
+    "four_checker_screenshots_present": true,
+    "six_orthographic_comparison_sheets": true,
+    "two_authoritative_angle_comparison_sheets": true,
+    "ten_standard_web_comparison_sheets": true,
+    "official_3d_search_preserved": true,
+    "bottom_fallback_is_only_exception": true
+  },
+  "residual_risks": [
+    "Exact R730 underside imagery was not found after documented search; bottom is the controlled conservative fallback.",
+    "Right and top elevations are multi-reference reconstructions rather than single exact orthographic factory photographs.",
+    "Very small regulatory and service-label glyphs are photographic texture detail and are not guaranteed readable at extreme zoom.",
+    "The web GLB uses visually reviewed JPEG texture compression; standard GLB retains PNG textures."
+  ]
+}

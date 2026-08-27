@@ -1,0 +1,541 @@
+{
+  "model": "Dell-R730-2.5inch",
+  "frozen": {
+    "frozenAt": "2026-08-27T22:30:00+08:00",
+    "model": "Dell-R730-2.5inch",
+    "standard": {
+      "path": "model/Dell-R730-2.5inch.glb",
+      "bytes": 13671616,
+      "sha256": "9c74ffddbb943bbfab7fe47955d2035c8869e4fa9e66eedf0304da6b30059e08"
+    },
+    "web": {
+      "path": "model/Dell-R730-2.5inch-web.glb",
+      "bytes": 1855664,
+      "sha256": "a86fe63f2e27d1f0cd251e5a69c94f71057ff5733f267e22cbed4bc49de8288e"
+    },
+    "viewers": {
+      "three": {
+        "path": "qa/rotation-review-20260827/viewers/three-orbit.html",
+        "sha256": "399fd9bf1986b29f205ea526dae84d302bbd4164b5e9f851f4c0c5b1add10328"
+      },
+      "babylon": {
+        "path": "qa/rotation-review-20260827/viewers/babylon-orbit.html",
+        "sha256": "8a4df2e3080fff783450aa60bab6daae446035ddb50a0aeffe7af69ef72272ad"
+      }
+    },
+    "preReviewHashesUnchanged": true
+  },
+  "checks": {
+    "preReviewArchive": true,
+    "frozenHashes": true,
+    "auditViews": true,
+    "auditStandard": true,
+    "auditWeb": true,
+    "rotationStructureStandard": true,
+    "rotationStructureWeb": true,
+    "loads40": true,
+    "rotationFourCombinations": true,
+    "inventory": true,
+    "matchedCamera": true,
+    "textureSamplingAndAtlas": true,
+    "official3DReview": true
+  },
+  "audits": {
+    "views": {
+      "status": "PASS",
+      "errors": [],
+      "errorCount": 0,
+      "unresolvedCount": 0
+    },
+    "standard": {
+      "status": "PASS",
+      "errors": [],
+      "errorCount": 0,
+      "unresolvedCount": 0
+    },
+    "web": {
+      "status": "PASS",
+      "errors": [],
+      "errorCount": 0,
+      "unresolvedCount": 0
+    },
+    "rotation-structure-standard": {
+      "status": "PASS",
+      "errors": [],
+      "errorCount": 0,
+      "unresolvedCount": 0
+    },
+    "rotation-structure-web": {
+      "status": "PASS",
+      "errors": [],
+      "errorCount": 0,
+      "unresolvedCount": 0
+    }
+  },
+  "loads": {
+    "required": 40,
+    "actual": 40,
+    "uniqueNonces": 40,
+    "combos": [
+      {
+        "viewer": "three",
+        "variant": "standard",
+        "modelBase": "/Dell-R730-2.5inch/model/Dell-R730-2.5inch.glb",
+        "checks": {
+          "loadCount10": true,
+          "pngCount10": true,
+          "viewOrderExact": true,
+          "cacheBusted": true,
+          "independentPageNavigations": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "three",
+        "variant": "web",
+        "modelBase": "/Dell-R730-2.5inch/model/Dell-R730-2.5inch-web.glb",
+        "checks": {
+          "loadCount10": true,
+          "pngCount10": true,
+          "viewOrderExact": true,
+          "cacheBusted": true,
+          "independentPageNavigations": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "babylon",
+        "variant": "standard",
+        "modelBase": "/Dell-R730-2.5inch/model/Dell-R730-2.5inch.glb",
+        "checks": {
+          "loadCount10": true,
+          "pngCount10": true,
+          "viewOrderExact": true,
+          "cacheBusted": true,
+          "independentPageNavigations": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "babylon",
+        "variant": "web",
+        "modelBase": "/Dell-R730-2.5inch/model/Dell-R730-2.5inch-web.glb",
+        "checks": {
+          "loadCount10": true,
+          "pngCount10": true,
+          "viewOrderExact": true,
+          "cacheBusted": true,
+          "independentPageNavigations": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      }
+    ]
+  },
+  "rotation": {
+    "yawFrames": 288,
+    "pitchCheckerFrames": 128,
+    "stableFrames": 72,
+    "combos": [
+      {
+        "viewer": "three",
+        "variant": "standard",
+        "runtime": {
+          "engine": "Three.js 179",
+          "webgl2": true,
+          "model": "/Dell-R730-2.5inch/model/Dell-R730-2.5inch.glb?cb=final-9c74ffdd",
+          "bounds": {
+            "min": [
+              -0.2412,
+              -0.04377,
+              -0.3811
+            ],
+            "max": [
+              0.2412,
+              0.04377,
+              0.36005
+            ],
+            "size": [
+              0.4824,
+              0.08754,
+              0.74115
+            ]
+          },
+          "near": 0.01,
+          "far": 10,
+          "frozenFrustum": true,
+          "loadingOverlayHidden": true,
+          "checker": "dark",
+          "overlayVisible": false
+        },
+        "checks": {
+          "analysisPass": true,
+          "yaw72x5": true,
+          "pitchChecker32": true,
+          "stable18": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "three",
+        "variant": "web",
+        "runtime": {
+          "engine": "Three.js 179",
+          "webgl2": true,
+          "model": "/Dell-R730-2.5inch/model/Dell-R730-2.5inch-web.glb?cb=final-a86fe63f",
+          "bounds": {
+            "min": [
+              -0.2412,
+              -0.04377,
+              -0.3811
+            ],
+            "max": [
+              0.2412,
+              0.04377,
+              0.36005
+            ],
+            "size": [
+              0.4824,
+              0.08754,
+              0.74115
+            ]
+          },
+          "near": 0.01,
+          "far": 10,
+          "frozenFrustum": true,
+          "loadingOverlayHidden": true,
+          "checker": "dark",
+          "overlayVisible": false
+        },
+        "checks": {
+          "analysisPass": true,
+          "yaw72x5": true,
+          "pitchChecker32": true,
+          "stable18": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "babylon",
+        "variant": "standard",
+        "runtime": {
+          "engine": "Babylon.js 8.22.2",
+          "webgl2": true,
+          "model": "/Dell-R730-2.5inch/model/Dell-R730-2.5inch.glb?cb=final-9c74ffdd",
+          "bounds": {
+            "min": [
+              -0.2412,
+              -0.04377,
+              -0.3811
+            ],
+            "max": [
+              0.2412,
+              0.04377,
+              0.36005
+            ],
+            "size": [
+              0.4824,
+              0.08754,
+              0.74115
+            ]
+          },
+          "near": 0.01,
+          "far": 10,
+          "frozenFrustum": true,
+          "loadingOverlayHidden": true,
+          "checker": "dark",
+          "overlayVisible": false
+        },
+        "checks": {
+          "analysisPass": true,
+          "yaw72x5": true,
+          "pitchChecker32": true,
+          "stable18": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "babylon",
+        "variant": "web",
+        "runtime": {
+          "engine": "Babylon.js 8.22.2",
+          "webgl2": true,
+          "model": "/Dell-R730-2.5inch/model/Dell-R730-2.5inch-web.glb?cb=final-a86fe63f",
+          "bounds": {
+            "min": [
+              -0.2412,
+              -0.04377,
+              -0.3811
+            ],
+            "max": [
+              0.2412,
+              0.04377,
+              0.36005
+            ],
+            "size": [
+              0.4824,
+              0.08754,
+              0.74115
+            ]
+          },
+          "near": 0.01,
+          "far": 10,
+          "frozenFrustum": true,
+          "loadingOverlayHidden": true,
+          "checker": "dark",
+          "overlayVisible": false
+        },
+        "checks": {
+          "analysisPass": true,
+          "yaw72x5": true,
+          "pitchChecker32": true,
+          "stable18": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      }
+    ]
+  },
+  "inventory": {
+    "model": "Dell-R730-2.5inch",
+    "sourceRows": 50,
+    "reviewRows": 50,
+    "statusCounts": {
+      "PASS_EXACT": 48,
+      "PASS_BOTTOM_FALLBACK": 2
+    },
+    "globalEvidencePass": true,
+    "standardNodeCount": 362,
+    "webNodeCount": 362,
+    "standardWebNodeNamesEqual": true,
+    "errors": [],
+    "status": "PASS"
+  },
+  "textureSampling": {
+    "model": "Dell-R730-2.5inch",
+    "records": {
+      "standard": {
+        "path": "/root/Project/rack-device-3d/Dell-R730-2.5inch/model/Dell-R730-2.5inch.glb",
+        "textureCount": 6,
+        "imageCount": 6,
+        "samplers": [
+          {
+            "index": 0,
+            "magFilter": "LINEAR",
+            "minFilter": "LINEAR_MIPMAP_LINEAR",
+            "wrapS": 33071,
+            "wrapT": 33071,
+            "usesMipmaps": true
+          }
+        ],
+        "textures": [
+          {
+            "index": 0,
+            "source": 0,
+            "sampler": 0,
+            "effectiveMinFilter": "LINEAR_MIPMAP_LINEAR",
+            "usesMipmaps": true
+          },
+          {
+            "index": 1,
+            "source": 1,
+            "sampler": 0,
+            "effectiveMinFilter": "LINEAR_MIPMAP_LINEAR",
+            "usesMipmaps": true
+          },
+          {
+            "index": 2,
+            "source": 2,
+            "sampler": 0,
+            "effectiveMinFilter": "LINEAR_MIPMAP_LINEAR",
+            "usesMipmaps": true
+          },
+          {
+            "index": 3,
+            "source": 3,
+            "sampler": 0,
+            "effectiveMinFilter": "LINEAR_MIPMAP_LINEAR",
+            "usesMipmaps": true
+          },
+          {
+            "index": 4,
+            "source": 4,
+            "sampler": 0,
+            "effectiveMinFilter": "LINEAR_MIPMAP_LINEAR",
+            "usesMipmaps": true
+          },
+          {
+            "index": 5,
+            "source": 5,
+            "sampler": 0,
+            "effectiveMinFilter": "LINEAR_MIPMAP_LINEAR",
+            "usesMipmaps": true
+          }
+        ],
+        "sharedAtlasDetected": false,
+        "atlasBleedRisk": false,
+        "mipmapNote": "Explicit trilinear sampler"
+      },
+      "web": {
+        "path": "/root/Project/rack-device-3d/Dell-R730-2.5inch/model/Dell-R730-2.5inch-web.glb",
+        "textureCount": 6,
+        "imageCount": 6,
+        "samplers": [
+          {
+            "index": 0,
+            "magFilter": "LINEAR",
+            "minFilter": "LINEAR_MIPMAP_LINEAR",
+            "wrapS": 33071,
+            "wrapT": 33071,
+            "usesMipmaps": true
+          }
+        ],
+        "textures": [
+          {
+            "index": 0,
+            "source": 0,
+            "sampler": 0,
+            "effectiveMinFilter": "LINEAR_MIPMAP_LINEAR",
+            "usesMipmaps": true
+          },
+          {
+            "index": 1,
+            "source": 1,
+            "sampler": 0,
+            "effectiveMinFilter": "LINEAR_MIPMAP_LINEAR",
+            "usesMipmaps": true
+          },
+          {
+            "index": 2,
+            "source": 2,
+            "sampler": 0,
+            "effectiveMinFilter": "LINEAR_MIPMAP_LINEAR",
+            "usesMipmaps": true
+          },
+          {
+            "index": 3,
+            "source": 3,
+            "sampler": 0,
+            "effectiveMinFilter": "LINEAR_MIPMAP_LINEAR",
+            "usesMipmaps": true
+          },
+          {
+            "index": 4,
+            "source": 4,
+            "sampler": 0,
+            "effectiveMinFilter": "LINEAR_MIPMAP_LINEAR",
+            "usesMipmaps": true
+          },
+          {
+            "index": 5,
+            "source": 5,
+            "sampler": 0,
+            "effectiveMinFilter": "LINEAR_MIPMAP_LINEAR",
+            "usesMipmaps": true
+          }
+        ],
+        "sharedAtlasDetected": false,
+        "atlasBleedRisk": false,
+        "mipmapNote": "Explicit trilinear sampler"
+      }
+    },
+    "errors": [],
+    "errorCount": 0,
+    "status": "PASS"
+  },
+  "matchedCamera": {
+    "front": {
+      "files": [
+        "qa/rotation-review-20260827/matched-camera/three-standard/front/source.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/front/render.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/front/overlay.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/front/difference.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/front/sheet.png"
+      ],
+      "complete": true
+    },
+    "rear": {
+      "files": [
+        "qa/rotation-review-20260827/matched-camera/three-standard/rear/source.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/rear/render.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/rear/overlay.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/rear/difference.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/rear/sheet.png"
+      ],
+      "complete": true
+    },
+    "left": {
+      "files": [
+        "qa/rotation-review-20260827/matched-camera/three-standard/left/source.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/left/render.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/left/overlay.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/left/difference.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/left/sheet.png"
+      ],
+      "complete": true
+    },
+    "right": {
+      "files": [
+        "qa/rotation-review-20260827/matched-camera/three-standard/right/source.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/right/render.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/right/overlay.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/right/difference.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/right/sheet.png"
+      ],
+      "complete": true
+    },
+    "top": {
+      "files": [
+        "qa/rotation-review-20260827/matched-camera/three-standard/top/source.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/top/render.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/top/overlay.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/top/difference.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/top/sheet.png"
+      ],
+      "complete": true
+    },
+    "bottom": {
+      "files": [
+        "qa/rotation-review-20260827/matched-camera/three-standard/bottom/source.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/bottom/render.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/bottom/overlay.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/bottom/difference.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/bottom/sheet.png"
+      ],
+      "complete": true
+    }
+  },
+  "errors": [],
+  "errorCount": 0,
+  "status": "PASS_WITH_BOTTOM_FALLBACK"
+}

@@ -1,0 +1,282 @@
+{
+  "model": "Dell-R730-2.5inch",
+  "frozenHashChecks": {
+    "standard": {
+      "expected": "9c74ffddbb943bbfab7fe47955d2035c8869e4fa9e66eedf0304da6b30059e08",
+      "actual": "9c74ffddbb943bbfab7fe47955d2035c8869e4fa9e66eedf0304da6b30059e08",
+      "match": true
+    },
+    "web": {
+      "expected": "a86fe63f2e27d1f0cd251e5a69c94f71057ff5733f267e22cbed4bc49de8288e",
+      "actual": "a86fe63f2e27d1f0cd251e5a69c94f71057ff5733f267e22cbed4bc49de8288e",
+      "match": true
+    },
+    "viewer-three": {
+      "expected": "399fd9bf1986b29f205ea526dae84d302bbd4164b5e9f851f4c0c5b1add10328",
+      "actual": "399fd9bf1986b29f205ea526dae84d302bbd4164b5e9f851f4c0c5b1add10328",
+      "match": true
+    },
+    "viewer-babylon": {
+      "expected": "8a4df2e3080fff783450aa60bab6daae446035ddb50a0aeffe7af69ef72272ad",
+      "actual": "8a4df2e3080fff783450aa60bab6daae446035ddb50a0aeffe7af69ef72272ad",
+      "match": true
+    }
+  },
+  "loads": {
+    "required": 40,
+    "actual": 40,
+    "uniqueNonces": 40,
+    "combos": [
+      {
+        "viewer": "three",
+        "variant": "standard",
+        "modelBase": "/Dell-R730-2.5inch/model/Dell-R730-2.5inch.glb",
+        "checks": {
+          "loadCount10": true,
+          "pngCount10": true,
+          "viewOrderExact": true,
+          "cacheBusted": true,
+          "independentPageNavigations": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "three",
+        "variant": "web",
+        "modelBase": "/Dell-R730-2.5inch/model/Dell-R730-2.5inch-web.glb",
+        "checks": {
+          "loadCount10": true,
+          "pngCount10": true,
+          "viewOrderExact": true,
+          "cacheBusted": true,
+          "independentPageNavigations": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "babylon",
+        "variant": "standard",
+        "modelBase": "/Dell-R730-2.5inch/model/Dell-R730-2.5inch.glb",
+        "checks": {
+          "loadCount10": true,
+          "pngCount10": true,
+          "viewOrderExact": true,
+          "cacheBusted": true,
+          "independentPageNavigations": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "babylon",
+        "variant": "web",
+        "modelBase": "/Dell-R730-2.5inch/model/Dell-R730-2.5inch-web.glb",
+        "checks": {
+          "loadCount10": true,
+          "pngCount10": true,
+          "viewOrderExact": true,
+          "cacheBusted": true,
+          "independentPageNavigations": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      }
+    ]
+  },
+  "rotation": {
+    "yawFrames": 288,
+    "pitchCheckerFrames": 128,
+    "stableFrames": 72,
+    "combos": [
+      {
+        "viewer": "three",
+        "variant": "standard",
+        "runtime": {
+          "engine": "Three.js 179",
+          "webgl2": true,
+          "model": "/Dell-R730-2.5inch/model/Dell-R730-2.5inch.glb?cb=final-9c74ffdd",
+          "bounds": {
+            "min": [
+              -0.2412,
+              -0.04377,
+              -0.3811
+            ],
+            "max": [
+              0.2412,
+              0.04377,
+              0.36005
+            ],
+            "size": [
+              0.4824,
+              0.08754,
+              0.74115
+            ]
+          },
+          "near": 0.01,
+          "far": 10,
+          "frozenFrustum": true,
+          "loadingOverlayHidden": true,
+          "checker": "dark",
+          "overlayVisible": false
+        },
+        "checks": {
+          "analysisPass": true,
+          "yaw72x5": true,
+          "pitchChecker32": true,
+          "stable18": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "three",
+        "variant": "web",
+        "runtime": {
+          "engine": "Three.js 179",
+          "webgl2": true,
+          "model": "/Dell-R730-2.5inch/model/Dell-R730-2.5inch-web.glb?cb=final-a86fe63f",
+          "bounds": {
+            "min": [
+              -0.2412,
+              -0.04377,
+              -0.3811
+            ],
+            "max": [
+              0.2412,
+              0.04377,
+              0.36005
+            ],
+            "size": [
+              0.4824,
+              0.08754,
+              0.74115
+            ]
+          },
+          "near": 0.01,
+          "far": 10,
+          "frozenFrustum": true,
+          "loadingOverlayHidden": true,
+          "checker": "dark",
+          "overlayVisible": false
+        },
+        "checks": {
+          "analysisPass": true,
+          "yaw72x5": true,
+          "pitchChecker32": true,
+          "stable18": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "babylon",
+        "variant": "standard",
+        "runtime": {
+          "engine": "Babylon.js 8.22.2",
+          "webgl2": true,
+          "model": "/Dell-R730-2.5inch/model/Dell-R730-2.5inch.glb?cb=final-9c74ffdd",
+          "bounds": {
+            "min": [
+              -0.2412,
+              -0.04377,
+              -0.3811
+            ],
+            "max": [
+              0.2412,
+              0.04377,
+              0.36005
+            ],
+            "size": [
+              0.4824,
+              0.08754,
+              0.74115
+            ]
+          },
+          "near": 0.01,
+          "far": 10,
+          "frozenFrustum": true,
+          "loadingOverlayHidden": true,
+          "checker": "dark",
+          "overlayVisible": false
+        },
+        "checks": {
+          "analysisPass": true,
+          "yaw72x5": true,
+          "pitchChecker32": true,
+          "stable18": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "babylon",
+        "variant": "web",
+        "runtime": {
+          "engine": "Babylon.js 8.22.2",
+          "webgl2": true,
+          "model": "/Dell-R730-2.5inch/model/Dell-R730-2.5inch-web.glb?cb=final-a86fe63f",
+          "bounds": {
+            "min": [
+              -0.2412,
+              -0.04377,
+              -0.3811
+            ],
+            "max": [
+              0.2412,
+              0.04377,
+              0.36005
+            ],
+            "size": [
+              0.4824,
+              0.08754,
+              0.74115
+            ]
+          },
+          "near": 0.01,
+          "far": 10,
+          "frozenFrustum": true,
+          "loadingOverlayHidden": true,
+          "checker": "dark",
+          "overlayVisible": false
+        },
+        "checks": {
+          "analysisPass": true,
+          "yaw72x5": true,
+          "pitchChecker32": true,
+          "stable18": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      }
+    ]
+  },
+  "errors": [],
+  "errorCount": 0,
+  "status": "PASS"
+}

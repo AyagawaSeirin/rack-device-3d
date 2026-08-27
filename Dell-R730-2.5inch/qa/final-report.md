@@ -1,5 +1,7 @@
 # Dell PowerEdge R730 16-SFF 3D asset — final report
 
+> Superseded for current acceptance by `qa/rotation-review-20260827/final-report.md` and its frozen-hash `final-gate.json`. This older report is retained for lineage.
+
 ## Release decision
 
 **PASS_WITH_BOTTOM_FALLBACK**

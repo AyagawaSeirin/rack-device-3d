@@ -1,0 +1,194 @@
+{
+  "views_dir": "Dell-R730-2.5inch/views",
+  "dimensions_mm": {
+    "body_width": 444.0,
+    "front_width": 482.4,
+    "rear_width": 444.0,
+    "height": 87.3,
+    "body_depth": 684.0
+  },
+  "faces": {
+    "front": {
+      "path": "Dell-R730-2.5inch/views/front.png",
+      "errors": [
+        "long edge 1785 px is below 2048 px",
+        "content aspect ratio differs from physical ratio by 3.20%"
+      ],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        1785,
+        881
+      ],
+      "content_bbox_px": [
+        35,
+        271,
+        1752,
+        592
+      ],
+      "content_px": [
+        1717,
+        321
+      ],
+      "actual_ratio": 5.34891,
+      "expected_ratio": 5.525773,
+      "ratio_error_percent": 3.2007,
+      "core_alpha_below_250_percent": 0.00232,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 1.53042
+    },
+    "rear": {
+      "path": "Dell-R730-2.5inch/views/rear.png",
+      "errors": [
+        "long edge 1935 px is below 2048 px"
+      ],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        1935,
+        812
+      ],
+      "content_bbox_px": [
+        68,
+        222,
+        1865,
+        576
+      ],
+      "content_px": [
+        1797,
+        354
+      ],
+      "actual_ratio": 5.076271,
+      "expected_ratio": 5.085911,
+      "ratio_error_percent": 0.1895,
+      "core_alpha_below_250_percent": 0.0,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 5.84213
+    },
+    "left": {
+      "path": "Dell-R730-2.5inch/views/left.png",
+      "errors": [
+        "suspicious transparency exists inside the opaque chassis core"
+      ],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        1926,
+        817
+      ],
+      "content_bbox_px": [
+        55,
+        302,
+        1877,
+        532
+      ],
+      "content_px": [
+        1822,
+        230
+      ],
+      "actual_ratio": 7.921739,
+      "expected_ratio": 7.835052,
+      "ratio_error_percent": 1.1064,
+      "core_alpha_below_250_percent": 0.3871,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 7.46194
+    },
+    "right": {
+      "path": "Dell-R730-2.5inch/views/right.png",
+      "errors": [],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        1868,
+        842
+      ],
+      "content_bbox_px": [
+        62,
+        318,
+        1818,
+        537
+      ],
+      "content_px": [
+        1756,
+        219
+      ],
+      "actual_ratio": 8.018265,
+      "expected_ratio": 7.835052,
+      "ratio_error_percent": 2.3384,
+      "core_alpha_below_250_percent": 0.0,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 8.17289
+    },
+    "top": {
+      "path": "Dell-R730-2.5inch/views/top.png",
+      "errors": [
+        "content aspect ratio differs from physical ratio by 16.66%"
+      ],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        1011,
+        1556
+      ],
+      "content_bbox_px": [
+        129,
+        62,
+        881,
+        1452
+      ],
+      "content_px": [
+        752,
+        1390
+      ],
+      "actual_ratio": 0.541007,
+      "expected_ratio": 0.649123,
+      "ratio_error_percent": 16.6556,
+      "core_alpha_below_250_percent": 0.00122,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 1.28195
+    },
+    "bottom": {
+      "path": "Dell-R730-2.5inch/views/bottom.png",
+      "errors": [
+        "content aspect ratio differs from physical ratio by 4.33%"
+      ],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        1010,
+        1557
+      ],
+      "content_bbox_px": [
+        59,
+        54,
+        952,
+        1492
+      ],
+      "content_px": [
+        893,
+        1438
+      ],
+      "actual_ratio": 0.621001,
+      "expected_ratio": 0.649123,
+      "ratio_error_percent": 4.3322,
+      "core_alpha_below_250_percent": 0.0,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 1.07637
+    }
+  },
+  "error_count": 6,
+  "warning_count": 6,
+  "status": "REWORK"
+}

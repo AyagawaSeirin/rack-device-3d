@@ -1,0 +1,197 @@
+{
+  "views_dir": "views",
+  "dimensions_mm": {
+    "body_width": 444.0,
+    "front_width": 482.4,
+    "rear_width": 444.0,
+    "height": 87.3,
+    "body_depth": 684.0
+  },
+  "faces": {
+    "front": {
+      "path": "views/front.png",
+      "errors": [
+        "long edge 1659 px is below 2048 px"
+      ],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        1659,
+        309
+      ],
+      "content_bbox_px": [
+        0,
+        0,
+        1659,
+        309
+      ],
+      "content_px": [
+        1659,
+        309
+      ],
+      "actual_ratio": 5.368932,
+      "expected_ratio": 5.525773,
+      "ratio_error_percent": 2.8384,
+      "core_alpha_below_250_percent": 0.0,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 0.73854
+    },
+    "rear": {
+      "path": "views/rear.png",
+      "errors": [
+        "long edge 1817 px is below 2048 px",
+        "content aspect ratio differs from physical ratio by 6.56%",
+        "suspicious transparency exists inside the opaque chassis core"
+      ],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        1817,
+        866
+      ],
+      "content_bbox_px": [
+        43,
+        235,
+        1768,
+        598
+      ],
+      "content_px": [
+        1725,
+        363
+      ],
+      "actual_ratio": 4.752066,
+      "expected_ratio": 5.085911,
+      "ratio_error_percent": 6.5641,
+      "core_alpha_below_250_percent": 0.20319,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 3.69785
+    },
+    "left": {
+      "path": "views/left.png",
+      "errors": [
+        "content aspect ratio differs from physical ratio by 6.25%"
+      ],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        1962,
+        802
+      ],
+      "content_bbox_px": [
+        45,
+        277,
+        1918,
+        532
+      ],
+      "content_px": [
+        1873,
+        255
+      ],
+      "actual_ratio": 7.345098,
+      "expected_ratio": 7.835052,
+      "ratio_error_percent": 6.2534,
+      "core_alpha_below_250_percent": 0.02395,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 9.38036
+    },
+    "right": {
+      "path": "views/right.png",
+      "errors": [
+        "content aspect ratio differs from physical ratio by 23.25%"
+      ],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        1911,
+        823
+      ],
+      "content_bbox_px": [
+        48,
+        258,
+        1834,
+        555
+      ],
+      "content_px": [
+        1786,
+        297
+      ],
+      "actual_ratio": 6.013468,
+      "expected_ratio": 7.835052,
+      "ratio_error_percent": 23.2492,
+      "core_alpha_below_250_percent": 0.00027,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 6.61411
+    },
+    "top": {
+      "path": "views/top.png",
+      "errors": [
+        "content aspect ratio differs from physical ratio by 3.74%"
+      ],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        1011,
+        1556
+      ],
+      "content_bbox_px": [
+        52,
+        31,
+        958,
+        1481
+      ],
+      "content_px": [
+        906,
+        1450
+      ],
+      "actual_ratio": 0.624828,
+      "expected_ratio": 0.649123,
+      "ratio_error_percent": 3.7428,
+      "core_alpha_below_250_percent": 0.0,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 4.17447
+    },
+    "bottom": {
+      "path": "views/bottom.png",
+      "errors": [
+        "content aspect ratio differs from physical ratio by 5.14%"
+      ],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        1011,
+        1556
+      ],
+      "content_bbox_px": [
+        64,
+        61,
+        947,
+        1495
+      ],
+      "content_px": [
+        883,
+        1434
+      ],
+      "actual_ratio": 0.61576,
+      "expected_ratio": 0.649123,
+      "ratio_error_percent": 5.1397,
+      "core_alpha_below_250_percent": 0.0,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 0.76709
+    }
+  },
+  "error_count": 8,
+  "warning_count": 6,
+  "status": "REWORK"
+}
