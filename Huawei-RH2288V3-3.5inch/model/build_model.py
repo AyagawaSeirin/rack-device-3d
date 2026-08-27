@@ -28,6 +28,7 @@ HEIGHT = 86.1
 DEPTH = 748.0
 FRONT_Z = DEPTH / 2.0
 REAR_Z = -DEPTH / 2.0
+CORE_CLEARANCE = 1.0
 
 
 def material(
@@ -226,7 +227,6 @@ def add_open_front_panel(
     ) * MM
     faces = np.asarray(
         [
-            (4, 5, 6), (4, 6, 7),  # front, +Z
             (0, 4, 7), (0, 7, 3),  # left, -X
             (1, 2, 6), (1, 6, 5),  # right, +X
             (3, 7, 6), (3, 6, 2),  # top, +Y
@@ -247,7 +247,7 @@ def add_textured_shell(scene: trimesh.Scene, web: bool) -> dict[str, PBRMaterial
     add_box(
         scene,
         "Closed_Chassis_Sheet_Metal_447x748x86.1mm",
-        (BODY_W, HEIGHT, DEPTH),
+        (BODY_W - 2 * CORE_CLEARANCE, HEIGHT - 2 * CORE_CLEARANCE, DEPTH - 2 * CORE_CLEARANCE),
         (0, 0, 0),
         ZINC,
     )
@@ -256,32 +256,23 @@ def add_textured_shell(scene: trimesh.Scene, web: bool) -> dict[str, PBRMaterial
         scene,
         "Texture_FRONT_12LFF_and_Control_Ears",
         [
-            (-OVERALL_W / 2, -HEIGHT / 2, FRONT_Z + 0.10),
-            (OVERALL_W / 2, -HEIGHT / 2, FRONT_Z + 0.10),
-            (OVERALL_W / 2, HEIGHT / 2, FRONT_Z + 0.10),
-            (-OVERALL_W / 2, HEIGHT / 2, FRONT_Z + 0.10),
+            (-OVERALL_W / 2, -HEIGHT / 2, FRONT_Z),
+            (OVERALL_W / 2, -HEIGHT / 2, FRONT_Z),
+            (OVERALL_W / 2, HEIGHT / 2, FRONT_Z),
+            (-OVERALL_W / 2, HEIGHT / 2, FRONT_Z),
         ],
         tex["front"],
     )
-    add_quad(
-        scene,
-        "Texture_REAR_No_Drives_SM211_Dual_Stacked_AC",
-        [
-            (BODY_W / 2, -HEIGHT / 2, REAR_Z - 0.10),
-            (-BODY_W / 2, -HEIGHT / 2, REAR_Z - 0.10),
-            (-BODY_W / 2, HEIGHT / 2, REAR_Z - 0.10),
-            (BODY_W / 2, HEIGHT / 2, REAR_Z - 0.10),
-        ],
-        tex["rear"],
-    )
+    # Rear is fully tiled by seven source-locked backed regions below. A second
+    # full-size rear plane would overlap those same pixels during rotation.
     add_quad(
         scene,
         "Texture_LEFT_Independent",
         [
-            (-BODY_W / 2 - 0.10, -HEIGHT / 2, REAR_Z),
-            (-BODY_W / 2 - 0.10, -HEIGHT / 2, FRONT_Z),
-            (-BODY_W / 2 - 0.10, HEIGHT / 2, FRONT_Z),
-            (-BODY_W / 2 - 0.10, HEIGHT / 2, REAR_Z),
+            (-BODY_W / 2, -HEIGHT / 2, REAR_Z),
+            (-BODY_W / 2, -HEIGHT / 2, FRONT_Z),
+            (-BODY_W / 2, HEIGHT / 2, FRONT_Z),
+            (-BODY_W / 2, HEIGHT / 2, REAR_Z),
         ],
         tex["left"],
     )
@@ -289,10 +280,10 @@ def add_textured_shell(scene: trimesh.Scene, web: bool) -> dict[str, PBRMaterial
         scene,
         "Texture_RIGHT_Independent",
         [
-            (BODY_W / 2 + 0.10, -HEIGHT / 2, FRONT_Z),
-            (BODY_W / 2 + 0.10, -HEIGHT / 2, REAR_Z),
-            (BODY_W / 2 + 0.10, HEIGHT / 2, REAR_Z),
-            (BODY_W / 2 + 0.10, HEIGHT / 2, FRONT_Z),
+            (BODY_W / 2, -HEIGHT / 2, FRONT_Z),
+            (BODY_W / 2, -HEIGHT / 2, REAR_Z),
+            (BODY_W / 2, HEIGHT / 2, REAR_Z),
+            (BODY_W / 2, HEIGHT / 2, FRONT_Z),
         ],
         tex["right"],
     )
@@ -300,10 +291,10 @@ def add_textured_shell(scene: trimesh.Scene, web: bool) -> dict[str, PBRMaterial
         scene,
         "Texture_TOP_Cover",
         [
-            (BODY_W / 2, HEIGHT / 2 + 0.10, REAR_Z),
-            (-BODY_W / 2, HEIGHT / 2 + 0.10, REAR_Z),
-            (-BODY_W / 2, HEIGHT / 2 + 0.10, FRONT_Z),
-            (BODY_W / 2, HEIGHT / 2 + 0.10, FRONT_Z),
+            (BODY_W / 2, HEIGHT / 2, REAR_Z),
+            (-BODY_W / 2, HEIGHT / 2, REAR_Z),
+            (-BODY_W / 2, HEIGHT / 2, FRONT_Z),
+            (BODY_W / 2, HEIGHT / 2, FRONT_Z),
         ],
         [(1.0, 1.0), (0.0, 1.0), (0.0, 0.0), (1.0, 0.0)],
         tex["top"],
@@ -312,10 +303,10 @@ def add_textured_shell(scene: trimesh.Scene, web: bool) -> dict[str, PBRMaterial
         scene,
         "Texture_BOTTOM_Generic_Fallback",
         [
-            (-BODY_W / 2, -HEIGHT / 2 - 0.10, REAR_Z),
-            (BODY_W / 2, -HEIGHT / 2 - 0.10, REAR_Z),
-            (BODY_W / 2, -HEIGHT / 2 - 0.10, FRONT_Z),
-            (-BODY_W / 2, -HEIGHT / 2 - 0.10, FRONT_Z),
+            (-BODY_W / 2, -HEIGHT / 2, REAR_Z),
+            (BODY_W / 2, -HEIGHT / 2, REAR_Z),
+            (BODY_W / 2, -HEIGHT / 2, FRONT_Z),
+            (-BODY_W / 2, -HEIGHT / 2, FRONT_Z),
         ],
         tex["bottom"],
     )
@@ -339,14 +330,15 @@ def add_front_relief_region(
     v_bottom, v_top = 1.0 - image_y1 / image_height, 1.0 - image_y0 / image_height
     width = physical_x_max - physical_x_min
     height = physical_y_top - physical_y_bottom
+    backing_front = front_z - 0.70
     add_box(
         scene,
         f"{name}_Backing",
-        (width, height, front_z - FRONT_Z),
+        (width, height, backing_front - FRONT_Z),
         (
             (physical_x_min + physical_x_max) / 2.0,
             (physical_y_bottom + physical_y_top) / 2.0,
-            (FRONT_Z + front_z) / 2.0,
+            (FRONT_Z + backing_front) / 2.0,
         ),
         CHARCOAL,
     )
@@ -457,6 +449,22 @@ def add_rear_relief_region(
     physical_y_bottom = HEIGHT / 2.0 - (y1 / image_height) * HEIGHT
     u0, u1 = x0 / image_width, x1 / image_width
     v0, v1 = 1.0 - y1 / image_height, 1.0 - y0 / image_height
+    width = physical_x_max - physical_x_min
+    height = physical_y_top - physical_y_bottom
+    backing_plane = front_z + 0.70
+    backing_depth = REAR_Z - backing_plane
+    if backing_depth > 0:
+        add_box(
+            scene,
+            f"{name}_Stable_Backing",
+            (width, height, backing_depth),
+            (
+                (physical_x_min + physical_x_max) / 2.0,
+                (physical_y_bottom + physical_y_top) / 2.0,
+                (REAR_Z + backing_plane) / 2.0,
+            ),
+            ZINC_DARK,
+        )
     add_quad_uv(
         scene,
         name,
@@ -472,9 +480,32 @@ def add_rear_relief_region(
 
 
 def add_rear_geometry(scene: trimesh.Scene, rear_mat: PBRMaterial) -> None:
+    # The exact rear photograph is partitioned into seven independently backed
+    # mechanical regions. Earlier procedural port/slot boxes occupied the same
+    # pixels a second time and created coplanar draw-order hazards. Keep the
+    # source-locked regions as the sole visible surfaces; retain only real PSU
+    # cord-loop silhouette outside them.
+    regions = (
+        ("REAR_Relief_IO_Module_2", (0, 0, 1320, 610), REAR_Z - 1.0),
+        ("REAR_Relief_SM211", (0, 610, 1320, 789), REAR_Z - 1.7),
+        ("REAR_Relief_Onboard_Slots_4_5", (1320, 0, 1850, 789), REAR_Z - 1.1),
+        ("REAR_Relief_IO_Module_1", (1850, 0, 3200, 610), REAR_Z - 1.0),
+        ("REAR_Relief_Management_Console", (1850, 610, 3200, 789), REAR_Z - 1.7),
+        ("REAR_Relief_AC_PSU_1", (3200, 0, 4096, 394), REAR_Z - 4.2),
+        ("REAR_Relief_AC_PSU_2", (3200, 394, 4096, 789), REAR_Z - 4.2),
+    )
+    for name, pixel_box, plane in regions:
+        add_rear_relief_region(scene, name, pixel_box, plane, rear_mat)
+    psu_x = -177.0
+    for index, y in enumerate((21.0, -21.0), start=1):
+        fan_x = psu_x + 22.0
+        add_box(scene, f"REAR_AC_PSU_{index}_Cord_Loop_Mid", (38.0, 3.0, 4.0), (fan_x, y, REAR_Z - 7.2), BLACK)
+        add_box(scene, f"REAR_AC_PSU_{index}_Cord_Loop_Outer", (3.0, 30.0, 4.0), (fan_x + 18.0, y, REAR_Z - 7.2), BLACK)
+    return
+
     # Untextured backing geometry remains inside the exact photographic relief
     # surfaces below, avoiding flat icon-like overlays in the final rear view.
-    z = REAR_Z + 2.00
+    z = REAR_Z + 1.20
 
     # Screen-left in a straight rear view is +X in the canonical frame.
     for row, y in enumerate((29.0, 8.0, -13.0)):
@@ -549,8 +580,8 @@ def add_rear_geometry(scene: trimesh.Scene, rear_mat: PBRMaterial) -> None:
     add_rear_relief_region(scene, "REAR_Relief_Onboard_Slots_4_5", (1320, 0, 1850, 789), REAR_Z - 1.1, rear_mat)
     add_rear_relief_region(scene, "REAR_Relief_IO_Module_1", (1850, 0, 3200, 610), REAR_Z - 1.0, rear_mat)
     add_rear_relief_region(scene, "REAR_Relief_Management_Console", (1850, 610, 3200, 789), REAR_Z - 1.7, rear_mat)
-    add_rear_relief_region(scene, "REAR_Relief_AC_PSU_1", (3200, 0, 4096, 394), REAR_Z - 3.0, rear_mat)
-    add_rear_relief_region(scene, "REAR_Relief_AC_PSU_2", (3200, 394, 4096, 789), REAR_Z - 3.0, rear_mat)
+    add_rear_relief_region(scene, "REAR_Relief_AC_PSU_1", (3200, 0, 4096, 394), REAR_Z - 4.2, rear_mat)
+    add_rear_relief_region(scene, "REAR_Relief_AC_PSU_2", (3200, 394, 4096, 789), REAR_Z - 4.2, rear_mat)
 
 
 def add_top_relief_region(
@@ -601,7 +632,7 @@ def add_side_and_top_geometry(scene: trimesh.Scene, top_mat: PBRMaterial) -> Non
         scene,
         "TOP_Service_Latch_Source_Locked_Relief",
         (820, 1360, 1016, 1910),
-        HEIGHT / 2 + 0.22,
+        HEIGHT / 2 + 0.75,
         top_mat,
     )
 

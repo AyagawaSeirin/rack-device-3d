@@ -1,0 +1,929 @@
+{
+  "generatedAt": "2026-08-27T10:54:53.515Z",
+  "pageUrl": "http://127.0.0.1:8877/Huawei-RH2288V3-3.5inch/qa/rotation-review/viewers/three.html?model=/Huawei-RH2288V3-3.5inch/model/Huawei-RH2288V3-3.5inch.glb&variant=final-standard&bg=light&output=/Huawei-RH2288V3-3.5inch/qa/rotation-review/after/three/standard&chunk=2",
+  "viewer": {
+    "engine": "Three.js r180",
+    "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "model": "/Huawei-RH2288V3-3.5inch/model/Huawei-RH2288V3-3.5inch.glb",
+    "variant": "final-standard",
+    "pose": {
+      "yaw": 265,
+      "pitch": 15,
+      "bg": "dark"
+    },
+    "bounds": [
+      0.48260000348091125,
+      0.08684999868273735,
+      0.7592200040817261
+    ],
+    "camera": {
+      "position": [
+        -1.2565624962192494,
+        0.3379810259441626,
+        -0.10993497343102115
+      ],
+      "near": 0.007254768927892049,
+      "far": 15.670300884246824
+    },
+    "materials": [
+      {
+        "mesh": "Closed_Chassis_Sheet_Metal_447x748x861mm",
+        "material": "Galvanized zinc sheet metal",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Texture_FRONT_12LFF_and_Control_Ears",
+        "material": "FRONT approved evidence texture",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Texture_LEFT_Independent",
+        "material": "LEFT approved evidence texture",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Texture_RIGHT_Independent",
+        "material": "RIGHT approved evidence texture",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Texture_TOP_Cover",
+        "material": "TOP approved evidence texture",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "Texture_BOTTOM_Generic_Fallback",
+        "material": "BOTTOM approved evidence texture",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "FRONT_Control_Rack_Ear_L",
+        "material": "Black grille and connector",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "FRONT_Control_Rack_Ear_R",
+        "material": "Black grille and connector",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "FRONT_LFF_Carrier_00_R0_C0_Backing",
+        "material": "Dark carrier/control polymer",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "FRONT_LFF_Carrier_00_R0_C0_Source_Locked_Relief",
+        "material": "FRONT approved evidence texture",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "FRONT_LFF_Carrier_01_R0_C1_Backing",
+        "material": "Dark carrier/control polymer",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "FRONT_LFF_Carrier_01_R0_C1_Source_Locked_Relief",
+        "material": "FRONT approved evidence texture",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "FRONT_LFF_Carrier_02_R0_C2_Backing",
+        "material": "Dark carrier/control polymer",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "FRONT_LFF_Carrier_02_R0_C2_Source_Locked_Relief",
+        "material": "FRONT approved evidence texture",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "FRONT_LFF_Carrier_03_R0_C3_Backing",
+        "material": "Dark carrier/control polymer",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "FRONT_LFF_Carrier_03_R0_C3_Source_Locked_Relief",
+        "material": "FRONT approved evidence texture",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "FRONT_LFF_Carrier_04_R1_C0_Backing",
+        "material": "Dark carrier/control polymer",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "FRONT_LFF_Carrier_04_R1_C0_Source_Locked_Relief",
+        "material": "FRONT approved evidence texture",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "FRONT_LFF_Carrier_05_R1_C1_Backing",
+        "material": "Dark carrier/control polymer",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "FRONT_LFF_Carrier_05_R1_C1_Source_Locked_Relief",
+        "material": "FRONT approved evidence texture",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "FRONT_LFF_Carrier_06_R1_C2_Backing",
+        "material": "Dark carrier/control polymer",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "FRONT_LFF_Carrier_06_R1_C2_Source_Locked_Relief",
+        "material": "FRONT approved evidence texture",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "FRONT_LFF_Carrier_07_R1_C3_Backing",
+        "material": "Dark carrier/control polymer",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "FRONT_LFF_Carrier_07_R1_C3_Source_Locked_Relief",
+        "material": "FRONT approved evidence texture",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "FRONT_LFF_Carrier_08_R2_C0_Backing",
+        "material": "Dark carrier/control polymer",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "FRONT_LFF_Carrier_08_R2_C0_Source_Locked_Relief",
+        "material": "FRONT approved evidence texture",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "FRONT_LFF_Carrier_09_R2_C1_Backing",
+        "material": "Dark carrier/control polymer",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "FRONT_LFF_Carrier_09_R2_C1_Source_Locked_Relief",
+        "material": "FRONT approved evidence texture",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "FRONT_LFF_Carrier_10_R2_C2_Backing",
+        "material": "Dark carrier/control polymer",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "FRONT_LFF_Carrier_10_R2_C2_Source_Locked_Relief",
+        "material": "FRONT approved evidence texture",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "FRONT_LFF_Carrier_11_R2_C3_Backing",
+        "material": "Dark carrier/control polymer",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "FRONT_LFF_Carrier_11_R2_C3_Source_Locked_Relief",
+        "material": "FRONT approved evidence texture",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "REAR_Relief_IO_Module_2_Stable_Backing",
+        "material": "Galvanized recessed metal",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "REAR_Relief_IO_Module_2",
+        "material": "REAR approved evidence texture",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "REAR_Relief_SM211_Stable_Backing",
+        "material": "Galvanized recessed metal",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "REAR_Relief_SM211",
+        "material": "REAR approved evidence texture",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "REAR_Relief_Onboard_Slots_4_5_Stable_Backing",
+        "material": "Galvanized recessed metal",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "REAR_Relief_Onboard_Slots_4_5",
+        "material": "REAR approved evidence texture",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "REAR_Relief_IO_Module_1_Stable_Backing",
+        "material": "Galvanized recessed metal",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "REAR_Relief_IO_Module_1",
+        "material": "REAR approved evidence texture",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "REAR_Relief_Management_Console_Stable_Backing",
+        "material": "Galvanized recessed metal",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "REAR_Relief_Management_Console",
+        "material": "REAR approved evidence texture",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "REAR_Relief_AC_PSU_1_Stable_Backing",
+        "material": "Galvanized recessed metal",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "REAR_Relief_AC_PSU_1",
+        "material": "REAR approved evidence texture",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "REAR_Relief_AC_PSU_2_Stable_Backing",
+        "material": "Galvanized recessed metal",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "REAR_Relief_AC_PSU_2",
+        "material": "REAR approved evidence texture",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "REAR_AC_PSU_1_Cord_Loop_Mid",
+        "material": "Black grille and connector",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "REAR_AC_PSU_1_Cord_Loop_Outer",
+        "material": "Black grille and connector",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "REAR_AC_PSU_2_Cord_Loop_Mid",
+        "material": "Black grille and connector",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "REAR_AC_PSU_2_Cord_Loop_Outer",
+        "material": "Black grille and connector",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "LEFT_Upper_Rail_Lip",
+        "material": "Galvanized zinc sheet metal",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "RIGHT_Upper_Rail_Lip",
+        "material": "Galvanized zinc sheet metal",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "LEFT_Panel_Fastener_0",
+        "material": "Fastener and fan-guard silver",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "LEFT_Panel_Fastener_1",
+        "material": "Fastener and fan-guard silver",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "LEFT_Panel_Fastener_2",
+        "material": "Fastener and fan-guard silver",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "LEFT_Panel_Fastener_3",
+        "material": "Fastener and fan-guard silver",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "LEFT_Panel_Fastener_4",
+        "material": "Fastener and fan-guard silver",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "RIGHT_Panel_Fastener_0",
+        "material": "Fastener and fan-guard silver",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "RIGHT_Panel_Fastener_1",
+        "material": "Fastener and fan-guard silver",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "RIGHT_Panel_Fastener_2",
+        "material": "Fastener and fan-guard silver",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "RIGHT_Panel_Fastener_3",
+        "material": "Fastener and fan-guard silver",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "RIGHT_Panel_Fastener_4",
+        "material": "Fastener and fan-guard silver",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "RIGHT_Panel_Fastener_5",
+        "material": "Fastener and fan-guard silver",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      },
+      {
+        "mesh": "TOP_Service_Latch_Source_Locked_Relief",
+        "material": "TOP approved evidence texture",
+        "transparent": false,
+        "opacity": 1,
+        "side": 0,
+        "depthWrite": true,
+        "alphaTest": 0
+      }
+    ],
+    "renderer": {
+      "alpha": true,
+      "outputColorSpace": "srgb",
+      "toneMapping": 0
+    }
+  },
+  "yawStepDegrees": 5,
+  "chunk": 2,
+  "yawFrameCount": 18,
+  "pitchKeyframeCount": 0,
+  "totalFrameCount": 18,
+  "backgrounds": [
+    "light-checkerboard",
+    "dark-checkerboard"
+  ],
+  "frames": [
+    {
+      "index": 36,
+      "kind": "yaw",
+      "yaw": 180,
+      "pitch": 15,
+      "bg": "dark",
+      "filename": "036-yaw-180-pitch-015-dark.png",
+      "camera": {
+        "position": [
+          1.5447233777405528e-16,
+          0.3379810259441625,
+          -1.2613623608178697
+        ],
+        "near": 0.007254768927892049,
+        "far": 15.670300884246824
+      }
+    },
+    {
+      "index": 37,
+      "kind": "yaw",
+      "yaw": 185,
+      "pitch": 15,
+      "bg": "dark",
+      "filename": "037-yaw-185-pitch-015-dark.png",
+      "camera": {
+        "position": [
+          -0.10993497343102054,
+          0.3379810259441626,
+          -1.2565624962192494
+        ],
+        "near": 0.007254768927892049,
+        "far": 15.670300884246824
+      }
+    },
+    {
+      "index": 38,
+      "kind": "yaw",
+      "yaw": 190,
+      "pitch": 15,
+      "bg": "dark",
+      "filename": "038-yaw-190-pitch-015-dark.png",
+      "camera": {
+        "position": [
+          -0.2190332753336806,
+          0.33798102594416257,
+          -1.2421994322912204
+        ],
+        "near": 0.007254768927892049,
+        "far": 15.670300884246824
+      }
+    },
+    {
+      "index": 39,
+      "kind": "yaw",
+      "yaw": 195,
+      "pitch": 15,
+      "bg": "dark",
+      "filename": "039-yaw-195-pitch-015-dark.png",
+      "camera": {
+        "position": [
+          -0.326464601755142,
+          0.3379810259441625,
+          -1.2183824806229306
+        ],
+        "near": 0.007254768927892049,
+        "far": 15.670300884246824
+      }
+    },
+    {
+      "index": 40,
+      "kind": "yaw",
+      "yaw": 200,
+      "pitch": 15,
+      "bg": "dark",
+      "filename": "040-yaw-200-pitch-015-dark.png",
+      "camera": {
+        "position": [
+          -0.4314113354325318,
+          0.33798102594416246,
+          -1.1852929025976442
+        ],
+        "near": 0.007254768927892049,
+        "far": 15.670300884246824
+      }
+    },
+    {
+      "index": 41,
+      "kind": "yaw",
+      "yaw": 205,
+      "pitch": 15,
+      "bg": "dark",
+      "filename": "041-yaw-205-pitch-015-dark.png",
+      "camera": {
+        "position": [
+          -0.5330747683539926,
+          0.3379810259441625,
+          -1.143182529884168
+        ],
+        "near": 0.007254768927892049,
+        "far": 15.670300884246824
+      }
+    },
+    {
+      "index": 42,
+      "kind": "yaw",
+      "yaw": 210,
+      "pitch": 15,
+      "bg": "dark",
+      "filename": "042-yaw-210-pitch-015-dark.png",
+      "camera": {
+        "position": [
+          -0.630681180408935,
+          0.3379810259441627,
+          -1.092371847845789
+        ],
+        "near": 0.007254768927892049,
+        "far": 15.670300884246824
+      }
+    },
+    {
+      "index": 43,
+      "kind": "yaw",
+      "yaw": 215,
+      "pitch": 15,
+      "bg": "dark",
+      "filename": "043-yaw-215-pitch-015-dark.png",
+      "camera": {
+        "position": [
+          -0.7234877278652564,
+          0.3379810259441625,
+          -1.0332475564531465
+        ],
+        "near": 0.007254768927892049,
+        "far": 15.670300884246824
+      }
+    },
+    {
+      "index": 44,
+      "kind": "yaw",
+      "yaw": 220,
+      "pitch": 15,
+      "bg": "dark",
+      "filename": "044-yaw-220-pitch-015-dark.png",
+      "camera": {
+        "position": [
+          -0.8107880968586884,
+          0.3379810259441625,
+          -0.9662596272639646
+        ],
+        "near": 0.007254768927892049,
+        "far": 15.670300884246824
+      }
+    },
+    {
+      "index": 45,
+      "kind": "yaw",
+      "yaw": 225,
+      "pitch": 15,
+      "bg": "dark",
+      "filename": "045-yaw-225-pitch-015-dark.png",
+      "camera": {
+        "position": [
+          -0.8919178788677884,
+          0.3379810259441625,
+          -0.8919178788677883
+        ],
+        "near": 0.007254768927892049,
+        "far": 15.670300884246824
+      }
+    },
+    {
+      "index": 46,
+      "kind": "yaw",
+      "yaw": 230,
+      "pitch": 15,
+      "bg": "dark",
+      "filename": "046-yaw-230-pitch-015-dark.png",
+      "camera": {
+        "position": [
+          -0.9662596272639645,
+          0.33798102594416257,
+          -0.8107880968586888
+        ],
+        "near": 0.007254768927892049,
+        "far": 15.670300884246824
+      }
+    },
+    {
+      "index": 47,
+      "kind": "yaw",
+      "yaw": 235,
+      "pitch": 15,
+      "bg": "dark",
+      "filename": "047-yaw-235-pitch-015-dark.png",
+      "camera": {
+        "position": [
+          -1.0332475564531467,
+          0.3379810259441626,
+          -0.723487727865257
+        ],
+        "near": 0.007254768927892049,
+        "far": 15.670300884246824
+      }
+    },
+    {
+      "index": 48,
+      "kind": "yaw",
+      "yaw": 240,
+      "pitch": 15,
+      "bg": "dark",
+      "filename": "048-yaw-240-pitch-015-dark.png",
+      "camera": {
+        "position": [
+          -1.092371847845788,
+          0.3379810259441625,
+          -0.6306811804089355
+        ],
+        "near": 0.007254768927892049,
+        "far": 15.670300884246824
+      }
+    },
+    {
+      "index": 49,
+      "kind": "yaw",
+      "yaw": 245,
+      "pitch": 15,
+      "bg": "dark",
+      "filename": "049-yaw-245-pitch-015-dark.png",
+      "camera": {
+        "position": [
+          -1.1431825298841685,
+          0.3379810259441627,
+          -0.533074768353993
+        ],
+        "near": 0.007254768927892049,
+        "far": 15.670300884246824
+      }
+    },
+    {
+      "index": 50,
+      "kind": "yaw",
+      "yaw": 250,
+      "pitch": 15,
+      "bg": "dark",
+      "filename": "050-yaw-250-pitch-015-dark.png",
+      "camera": {
+        "position": [
+          -1.1852929025976442,
+          0.3379810259441624,
+          -0.4314113354325312
+        ],
+        "near": 0.007254768927892049,
+        "far": 15.670300884246824
+      }
+    },
+    {
+      "index": 51,
+      "kind": "yaw",
+      "yaw": 255,
+      "pitch": 15,
+      "bg": "dark",
+      "filename": "051-yaw-255-pitch-015-dark.png",
+      "camera": {
+        "position": [
+          -1.2183824806229304,
+          0.33798102594416246,
+          -0.326464601755142
+        ],
+        "near": 0.007254768927892049,
+        "far": 15.670300884246824
+      }
+    },
+    {
+      "index": 52,
+      "kind": "yaw",
+      "yaw": 260,
+      "pitch": 15,
+      "bg": "dark",
+      "filename": "052-yaw-260-pitch-015-dark.png",
+      "camera": {
+        "position": [
+          -1.2421994322912198,
+          0.3379810259441624,
+          -0.21903327533368
+        ],
+        "near": 0.007254768927892049,
+        "far": 15.670300884246824
+      }
+    },
+    {
+      "index": 53,
+      "kind": "yaw",
+      "yaw": 265,
+      "pitch": 15,
+      "bg": "dark",
+      "filename": "053-yaw-265-pitch-015-dark.png",
+      "camera": {
+        "position": [
+          -1.2565624962192494,
+          0.3379810259441626,
+          -0.10993497343102115
+        ],
+        "near": 0.007254768927892049,
+        "far": 15.670300884246824
+      }
+    }
+  ]
+}

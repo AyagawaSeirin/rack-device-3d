@@ -1,0 +1,94 @@
+{
+  "model": "Huawei-RH2288V3-3.5inch",
+  "review_date": "2026-08-27",
+  "frozen_identity": {
+    "pid": "Huawei FusionServer RH2288 V3",
+    "nameplate": "H22M-03",
+    "height": "2U",
+    "variant": "12 x 3.5-inch common LFF, no bezel, no rear disk module",
+    "installed_configuration": "SM211 2xGE, blank photographed PCIe positions, two stacked WEPW80015 460 W AC PSUs, independent left/right shells",
+    "bottom_mode": "GENERIC_BOTTOM_FALLBACK"
+  },
+  "glb_hashes": {
+    "before_standard": "274f7f7dc399c3dfc187c4c5b74d4c34fbbe76d93475ad8455fcfa4d68772e3c",
+    "before_web": "0bf68be256a5e69ac79acd0c0411802519289c17be87852550dda0ec94f1398a",
+    "after_standard": "acd512a706c8f546e6bab8e20884b3cafa7fef230a22047c2a0f764d90f900c2",
+    "after_web": "175eb3aadf23be5f50f38206ace84797cebe53a1743cb56d0016126c2051df71"
+  },
+  "before_reproduction": {
+    "viewer_combinations": 4,
+    "frames_per_combination": 84,
+    "total_frames": 336,
+    "gross_whole_device_disappearance_observed": false,
+    "result": "REWORK",
+    "finding": "Both engines exposed the same model-side draw-order risk: source cards, procedural face/rear relief, and the full closed core used coplanar or sub-threshold parallel planes. Subtle edge/layer instability was reproducible even though no whole-device disappearance occurred in the 5-degree sample."
+  },
+  "root_causes": [
+    "Canonical face cards and the previous full-size chassis core were coplanar or too closely parallel.",
+    "The rear photograph and procedural rear ports/slot covers represented the same surface twice.",
+    "Front ear/carrier backing and top latch relief contained competing near-surface planes."
+  ],
+  "repairs": [
+    "Inset the watertight core by 1 mm and put canonical face planes on the physical exterior planes.",
+    "Removed the duplicate front-ear cap and left source-locked front pixels as the sole face representation.",
+    "Replaced the full rear card plus duplicate procedural rear detail with seven non-overlapping source-locked rear regions and stable 0.7 mm backings.",
+    "Disabled duplicate procedural rear port/slot surfaces while retaining source-proven cord-loop silhouette geometry.",
+    "Moved top latch and carrier backing to stable, non-competing depth levels; no source-locked PNG was regenerated."
+  ],
+  "final_structural_gate": {
+    "status": "PASS",
+    "standard_and_web": {
+      "materials": "OPAQUE only; baseColor alpha 1; doubleSided false",
+      "embedded_alpha_lt_255_pixels": 0,
+      "negative_transforms": 0,
+      "exact_duplicate_triangle_groups": 0,
+      "opposite_orientation_duplicate_groups": 0,
+      "hazardous_coplanar_pairs": 0,
+      "hazardous_near_coplanar_pairs": 0,
+      "raw_sub_1mm2_solid_joint_pairs": 2,
+      "closed_core": "watertight, winding-consistent, positive volume"
+    }
+  },
+  "standard_audits": {
+    "views": {"status": "PASS", "errors": 0, "warnings": 6, "warning_scope": "anti-aliased silhouette-edge alpha only"},
+    "standard_glb": {"status": "PASS", "errors": 0, "warnings": 0},
+    "web_glb": {"status": "PASS", "errors": 0, "warnings": 0},
+    "standard_web_visible_geometry_parity": "PASS"
+  },
+  "final_browser_gate": {
+    "viewers": ["Three.js r180 / WebGL 2.0 Chromium", "Babylon.js 9.23.0 / WebGL 2"],
+    "combinations": 4,
+    "yaw_step_degrees": 5,
+    "yaw_frames_per_combination": 72,
+    "pitch_keyframes_per_combination": 12,
+    "rotation_frames_per_combination": 84,
+    "total_rotation_frames": 336,
+    "specified_static_loads_per_combination": 10,
+    "total_specified_static_loads": 40,
+    "light_and_dark_checkerboards": true,
+    "visual_findings": {
+      "surface_flicker": false,
+      "transparency_jump": false,
+      "checkerboard_leak": false,
+      "face_disappearance": false,
+      "mirroring": false,
+      "texture_switch": false,
+      "sudden_gray": false
+    },
+    "status": "PASS"
+  },
+  "evidence": {
+    "before": "qa/rotation-review/before/{three,babylon}/{standard,web}/",
+    "after": "qa/rotation-review/after/{three,babylon}/{standard,web}/",
+    "matched_camera": "qa/rotation-review/after/matched-camera/contact-sheet.png",
+    "feature_inventory_review": "qa/rotation-review/after/feature-inventory-review.csv",
+    "structural_audit": "qa/rotation-review/after/structural-rotation-audit.json"
+  },
+  "authenticity_conclusion": "PASS_WITH_BOTTOM_FALLBACK: all identity-bearing front/rear/side/top features match the frozen H22M-03 12-LFF delivery configuration. No non-bottom identity gap remains.",
+  "warnings_and_residual_risk": [
+    "The underside remains a deliberately plain, opaque generic material fallback; no unsupported bottom detail is claimed.",
+    "Two reported coplanar contacts are each below 1 mm^2 and belong to solid cord-loop joints; they are not visible draw-order surfaces."
+  ],
+  "status": "PASS_WITH_BOTTOM_FALLBACK"
+}
+

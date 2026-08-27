@@ -1,0 +1,540 @@
+{
+  "near_coplanar_threshold_mm": 0.5,
+  "models": [
+    {
+      "path": "Huawei-RH2288V3-3.5inch/model/Huawei-RH2288V3-3.5inch.glb",
+      "bytes": 20963904,
+      "sha256": "acd512a706c8f546e6bab8e20884b3cafa7fef230a22047c2a0f764d90f900c2",
+      "materials": [
+        {
+          "index": 0,
+          "name": "Galvanized zinc sheet metal",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            0.6431372549019608,
+            0.6666666666666666,
+            0.6784313725490196,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 1,
+          "name": "FRONT approved evidence texture",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 2,
+          "name": "LEFT approved evidence texture",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 3,
+          "name": "RIGHT approved evidence texture",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 4,
+          "name": "TOP approved evidence texture",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 5,
+          "name": "BOTTOM approved evidence texture",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 6,
+          "name": "Black grille and connector",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            0.0392156862745098,
+            0.047058823529411764,
+            0.050980392156862744,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 7,
+          "name": "Dark carrier/control polymer",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            0.13333333333333333,
+            0.1450980392156863,
+            0.15294117647058825,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 8,
+          "name": "Galvanized recessed metal",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            0.39215686274509803,
+            0.4196078431372549,
+            0.43137254901960786,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 9,
+          "name": "REAR approved evidence texture",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 10,
+          "name": "Fastener and fan-guard silver",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            0.7607843137254902,
+            0.7803921568627451,
+            0.792156862745098,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        }
+      ],
+      "images": [
+        {
+          "index": 0,
+          "size": [
+            4096,
+            731
+          ],
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "alpha_lt_255_pixels": 0,
+          "alpha_between_0_255_pixels": 0
+        },
+        {
+          "index": 1,
+          "size": [
+            4096,
+            471
+          ],
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "alpha_lt_255_pixels": 0,
+          "alpha_between_0_255_pixels": 0
+        },
+        {
+          "index": 2,
+          "size": [
+            4096,
+            471
+          ],
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "alpha_lt_255_pixels": 0,
+          "alpha_between_0_255_pixels": 0
+        },
+        {
+          "index": 3,
+          "size": [
+            1836,
+            3072
+          ],
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "alpha_lt_255_pixels": 0,
+          "alpha_between_0_255_pixels": 0
+        },
+        {
+          "index": 4,
+          "size": [
+            1836,
+            3072
+          ],
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "alpha_lt_255_pixels": 0,
+          "alpha_between_0_255_pixels": 0
+        },
+        {
+          "index": 5,
+          "size": [
+            4096,
+            789
+          ],
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "alpha_lt_255_pixels": 0,
+          "alpha_between_0_255_pixels": 0
+        }
+      ],
+      "negative_world_transforms": [],
+      "closed_core_candidates": [
+        {
+          "name": "Closed_Chassis_Sheet_Metal_447x748x86.1mm",
+          "watertight": true,
+          "winding_consistent": true,
+          "volume": 0.027918676433884262,
+          "bounds": [
+            [
+              -0.2225,
+              -0.04205,
+              -0.373
+            ],
+            [
+              0.2225,
+              0.04205,
+              0.373
+            ]
+          ]
+        }
+      ],
+      "geometry": {
+        "triangle_count": 1170,
+        "exact_duplicate_triangle_groups": [],
+        "opposite_orientation_duplicate_groups": [],
+        "coplanar_overlap_pairs": [
+          {
+            "mesh_a": "REAR_AC_PSU_2_Cord_Loop_Outer",
+            "mesh_b": "REAR_AC_PSU_2_Cord_Loop_Mid",
+            "axis": 2,
+            "separation_mm": 0.0,
+            "overlap_area_mm2": 0.217964
+          },
+          {
+            "mesh_a": "REAR_AC_PSU_1_Cord_Loop_Outer",
+            "mesh_b": "REAR_AC_PSU_1_Cord_Loop_Mid",
+            "axis": 2,
+            "separation_mm": 0.0,
+            "overlap_area_mm2": 0.217964
+          }
+        ],
+        "near_coplanar_overlap_pairs_under_threshold": [],
+        "near_coplanar_threshold_mm": 0.5,
+        "hazardous_coplanar_overlap_pairs": [],
+        "hazardous_near_coplanar_overlap_pairs": [],
+        "tolerance_note": "Sub-1 mm^2 solid-junction contacts and internal closed-core contacts are reported but are not draw-order hazards."
+      },
+      "failures": [],
+      "status": "PASS"
+    },
+    {
+      "path": "Huawei-RH2288V3-3.5inch/model/Huawei-RH2288V3-3.5inch-web.glb",
+      "bytes": 9897424,
+      "sha256": "175eb3aadf23be5f50f38206ace84797cebe53a1743cb56d0016126c2051df71",
+      "materials": [
+        {
+          "index": 0,
+          "name": "Galvanized zinc sheet metal",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            0.6431372549019608,
+            0.6666666666666666,
+            0.6784313725490196,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 1,
+          "name": "FRONT approved evidence texture WEB",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 2,
+          "name": "LEFT approved evidence texture WEB",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 3,
+          "name": "RIGHT approved evidence texture WEB",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 4,
+          "name": "TOP approved evidence texture WEB",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 5,
+          "name": "BOTTOM approved evidence texture WEB",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 6,
+          "name": "Black grille and connector",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            0.0392156862745098,
+            0.047058823529411764,
+            0.050980392156862744,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 7,
+          "name": "Dark carrier/control polymer",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            0.13333333333333333,
+            0.1450980392156863,
+            0.15294117647058825,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 8,
+          "name": "Galvanized recessed metal",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            0.39215686274509803,
+            0.4196078431372549,
+            0.43137254901960786,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 9,
+          "name": "REAR approved evidence texture WEB",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        },
+        {
+          "index": 10,
+          "name": "Fastener and fan-guard silver",
+          "alphaMode": "OPAQUE",
+          "baseColorFactor": [
+            0.7607843137254902,
+            0.7803921568627451,
+            0.792156862745098,
+            1.0
+          ],
+          "doubleSided": false,
+          "unlit": false
+        }
+      ],
+      "images": [
+        {
+          "index": 0,
+          "size": [
+            2048,
+            366
+          ],
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "alpha_lt_255_pixels": 0,
+          "alpha_between_0_255_pixels": 0
+        },
+        {
+          "index": 1,
+          "size": [
+            2048,
+            236
+          ],
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "alpha_lt_255_pixels": 0,
+          "alpha_between_0_255_pixels": 0
+        },
+        {
+          "index": 2,
+          "size": [
+            2048,
+            236
+          ],
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "alpha_lt_255_pixels": 0,
+          "alpha_between_0_255_pixels": 0
+        },
+        {
+          "index": 3,
+          "size": [
+            1224,
+            2048
+          ],
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "alpha_lt_255_pixels": 0,
+          "alpha_between_0_255_pixels": 0
+        },
+        {
+          "index": 4,
+          "size": [
+            1224,
+            2048
+          ],
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "alpha_lt_255_pixels": 0,
+          "alpha_between_0_255_pixels": 0
+        },
+        {
+          "index": 5,
+          "size": [
+            2048,
+            394
+          ],
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "alpha_lt_255_pixels": 0,
+          "alpha_between_0_255_pixels": 0
+        }
+      ],
+      "negative_world_transforms": [],
+      "closed_core_candidates": [
+        {
+          "name": "Closed_Chassis_Sheet_Metal_447x748x86.1mm",
+          "watertight": true,
+          "winding_consistent": true,
+          "volume": 0.027918676433884262,
+          "bounds": [
+            [
+              -0.2225,
+              -0.04205,
+              -0.373
+            ],
+            [
+              0.2225,
+              0.04205,
+              0.373
+            ]
+          ]
+        }
+      ],
+      "geometry": {
+        "triangle_count": 1170,
+        "exact_duplicate_triangle_groups": [],
+        "opposite_orientation_duplicate_groups": [],
+        "coplanar_overlap_pairs": [
+          {
+            "mesh_a": "REAR_AC_PSU_2_Cord_Loop_Outer",
+            "mesh_b": "REAR_AC_PSU_2_Cord_Loop_Mid",
+            "axis": 2,
+            "separation_mm": 0.0,
+            "overlap_area_mm2": 0.217964
+          },
+          {
+            "mesh_a": "REAR_AC_PSU_1_Cord_Loop_Outer",
+            "mesh_b": "REAR_AC_PSU_1_Cord_Loop_Mid",
+            "axis": 2,
+            "separation_mm": 0.0,
+            "overlap_area_mm2": 0.217964
+          }
+        ],
+        "near_coplanar_overlap_pairs_under_threshold": [],
+        "near_coplanar_threshold_mm": 0.5,
+        "hazardous_coplanar_overlap_pairs": [],
+        "hazardous_near_coplanar_overlap_pairs": [],
+        "tolerance_note": "Sub-1 mm^2 solid-junction contacts and internal closed-core contacts are reported but are not draw-order hazards."
+      },
+      "failures": [],
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS"
+}
