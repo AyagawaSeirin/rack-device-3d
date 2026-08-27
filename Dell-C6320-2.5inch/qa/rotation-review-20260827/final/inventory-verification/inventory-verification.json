@@ -1,0 +1,453 @@
+{
+  "model": "Dell-C6320-2.5inch",
+  "inventoryRows": 40,
+  "inventoryPass": 40,
+  "hardGateCount": 5,
+  "checks": [
+    {
+      "face": "front",
+      "component": "2.5-inch vertical drive carriers",
+      "expectedCount": 24,
+      "standardObserved": 24,
+      "webObserved": 24,
+      "mode": "NODE_REGEX:^SFF_Carrier_\\d+_Body$",
+      "status": "PASS",
+      "confidence": "VERIFIED"
+    },
+    {
+      "face": "front",
+      "component": "system-board drive groups",
+      "expectedCount": 4,
+      "standardObserved": 4,
+      "webObserved": 4,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Front_SourceLocked_Texture",
+      "status": "PASS",
+      "confidence": "VERIFIED"
+    },
+    {
+      "face": "front",
+      "component": "left control panel",
+      "expectedCount": 1,
+      "standardObserved": 1,
+      "webObserved": 1,
+      "mode": "NODE_REGEX:^Front_Left_Control_Panel$",
+      "status": "PASS",
+      "confidence": "VERIFIED"
+    },
+    {
+      "face": "front",
+      "component": "right control panel",
+      "expectedCount": 1,
+      "standardObserved": 1,
+      "webObserved": 1,
+      "mode": "NODE_REGEX:^Front_Right_Control_Panel$",
+      "status": "PASS",
+      "confidence": "VERIFIED"
+    },
+    {
+      "face": "front",
+      "component": "non-usable drive cover",
+      "expectedCount": 1,
+      "standardObserved": 1,
+      "webObserved": 1,
+      "mode": "NODE_REGEX:^Front_Nonusable_Drive_Cover$",
+      "status": "PASS",
+      "confidence": "VERIFIED"
+    },
+    {
+      "face": "front",
+      "component": "front mounting ears",
+      "expectedCount": 2,
+      "standardObserved": 2,
+      "webObserved": 2,
+      "mode": "NODE_REGEX:^Front_(Left|Right)_Ear_OuterRail$",
+      "status": "PASS",
+      "confidence": "VERIFIED"
+    },
+    {
+      "face": "front",
+      "component": "large rack mounting holes",
+      "expectedCount": 2,
+      "standardObserved": 2,
+      "webObserved": 2,
+      "mode": "NODE_REGEX:^Front_(Left|Right)_Ear_LargeRackHole$",
+      "status": "PASS",
+      "confidence": "VERIFIED"
+    },
+    {
+      "face": "front",
+      "component": "small ear fasteners and holes",
+      "expectedCount": 8,
+      "standardObserved": 8,
+      "webObserved": 8,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Front_SourceLocked_Texture",
+      "status": "PASS",
+      "confidence": "VERIFIED"
+    },
+    {
+      "face": "rear",
+      "component": "PowerEdge C6320 sleds",
+      "expectedCount": 4,
+      "standardObserved": 4,
+      "webObserved": 4,
+      "mode": "NODE_REGEX:^C6320_Node_\\d_PerimeterTop$",
+      "status": "PASS",
+      "confidence": "VERIFIED"
+    },
+    {
+      "face": "rear",
+      "component": "shared 1400 W AC PSU modules",
+      "expectedCount": 2,
+      "standardObserved": 2,
+      "webObserved": 2,
+      "mode": "NODE_REGEX:^Shared_AC_PSU_1400W_\\d_Face$",
+      "status": "PASS",
+      "confidence": "VERIFIED_AC"
+    },
+    {
+      "face": "rear",
+      "component": "PSU fan guards",
+      "expectedCount": 2,
+      "standardObserved": 2,
+      "webObserved": 2,
+      "mode": "NODE_REGEX:^Shared_AC_PSU_1400W_\\d_FanGuard$",
+      "status": "PASS",
+      "confidence": "VERIFIED"
+    },
+    {
+      "face": "rear",
+      "component": "PSU AC inlets",
+      "expectedCount": 2,
+      "standardObserved": 2,
+      "webObserved": 2,
+      "mode": "NODE_REGEX:^Shared_AC_PSU_1400W_\\d_IEC_AC_Inlet$",
+      "status": "PASS",
+      "confidence": "VERIFIED_AC"
+    },
+    {
+      "face": "rear",
+      "component": "PSU orange releases",
+      "expectedCount": 2,
+      "standardObserved": 2,
+      "webObserved": 2,
+      "mode": "NODE_REGEX:^Shared_AC_PSU_1400W_\\d_OrangeRelease$",
+      "status": "PASS",
+      "confidence": "VERIFIED"
+    },
+    {
+      "face": "rear",
+      "component": "PCIe vented blank or carrier per sled",
+      "expectedCount": 4,
+      "standardObserved": 4,
+      "webObserved": 4,
+      "mode": "NODE_REGEX:^C6320_Node_\\d_PCIeCarrier$",
+      "status": "PASS",
+      "confidence": "VERIFIED"
+    },
+    {
+      "face": "rear",
+      "component": "USB 3.0 port per sled",
+      "expectedCount": 4,
+      "standardObserved": 4,
+      "webObserved": 4,
+      "mode": "NODE_REGEX:^C6320_Node_\\d_USB3$",
+      "status": "PASS",
+      "confidence": "VERIFIED"
+    },
+    {
+      "face": "rear",
+      "component": "10GbE SFP+ ports",
+      "expectedCount": 8,
+      "standardObserved": 8,
+      "webObserved": 8,
+      "mode": "NODE_REGEX:^C6320_Node_\\d_SFPplus_[AB]$",
+      "status": "PASS",
+      "confidence": "VERIFIED"
+    },
+    {
+      "face": "rear",
+      "component": "dedicated iDRAC8 management RJ45 ports",
+      "expectedCount": 4,
+      "standardObserved": 4,
+      "webObserved": 4,
+      "mode": "NODE_REGEX:^C6320_Node_\\d_iDRAC_RJ45$",
+      "status": "PASS",
+      "confidence": "VERIFIED"
+    },
+    {
+      "face": "rear",
+      "component": "USB-to-serial ports",
+      "expectedCount": 4,
+      "standardObserved": 4,
+      "webObserved": 4,
+      "mode": "NODE_REGEX:^C6320_Node_\\d_USB_to_Serial$",
+      "status": "PASS",
+      "confidence": "VERIFIED"
+    },
+    {
+      "face": "rear",
+      "component": "VGA ports",
+      "expectedCount": 4,
+      "standardObserved": 4,
+      "webObserved": 4,
+      "mode": "NODE_REGEX:^C6320_Node_\\d_VGA$",
+      "status": "PASS",
+      "confidence": "VERIFIED"
+    },
+    {
+      "face": "rear",
+      "component": "power/status buttons",
+      "expectedCount": 4,
+      "standardObserved": 4,
+      "webObserved": 4,
+      "mode": "NODE_REGEX:^C6320_Node_\\d_Power_Status$",
+      "status": "PASS",
+      "confidence": "VERIFIED"
+    },
+    {
+      "face": "rear",
+      "component": "POWEREDGE C6320 pull-label tabs",
+      "expectedCount": 4,
+      "standardObserved": 4,
+      "webObserved": 4,
+      "mode": "NODE_REGEX:^C6320_Node_\\d_PullTab$",
+      "status": "PASS",
+      "confidence": "VERIFIED"
+    },
+    {
+      "face": "rear",
+      "component": "hex ventilation fields",
+      "expectedCount": 4,
+      "standardObserved": 4,
+      "webObserved": 4,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Rear_SourceLocked_Texture",
+      "status": "PASS",
+      "confidence": "VERIFIED"
+    },
+    {
+      "face": "top",
+      "component": "large removable system cover",
+      "expectedCount": 1,
+      "standardObserved": 1,
+      "webObserved": 1,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Top_SourceLocked_Texture",
+      "status": "PASS",
+      "confidence": "VERIFIED"
+    },
+    {
+      "face": "top",
+      "component": "stepped/scalloped transverse cover seam",
+      "expectedCount": 1,
+      "standardObserved": 1,
+      "webObserved": 1,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Top_SourceLocked_Texture",
+      "status": "PASS",
+      "confidence": "VERIFIED"
+    },
+    {
+      "face": "top",
+      "component": "black oval traction/release pad",
+      "expectedCount": 1,
+      "standardObserved": 1,
+      "webObserved": 1,
+      "mode": "NODE_REGEX:^Top_Black_Oval_Pad$",
+      "status": "PASS",
+      "confidence": "VERIFIED"
+    },
+    {
+      "face": "top",
+      "component": "blue rectangular traction pad",
+      "expectedCount": 1,
+      "standardObserved": 1,
+      "webObserved": 1,
+      "mode": "NODE_REGEX:^Top_Blue_Rectangular_Pad$",
+      "status": "PASS",
+      "confidence": "VERIFIED"
+    },
+    {
+      "face": "top",
+      "component": "rear-edge ventilation slot groups",
+      "expectedCount": 3,
+      "standardObserved": 3,
+      "webObserved": 3,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Top_SourceLocked_Texture",
+      "status": "PASS",
+      "confidence": "VERIFIED"
+    },
+    {
+      "face": "top",
+      "component": "factory safety/regulatory labels",
+      "expectedCount": 3,
+      "standardObserved": 3,
+      "webObserved": 3,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Top_SourceLocked_Texture",
+      "status": "PASS",
+      "confidence": "VERIFIED_FACTORY_ONLY"
+    },
+    {
+      "face": "left",
+      "component": "side body panel",
+      "expectedCount": 1,
+      "standardObserved": 1,
+      "webObserved": 1,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Physical_Left_SourceLocked_Texture",
+      "status": "PASS",
+      "confidence": "VERIFIED"
+    },
+    {
+      "face": "left",
+      "component": "major rail key slots",
+      "expectedCount": 3,
+      "standardObserved": 3,
+      "webObserved": 3,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Physical_Left_SourceLocked_Texture",
+      "status": "PASS",
+      "confidence": "VERIFIED_DIAGRAM"
+    },
+    {
+      "face": "left",
+      "component": "round rail and chassis fasteners",
+      "expectedCount": 12,
+      "standardObserved": 12,
+      "webObserved": 12,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Physical_Left_SourceLocked_Texture",
+      "status": "PASS",
+      "confidence": "VERIFIED_DIAGRAM"
+    },
+    {
+      "face": "left",
+      "component": "front ear projection",
+      "expectedCount": 1,
+      "standardObserved": 1,
+      "webObserved": 1,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Physical_Left_SourceLocked_Texture",
+      "status": "PASS",
+      "confidence": "VERIFIED"
+    },
+    {
+      "face": "right",
+      "component": "side body panel",
+      "expectedCount": 1,
+      "standardObserved": 1,
+      "webObserved": 1,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Physical_Right_SourceLocked_Texture",
+      "status": "PASS",
+      "confidence": "VERIFIED"
+    },
+    {
+      "face": "right",
+      "component": "major rail key slots",
+      "expectedCount": 3,
+      "standardObserved": 3,
+      "webObserved": 3,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Physical_Right_SourceLocked_Texture",
+      "status": "PASS",
+      "confidence": "VERIFIED_DIAGRAM"
+    },
+    {
+      "face": "right",
+      "component": "vertical access slot",
+      "expectedCount": 1,
+      "standardObserved": 1,
+      "webObserved": 1,
+      "mode": "NODE_REGEX:^Physical_Right_VerticalAccessSlot$",
+      "status": "PASS",
+      "confidence": "VERIFIED_DIAGRAM"
+    },
+    {
+      "face": "right",
+      "component": "upper shallow rectangular recesses",
+      "expectedCount": 2,
+      "standardObserved": 2,
+      "webObserved": 2,
+      "mode": "NODE_REGEX:^Physical_Right_UpperRecess_\\d$",
+      "status": "PASS",
+      "confidence": "VERIFIED_DIAGRAM"
+    },
+    {
+      "face": "right",
+      "component": "round rail and chassis fasteners",
+      "expectedCount": 10,
+      "standardObserved": 10,
+      "webObserved": 10,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Physical_Right_SourceLocked_Texture",
+      "status": "PASS",
+      "confidence": "VERIFIED_DIAGRAM"
+    },
+    {
+      "face": "right",
+      "component": "front ear projection",
+      "expectedCount": 1,
+      "standardObserved": 1,
+      "webObserved": 1,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Physical_Right_SourceLocked_Texture",
+      "status": "PASS",
+      "confidence": "VERIFIED"
+    },
+    {
+      "face": "bottom",
+      "component": "conservative underside sheet",
+      "expectedCount": 1,
+      "standardObserved": 1,
+      "webObserved": 1,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Bottom_GenericFallback_Texture",
+      "status": "PASS",
+      "confidence": "GENERIC_BOTTOM_FALLBACK"
+    },
+    {
+      "face": "bottom",
+      "component": "unsupported identifying detail",
+      "expectedCount": 0,
+      "standardObserved": 0,
+      "webObserved": 0,
+      "mode": "REQUIRED_ABSENCE_PLUS_RENDER_REVIEW",
+      "status": "PASS",
+      "confidence": "REQUIRED_ABSENCE"
+    }
+  ],
+  "hardConfigurationGates": [
+    {
+      "label": "four C6320 sleds",
+      "regex": "^C6320_Node_\\d_PerimeterTop$",
+      "expected": 4,
+      "standardObserved": 4,
+      "webObserved": 4,
+      "status": "PASS"
+    },
+    {
+      "label": "matching 1400W AC PSUs",
+      "regex": "^Shared_AC_PSU_1400W_\\d_Face$",
+      "expected": 2,
+      "standardObserved": 2,
+      "webObserved": 2,
+      "status": "PASS"
+    },
+    {
+      "label": "internal shared fan housings",
+      "regex": "^Internal_Shared_Fan_\\d_Housing$",
+      "expected": 4,
+      "standardObserved": 4,
+      "webObserved": 4,
+      "status": "PASS"
+    },
+    {
+      "label": "24 SFF carrier bodies",
+      "regex": "^SFF_Carrier_\\d+_Body$",
+      "expected": 24,
+      "standardObserved": 24,
+      "webObserved": 24,
+      "status": "PASS"
+    },
+    {
+      "label": "synthetic logo/label planes",
+      "regex": "TRUE_(DELL|POWEREDGE)",
+      "expected": 0,
+      "standardObserved": 0,
+      "webObserved": 0,
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "errorCount": 0,
+  "status": "PASS"
+}

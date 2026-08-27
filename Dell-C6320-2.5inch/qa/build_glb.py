@@ -10,7 +10,7 @@ import struct
 import sys
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -20,6 +20,7 @@ INTERMEDIATE = ROOT / "qa" / "intermediate"
 
 W, H, D = 482.3, 86.8, 795.9
 BODY_W = 448.0
+MM = 0.001
 X_BODY = BODY_W / 2
 X_OUTER = W / 2
 Y_OUTER = H / 2
@@ -49,6 +50,7 @@ class GLBBuilder:
                     "installed_configuration": "24 x 2.5-inch front carriers; four dual-SFP+ C6320 nodes; two matching 1400 W AC shared PSUs",
                     "not_variants": ["C6320p", "bare C6300", "C4130", "HVDC PSU", "1600 W PSU"],
                     "dimensions_mm": {"overall_width": W, "body_width": BODY_W, "height": H, "depth": D},
+                    "world_units": "metres",
                     "orientation": "+X device right from front, +Y up, +Z front",
                     "bottom_evidence": "GENERIC_BOTTOM_FALLBACK after exhaustive search",
                     "official_public_3d": "not found as of 2026-08-24",
@@ -233,8 +235,11 @@ class GLBBuilder:
 
     def add_node(self, name, mesh, translation=None, scale=None, extras=None):
         node={"name":name,"mesh":mesh}
-        if translation is not None: node["translation"]=[round(float(v),6) for v in translation]
-        if scale is not None: node["scale"]=[round(float(v),6) for v in scale]
+        # Builder dimensions are authored in millimetres; glTF world units are
+        # metres. The pre-review file omitted this conversion and was 1000x too
+        # large, degrading depth precision in both WebGL engines.
+        if translation is not None: node["translation"]=[round(float(v)*MM,9) for v in translation]
+        if scale is not None: node["scale"]=[round(float(v)*MM,9) for v in scale]
         if extras: node["extras"]=extras
         index=len(self.doc["nodes"]); self.doc["nodes"].append(node); self.doc["nodes"][0]["children"].append(index)
         return index
@@ -251,6 +256,7 @@ class GLBBuilder:
     def plane(self, name, material, positions, normal, uvs=None, extras=None):
         if uvs is None:
             uvs=[(0,1),(1,1),(1,0),(0,0)]
+        positions=[tuple(float(value)*MM for value in point) for point in positions]
         mesh=self.add_mesh(name+"_Mesh",positions,[normal]*4,uvs,[0,1,2,0,2,3],material)
         return self.add_node(name,mesh,extras=extras)
 
@@ -267,23 +273,6 @@ class GLBBuilder:
         return len(payload),hashlib.sha256(payload).hexdigest()
 
 
-def make_labels(variant):
-    labels=INTERMEDIATE/variant/"labels"; labels.mkdir(parents=True,exist_ok=True)
-    size=1024 if variant=="standard" else 512
-    font_path="/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
-    dell=Image.new("RGB",(size,size),(18,22,27)); d=ImageDraw.Draw(dell)
-    stroke=max(8,size//45); d.ellipse((stroke,stroke,size-stroke,size-stroke),outline=(24,126,192),width=stroke)
-    font=ImageFont.truetype(font_path,round(size*.27)); text="DELL"; box=d.textbbox((0,0),text,font=font,stroke_width=1)
-    d.text(((size-(box[2]-box[0]))/2,(size-(box[3]-box[1]))/2-box[1]),text,font=font,fill=(240,245,250),stroke_width=1)
-    dell_path=labels/"dell-logo.png"; dell.save(dell_path,optimize=True)
-    pw_w=size*4; pw_h=size
-    power=Image.new("RGB",(pw_w,pw_h),(10,13,16)); pd=ImageDraw.Draw(power)
-    pfont=ImageFont.truetype(font_path,round(size*.34)); label="POWEREDGE C6320"; bb=pd.textbbox((0,0),label,font=pfont)
-    pd.text(((pw_w-(bb[2]-bb[0]))/2,(pw_h-(bb[3]-bb[1]))/2-bb[1]),label,font=pfont,fill=(243,246,248))
-    power_path=labels/"poweredge-c6320.png"; power.save(power_path,optimize=True)
-    return dell_path,power_path
-
-
 def prepare_textures(variant):
     if variant=="standard":
         result={face:VIEWS/f"{face}.png" for face in ("front","rear","left","right","top","bottom")}
@@ -293,7 +282,6 @@ def prepare_textures(variant):
         for face,size in targets.items():
             image=Image.open(VIEWS/f"{face}.png").convert("RGBA").resize(size,Image.Resampling.LANCZOS)
             path=out/f"{face}.png"; image.save(path,optimize=True); result[face]=path
-    dell,power=make_labels(variant); result["dell"]=dell; result["poweredge"]=power
     return result
 
 
@@ -310,48 +298,52 @@ def build(variant):
     green=b.add_solid_material("Status_LED_Green",[.01,.75,.13,1],0,.3,[0,.35,.04])
     white=b.add_solid_material("Label_White",[.92,.94,.95,1],0,.85)
     photos={face:b.add_photo_material(f"FACE_{face.upper()}_SOURCE_LOCKED",path) for face,path in tex.items() if face in ("front","rear","left","right","top","bottom")}
-    dell_mat=b.add_photo_material("TRUE_DELL_LOGO",tex["dell"])
-    power_mat=b.add_photo_material("TRUE_POWEREDGE_C6320_LABEL",tex["poweredge"])
 
-    # The structural core sits just behind the six independently textured outer
-    # skins and modeled relief, avoiding coplanar depth conflicts in WebGL.
-    b.box("Closed_2U_Chassis_Core",chassis,(0,0,0),(BODY_W-1,H-.8,D-.9),{"evidence":"Dell enclosure dimensions","closed_manifold_core":True})
+    # The structural core sits behind every independently textured skin.  The
+    # explicit insets leave >=0.4 mm between the closed core and the five exact
+    # photo skins (>=0.6 mm at the rear), so no opaque core face can occlude a
+    # source-locked surface at a grazing orbit angle.
+    b.box("Closed_2U_Chassis_Core",chassis,(0,0,0),(BODY_W-2.0,H-2.0,D-2.5),{"evidence":"Dell enclosure dimensions","closed_manifold_core":True,"skin_clearance_design_mm":{"x":.4,"y":.4,"front":.4,"rear":.75}})
     crop=(W-BODY_W)/(2*W); uvs=[(crop,1),(1-crop,1),(1-crop,0),(crop,0)]
-    b.plane("Front_SourceLocked_Texture",photos["front"],[(-X_BODY,-Y_OUTER,Z_OUTER-.06),(X_BODY,-Y_OUTER,Z_OUTER-.06),(X_BODY,Y_OUTER,Z_OUTER-.06),(-X_BODY,Y_OUTER,Z_OUTER-.06)],(0,0,1),uvs,{"source_lock":"front","role":"gap and chassis backing texture"})
-    b.plane("Rear_SourceLocked_Texture",photos["rear"],[(X_BODY,-Y_OUTER,-Z_OUTER+.01),(-X_BODY,-Y_OUTER,-Z_OUTER+.01),(-X_BODY,Y_OUTER,-Z_OUTER+.01),(X_BODY,Y_OUTER,-Z_OUTER+.01)],(0,0,-1),uvs,{"source_lock":"rear"})
-    b.plane("Physical_Left_SourceLocked_Texture",photos["left"],[(X_BODY,-Y_OUTER,Z_OUTER),(X_BODY,-Y_OUTER,-Z_OUTER),(X_BODY,Y_OUTER,-Z_OUTER),(X_BODY,Y_OUTER,Z_OUTER)],(1,0,0),extras={"front_in_image":"left","not_mirrored":True})
-    b.plane("Physical_Right_SourceLocked_Texture",photos["right"],[(-X_BODY,-Y_OUTER,-Z_OUTER),(-X_BODY,-Y_OUTER,Z_OUTER),(-X_BODY,Y_OUTER,Z_OUTER),(-X_BODY,Y_OUTER,-Z_OUTER)],(-1,0,0),extras={"front_in_image":"right","not_mirrored":True})
-    b.plane("Top_SourceLocked_Texture",photos["top"],[(-X_BODY,Y_OUTER,Z_OUTER),(X_BODY,Y_OUTER,Z_OUTER),(X_BODY,Y_OUTER,-Z_OUTER),(-X_BODY,Y_OUTER,-Z_OUTER)],(0,1,0),extras={"front_in_image":"bottom"})
-    b.plane("Bottom_GenericFallback_Texture",photos["bottom"],[(X_BODY,-Y_OUTER,Z_OUTER),(-X_BODY,-Y_OUTER,Z_OUTER),(-X_BODY,-Y_OUTER,-Z_OUTER),(X_BODY,-Y_OUTER,-Z_OUTER)],(0,-1,0),extras={"status":"GENERIC_BOTTOM_FALLBACK"})
+    # Deterministic card/core/relief spacing. Canonical photographs sit behind
+    # their separately modelled relief instead of 0.01-0.05 mm from duplicate
+    # photo cards. Side names now follow +X=device-right from the front.
+    b.plane("Front_SourceLocked_Texture",photos["front"],[(-X_BODY,-Y_OUTER,Z_OUTER-.85),(X_BODY,-Y_OUTER,Z_OUTER-.85),(X_BODY,Y_OUTER,Z_OUTER-.85),(-X_BODY,Y_OUTER,Z_OUTER-.85)],(0,0,1),uvs,{"source_lock":"front","role":"gap and chassis backing texture","core_clearance_mm":.40})
+    b.plane("Rear_SourceLocked_Texture",photos["rear"],[(X_BODY,-Y_OUTER,-Z_OUTER+.50),(-X_BODY,-Y_OUTER,-Z_OUTER+.50),(-X_BODY,Y_OUTER,-Z_OUTER+.50),(X_BODY,Y_OUTER,-Z_OUTER+.50)],(0,0,-1),uvs,{"source_lock":"rear","role":"binding real-photograph appearance skin","core_clearance_mm":.75})
+    left_x=-X_BODY+.60; right_x=X_BODY-.60
+    b.plane("Physical_Left_SourceLocked_Texture",photos["left"],[(left_x,-Y_OUTER,-Z_OUTER),(left_x,-Y_OUTER,Z_OUTER),(left_x,Y_OUTER,Z_OUTER),(left_x,Y_OUTER,-Z_OUTER)],(-1,0,0),extras={"image_left":"rear","image_right":"front","not_mirrored":True,"core_clearance_mm":.40})
+    b.plane("Physical_Right_SourceLocked_Texture",photos["right"],[(right_x,-Y_OUTER,Z_OUTER),(right_x,-Y_OUTER,-Z_OUTER),(right_x,Y_OUTER,-Z_OUTER),(right_x,Y_OUTER,Z_OUTER)],(1,0,0),extras={"image_left":"front","image_right":"rear","not_mirrored":True,"core_clearance_mm":.40})
+    b.plane("Top_SourceLocked_Texture",photos["top"],[(-X_BODY,Y_OUTER-.60,Z_OUTER),(X_BODY,Y_OUTER-.60,Z_OUTER),(X_BODY,Y_OUTER-.60,-Z_OUTER),(-X_BODY,Y_OUTER-.60,-Z_OUTER)],(0,1,0),extras={"front_in_image":"bottom","core_clearance_mm":.40})
+    b.plane("Bottom_GenericFallback_Texture",photos["bottom"],[(X_BODY,-Y_OUTER+.60,Z_OUTER),(-X_BODY,-Y_OUTER+.60,Z_OUTER),(-X_BODY,-Y_OUTER+.60,-Z_OUTER),(X_BODY,-Y_OUTER+.60,-Z_OUTER)],(0,-1,0),extras={"status":"GENERIC_BOTTOM_FALLBACK","core_clearance_mm":.40})
 
     # Front ears with real open rack holes; ears exist only at the front.
     for side,sign in (("Left",-1),("Right",1)):
         x_outer=sign*(X_BODY+(X_OUTER-X_BODY)/2)
-        b.box(f"Front_{side}_Ear_OuterRail",black,(sign*(X_OUTER-2),0,Z_OUTER-.25),(4,H,.5))
-        b.box(f"Front_{side}_Ear_InnerRail",black,(sign*(X_BODY+2),0,Z_OUTER-.25),(4,H,.5))
-        b.box(f"Front_{side}_Ear_TopBridge",black,(x_outer,Y_OUTER-5,Z_OUTER-.25),(X_OUTER-X_BODY-4,10,.5))
-        b.box(f"Front_{side}_Ear_BottomBridge",black,(x_outer,-Y_OUTER+5,Z_OUTER-.25),(X_OUTER-X_BODY-4,10,.5))
-        b.ring(f"Front_{side}_Ear_LargeRackHole",black,(sign*233.15,-27,Z_OUTER-.25),(16,16,.5),{"true_through_hole":True},inner=.64)
-        b.ring(f"Front_{side}_Ear_SmallMechanicalHole",black,(sign*233.15,25,Z_OUTER-.25),(7,7,.5),{"true_through_hole":True},inner=.6)
+        b.box(f"Front_{side}_Ear_OuterRail",black,(sign*(X_OUTER-2),0,Z_OUTER-.35),(4,H,.3))
+        b.box(f"Front_{side}_Ear_InnerRail",black,(sign*(X_BODY+2),0,Z_OUTER-.35),(4,H,.3))
+        b.box(f"Front_{side}_Ear_TopBridge",black,(x_outer,Y_OUTER-5,Z_OUTER-.25),(X_OUTER-X_BODY-8,10,.3))
+        b.box(f"Front_{side}_Ear_BottomBridge",black,(x_outer,-Y_OUTER+5,Z_OUTER-.25),(X_OUTER-X_BODY-8,10,.3))
+        b.ring(f"Front_{side}_Ear_LargeRackHole",black,(sign*233.15,-27,Z_OUTER-.15),(16,16,.2),{"true_through_hole":True,"layered_clearance_mm":.05},inner=.64)
+        b.ring(f"Front_{side}_Ear_SmallMechanicalHole",black,(sign*233.15,25,Z_OUTER-.15),(7,7,.2),{"true_through_hole":True,"layered_clearance_mm":.05},inner=.6)
         for index,(xf,yf) in enumerate(((230.0,35),(236.0,12),(230.0,-3),(236.0,-39)),1):
             b.cylinder(f"Front_{side}_Ear_Fastener_{index}",silver,(sign*xf,yf,Z_OUTER-.003),(3,3,.006),{"verified_ear_fastener":True})
 
     # Front control panels, non-usable cover, and 24 independently modeled SFF carriers.
-    b.box("Front_Left_Control_Panel",dark,(-213,0,Z_OUTER-.25),(20,75,.44))
-    b.box("Front_Right_Control_Panel",dark,(213,0,Z_OUTER-.25),(20,75,.44))
-    b.box("Front_Nonusable_Drive_Cover",black,(193,0,Z_OUTER-.23),(11,75,.46),{"not_a_drive_bay":True})
+    b.box("Front_Left_Control_Panel",dark,(-213,0,Z_OUTER-.60),(20,75,.10))
+    b.box("Front_Right_Control_Panel",dark,(213,0,Z_OUTER-.60),(20,75,.10))
+    b.box("Front_Nonusable_Drive_Cover",black,(193,0,Z_OUTER-.60),(11,75,.10),{"not_a_drive_bay":True})
     def front_u(x): return .5 + x / W
     def front_v(y): return .5 - y / H
     for label,x0,x1 in (("LeftControl",-223,-203),("RightControl",203,223)):
-        b.plane(f"Front_{label}_SourceTexture",photos["front"],[(x0,-37,Z_OUTER-.01),(x1,-37,Z_OUTER-.01),(x1,37,Z_OUTER-.01),(x0,37,Z_OUTER-.01)],(0,0,1),[(front_u(x0),front_v(-37)),(front_u(x1),front_v(-37)),(front_u(x1),front_v(37)),(front_u(x0),front_v(37))])
+        b.plane(f"Front_{label}_SourceTexture",photos["front"],[(x0,-37,Z_OUTER-.30),(x1,-37,Z_OUTER-.30),(x1,37,Z_OUTER-.30),(x0,37,Z_OUTER-.30)],(0,0,1),[(front_u(x0),front_v(-37)),(front_u(x1),front_v(-37)),(front_u(x1),front_v(37)),(front_u(x0),front_v(37))],{"coarse_relief_clearance_mm":.25,"fine_relief_clearance_mm":.28})
     bay_w,gap,group_extra=14.2,1.0,2.5
     total=24*bay_w+23*gap+3*group_extra; start=-total/2
     for i in range(24):
         group=i//6; x=start+bay_w/2+i*(bay_w+gap)+group*group_extra
         prefix=f"SFF_Carrier_{i+1:02d}"
-        b.box(prefix+"_Body",black,(x,-1,Z_OUTER-.25),(bay_w,74,.44),{"drive_form_factor_in":2.5,"bay_index":i+1})
+        b.box(prefix+"_Body",black,(x,-1,Z_OUTER-.60),(bay_w,74,.10),{"drive_form_factor_in":2.5,"bay_index":i+1,"behind_source_photo":True})
         x0,x1=x-bay_w/2,x+bay_w/2
-        b.plane(prefix+"_SourceTexture",photos["front"],[(x0,-38,Z_OUTER-.01),(x1,-38,Z_OUTER-.01),(x1,36,Z_OUTER-.01),(x0,36,Z_OUTER-.01)],(0,0,1),[(front_u(x0),front_v(-38)),(front_u(x1),front_v(-38)),(front_u(x1),front_v(36)),(front_u(x0),front_v(36))],{"bay_index":i+1,"source_lock":"front"})
+        b.plane(prefix+"_SourceTexture",photos["front"],[(x0,-38,Z_OUTER-.30),(x1,-38,Z_OUTER-.30),(x1,36,Z_OUTER-.30),(x0,36,Z_OUTER-.30)],(0,0,1),[(front_u(x0),front_v(-38)),(front_u(x1),front_v(-38)),(front_u(x1),front_v(36)),(front_u(x0),front_v(36))],{"bay_index":i+1,"source_lock":"front","coarse_relief_clearance_mm":.25,"fine_relief_clearance_mm":.28})
         b.box(prefix+"_TopLatch",silver,(x,25,Z_OUTER-.025),(9,11,.01))
         b.box(prefix+"_Handle",dark,(x,-7,Z_OUTER-.024),(3.2,32,.008))
         b.cylinder(prefix+"_LatchButton",silver,(x,24,Z_OUTER-.023),(6,6,.006))
@@ -359,50 +351,58 @@ def build(variant):
     for i,x in enumerate((-213,213)):
         b.cylinder(f"Front_Control_PowerButton_{i+1}",silver,(x,9,Z_OUTER-.023),(6,6,.006))
         b.cylinder(f"Front_Control_StatusLED_{i+1}",green,(x,-4,Z_OUTER-.022),(2.2,2.2,.004))
-    b.plane("Front_True_DELL_Brand",dell_mat,[(-220,-1,Z_OUTER-.03),(-206,-1,Z_OUTER-.03),(-206,13,Z_OUTER-.03),(-220,13,Z_OUTER-.03)],(0,0,1),extras={"trademark":"DELL","visible_branding_also_present_in_source_locked_front_texture":True})
+    # The genuine photographed Dell logo stays in the source-locked control
+    # crop. No programmatically redrawn or duplicate logo plane is added.
 
     # Rear: four standard C6320 nodes, each with the exact required visible I/O set.
     node_centers_x=(-132,53); row_centers=(21,-21)
     for row,yc in enumerate(row_centers,1):
         for col,xc in enumerate(node_centers_x,1):
             node=(row-1)*2+col; p=f"C6320_Node_{node}"
-            b.box(p+"_PerimeterTop",silver,(xc,yc+18,-Z_OUTER+.25),(177,3,.2),{"node_model":"PowerEdge C6320","not_c6320p":True})
-            b.box(p+"_PCIeCarrier",silver,(xc-22,yc+7,-Z_OUTER+.25),(128,18,.2),{"slot":"low-profile PCIe/blank"})
-            b.box(p+"_PCIeVent",dark,(xc-35,yc+7,-Z_OUTER+.055),(86,12,.01))
+            b.box(p+"_PerimeterTop",silver,(xc,yc+18,-Z_OUTER+.90),(177,3,.2),{"node_model":"PowerEdge C6320","not_c6320p":True,"behind_source_photo":True})
+            b.box(p+"_PCIeCarrier",silver,(xc-22,yc+7,-Z_OUTER+.90),(128,18,.2),{"slot":"low-profile PCIe/blank","behind_source_photo":True})
+            b.box(p+"_PCIeVent",dark,(xc-35,yc+7,-Z_OUTER+.80),(86,12,.1),{"behind_source_photo":True})
             ports=[("USB3",-78,blue,(10,8,.6)),("SFPplus_A",-57,dark,(17,10,.6)),("SFPplus_B",-37,dark,(17,10,.6)),("iDRAC_RJ45",-10,black,(16,12,.6)),("USB_to_Serial",14,black,(10,9,.6)),("VGA",40,blue,(23,13,.6)),("Power_Status",72,black,(11,11,.6))]
             for label,dx,mat,size in ports:
-                b.box(f"{p}_{label}",mat,(xc+dx,yc-11,-Z_OUTER+.25),(size[0],size[1],.2),{"node":node,"port":label})
+                b.box(f"{p}_{label}",mat,(xc+dx,yc-11,-Z_OUTER+.90),(size[0],size[1],.2),{"node":node,"port":label,"behind_source_photo":True})
             b.cylinder(p+"_PowerLED",green,(xc+72,yc-11,-Z_OUTER+.003),(3,3,.006))
-            b.box(p+"_PullTab",black,(xc+82,yc+5,-Z_OUTER+.25),(13,25,.2),{"node":node,"label":"POWEREDGE C6320"})
-            b.plane(p+"_True_POWEREDGE_C6320_Label",power_mat,[(xc+88,yc-1,-Z_OUTER),(xc+76,yc-1,-Z_OUTER),(xc+76,yc+11,-Z_OUTER),(xc+88,yc+11,-Z_OUTER)],(0,0,-1),extras={"text":"POWEREDGE C6320"})
+            b.box(p+"_PullTab",black,(xc+82,yc+5,-Z_OUTER+.90),(13,25,.2),{"node":node,"label":"POWEREDGE C6320","behind_source_photo":True})
+            # Factory POWEREDGE C6320 markings remain in the binding rear photo;
+            # a synthetic duplicate label plane would compete in depth.
 
     # Two matching 1400 W AC shared PSUs stacked at device right / rear viewer-left.
     for index,yc in enumerate((21,-21),1):
         p=f"Shared_AC_PSU_1400W_{index}"
-        b.box(p+"_Face",silver,(190,yc,-Z_OUTER+.25),(66,39,.2),{"power_input":"AC","rating_w":1400,"matched_pair":True})
-        b.ring(p+"_FanGuard",silver,(205,yc,-Z_OUTER+.03),(24,24,.06),{"fan":True,"wire_guard":True},inner=.82)
-        b.ring(p+"_FanInner",black,(205,yc,-Z_OUTER+.02),(20,20,.04),{"fan":True},inner=.22)
+        b.box(p+"_Face",silver,(190,yc,-Z_OUTER+.90),(66,39,.2),{"power_input":"AC","rating_w":1400,"matched_pair":True,"behind_source_photo":True})
+        b.ring(p+"_FanGuard",silver,(205,yc,-Z_OUTER+.20),(24,24,.10),{"fan":True,"wire_guard":True,"layer":"guard-ring"},inner=.82)
+        b.ring(p+"_FanInner",black,(205,yc,-Z_OUTER+.15),(20,20,.10),{"fan":True,"layer":"recessed-fan"},inner=.22)
         for angle in (0,45,90,135):
             rad=math.radians(angle); sx=30 if angle%90==0 else 22; sy=3 if angle%90==0 else 2.5
             # Axis-aligned/crossed bars approximate the verified silver wire guard.
-            if angle==0: b.box(p+"_GuardHorizontal",silver,(205,yc,-Z_OUTER+.005),(22,1.2,.01))
-            elif angle==90: b.box(p+"_GuardVertical",silver,(205,yc,-Z_OUTER+.005),(1.2,22,.01))
-        b.box(p+"_IEC_AC_Inlet",black,(174,yc,-Z_OUTER+.24),(19,16,.48),{"connector":"IEC AC inlet"})
+            if angle==0: b.box(p+"_GuardHorizontal",silver,(205,yc,-Z_OUTER+.08),(22,1.2,.06))
+            elif angle==90: b.box(p+"_GuardVertical",silver,(205,yc,-Z_OUTER+.03),(1.2,22,.04))
+        b.box(p+"_IEC_AC_Inlet",black,(174,yc,-Z_OUTER+.125),(19,16,.25),{"connector":"IEC AC inlet","power_input":"AC"})
         b.box(p+"_OrangeRelease",orange,(161,yc,-Z_OUTER+.08),(5,19,.16))
-        b.box(p+"_HandleRecess",dark,(184,yc,-Z_OUTER+.05),(7,22,.1))
+        b.box(p+"_HandleRecess",dark,(184,yc,-Z_OUTER+.85),(7,22,.1),{"behind_source_photo":True})
 
     # Side-specific rail slots and right-only access/recess features.
-    for side,x,photo_name in (("Physical_Left",X_BODY,photos["left"]),("Physical_Right",-X_BODY,photos["right"])):
-        inward=-.3 if x>0 else .3
+    for side,x,photo_name in (("Physical_Left",-X_BODY,photos["left"]),("Physical_Right",X_BODY,photos["right"])):
+        inward=-.1 if x>0 else .1
         for index,z in enumerate((-245,0,245),1):
-            b.box(f"{side}_MajorKeySlot_{index}",dark,(x+inward,-10,z),(.6,6,48),{"side_specific":side})
-            b.box(f"{side}_KeySlotFlank_{index}_A",dark,(x+inward,-10,z-30),(.6,4,7))
-            b.box(f"{side}_KeySlotFlank_{index}_B",dark,(x+inward,-10,z+30),(.6,4,7))
+            b.box(f"{side}_MajorKeySlot_{index}",dark,(x+inward,-10,z),(.2,6,48),{"side_specific":side})
+            b.box(f"{side}_KeySlotFlank_{index}_A",dark,(x+inward,-10,z-30),(.2,4,7))
+            b.box(f"{side}_KeySlotFlank_{index}_B",dark,(x+inward,-10,z+30),(.2,4,7))
         for index,z in enumerate((-330,-180,-70,85,180,320),1):
-            b.box(f"{side}_Fastener_{index}",silver,(x+inward,7,z),(.6,6,6))
-    b.box("Physical_Right_VerticalAccessSlot",dark,(-X_BODY+.3,-9,205),(.6,26,7),{"right_only":True})
+            b.box(f"{side}_Fastener_{index}",silver,(x+inward,7,z),(.2,6,6))
+    b.box("Physical_Right_VerticalAccessSlot",dark,(X_BODY-.1,-9,205),(.2,26,7),{"right_only":True})
     for index,z in enumerate((120,290),1):
-        b.box(f"Physical_Right_UpperRecess_{index}",silver,(-X_BODY+.3,19,z),(.6,11,46),{"right_only":True})
+        b.box(f"Physical_Right_UpperRecess_{index}",silver,(X_BODY-.1,19,z),(.2,11,46),{"right_only":True})
+
+    # Four source-verified shared fan-cage rotors under the installed opaque
+    # cover. They are configuration nodes and never leak through the closed core.
+    for index,x in enumerate((-150,-50,50,150),1):
+        b.box(f"Internal_Shared_Fan_{index}_Housing",black,(x,0,80),(44,70,55),{"internal":True,"installed":True})
+        b.cylinder(f"Internal_Shared_Fan_{index}_Rotor",dark,(x,0,80),(34,34,20),{"internal":True,"installed":True})
 
     # Closed top lid relief, seams, pads, and conservative bottom perimeter only.
     b.box("Top_Cover_Stepped_Seam",silver,(0,Y_OUTER-.3,-240),(BODY_W,.1,2.5))

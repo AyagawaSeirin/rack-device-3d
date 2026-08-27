@@ -1,0 +1,4364 @@
+{
+  "path": "Dell-C6320-2.5inch/models/Dell-PowerEdge-C6300-4xC6320-24SFF-web.glb",
+  "bytes": 5945408,
+  "sha256": "6a851caa8132ec02b6fb4d55e9dbe829651e46a3b20051db0d727f133af44f5e",
+  "meshCount": 296,
+  "materialAlpha": {
+    "materials": [
+      {
+        "index": 0,
+        "name": "Galvanized_Steel",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          0.64,
+          0.67,
+          0.7,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": false,
+        "unlit": false
+      },
+      {
+        "index": 1,
+        "name": "Bright_Steel",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          0.76,
+          0.79,
+          0.81,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": false,
+        "unlit": false
+      },
+      {
+        "index": 2,
+        "name": "Black_Handles",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          0.018,
+          0.022,
+          0.026,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": false,
+        "unlit": false
+      },
+      {
+        "index": 3,
+        "name": "Dark_Recess",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          0.055,
+          0.065,
+          0.075,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": false,
+        "unlit": false
+      },
+      {
+        "index": 4,
+        "name": "PSU_Orange_Release",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          0.95,
+          0.18,
+          0.015,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": false,
+        "unlit": false
+      },
+      {
+        "index": 5,
+        "name": "Factory_Warning_Yellow",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          0.92,
+          0.74,
+          0.045,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": false,
+        "unlit": false
+      },
+      {
+        "index": 6,
+        "name": "Dell_Blue_IO",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          0.015,
+          0.16,
+          0.62,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": false,
+        "unlit": false
+      },
+      {
+        "index": 7,
+        "name": "Status_LED_Green",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          0.01,
+          0.75,
+          0.13,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": false,
+        "unlit": false
+      },
+      {
+        "index": 8,
+        "name": "Label_White",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          0.92,
+          0.94,
+          0.95,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": false,
+        "unlit": false
+      },
+      {
+        "index": 9,
+        "name": "FACE_FRONT_SOURCE_LOCKED",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": true,
+        "unlit": true
+      },
+      {
+        "index": 10,
+        "name": "FACE_REAR_SOURCE_LOCKED",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": true,
+        "unlit": true
+      },
+      {
+        "index": 11,
+        "name": "FACE_LEFT_SOURCE_LOCKED",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": true,
+        "unlit": true
+      },
+      {
+        "index": 12,
+        "name": "FACE_RIGHT_SOURCE_LOCKED",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": true,
+        "unlit": true
+      },
+      {
+        "index": 13,
+        "name": "FACE_TOP_SOURCE_LOCKED",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": true,
+        "unlit": true
+      },
+      {
+        "index": 14,
+        "name": "FACE_BOTTOM_SOURCE_LOCKED",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": true,
+        "unlit": true
+      }
+    ],
+    "violations": []
+  },
+  "negativeTransforms": [],
+  "duplicates": {
+    "sameFacingExact": [],
+    "reverseExact": []
+  },
+  "coplanar": {
+    "sameFacingOverlaps": [
+      {
+        "nodes": [
+          "Shared_AC_PSU_1400W_2_Face",
+          "Shared_AC_PSU_1400W_2_FanGuard"
+        ],
+        "axis": 2,
+        "plane": -0.3978,
+        "projectedOverlapArea": 0.0005760000000000006,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "Shared_AC_PSU_1400W_1_Face",
+          "Shared_AC_PSU_1400W_1_FanGuard"
+        ],
+        "axis": 2,
+        "plane": -0.3978,
+        "projectedOverlapArea": 0.0005760000000000006,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "Top_Black_Oval_Pad",
+          "Top_Longitudinal_Seam_1"
+        ],
+        "axis": 1,
+        "plane": 0.04315,
+        "projectedOverlapArea": 4.200000000000007e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "Top_Black_Oval_Pad",
+          "Top_Longitudinal_Seam_1"
+        ],
+        "axis": 1,
+        "plane": 0.04305,
+        "projectedOverlapArea": 4.200000000000007e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_24_LatchButton",
+          "SFF_Carrier_24_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39793,
+        "projectedOverlapArea": 3.600000000000002e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_23_LatchButton",
+          "SFF_Carrier_23_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39793,
+        "projectedOverlapArea": 3.600000000000002e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_22_LatchButton",
+          "SFF_Carrier_22_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39793,
+        "projectedOverlapArea": 3.600000000000002e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_21_LatchButton",
+          "SFF_Carrier_21_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39793,
+        "projectedOverlapArea": 3.600000000000002e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_20_LatchButton",
+          "SFF_Carrier_20_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39793,
+        "projectedOverlapArea": 3.600000000000002e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_19_LatchButton",
+          "SFF_Carrier_19_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39793,
+        "projectedOverlapArea": 3.600000000000002e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_18_LatchButton",
+          "SFF_Carrier_18_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39793,
+        "projectedOverlapArea": 3.600000000000002e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_17_LatchButton",
+          "SFF_Carrier_17_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39793,
+        "projectedOverlapArea": 3.600000000000002e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_16_LatchButton",
+          "SFF_Carrier_16_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39793,
+        "projectedOverlapArea": 3.600000000000002e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_15_LatchButton",
+          "SFF_Carrier_15_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39793,
+        "projectedOverlapArea": 3.600000000000002e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_10_LatchButton",
+          "SFF_Carrier_10_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39793,
+        "projectedOverlapArea": 3.600000000000002e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_09_LatchButton",
+          "SFF_Carrier_09_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39793,
+        "projectedOverlapArea": 3.600000000000002e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_08_LatchButton",
+          "SFF_Carrier_08_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39793,
+        "projectedOverlapArea": 3.600000000000002e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_07_LatchButton",
+          "SFF_Carrier_07_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39793,
+        "projectedOverlapArea": 3.600000000000002e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_06_LatchButton",
+          "SFF_Carrier_06_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39793,
+        "projectedOverlapArea": 3.600000000000002e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_05_LatchButton",
+          "SFF_Carrier_05_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39793,
+        "projectedOverlapArea": 3.600000000000002e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_04_LatchButton",
+          "SFF_Carrier_04_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39793,
+        "projectedOverlapArea": 3.600000000000002e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_03_LatchButton",
+          "SFF_Carrier_03_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39793,
+        "projectedOverlapArea": 3.600000000000002e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_02_LatchButton",
+          "SFF_Carrier_02_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39793,
+        "projectedOverlapArea": 3.600000000000002e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_01_LatchButton",
+          "SFF_Carrier_01_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39793,
+        "projectedOverlapArea": 3.600000000000002e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_13_LatchButton",
+          "SFF_Carrier_13_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39793,
+        "projectedOverlapArea": 3.599999999999999e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_12_LatchButton",
+          "SFF_Carrier_12_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39793,
+        "projectedOverlapArea": 3.599999999999999e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_14_LatchButton",
+          "SFF_Carrier_14_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39793,
+        "projectedOverlapArea": 3.599999999999998e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_11_LatchButton",
+          "SFF_Carrier_11_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39793,
+        "projectedOverlapArea": 3.599999999999998e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "C6320_Node_3_PerimeterTop",
+          "C6320_Node_3_PullTab"
+        ],
+        "axis": 2,
+        "plane": -0.3978,
+        "projectedOverlapArea": 1.3000000000000003e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "C6320_Node_1_PerimeterTop",
+          "C6320_Node_1_PullTab"
+        ],
+        "axis": 2,
+        "plane": -0.3978,
+        "projectedOverlapArea": 1.3000000000000003e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "C6320_Node_3_PerimeterTop",
+          "C6320_Node_3_PullTab"
+        ],
+        "axis": 2,
+        "plane": -0.3976,
+        "projectedOverlapArea": 1.3000000000000003e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "C6320_Node_1_PerimeterTop",
+          "C6320_Node_1_PullTab"
+        ],
+        "axis": 2,
+        "plane": -0.3976,
+        "projectedOverlapArea": 1.3000000000000003e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "C6320_Node_4_PerimeterTop",
+          "C6320_Node_4_PullTab"
+        ],
+        "axis": 2,
+        "plane": -0.3978,
+        "projectedOverlapArea": 1.2999999999999996e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "C6320_Node_2_PerimeterTop",
+          "C6320_Node_2_PullTab"
+        ],
+        "axis": 2,
+        "plane": -0.3978,
+        "projectedOverlapArea": 1.2999999999999996e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "C6320_Node_4_PerimeterTop",
+          "C6320_Node_4_PullTab"
+        ],
+        "axis": 2,
+        "plane": -0.3976,
+        "projectedOverlapArea": 1.2999999999999996e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "C6320_Node_2_PerimeterTop",
+          "C6320_Node_2_PullTab"
+        ],
+        "axis": 2,
+        "plane": -0.3976,
+        "projectedOverlapArea": 1.2999999999999996e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "C6320_Node_2_Power_Status",
+          "C6320_Node_2_PullTab"
+        ],
+        "axis": 2,
+        "plane": -0.3978,
+        "projectedOverlapArea": 4.0000000000000074e-06,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "C6320_Node_1_Power_Status",
+          "C6320_Node_1_PullTab"
+        ],
+        "axis": 2,
+        "plane": -0.3978,
+        "projectedOverlapArea": 4.0000000000000074e-06,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "C6320_Node_2_Power_Status",
+          "C6320_Node_2_PullTab"
+        ],
+        "axis": 2,
+        "plane": -0.3976,
+        "projectedOverlapArea": 4.0000000000000074e-06,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "C6320_Node_1_Power_Status",
+          "C6320_Node_1_PullTab"
+        ],
+        "axis": 2,
+        "plane": -0.3976,
+        "projectedOverlapArea": 4.0000000000000074e-06,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "C6320_Node_4_Power_Status",
+          "C6320_Node_4_PullTab"
+        ],
+        "axis": 2,
+        "plane": -0.3978,
+        "projectedOverlapArea": 4e-06,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "C6320_Node_3_Power_Status",
+          "C6320_Node_3_PullTab"
+        ],
+        "axis": 2,
+        "plane": -0.3978,
+        "projectedOverlapArea": 4e-06,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "C6320_Node_4_Power_Status",
+          "C6320_Node_4_PullTab"
+        ],
+        "axis": 2,
+        "plane": -0.3976,
+        "projectedOverlapArea": 4e-06,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "C6320_Node_3_Power_Status",
+          "C6320_Node_3_PullTab"
+        ],
+        "axis": 2,
+        "plane": -0.3976,
+        "projectedOverlapArea": 4e-06,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "Top_Cover_Stepped_Seam",
+          "Top_Longitudinal_Seam_2"
+        ],
+        "axis": 1,
+        "plane": 0.04315,
+        "projectedOverlapArea": 3.750000000000007e-06,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "Top_Cover_Stepped_Seam",
+          "Top_Longitudinal_Seam_1"
+        ],
+        "axis": 1,
+        "plane": 0.04315,
+        "projectedOverlapArea": 3.750000000000007e-06,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "Top_Cover_Stepped_Seam",
+          "Top_Longitudinal_Seam_2"
+        ],
+        "axis": 1,
+        "plane": 0.04305,
+        "projectedOverlapArea": 3.750000000000007e-06,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "Top_Cover_Stepped_Seam",
+          "Top_Longitudinal_Seam_1"
+        ],
+        "axis": 1,
+        "plane": 0.04305,
+        "projectedOverlapArea": 3.750000000000007e-06,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "C6320_Node_4_PerimeterTop",
+          "C6320_Node_4_PullTab"
+        ],
+        "axis": 0,
+        "plane": 0.1415,
+        "projectedOverlapArea": 1.9999999999997815e-07,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "C6320_Node_2_PerimeterTop",
+          "C6320_Node_2_PullTab"
+        ],
+        "axis": 0,
+        "plane": 0.1415,
+        "projectedOverlapArea": 1.9999999999997815e-07,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "C6320_Node_3_PerimeterTop",
+          "C6320_Node_3_PullTab"
+        ],
+        "axis": 0,
+        "plane": -0.0435,
+        "projectedOverlapArea": 1.9999999999997815e-07,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "C6320_Node_1_PerimeterTop",
+          "C6320_Node_1_PullTab"
+        ],
+        "axis": 0,
+        "plane": -0.0435,
+        "projectedOverlapArea": 1.9999999999997815e-07,
+        "exteriorRisk": false
+      }
+    ],
+    "exteriorSameFacingOverlaps": [],
+    "oppositeFacingContacts": [
+      {
+        "nodes": [
+          "Physical_Right_SourceLocked_Texture",
+          "Physical_Right_UpperRecess_2"
+        ],
+        "axis": 0,
+        "plane": 0.2234,
+        "projectedContactArea": 0.0005060000000000005
+      },
+      {
+        "nodes": [
+          "Physical_Right_SourceLocked_Texture",
+          "Physical_Right_UpperRecess_1"
+        ],
+        "axis": 0,
+        "plane": 0.2234,
+        "projectedContactArea": 0.0005059999999999999
+      },
+      {
+        "nodes": [
+          "Physical_Right_MajorKeySlot_3",
+          "Physical_Right_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": 0.2234,
+        "projectedContactArea": 0.0002880000000000001
+      },
+      {
+        "nodes": [
+          "Physical_Right_MajorKeySlot_1",
+          "Physical_Right_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": 0.2234,
+        "projectedContactArea": 0.0002880000000000001
+      },
+      {
+        "nodes": [
+          "Physical_Left_MajorKeySlot_3",
+          "Physical_Left_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": -0.2234,
+        "projectedContactArea": 0.0002880000000000001
+      },
+      {
+        "nodes": [
+          "Physical_Left_MajorKeySlot_1",
+          "Physical_Left_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": -0.2234,
+        "projectedContactArea": 0.0002880000000000001
+      },
+      {
+        "nodes": [
+          "Physical_Right_MajorKeySlot_2",
+          "Physical_Right_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": 0.2234,
+        "projectedContactArea": 0.00028800000000000006
+      },
+      {
+        "nodes": [
+          "Physical_Left_MajorKeySlot_2",
+          "Physical_Left_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": -0.2234,
+        "projectedContactArea": 0.00028800000000000006
+      },
+      {
+        "nodes": [
+          "Top_Black_Oval_Pad",
+          "Top_Blue_Pad_Center"
+        ],
+        "axis": 1,
+        "plane": 0.04315,
+        "projectedContactArea": 0.0002250000000000004
+      },
+      {
+        "nodes": [
+          "Physical_Right_SourceLocked_Texture",
+          "Physical_Right_VerticalAccessSlot"
+        ],
+        "axis": 0,
+        "plane": 0.2234,
+        "projectedContactArea": 0.00018200000000000014
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_24_Body",
+          "SFF_Carrier_24_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39792,
+        "projectedContactArea": 9.900000000000005e-05
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_23_Body",
+          "SFF_Carrier_23_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39792,
+        "projectedContactArea": 9.900000000000005e-05
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_22_Body",
+          "SFF_Carrier_22_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39792,
+        "projectedContactArea": 9.900000000000005e-05
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_21_Body",
+          "SFF_Carrier_21_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39792,
+        "projectedContactArea": 9.900000000000005e-05
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_20_Body",
+          "SFF_Carrier_20_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39792,
+        "projectedContactArea": 9.900000000000005e-05
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_19_Body",
+          "SFF_Carrier_19_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39792,
+        "projectedContactArea": 9.900000000000005e-05
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_18_Body",
+          "SFF_Carrier_18_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39792,
+        "projectedContactArea": 9.900000000000005e-05
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_17_Body",
+          "SFF_Carrier_17_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39792,
+        "projectedContactArea": 9.900000000000005e-05
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_08_Body",
+          "SFF_Carrier_08_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39792,
+        "projectedContactArea": 9.900000000000005e-05
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_07_Body",
+          "SFF_Carrier_07_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39792,
+        "projectedContactArea": 9.900000000000005e-05
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_06_Body",
+          "SFF_Carrier_06_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39792,
+        "projectedContactArea": 9.900000000000005e-05
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_05_Body",
+          "SFF_Carrier_05_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39792,
+        "projectedContactArea": 9.900000000000005e-05
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_04_Body",
+          "SFF_Carrier_04_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39792,
+        "projectedContactArea": 9.900000000000005e-05
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_03_Body",
+          "SFF_Carrier_03_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39792,
+        "projectedContactArea": 9.900000000000005e-05
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_02_Body",
+          "SFF_Carrier_02_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39792,
+        "projectedContactArea": 9.900000000000005e-05
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_01_Body",
+          "SFF_Carrier_01_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39792,
+        "projectedContactArea": 9.900000000000005e-05
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_14_Body",
+          "SFF_Carrier_14_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39792,
+        "projectedContactArea": 9.899999999999998e-05
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_13_Body",
+          "SFF_Carrier_13_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39792,
+        "projectedContactArea": 9.899999999999998e-05
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_12_Body",
+          "SFF_Carrier_12_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39792,
+        "projectedContactArea": 9.899999999999998e-05
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_11_Body",
+          "SFF_Carrier_11_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39792,
+        "projectedContactArea": 9.899999999999998e-05
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_16_Body",
+          "SFF_Carrier_16_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39792,
+        "projectedContactArea": 9.89999999999999e-05
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_15_Body",
+          "SFF_Carrier_15_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39792,
+        "projectedContactArea": 9.89999999999999e-05
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_10_Body",
+          "SFF_Carrier_10_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39792,
+        "projectedContactArea": 9.89999999999999e-05
+      },
+      {
+        "nodes": [
+          "SFF_Carrier_09_Body",
+          "SFF_Carrier_09_TopLatch"
+        ],
+        "axis": 2,
+        "plane": 0.39792,
+        "projectedContactArea": 9.89999999999999e-05
+      },
+      {
+        "nodes": [
+          "Physical_Right_Fastener_6",
+          "Physical_Right_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": 0.2234,
+        "projectedContactArea": 3.6000000000000035e-05
+      },
+      {
+        "nodes": [
+          "Physical_Right_Fastener_5",
+          "Physical_Right_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": 0.2234,
+        "projectedContactArea": 3.6000000000000035e-05
+      },
+      {
+        "nodes": [
+          "Physical_Right_Fastener_4",
+          "Physical_Right_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": 0.2234,
+        "projectedContactArea": 3.6000000000000035e-05
+      },
+      {
+        "nodes": [
+          "Physical_Right_Fastener_3",
+          "Physical_Right_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": 0.2234,
+        "projectedContactArea": 3.6000000000000035e-05
+      },
+      {
+        "nodes": [
+          "Physical_Right_Fastener_2",
+          "Physical_Right_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": 0.2234,
+        "projectedContactArea": 3.6000000000000035e-05
+      },
+      {
+        "nodes": [
+          "Physical_Right_Fastener_1",
+          "Physical_Right_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": 0.2234,
+        "projectedContactArea": 3.6000000000000035e-05
+      },
+      {
+        "nodes": [
+          "Physical_Left_Fastener_6",
+          "Physical_Left_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": -0.2234,
+        "projectedContactArea": 3.6000000000000035e-05
+      },
+      {
+        "nodes": [
+          "Physical_Left_Fastener_5",
+          "Physical_Left_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": -0.2234,
+        "projectedContactArea": 3.6000000000000035e-05
+      },
+      {
+        "nodes": [
+          "Physical_Left_Fastener_4",
+          "Physical_Left_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": -0.2234,
+        "projectedContactArea": 3.6000000000000035e-05
+      },
+      {
+        "nodes": [
+          "Physical_Left_Fastener_3",
+          "Physical_Left_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": -0.2234,
+        "projectedContactArea": 3.6000000000000035e-05
+      },
+      {
+        "nodes": [
+          "Physical_Left_Fastener_2",
+          "Physical_Left_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": -0.2234,
+        "projectedContactArea": 3.6000000000000035e-05
+      },
+      {
+        "nodes": [
+          "Physical_Left_Fastener_1",
+          "Physical_Left_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": -0.2234,
+        "projectedContactArea": 3.6000000000000035e-05
+      },
+      {
+        "nodes": [
+          "Physical_Right_KeySlotFlank_3_B",
+          "Physical_Right_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": 0.2234,
+        "projectedContactArea": 2.8000000000000027e-05
+      },
+      {
+        "nodes": [
+          "Physical_Right_KeySlotFlank_3_A",
+          "Physical_Right_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": 0.2234,
+        "projectedContactArea": 2.8000000000000027e-05
+      },
+      {
+        "nodes": [
+          "Physical_Right_KeySlotFlank_1_B",
+          "Physical_Right_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": 0.2234,
+        "projectedContactArea": 2.8000000000000027e-05
+      },
+      {
+        "nodes": [
+          "Physical_Right_KeySlotFlank_1_A",
+          "Physical_Right_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": 0.2234,
+        "projectedContactArea": 2.8000000000000027e-05
+      },
+      {
+        "nodes": [
+          "Physical_Left_KeySlotFlank_3_B",
+          "Physical_Left_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": -0.2234,
+        "projectedContactArea": 2.8000000000000027e-05
+      },
+      {
+        "nodes": [
+          "Physical_Left_KeySlotFlank_3_A",
+          "Physical_Left_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": -0.2234,
+        "projectedContactArea": 2.8000000000000027e-05
+      },
+      {
+        "nodes": [
+          "Physical_Left_KeySlotFlank_1_B",
+          "Physical_Left_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": -0.2234,
+        "projectedContactArea": 2.8000000000000027e-05
+      },
+      {
+        "nodes": [
+          "Physical_Left_KeySlotFlank_1_A",
+          "Physical_Left_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": -0.2234,
+        "projectedContactArea": 2.8000000000000027e-05
+      },
+      {
+        "nodes": [
+          "Physical_Right_KeySlotFlank_2_B",
+          "Physical_Right_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": 0.2234,
+        "projectedContactArea": 2.8000000000000013e-05
+      },
+      {
+        "nodes": [
+          "Physical_Right_KeySlotFlank_2_A",
+          "Physical_Right_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": 0.2234,
+        "projectedContactArea": 2.8000000000000013e-05
+      },
+      {
+        "nodes": [
+          "Physical_Left_KeySlotFlank_2_B",
+          "Physical_Left_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": -0.2234,
+        "projectedContactArea": 2.8000000000000013e-05
+      },
+      {
+        "nodes": [
+          "Physical_Left_KeySlotFlank_2_A",
+          "Physical_Left_SourceLocked_Texture"
+        ],
+        "axis": 0,
+        "plane": -0.2234,
+        "projectedContactArea": 2.8000000000000013e-05
+      },
+      {
+        "nodes": [
+          "Front_Right_Ear_BottomBridge",
+          "Front_Right_Ear_OuterRail"
+        ],
+        "axis": 0,
+        "plane": 0.23715,
+        "projectedContactArea": 1.999999999999779e-06
+      },
+      {
+        "nodes": [
+          "Front_Right_Ear_OuterRail",
+          "Front_Right_Ear_TopBridge"
+        ],
+        "axis": 0,
+        "plane": 0.23715,
+        "projectedContactArea": 1.999999999999779e-06
+      },
+      {
+        "nodes": [
+          "Front_Right_Ear_BottomBridge",
+          "Front_Right_Ear_InnerRail"
+        ],
+        "axis": 0,
+        "plane": 0.228,
+        "projectedContactArea": 1.999999999999779e-06
+      },
+      {
+        "nodes": [
+          "Front_Right_Ear_InnerRail",
+          "Front_Right_Ear_TopBridge"
+        ],
+        "axis": 0,
+        "plane": 0.228,
+        "projectedContactArea": 1.999999999999779e-06
+      },
+      {
+        "nodes": [
+          "Front_Left_Ear_BottomBridge",
+          "Front_Left_Ear_InnerRail"
+        ],
+        "axis": 0,
+        "plane": -0.228,
+        "projectedContactArea": 1.999999999999779e-06
+      },
+      {
+        "nodes": [
+          "Front_Left_Ear_InnerRail",
+          "Front_Left_Ear_TopBridge"
+        ],
+        "axis": 0,
+        "plane": -0.228,
+        "projectedContactArea": 1.999999999999779e-06
+      },
+      {
+        "nodes": [
+          "Front_Left_Ear_BottomBridge",
+          "Front_Left_Ear_OuterRail"
+        ],
+        "axis": 0,
+        "plane": -0.23715,
+        "projectedContactArea": 1.999999999999779e-06
+      },
+      {
+        "nodes": [
+          "Front_Left_Ear_OuterRail",
+          "Front_Left_Ear_TopBridge"
+        ],
+        "axis": 0,
+        "plane": -0.23715,
+        "projectedContactArea": 1.999999999999779e-06
+      },
+      {
+        "nodes": [
+          "Shared_AC_PSU_1400W_2_GuardHorizontal",
+          "Shared_AC_PSU_1400W_2_GuardVertical"
+        ],
+        "axis": 2,
+        "plane": -0.3979,
+        "projectedContactArea": 1.4399999999999741e-06
+      },
+      {
+        "nodes": [
+          "Shared_AC_PSU_1400W_1_GuardHorizontal",
+          "Shared_AC_PSU_1400W_1_GuardVertical"
+        ],
+        "axis": 2,
+        "plane": -0.3979,
+        "projectedContactArea": 1.4399999999999741e-06
+      },
+      {
+        "nodes": [
+          "Bottom_Conservative_FrontLip",
+          "Front_Right_Ear_InnerRail"
+        ],
+        "axis": 0,
+        "plane": 0.224,
+        "projectedContactArea": 8.99999999999885e-08
+      },
+      {
+        "nodes": [
+          "Bottom_Conservative_FrontLip",
+          "Front_Left_Ear_InnerRail"
+        ],
+        "axis": 0,
+        "plane": -0.224,
+        "projectedContactArea": 8.99999999999885e-08
+      }
+    ]
+  },
+  "closedCore": {
+    "candidates": [
+      {
+        "node": "Closed_2U_Chassis_Core",
+        "watertight": true,
+        "windingConsistent": true,
+        "volume": 0.030561389999999997
+      }
+    ],
+    "errors": []
+  },
+  "normalChecks": {
+    "meshes": [
+      {
+        "node": "Bottom_Conservative_RearLip",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Bottom_Conservative_FrontLip",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Top_Factory_Label_Block_White",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Top_Factory_Label_Block_Yellow",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Top_Factory_Label_Block_Black",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Top_Blue_Rectangular_Pad",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Top_Blue_Pad_Center",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Top_Black_Oval_Pad",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Top_Longitudinal_Seam_2",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Top_Longitudinal_Seam_1",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Top_Cover_Stepped_Seam",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Internal_Shared_Fan_4_Rotor",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Internal_Shared_Fan_4_Housing",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Internal_Shared_Fan_3_Rotor",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Internal_Shared_Fan_3_Housing",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Internal_Shared_Fan_2_Rotor",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Internal_Shared_Fan_2_Housing",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Internal_Shared_Fan_1_Rotor",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Internal_Shared_Fan_1_Housing",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Right_UpperRecess_2",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Right_UpperRecess_1",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Right_VerticalAccessSlot",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Right_Fastener_6",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Right_Fastener_5",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Right_Fastener_4",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Right_Fastener_3",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Right_Fastener_2",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Right_Fastener_1",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Right_KeySlotFlank_3_B",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Right_KeySlotFlank_3_A",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Right_MajorKeySlot_3",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Right_KeySlotFlank_2_B",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Right_KeySlotFlank_2_A",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Right_MajorKeySlot_2",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Right_KeySlotFlank_1_B",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Right_KeySlotFlank_1_A",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Right_MajorKeySlot_1",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Left_Fastener_6",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Left_Fastener_5",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Left_Fastener_4",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Left_Fastener_3",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Left_Fastener_2",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Left_Fastener_1",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Left_KeySlotFlank_3_B",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Left_KeySlotFlank_3_A",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Left_MajorKeySlot_3",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Left_KeySlotFlank_2_B",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Left_KeySlotFlank_2_A",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Left_MajorKeySlot_2",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Left_KeySlotFlank_1_B",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Left_KeySlotFlank_1_A",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Physical_Left_MajorKeySlot_1",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Shared_AC_PSU_1400W_2_HandleRecess",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Shared_AC_PSU_1400W_2_OrangeRelease",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Shared_AC_PSU_1400W_2_IEC_AC_Inlet",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Shared_AC_PSU_1400W_2_GuardVertical",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Shared_AC_PSU_1400W_2_GuardHorizontal",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Shared_AC_PSU_1400W_2_FanInner",
+        "triangleCount": 160,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "Shared_AC_PSU_1400W_2_FanGuard",
+        "triangleCount": 160,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "Shared_AC_PSU_1400W_2_Face",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Shared_AC_PSU_1400W_1_HandleRecess",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Shared_AC_PSU_1400W_1_OrangeRelease",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Shared_AC_PSU_1400W_1_IEC_AC_Inlet",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Shared_AC_PSU_1400W_1_GuardVertical",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Shared_AC_PSU_1400W_1_GuardHorizontal",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Shared_AC_PSU_1400W_1_FanInner",
+        "triangleCount": 160,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "Shared_AC_PSU_1400W_1_FanGuard",
+        "triangleCount": 160,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "Shared_AC_PSU_1400W_1_Face",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_4_PullTab",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_4_PowerLED",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_4_Power_Status",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_4_VGA",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_4_USB_to_Serial",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_4_iDRAC_RJ45",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_4_SFPplus_B",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_4_SFPplus_A",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_4_USB3",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_4_PCIeVent",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_4_PCIeCarrier",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_4_PerimeterTop",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_3_PullTab",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_3_PowerLED",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_3_Power_Status",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_3_VGA",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_3_USB_to_Serial",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_3_iDRAC_RJ45",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_3_SFPplus_B",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_3_SFPplus_A",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_3_USB3",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_3_PCIeVent",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_3_PCIeCarrier",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_3_PerimeterTop",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_2_PullTab",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_2_PowerLED",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_2_Power_Status",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_2_VGA",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_2_USB_to_Serial",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_2_iDRAC_RJ45",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_2_SFPplus_B",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_2_SFPplus_A",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_2_USB3",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_2_PCIeVent",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_2_PCIeCarrier",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_2_PerimeterTop",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_1_PullTab",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_1_PowerLED",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_1_Power_Status",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_1_VGA",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_1_USB_to_Serial",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_1_iDRAC_RJ45",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_1_SFPplus_B",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_1_SFPplus_A",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_1_USB3",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_1_PCIeVent",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_1_PCIeCarrier",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "C6320_Node_1_PerimeterTop",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Front_Control_StatusLED_2",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Front_Control_PowerButton_2",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Front_Control_StatusLED_1",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Front_Control_PowerButton_1",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_24_BottomTooth",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_24_LatchButton",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_24_Handle",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_24_TopLatch",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_24_SourceTexture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "SFF_Carrier_24_Body",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_23_BottomTooth",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_23_LatchButton",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_23_Handle",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_23_TopLatch",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_23_SourceTexture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "SFF_Carrier_23_Body",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_22_BottomTooth",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_22_LatchButton",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_22_Handle",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_22_TopLatch",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_22_SourceTexture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "SFF_Carrier_22_Body",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_21_BottomTooth",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_21_LatchButton",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_21_Handle",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_21_TopLatch",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_21_SourceTexture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "SFF_Carrier_21_Body",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_20_BottomTooth",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_20_LatchButton",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_20_Handle",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_20_TopLatch",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_20_SourceTexture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "SFF_Carrier_20_Body",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_19_BottomTooth",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_19_LatchButton",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_19_Handle",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_19_TopLatch",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_19_SourceTexture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "SFF_Carrier_19_Body",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_18_BottomTooth",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_18_LatchButton",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_18_Handle",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_18_TopLatch",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_18_SourceTexture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "SFF_Carrier_18_Body",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_17_BottomTooth",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_17_LatchButton",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_17_Handle",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_17_TopLatch",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_17_SourceTexture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "SFF_Carrier_17_Body",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_16_BottomTooth",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_16_LatchButton",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_16_Handle",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_16_TopLatch",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_16_SourceTexture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "SFF_Carrier_16_Body",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_15_BottomTooth",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_15_LatchButton",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_15_Handle",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_15_TopLatch",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_15_SourceTexture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "SFF_Carrier_15_Body",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_14_BottomTooth",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_14_LatchButton",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_14_Handle",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_14_TopLatch",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_14_SourceTexture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "SFF_Carrier_14_Body",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_13_BottomTooth",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_13_LatchButton",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_13_Handle",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_13_TopLatch",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_13_SourceTexture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "SFF_Carrier_13_Body",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_12_BottomTooth",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_12_LatchButton",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_12_Handle",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_12_TopLatch",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_12_SourceTexture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "SFF_Carrier_12_Body",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_11_BottomTooth",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_11_LatchButton",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_11_Handle",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_11_TopLatch",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_11_SourceTexture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "SFF_Carrier_11_Body",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_10_BottomTooth",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_10_LatchButton",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_10_Handle",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_10_TopLatch",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_10_SourceTexture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "SFF_Carrier_10_Body",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_09_BottomTooth",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_09_LatchButton",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_09_Handle",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_09_TopLatch",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_09_SourceTexture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "SFF_Carrier_09_Body",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_08_BottomTooth",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_08_LatchButton",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_08_Handle",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_08_TopLatch",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_08_SourceTexture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "SFF_Carrier_08_Body",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_07_BottomTooth",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_07_LatchButton",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_07_Handle",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_07_TopLatch",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_07_SourceTexture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "SFF_Carrier_07_Body",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_06_BottomTooth",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_06_LatchButton",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_06_Handle",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_06_TopLatch",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_06_SourceTexture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "SFF_Carrier_06_Body",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_05_BottomTooth",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_05_LatchButton",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_05_Handle",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_05_TopLatch",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_05_SourceTexture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "SFF_Carrier_05_Body",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_04_BottomTooth",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_04_LatchButton",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_04_Handle",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_04_TopLatch",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_04_SourceTexture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "SFF_Carrier_04_Body",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_03_BottomTooth",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_03_LatchButton",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_03_Handle",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_03_TopLatch",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_03_SourceTexture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "SFF_Carrier_03_Body",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_02_BottomTooth",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_02_LatchButton",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_02_Handle",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_02_TopLatch",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_02_SourceTexture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "SFF_Carrier_02_Body",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_01_BottomTooth",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_01_LatchButton",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_01_Handle",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_01_TopLatch",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "SFF_Carrier_01_SourceTexture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "SFF_Carrier_01_Body",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Front_RightControl_SourceTexture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "Front_LeftControl_SourceTexture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "Front_Nonusable_Drive_Cover",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Front_Right_Control_Panel",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Front_Left_Control_Panel",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Front_Right_Ear_Fastener_4",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Front_Right_Ear_Fastener_3",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Front_Right_Ear_Fastener_2",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Front_Right_Ear_Fastener_1",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Front_Right_Ear_SmallMechanicalHole",
+        "triangleCount": 160,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "Front_Right_Ear_LargeRackHole",
+        "triangleCount": 160,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "Front_Right_Ear_BottomBridge",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Front_Right_Ear_TopBridge",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Front_Right_Ear_InnerRail",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Front_Right_Ear_OuterRail",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Front_Left_Ear_Fastener_4",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Front_Left_Ear_Fastener_3",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Front_Left_Ear_Fastener_2",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Front_Left_Ear_Fastener_1",
+        "triangleCount": 128,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Front_Left_Ear_SmallMechanicalHole",
+        "triangleCount": 160,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "Front_Left_Ear_LargeRackHole",
+        "triangleCount": 160,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "Front_Left_Ear_BottomBridge",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Front_Left_Ear_TopBridge",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Front_Left_Ear_InnerRail",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Front_Left_Ear_OuterRail",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Bottom_GenericFallback_Texture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "Top_SourceLocked_Texture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "Physical_Right_SourceLocked_Texture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "Physical_Left_SourceLocked_Texture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "Rear_SourceLocked_Texture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "Front_SourceLocked_Texture",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "Closed_2U_Chassis_Core",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      }
+    ],
+    "violations": []
+  },
+  "openMeshes": [
+    "Bottom_Conservative_RearLip",
+    "Bottom_Conservative_FrontLip",
+    "Top_Factory_Label_Block_White",
+    "Top_Factory_Label_Block_Yellow",
+    "Top_Factory_Label_Block_Black",
+    "Top_Blue_Rectangular_Pad",
+    "Top_Blue_Pad_Center",
+    "Top_Black_Oval_Pad",
+    "Top_Longitudinal_Seam_2",
+    "Top_Longitudinal_Seam_1",
+    "Top_Cover_Stepped_Seam",
+    "Internal_Shared_Fan_4_Rotor",
+    "Internal_Shared_Fan_4_Housing",
+    "Internal_Shared_Fan_3_Rotor",
+    "Internal_Shared_Fan_3_Housing",
+    "Internal_Shared_Fan_2_Rotor",
+    "Internal_Shared_Fan_2_Housing",
+    "Internal_Shared_Fan_1_Rotor",
+    "Internal_Shared_Fan_1_Housing",
+    "Physical_Right_UpperRecess_2",
+    "Physical_Right_UpperRecess_1",
+    "Physical_Right_VerticalAccessSlot",
+    "Physical_Right_Fastener_6",
+    "Physical_Right_Fastener_5",
+    "Physical_Right_Fastener_4",
+    "Physical_Right_Fastener_3",
+    "Physical_Right_Fastener_2",
+    "Physical_Right_Fastener_1",
+    "Physical_Right_KeySlotFlank_3_B",
+    "Physical_Right_KeySlotFlank_3_A",
+    "Physical_Right_MajorKeySlot_3",
+    "Physical_Right_KeySlotFlank_2_B",
+    "Physical_Right_KeySlotFlank_2_A",
+    "Physical_Right_MajorKeySlot_2",
+    "Physical_Right_KeySlotFlank_1_B",
+    "Physical_Right_KeySlotFlank_1_A",
+    "Physical_Right_MajorKeySlot_1",
+    "Physical_Left_Fastener_6",
+    "Physical_Left_Fastener_5",
+    "Physical_Left_Fastener_4",
+    "Physical_Left_Fastener_3",
+    "Physical_Left_Fastener_2",
+    "Physical_Left_Fastener_1",
+    "Physical_Left_KeySlotFlank_3_B",
+    "Physical_Left_KeySlotFlank_3_A",
+    "Physical_Left_MajorKeySlot_3",
+    "Physical_Left_KeySlotFlank_2_B",
+    "Physical_Left_KeySlotFlank_2_A",
+    "Physical_Left_MajorKeySlot_2",
+    "Physical_Left_KeySlotFlank_1_B",
+    "Physical_Left_KeySlotFlank_1_A",
+    "Physical_Left_MajorKeySlot_1",
+    "Shared_AC_PSU_1400W_2_HandleRecess",
+    "Shared_AC_PSU_1400W_2_OrangeRelease",
+    "Shared_AC_PSU_1400W_2_IEC_AC_Inlet",
+    "Shared_AC_PSU_1400W_2_GuardVertical",
+    "Shared_AC_PSU_1400W_2_GuardHorizontal",
+    "Shared_AC_PSU_1400W_2_FanInner",
+    "Shared_AC_PSU_1400W_2_FanGuard",
+    "Shared_AC_PSU_1400W_2_Face",
+    "Shared_AC_PSU_1400W_1_HandleRecess",
+    "Shared_AC_PSU_1400W_1_OrangeRelease",
+    "Shared_AC_PSU_1400W_1_IEC_AC_Inlet",
+    "Shared_AC_PSU_1400W_1_GuardVertical",
+    "Shared_AC_PSU_1400W_1_GuardHorizontal",
+    "Shared_AC_PSU_1400W_1_FanInner",
+    "Shared_AC_PSU_1400W_1_FanGuard",
+    "Shared_AC_PSU_1400W_1_Face",
+    "C6320_Node_4_PullTab",
+    "C6320_Node_4_PowerLED",
+    "C6320_Node_4_Power_Status",
+    "C6320_Node_4_VGA",
+    "C6320_Node_4_USB_to_Serial",
+    "C6320_Node_4_iDRAC_RJ45",
+    "C6320_Node_4_SFPplus_B",
+    "C6320_Node_4_SFPplus_A",
+    "C6320_Node_4_USB3",
+    "C6320_Node_4_PCIeVent",
+    "C6320_Node_4_PCIeCarrier",
+    "C6320_Node_4_PerimeterTop",
+    "C6320_Node_3_PullTab",
+    "C6320_Node_3_PowerLED",
+    "C6320_Node_3_Power_Status",
+    "C6320_Node_3_VGA",
+    "C6320_Node_3_USB_to_Serial",
+    "C6320_Node_3_iDRAC_RJ45",
+    "C6320_Node_3_SFPplus_B",
+    "C6320_Node_3_SFPplus_A",
+    "C6320_Node_3_USB3",
+    "C6320_Node_3_PCIeVent",
+    "C6320_Node_3_PCIeCarrier",
+    "C6320_Node_3_PerimeterTop",
+    "C6320_Node_2_PullTab",
+    "C6320_Node_2_PowerLED",
+    "C6320_Node_2_Power_Status",
+    "C6320_Node_2_VGA",
+    "C6320_Node_2_USB_to_Serial",
+    "C6320_Node_2_iDRAC_RJ45",
+    "C6320_Node_2_SFPplus_B",
+    "C6320_Node_2_SFPplus_A",
+    "C6320_Node_2_USB3",
+    "C6320_Node_2_PCIeVent",
+    "C6320_Node_2_PCIeCarrier",
+    "C6320_Node_2_PerimeterTop",
+    "C6320_Node_1_PullTab",
+    "C6320_Node_1_PowerLED",
+    "C6320_Node_1_Power_Status",
+    "C6320_Node_1_VGA",
+    "C6320_Node_1_USB_to_Serial",
+    "C6320_Node_1_iDRAC_RJ45",
+    "C6320_Node_1_SFPplus_B",
+    "C6320_Node_1_SFPplus_A",
+    "C6320_Node_1_USB3",
+    "C6320_Node_1_PCIeVent",
+    "C6320_Node_1_PCIeCarrier",
+    "C6320_Node_1_PerimeterTop",
+    "Front_Control_StatusLED_2",
+    "Front_Control_PowerButton_2",
+    "Front_Control_StatusLED_1",
+    "Front_Control_PowerButton_1",
+    "SFF_Carrier_24_BottomTooth",
+    "SFF_Carrier_24_LatchButton",
+    "SFF_Carrier_24_Handle",
+    "SFF_Carrier_24_TopLatch",
+    "SFF_Carrier_24_SourceTexture",
+    "SFF_Carrier_24_Body",
+    "SFF_Carrier_23_BottomTooth",
+    "SFF_Carrier_23_LatchButton",
+    "SFF_Carrier_23_Handle",
+    "SFF_Carrier_23_TopLatch",
+    "SFF_Carrier_23_SourceTexture",
+    "SFF_Carrier_23_Body",
+    "SFF_Carrier_22_BottomTooth",
+    "SFF_Carrier_22_LatchButton",
+    "SFF_Carrier_22_Handle",
+    "SFF_Carrier_22_TopLatch",
+    "SFF_Carrier_22_SourceTexture",
+    "SFF_Carrier_22_Body",
+    "SFF_Carrier_21_BottomTooth",
+    "SFF_Carrier_21_LatchButton",
+    "SFF_Carrier_21_Handle",
+    "SFF_Carrier_21_TopLatch",
+    "SFF_Carrier_21_SourceTexture",
+    "SFF_Carrier_21_Body",
+    "SFF_Carrier_20_BottomTooth",
+    "SFF_Carrier_20_LatchButton",
+    "SFF_Carrier_20_Handle",
+    "SFF_Carrier_20_TopLatch",
+    "SFF_Carrier_20_SourceTexture",
+    "SFF_Carrier_20_Body",
+    "SFF_Carrier_19_BottomTooth",
+    "SFF_Carrier_19_LatchButton",
+    "SFF_Carrier_19_Handle",
+    "SFF_Carrier_19_TopLatch",
+    "SFF_Carrier_19_SourceTexture",
+    "SFF_Carrier_19_Body",
+    "SFF_Carrier_18_BottomTooth",
+    "SFF_Carrier_18_LatchButton",
+    "SFF_Carrier_18_Handle",
+    "SFF_Carrier_18_TopLatch",
+    "SFF_Carrier_18_SourceTexture",
+    "SFF_Carrier_18_Body",
+    "SFF_Carrier_17_BottomTooth",
+    "SFF_Carrier_17_LatchButton",
+    "SFF_Carrier_17_Handle",
+    "SFF_Carrier_17_TopLatch",
+    "SFF_Carrier_17_SourceTexture",
+    "SFF_Carrier_17_Body",
+    "SFF_Carrier_16_BottomTooth",
+    "SFF_Carrier_16_LatchButton",
+    "SFF_Carrier_16_Handle",
+    "SFF_Carrier_16_TopLatch",
+    "SFF_Carrier_16_SourceTexture",
+    "SFF_Carrier_16_Body",
+    "SFF_Carrier_15_BottomTooth",
+    "SFF_Carrier_15_LatchButton",
+    "SFF_Carrier_15_Handle",
+    "SFF_Carrier_15_TopLatch",
+    "SFF_Carrier_15_SourceTexture",
+    "SFF_Carrier_15_Body",
+    "SFF_Carrier_14_BottomTooth",
+    "SFF_Carrier_14_LatchButton",
+    "SFF_Carrier_14_Handle",
+    "SFF_Carrier_14_TopLatch",
+    "SFF_Carrier_14_SourceTexture",
+    "SFF_Carrier_14_Body",
+    "SFF_Carrier_13_BottomTooth",
+    "SFF_Carrier_13_LatchButton",
+    "SFF_Carrier_13_Handle",
+    "SFF_Carrier_13_TopLatch",
+    "SFF_Carrier_13_SourceTexture",
+    "SFF_Carrier_13_Body",
+    "SFF_Carrier_12_BottomTooth",
+    "SFF_Carrier_12_LatchButton",
+    "SFF_Carrier_12_Handle",
+    "SFF_Carrier_12_TopLatch",
+    "SFF_Carrier_12_SourceTexture",
+    "SFF_Carrier_12_Body",
+    "SFF_Carrier_11_BottomTooth",
+    "SFF_Carrier_11_LatchButton",
+    "SFF_Carrier_11_Handle",
+    "SFF_Carrier_11_TopLatch",
+    "SFF_Carrier_11_SourceTexture",
+    "SFF_Carrier_11_Body",
+    "SFF_Carrier_10_BottomTooth",
+    "SFF_Carrier_10_LatchButton",
+    "SFF_Carrier_10_Handle",
+    "SFF_Carrier_10_TopLatch",
+    "SFF_Carrier_10_SourceTexture",
+    "SFF_Carrier_10_Body",
+    "SFF_Carrier_09_BottomTooth",
+    "SFF_Carrier_09_LatchButton",
+    "SFF_Carrier_09_Handle",
+    "SFF_Carrier_09_TopLatch",
+    "SFF_Carrier_09_SourceTexture",
+    "SFF_Carrier_09_Body",
+    "SFF_Carrier_08_BottomTooth",
+    "SFF_Carrier_08_LatchButton",
+    "SFF_Carrier_08_Handle",
+    "SFF_Carrier_08_TopLatch",
+    "SFF_Carrier_08_SourceTexture",
+    "SFF_Carrier_08_Body",
+    "SFF_Carrier_07_BottomTooth",
+    "SFF_Carrier_07_LatchButton",
+    "SFF_Carrier_07_Handle",
+    "SFF_Carrier_07_TopLatch",
+    "SFF_Carrier_07_SourceTexture",
+    "SFF_Carrier_07_Body",
+    "SFF_Carrier_06_BottomTooth",
+    "SFF_Carrier_06_LatchButton",
+    "SFF_Carrier_06_Handle",
+    "SFF_Carrier_06_TopLatch",
+    "SFF_Carrier_06_SourceTexture",
+    "SFF_Carrier_06_Body",
+    "SFF_Carrier_05_BottomTooth",
+    "SFF_Carrier_05_LatchButton",
+    "SFF_Carrier_05_Handle",
+    "SFF_Carrier_05_TopLatch",
+    "SFF_Carrier_05_SourceTexture",
+    "SFF_Carrier_05_Body",
+    "SFF_Carrier_04_BottomTooth",
+    "SFF_Carrier_04_LatchButton",
+    "SFF_Carrier_04_Handle",
+    "SFF_Carrier_04_TopLatch",
+    "SFF_Carrier_04_SourceTexture",
+    "SFF_Carrier_04_Body",
+    "SFF_Carrier_03_BottomTooth",
+    "SFF_Carrier_03_LatchButton",
+    "SFF_Carrier_03_Handle",
+    "SFF_Carrier_03_TopLatch",
+    "SFF_Carrier_03_SourceTexture",
+    "SFF_Carrier_03_Body",
+    "SFF_Carrier_02_BottomTooth",
+    "SFF_Carrier_02_LatchButton",
+    "SFF_Carrier_02_Handle",
+    "SFF_Carrier_02_TopLatch",
+    "SFF_Carrier_02_SourceTexture",
+    "SFF_Carrier_02_Body",
+    "SFF_Carrier_01_BottomTooth",
+    "SFF_Carrier_01_LatchButton",
+    "SFF_Carrier_01_Handle",
+    "SFF_Carrier_01_TopLatch",
+    "SFF_Carrier_01_SourceTexture",
+    "SFF_Carrier_01_Body",
+    "Front_RightControl_SourceTexture",
+    "Front_LeftControl_SourceTexture",
+    "Front_Nonusable_Drive_Cover",
+    "Front_Right_Control_Panel",
+    "Front_Left_Control_Panel",
+    "Front_Right_Ear_Fastener_4",
+    "Front_Right_Ear_Fastener_3",
+    "Front_Right_Ear_Fastener_2",
+    "Front_Right_Ear_Fastener_1",
+    "Front_Right_Ear_SmallMechanicalHole",
+    "Front_Right_Ear_LargeRackHole",
+    "Front_Right_Ear_BottomBridge",
+    "Front_Right_Ear_TopBridge",
+    "Front_Right_Ear_InnerRail",
+    "Front_Right_Ear_OuterRail",
+    "Front_Left_Ear_Fastener_4",
+    "Front_Left_Ear_Fastener_3",
+    "Front_Left_Ear_Fastener_2",
+    "Front_Left_Ear_Fastener_1",
+    "Front_Left_Ear_SmallMechanicalHole",
+    "Front_Left_Ear_LargeRackHole",
+    "Front_Left_Ear_BottomBridge",
+    "Front_Left_Ear_TopBridge",
+    "Front_Left_Ear_InnerRail",
+    "Front_Left_Ear_OuterRail",
+    "Bottom_GenericFallback_Texture",
+    "Top_SourceLocked_Texture",
+    "Physical_Right_SourceLocked_Texture",
+    "Physical_Left_SourceLocked_Texture",
+    "Rear_SourceLocked_Texture",
+    "Front_SourceLocked_Texture",
+    "Closed_2U_Chassis_Core"
+  ],
+  "errors": [],
+  "errorCount": 0,
+  "status": "PASS"
+}

@@ -1,0 +1,82 @@
+{
+  "modelKey": "Dell-C6320-2.5inch",
+  "phase": "after",
+  "capturedAt": "2026-08-27T16:10:25.889Z",
+  "frozenAt": "2026-08-27T16:09:00Z",
+  "frozenViewerHashes": {
+    "three": "09397e305ac39f3a87af77d253a848eed6f0be8d163fa75d2b3580fc665a116a",
+    "babylon": "37ee630ebd49c0c28fb2a62c98f549b6112d099a41196d881f84e12a07347ca6"
+  },
+  "yawStepDegrees": 5,
+  "yawFramesPerCombination": 72,
+  "pitchDegrees": [
+    -35,
+    -15,
+    15,
+    35
+  ],
+  "pitchYaws": [
+    0,
+    90,
+    180,
+    270
+  ],
+  "checkerboards": [
+    "light",
+    "dark"
+  ],
+  "combinations": [
+    {
+      "engine": "three",
+      "variant": "standard",
+      "modelSha256": "7a109aa608a07c42cd8cb528416d82f3d23dc4bb1772d4181ae1a5be1eed5923",
+      "yawFrames": 72,
+      "pitchFrames": 16,
+      "stabilityPairs": 8,
+      "stabilityFrames": 16,
+      "webgl2": true,
+      "overlayVisible": false,
+      "consoleErrorCount": 0,
+      "manifest": "after/evidence/rotation/three/standard/rotation-manifest.json"
+    },
+    {
+      "engine": "three",
+      "variant": "web",
+      "modelSha256": "42d92c055e3e086a7731669a509726d6a56d81d8191c04d19d07f3aaa0362858",
+      "yawFrames": 72,
+      "pitchFrames": 16,
+      "stabilityPairs": 8,
+      "stabilityFrames": 16,
+      "webgl2": true,
+      "overlayVisible": false,
+      "consoleErrorCount": 0,
+      "manifest": "after/evidence/rotation/three/web/rotation-manifest.json"
+    },
+    {
+      "engine": "babylon",
+      "variant": "standard",
+      "modelSha256": "7a109aa608a07c42cd8cb528416d82f3d23dc4bb1772d4181ae1a5be1eed5923",
+      "yawFrames": 72,
+      "pitchFrames": 16,
+      "stabilityPairs": 8,
+      "stabilityFrames": 16,
+      "webgl2": true,
+      "overlayVisible": false,
+      "consoleErrorCount": 0,
+      "manifest": "after/evidence/rotation/babylon/standard/rotation-manifest.json"
+    },
+    {
+      "engine": "babylon",
+      "variant": "web",
+      "modelSha256": "42d92c055e3e086a7731669a509726d6a56d81d8191c04d19d07f3aaa0362858",
+      "yawFrames": 72,
+      "pitchFrames": 16,
+      "stabilityPairs": 8,
+      "stabilityFrames": 16,
+      "webgl2": true,
+      "overlayVisible": false,
+      "consoleErrorCount": 0,
+      "manifest": "after/evidence/rotation/babylon/web/rotation-manifest.json"
+    }
+  ]
+}

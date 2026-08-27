@@ -1,0 +1,41 @@
+face,component,expectedCount,standardObserved,webObserved,mode,status,confidence
+front,2.5-inch vertical drive carriers,24,24,24,NODE_REGEX:^SFF_Carrier_\d+_Body$,PASS,VERIFIED
+front,system-board drive groups,4,4,4,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Front_SourceLocked_Texture,PASS,VERIFIED
+front,left control panel,1,1,1,NODE_REGEX:^Front_Left_Control_Panel$,PASS,VERIFIED
+front,right control panel,1,1,1,NODE_REGEX:^Front_Right_Control_Panel$,PASS,VERIFIED
+front,non-usable drive cover,1,1,1,NODE_REGEX:^Front_Nonusable_Drive_Cover$,PASS,VERIFIED
+front,front mounting ears,2,2,2,NODE_REGEX:^Front_(Left|Right)_Ear_OuterRail$,PASS,VERIFIED
+front,large rack mounting holes,2,2,2,NODE_REGEX:^Front_(Left|Right)_Ear_LargeRackHole$,PASS,VERIFIED
+front,small ear fasteners and holes,8,8,8,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Front_SourceLocked_Texture,PASS,VERIFIED
+rear,PowerEdge C6320 sleds,4,4,4,NODE_REGEX:^C6320_Node_\d_PerimeterTop$,PASS,VERIFIED
+rear,shared 1400 W AC PSU modules,2,2,2,NODE_REGEX:^Shared_AC_PSU_1400W_\d_Face$,PASS,VERIFIED_AC
+rear,PSU fan guards,2,2,2,NODE_REGEX:^Shared_AC_PSU_1400W_\d_FanGuard$,PASS,VERIFIED
+rear,PSU AC inlets,2,2,2,NODE_REGEX:^Shared_AC_PSU_1400W_\d_IEC_AC_Inlet$,PASS,VERIFIED_AC
+rear,PSU orange releases,2,2,2,NODE_REGEX:^Shared_AC_PSU_1400W_\d_OrangeRelease$,PASS,VERIFIED
+rear,PCIe vented blank or carrier per sled,4,4,4,NODE_REGEX:^C6320_Node_\d_PCIeCarrier$,PASS,VERIFIED
+rear,USB 3.0 port per sled,4,4,4,NODE_REGEX:^C6320_Node_\d_USB3$,PASS,VERIFIED
+rear,10GbE SFP+ ports,8,8,8,NODE_REGEX:^C6320_Node_\d_SFPplus_[AB]$,PASS,VERIFIED
+rear,dedicated iDRAC8 management RJ45 ports,4,4,4,NODE_REGEX:^C6320_Node_\d_iDRAC_RJ45$,PASS,VERIFIED
+rear,USB-to-serial ports,4,4,4,NODE_REGEX:^C6320_Node_\d_USB_to_Serial$,PASS,VERIFIED
+rear,VGA ports,4,4,4,NODE_REGEX:^C6320_Node_\d_VGA$,PASS,VERIFIED
+rear,power/status buttons,4,4,4,NODE_REGEX:^C6320_Node_\d_Power_Status$,PASS,VERIFIED
+rear,POWEREDGE C6320 pull-label tabs,4,4,4,NODE_REGEX:^C6320_Node_\d_PullTab$,PASS,VERIFIED
+rear,hex ventilation fields,4,4,4,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Rear_SourceLocked_Texture,PASS,VERIFIED
+top,large removable system cover,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Top_SourceLocked_Texture,PASS,VERIFIED
+top,stepped/scalloped transverse cover seam,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Top_SourceLocked_Texture,PASS,VERIFIED
+top,black oval traction/release pad,1,1,1,NODE_REGEX:^Top_Black_Oval_Pad$,PASS,VERIFIED
+top,blue rectangular traction pad,1,1,1,NODE_REGEX:^Top_Blue_Rectangular_Pad$,PASS,VERIFIED
+top,rear-edge ventilation slot groups,3,3,3,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Top_SourceLocked_Texture,PASS,VERIFIED
+top,factory safety/regulatory labels,3,3,3,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Top_SourceLocked_Texture,PASS,VERIFIED_FACTORY_ONLY
+left,side body panel,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Physical_Left_SourceLocked_Texture,PASS,VERIFIED
+left,major rail key slots,3,3,3,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Physical_Left_SourceLocked_Texture,PASS,VERIFIED_DIAGRAM
+left,round rail and chassis fasteners,12,12,12,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Physical_Left_SourceLocked_Texture,PASS,VERIFIED_DIAGRAM
+left,front ear projection,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Physical_Left_SourceLocked_Texture,PASS,VERIFIED
+right,side body panel,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Physical_Right_SourceLocked_Texture,PASS,VERIFIED
+right,major rail key slots,3,3,3,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Physical_Right_SourceLocked_Texture,PASS,VERIFIED_DIAGRAM
+right,vertical access slot,1,1,1,NODE_REGEX:^Physical_Right_VerticalAccessSlot$,PASS,VERIFIED_DIAGRAM
+right,upper shallow rectangular recesses,2,2,2,NODE_REGEX:^Physical_Right_UpperRecess_\d$,PASS,VERIFIED_DIAGRAM
+right,round rail and chassis fasteners,10,10,10,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Physical_Right_SourceLocked_Texture,PASS,VERIFIED_DIAGRAM
+right,front ear projection,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Physical_Right_SourceLocked_Texture,PASS,VERIFIED
+bottom,conservative underside sheet,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Bottom_GenericFallback_Texture,PASS,GENERIC_BOTTOM_FALLBACK
+bottom,unsupported identifying detail,0,0,0,REQUIRED_ABSENCE_PLUS_RENDER_REVIEW,PASS,REQUIRED_ABSENCE

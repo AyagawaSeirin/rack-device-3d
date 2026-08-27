@@ -1,0 +1,77 @@
+{
+  "modelKey": "Dell-C6320-2.5inch",
+  "phase": "after",
+  "capturedAt": "2026-08-27T15:11:21.496Z",
+  "yawStepDegrees": 5,
+  "yawFramesPerCombination": 72,
+  "pitchDegrees": [
+    -35,
+    -15,
+    15,
+    35
+  ],
+  "pitchYaws": [
+    0,
+    90,
+    180,
+    270
+  ],
+  "checkerboards": [
+    "light",
+    "dark"
+  ],
+  "combinations": [
+    {
+      "engine": "three",
+      "variant": "standard",
+      "modelSha256": "29975a62fd6474f1c503de5f0c085fd7e089b8b95502e08a49487e3e96cb37af",
+      "yawFrames": 72,
+      "pitchFrames": 16,
+      "stabilityPairs": 8,
+      "stabilityFrames": 16,
+      "webgl2": true,
+      "overlayVisible": false,
+      "consoleErrorCount": 0,
+      "manifest": "after/evidence/rotation/three/standard/rotation-manifest.json"
+    },
+    {
+      "engine": "three",
+      "variant": "web",
+      "modelSha256": "7cffab1497dfa4df16bc5c1312e6956e91f14038bb94c8ae0ddc413fcb99279b",
+      "yawFrames": 72,
+      "pitchFrames": 16,
+      "stabilityPairs": 8,
+      "stabilityFrames": 16,
+      "webgl2": true,
+      "overlayVisible": false,
+      "consoleErrorCount": 0,
+      "manifest": "after/evidence/rotation/three/web/rotation-manifest.json"
+    },
+    {
+      "engine": "babylon",
+      "variant": "standard",
+      "modelSha256": "29975a62fd6474f1c503de5f0c085fd7e089b8b95502e08a49487e3e96cb37af",
+      "yawFrames": 72,
+      "pitchFrames": 16,
+      "stabilityPairs": 8,
+      "stabilityFrames": 16,
+      "webgl2": true,
+      "overlayVisible": false,
+      "consoleErrorCount": 0,
+      "manifest": "after/evidence/rotation/babylon/standard/rotation-manifest.json"
+    },
+    {
+      "engine": "babylon",
+      "variant": "web",
+      "modelSha256": "7cffab1497dfa4df16bc5c1312e6956e91f14038bb94c8ae0ddc413fcb99279b",
+      "yawFrames": 72,
+      "pitchFrames": 16,
+      "stabilityPairs": 8,
+      "stabilityFrames": 16,
+      "webgl2": true,
+      "overlayVisible": false,
+      "consoleErrorCount": 0,
+      "manifest": "after/evidence/rotation/babylon/web/rotation-manifest.json"
+    }
+  ]
+}
