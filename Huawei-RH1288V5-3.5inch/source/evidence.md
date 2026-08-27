@@ -48,3 +48,10 @@ Searches covered Huawei support, Huawei enterprise, Huawei computing 3D display,
 ## Bottom-face status
 
 No direct, exact bottom photograph or official bottom drawing was found. The bottom is therefore the only `CONTROLLED_FALLBACK` face. It uses the authoritative 436 × 748 mm chassis envelope, construction cues from the exact top/front/rear/three-quarter photos, and conservative galvanized-steel base seams. It contains no invented ports, labels, feet, or asymmetric access panels. Final status must be `PASS_WITH_BOTTOM_FALLBACK` if all other gates pass.
+
+## 2026-08-27 current reverse review
+
+- Rechecked Huawei support PID `21872252`, the current Huawei computing product-3D landing page, the legacy 3D route, and the public old-version link in a real browser.
+- The legacy route now redirects to Huawei's migrated product-3D landing page; it did not resolve an exact 1288H V5 public downloadable GLB/glTF/OBJ/FBX/STEP file. The old-version `onex.info.huawei.com` route failed publicly. No access control was bypassed.
+- The exact frozen subject remains 1288H V5 1U 4LFF, 436 × 43 × 748 mm body, three-I/O rear family and two installed 900 W AC PSUs. No current authoritative source contradicted the locked assembly.
+- All retained local source images and rendered PDF pages were re-inspected at original detail during the rotation review. The updated `face-source-lock.csv` records explicit local primaries, URLs, SHA-256 values, visual origins, configuration and final outputs.

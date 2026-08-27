@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import logging
 from pathlib import Path
 from typing import Iterable
 
@@ -13,6 +14,8 @@ from pygltflib import GLTF2
 from trimesh.transformations import rotation_matrix
 from trimesh.visual.material import PBRMaterial
 from trimesh.visual.texture import TextureVisuals
+
+logging.getLogger("trimesh").setLevel(logging.ERROR)
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -25,6 +28,7 @@ BODY_W = 0.436
 OVERALL_W = 0.4826
 HEIGHT = 0.043
 DEPTH = 0.748
+BACKING_INSET = 0.0010
 X_MIN, X_MAX = -BODY_W / 2.0, BODY_W / 2.0
 Y_MIN, Y_MAX = -HEIGHT / 2.0, HEIGHT / 2.0
 Z_REAR, Z_FRONT = -DEPTH / 2.0, DEPTH / 2.0
@@ -105,6 +109,26 @@ def add_cylinder(
     scene.add_geometry(mesh, node_name=name, geom_name=name)
 
 
+def add_frame_z(
+    scene: trimesh.Scene,
+    name: str,
+    x: float,
+    y: float,
+    width: float,
+    height: float,
+    depth: float,
+    center_z: float,
+    material: str,
+    *,
+    bar: float = 0.0012,
+) -> None:
+    """Add a four-rail face frame without a solid identity-obscuring front."""
+    add_box(scene, f"{name}_Top", (width, bar, depth), (x, y + height / 2 - bar / 2, center_z), material)
+    add_box(scene, f"{name}_Bottom", (width, bar, depth), (x, y - height / 2 + bar / 2, center_z), material)
+    add_box(scene, f"{name}_Left", (bar, height - 2 * bar, depth), (x - width / 2 + bar / 2, y, center_z), material)
+    add_box(scene, f"{name}_Right", (bar, height - 2 * bar, depth), (x + width / 2 - bar / 2, y, center_z), material)
+
+
 def add_plane(
     scene: trimesh.Scene,
     name: str,
@@ -149,9 +173,12 @@ def rgb_texture(face: str, web: bool) -> Image.Image:
 
 def add_chassis(scene: trimesh.Scene) -> None:
     # Closed structural shell with separately visible top, bottom, side lips and ears.
-    add_box(scene, "ChassisStructuralBody_436x43x748mm", (BODY_W, HEIGHT - 0.0010, DEPTH), (0, 0, 0), "galvanized")
-    add_box(scene, "TopCoverClosed", (BODY_W - 0.0030, 0.0015, DEPTH - 0.006), (0, Y_MAX - 0.00075, -0.001), "light_silver")
-    add_box(scene, "BottomBasePlate_Fallback", (BODY_W - 0.0025, 0.0014, DEPTH - 0.004), (0, Y_MIN + 0.00070, 0), "galvanized")
+    # Keep all broad backing surfaces at least 0.5 mm behind the six OPAQUE
+    # source-locked cards. The former 0.1 mm separation was below Babylon's
+    # stable depth resolution at oblique orbit angles and exposed this backing.
+    add_box(scene, "ChassisStructuralBody_436x43x748mm", (BODY_W - BACKING_INSET, HEIGHT - BACKING_INSET, DEPTH - BACKING_INSET), (0, 0, 0), "galvanized")
+    add_box(scene, "TopCoverClosed", (BODY_W - 0.0030, 0.0010, DEPTH - 0.006), (0, Y_MAX - 0.0010, -0.001), "light_silver")
+    add_box(scene, "BottomBasePlate_Fallback", (BODY_W - 0.0025, 0.0010, DEPTH - 0.004), (0, Y_MIN + 0.0010, 0), "galvanized")
     add_box(scene, "LeftTopFold", (0.0040, 0.0040, DEPTH - 0.010), (X_MIN + 0.0017, Y_MAX - 0.0020, 0), "light_silver")
     add_box(scene, "RightTopFold", (0.0040, 0.0040, DEPTH - 0.010), (X_MAX - 0.0017, Y_MAX - 0.0020, 0), "light_silver")
 
@@ -215,23 +242,17 @@ def add_perforated_panel(
     height: float,
     web: bool,
 ) -> None:
-    z = Z_REAR - 0.0022
-    add_box(scene, f"{name}_Frame", (width, height, 0.0042), (x, y, z), "light_silver")
-    add_box(scene, f"{name}_Cavity", (width - 0.004, height - 0.003, 0.0048), (x, y, z - 0.0020), "deep_black")
-    cols = max(4, int(width / (0.008 if web else 0.006)))
-    rows = max(2, int(height / 0.006))
-    for row in range(rows):
-        for col in range(cols):
-            px = x - width * 0.43 + col * (width * 0.86) / max(1, cols - 1)
-            py = y - height * 0.32 + row * (height * 0.64) / max(1, rows - 1)
-            add_box(scene, f"{name}_Perforation_{row}_{col}", (0.0026, 0.0022, 0.0010), (px, py, z - 0.0046), "deep_black")
+    # The exact source-locked photo supplies the perforation field. Four thin
+    # rails retain the real panel seam/depth without replacing it with a solid
+    # generic rectangle. The rails cross the card plane, never tangent to it.
+    card_z = Z_REAR - 0.00010
+    add_frame_z(scene, f"{name}_Frame", x, y, width, height, 0.0040, card_z - 0.0018, "light_silver", bar=0.0013)
 
 
 def add_rj45(scene: trimesh.Scene, name: str, x: float, y: float) -> None:
-    z = Z_REAR - 0.0042
-    add_box(scene, f"{name}_MetalCage", (0.016, 0.012, 0.006), (x, y, z), "light_silver")
-    add_box(scene, f"{name}_Socket", (0.012, 0.0085, 0.0065), (x, y, z - 0.002), "deep_black")
-    add_box(scene, f"{name}_LED", (0.0022, 0.0015, 0.0068), (x + 0.005, y + 0.004, z - 0.0025), "green")
+    card_z = Z_REAR - 0.00010
+    add_frame_z(scene, f"{name}_MetalCage", x, y, 0.016, 0.012, 0.0040, card_z - 0.0018, "light_silver", bar=0.0012)
+    add_box(scene, f"{name}_LED", (0.0022, 0.0015, 0.0030), (x + 0.005, y + 0.004, card_z - 0.0012), "green")
 
 
 def add_rear(scene: trimesh.Scene, web: bool) -> None:
@@ -243,20 +264,21 @@ def add_rear(scene: trimesh.Scene, web: bool) -> None:
     # Management/service I/O (rear screen-left = physical +X).
     add_rj45(scene, "RearGE_A1", 0.197, -0.0135)
     add_rj45(scene, "RearGE_A2", 0.176, -0.0135)
-    add_box(scene, "RearVGA_DB15", (0.022, 0.011, 0.0065), (0.145, -0.0135, Z_REAR - 0.0044), "blue")
+    add_frame_z(scene, "RearVGA_DB15", 0.145, -0.0135, 0.022, 0.011, 0.0040, Z_REAR - 0.0019, "light_silver", bar=0.0012)
     for i, x in enumerate((0.113, 0.094, 0.075, 0.056), 1):
         add_rj45(scene, f"RearLOM_RJ45_{i}", x, -0.0135)
     add_box(scene, "RearUSB_1", (0.014, 0.0065, 0.006), (0.034, -0.0085, Z_REAR - 0.0042), "blue")
     add_box(scene, "RearUSB_2", (0.014, 0.0065, 0.006), (0.034, -0.0175, Z_REAR - 0.0042), "blue")
-    add_box(scene, "RearFlexIOBlank", (0.080, 0.016, 0.005), (-0.025, -0.0130, Z_REAR - 0.0030), "light_silver")
-    add_box(scene, "RearFlexIOVent", (0.065, 0.008, 0.0058), (-0.025, -0.0130, Z_REAR - 0.0048), "deep_black")
+    add_frame_z(scene, "RearFlexIOBlank", -0.025, -0.0130, 0.080, 0.016, 0.0040, Z_REAR - 0.0019, "light_silver", bar=0.0012)
     add_cylinder(scene, "RearPSUFaultIndicator", 0.0021, 0.0050, (-0.085, -0.002, Z_REAR - 0.0040), "green", axis="z", sections=16)
 
     # Two separately modeled exact-specimen 900 W hot-swap AC PSU modules.
     module_w = 0.058
     for i, x in enumerate((-0.129, -0.188), 1):
         add_box(scene, f"ACPSU_900W_{i}_Body", (module_w, 0.039, 0.020), (x, -0.0005, Z_REAR + 0.0060), "dark_silver")
-        add_box(scene, f"ACPSU_900W_{i}_Face", (module_w - 0.002, 0.037, 0.0050), (x, -0.0005, Z_REAR - 0.0020), "black")
+        # Keep the solid backing behind the photo card; source pixels retain
+        # exact grille/inlet identity while the handle/latch provide parallax.
+        add_box(scene, f"ACPSU_900W_{i}_FaceBacking", (module_w - 0.002, 0.037, 0.0010), (x, -0.0005, Z_REAR + 0.0010), "black")
         fan_x = x + 0.012
         inlet_x = x - 0.014
         add_cylinder(scene, f"ACPSU_900W_{i}_FanOuter", 0.0145, 0.0055, (fan_x, -0.0005, Z_REAR - 0.0040), "dark_silver", axis="z", sections=32 if not web else 20)
@@ -274,8 +296,8 @@ def add_top_bottom_and_sides(scene: trimesh.Scene, web: bool) -> None:
     # The published 43 mm height is the controlling envelope. Latch relief is
     # shallow and mostly recessed, as on the exact closed-cover photographs.
     add_box(scene, "TopCoverLatchBase", (0.047, 0.0014, 0.025), (0, Y_MAX - 0.0004, 0.055), "light_silver")
-    add_box(scene, "TopCoverLatchHandle", (0.028, 0.0018, 0.014), (0, Y_MAX + 0.0003, 0.055), "dark_silver")
-    add_box(scene, "TopCoverLatchYellowMark", (0.010, 0.0016, 0.0035), (0, Y_MAX + 0.0004, 0.061), "yellow")
+    add_box(scene, "TopCoverLatchHandle", (0.028, 0.0012, 0.014), (0, Y_MAX - 0.00005, 0.055), "dark_silver")
+    add_box(scene, "TopCoverLatchYellowMark", (0.010, 0.0009, 0.0035), (0, Y_MAX + 0.00005, 0.061), "yellow")
 
     # Two independent slot bands, visible as real geometry in grazing views.
     cols = 46 if not web else 28
@@ -285,11 +307,9 @@ def add_top_bottom_and_sides(scene: trimesh.Scene, web: bool) -> None:
             x = -0.160 + col * 0.320 / max(1, cols - 1)
             add_box(scene, f"TopVentBand{band_name}_Slot_{col}", (0.0038, 0.0010, 0.0080), (x, Y_MAX + 0.0002, z), "deep_black")
 
-    # Conservative bottom fallback: closed base, one manufacturing seam and screws.
-    add_box(scene, "BottomManufacturingSeam", (BODY_W - 0.018, 0.0008, 0.0020), (0, Y_MIN - 0.0001, -0.292), "dark_silver")
-    bottom_screws = [(-0.190, 0.320), (0.190, 0.320), (-0.190, 0.050), (0.190, 0.050), (-0.190, -0.250), (0.190, -0.250)]
-    for i, (x, z) in enumerate(bottom_screws, 1):
-        add_cylinder(scene, f"BottomFallbackScrew_{i}", 0.0022, 0.0010, (x, Y_MIN - 0.0003, z), "dark_silver", axis="y", sections=16)
+    # Conservative bottom fallback: the closed base plate above is the entire
+    # verified surface. No exact underside evidence supports screws, seams,
+    # labels, vents, feet, rails or access panels, so none are invented here.
 
     # Independent side construction. Patterns deliberately differ; no mirrored side asset.
     add_box(scene, "LeftSideUpperRailRelief", (0.0035, 0.0060, 0.565), (X_MIN - 0.0010, 0.012, 0.015), "light_silver")

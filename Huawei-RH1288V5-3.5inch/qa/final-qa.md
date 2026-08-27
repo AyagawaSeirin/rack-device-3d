@@ -1,5 +1,7 @@
 # Final QA — Huawei FusionServer Pro 1288H V5 4LFF
 
+> Superseded for the current GLB hashes by `qa/rotation-review-20260827/final-report.md`.
+
 ## Decision
 
 **PASS_WITH_BOTTOM_FALLBACK**
@@ -93,4 +95,3 @@ Manual feature review passes the invariant counts and ordering: four LFF bays; t
 ## Known limitation
 
 No exact bottom photograph or official bottom drawing was available. The bottom therefore remains a transparent PNG and modeled face, but its feature content is intentionally conservative and its provenance remains `CONTROLLED_FALLBACK`. This is the reason the final status is not plain `PASS`.
-

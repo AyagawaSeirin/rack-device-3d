@@ -1,0 +1,11 @@
+### Result
+- [Screenshot of viewport](Huawei-RH1288V5-3.5inch/qa/revalidation-2026-08-24/loads/babylon/web/37-frontLeft.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as Huawei-RH1288V5-3.5inch/qa/revalidation-2026-08-24/loads/babylon/web/37-frontLeft.png
+await page.screenshot({
+  path: 'Huawei-RH1288V5-3.5inch/qa/revalidation-2026-08-24/loads/babylon/web/37-frontLeft.png',
+  scale: 'css',
+  type: 'png'
+});
+```
