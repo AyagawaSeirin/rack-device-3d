@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Three.js WebGL2 orbit stress viewer</title>
+  <style>
+    html,body{width:100%;height:100%;margin:0;overflow:hidden}
+    body.light{background-color:#d8dce0;background-image:linear-gradient(45deg,#f5f6f7 25%,transparent 25%),linear-gradient(-45deg,#f5f6f7 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#f5f6f7 75%),linear-gradient(-45deg,transparent 75%,#f5f6f7 75%);background-size:32px 32px;background-position:0 0,0 16px,16px -16px,-16px 0}
+    body.dark{background-color:#1f2327;background-image:linear-gradient(45deg,#3b4147 25%,transparent 25%),linear-gradient(-45deg,#3b4147 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#3b4147 75%),linear-gradient(-45deg,transparent 75%,#3b4147 75%);background-size:32px 32px;background-position:0 0,0 16px,16px -16px,-16px 0}
+    canvas{display:block;width:100%;height:100%}
+    #status{position:fixed;left:6px;bottom:4px;color:transparent;font:10px monospace;pointer-events:none}
+  </style>
+  <script type="importmap">{"imports":{"three":"/Huawei-RH1288V5-2.5inch/qa/tooling/node_modules/three/build/three.module.js"}}</script>
+</head>
+<body><div id="status">loading</div>
+<script type="module">
+import * as THREE from 'three';
+import {GLTFLoader} from '/Huawei-RH1288V5-2.5inch/qa/tooling/node_modules/three/examples/jsm/loaders/GLTFLoader.js';
+import {OrbitControls} from '/Huawei-RH1288V5-2.5inch/qa/tooling/node_modules/three/examples/jsm/controls/OrbitControls.js';
+
+const query=new URLSearchParams(location.search);
+const asset=query.get('asset');
+const initialBg=query.get('bg')==='dark'?'dark':'light';
+const initialMode=query.get('mode')||'orbit';
+const initialView=query.get('view')||'front';
+if(!asset)throw new Error('asset query parameter is required');
+document.body.className=initialBg;
+const state=window.viewerState={viewer:'three',engine:`Three.js r${THREE.REVISION}`,viewerCodeVersion:'rotation-review-20260827-v3',asset,assetSha256:null,webgl2:false,loaded:false,ready:false,renderCount:0,meshCount:0,materialCount:0,materials:[],errors:[],mode:initialMode,view:initialView,bg:initialBg,yaw:0,pitch:0};
+const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true,preserveDrawingBuffer:true,powerPreference:'high-performance'});
+renderer.setPixelRatio(1);renderer.setSize(innerWidth,innerHeight,false);renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.NoToneMapping;renderer.setClearColor(0x000000,0);document.body.prepend(renderer.domElement);
+state.webgl2=renderer.capabilities.isWebGL2;
+const scene=new THREE.Scene();
+scene.add(new THREE.HemisphereLight(0xffffff,0x58616a,2.0));
+const key=new THREE.DirectionalLight(0xffffff,2.0);key.position.set(1.8,2.5,2.4);scene.add(key);
+const fill=new THREE.DirectionalLight(0xdbe6ff,1.0);fill.position.set(-2.2,.8,-2.0);scene.add(fill);
+const orbitCamera=new THREE.PerspectiveCamera(32,innerWidth/innerHeight,.001,100);
+const staticCamera=new THREE.OrthographicCamera(-1,1,1,-1,.001,100);
+const controls=new OrbitControls(orbitCamera,renderer.domElement);controls.enableDamping=false;controls.enablePan=false;
+let root,box,center,size,radius,activeCamera=orbitCamera;
+
+async function digest(url){const bytes=await fetch(url,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(`fetch ${r.status}`);return r.arrayBuffer()});const hash=await crypto.subtle.digest('SHA-256',bytes);return [...new Uint8Array(hash)].map(b=>b.toString(16).padStart(2,'0')).join('')}
+function draw(){renderer.render(scene,activeCamera);state.renderCount++;document.getElementById('status').textContent=JSON.stringify(state)}
+function nextFrames(count=2){return new Promise(resolve=>{function step(){draw();if(--count>0)requestAnimationFrame(step);else requestAnimationFrame(()=>{draw();resolve()})}requestAnimationFrame(step)})}
+function setBackground(bg){state.bg=bg==='dark'?'dark':'light';document.body.className=state.bg}
+window.setOrbit=async function(yaw,pitch=12,bg=state.bg){
+  setBackground(bg);state.mode='orbit';state.view='orbit';state.yaw=Number(yaw);state.pitch=Number(pitch);activeCamera=orbitCamera;orbitCamera.aspect=innerWidth/innerHeight;orbitCamera.updateProjectionMatrix();
+  const ya=THREE.MathUtils.degToRad(state.yaw),pi=THREE.MathUtils.degToRad(Math.max(-80,Math.min(80,state.pitch))),distance=radius/Math.sin(THREE.MathUtils.degToRad(16))*1.22;
+  orbitCamera.near=Math.max(distance-radius*1.75,radius*.05);orbitCamera.far=distance+radius*1.75;orbitCamera.position.set(center.x+distance*Math.sin(ya)*Math.cos(pi),center.y+distance*Math.sin(pi),center.z+distance*Math.cos(ya)*Math.cos(pi));orbitCamera.up.set(0,1,0);controls.target.copy(center);controls.update();orbitCamera.updateProjectionMatrix();await nextFrames();return {...state};
+};
+const staticDefs={front:{dir:[0,0,1],up:[0,1,0]},rear:{dir:[0,0,-1],up:[0,1,0]},left:{dir:[-1,0,0],up:[0,1,0]},right:{dir:[1,0,0],up:[0,1,0]},top:{dir:[0,1,0],up:[0,0,-1]},bottom:{dir:[0,-1,0],up:[0,0,-1]}};
+const orbitDefs={'front-left':[-42,24],'front-right':[42,24],'rear-left':[-138,24],'rear-right':[138,24]};
+window.setStaticView=async function(view,bg=state.bg){
+  if(orbitDefs[view]){await window.setOrbit(orbitDefs[view][0],orbitDefs[view][1],bg);state.mode='static';state.view=view;await nextFrames();return {...state}}
+  const def=staticDefs[view]||staticDefs.front;setBackground(bg);state.mode='static';state.view=view;activeCamera=staticCamera;const dir=new THREE.Vector3(...def.dir).normalize(),up=new THREE.Vector3(...def.up).normalize(),right=new THREE.Vector3().crossVectors(dir,up).normalize();
+  const corners=[];for(const x of[box.min.x,box.max.x])for(const y of[box.min.y,box.max.y])for(const z of[box.min.z,box.max.z])corners.push(new THREE.Vector3(x,y,z));const px=corners.map(p=>p.clone().sub(center).dot(right)),py=corners.map(p=>p.clone().sub(center).dot(up));let hw=(Math.max(...px)-Math.min(...px))*.56,hh=(Math.max(...py)-Math.min(...py))*.56,aspect=innerWidth/innerHeight;if(hw/hh<aspect)hw=hh*aspect;else hh=hw/aspect;
+  Object.assign(staticCamera,{left:-hw,right:hw,top:hh,bottom:-hh});staticCamera.position.copy(center).addScaledVector(dir,radius*3);staticCamera.up.copy(up);staticCamera.lookAt(center);staticCamera.near=radius*1.25;staticCamera.far=radius*4.75;staticCamera.updateProjectionMatrix();await nextFrames();return {...state};
+};
+window.runOrbitSequence=async function(step=5,pitch=12,bg=state.bg){const frames=[];for(let yaw=0;yaw<360;yaw+=step){await window.setOrbit(yaw,pitch,bg);frames.push({yaw,pitch,renderCount:state.renderCount})}state.sequence={step,pitch,bg,frames};return {...state}}
+
+try{
+  state.assetSha256=await digest(asset);
+  new GLTFLoader().load(asset,async gltf=>{root=gltf.scene;scene.add(root);root.updateMatrixWorld(true);box=new THREE.Box3().setFromObject(root);center=box.getCenter(new THREE.Vector3());size=box.getSize(new THREE.Vector3());radius=box.getBoundingSphere(new THREE.Sphere()).radius;orbitCamera.near=Math.max(radius/100000,.000001);orbitCamera.far=radius*20;orbitCamera.updateProjectionMatrix();staticCamera.near=orbitCamera.near;staticCamera.far=orbitCamera.far;controls.target.copy(center);
+    const materialSet=new Set();root.traverse(node=>{if(node.isMesh){state.meshCount++;const list=Array.isArray(node.material)?node.material:[node.material];for(const material of list)if(material)materialSet.add(material)}});state.materialCount=materialSet.size;state.materials=[...materialSet].map(m=>({name:m.name,transparent:m.transparent,opacity:m.opacity,side:m.side,depthWrite:m.depthWrite,alphaTest:m.alphaTest}));state.loaded=true;
+    if(initialMode==='static')await window.setStaticView(initialView,initialBg);else await window.setOrbit(Number(query.get('yaw')||0),Number(query.get('pitch')||12),initialBg);state.ready=true;document.title=`READY Three ${state.assetSha256.slice(0,12)}`;window.dispatchEvent(new Event('viewer-ready'));draw();
+  },undefined,error=>{state.errors.push(String(error?.message||error));document.title='ERROR Three'});
+}catch(error){state.errors.push(String(error?.message||error));document.title='ERROR Three'}
+</script></body></html>

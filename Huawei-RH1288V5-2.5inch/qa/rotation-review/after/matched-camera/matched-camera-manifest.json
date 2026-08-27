@@ -1,0 +1,138 @@
+{
+  "schema": "rack-device-final-matched-camera-comparison-v1",
+  "model": "Huawei-RH1288V5-2.5inch",
+  "final_standard_sha256": "dec12900443e05b1abe79448c6f4f880be993fb235a7107832cca209fc2b8205",
+  "final_web_sha256": "10d74d846285762a9fbbc61a8213126b716bf97fe0aae7c54765600bd9fdc121",
+  "browser_render_events": "/root/Project/rack-device-3d/Huawei-RH1288V5-2.5inch/qa/rotation-review/after/matched-camera/renders/matched-view-events.json",
+  "comparisons": [
+    {
+      "view": "front",
+      "comparison_class": "matched-orthographic-camera",
+      "source": "/root/Project/rack-device-3d/Huawei-RH1288V5-2.5inch/qa/reference-canvas/front.png",
+      "source_sha256": "a1e15340790e1e6996aaa0d92e7bf8db1ee88919605576fd311ced1be72d7ee3",
+      "render": "/root/Project/rack-device-3d/Huawei-RH1288V5-2.5inch/qa/rotation-review/after/matched-camera/renders/01-front.png",
+      "render_sha256": "9577a897734b6256340343704797a5f7e9b6aa358953de8eefa45b5984189e95",
+      "comparison": "/root/Project/rack-device-3d/Huawei-RH1288V5-2.5inch/qa/rotation-review/after/matched-camera/comparisons/front.png",
+      "comparison_sha256": "caae9d2715dfcc0a4763d84421d0230b517bc760dd687f9b189de9153bf02974",
+      "canvas_px": [
+        1600,
+        1000
+      ],
+      "diagnostic_mean_absolute_rgb_difference_0_to_255": 24.93268,
+      "asset_sha256": "dec12900443e05b1abe79448c6f4f880be993fb235a7107832cca209fc2b8205",
+      "viewer": "three",
+      "viewer_code_version": "rotation-review-20260827-v3",
+      "manual_feature_review_required": true,
+      "status": "PASS"
+    },
+    {
+      "view": "rear",
+      "comparison_class": "matched-orthographic-camera",
+      "source": "/root/Project/rack-device-3d/Huawei-RH1288V5-2.5inch/qa/reference-canvas/rear.png",
+      "source_sha256": "8defaf5f732982a1deadc312934a117704d5bc4d1de4dd3a184aa626695cc87c",
+      "render": "/root/Project/rack-device-3d/Huawei-RH1288V5-2.5inch/qa/rotation-review/after/matched-camera/renders/02-rear.png",
+      "render_sha256": "e91e42fbe43079762e244915b704724a73bf50442a5da06ab016324500f6efb0",
+      "comparison": "/root/Project/rack-device-3d/Huawei-RH1288V5-2.5inch/qa/rotation-review/after/matched-camera/comparisons/rear.png",
+      "comparison_sha256": "69f18be24b706862abcf200a59437b90fadca2694c31a0817772b2f8d2fecad0",
+      "canvas_px": [
+        1600,
+        1000
+      ],
+      "diagnostic_mean_absolute_rgb_difference_0_to_255": 26.351187,
+      "asset_sha256": "dec12900443e05b1abe79448c6f4f880be993fb235a7107832cca209fc2b8205",
+      "viewer": "three",
+      "viewer_code_version": "rotation-review-20260827-v3",
+      "manual_feature_review_required": true,
+      "status": "PASS"
+    },
+    {
+      "view": "left",
+      "comparison_class": "matched-orthographic-camera",
+      "source": "/root/Project/rack-device-3d/Huawei-RH1288V5-2.5inch/qa/reference-canvas/left.png",
+      "source_sha256": "185248da02fba52288bfefb81e05f150d3a9d39f77da9745274c5764bbe7fb7e",
+      "render": "/root/Project/rack-device-3d/Huawei-RH1288V5-2.5inch/qa/rotation-review/after/matched-camera/renders/03-left.png",
+      "render_sha256": "f70a0d24fb989f67dcfc8af0c20bb93f9843929d195fa2ca3315e156401881ef",
+      "comparison": "/root/Project/rack-device-3d/Huawei-RH1288V5-2.5inch/qa/rotation-review/after/matched-camera/comparisons/left.png",
+      "comparison_sha256": "3fabc761118f7d814b90c47743a861bf19ac4a5108161c43c3bff629c51a43de",
+      "canvas_px": [
+        1600,
+        1000
+      ],
+      "diagnostic_mean_absolute_rgb_difference_0_to_255": 24.273867,
+      "asset_sha256": "dec12900443e05b1abe79448c6f4f880be993fb235a7107832cca209fc2b8205",
+      "viewer": "three",
+      "viewer_code_version": "rotation-review-20260827-v3",
+      "manual_feature_review_required": true,
+      "status": "PASS"
+    },
+    {
+      "view": "right",
+      "comparison_class": "matched-orthographic-camera",
+      "source": "/root/Project/rack-device-3d/Huawei-RH1288V5-2.5inch/qa/reference-canvas/right.png",
+      "source_sha256": "9ecb5039066ad7ee26d3b878673254e3b9fbb5288f248d565e2d3efc81e1b807",
+      "render": "/root/Project/rack-device-3d/Huawei-RH1288V5-2.5inch/qa/rotation-review/after/matched-camera/renders/04-right.png",
+      "render_sha256": "ff35ce7494697c4fd5ab78618a53b8998745f29f40bfb51ded5f5ccee51acfc7",
+      "comparison": "/root/Project/rack-device-3d/Huawei-RH1288V5-2.5inch/qa/rotation-review/after/matched-camera/comparisons/right.png",
+      "comparison_sha256": "ea697fba756f3919c7ddc86ff6cbf8ef3ff824c1a1b6befdb754fa9bb409fb9a",
+      "canvas_px": [
+        1600,
+        1000
+      ],
+      "diagnostic_mean_absolute_rgb_difference_0_to_255": 24.362973,
+      "asset_sha256": "dec12900443e05b1abe79448c6f4f880be993fb235a7107832cca209fc2b8205",
+      "viewer": "three",
+      "viewer_code_version": "rotation-review-20260827-v3",
+      "manual_feature_review_required": true,
+      "status": "PASS"
+    },
+    {
+      "view": "top",
+      "comparison_class": "matched-orthographic-camera",
+      "source": "/root/Project/rack-device-3d/Huawei-RH1288V5-2.5inch/qa/reference-canvas/top.png",
+      "source_sha256": "ca41ebc41aa9f9ec2e1ed98aead74761d9feaecc81b340f6f72e0b0d79c4be43",
+      "render": "/root/Project/rack-device-3d/Huawei-RH1288V5-2.5inch/qa/rotation-review/after/matched-camera/renders/05-top.png",
+      "render_sha256": "9bbd495d1ec885913ef9b2b0d142cb0e5344937f5690bf17dd4f45653a89ec60",
+      "comparison": "/root/Project/rack-device-3d/Huawei-RH1288V5-2.5inch/qa/rotation-review/after/matched-camera/comparisons/top.png",
+      "comparison_sha256": "6dc0c8119612fb9901b5d7fcb1bcdbef3fdde8e1a645699a2154579d016013fe",
+      "canvas_px": [
+        1600,
+        1000
+      ],
+      "diagnostic_mean_absolute_rgb_difference_0_to_255": 22.689507,
+      "asset_sha256": "dec12900443e05b1abe79448c6f4f880be993fb235a7107832cca209fc2b8205",
+      "viewer": "three",
+      "viewer_code_version": "rotation-review-20260827-v3",
+      "manual_feature_review_required": true,
+      "status": "PASS"
+    },
+    {
+      "view": "bottom",
+      "comparison_class": "matched-orthographic-camera",
+      "source": "/root/Project/rack-device-3d/Huawei-RH1288V5-2.5inch/qa/reference-canvas/bottom.png",
+      "source_sha256": "44c8a0738c901bd2338baefbafaa66e2a633c1d7f79f44dc460d659a3dbbcd61",
+      "render": "/root/Project/rack-device-3d/Huawei-RH1288V5-2.5inch/qa/rotation-review/after/matched-camera/renders/06-bottom.png",
+      "render_sha256": "3cbafb8b7ad3548506e979ae3ac31fa5da1394c305b72b5f72755162727f17c8",
+      "comparison": "/root/Project/rack-device-3d/Huawei-RH1288V5-2.5inch/qa/rotation-review/after/matched-camera/comparisons/bottom.png",
+      "comparison_sha256": "cb338b5a4a961a7f0a9a15406514d0baa108f9604bd6d5dd18a371c360262d92",
+      "canvas_px": [
+        1600,
+        1000
+      ],
+      "diagnostic_mean_absolute_rgb_difference_0_to_255": 19.983533,
+      "asset_sha256": "dec12900443e05b1abe79448c6f4f880be993fb235a7107832cca209fc2b8205",
+      "viewer": "three",
+      "viewer_code_version": "rotation-review-20260827-v3",
+      "manual_feature_review_required": true,
+      "status": "PASS"
+    }
+  ],
+  "matched_orthographic_count": 6,
+  "authoritative_three_quarter_supporting_count": 0,
+  "comparison_contact_sheet": "/root/Project/rack-device-3d/Huawei-RH1288V5-2.5inch/qa/rotation-review/after/matched-camera/comparison-contact-sheet.png",
+  "feature_inventory_source_rows": 32,
+  "feature_inventory_review_rows": 32,
+  "feature_inventory_review": "/root/Project/rack-device-3d/Huawei-RH1288V5-2.5inch/qa/rotation-review/after/matched-camera/feature-inventory-final-review.csv",
+  "note": "Pixel differences are diagnostic; acceptance is the recorded row-by-row source and geometry review.",
+  "errors": [],
+  "pass": true
+}

@@ -517,7 +517,10 @@ def build(flavor: str, texture_paths: dict[str, Path], output: Path) -> dict:
 
     # Closed opaque core.
     core = Geometry()
-    add_box(core, (0, 0, 0), (BODY_W - 1.0, BODY_H - 1.0, BODY_D - 2.0))
+    # Keep the hidden closed core well behind every photographic/relief layer.
+    # The previous +/-353 mm Z caps were exactly coplanar with several front
+    # relief caps and could win/lose the depth test while orbiting.
+    add_box(core, (0, 0, 0), (BODY_W - 2.0, BODY_H - 2.0, BODY_D - 12.0))
     glb.mesh("Closed chassis shell", core, mat["metal"])
 
     # Six canonical opaque faces.  The front base is recessed so modeled bays/controls carry relief.
@@ -587,13 +590,13 @@ def build(flavor: str, texture_paths: dict[str, Path], output: Path) -> dict:
         for column in range(5):
             x0 = x_start + column * (carrier_w + gap)
             x1 = x0 + carrier_w
-            add_box(carriers, ((x0 + x1) / 2, (row_y0 + row_y1) / 2, Z_FRONT - 2.55),
-                    (x1 - x0, row_y1 - row_y0, 4.7))
+            add_box(carriers, ((x0 + x1) / 2, (row_y0 + row_y1) / 2, Z_FRONT - 2.65),
+                    (x1 - x0, row_y1 - row_y0, 4.5))
             add_front_texture_quad(carrier_faces, x0, x1, row_y0, row_y1, Z_FRONT - 0.1)
-            add_box(handles, (x1 - 6.2, (row_y0 + row_y1) / 2, Z_FRONT - 0.45),
-                    (10.0, row_y1 - row_y0 - 1.1, 0.8))
+            add_box(handles, (x1 - 6.2, (row_y0 + row_y1) / 2, Z_FRONT),
+                    (10.0, row_y1 - row_y0 - 1.1, 0.4))
             add_front_texture_quad(handle_faces, x1 - 11.2, x1 - 1.2,
-                                   row_y0 + 0.55, row_y1 - 0.55, Z_FRONT)
+                                   row_y0 + 0.55, row_y1 - 0.55, Z_FRONT + 0.45)
             add_box(accents, (x1 - 12.0, (row_y0 + row_y1) / 2, Z_FRONT - 0.35),
                     (1.35, row_y1 - row_y0 - 0.8, 0.6))
     glb.mesh("Ten SFF carrier recessed bodies", carriers, mat["black"])
@@ -622,7 +625,9 @@ def build(flavor: str, texture_paths: dict[str, Path], output: Path) -> dict:
         x0, x1 = rear_x(u0), rear_x(u1)
         add_box(rear_relief, ((x0 + x1) / 2, (y0 + y1) / 2, (Z_REAR + z) / 2),
                 (abs(x1 - x0), y1 - y0, abs(z - Z_REAR)))
-        add_rear_texture_quad(rear_relief_faces, u0, u1, y0, y1, z - 0.05)
+        # A 0.30 mm evidence-neutral stand-off keeps the source-locked cover
+        # skin in front of the stamped solid instead of nearly coplanar.
+        add_rear_texture_quad(rear_relief_faces, u0, u1, y0, y1, z - 0.30)
     glb.mesh("Three PCIe covers plus empty LOM and FlexIO geometry", rear_relief, mat["metal"])
     glb.mesh("Rear cover source-matched faces", rear_relief_faces, tex["rear"])
 
@@ -678,34 +683,29 @@ def build(flavor: str, texture_paths: dict[str, Path], output: Path) -> dict:
     glb.mesh("Two PSU fan grille relief groups", grilles, mat["silver"])
     glb.mesh("Two IEC C14 inlet recesses", inlets, mat["black"])
 
-    # Top cover relief: two slot bands, latch, front strip seam, and rear cover steps.
-    top_slots = Geometry()
-    # Centers are measured from the approved top texture (rear at image top):
-    # approximately 7.3% and 75.8% of the 708 mm cover depth.
-    for z in (-302.0, 184.0):
-        for i in range(44):
-            x = -196.0 + i * (392.0 / 43.0)
-            add_box(top_slots, (x, BODY_H / 2 - 0.35, z), (5.8, 0.7, 4.5))
-    glb.mesh("Two top vent bands with eighty-eight recessed slots", top_slots, mat["black"])
+    # The two dense vent bands remain in the approved opaque high-resolution
+    # top texture.  Their old solid caps ended exactly on the same plane as the
+    # texture and were a deterministic z-fighting source; dense flush slots are
+    # permitted texture detail and do not need a second coincident mesh layer.
     top_relief = Geometry()
-    add_box(top_relief, (0, BODY_H / 2 - 0.45, 90.0), (25.0, 0.9, 34.0))
-    add_box(top_relief, (0, BODY_H / 2 - 0.15, 90.0), (10.0, 0.3, 24.0))
-    add_box(top_relief, (0, BODY_H / 2 - 0.4, 298.0), (BODY_W - 4.0, 0.8, 1.4))
-    add_box(top_relief, (-138.0, BODY_H / 2 - 0.45, -340.0), (110.0, 0.9, 26.0))
-    add_box(top_relief, (75.0, BODY_H / 2 - 0.45, -338.0), (150.0, 0.9, 30.0))
+    add_box(top_relief, (0, BODY_H / 2 - 0.20, 90.0), (25.0, 0.9, 34.0))
+    add_box(top_relief, (0, BODY_H / 2 + 0.10, 90.0), (10.0, 0.3, 24.0))
+    add_box(top_relief, (0, BODY_H / 2 - 0.15, 298.0), (BODY_W - 4.0, 0.8, 1.4))
+    add_box(top_relief, (-138.0, BODY_H / 2 - 0.20, -340.0), (110.0, 0.9, 26.0))
+    add_box(top_relief, (75.0, BODY_H / 2 - 0.20, -338.0), (150.0, 0.9, 30.0))
     glb.mesh("Top latch seam and stepped rear cover relief", top_relief, mat["metal"])
 
     # Distinct physical-left and physical-right wall relief; patterns are intentionally not mirrored.
     side_fasteners = Geometry(); side_slots = Geometry(); side_lips = Geometry()
     for z, radius in [(-250, 3.0), (-90, 2.6), (80, 3.0), (245, 2.7)]:
-        add_cylinder_x(side_fasteners, -BODY_W / 2, -BODY_W / 2 + 0.8, 0, z, radius)
+        add_cylinder_x(side_fasteners, -BODY_W / 2 - 0.25, -BODY_W / 2 + 0.8, 0, z, radius)
     for z, radius in [(-300, 2.5), (-150, 3.0), (15, 2.6), (165, 3.0), (300, 2.5)]:
-        add_cylinder_x(side_fasteners, BODY_W / 2 - 0.8, BODY_W / 2, 0, z, radius)
-    for x, z in [(-BODY_W / 2 + 0.35, -315), (-BODY_W / 2 + 0.35, 270),
-                 (BODY_W / 2 - 0.35, -275), (BODY_W / 2 - 0.35, -30), (BODY_W / 2 - 0.35, 285)]:
+        add_cylinder_x(side_fasteners, BODY_W / 2 - 0.8, BODY_W / 2 + 0.25, 0, z, radius)
+    for x, z in [(-BODY_W / 2 + 0.10, -315), (-BODY_W / 2 + 0.10, 270),
+                 (BODY_W / 2 - 0.10, -275), (BODY_W / 2 - 0.10, -30), (BODY_W / 2 - 0.10, 285)]:
         add_box(side_slots, (x, 0, z), (0.7, 4.0, 18.0))
-    add_box(side_lips, (-BODY_W / 2 + 0.35, BODY_H / 2 - 0.9, 0), (0.7, 1.8, BODY_D))
-    add_box(side_lips, (BODY_W / 2 - 0.35, BODY_H / 2 - 0.9, 0), (0.7, 1.8, BODY_D))
+    add_box(side_lips, (-BODY_W / 2 + 0.10, BODY_H / 2 - 0.9, 0), (0.7, 1.5, BODY_D - 1.0))
+    add_box(side_lips, (BODY_W / 2 - 0.10, BODY_H / 2 - 0.9, 0), (0.7, 1.5, BODY_D - 1.0))
     glb.mesh("Independent left and right wall fastener relief", side_fasteners, mat["metal"])
     glb.mesh("Independent left and right wall rail-slot relief", side_slots, mat["dark"])
     glb.mesh("Black top lips on both side walls", side_lips, mat["dark"])
@@ -747,7 +747,7 @@ def main() -> None:
             "ten SFF carriers with handle/latch/accent relief", "front control panel relief with source-matched flush display/buttons/USB",
             "three PCIe covers", "empty LOM and FlexIO covers", "VGA/four RJ45/two USB",
             "two identical AC PSU bodies/fan cavities/grilles/C14 inlets/releases",
-            "top vent slots/latch/seam/rear steps", "independent non-mirrored side fasteners/slots/lips",
+            "opaque source-locked top vent bands plus separated latch/seam/rear-step relief", "independent non-mirrored side fasteners/slots/lips",
         ],
         "bottom_status": "GENERIC_BOTTOM_FALLBACK",
         "official_iv3d_imported": False,
