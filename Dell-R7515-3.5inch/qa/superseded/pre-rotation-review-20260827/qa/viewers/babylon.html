@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Babylon.js R7515 QA Viewer</title>
+  <style>
+    html,body{margin:0;width:100%;height:100%;overflow:hidden;background-color:#b9bec2;background-image:linear-gradient(45deg,#f4f5f6 25%,transparent 25%),linear-gradient(-45deg,#f4f5f6 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#2d3236 75%),linear-gradient(-45deg,transparent 75%,#2d3236 75%);background-size:48px 48px;background-position:0 0,0 24px,24px -24px,-24px 0}
+    canvas{display:block;width:100%;height:100%;touch-action:none}
+    #status{position:fixed;left:12px;top:12px;z-index:2;padding:8px 11px;border-radius:6px;background:#101418dc;color:#eaf2f6;font:12px/1.35 system-ui,sans-serif;white-space:pre}
+  </style>
+  <script type="importmap">{"imports":{"@babylonjs/core/":"/node_modules/@babylonjs/core/","@babylonjs/loaders/":"/node_modules/@babylonjs/loaders/"}}</script>
+</head>
+<body>
+<div id="status">LOADING</div>
+<canvas id="canvas"></canvas>
+<script type="module">
+import {Engine,Scene,SceneLoader,Color4,Vector3,FreeCamera,Camera,HemisphericLight,DirectionalLight} from '/node_modules/@babylonjs/core/index.js';
+import '/node_modules/@babylonjs/loaders/glTF/index.js';
+
+const params=new URLSearchParams(location.search);const model=params.get('model')||'standard';const view=params.get('view')||'front';const qaId=params.get('qa')||crypto.randomUUID();const file=model==='web'?'Dell-R7515-3.5inch-web.glb':'Dell-R7515-3.5inch.glb';const modelUrl=`/model/${file}?qa=${encodeURIComponent(qaId)}`;
+const status=document.getElementById('status');const canvas=document.getElementById('canvas');const engine=new Engine(canvas,true,{preserveDrawingBuffer:true,stencil:true,alpha:true,antialias:true});engine.setSize(innerWidth,innerHeight);const scene=new Scene(engine);scene.useRightHandedSystem=true;scene.clearColor=new Color4(0,0,0,0);
+const hemi=new HemisphericLight('hemi',new Vector3(0,1,0),scene);hemi.intensity=1.5;hemi.groundColor.set(0.22,0.25,0.29);const key=new DirectionalLight('key',new Vector3(-1,-2,-1),scene);key.position=new Vector3(1.5,2.5,2);key.intensity=2.0;const fill=new DirectionalLight('fill',new Vector3(1,-1,1),scene);fill.position=new Vector3(-2,1,-2);fill.intensity=0.8;
+
+function getBounds(meshes){let min=new Vector3(Number.POSITIVE_INFINITY,Number.POSITIVE_INFINITY,Number.POSITIVE_INFINITY),max=new Vector3(Number.NEGATIVE_INFINITY,Number.NEGATIVE_INFINITY,Number.NEGATIVE_INFINITY);for(const mesh of meshes){if(mesh.getTotalVertices()===0)continue;mesh.computeWorldMatrix(true);const b=mesh.getBoundingInfo().boundingBox;min=Vector3.Minimize(min,b.minimumWorld);max=Vector3.Maximize(max,b.maximumWorld);}return {min,max,size:max.subtract(min),center:min.add(max).scale(0.5)};}
+function cameraFor(b){const aspect=innerWidth/innerHeight;const max=Math.max(b.size.x,b.size.y,b.size.z);const camera=new FreeCamera('qaCamera',new Vector3(0,0,1),scene);camera.minZ=0.001;camera.maxZ=10;const orthos={front:[new Vector3(0,0,1),b.size.x,b.size.y,new Vector3(0,1,0)],rear:[new Vector3(0,0,-1),b.size.x,b.size.y,new Vector3(0,1,0)],left:[new Vector3(-1,0,0),b.size.z,b.size.y,new Vector3(0,1,0)],right:[new Vector3(1,0,0),b.size.z,b.size.y,new Vector3(0,1,0)],top:[new Vector3(0,1,0),b.size.x,b.size.z,new Vector3(0,0,-1)],bottom:[new Vector3(0,-1,0),b.size.x,b.size.z,new Vector3(0,0,1)]};
+  if(orthos[view]){const [dir,w,h,up]=orthos[view];const halfH=Math.max(h*0.62,w/aspect*0.62);camera.mode=Camera.ORTHOGRAPHIC_CAMERA;camera.orthoLeft=-halfH*aspect;camera.orthoRight=halfH*aspect;camera.orthoTop=halfH;camera.orthoBottom=-halfH;camera.position=b.center.add(dir.scale(max*2.4));camera.upVector=up;camera.setTarget(b.center);}
+  else if(view==='front-logo'||view==='rear-psu'){const front=view==='front-logo';const target=front?new Vector3(0.155,-0.028,b.max.z):new Vector3(-0.167,0,b.min.z);const halfH=front?0.052:0.066;camera.mode=Camera.ORTHOGRAPHIC_CAMERA;camera.orthoLeft=-halfH*aspect;camera.orthoRight=halfH*aspect;camera.orthoTop=halfH;camera.orthoBottom=-halfH;camera.position=target.add(new Vector3(0,0,front?max*1.7:-max*1.7));camera.upVector=new Vector3(0,1,0);camera.setTarget(target);}
+  else{const dirs={'front-left':[-1,0.46,1],'front-right':[1,0.46,1],'rear-left':[-1,0.46,-1],'rear-right':[1,0.46,-1]};const a=dirs[view]||dirs['front-left'];const dir=new Vector3(a[0],a[1],a[2]).normalize();camera.mode=Camera.PERSPECTIVE_CAMERA;camera.fov=0.51;camera.position=b.center.add(dir.scale(max*2.15));camera.upVector=new Vector3(0,1,0);camera.setTarget(b.center);}scene.activeCamera=camera;return camera;}
+
+try{
+  const result=await SceneLoader.ImportMeshAsync(null,'/model/',`${file}?qa=${encodeURIComponent(qaId)}`,scene);const bounds=getBounds(result.meshes);cameraFor(bounds);await scene.whenReadyAsync();engine.runRenderLoop(()=>scene.render());await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
+  const gl=engine._gl;const ext=gl.getExtension('WEBGL_debug_renderer_info');const gpu=ext?gl.getParameter(ext.UNMASKED_RENDERER_WEBGL):gl.getParameter(gl.RENDERER);const perf=performance.getEntriesByName(new URL(modelUrl,location.href).href).at(-1)||{};
+  window.__QA__={status:'PASS',viewer:'babylon',model,view,qaId,nodeCount:scene.transformNodes.length+scene.meshes.length,meshCount:result.meshes.filter(m=>m.getTotalVertices()>0).length,bounds:{min:bounds.min.asArray(),max:bounds.max.asArray(),size:bounds.size.asArray()},webglVersion:engine.webGLVersion,gpu,resource:{name:perf.name||modelUrl,transferSize:perf.transferSize||0,encodedBodySize:perf.encodedBodySize||0,decodedBodySize:perf.decodedBodySize||0},renderedAt:new Date().toISOString()};
+  const response=await fetch('/qa-result',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(window.__QA__)});window.__QA__.server=await response.json();status.textContent=`PASS | BABYLON\n${model} | ${view}\n${window.__QA__.meshCount} meshes | ${gpu}`;
+}catch(error){window.__QA__={status:'FAIL',viewer:'babylon',model,view,qaId,error:String(error),stack:error?.stack};status.textContent=`FAIL | BABYLON\n${error}`;console.error(error);}
+</script>
+</body>
+</html>

@@ -1,5 +1,7 @@
 # Dell PowerEdge R7515 3.5 英寸网站用 3D 模型最终报告
 
+> 当前验收以 `qa/rotation-review-20260827/final-report.md` 及其冻结哈希 `final-gate.json` 为准；本旧报告仅保留作谱系证据。
+
 ## 最终结论
 
 **PASS_WITH_BOTTOM_FALLBACK**

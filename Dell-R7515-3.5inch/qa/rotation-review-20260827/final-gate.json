@@ -1,0 +1,523 @@
+{
+  "model": "Dell-R7515-3.5inch",
+  "frozen": {
+    "frozenAt": "2026-08-27T22:30:00+08:00",
+    "model": "Dell-R7515-3.5inch",
+    "standard": {
+      "path": "model/Dell-R7515-3.5inch.glb",
+      "bytes": 18850044,
+      "sha256": "06b20f03ccc702fddb0dec854f37f60f4a4c14761488b3b58591bc7824b90f55"
+    },
+    "web": {
+      "path": "model/Dell-R7515-3.5inch-web.glb",
+      "bytes": 10604860,
+      "sha256": "692020e5444f1f071f340a6f3b4908d8e4eef60ee570471bd1f3103496ec1f76"
+    },
+    "viewers": {
+      "three": {
+        "path": "qa/rotation-review-20260827/viewers/three-orbit.html",
+        "sha256": "399fd9bf1986b29f205ea526dae84d302bbd4164b5e9f851f4c0c5b1add10328"
+      },
+      "babylon": {
+        "path": "qa/rotation-review-20260827/viewers/babylon-orbit.html",
+        "sha256": "8a4df2e3080fff783450aa60bab6daae446035ddb50a0aeffe7af69ef72272ad"
+      }
+    },
+    "preReviewHashesUnchanged": true
+  },
+  "checks": {
+    "preReviewArchive": true,
+    "frozenHashes": true,
+    "auditViews": true,
+    "auditStandard": true,
+    "auditWeb": true,
+    "rotationStructureStandard": true,
+    "rotationStructureWeb": true,
+    "loads40": true,
+    "rotationFourCombinations": true,
+    "inventory": true,
+    "matchedCamera": true,
+    "textureSamplingAndAtlas": true,
+    "official3DReview": true
+  },
+  "audits": {
+    "views": {
+      "status": "PASS",
+      "errors": [],
+      "errorCount": 0,
+      "unresolvedCount": 0
+    },
+    "standard": {
+      "status": "PASS",
+      "errors": [],
+      "errorCount": 0,
+      "unresolvedCount": 0
+    },
+    "web": {
+      "status": "PASS",
+      "errors": [],
+      "errorCount": 0,
+      "unresolvedCount": 0
+    },
+    "rotation-structure-standard": {
+      "status": "PASS",
+      "errors": [],
+      "errorCount": 0,
+      "unresolvedCount": 0
+    },
+    "rotation-structure-web": {
+      "status": "PASS",
+      "errors": [],
+      "errorCount": 0,
+      "unresolvedCount": 0
+    }
+  },
+  "loads": {
+    "required": 40,
+    "actual": 40,
+    "uniqueNonces": 40,
+    "combos": [
+      {
+        "viewer": "three",
+        "variant": "standard",
+        "modelBase": "/Dell-R7515-3.5inch/model/Dell-R7515-3.5inch.glb",
+        "checks": {
+          "loadCount10": true,
+          "pngCount10": true,
+          "viewOrderExact": true,
+          "cacheBusted": true,
+          "independentPageNavigations": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "three",
+        "variant": "web",
+        "modelBase": "/Dell-R7515-3.5inch/model/Dell-R7515-3.5inch-web.glb",
+        "checks": {
+          "loadCount10": true,
+          "pngCount10": true,
+          "viewOrderExact": true,
+          "cacheBusted": true,
+          "independentPageNavigations": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "babylon",
+        "variant": "standard",
+        "modelBase": "/Dell-R7515-3.5inch/model/Dell-R7515-3.5inch.glb",
+        "checks": {
+          "loadCount10": true,
+          "pngCount10": true,
+          "viewOrderExact": true,
+          "cacheBusted": true,
+          "independentPageNavigations": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "babylon",
+        "variant": "web",
+        "modelBase": "/Dell-R7515-3.5inch/model/Dell-R7515-3.5inch-web.glb",
+        "checks": {
+          "loadCount10": true,
+          "pngCount10": true,
+          "viewOrderExact": true,
+          "cacheBusted": true,
+          "independentPageNavigations": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      }
+    ]
+  },
+  "rotation": {
+    "yawFrames": 288,
+    "pitchCheckerFrames": 128,
+    "stableFrames": 72,
+    "combos": [
+      {
+        "viewer": "three",
+        "variant": "standard",
+        "runtime": {
+          "engine": "Three.js 179",
+          "webgl2": true,
+          "model": "/Dell-R7515-3.5inch/model/Dell-R7515-3.5inch.glb?cb=final-06b20f03",
+          "bounds": {
+            "min": [
+              -0.2409999966621399,
+              -0.04340000078082085,
+              -0.35822001099586487
+            ],
+            "max": [
+              0.2409999966621399,
+              0.04340000078082085,
+              0.345535010099411
+            ],
+            "size": [
+              0.4819999933242798,
+              0.0868000015616417,
+              0.7037550210952759
+            ]
+          },
+          "near": 0.01,
+          "far": 10,
+          "frozenFrustum": true,
+          "loadingOverlayHidden": true,
+          "checker": "dark",
+          "overlayVisible": false
+        },
+        "checks": {
+          "analysisPass": true,
+          "yaw72x5": true,
+          "pitchChecker32": true,
+          "stable18": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "three",
+        "variant": "web",
+        "runtime": {
+          "engine": "Three.js 179",
+          "webgl2": true,
+          "model": "/Dell-R7515-3.5inch/model/Dell-R7515-3.5inch-web.glb?cb=final-692020e5",
+          "bounds": {
+            "min": [
+              -0.2409999966621399,
+              -0.04340000078082085,
+              -0.35822001099586487
+            ],
+            "max": [
+              0.2409999966621399,
+              0.04340000078082085,
+              0.345535010099411
+            ],
+            "size": [
+              0.4819999933242798,
+              0.0868000015616417,
+              0.7037550210952759
+            ]
+          },
+          "near": 0.01,
+          "far": 10,
+          "frozenFrustum": true,
+          "loadingOverlayHidden": true,
+          "checker": "dark",
+          "overlayVisible": false
+        },
+        "checks": {
+          "analysisPass": true,
+          "yaw72x5": true,
+          "pitchChecker32": true,
+          "stable18": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "babylon",
+        "variant": "standard",
+        "runtime": {
+          "engine": "Babylon.js 8.22.2",
+          "webgl2": true,
+          "model": "/Dell-R7515-3.5inch/model/Dell-R7515-3.5inch.glb?cb=final-06b20f03",
+          "bounds": {
+            "min": [
+              -0.2409999966621399,
+              -0.04340000078082085,
+              -0.35822001099586487
+            ],
+            "max": [
+              0.2409999966621399,
+              0.04340000078082085,
+              0.345535010099411
+            ],
+            "size": [
+              0.4819999933242798,
+              0.0868000015616417,
+              0.7037550210952759
+            ]
+          },
+          "near": 0.01,
+          "far": 10,
+          "frozenFrustum": true,
+          "loadingOverlayHidden": true,
+          "checker": "dark",
+          "overlayVisible": false
+        },
+        "checks": {
+          "analysisPass": true,
+          "yaw72x5": true,
+          "pitchChecker32": true,
+          "stable18": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "babylon",
+        "variant": "web",
+        "runtime": {
+          "engine": "Babylon.js 8.22.2",
+          "webgl2": true,
+          "model": "/Dell-R7515-3.5inch/model/Dell-R7515-3.5inch-web.glb?cb=final-692020e5",
+          "bounds": {
+            "min": [
+              -0.2409999966621399,
+              -0.04340000078082085,
+              -0.35822001099586487
+            ],
+            "max": [
+              0.2409999966621399,
+              0.04340000078082085,
+              0.345535010099411
+            ],
+            "size": [
+              0.4819999933242798,
+              0.0868000015616417,
+              0.7037550210952759
+            ]
+          },
+          "near": 0.01,
+          "far": 10,
+          "frozenFrustum": true,
+          "loadingOverlayHidden": true,
+          "checker": "dark",
+          "overlayVisible": false
+        },
+        "checks": {
+          "analysisPass": true,
+          "yaw72x5": true,
+          "pitchChecker32": true,
+          "stable18": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      }
+    ]
+  },
+  "inventory": {
+    "model": "Dell-R7515-3.5inch",
+    "sourceRows": 34,
+    "reviewRows": 34,
+    "statusCounts": {
+      "PASS_EXACT": 33,
+      "PASS_BOTTOM_FALLBACK": 1
+    },
+    "globalEvidencePass": true,
+    "standardNodeCount": 163,
+    "webNodeCount": 163,
+    "standardWebNodeNamesEqual": true,
+    "errors": [],
+    "status": "PASS"
+  },
+  "textureSampling": {
+    "model": "Dell-R7515-3.5inch",
+    "records": {
+      "standard": {
+        "path": "/root/Project/rack-device-3d/Dell-R7515-3.5inch/model/Dell-R7515-3.5inch.glb",
+        "textureCount": 6,
+        "imageCount": 6,
+        "samplers": [],
+        "textures": [
+          {
+            "index": 0,
+            "source": 0,
+            "sampler": null,
+            "effectiveMinFilter": "GLTF_DEFAULT_LINEAR",
+            "usesMipmaps": false
+          },
+          {
+            "index": 1,
+            "source": 1,
+            "sampler": null,
+            "effectiveMinFilter": "GLTF_DEFAULT_LINEAR",
+            "usesMipmaps": false
+          },
+          {
+            "index": 2,
+            "source": 2,
+            "sampler": null,
+            "effectiveMinFilter": "GLTF_DEFAULT_LINEAR",
+            "usesMipmaps": false
+          },
+          {
+            "index": 3,
+            "source": 3,
+            "sampler": null,
+            "effectiveMinFilter": "GLTF_DEFAULT_LINEAR",
+            "usesMipmaps": false
+          },
+          {
+            "index": 4,
+            "source": 4,
+            "sampler": null,
+            "effectiveMinFilter": "GLTF_DEFAULT_LINEAR",
+            "usesMipmaps": false
+          },
+          {
+            "index": 5,
+            "source": 5,
+            "sampler": null,
+            "effectiveMinFilter": "GLTF_DEFAULT_LINEAR",
+            "usesMipmaps": false
+          }
+        ],
+        "sharedAtlasDetected": false,
+        "atlasBleedRisk": false,
+        "mipmapNote": "glTF default LINEAR minification; no atlas and frozen-hash orbit evidence showed no sampling shimmer"
+      },
+      "web": {
+        "path": "/root/Project/rack-device-3d/Dell-R7515-3.5inch/model/Dell-R7515-3.5inch-web.glb",
+        "textureCount": 6,
+        "imageCount": 6,
+        "samplers": [],
+        "textures": [
+          {
+            "index": 0,
+            "source": 0,
+            "sampler": null,
+            "effectiveMinFilter": "GLTF_DEFAULT_LINEAR",
+            "usesMipmaps": false
+          },
+          {
+            "index": 1,
+            "source": 1,
+            "sampler": null,
+            "effectiveMinFilter": "GLTF_DEFAULT_LINEAR",
+            "usesMipmaps": false
+          },
+          {
+            "index": 2,
+            "source": 2,
+            "sampler": null,
+            "effectiveMinFilter": "GLTF_DEFAULT_LINEAR",
+            "usesMipmaps": false
+          },
+          {
+            "index": 3,
+            "source": 3,
+            "sampler": null,
+            "effectiveMinFilter": "GLTF_DEFAULT_LINEAR",
+            "usesMipmaps": false
+          },
+          {
+            "index": 4,
+            "source": 4,
+            "sampler": null,
+            "effectiveMinFilter": "GLTF_DEFAULT_LINEAR",
+            "usesMipmaps": false
+          },
+          {
+            "index": 5,
+            "source": 5,
+            "sampler": null,
+            "effectiveMinFilter": "GLTF_DEFAULT_LINEAR",
+            "usesMipmaps": false
+          }
+        ],
+        "sharedAtlasDetected": false,
+        "atlasBleedRisk": false,
+        "mipmapNote": "glTF default LINEAR minification; no atlas and frozen-hash orbit evidence showed no sampling shimmer"
+      }
+    },
+    "errors": [],
+    "errorCount": 0,
+    "status": "PASS"
+  },
+  "matchedCamera": {
+    "front": {
+      "files": [
+        "qa/rotation-review-20260827/matched-camera/three-standard/front/source.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/front/render.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/front/overlay.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/front/difference.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/front/sheet.png"
+      ],
+      "complete": true
+    },
+    "rear": {
+      "files": [
+        "qa/rotation-review-20260827/matched-camera/three-standard/rear/source.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/rear/render.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/rear/overlay.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/rear/difference.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/rear/sheet.png"
+      ],
+      "complete": true
+    },
+    "left": {
+      "files": [
+        "qa/rotation-review-20260827/matched-camera/three-standard/left/source.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/left/render.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/left/overlay.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/left/difference.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/left/sheet.png"
+      ],
+      "complete": true
+    },
+    "right": {
+      "files": [
+        "qa/rotation-review-20260827/matched-camera/three-standard/right/source.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/right/render.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/right/overlay.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/right/difference.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/right/sheet.png"
+      ],
+      "complete": true
+    },
+    "top": {
+      "files": [
+        "qa/rotation-review-20260827/matched-camera/three-standard/top/source.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/top/render.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/top/overlay.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/top/difference.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/top/sheet.png"
+      ],
+      "complete": true
+    },
+    "bottom": {
+      "files": [
+        "qa/rotation-review-20260827/matched-camera/three-standard/bottom/source.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/bottom/render.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/bottom/overlay.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/bottom/difference.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/bottom/sheet.png"
+      ],
+      "complete": true
+    }
+  },
+  "errors": [],
+  "errorCount": 0,
+  "status": "PASS_WITH_BOTTOM_FALLBACK"
+}
