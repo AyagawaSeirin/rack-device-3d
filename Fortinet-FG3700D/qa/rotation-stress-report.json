@@ -1,0 +1,379 @@
+{
+  "schema": "rack-device-rotation-stress-report-v1",
+  "review_date": "2026-08-27",
+  "model": "Fortinet-FG3700D",
+  "identity": "Fortinet FortiGate FG-3700D / FG-3700D-USG AC, exact 3U installed configuration",
+  "old_glb_sha256": {
+    "standard": "0961f7873bd7fb4ae7b30c502fadfd739cdff04adc2bb499ea8a8aa03c0aa7d7",
+    "web": "da509ed749d6025eec1573295b805c09d87f73896621f6d5920ffe189a57e694"
+  },
+  "new_glb_sha256": {
+    "standard": "b4969441ea1c6336d987f3075bc8057155705efd8c9d7b1fdfb57533e84753dc",
+    "web": "74a322aa002764528e45810322c59f8c5c034f1bda0ea9c93e9e350ea9c7191a"
+  },
+  "reproduction": "Yes. Severe angle-dependent depth striping was reproduced near yaw 85/90/95 in the preserved superseded v2 viewer. The old GLBs also failed the structural rotation gate with 306 standard / 264 web render-risk coplanar pairs. A correct-depth v3/v4 baseline did not produce a whole-shell alpha jump.",
+  "root_cause": "Top seam/screw relief was too close to the source-locked top surface; the superseded viewer's approximately 1:2,000,000 near/far ratio amplified depth quantization. The old web export also reduced cylinder radial tessellation, violating exact standard/web visible-geometry parity.",
+  "fixes": [
+    "Raised top seam bars and cover screws by a stable 0.25 mm physical offset without changing the device envelope.",
+    "Replaced the pathological viewer depth range with radius-bounded near/far planes and corrected the Babylon bottom-view in-plane orientation.",
+    "Made web radial tessellation identical to standard; web optimization is now texture/encoding-only and the geometry/UV/transform fingerprints match exactly."
+  ],
+  "glb_audits": {
+    "standard": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "dimensions": {
+        "expected_mm": [
+          482.6,
+          133.0,
+          633.0
+        ],
+        "errors": [],
+        "warnings": [],
+        "actual_xyz": [
+          0.4826,
+          0.13325,
+          0.63300002
+        ],
+        "units_per_mm_xyz": [
+          0.001,
+          0.0010018797,
+          0.001
+        ],
+        "nonuniform_ratio_error_percent": 0.1252
+      }
+    },
+    "web": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "dimensions": {
+        "expected_mm": [
+          482.6,
+          133.0,
+          633.0
+        ],
+        "errors": [],
+        "warnings": [],
+        "actual_xyz": [
+          0.4826,
+          0.13325,
+          0.63300002
+        ],
+        "units_per_mm_xyz": [
+          0.001,
+          0.0010018797,
+          0.001
+        ],
+        "nonuniform_ratio_error_percent": 0.1252
+      }
+    }
+  },
+  "view_audit": {
+    "status": "PASS",
+    "errors": 0,
+    "warnings": 6,
+    "warning_resolution": [
+      {
+        "face": "front",
+        "warnings": [
+          "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+        ],
+        "core_alpha_below_250_percent": 0.0,
+        "core_transparent_percent": 0.0,
+        "resolution": "Verified as true through-hole/silhouette anti-aliasing only; opaque product core is intact.",
+        "resolved": true
+      },
+      {
+        "face": "rear",
+        "warnings": [
+          "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+        ],
+        "core_alpha_below_250_percent": 0.0,
+        "core_transparent_percent": 0.0,
+        "resolution": "Verified as true through-hole/silhouette anti-aliasing only; opaque product core is intact.",
+        "resolved": true
+      },
+      {
+        "face": "left",
+        "warnings": [
+          "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+        ],
+        "core_alpha_below_250_percent": 0.0,
+        "core_transparent_percent": 0.0,
+        "resolution": "Verified as true through-hole/silhouette anti-aliasing only; opaque product core is intact.",
+        "resolved": true
+      },
+      {
+        "face": "right",
+        "warnings": [
+          "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+        ],
+        "core_alpha_below_250_percent": 0.0,
+        "core_transparent_percent": 0.0,
+        "resolution": "Verified as true through-hole/silhouette anti-aliasing only; opaque product core is intact.",
+        "resolved": true
+      },
+      {
+        "face": "top",
+        "warnings": [
+          "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+        ],
+        "core_alpha_below_250_percent": 0.0,
+        "core_transparent_percent": 0.0,
+        "resolution": "Verified as true through-hole/silhouette anti-aliasing only; opaque product core is intact.",
+        "resolved": true
+      },
+      {
+        "face": "bottom",
+        "warnings": [
+          "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+        ],
+        "core_alpha_below_250_percent": 0.0,
+        "core_transparent_percent": 0.0,
+        "resolution": "Verified as true through-hole/silhouette anti-aliasing only; opaque product core is intact.",
+        "resolved": true
+      }
+    ]
+  },
+  "structural_rotation_checks": {
+    "before": {
+      "standard": {
+        "triangles": 11504,
+        "duplicate_triangle_groups": 0,
+        "opposite_duplicate_groups": 0,
+        "source_surface_coplanar_hazard_pairs": null,
+        "informational_opaque_solid_coplanar_contacts": null,
+        "degenerate_triangles": 0,
+        "normal_mismatches": 0,
+        "negative_transform_count": 0,
+        "face_material_violations": 0,
+        "images_with_partial_alpha": 0,
+        "closed_core_pass": true,
+        "pass": false
+      },
+      "web": {
+        "triangles": 10280,
+        "duplicate_triangle_groups": 0,
+        "opposite_duplicate_groups": 0,
+        "source_surface_coplanar_hazard_pairs": null,
+        "informational_opaque_solid_coplanar_contacts": null,
+        "degenerate_triangles": 0,
+        "normal_mismatches": 0,
+        "negative_transform_count": 0,
+        "face_material_violations": 0,
+        "images_with_partial_alpha": 0,
+        "closed_core_pass": true,
+        "pass": false
+      }
+    },
+    "after": {
+      "standard": {
+        "triangles": 11504,
+        "duplicate_triangle_groups": 0,
+        "opposite_duplicate_groups": 0,
+        "source_surface_coplanar_hazard_pairs": 0,
+        "informational_opaque_solid_coplanar_contacts": 132,
+        "degenerate_triangles": 0,
+        "normal_mismatches": 0,
+        "negative_transform_count": 0,
+        "face_material_violations": 0,
+        "images_with_partial_alpha": 0,
+        "closed_core_pass": true,
+        "pass": true
+      },
+      "web": {
+        "triangles": 11504,
+        "duplicate_triangle_groups": 0,
+        "opposite_duplicate_groups": 0,
+        "source_surface_coplanar_hazard_pairs": 0,
+        "informational_opaque_solid_coplanar_contacts": 132,
+        "degenerate_triangles": 0,
+        "normal_mismatches": 0,
+        "negative_transform_count": 0,
+        "face_material_violations": 0,
+        "images_with_partial_alpha": 0,
+        "closed_core_pass": true,
+        "pass": true
+      }
+    }
+  },
+  "standard_web_geometry_parity": {
+    "pass": true,
+    "checks": {
+      "geometry_transform_uv_fingerprint_equal": true,
+      "bounds_equal": true,
+      "no_negative_transform_standard": true,
+      "no_negative_transform_web": true
+    },
+    "fingerprint": "2658f30cb8af6a29558321e2582e4e6bb2cda3fe79d3b4df59b8112fdeec421a"
+  },
+  "static_gate": {
+    "required_loads": 40,
+    "observed_loads": 40,
+    "pass": true,
+    "report": "/root/Project/rack-device-3d/Fortinet-FG3700D/qa/rotation-review/after/static-loads/static-40-loads.json"
+  },
+  "rotation_gate": {
+    "frames_per_viewer_model_combination": 96,
+    "yaw_frames_per_combination": 72,
+    "pitch_frames_per_combination": 24,
+    "final_combinations": 4,
+    "final_total_frames": 384,
+    "before": {
+      "three-standard": {
+        "asset_sha256": "0961f7873bd7fb4ae7b30c502fadfd739cdff04adc2bb499ea8a8aa03c0aa7d7",
+        "viewer": "three",
+        "engine": "Three.js r180",
+        "viewer_code_version": "rotation-review-20260827-v3",
+        "webgl2": true,
+        "yaw_frames": 72,
+        "pitch_light_frames": 12,
+        "pitch_dark_frames": 12,
+        "total_frames": 96,
+        "abrupt_frame_candidates": [],
+        "automated_pass": true,
+        "manual_contact_sheet_review": "PASS",
+        "yaw_contact_sheet": "/root/Project/rack-device-3d/Fortinet-FG3700D/qa/rotation-review/before/three-standard/yaw-contact-sheet.png",
+        "checker_contact_sheet": "/root/Project/rack-device-3d/Fortinet-FG3700D/qa/rotation-review/before/three-standard/checker-pair-contact-sheet.png"
+      },
+      "three-web": {
+        "asset_sha256": "da509ed749d6025eec1573295b805c09d87f73896621f6d5920ffe189a57e694",
+        "viewer": "three",
+        "engine": "Three.js r180",
+        "viewer_code_version": "rotation-review-20260827-v3",
+        "webgl2": true,
+        "yaw_frames": 72,
+        "pitch_light_frames": 12,
+        "pitch_dark_frames": 12,
+        "total_frames": 96,
+        "abrupt_frame_candidates": [],
+        "automated_pass": true,
+        "manual_contact_sheet_review": "PASS",
+        "yaw_contact_sheet": "/root/Project/rack-device-3d/Fortinet-FG3700D/qa/rotation-review/before/three-web/yaw-contact-sheet.png",
+        "checker_contact_sheet": "/root/Project/rack-device-3d/Fortinet-FG3700D/qa/rotation-review/before/three-web/checker-pair-contact-sheet.png"
+      },
+      "babylon-standard": {
+        "asset_sha256": "0961f7873bd7fb4ae7b30c502fadfd739cdff04adc2bb499ea8a8aa03c0aa7d7",
+        "viewer": "babylon",
+        "engine": "Babylon.js 8.26.0",
+        "viewer_code_version": "rotation-review-20260827-v4",
+        "webgl2": true,
+        "yaw_frames": 72,
+        "pitch_light_frames": 12,
+        "pitch_dark_frames": 12,
+        "total_frames": 96,
+        "abrupt_frame_candidates": [],
+        "automated_pass": true,
+        "manual_contact_sheet_review": "PASS",
+        "yaw_contact_sheet": "/root/Project/rack-device-3d/Fortinet-FG3700D/qa/rotation-review/before/babylon-standard/yaw-contact-sheet.png",
+        "checker_contact_sheet": "/root/Project/rack-device-3d/Fortinet-FG3700D/qa/rotation-review/before/babylon-standard/checker-pair-contact-sheet.png"
+      },
+      "babylon-web": {
+        "asset_sha256": "da509ed749d6025eec1573295b805c09d87f73896621f6d5920ffe189a57e694",
+        "viewer": "babylon",
+        "engine": "Babylon.js 8.26.0",
+        "viewer_code_version": "rotation-review-20260827-v4",
+        "webgl2": true,
+        "yaw_frames": 72,
+        "pitch_light_frames": 12,
+        "pitch_dark_frames": 12,
+        "total_frames": 96,
+        "abrupt_frame_candidates": [],
+        "automated_pass": true,
+        "manual_contact_sheet_review": "PASS",
+        "yaw_contact_sheet": "/root/Project/rack-device-3d/Fortinet-FG3700D/qa/rotation-review/before/babylon-web/yaw-contact-sheet.png",
+        "checker_contact_sheet": "/root/Project/rack-device-3d/Fortinet-FG3700D/qa/rotation-review/before/babylon-web/checker-pair-contact-sheet.png"
+      }
+    },
+    "after": {
+      "three-standard": {
+        "asset_sha256": "b4969441ea1c6336d987f3075bc8057155705efd8c9d7b1fdfb57533e84753dc",
+        "viewer": "three",
+        "engine": "Three.js r180",
+        "viewer_code_version": "rotation-review-20260827-v3",
+        "webgl2": true,
+        "yaw_frames": 72,
+        "pitch_light_frames": 12,
+        "pitch_dark_frames": 12,
+        "total_frames": 96,
+        "abrupt_frame_candidates": [],
+        "automated_pass": true,
+        "manual_contact_sheet_review": "PASS",
+        "yaw_contact_sheet": "/root/Project/rack-device-3d/Fortinet-FG3700D/qa/rotation-review/after/three-standard/yaw-contact-sheet.png",
+        "checker_contact_sheet": "/root/Project/rack-device-3d/Fortinet-FG3700D/qa/rotation-review/after/three-standard/checker-pair-contact-sheet.png"
+      },
+      "three-web": {
+        "asset_sha256": "74a322aa002764528e45810322c59f8c5c034f1bda0ea9c93e9e350ea9c7191a",
+        "viewer": "three",
+        "engine": "Three.js r180",
+        "viewer_code_version": "rotation-review-20260827-v3",
+        "webgl2": true,
+        "yaw_frames": 72,
+        "pitch_light_frames": 12,
+        "pitch_dark_frames": 12,
+        "total_frames": 96,
+        "abrupt_frame_candidates": [],
+        "automated_pass": true,
+        "manual_contact_sheet_review": "PASS",
+        "yaw_contact_sheet": "/root/Project/rack-device-3d/Fortinet-FG3700D/qa/rotation-review/after/three-web/yaw-contact-sheet.png",
+        "checker_contact_sheet": "/root/Project/rack-device-3d/Fortinet-FG3700D/qa/rotation-review/after/three-web/checker-pair-contact-sheet.png"
+      },
+      "babylon-standard": {
+        "asset_sha256": "b4969441ea1c6336d987f3075bc8057155705efd8c9d7b1fdfb57533e84753dc",
+        "viewer": "babylon",
+        "engine": "Babylon.js 8.26.0",
+        "viewer_code_version": "rotation-review-20260827-v4",
+        "webgl2": true,
+        "yaw_frames": 72,
+        "pitch_light_frames": 12,
+        "pitch_dark_frames": 12,
+        "total_frames": 96,
+        "abrupt_frame_candidates": [],
+        "automated_pass": true,
+        "manual_contact_sheet_review": "PASS",
+        "yaw_contact_sheet": "/root/Project/rack-device-3d/Fortinet-FG3700D/qa/rotation-review/after/babylon-standard/yaw-contact-sheet.png",
+        "checker_contact_sheet": "/root/Project/rack-device-3d/Fortinet-FG3700D/qa/rotation-review/after/babylon-standard/checker-pair-contact-sheet.png"
+      },
+      "babylon-web": {
+        "asset_sha256": "74a322aa002764528e45810322c59f8c5c034f1bda0ea9c93e9e350ea9c7191a",
+        "viewer": "babylon",
+        "engine": "Babylon.js 8.26.0",
+        "viewer_code_version": "rotation-review-20260827-v4",
+        "webgl2": true,
+        "yaw_frames": 72,
+        "pitch_light_frames": 12,
+        "pitch_dark_frames": 12,
+        "total_frames": 96,
+        "abrupt_frame_candidates": [],
+        "automated_pass": true,
+        "manual_contact_sheet_review": "PASS",
+        "yaw_contact_sheet": "/root/Project/rack-device-3d/Fortinet-FG3700D/qa/rotation-review/after/babylon-web/yaw-contact-sheet.png",
+        "checker_contact_sheet": "/root/Project/rack-device-3d/Fortinet-FG3700D/qa/rotation-review/after/babylon-web/checker-pair-contact-sheet.png"
+      }
+    },
+    "manual_result": "All final sheets reviewed: no surface flicker, transparency jump, checkerboard leakage, disappearing face, mirroring, texture switch, or sudden gray frame."
+  },
+  "matched_camera_and_feature_inventory": {
+    "pass": true,
+    "comparison_count": 10,
+    "matched_orthographic_count": 6,
+    "authoritative_three_quarter_supporting_count": 4,
+    "feature_rows": 33,
+    "manifest": "/root/Project/rack-device-3d/Fortinet-FG3700D/qa/rotation-review/after/matched-camera/matched-camera-manifest.json",
+    "feature_review": "/root/Project/rack-device-3d/Fortinet-FG3700D/qa/rotation-review/after/matched-camera/feature-inventory-final-review.csv"
+  },
+  "authenticity_conclusion": "Exact 4-QSFP+/28-SFP front, dual AC PSU rear, three rotor openings/six FAN indicators, rack handles, non-mirrored sides and exact underside passed.",
+  "warnings_and_residual_risk": [
+    "Opaque solid/interior coplanar contact counts are retained as informational mechanical intersections; source-surface hazard count is zero in both final GLBs."
+  ],
+  "evidence_archives": [
+    "/root/Project/rack-device-3d/Fortinet-FG3700D/qa/superseded/pre-rotation-review-20260827",
+    "/root/Project/rack-device-3d/Fortinet-FG3700D/qa/rotation-review/superseded",
+    "/root/Project/rack-device-3d/Fortinet-FG3700D/qa/superseded/pre-geometry-parity-20260827"
+  ],
+  "validation_errors": [],
+  "status": "PASS",
+  "pass": true
+}

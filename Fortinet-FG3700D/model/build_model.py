@@ -456,9 +456,9 @@ def build_side_and_cover_relief(scene: trimesh.Scene, sections: int) -> None:
     # The removable top cover sits slightly proud and retains separate edge relief.
     cover_edges = [
         make_box([BODY_W - 0.006, 0.0012, 0.0020],
-                 [0.0, BODY_H / 2.0 - 0.0006, FRONT_Z - 0.003], MAT_WHITE),
+                 [0.0, BODY_H / 2.0 - 0.00035, FRONT_Z - 0.003], MAT_WHITE),
         make_box([BODY_W - 0.006, 0.0012, 0.0020],
-                 [0.0, BODY_H / 2.0 - 0.0006, REAR_Z + 0.003], MAT_WHITE),
+                 [0.0, BODY_H / 2.0 - 0.00035, REAR_Z + 0.003], MAT_WHITE),
     ]
     add_group(scene, "Top_Removable_Cover_Front_Rear_Seam_Relief", cover_edges, MAT_WHITE)
 
@@ -467,7 +467,7 @@ def build_side_and_cover_relief(scene: trimesh.Scene, sections: int) -> None:
                                   (0.195, 0.278), (-0.150, -0.278), (0.000, -0.278),
                                   (0.150, -0.278))):
         top_screws.append(make_cylinder(0.0021, 0.0008,
-                                        [x, BODY_H / 2.0 - 0.0004, z], MAT_SILVER,
+                                        [x, BODY_H / 2.0 - 0.00015, z], MAT_SILVER,
                                         sections, (0, 1, 0)))
     add_group(scene, "Top_Cover_Perimeter_Screws_7", top_screws, MAT_SILVER)
 
@@ -478,7 +478,9 @@ def build_scene(profile: str) -> trimesh.Scene:
         face: Image.open(textures_dir / f"{face}.png").convert("RGB")
         for face in ("front", "rear", "left", "right", "top", "bottom")
     }
-    sections = 24 if profile == "standard" else 18
+    # Web and standard must retain the same visible geometry.  Web optimization
+    # is texture/encoding-only; lowering radial tessellation changes silhouettes.
+    sections = 24
     scene = trimesh.Scene(base_frame="Fortinet-FG3700D_ROOT")
     scene.metadata.update({
         "manufacturer": "Fortinet, Inc.",

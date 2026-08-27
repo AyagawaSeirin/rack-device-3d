@@ -1,0 +1,1525 @@
+{
+  "combo_dir": "Fortinet-FG3700D/qa/rotation-review/after/babylon-web",
+  "runtime_state": {
+    "viewer": "babylon",
+    "engine": "Babylon.js 8.26.0",
+    "viewerCodeVersion": "rotation-review-20260827-v4",
+    "asset": "/Fortinet-FG3700D/model/Fortinet-FG3700D-web.glb",
+    "assetSha256": "74a322aa002764528e45810322c59f8c5c034f1bda0ea9c93e9e350ea9c7191a",
+    "webgl2": true,
+    "loaded": true,
+    "ready": true,
+    "renderCount": 1485,
+    "meshCount": 49,
+    "materialCount": 16,
+    "materials": [
+      {
+        "name": "FG3700D warm-white powder-coated steel",
+        "alpha": 1,
+        "transparencyMode": 0,
+        "backFaceCulling": true,
+        "forceDepthWrite": false,
+        "needAlphaBlending": false
+      },
+      {
+        "name": "SOURCE_LOCKED_FRONT_photographic_texture",
+        "alpha": 1,
+        "transparencyMode": 0,
+        "backFaceCulling": true,
+        "forceDepthWrite": false,
+        "needAlphaBlending": false
+      },
+      {
+        "name": "SOURCE_LOCKED_REAR_photographic_texture",
+        "alpha": 1,
+        "transparencyMode": 0,
+        "backFaceCulling": true,
+        "forceDepthWrite": false,
+        "needAlphaBlending": false
+      },
+      {
+        "name": "SOURCE_LOCKED_LEFT_photographic_texture",
+        "alpha": 1,
+        "transparencyMode": 0,
+        "backFaceCulling": true,
+        "forceDepthWrite": false,
+        "needAlphaBlending": false
+      },
+      {
+        "name": "SOURCE_LOCKED_RIGHT_photographic_texture",
+        "alpha": 1,
+        "transparencyMode": 0,
+        "backFaceCulling": true,
+        "forceDepthWrite": false,
+        "needAlphaBlending": false
+      },
+      {
+        "name": "SOURCE_LOCKED_TOP_photographic_texture",
+        "alpha": 1,
+        "transparencyMode": 0,
+        "backFaceCulling": true,
+        "forceDepthWrite": false,
+        "needAlphaBlending": false
+      },
+      {
+        "name": "SOURCE_LOCKED_BOTTOM_photographic_texture",
+        "alpha": 1,
+        "transparencyMode": 0,
+        "backFaceCulling": true,
+        "forceDepthWrite": false,
+        "needAlphaBlending": false
+      },
+      {
+        "name": "Dark fan cavity",
+        "alpha": 1,
+        "transparencyMode": 0,
+        "backFaceCulling": true,
+        "forceDepthWrite": false,
+        "needAlphaBlending": false
+      },
+      {
+        "name": "FG3700D rack and tray white",
+        "alpha": 1,
+        "transparencyMode": 0,
+        "backFaceCulling": true,
+        "forceDepthWrite": false,
+        "needAlphaBlending": false
+      },
+      {
+        "name": "Polished rack handle and fastener steel",
+        "alpha": 1,
+        "transparencyMode": 0,
+        "backFaceCulling": true,
+        "forceDepthWrite": false,
+        "needAlphaBlending": false
+      },
+      {
+        "name": "Connector fan and recess black",
+        "alpha": 1,
+        "transparencyMode": 0,
+        "backFaceCulling": true,
+        "forceDepthWrite": false,
+        "needAlphaBlending": false
+      },
+      {
+        "name": "Connector cage plated metal",
+        "alpha": 1,
+        "transparencyMode": 0,
+        "backFaceCulling": true,
+        "forceDepthWrite": false,
+        "needAlphaBlending": false
+      },
+      {
+        "name": "Status lens gray-green",
+        "alpha": 1,
+        "transparencyMode": 0,
+        "backFaceCulling": true,
+        "forceDepthWrite": false,
+        "needAlphaBlending": false
+      },
+      {
+        "name": "PSU release green",
+        "alpha": 1,
+        "transparencyMode": 0,
+        "backFaceCulling": true,
+        "forceDepthWrite": false,
+        "needAlphaBlending": false
+      },
+      {
+        "name": "Fan blade charcoal",
+        "alpha": 1,
+        "transparencyMode": 0,
+        "backFaceCulling": true,
+        "forceDepthWrite": false,
+        "needAlphaBlending": false
+      },
+      {
+        "name": "FG3700D warm-white fan grille steel",
+        "alpha": 1,
+        "transparencyMode": 0,
+        "backFaceCulling": true,
+        "forceDepthWrite": false,
+        "needAlphaBlending": false
+      }
+    ],
+    "errors": [],
+    "mode": "orbit",
+    "view": "orbit",
+    "bg": "dark",
+    "yaw": 270,
+    "pitch": 35,
+    "capture": {
+      "yawStepDegrees": 5,
+      "yawFrames": 72,
+      "yawPitchDegrees": 12,
+      "yawBackground": "light-checker",
+      "pitchDegrees": [
+        -35,
+        0,
+        35
+      ],
+      "pitchYaws": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "pitchFramesPerBackground": 12,
+      "pitchBackgrounds": [
+        "light-checker",
+        "dark-checker"
+      ]
+    }
+  },
+  "capture_counts": {
+    "yaw_light": 72,
+    "pitch_light": 12,
+    "pitch_dark": 12,
+    "total": 96
+  },
+  "yaw_step_degrees": 5,
+  "yaw_frame_manifest": [
+    {
+      "file": "yaw-light/yaw-000.jpg",
+      "yaw_degrees": 0,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "3452c520939f10a215dd20de89ad0bb20c4444652c081b9ecff83d6166e7fe3f",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        227.2846,
+        229.1909,
+        232.1769
+      ],
+      "next_frame_mean_abs_rgb_delta": 1.07017
+    },
+    {
+      "file": "yaw-light/yaw-005.jpg",
+      "yaw_degrees": 5,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "daf7789f502f77de69d094ad4244ad0f9cd986ce3170dd5af715d4d1d8ff1c50",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        227.3201,
+        229.2222,
+        232.2221
+      ],
+      "next_frame_mean_abs_rgb_delta": 1.06007
+    },
+    {
+      "file": "yaw-light/yaw-010.jpg",
+      "yaw_degrees": 10,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "c9d8c4b525bb384d4ba41bb46e0057ca9888682412c61d83dc2c6abbff7afda4",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        227.3821,
+        229.2818,
+        232.2734
+      ],
+      "next_frame_mean_abs_rgb_delta": 1.02009
+    },
+    {
+      "file": "yaw-light/yaw-015.jpg",
+      "yaw_degrees": 15,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "88e5ea292521a170ee6d275291228419eebab67ea26211ae7f8ed72310306835",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        227.4492,
+        229.3369,
+        232.3035
+      ],
+      "next_frame_mean_abs_rgb_delta": 1.00762
+    },
+    {
+      "file": "yaw-light/yaw-020.jpg",
+      "yaw_degrees": 20,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "0973e609b369241cd8970eba87f746b1ae648e1b933bf3c2aa3de0df0c4e4b28",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        227.5361,
+        229.4155,
+        232.3546
+      ],
+      "next_frame_mean_abs_rgb_delta": 1.0138
+    },
+    {
+      "file": "yaw-light/yaw-025.jpg",
+      "yaw_degrees": 25,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "1eb200c74e65e6c031f2ad435635d10fff2c9db547888509ab55bbc8259cdc9a",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        227.6381,
+        229.5136,
+        232.4316
+      ],
+      "next_frame_mean_abs_rgb_delta": 1.04493
+    },
+    {
+      "file": "yaw-light/yaw-030.jpg",
+      "yaw_degrees": 30,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "74098ebd3dc783150b77586f6e42e7b5020364d418ff13ae4e1750ea2c5c2120",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        227.7685,
+        229.6277,
+        232.5291
+      ],
+      "next_frame_mean_abs_rgb_delta": 1.02597
+    },
+    {
+      "file": "yaw-light/yaw-035.jpg",
+      "yaw_degrees": 35,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "8442c20a6d1cb03aafd9cc0e47d6e3e9e744021b4128a72ccce53d83ad65ef54",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        227.9203,
+        229.7741,
+        232.6564
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.98285
+    },
+    {
+      "file": "yaw-light/yaw-040.jpg",
+      "yaw_degrees": 40,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "b4b6aa46f61dd9f649f1e77df81da3f0e550d8a5fdf7c9742cb0b90a85d15e78",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        228.0932,
+        229.9329,
+        232.7984
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.94842
+    },
+    {
+      "file": "yaw-light/yaw-045.jpg",
+      "yaw_degrees": 45,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "26457f91a256eea7c2a86e2efd8474b0558fc9e06cc2f5f2f84f5f06e9c3a51c",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        228.2869,
+        230.1242,
+        232.9745
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.93646
+    },
+    {
+      "file": "yaw-light/yaw-050.jpg",
+      "yaw_degrees": 50,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "992c45c5bc0981ad7a1236ab9db2335ef090551a81e77384796f7f9ca63d1216",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        228.4845,
+        230.3048,
+        233.1496
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.91401
+    },
+    {
+      "file": "yaw-light/yaw-055.jpg",
+      "yaw_degrees": 55,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "4c2fc1878de108482a0f35d4c42e7b498a9269d4ff1b2b4e90190d4deef588d2",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        228.6804,
+        230.4956,
+        233.3331
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.9016
+    },
+    {
+      "file": "yaw-light/yaw-060.jpg",
+      "yaw_degrees": 60,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "2d7935a8389419059c9f812fe8329dad1090a05163f666afeb4c4fc041803692",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        228.8782,
+        230.6921,
+        233.5238
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.87556
+    },
+    {
+      "file": "yaw-light/yaw-065.jpg",
+      "yaw_degrees": 65,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "b7ef56815a8a441387dcafa7a823cb0867d9382dad51dd28393bfff759c119d3",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        229.0753,
+        230.8712,
+        233.7035
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.82747
+    },
+    {
+      "file": "yaw-light/yaw-070.jpg",
+      "yaw_degrees": 70,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "34965115247f2f3845b0c55c734847e1f09ac043b37597f26936131611c7a4da",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        229.2492,
+        231.041,
+        233.8732
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.78148
+    },
+    {
+      "file": "yaw-light/yaw-075.jpg",
+      "yaw_degrees": 75,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "ab09b23c5e3073f03f17cf170c0139255c147d4cf47a32c561548c5977514532",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        229.3987,
+        231.187,
+        234.0234
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.73474
+    },
+    {
+      "file": "yaw-light/yaw-080.jpg",
+      "yaw_degrees": 80,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "1ce0c0e32c2eda1c6177b61466d8d7823791379600c8c4f9b554292fd8122af6",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        229.5197,
+        231.3101,
+        234.148
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.61566
+    },
+    {
+      "file": "yaw-light/yaw-085.jpg",
+      "yaw_degrees": 85,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "1aabc50d013b03c7869465bd70a748e453af91e550c0657e6bc742ef63a32cd6",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        229.5432,
+        231.3282,
+        234.1609
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.59042
+    },
+    {
+      "file": "yaw-light/yaw-090.jpg",
+      "yaw_degrees": 90,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "ac5331bf1b03adc60210a7678b33a16bdf83f891544e2023eef93b10f752aa4d",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        229.5442,
+        231.3257,
+        234.1544
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.56748
+    },
+    {
+      "file": "yaw-light/yaw-095.jpg",
+      "yaw_degrees": 95,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "a4ed9919e344bb79c44fad6bdd6696a1f8558b76614143dadcbbc0f40982ed58",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        229.5671,
+        231.3503,
+        234.175
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.54243
+    },
+    {
+      "file": "yaw-light/yaw-100.jpg",
+      "yaw_degrees": 100,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "1dfe0146f8433c5dc77c86f880965d71bdf5e93c353faa7596d98c8527442571",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        229.5422,
+        231.3295,
+        234.1547
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.59153
+    },
+    {
+      "file": "yaw-light/yaw-105.jpg",
+      "yaw_degrees": 105,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "d8ac3b77dd46cdfca990924794da7c70df1dcf5f2216cb311d1c2375cc1daa16",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        229.5226,
+        231.3125,
+        234.1264
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.59957
+    },
+    {
+      "file": "yaw-light/yaw-110.jpg",
+      "yaw_degrees": 110,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "fa0127d15d3fc08294354aeea8ea5b8e455b377a18e886ef414d4f527a03af60",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        229.4833,
+        231.2703,
+        234.0704
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.64161
+    },
+    {
+      "file": "yaw-light/yaw-115.jpg",
+      "yaw_degrees": 115,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "673b9ee71933a41a524e16b9a0fbe15f5bf826ab11614eef6a529341d39b799d",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        229.4241,
+        231.2104,
+        233.992
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.67253
+    },
+    {
+      "file": "yaw-light/yaw-120.jpg",
+      "yaw_degrees": 120,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "55efaaac11f9f0c16cde538602354fabc105ecd6be62a38ed420fbb7e66330d0",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        229.3358,
+        231.1212,
+        233.8938
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.71238
+    },
+    {
+      "file": "yaw-light/yaw-125.jpg",
+      "yaw_degrees": 125,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "f8b89e679c2ca3297591e6cc08ce8959d9a6f2ab99be592f203684fa40bcb97b",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        229.2133,
+        231.0005,
+        233.7681
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.75281
+    },
+    {
+      "file": "yaw-light/yaw-130.jpg",
+      "yaw_degrees": 130,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "fd5397460afb2e1b6644c8bda4649b12d429a502ca198b9f5e46642043ad406e",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        229.0756,
+        230.8529,
+        233.6184
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.8142
+    },
+    {
+      "file": "yaw-light/yaw-135.jpg",
+      "yaw_degrees": 135,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "fc87f65260e53149a94f37e130f8381ed5d8998cae272c00825e5c213d4b541b",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        228.938,
+        230.7206,
+        233.4772
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.87474
+    },
+    {
+      "file": "yaw-light/yaw-140.jpg",
+      "yaw_degrees": 140,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "97ed8a903b8bae6d85cfadb4930b303ce6cee4a8501e8eabaeaf581ef4161f1a",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        228.8149,
+        230.6004,
+        233.3578
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.94589
+    },
+    {
+      "file": "yaw-light/yaw-145.jpg",
+      "yaw_degrees": 145,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "bcafa0044a62d07f84020f5b956e7b1c29bb433955f0c224ba05cfc0bf906f66",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        228.6989,
+        230.4872,
+        233.2513
+      ],
+      "next_frame_mean_abs_rgb_delta": 1.0201
+    },
+    {
+      "file": "yaw-light/yaw-150.jpg",
+      "yaw_degrees": 150,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "54ccaf6c522fed83b4840f6d63d1b58358f952052238bca03dd28fba8c2c3f04",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        228.585,
+        230.3792,
+        233.1507
+      ],
+      "next_frame_mean_abs_rgb_delta": 1.06573
+    },
+    {
+      "file": "yaw-light/yaw-155.jpg",
+      "yaw_degrees": 155,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "824dc54be7212ca30995fb724e01b2a3a4e5800c036af34ff01f9f306765ba51",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        228.4761,
+        230.2738,
+        233.0614
+      ],
+      "next_frame_mean_abs_rgb_delta": 1.13698
+    },
+    {
+      "file": "yaw-light/yaw-160.jpg",
+      "yaw_degrees": 160,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "5cc6ede08b3981ffce78e86251e78c76e3dcb05b18b57261139974758089cf2d",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        228.3708,
+        230.1731,
+        232.9762
+      ],
+      "next_frame_mean_abs_rgb_delta": 1.16632
+    },
+    {
+      "file": "yaw-light/yaw-165.jpg",
+      "yaw_degrees": 165,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "346ca2cab0bb8f7d4842840006d33d389c508eff0ecd8e43db1d0d29e1645699",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        228.3174,
+        230.118,
+        232.9457
+      ],
+      "next_frame_mean_abs_rgb_delta": 1.19687
+    },
+    {
+      "file": "yaw-light/yaw-170.jpg",
+      "yaw_degrees": 170,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "28d6d25f88cf02eb6608b270c3daf1b36f6223c5737d60dfa931cbd0aac07dd4",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        228.2469,
+        230.0609,
+        232.9088
+      ],
+      "next_frame_mean_abs_rgb_delta": 1.2242
+    },
+    {
+      "file": "yaw-light/yaw-175.jpg",
+      "yaw_degrees": 175,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "180ee4219fd8be8aa4c19a72b8e33a866ca391d902ab6978f14d9d0ce94a8780",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        228.1794,
+        230.0004,
+        232.8667
+      ],
+      "next_frame_mean_abs_rgb_delta": 1.24755
+    },
+    {
+      "file": "yaw-light/yaw-180.jpg",
+      "yaw_degrees": 180,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "3f560935b4379a5ae32eb02dd3dfa061f4a85379a565a8a93668045b0176bee4",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        228.1722,
+        229.9844,
+        232.8535
+      ],
+      "next_frame_mean_abs_rgb_delta": 1.25811
+    },
+    {
+      "file": "yaw-light/yaw-185.jpg",
+      "yaw_degrees": 185,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "52d1493175786e824c03e9a164a892cf87011a113094e17623b4c6a707e9fcf5",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        228.1727,
+        229.992,
+        232.8597
+      ],
+      "next_frame_mean_abs_rgb_delta": 1.24286
+    },
+    {
+      "file": "yaw-light/yaw-190.jpg",
+      "yaw_degrees": 190,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "392789cdc9f96d230722cbef3282b52be8f6fa1d3d52f1e44ec3b9fe96b23c00",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        228.2396,
+        230.0516,
+        232.8963
+      ],
+      "next_frame_mean_abs_rgb_delta": 1.19757
+    },
+    {
+      "file": "yaw-light/yaw-195.jpg",
+      "yaw_degrees": 195,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "ec0068601460a3107acf03444a1e9d9e9490e012e32c58b9848b2f82d70f45e7",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        228.2834,
+        230.0792,
+        232.9011
+      ],
+      "next_frame_mean_abs_rgb_delta": 1.18352
+    },
+    {
+      "file": "yaw-light/yaw-200.jpg",
+      "yaw_degrees": 200,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "e48d429ff73a800f546d5c6a75cb5bd244580279e71fe4188d2a1d9c108032b1",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        228.3653,
+        230.1513,
+        232.9417
+      ],
+      "next_frame_mean_abs_rgb_delta": 1.14049
+    },
+    {
+      "file": "yaw-light/yaw-205.jpg",
+      "yaw_degrees": 205,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "2656cc82d0bc256928a1fd81050ce70f1ffaab8d36ef9adcaf76656400b84349",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        228.4412,
+        230.2155,
+        232.986
+      ],
+      "next_frame_mean_abs_rgb_delta": 1.07753
+    },
+    {
+      "file": "yaw-light/yaw-210.jpg",
+      "yaw_degrees": 210,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "a31082be08d057e14d849b4e0cf31efa5441b166514dce89fd68011281a2e7c8",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        228.5666,
+        230.3268,
+        233.0792
+      ],
+      "next_frame_mean_abs_rgb_delta": 1.01366
+    },
+    {
+      "file": "yaw-light/yaw-215.jpg",
+      "yaw_degrees": 215,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "ab3dcd9a98f562dbfa750e187b4b6325dcf28e451ee3b7eafe3b3b74eff6bc19",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        228.6851,
+        230.4369,
+        233.1696
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.93776
+    },
+    {
+      "file": "yaw-light/yaw-220.jpg",
+      "yaw_degrees": 220,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "5ddd4d01521e467cd9fc561b879b342d27a221c94cd7c5dfb88b8f98b8b0c98c",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        228.8171,
+        230.5562,
+        233.2791
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.84203
+    },
+    {
+      "file": "yaw-light/yaw-225.jpg",
+      "yaw_degrees": 225,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "0b53aad7f106f087191317648e3dbd446ce3894e87ba49074b08569d0b9a94fc",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        228.9554,
+        230.6835,
+        233.3937
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.77174
+    },
+    {
+      "file": "yaw-light/yaw-230.jpg",
+      "yaw_degrees": 230,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "3dd2b5f5745d725ace23fc25c249c317ce4395cccbc267014de10cbe77347669",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        229.0965,
+        230.8231,
+        233.5322
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.70561
+    },
+    {
+      "file": "yaw-light/yaw-235.jpg",
+      "yaw_degrees": 235,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "82b34067752b5849d6bb2d8a8272ee974a0d2b3a8fa8e3bd7fcb8608e9d43e57",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        229.2446,
+        230.963,
+        233.6745
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.66535
+    },
+    {
+      "file": "yaw-light/yaw-240.jpg",
+      "yaw_degrees": 240,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "84cc1714e616e2f4d7db1b95e896e241e3a773c83efb076b434ce9a7390af870",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        229.3457,
+        231.0596,
+        233.7754
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.62747
+    },
+    {
+      "file": "yaw-light/yaw-245.jpg",
+      "yaw_degrees": 245,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "a60182813ffbedb05180df0ef552225854d08885081aa86c95b73fd593f6b0b5",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        229.425,
+        231.1384,
+        233.8566
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.60304
+    },
+    {
+      "file": "yaw-light/yaw-250.jpg",
+      "yaw_degrees": 250,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "5fadbae91e336dcf64eec7dfee31f6049f4fe97a97f587ac8188a332f2365519",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        229.4943,
+        231.1999,
+        233.9297
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.54964
+    },
+    {
+      "file": "yaw-light/yaw-255.jpg",
+      "yaw_degrees": 255,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "ed55ff07f43f7c71f8bb6177921d35c3601188c564a402560de90e1cf79e75d3",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        229.5394,
+        231.2472,
+        233.9839
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.54837
+    },
+    {
+      "file": "yaw-light/yaw-260.jpg",
+      "yaw_degrees": 260,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "38ddc35343135dd706e134d908b52a19784bc4205422892cb4bec167875ba210",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        229.566,
+        231.2685,
+        234.0192
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.49528
+    },
+    {
+      "file": "yaw-light/yaw-265.jpg",
+      "yaw_degrees": 265,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "44402f85f766020d8b3110e675c606cb51046f12c08e5432d1d7cecfb6c29768",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        229.5918,
+        231.2934,
+        234.0343
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.51406
+    },
+    {
+      "file": "yaw-light/yaw-270.jpg",
+      "yaw_degrees": 270,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "f2af911395d2cb5ff540e838ed2dc326263b3b9ac61ac960ebcadee08b97c643",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        229.5955,
+        231.291,
+        234.0368
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.51582
+    },
+    {
+      "file": "yaw-light/yaw-275.jpg",
+      "yaw_degrees": 275,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "f12da9e5538a0ce1b0486965d4524a62db1aa887e70005d80d9b426100a388e6",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        229.5857,
+        231.2827,
+        234.0283
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.54201
+    },
+    {
+      "file": "yaw-light/yaw-280.jpg",
+      "yaw_degrees": 280,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "49b823211b046c0a2d10d5f79590c58676d1a84ad9abc889604e8cde27399b8e",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        229.5705,
+        231.272,
+        234.024
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.65997
+    },
+    {
+      "file": "yaw-light/yaw-285.jpg",
+      "yaw_degrees": 285,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "35a143c5c6f3043549995ecb57e8ddb23dabeac40a15968d99a7ad08bf65f852",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        229.4496,
+        231.1626,
+        233.9138
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.69995
+    },
+    {
+      "file": "yaw-light/yaw-290.jpg",
+      "yaw_degrees": 290,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "94c6f47aa001db820865f7c4be8af0811e1f22a6f69f5673d6e23fccdca6bc11",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        229.3022,
+        231.0178,
+        233.7705
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.73957
+    },
+    {
+      "file": "yaw-light/yaw-295.jpg",
+      "yaw_degrees": 295,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "9cb649ec0c292721fc4de8675dea2644dc728cd3d259be22ae51efafa6579b7f",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        229.1275,
+        230.8526,
+        233.6113
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.78273
+    },
+    {
+      "file": "yaw-light/yaw-300.jpg",
+      "yaw_degrees": 300,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "dd7620643a0db52321fa5b6c5b6f57c77cf1d7bff4a61f1c93b575f67d73e0ad",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        228.9598,
+        230.6928,
+        233.4523
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.84035
+    },
+    {
+      "file": "yaw-light/yaw-305.jpg",
+      "yaw_degrees": 305,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "6c1dfda97821f4627c01dd67ce7497f9a3b9a1b99710aa8046c8001ad99b9341",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        228.754,
+        230.5056,
+        233.2733
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.8716
+    },
+    {
+      "file": "yaw-light/yaw-310.jpg",
+      "yaw_degrees": 310,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "81b9232d9abe69e6e559ee2444a8017ea53731ffac46b7584fb5495fc1212581",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        228.5683,
+        230.3266,
+        233.1104
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.89837
+    },
+    {
+      "file": "yaw-light/yaw-315.jpg",
+      "yaw_degrees": 315,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "c1dbfd23e676d495c41fd9ddb2aaaa2875e32d45884d617871ad76c25bacfa43",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        228.3632,
+        230.1373,
+        232.9355
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.94167
+    },
+    {
+      "file": "yaw-light/yaw-320.jpg",
+      "yaw_degrees": 320,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "95dfe4ebc2cd2e4332bc2b602ea1f25194f0b81ea310861c031b2789c5b8e295",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        228.1555,
+        229.9476,
+        232.7648
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.96767
+    },
+    {
+      "file": "yaw-light/yaw-325.jpg",
+      "yaw_degrees": 325,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "f75b541c09c692eda72c26e9b272d97062d62f468b38845f9c902bc74631912f",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        227.9677,
+        229.7811,
+        232.6297
+      ],
+      "next_frame_mean_abs_rgb_delta": 1.01835
+    },
+    {
+      "file": "yaw-light/yaw-330.jpg",
+      "yaw_degrees": 330,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "cc539dedf07d5b4c9a9228c2f1e9361072476901f21b9a924b42891edb27ad52",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        227.8097,
+        229.6384,
+        232.5071
+      ],
+      "next_frame_mean_abs_rgb_delta": 1.04056
+    },
+    {
+      "file": "yaw-light/yaw-335.jpg",
+      "yaw_degrees": 335,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "16b78ade9334470151e8f1b2bc1bbfa578049e36564b9613eef4a4f1aa75c12f",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        227.6775,
+        229.52,
+        232.4232
+      ],
+      "next_frame_mean_abs_rgb_delta": 1.00038
+    },
+    {
+      "file": "yaw-light/yaw-340.jpg",
+      "yaw_degrees": 340,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "32e83340df6e82e036f503b34a7bc7bc910f7d7a94f2dfdc550435c3de5ba363",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        227.5463,
+        229.4103,
+        232.3425
+      ],
+      "next_frame_mean_abs_rgb_delta": 0.99115
+    },
+    {
+      "file": "yaw-light/yaw-345.jpg",
+      "yaw_degrees": 345,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "78edb05cf2b6ddfd287d64c2ae117ad064f9d44d0acaf4dc0c6373304eef09e1",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        227.4515,
+        229.3307,
+        232.2925
+      ],
+      "next_frame_mean_abs_rgb_delta": 1.03677
+    },
+    {
+      "file": "yaw-light/yaw-350.jpg",
+      "yaw_degrees": 350,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "c387bd244e7390b631d93a91dc2f5be5a67b367d459098e8d0e34e3b86ed5d11",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        227.3809,
+        229.2751,
+        232.2672
+      ],
+      "next_frame_mean_abs_rgb_delta": 1.05236
+    },
+    {
+      "file": "yaw-light/yaw-355.jpg",
+      "yaw_degrees": 355,
+      "pitch_degrees": 12,
+      "background": "light-checker",
+      "sha256": "5dff05c24d40d01fc641525c2141b5f068ccab7f2c97f1281d0b859eb267b779",
+      "size_px": [
+        1280,
+        720
+      ],
+      "mean_rgb": [
+        227.3192,
+        229.2215,
+        232.219
+      ],
+      "next_frame_mean_abs_rgb_delta": 1.06681
+    }
+  ],
+  "pitch_checker_pair_manifest": [
+    {
+      "light_file": "pitch-light/yaw-000-pitch-m35.jpg",
+      "light_sha256": "8a2a7d03e9ed63b9d09f232d1190f2e3a5b68d3cff64b43f546a8c18930ee91b",
+      "dark_file": "pitch-dark/yaw-000-pitch-m35.jpg",
+      "dark_sha256": "9ee45b65256d8087657b32702b8fbeb2936da8e8d764ecdfe5a190abecb43842",
+      "paired_mean_abs_rgb_delta": 162.13846,
+      "stable_surface_pixel_percent": 10.71875
+    },
+    {
+      "light_file": "pitch-light/yaw-000-pitch-p00.jpg",
+      "light_sha256": "550ef31f83d4f5712462107e7daa41e63f0c649f269c295f1b1dbbc60a065768",
+      "dark_file": "pitch-dark/yaw-000-pitch-p00.jpg",
+      "dark_sha256": "bed787d036c6449ce86ee826ceb7768a651522475cefcf89b35f5abe64868ac5",
+      "paired_mean_abs_rgb_delta": 174.2773,
+      "stable_surface_pixel_percent": 4.375
+    },
+    {
+      "light_file": "pitch-light/yaw-000-pitch-p35.jpg",
+      "light_sha256": "5e0c7d14f442e37772ea7672b3d65d1f29b16d785e0be65680d69f95b0897f96",
+      "dark_file": "pitch-dark/yaw-000-pitch-p35.jpg",
+      "dark_sha256": "b08bb407e5d65e1cb598c4f0f6334f0ab22e5baf2ff30393b3d05e9e057fbe98",
+      "paired_mean_abs_rgb_delta": 162.13841,
+      "stable_surface_pixel_percent": 10.71875
+    },
+    {
+      "light_file": "pitch-light/yaw-090-pitch-m35.jpg",
+      "light_sha256": "8028e01535d3b54f839488fab1dd258793a8b878e7f743340e9128261c34d427",
+      "dark_file": "pitch-dark/yaw-090-pitch-m35.jpg",
+      "dark_sha256": "b95d72f083ac59894f5b1a984ee2d05d05385cd711dc79d4d1710b0ff41febb1",
+      "paired_mean_abs_rgb_delta": 160.86026,
+      "stable_surface_pixel_percent": 11.3125
+    },
+    {
+      "light_file": "pitch-light/yaw-090-pitch-p00.jpg",
+      "light_sha256": "48163a58e9d901450f3b6834a58221816549bec11ff1ba66797993947d5f6e9b",
+      "dark_file": "pitch-dark/yaw-090-pitch-p00.jpg",
+      "dark_sha256": "5ae985b6cf91312bd678118ac2566ce6c3b69b08f002a32597dbac8ee0bcbd63",
+      "paired_mean_abs_rgb_delta": 172.84534,
+      "stable_surface_pixel_percent": 4.76042
+    },
+    {
+      "light_file": "pitch-light/yaw-090-pitch-p35.jpg",
+      "light_sha256": "2f2f4c05e3b5de6a2a4c27cc7b30ce405c56b0918a4e50ea4856466531700680",
+      "dark_file": "pitch-dark/yaw-090-pitch-p35.jpg",
+      "dark_sha256": "c77aa85e97678db304dbd92e7ef8ce6ce701776fc875ef629b7576b96ed045da",
+      "paired_mean_abs_rgb_delta": 160.91701,
+      "stable_surface_pixel_percent": 11.29688
+    },
+    {
+      "light_file": "pitch-light/yaw-180-pitch-m35.jpg",
+      "light_sha256": "f812eee10fc1d8f76948ef871b030bd7552af022cc3da8bec25b3fffdae084e7",
+      "dark_file": "pitch-dark/yaw-180-pitch-m35.jpg",
+      "dark_sha256": "487a36d56c66e2e4e35d8fc70d697329e593a3fac990f43f783df4a4b5ff61c7",
+      "paired_mean_abs_rgb_delta": 162.15932,
+      "stable_surface_pixel_percent": 10.65625
+    },
+    {
+      "light_file": "pitch-light/yaw-180-pitch-p00.jpg",
+      "light_sha256": "540dbea7528a8da6406e02bda9f304e6bbdd37614935a39551afa124804b25a6",
+      "dark_file": "pitch-dark/yaw-180-pitch-p00.jpg",
+      "dark_sha256": "2beada989ec661dd93243f5e706c65b3059b5768f0e42aa462ec219ad4c8a79d",
+      "paired_mean_abs_rgb_delta": 174.77634,
+      "stable_surface_pixel_percent": 4.15625
+    },
+    {
+      "light_file": "pitch-light/yaw-180-pitch-p35.jpg",
+      "light_sha256": "791d758ec3929492e7e3332bab6714c7ea3a4d3d5dd324dd4c3d2bdd0a45972a",
+      "dark_file": "pitch-dark/yaw-180-pitch-p35.jpg",
+      "dark_sha256": "b221c6bca3a3c1b4e9cc0fe6816d0cc8768ba1fe95a19a2f51e63c089c9f58f8",
+      "paired_mean_abs_rgb_delta": 162.17857,
+      "stable_surface_pixel_percent": 10.65625
+    },
+    {
+      "light_file": "pitch-light/yaw-270-pitch-m35.jpg",
+      "light_sha256": "efa1d0245ea3b19d216b3ec1303fa4713eda693ed5c9f5c9bd1c0aeffd6151fd",
+      "dark_file": "pitch-dark/yaw-270-pitch-m35.jpg",
+      "dark_sha256": "ea4d54a9dbc2c7a159e2c4a4ed6a5462fb6e10be2a36d4dc141ba9895bc88248",
+      "paired_mean_abs_rgb_delta": 160.85884,
+      "stable_surface_pixel_percent": 11.31771
+    },
+    {
+      "light_file": "pitch-light/yaw-270-pitch-p00.jpg",
+      "light_sha256": "024545eb890f8130acbfc19e2246fccf467975818eb48ff9dfe40a785ff5e996",
+      "dark_file": "pitch-dark/yaw-270-pitch-p00.jpg",
+      "dark_sha256": "88556312ad216d8c29c6232c6d6a6b3da0b26021222a48e1f813ba3622f52076",
+      "paired_mean_abs_rgb_delta": 172.84193,
+      "stable_surface_pixel_percent": 4.75521
+    },
+    {
+      "light_file": "pitch-light/yaw-270-pitch-p35.jpg",
+      "light_sha256": "45564142f40fc4b44ea058408334305cf2c5b4b82c59790f47ba138fa4940eba",
+      "dark_file": "pitch-dark/yaw-270-pitch-p35.jpg",
+      "dark_sha256": "948a7f7505cdb7ed53aca5db5741e4b0ecc0986b2362fb2e6b8459660590c406",
+      "paired_mean_abs_rgb_delta": 160.91722,
+      "stable_surface_pixel_percent": 11.29688
+    }
+  ],
+  "sequence_delta": {
+    "median_mean_abs_rgb_delta": 0.9078,
+    "mad": 0.15846,
+    "candidate_threshold": 6.0,
+    "abrupt_frame_candidates": []
+  },
+  "runtime_material_failures": [],
+  "automated_gate": {
+    "webgl2": true,
+    "correct_frame_counts": true,
+    "no_runtime_errors": true,
+    "no_runtime_material_failures": true,
+    "no_abrupt_frame_candidates": true
+  },
+  "manual_review_required": [
+    "yaw contact sheet",
+    "light/dark pitch-pair contact sheet",
+    "surface continuity, mirror, gray-shift, disappearance, checker leakage"
+  ],
+  "automated_pass": true
+}
