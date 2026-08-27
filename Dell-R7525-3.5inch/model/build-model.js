@@ -266,7 +266,9 @@ function cylinderGeometry(segments = 24) {
     p.push(x,y,-0.5, x,y,0.5); n.push(x*2,y*2,0, x*2,y*2,0); uv.push(i/segments,1, i/segments,0);
   }
   for (let i = 0; i < segments; i++) {
-    const b=i*2; ind.push(b,b+1,b+3,b,b+3,b+2);
+    // Counter-clockwise from outside. The previous order pointed the side
+    // triangles inward while exporting outward vertex normals.
+    const b=i*2; ind.push(b,b+3,b+1,b,b+2,b+3);
   }
   const frontCenter=p.length/3; p.push(0,0,0.5); n.push(0,0,1); uv.push(0.5,0.5);
   const backCenter=p.length/3; p.push(0,0,-0.5); n.push(0,0,-1); uv.push(0.5,0.5);
@@ -360,7 +362,10 @@ function buildVariant(textureDir, outputName, variant) {
   const cyl = (name, material, t, s, extras={}) => b.addNode(name,cylinder(material),t,s,null,extras);
 
   // Closed enclosure and six source-locked exterior cards.
-  box('Closed_Chassis_Body',mat.silver,[0,0,(D.bodyFrontZ+D.rearWallZ)/2],[D.bodyWidth,D.height,D.bodyFrontZ-D.rearWallZ],null,{category:'closed-shell'});
+  // Keep the exact 86.8 mm exterior envelope on the source-locked cards, but
+  // inset the hidden core by 0.12 mm at top and bottom. This removes the former
+  // exact coplanarity (and rotation-time depth flicker) without changing shape.
+  box('Closed_Chassis_Body',mat.silver,[0,0,(D.bodyFrontZ+D.rearWallZ)/2],[D.bodyWidth,D.height-0.00024,D.bodyFrontZ-D.rearWallZ],null,{category:'closed-shell',surfaceInsetMeters:0.00012});
   b.addNode('Texture_Front',plane('front',mat.frontTex),[0,0,D.bezelFrontZ],[D.overallWidth,D.height,1],null,{face:'front',sourceLocked:true});
   b.addNode('Texture_Rear',plane('rear',mat.rearTex),[0,0,D.rearWallZ-0.00015],[D.bodyWidth,D.height,1],null,{face:'rear',sourceLocked:true});
   b.addNode('Texture_Right',plane('right',mat.rightTex),[D.bodyWidth/2+0.00012,0,D.bodyCenterZ],[1,D.height,D.bodyDepth],null,{face:'right',sourceLocked:true,embedding:'opaque body crop'});

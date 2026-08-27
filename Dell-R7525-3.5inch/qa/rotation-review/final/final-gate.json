@@ -1,0 +1,329 @@
+{
+  "model_key": "Dell-R7525-3.5inch",
+  "status": "PASS_WITH_BOTTOM_FALLBACK",
+  "errors": [],
+  "warnings": [],
+  "capture_only_readpixels_warning_count": 16,
+  "hashes": {
+    "old": {
+      "standard": "90ec6e7a3601ae8166132f35ae3e9e8a62e646d349a548e419658b848a62ffc0",
+      "web": "e8655c521bfd599aa073756107ee5c1046c4efbe5631d8f16f3673832665aa05"
+    },
+    "new": {
+      "standard": "f8f56c1c2dc8277d68d3ca26f47b04dc34c9124c8c266610391a4fdca03c09d9",
+      "web": "dd729a31166daa9bc6afca1facae7b3849faefab8996d3187206b066f4c433c9"
+    },
+    "viewers": {
+      "three": "949b9bb2bb83b0a9668496cfb3ae986192b50e28151490011947447f4d181812",
+      "babylon": "957a34b4bed337545f0459eecba7f8e8b471f2b64aec8fa68b620c29673dac02"
+    },
+    "build_scripts": {
+      "model/build-model.js": "b7012b9d0792f16eab9e90425d49a9c7400e869fff52d638b0a1508562d2bf92",
+      "model/repair-front-lcd.py": "45b077cb6326c6baf079324cadb0f7717e9b2c8200b56296b9b1b4f6deb45968"
+    }
+  },
+  "audits": {
+    "views-audit": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 5
+    },
+    "glb-standard-audit": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0
+    },
+    "glb-web-audit": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0
+    },
+    "standard/duplicate-coplanar": {
+      "status": "PASS",
+      "unresolved": 0
+    },
+    "standard/material-alpha": {
+      "status": "PASS",
+      "unresolved": 0
+    },
+    "standard/negative-transform": {
+      "status": "PASS",
+      "unresolved": 0
+    },
+    "standard/closed-core": {
+      "status": "PASS",
+      "unresolved": 0
+    },
+    "web/duplicate-coplanar": {
+      "status": "PASS",
+      "unresolved": 0
+    },
+    "web/material-alpha": {
+      "status": "PASS",
+      "unresolved": 0
+    },
+    "web/negative-transform": {
+      "status": "PASS",
+      "unresolved": 0
+    },
+    "web/closed-core": {
+      "status": "PASS",
+      "unresolved": 0
+    }
+  },
+  "loads": {
+    "completed": 40,
+    "dimensions": {
+      "1200x800": 40
+    }
+  },
+  "rotations": {
+    "three/standard": {
+      "status": "PASS",
+      "yaw": 72,
+      "pitch": 12,
+      "stability": 16,
+      "unique_yaw_hashes": 72,
+      "frame_dimensions": {
+        "600x400": 100
+      },
+      "stability_pairs": [
+        {
+          "yaw": 0,
+          "pixel_equal": true,
+          "sha_a": "4fa67d89df46d5cefe53c7b2ed93908f2b0db2fde8be851c9de8968860524743",
+          "sha_b": "4fa67d89df46d5cefe53c7b2ed93908f2b0db2fde8be851c9de8968860524743"
+        },
+        {
+          "yaw": 45,
+          "pixel_equal": true,
+          "sha_a": "a5db2a7a5453ae9bb1a7d1429c6b1a5b4d1ffdeeddd2c1f913e523e970b410fd",
+          "sha_b": "a5db2a7a5453ae9bb1a7d1429c6b1a5b4d1ffdeeddd2c1f913e523e970b410fd"
+        },
+        {
+          "yaw": 90,
+          "pixel_equal": true,
+          "sha_a": "53a2ec82b9eea25c7b3606c46bcc6a2ce9af8c7ae303643dbf0b1ef1e59ff426",
+          "sha_b": "9da85309e7effb4501bf6d1ddd943409d10c2664a8b944d2aad652b54c016634"
+        },
+        {
+          "yaw": 135,
+          "pixel_equal": true,
+          "sha_a": "f170bf48c345759e19158ab38f2c3efefe0aa6fe73f8b599fa418df44bfe70bf",
+          "sha_b": "f170bf48c345759e19158ab38f2c3efefe0aa6fe73f8b599fa418df44bfe70bf"
+        },
+        {
+          "yaw": 180,
+          "pixel_equal": true,
+          "sha_a": "815feb240a1b67403ba5265b2eb55defb236446154c584743e141d3351a4eb22",
+          "sha_b": "815feb240a1b67403ba5265b2eb55defb236446154c584743e141d3351a4eb22"
+        },
+        {
+          "yaw": 225,
+          "pixel_equal": true,
+          "sha_a": "d851f49037ba28bb5fdc4e974dc7f5c00cf430103d2bf1261e61b9aae3b0b4b0",
+          "sha_b": "d851f49037ba28bb5fdc4e974dc7f5c00cf430103d2bf1261e61b9aae3b0b4b0"
+        },
+        {
+          "yaw": 270,
+          "pixel_equal": true,
+          "sha_a": "cd751e0e5fe5ed11225bd0dc7a27615f73eb78ec7ca23eb8f27f9cf6557e3efb",
+          "sha_b": "cd751e0e5fe5ed11225bd0dc7a27615f73eb78ec7ca23eb8f27f9cf6557e3efb"
+        },
+        {
+          "yaw": 315,
+          "pixel_equal": true,
+          "sha_a": "c37fa92c30147a8ae9633b5b4355029c68afd6f527950f156c40723e190dbf86",
+          "sha_b": "c37fa92c30147a8ae9633b5b4355029c68afd6f527950f156c40723e190dbf86"
+        }
+      ],
+      "near_far_ratio": 485.6859016145326
+    },
+    "three/web": {
+      "status": "PASS",
+      "yaw": 72,
+      "pitch": 12,
+      "stability": 16,
+      "unique_yaw_hashes": 72,
+      "frame_dimensions": {
+        "600x400": 100
+      },
+      "stability_pairs": [
+        {
+          "yaw": 0,
+          "pixel_equal": true,
+          "sha_a": "9a317da89a3c88eefc68ca0515704b18a12f51a3badc73523fda4c7d547e0d04",
+          "sha_b": "9a317da89a3c88eefc68ca0515704b18a12f51a3badc73523fda4c7d547e0d04"
+        },
+        {
+          "yaw": 45,
+          "pixel_equal": true,
+          "sha_a": "0f5210b5e29a333b4f9adfd5a5e9779dcb4bee5bf6332cc1abaff4e885c6df9a",
+          "sha_b": "0f5210b5e29a333b4f9adfd5a5e9779dcb4bee5bf6332cc1abaff4e885c6df9a"
+        },
+        {
+          "yaw": 90,
+          "pixel_equal": true,
+          "sha_a": "20543e66924da93da265dcc50802112bf5bffda560033500136287d13c749828",
+          "sha_b": "20543e66924da93da265dcc50802112bf5bffda560033500136287d13c749828"
+        },
+        {
+          "yaw": 135,
+          "pixel_equal": true,
+          "sha_a": "b7413ebb2e069f2154ca867ad494a7be7b9a1a3725c55a04d9e487f2ddb1eeb2",
+          "sha_b": "b7413ebb2e069f2154ca867ad494a7be7b9a1a3725c55a04d9e487f2ddb1eeb2"
+        },
+        {
+          "yaw": 180,
+          "pixel_equal": true,
+          "sha_a": "0b82655cf0112d7c120c277a9f95eda1e87f090be87a998570c6c78a00061de6",
+          "sha_b": "0b82655cf0112d7c120c277a9f95eda1e87f090be87a998570c6c78a00061de6"
+        },
+        {
+          "yaw": 225,
+          "pixel_equal": true,
+          "sha_a": "0c192ca7d16fc832dc21f11b6c280ab3893d603d57c06692b74d1c3c67bf2141",
+          "sha_b": "0c192ca7d16fc832dc21f11b6c280ab3893d603d57c06692b74d1c3c67bf2141"
+        },
+        {
+          "yaw": 270,
+          "pixel_equal": true,
+          "sha_a": "8f9e5d2f606a077bda6c4fd42b0c62988b7154d9b71f3d3432d501e8f2f264f2",
+          "sha_b": "8f9e5d2f606a077bda6c4fd42b0c62988b7154d9b71f3d3432d501e8f2f264f2"
+        },
+        {
+          "yaw": 315,
+          "pixel_equal": true,
+          "sha_a": "b26d21edcac24ff08f91e788dd6ca9cf5a6bb993965e764d1ef2ba8fb7cb1e8b",
+          "sha_b": "b26d21edcac24ff08f91e788dd6ca9cf5a6bb993965e764d1ef2ba8fb7cb1e8b"
+        }
+      ],
+      "near_far_ratio": 485.6859016145326
+    },
+    "babylon/standard": {
+      "status": "PASS",
+      "yaw": 72,
+      "pitch": 12,
+      "stability": 16,
+      "unique_yaw_hashes": 72,
+      "frame_dimensions": {
+        "600x400": 100
+      },
+      "stability_pairs": [
+        {
+          "yaw": 0,
+          "pixel_equal": true,
+          "sha_a": "6bdfa0d16180fa4be50b585e9fc50d251e007841363c6cde70ab5976d5e6308c",
+          "sha_b": "6bdfa0d16180fa4be50b585e9fc50d251e007841363c6cde70ab5976d5e6308c"
+        },
+        {
+          "yaw": 45,
+          "pixel_equal": true,
+          "sha_a": "674df70400f6f97b8ee4102b2aba4017a6f8d1a820a9cb07d567f203581a3987",
+          "sha_b": "674df70400f6f97b8ee4102b2aba4017a6f8d1a820a9cb07d567f203581a3987"
+        },
+        {
+          "yaw": 90,
+          "pixel_equal": true,
+          "sha_a": "a31bcad32a1457a4f2336f0479acf06d3ac51ea51fb1f3580498ff75819f5c42",
+          "sha_b": "a31bcad32a1457a4f2336f0479acf06d3ac51ea51fb1f3580498ff75819f5c42"
+        },
+        {
+          "yaw": 135,
+          "pixel_equal": true,
+          "sha_a": "76bc4c8cf10d812c02ac4ab94c86d53dfd53a7c891d39e75fac865132fe195af",
+          "sha_b": "76bc4c8cf10d812c02ac4ab94c86d53dfd53a7c891d39e75fac865132fe195af"
+        },
+        {
+          "yaw": 180,
+          "pixel_equal": true,
+          "sha_a": "5b46fd0f1bd1c74f6cb8738dfe6621e6dffc90bdc2f71a9abf28239a5e57afe1",
+          "sha_b": "5b46fd0f1bd1c74f6cb8738dfe6621e6dffc90bdc2f71a9abf28239a5e57afe1"
+        },
+        {
+          "yaw": 225,
+          "pixel_equal": true,
+          "sha_a": "aea6dad40d7d96502d5155840869bd95c33540da8328b54c9105830f71ed0c3b",
+          "sha_b": "aea6dad40d7d96502d5155840869bd95c33540da8328b54c9105830f71ed0c3b"
+        },
+        {
+          "yaw": 270,
+          "pixel_equal": true,
+          "sha_a": "4c6266024b2acc88f4fc8e10a57b2e207bde2fe0021bea86a856ed834e58edd7",
+          "sha_b": "4c6266024b2acc88f4fc8e10a57b2e207bde2fe0021bea86a856ed834e58edd7"
+        },
+        {
+          "yaw": 315,
+          "pixel_equal": true,
+          "sha_a": "0cd1571a90cb8d502cc67d35d340418399253add75bcbc4a155b49cbdcb5f1d0",
+          "sha_b": "0cd1571a90cb8d502cc67d35d340418399253add75bcbc4a155b49cbdcb5f1d0"
+        }
+      ],
+      "near_far_ratio": 485.6859016145327
+    },
+    "babylon/web": {
+      "status": "PASS",
+      "yaw": 72,
+      "pitch": 12,
+      "stability": 16,
+      "unique_yaw_hashes": 72,
+      "frame_dimensions": {
+        "600x400": 100
+      },
+      "stability_pairs": [
+        {
+          "yaw": 0,
+          "pixel_equal": true,
+          "sha_a": "ce5790aee1e607b75e1aa372602adf748f0dfc31091a4c3ea5e7efcadfbd3d33",
+          "sha_b": "ce5790aee1e607b75e1aa372602adf748f0dfc31091a4c3ea5e7efcadfbd3d33"
+        },
+        {
+          "yaw": 45,
+          "pixel_equal": true,
+          "sha_a": "749c139e5d3128aa5a99a1acee9c9e6e76d46e67aef1ebe6f5cc226e1d4d2608",
+          "sha_b": "749c139e5d3128aa5a99a1acee9c9e6e76d46e67aef1ebe6f5cc226e1d4d2608"
+        },
+        {
+          "yaw": 90,
+          "pixel_equal": true,
+          "sha_a": "488d7ce317cfda13459a9b1750b6e87857ba43ab9d9ab434c83a8829d740688a",
+          "sha_b": "488d7ce317cfda13459a9b1750b6e87857ba43ab9d9ab434c83a8829d740688a"
+        },
+        {
+          "yaw": 135,
+          "pixel_equal": true,
+          "sha_a": "85f17dd93c29729188864b27707ea87151fcca646912d614fa27d39c23fc1488",
+          "sha_b": "85f17dd93c29729188864b27707ea87151fcca646912d614fa27d39c23fc1488"
+        },
+        {
+          "yaw": 180,
+          "pixel_equal": true,
+          "sha_a": "f29d09333b431fe757394a31c2080c3940d3c308bccf67eeeea6d9dc7cc8d86e",
+          "sha_b": "f29d09333b431fe757394a31c2080c3940d3c308bccf67eeeea6d9dc7cc8d86e"
+        },
+        {
+          "yaw": 225,
+          "pixel_equal": true,
+          "sha_a": "18f84135d1b0552b498ff209a655d8087a26c1dff601a3659e571da0d6a1cda4",
+          "sha_b": "18f84135d1b0552b498ff209a655d8087a26c1dff601a3659e571da0d6a1cda4"
+        },
+        {
+          "yaw": 270,
+          "pixel_equal": true,
+          "sha_a": "f352655fd3d2a28d847a982913bdb996916555c8ab904764311a278ffa610aff",
+          "sha_b": "f352655fd3d2a28d847a982913bdb996916555c8ab904764311a278ffa610aff"
+        },
+        {
+          "yaw": 315,
+          "pixel_equal": true,
+          "sha_a": "f511af341d18ba471be89cf11e73f72dc1df1a736796e17c95ddb031204cd632",
+          "sha_b": "f511af341d18ba471be89cf11e73f72dc1df1a736796e17c95ddb031204cd632"
+        }
+      ],
+      "near_far_ratio": 485.6859016145327
+    }
+  },
+  "matched_camera_comparisons": 12,
+  "feature_inventory_rows": 33,
+  "bottom_mode": "GENERIC_BOTTOM_FALLBACK"
+}

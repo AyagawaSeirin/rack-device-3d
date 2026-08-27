@@ -1,0 +1,189 @@
+{
+  "views_dir": "Dell-R7525-3.5inch/views",
+  "dimensions_mm": {
+    "body_width": 434.0,
+    "front_width": 482.0,
+    "rear_width": 434.0,
+    "height": 86.8,
+    "body_depth": 736.29
+  },
+  "faces": {
+    "front": {
+      "path": "Dell-R7525-3.5inch/views/front.png",
+      "errors": [],
+      "warnings": [],
+      "mode": "RGBA",
+      "canvas_px": [
+        2400,
+        432
+      ],
+      "content_bbox_px": [
+        0,
+        0,
+        2400,
+        432
+      ],
+      "content_px": [
+        2400,
+        432
+      ],
+      "actual_ratio": 5.555556,
+      "expected_ratio": 5.552995,
+      "ratio_error_percent": 0.0461,
+      "core_alpha_below_250_percent": 0.0,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 0.0
+    },
+    "rear": {
+      "path": "Dell-R7525-3.5inch/views/rear.png",
+      "errors": [],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        2400,
+        480
+      ],
+      "content_bbox_px": [
+        1,
+        1,
+        2399,
+        479
+      ],
+      "content_px": [
+        2398,
+        478
+      ],
+      "actual_ratio": 5.016736,
+      "expected_ratio": 5.0,
+      "ratio_error_percent": 0.3347,
+      "core_alpha_below_250_percent": 0.0,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 2.43831
+    },
+    "left": {
+      "path": "Dell-R7525-3.5inch/views/left.png",
+      "errors": [
+        "content aspect ratio differs from physical ratio by 5.44%"
+      ],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        2400,
+        270
+      ],
+      "content_bbox_px": [
+        2,
+        2,
+        2399,
+        270
+      ],
+      "content_px": [
+        2397,
+        268
+      ],
+      "actual_ratio": 8.94403,
+      "expected_ratio": 8.482604,
+      "ratio_error_percent": 5.4397,
+      "core_alpha_below_250_percent": 0.01561,
+      "core_transparent_percent": 0.01561,
+      "content_alpha_below_250_percent": 5.00704
+    },
+    "right": {
+      "path": "Dell-R7525-3.5inch/views/right.png",
+      "errors": [
+        "content aspect ratio differs from physical ratio by 4.66%"
+      ],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        2400,
+        270
+      ],
+      "content_bbox_px": [
+        2,
+        0,
+        2399,
+        270
+      ],
+      "content_px": [
+        2397,
+        270
+      ],
+      "actual_ratio": 8.877778,
+      "expected_ratio": 8.482604,
+      "ratio_error_percent": 4.6586,
+      "core_alpha_below_250_percent": 0.0,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 5.28392
+    },
+    "top": {
+      "path": "Dell-R7525-3.5inch/views/top.png",
+      "errors": [
+        "content aspect ratio differs from physical ratio by 4.52%"
+      ],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        1349,
+        2400
+      ],
+      "content_bbox_px": [
+        0,
+        2,
+        1349,
+        2399
+      ],
+      "content_px": [
+        1349,
+        2397
+      ],
+      "actual_ratio": 0.562787,
+      "expected_ratio": 0.589442,
+      "ratio_error_percent": 4.522,
+      "core_alpha_below_250_percent": 0.0,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 12.13953
+    },
+    "bottom": {
+      "path": "Dell-R7525-3.5inch/views/bottom.png",
+      "errors": [
+        "content aspect ratio differs from physical ratio by 4.66%"
+      ],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        1349,
+        2400
+      ],
+      "content_bbox_px": [
+        1,
+        1,
+        1348,
+        2398
+      ],
+      "content_px": [
+        1347,
+        2397
+      ],
+      "actual_ratio": 0.561952,
+      "expected_ratio": 0.589442,
+      "ratio_error_percent": 4.6636,
+      "core_alpha_below_250_percent": 0.0,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 2.57944
+    }
+  },
+  "error_count": 4,
+  "warning_count": 5,
+  "status": "REWORK"
+}
