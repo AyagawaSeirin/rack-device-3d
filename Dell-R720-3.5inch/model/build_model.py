@@ -110,6 +110,13 @@ def opaque_texture(image: Image.Image) -> Image.Image:
 
 def profile_texture(face: str, profile: str) -> Image.Image:
     image = opaque_texture(Image.open(VIEWS / f"{face}.png"))
+    if face == "front":
+        # The canonical elevation includes the two latch ears, but those are
+        # independent geometry with real through-holes in the GLB.  Keep only
+        # the 444 mm chassis-body portion on the photographic substrate so the
+        # image cannot close the ear apertures behind the mesh.
+        crop = round(image.width * EAR_EXT / RACK_W)
+        image = image.crop((crop, 0, image.width - crop, image.height))
     if profile == "web":
         targets = {
             "front": (2048, 371),
@@ -142,7 +149,6 @@ def textured_quad(face: str, image: Image.Image) -> trimesh.Trimesh:
     z0, z1 = REAR_Z, FRONT_Z
     eps = 0.00005
     if face == "front":
-        x0, x1 = -RACK_W / 2.0, RACK_W / 2.0
         # The photographic skin is the recessed front substrate. Independent
         # carriers, controls and rack latches sit in front of it up to FRONT_Z.
         skin_z = z1 - 0.0055
@@ -158,11 +164,13 @@ def textured_quad(face: str, image: Image.Image) -> trimesh.Trimesh:
         vertices = [[x1 + eps, y0, z1], [x1 + eps, y0, z0],
                     [x1 + eps, y1, z0], [x1 + eps, y1, z1]]
     elif face == "top":
-        vertices = [[x0, y1, z1], [x1, y1, z1],
-                    [x1, y1, z0], [x0, y1, z0]]
+        skin_y = y1 - 0.0005
+        vertices = [[x0, skin_y, z1], [x1, skin_y, z1],
+                    [x1, skin_y, z0], [x0, skin_y, z0]]
     elif face == "bottom":
-        vertices = [[x1, y0, z1], [x0, y0, z1],
-                    [x0, y0, z0], [x1, y0, z0]]
+        skin_y = y0 + 0.0005
+        vertices = [[x1, skin_y, z1], [x0, skin_y, z1],
+                    [x0, skin_y, z0], [x1, skin_y, z0]]
     else:
         raise ValueError(face)
     mesh = trimesh.Trimesh(
@@ -191,17 +199,38 @@ def add_frame(scene: trimesh.Scene, prefix: str, cx: float, cy: float,
 
 
 def add_front(scene: trimesh.Scene, sections: int) -> None:
-    # Front-only rack latch/ear assemblies. They do not continue to the rear.
+    # Front-only rack latch/ear assemblies. Sixty-four non-overlapping bands
+    # form each solid flange around two verified circular through-holes.  This
+    # replaces the old frame + full rear closure whose coplanar caps fought in
+    # the depth buffer and whose closure visually sealed the apertures.
     for sign, side in ((-1, "Left"), (1, "Right")):
-        x = sign * (BODY_W / 2.0 + EAR_EXT / 2.0)
-        add_frame(scene, f"Front_Rack_Latch_Ear_{side}_Independent",
-                  x, 0, EAR_EXT, BODY_H, 0.008,
-                  FRONT_Z - 0.004, 0.0010, MAT_BLACK)
-        # Close the ear from behind so a rear camera sees a real black flange,
-        # while the front source texture remains visible on the forward face.
-        add(scene, f"Front_Rack_Latch_Ear_{side}_Rear_Closure",
-            make_box([EAR_EXT, BODY_H, 0.0010],
-                     [x, 0, FRONT_Z - 0.0075], MAT_BLACK))
+        x_min = -RACK_W / 2.0 if sign < 0 else BODY_W / 2.0
+        x_max = -BODY_W / 2.0 if sign < 0 else RACK_W / 2.0
+        hole_x = (x_min + x_max) / 2.0
+        radius, bands = 0.0039, 64
+        band_h = BODY_H / bands
+        for band in range(bands):
+            y = -BODY_H / 2.0 + band_h * (band + 0.5)
+            half = 0.0
+            for hole_y in (-0.029, 0.029):
+                delta = abs(y - hole_y)
+                if delta < radius:
+                    half = max(half, math.sqrt(radius * radius - delta * delta))
+            if half == 0:
+                add(scene, f"Front_Rack_Latch_Ear_{side}_Band_{band + 1}",
+                    make_box([x_max - x_min, band_h, 0.008],
+                             [hole_x, y, FRONT_Z - 0.004], MAT_BLACK))
+            else:
+                left_w = hole_x - half - x_min
+                right_w = x_max - (hole_x + half)
+                if left_w > 0:
+                    add(scene, f"Front_Rack_Latch_Ear_{side}_Hole_Left_{band + 1}",
+                        make_box([left_w, band_h, 0.008],
+                                 [x_min + left_w / 2.0, y, FRONT_Z - 0.004], MAT_BLACK))
+                if right_w > 0:
+                    add(scene, f"Front_Rack_Latch_Ear_{side}_Hole_Right_{band + 1}",
+                        make_box([right_w, band_h, 0.008],
+                                 [hole_x + half + right_w / 2.0, y, FRONT_Z - 0.004], MAT_BLACK))
 
     x_centers = (-0.1600, -0.0534, 0.0534, 0.1600)
     y_centers = (0.0010, -0.0270)
@@ -270,17 +299,17 @@ def rear_psu_photo_quad(name: str, image: Image.Image, cx: float, cy: float,
 def add_rear_fan(scene: trimesh.Scene, name: str, cx: float, cy: float,
                  z: float, radius: float, sections: int) -> None:
     add(scene, f"{name}_Dark_Cavity",
-        make_cylinder(radius, 0.0020, [cx, cy, z], MAT_DARK, sections, (0, 0, 1)))
+        make_cylinder(radius, 0.0006, [cx, cy, z], MAT_DARK, sections, (0, 0, 1)))
     blades = []
     for angle in np.linspace(0, 2 * math.pi, 7, endpoint=False):
-        blade = make_box([radius * 0.95, radius * 0.15, 0.0014],
-                         [cx, cy, z - 0.0003], MAT_BLACK)
+        blade = make_box([radius * 0.95, radius * 0.15, 0.00035],
+                         [cx, cy, z - 0.0001], MAT_BLACK)
         blade.apply_transform(trimesh.transformations.rotation_matrix(
             angle, [0, 0, 1], [cx, cy, z]))
         blades.append(blade)
     add_group(scene, f"{name}_Seven_Blades", blades, MAT_BLACK)
     add(scene, f"{name}_Hub",
-        make_cylinder(radius * 0.31, 0.0018, [cx, cy, z - 0.0003],
+        make_cylinder(radius * 0.31, 0.0005, [cx, cy, z - 0.0001],
                       MAT_DARK_SILVER, sections, (0, 0, 1)))
 
 
@@ -320,7 +349,10 @@ def add_rear(scene: trimesh.Scene, sections: int, rear_image: Image.Image) -> No
         add(scene, f"Rear_AC_PSU_{idx}_SourceLocked_OuterFace",
             rear_psu_photo_quad(f"PSU_{idx}", rear_image, cx, psu_cy,
                                 psu_w - 0.0024, psu_h - 0.0024,
-                                REAR_MOST_Z + 0.00005))
+                                REAR_MOST_Z + 0.00045))
+        # IEC inlet, orange latch, guarded fan, hub and screws remain exact
+        # photographic detail on the true protruding PSU face.  Separate fan
+        # disks previously overlapped the photo and each other at sub-0.2 mm.
 
 
 def add_sides(scene: trimesh.Scene, sections: int) -> None:
@@ -347,33 +379,30 @@ def add_sides(scene: trimesh.Scene, sections: int) -> None:
             add(scene, f"Side_{side}_Independent_Cover_Hook_{idx}",
                 make_box([0.0015, 0.0050, 0.018],
                     [data["x"] + sign * 0.0008, y, z], MAT_DARK))
-        add(scene, f"Side_{side}_Upper_Cover_Seam",
-            make_box([0.0010, 0.0014, BODY_D - 0.030],
-                [data["x"] + sign * 0.0006, 0.029, 0.0], MAT_DARK_SILVER))
-        add(scene, f"Side_{side}_Stamped_Rail_Interface",
-            make_box([0.0012, 0.0020, BODY_D - 0.060],
-                [data["x"] + sign * 0.0007, 0.012, 0.0], MAT_SILVER))
+        # The long cover seam and stamped rail strip remain in the exact side
+        # photograph.  Their previous full-depth boxes crossed every hook and
+        # stud, creating dozens of same-normal near-coplanar triangle pairs.
 
 
 def add_top(scene: trimesh.Scene, sections: int) -> None:
-    y = BODY_H / 2.0 - 0.0018
+    y = BODY_H / 2.0 - 0.0002
     add(scene, "Top_Removable_Cover_Perimeter_Seam_Front",
-        make_box([BODY_W - 0.004, 0.0010, 0.0015], [0, y, 0.302], MAT_DARK_SILVER))
+        make_box([BODY_W - 0.004, 0.0004, 0.0015], [0, y, 0.302], MAT_DARK_SILVER))
     add(scene, "Top_Removable_Cover_Perimeter_Seam_Rear",
-        make_box([BODY_W - 0.004, 0.0010, 0.0015], [0, y, -0.333], MAT_DARK_SILVER))
+        make_box([BODY_W - 0.004, 0.0004, 0.0015], [0, y, -0.333], MAT_DARK_SILVER))
     # The shallow top latch is fully resolved in the source-locked top photo;
     # duplicate geometry would create a second false latch.
     for idx, (x, z) in enumerate(((-0.145, 0.185), (0.020, 0.165),
                                   (0.155, 0.120), (-0.135, -0.240),
                                   (0.040, -0.210), (0.155, -0.285)), start=1):
         add(scene, f"Top_Cover_Fastener_{idx}",
-            make_cylinder(0.0021, 0.0012, [x, y + 0.0005, z],
+            make_cylinder(0.0021, 0.0004, [x, y, z],
                           MAT_DARK_SILVER, 16, (0, 1, 0)))
     holes = []
     for row in range(3):
         for col in range(32):
-            holes.append(make_cylinder(0.00145, 0.0010,
-                [-0.205 + col * 0.0132, y + 0.0002, 0.316 + row * 0.0070],
+            holes.append(make_cylinder(0.00145, 0.0004,
+                [-0.205 + col * 0.0132, y, 0.316 + row * 0.0070],
                 MAT_DARK, 12, (0, 1, 0)))
     add_group(scene, "Top_Front_Transverse_Vent_Relief_3x32", holes, MAT_DARK)
 
@@ -395,7 +424,7 @@ def build_scene(profile: str) -> trimesh.Scene:
         "profile": profile,
     })
     add(scene, "Closed_Chassis_Core",
-        make_box([BODY_W - 0.003, BODY_H - 0.003, BODY_D - 0.006],
+        make_box([BODY_W - 0.003, BODY_H - 0.003, BODY_D - 0.010],
                  [0, 0, -0.003], MAT_BODY))
     for face in ("front", "rear", "left", "right", "top", "bottom"):
         add(scene, f"Face_{face.title()}_Approved_Imagegen",

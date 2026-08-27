@@ -1,0 +1,283 @@
+{
+  "input": "Dell-R720-3.5inch/model/Dell-R720-3.5inch-web.glb",
+  "byte_size": 11417136,
+  "thresholds": {
+    "exact_duplicate_m": 1e-7,
+    "exact_coplanar_m": 1e-7,
+    "near_coplanar_m": 0.0002
+  },
+  "counts": {
+    "nodes": 259,
+    "meshes": 259,
+    "triangles_world_instances": 8820,
+    "duplicate_triangle_groups": 0,
+    "exact_coplanar_triangle_pairs": 0,
+    "near_coplanar_triangle_pairs": 0,
+    "negative_transforms": 0,
+    "singular_transforms": 0,
+    "blend_materials": 0,
+    "double_sided_materials": 0,
+    "primary_material_errors": 0,
+    "closed_core_nodes": 1,
+    "closed_core_failures": 0,
+    "watertight_mesh_instances": 251,
+    "inward_watertight_mesh_instances": 0,
+    "normal_attribute_mismatch_triangles": 0
+  },
+  "duplicate_triangle_groups": [],
+  "exact_coplanar_pairs": [],
+  "near_coplanar_pairs": [],
+  "negative_or_singular_transforms": [],
+  "materials": [
+    {
+      "name": "Dell galvanized chassis steel",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.7372549019607844,
+        0.7490196078431373,
+        0.7411764705882353,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "FACE_FRONT_SOURCE_LOCKED_IMAGEGEN_PHOTOGRAPHIC",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 2048,
+        "height": 371,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "FACE_REAR_SOURCE_LOCKED_IMAGEGEN_PHOTOGRAPHIC",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 2048,
+        "height": 403,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "FACE_LEFT_SOURCE_LOCKED_IMAGEGEN_PHOTOGRAPHIC",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 2048,
+        "height": 253,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "FACE_RIGHT_SOURCE_LOCKED_IMAGEGEN_PHOTOGRAPHIC",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 2048,
+        "height": 255,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "FACE_TOP_SOURCE_LOCKED_IMAGEGEN_PHOTOGRAPHIC",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 1294,
+        "height": 2048,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "FACE_BOTTOM_GENERIC_BOTTOM_FALLBACK_IMAGEGEN_PHOTOGRAPHIC",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 1295,
+        "height": 2048,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "Dell black polymer and connector cavities",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.050980392156862744,
+        0.058823529411764705,
+        0.06274509803921569,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "Dell dark galvanized relief",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.4,
+        0.41568627450980394,
+        0.4117647058823529,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "Dell plated carrier and connector steel",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.6901960784313725,
+        0.7019607843137254,
+        0.6941176470588235,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "FACE_REAR_PSU_1_SOURCE_LOCKED_PHOTOGRAPHIC",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 1024,
+        "height": 690,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "FACE_REAR_PSU_2_SOURCE_LOCKED_PHOTOGRAPHIC",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 1024,
+        "height": 692,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "Deep fan vent and port cavity",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.09019607843137255,
+        0.10196078431372549,
+        0.10588235294117647,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    }
+  ],
+  "primary_material_errors": [],
+  "closed_core": [
+    {
+      "node": "Closed_Chassis_Core",
+      "triangle_count": 12,
+      "edge_count": 18,
+      "boundary_edge_count": 0,
+      "non_manifold_edge_count": 0,
+      "signed_volume": 0.025725999440897835,
+      "watertight": true,
+      "outward_signed_volume": true
+    }
+  ],
+  "inward_watertight_meshes": [],
+  "normal_attribute_mismatches": [],
+  "unresolved": [],
+  "status": "PASS"
+}

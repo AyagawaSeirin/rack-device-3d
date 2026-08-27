@@ -1,73 +1,78 @@
-# Dell PowerEdge R720 3.5 英寸最终交付报告
+# Dell PowerEdge R720 3.5-inch 独立复核最终报告
 
-## 最终状态
+复核日期：2026-08-27
 
-`PASS_WITH_BOTTOM_FALLBACK`
+最终状态：`PASS_WITH_BOTTOM_FALLBACK`
 
-除底面缺少可核验的精确 R720 实机来源外，既定门禁均已完成。底面仅使用通用 Dell 镀锌钢板的材质特征，主动删除所有不能由 R720 证据支持的孔位、标签、脚垫、通风、检修盖、导轨和紧固件，因此不能标为普通 `PASS`。
+除底面没有可核验的精确实机来源外，身份、配置、尺寸、六面、standard/web GLB、旋转稳定性、双引擎实载和逐项 inventory 均已通过。底面只保留 444 × 702 mm 的闭合不透明镀锌钢板轮廓，不虚构孔、脚、标签、通风、导轨或 Logo；因此不能标为无条件 `PASS`，但不存在非底面缺口。
 
-## 精确型号与配置锁
+## 精确身份、代际与安装配置
 
-- Dell PowerEdge R720，2U；明确排除 R720xd、SFF 和 R730/R730xd。
-- 前面板为 8 × 3.5 英寸 LFF，2 行 × 4 列，8 个托架全部安装；无安全面罩。
-- 前部保留真实 DELL 与 PowerEdge R720 工厂标识、LCD/控制区、VGA、vFlash、双 USB 和光驱位。
-- 后部为标准七槽 R720：3 个低矮型 + 4 个全高 PCIe 原厂挡板；iDRAC7、DB9、VGA、2 × USB 2.0、4 × RJ45 NDC。
-- 电源统一为 2 个匹配的 Dell 750 W 热插拔 AC PSU；每个均有 IEC 交流输入、橙色释放件和可见风扇。无 DC 电源。
-- 官方尺寸解释：机身 444 × 87.3 × 702 mm；含前锁耳和后部突出件的交付边界 482.4 × 87.3 × 741 mm。
+- Dell PowerEdge R720，Dell 第 12 代，2U；明确排除 R720xd、SFF、R730/R730xd。
+- 前部为 8 × 3.5-inch LFF，2 × 4 排列，8 个托架全部安装，无安全面罩。
+- 保留真实 DELL 与 PowerEdge R720 工厂标识、LCD/控制区、VGA、vFlash、双 USB 和光驱位。
+- 后部为标准 R720 七槽结构：3 个低矮型 + 4 个全高 PCIe 原厂挡板；iDRAC7、DB9、VGA、2 × USB、4 × Base-T RJ45 NDC。
+- 电源锁定为 2 个匹配的 Dell 750 W 热插拔 AC PSU；两套 IEC 入口、橙色释放件、把手和 PSU 风扇均保留；无 DC 或混装 PSU。
+- 前耳为独立厚度结构并保留真实开孔；系统内部风扇不从闭合外壳外露，外部可见的两个 PSU 风扇按来源照片保留。
+- 官方 Figure 18 的 `Za=18`、`Zb=684`、`Zc=723` 均以机架法兰为基准；因此主体深度为 `Za+Zb=702 mm`，完整安装包络为 `Za+Zc=741 mm`。最终 GLB 为 482.4 × 87.3 × 741.0 mm，误差 0。
 
-## GLB 交付物
+## 冻结交付物与哈希
 
-| 配置 | 文件 | 大小 | SHA-256 |
-|---|---|---:|---|
-| standard | `model/Dell-R720-3.5inch.glb` | 19,085,704 字节（18.20 MiB） | `ed797eeae6d3daf3fb553479fe1b4a8e92157e383bd69596b4d9c5adfc8b64cf` |
-| web | `model/Dell-R720-3.5inch-web.glb` | 11,344,552 字节（10.82 MiB） | `3fb84bc99c2164863f1fdecf2fcb035be5e1010872efe8b6cd76e0e04947ce0b` |
+| 对象 | 字节 | SHA-256 |
+|---|---:|---|
+| `model/Dell-R720-3.5inch.glb` | 19,031,468 | `6cb22b48cbf149098ca591cc24883e9be433557205d27944b84df3099d84480c` |
+| `model/Dell-R720-3.5inch-web.glb` | 11,417,136 | `2260b8287221acd83c3dcafa2dbfde1c191e4db3fbead8ff10d868750c1ef597` |
+| `model/build_model.py` | — | `75389ad6de4eb12af02b16f442b0d5e68e7559287dfba1e0ab9fda1313729d31` |
+| Three.js 最终查看器 | — | `46aaa42db740588f0d7d5ce017e61e394047af69ea2f0c9d70ec229ace48eb2a` |
+| Babylon.js 最终查看器 | — | `b755375b1bc11e68853591f3f3aee0cd6058c0801345f8ee936126d8b780d9a2` |
 
-两份均为本项目自制 GLB，不是官方模型的替代封装。两者都包含完整闭合机身、六面照片材质、8 个 LFF 托架的独立可见轮廓、七槽后部轮廓、后把手、双 PSU 突出结构、前锁耳闭合结构、非镜像左右侧细节与顶盖细节。模型使用右手坐标：从正面看 +X 向设备右、+Y 向上、+Z 向前。
+完整模型、构建器、六面和 viewer 冻结清单在 `qa/rotation-review-20260827/final/frozen-hashes.sha256`；最终证据完成后复核为全部 `OK`，不存在证据生成后模型/viewer 哈希变化。
 
-## 六面源锁
+## 问题复现、根因与因果修复
 
-六个最终透明 PNG 均有独立来源与生成记录；左右侧未镜像。完整来源路径、输入 SHA-256、锁定特征、最终输出路径和最终 SHA-256 在 `source/face-source-lock.csv`。
+旧成果没有因为旧 `PASS` 被信任。修复前的 standard/web、构建器、六面、审计、加载证据与报告已完整归档到 `qa/superseded/pre-rotation-review-20260827/`。
 
-- 前：用户配置锁 + 官方手册 + 精确 8-LFF 实机照。
-- 后：用户配置锁 + 官方标准 R720 七槽图 + 精确实机后照。
-- 左：直接 R720 左侧实机照，前端在图像右侧。
-- 右：独立的相反侧实机照，前端在图像左侧；不复制左侧标签和孔位。
-- 顶：多张精确 8-LFF 三分之四照片与官方尺寸共同重建。
-- 底：经完整检索仍无精确 R720 底面，采用受控 `GENERIC_BOTTOM_FALLBACK`。
+修复前两引擎 × 两 GLB 已各完成 72 × 5° yaw、16 个多俯仰和 8 个同角度稳定帧。当前 Chromium/WebGL2 环境没有捕获到随机 alpha 跳变，同角度 A/B 为逐像素一致；但深层网格审计确实复现了可造成视角/深度相关闪烁的模型缺陷：standard 有 96 对精确共面和 104 对近共面三角形，web 有 96/84 对，均留下 2 个 unresolved 类别。问题集中在 PSU 照片面与风扇/紧固件、侧面照片卡与挂钉/槽、前耳框与闭合片等重复或近共面层。稳定截图不能排除这种深度竞争。
 
-透明素材审计为 `PASS`。前、后、右三张存在 3 条边缘提示，已逐张原尺寸检查：仅为轮廓/真实开孔抗锯齿像素；机身内核透明率为 0 或近似 0，不构成漏透明。
+模型侧修复包括：裁剪前面 source-lock 照片至主体、用非重叠带状几何重建耳片与真实开孔、删除冗余闭合片和侧面长条、将面卡/浮雕分别内缩到有明确深度顺序的位置、让 PSU 精确照片只落在真实突出面并移除重叠风扇圆片。standard/web 同一构建路径同步重建。
 
-## 模型与 WebGL 门禁
+查看器侧是独立的证据与显示风险：旧流程没有同时强制 WebGL2、Babylon 右手坐标、模型哈希核验、透明棋盘、受控 near/far、串行捕获和 overlay 隔离。最终查看器显式使用 WebGL2，Babylon 采用右手坐标，关闭 tone mapping，near/far 比固定为 128，浅/深棋盘背景，ready+哈希确认后才隐藏 overlay，并在串行队列中等待 3 个稳定 RAF 再截图。查看器修复没有用于掩盖模型缺陷；深层几何审计先归零后才生成最终证据。
 
-- standard GLB 技能审计：`PASS`，0 error / 0 warning。
-- web GLB 技能审计：`PASS`，0 error / 0 warning。
-- 配置/结构审计：45/45 `PASS`；每份 121 个节点、121 个网格、8 张嵌入图片、0 个外链资源、0 个镜像节点。
-- standard 与 web 的节点名、材料名和结构计数一致；差异仅为网站纹理优化。
-- Three.js 实载：standard 10/10，web 10/10。
-- Babylon.js 实载：standard 10/10，web 10/10。
-- 合计 40 张真实 WebGL 加载渲染，全部为 1600 × 1200；每份 GLB 均覆盖前、后、左、右、顶、底六正交视角和前左、前右、后左、后右四斜视角。
-- 两引擎与两配置的逐视角交叉检查全部 `PASS`。最大 standard/web 平均 RGB 差值小于 0.56/255；最大 Three.js/Babylon.js standard 平均差值为 3.23/255（底面光照/金属表现差异），外观与方向一致。
+## 最终审计
 
-主要证据：
+- 两份技能 GLB 审计：均 `PASS`，0 error / 0 warning；各 259 nodes、259 meshes/primitives、13 materials、8 个嵌入图像、0 外链资源。
+- 两份深层审计：duplicate triangle groups、exact coplanar、near-coplanar、negative/singular transform、BLEND、doubleSided、primary-face material error、closed-core failure、inward watertight mesh 和 normal mismatch 全部为 0；`unresolved=[]`。
+- 主六面材质均为 `OPAQUE`、`baseColorFactor=[1,1,1,1]`、`doubleSided=false`；主机身没有 `BLEND`。
+- `audit_views` 为 `PASS`、0 error。3 条 alpha 提示已逐张检查：只位于轮廓抗锯齿/真实开孔，core transparent 为 0 或近 0；嵌入 GLB 的照片副本为不带非透明 alpha 的 RGB/OPAQUE，不构成棋盘泄漏。
+- inventory 43/43 已逐项映射到最终 GLB 和 matched-camera 证据：41 `PASS`，2 个底面约束行 `PASS_WITH_BOTTOM_FALLBACK`。
 
-- `qa/views-audit.json`
-- `qa/glb-standard-audit.json`
-- `qa/glb-web-audit.json`
-- `qa/structure-audit.json`
-- `qa/webgl-render-audit.json`
-- `qa/comparison-table.csv`
-- `qa/comparisons/`
-- `qa/renders/`
-- `qa/manifest.csv`
+## 最终真实 WebGL2 验收
 
-## 官方公开精确 3D 情况
+- Three.js × standard/web、Babylon.js × standard/web 共 4 个组合。
+- 每组合 72 个 5° yaw + 16 个多俯仰 + 8 个稳定帧；每型号合计 288 yaw、64 pitch、32 stability，即 384 帧。多俯仰覆盖浅/深棋盘；4 个基准角的 A/B 稳定帧在每组合均为 `AE=0`。
+- 冻结后完成 40 次 cache-busted 独立真实页面加载：2 引擎 × 2 GLB × 10 规定视角。全部 HTTP 200、WebGL2、实际哈希=期望哈希、overlay 已隐藏、`page_errors=[]`、材质违规为 0。
+- 已生成 12 张 matched-camera 捕获（6 面 × 浅/深）及 6 张 source/render/overlay/difference 四联图；接触表人工复核未见闪烁、透明跳变、棋盘泄漏、面消失、镜像、纹理切换、灰白跳变或遮罩混帧。
 
-结果为 `NOT_FOUND_AFTER_EXHAUSTIVE_PUBLIC_SEARCH`。已检查 Dell 支持/文档及精确型号的 3D、CAD、AR、GLB、glTF、STEP、OBJ、FBX、BIM、Visio 等公开入口，没有找到官方可下载的精确 R720 8-LFF 三维文件或官方互动模型。因此 `source/optional-3d/` 仅保留完整检索记录，没有可原样备份的官方二进制文件；这不影响两份自制 GLB 的完成。
+核心证据：
 
-## 剩余风险
+- `qa/rotation-review-20260827/final/rotation/`
+- `qa/rotation-review-20260827/final/loads/load-manifest.json`
+- `qa/rotation-review-20260827/final/contact-sheets/rotation-all-combos.png`
+- `qa/rotation-review-20260827/final/contact-sheets/loads-all-40.png`
+- `qa/rotation-review-20260827/final/comparisons/`
+- `qa/rotation-review-20260827/final/inventory-verification.csv`
+- `qa/rotation-review-20260827/after/deep-standard.json` 与 `deep-web.json`
 
-1. 精确 R720 底面实机照片/工程图仍未找到，底面是明确披露的保守 fallback。
-2. 六面照片主材质是依据已检查的官方图、用户配置锁和实机照片进行的 source-locked AI 重建，不是 Dell 工厂 CAD 或同一台实机的六相机直接摄影。
-3. 未发现官方精确 3D，因此模型几何是基于官方尺寸与可见外观证据的重建，而非 OEM 网格。
+## 官方/公共精确 3D 检索与真实性
 
-本任务未执行 Git commit 或 push。
+截至 2026-08-27，已复核 Dell 当前 R720 支持、手册、驱动、视频和公开资源，并按 exact PID 搜索 3D/CAD/STEP/IGES/GLB/glTF/OBJ/FBX/BIM/Visio/AR；也检查了 GrabCAD、3DContentCentral、Sketchfab 和公共索引。没有找到可验证且精确匹配 R720 8-LFF、标准七槽、双 750 W AC 安装配置的官方外观模型或权威公共模型，因此没有可下载并原样保留的官方二进制文件，也未把社区模型冒充官方。记录在 `source/optional-3d/recheck-20260827.md`。
+
+最终两份 GLB 是依据官方尺寸、官方手册、用户配置锁和多角度精确实机证据重建的网站外观副本，不是 OEM CAD。六面来源与不可镜像方向记录在 `source/face-source-lock.csv`；品牌 Logo 因真实性要求保留。
+
+## 残余风险
+
+1. 精确底面仍无权威实机来源，只能采用明确披露的保守 fallback。
+2. 模型是外观/DCIM 用重建，不包含内部工程结构；极小印刷文字不应视为工程级可读数据。
+3. 没有官方精确 3D 可做网格对网格比较。
+
+本任务未修改 `BATCH-STATUS.md`，未执行 git commit 或 push，也未处理其他型号。
