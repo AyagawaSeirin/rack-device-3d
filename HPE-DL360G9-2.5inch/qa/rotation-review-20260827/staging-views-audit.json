@@ -1,0 +1,183 @@
+{
+  "views_dir": "qa/rotation-review-20260827/staging-views",
+  "dimensions_mm": {
+    "body_width": 434.7,
+    "front_width": 482.6,
+    "rear_width": 434.7,
+    "height": 43.2,
+    "body_depth": 698.5
+  },
+  "faces": {
+    "front": {
+      "path": "qa/rotation-review-20260827/staging-views/front.png",
+      "errors": [],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        3072,
+        275
+      ],
+      "content_bbox_px": [
+        0,
+        0,
+        3072,
+        275
+      ],
+      "content_px": [
+        3072,
+        275
+      ],
+      "actual_ratio": 11.170909,
+      "expected_ratio": 11.171296,
+      "ratio_error_percent": 0.0035,
+      "core_alpha_below_250_percent": 0.0,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 6.27545
+    },
+    "rear": {
+      "path": "qa/rotation-review-20260827/staging-views/rear.png",
+      "errors": [],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        3072,
+        305
+      ],
+      "content_bbox_px": [
+        0,
+        0,
+        3072,
+        305
+      ],
+      "content_px": [
+        3072,
+        305
+      ],
+      "actual_ratio": 10.072131,
+      "expected_ratio": 10.0625,
+      "ratio_error_percent": 0.0957,
+      "core_alpha_below_250_percent": 0.0,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 9.90384
+    },
+    "left": {
+      "path": "qa/rotation-review-20260827/staging-views/left.png",
+      "errors": [],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        3072,
+        190
+      ],
+      "content_bbox_px": [
+        0,
+        0,
+        3072,
+        190
+      ],
+      "content_px": [
+        3072,
+        190
+      ],
+      "actual_ratio": 16.168421,
+      "expected_ratio": 16.168981,
+      "ratio_error_percent": 0.0035,
+      "core_alpha_below_250_percent": 0.0,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 8.69929
+    },
+    "right": {
+      "path": "qa/rotation-review-20260827/staging-views/right.png",
+      "errors": [],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        3072,
+        190
+      ],
+      "content_bbox_px": [
+        0,
+        0,
+        3072,
+        189
+      ],
+      "content_px": [
+        3072,
+        189
+      ],
+      "actual_ratio": 16.253968,
+      "expected_ratio": 16.168981,
+      "ratio_error_percent": 0.5256,
+      "core_alpha_below_250_percent": 0.0,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 10.15952
+    },
+    "top": {
+      "path": "qa/rotation-review-20260827/staging-views/top.png",
+      "errors": [],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        1274,
+        2048
+      ],
+      "content_bbox_px": [
+        0,
+        0,
+        1274,
+        2048
+      ],
+      "content_px": [
+        1274,
+        2048
+      ],
+      "actual_ratio": 0.62207,
+      "expected_ratio": 0.622334,
+      "ratio_error_percent": 0.0423,
+      "core_alpha_below_250_percent": 0.0,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 3.87766
+    },
+    "bottom": {
+      "path": "qa/rotation-review-20260827/staging-views/bottom.png",
+      "errors": [],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        1274,
+        2048
+      ],
+      "content_bbox_px": [
+        0,
+        0,
+        1274,
+        2047
+      ],
+      "content_px": [
+        1274,
+        2047
+      ],
+      "actual_ratio": 0.622374,
+      "expected_ratio": 0.622334,
+      "ratio_error_percent": 0.0065,
+      "core_alpha_below_250_percent": 0.0,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 3.42984
+    }
+  },
+  "error_count": 0,
+  "warning_count": 6,
+  "status": "PASS"
+}

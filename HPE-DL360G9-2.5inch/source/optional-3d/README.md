@@ -8,3 +8,6 @@ Searched HPE product support, product media, QuickSpecs, manuals, PartSurfer, HP
 
 This directory intentionally contains this negative-result record rather than a non-official or different-generation model. The newly constructed standard and web GLBs remain the primary deliverables.
 
+## 2026-08-27 independent revalidation
+
+The public HPE product/support, current QuickSpecs, exact-PID, CAD/AR and common interchange-format searches were repeated. No public exact 8SFF official 3D payload was found. The result remains `NO_EXACT_PUBLIC_OFFICIAL_3D_FOUND`; no third-party file was promoted as an official model.

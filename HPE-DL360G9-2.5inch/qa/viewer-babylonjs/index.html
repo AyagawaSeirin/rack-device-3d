@@ -24,6 +24,7 @@ const canvas=document.getElementById("renderCanvas");
 const engine=new BABYLON.Engine(canvas,true,{preserveDrawingBuffer:true,stencil:true},true); engine.setSize(WIDTH,HEIGHT);
 BABYLON.SceneLoader.ShowLoadingScreen=false;
 const scene=new BABYLON.Scene(engine);
+scene.useRightHandedSystem=true;
 scene.clearColor=background==="dark"?new BABYLON.Color4(.145,.157,.169,1):new BABYLON.Color4(.8745,.8902,.9020,1);
 scene.imageProcessingConfiguration.toneMappingEnabled=false;
 scene.imageProcessingConfiguration.exposure=1; scene.imageProcessingConfiguration.contrast=1;

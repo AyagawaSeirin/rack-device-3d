@@ -1,0 +1,63 @@
+{
+  "model_key": "HPE-DL360G9-2.5inch",
+  "status": "PASS_WITH_BOTTOM_FALLBACK",
+  "identity": {
+    "manufacturer": "Hewlett Packard Enterprise",
+    "product": "HPE ProLiant DL360 Gen9",
+    "cto_chassis": "755258-B21",
+    "form_factor": "1U 8SFF / 2.5-inch",
+    "power": "2 matched HPE 500W Flex Slot hot-plug AC PSUs",
+    "branding_retained": true
+  },
+  "glbs": [
+    {
+      "path": "model/HPE-DL360G9-2.5inch.glb",
+      "bytes": 10857148,
+      "sha256": "3360da73d2f1471d49960bcb8d260a82801b502129230c1190d582ae6f0c1271",
+      "nodes": 416,
+      "meshes": 416,
+      "primitives": 416,
+      "audit": "PASS"
+    },
+    {
+      "path": "model/HPE-DL360G9-2.5inch-web.glb",
+      "bytes": 7037176,
+      "sha256": "31ef838553e8d91759057fe32eb974a4324dc263b4d38bcd7a5375b180f67559",
+      "nodes": 360,
+      "meshes": 360,
+      "primitives": 360,
+      "audit": "PASS"
+    }
+  ],
+  "world_bounds_mm": [482.6, 43.5, 724.2],
+  "face_modes": {
+    "front": "SOURCE_LOCKED_GENERATION",
+    "rear": "SOURCE_LOCKED_GENERATION",
+    "left": "MULTI_REFERENCE_RECONSTRUCTION",
+    "right": "MULTI_REFERENCE_RECONSTRUCTION",
+    "top": "MULTI_REFERENCE_RECONSTRUCTION",
+    "bottom": "GENERIC_BOTTOM_FALLBACK"
+  },
+  "viewer_acceptance": {
+    "threejs_version": "0.179.1",
+    "babylonjs_version": "8.22.2",
+    "glbs_per_viewer": 2,
+    "orthographic_views_per_glb": 6,
+    "oblique_views_per_glb": 4,
+    "required_live_loaded_views": 40,
+    "extra_dark_background_loads": 4,
+    "result": "PASS"
+  },
+  "comparisons": {
+    "orthographic_sheets": 24,
+    "oblique_sheets": 8,
+    "contact_sheets": 4
+  },
+  "official_3d": {
+    "exact_public_asset_found": false,
+    "record": "source/optional-3d/README.md",
+    "substituted_for_custom_glbs": false
+  },
+  "git_commit": false,
+  "git_push": false
+}
