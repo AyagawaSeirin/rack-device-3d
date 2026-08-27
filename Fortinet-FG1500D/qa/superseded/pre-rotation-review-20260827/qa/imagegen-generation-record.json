@@ -1,0 +1,70 @@
+{
+  "method": "built-in image_gen",
+  "call_granularity": "one independent built-in call per face",
+  "call_ids": "not exposed or preserved by the built-in tool",
+  "transparent_workflow": "flat #FF00FF chroma source, connected-border removal, tight physical-ratio crop, final opaque-equipment alpha closure",
+  "visual_inspection": "all selected outputs, primary sources, supporting sources, and contact sheets inspected at original detail",
+  "faces": [
+    {
+      "face": "front",
+      "mode": "MULTI_REFERENCE_RECONSTRUCTION",
+      "prompt": "qa/imagegen-prompts/front.txt",
+      "generated_chroma": "qa/imagegen-staging/front-chroma.png",
+      "generated_chroma_sha256": "eb0ac47ed63b297e0da40f80e7251e28b1f26460d9878933ef62f06ba9b11af2",
+      "postprocessed_cut": "qa/imagegen-staging/front-cut.png",
+      "final_output": "views/front.png",
+      "final_sha256": "3ba334d7223da99588a2457a33c8ae7f11708ac9074d5ced4b077ae33bb80d80"
+    },
+    {
+      "face": "rear",
+      "mode": "MULTI_REFERENCE_RECONSTRUCTION",
+      "prompt": "qa/imagegen-prompts/rear.txt",
+      "generated_chroma": "qa/imagegen-staging/rear-chroma.png",
+      "generated_chroma_sha256": "7f44caff9456eca13c27421ccc5ab8ab016ddb0b0df2b910a1b3320db5591803",
+      "postprocessed_cut": "qa/imagegen-staging/rear-cut.png",
+      "final_output": "views/rear.png",
+      "final_sha256": "03f431757fae36dbf4b69e7e2d5be66068bdf098780d54fcd806068b0cbeb2ef"
+    },
+    {
+      "face": "left",
+      "mode": "MULTI_REFERENCE_RECONSTRUCTION",
+      "prompt": "qa/imagegen-prompts/left.txt",
+      "generated_chroma": "qa/imagegen-staging/left-chroma.png",
+      "generated_chroma_sha256": "4c0072b4e5fcc7843b58b8dee440b29ea0d6d1f1931f2b39363435245b293a3b",
+      "postprocessed_cut": "qa/imagegen-staging/left-cut.png",
+      "final_output": "views/left.png",
+      "final_sha256": "6f9aa424c3d277c65bbaed5ba806d7bd491cbf63e09b4b383a4318a75e49b612"
+    },
+    {
+      "face": "right",
+      "mode": "MULTI_REFERENCE_RECONSTRUCTION",
+      "prompt": "qa/imagegen-prompts/right.txt",
+      "generated_chroma": "qa/imagegen-staging/right-chroma.png",
+      "generated_chroma_sha256": "f72b3aaf53962562aa278d486a4cedb2a14b0d4a56be630bc2165ff44808a9de",
+      "postprocessed_cut": "qa/imagegen-staging/right-cut.png",
+      "final_output": "views/right.png",
+      "final_sha256": "ac2721bb582fc1c729f199f34f298dbe2558eef32a93f9a336d6d7186899ffab"
+    },
+    {
+      "face": "top",
+      "mode": "MULTI_REFERENCE_RECONSTRUCTION",
+      "prompt": "qa/imagegen-prompts/top.txt",
+      "generated_chroma": "qa/imagegen-staging/top-chroma.png",
+      "generated_chroma_sha256": "a5249bf78f75be22ba45a3d4c6b7966ceabd69d3ce6147b962d2dc5f77c1df05",
+      "postprocessed_cut": "qa/imagegen-staging/top-cut.png",
+      "final_output": "views/top.png",
+      "final_sha256": "ad070c9590aa0eb1a10466233f87aa7818e945493a41c942e147fda716d0ed0b"
+    },
+    {
+      "face": "bottom",
+      "mode": "GENERIC_BOTTOM_FALLBACK",
+      "prompt": "qa/imagegen-prompts/bottom.txt",
+      "generated_chroma": "qa/imagegen-staging/bottom-chroma.png",
+      "generated_chroma_sha256": "9ae71c67e9f933dcfca1922f1ceb1aa4d533dac7a0ea8341bbb9082cb041031c",
+      "postprocessed_cut": "qa/imagegen-staging/bottom-cut.png",
+      "final_output": "views/bottom.png",
+      "final_sha256": "b8d45757255a4f29bd5c049f3a4aaf3da417a1bc0223f022a8f39c18b6b383c0"
+    }
+  ],
+  "status": "PASS"
+}

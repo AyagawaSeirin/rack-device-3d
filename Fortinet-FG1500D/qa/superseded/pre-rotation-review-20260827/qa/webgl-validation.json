@@ -1,0 +1,37 @@
+{
+  "validated_at": "2026-08-23T21:04:00+08:00",
+  "actual_glb_loads": true,
+  "viewers": [
+    {
+      "engine": "Three.js",
+      "version": "0.185.1",
+      "viewer": "qa/viewer/three-viewer.html",
+      "variants": ["standard", "web"],
+      "views_per_variant": ["front", "rear", "left", "right", "top", "bottom", "front-left", "front-right", "rear-left", "rear-right"],
+      "successful_loads": 20,
+      "console_errors": 0,
+      "notes": "Only Chromium GPU readback performance warnings; no load, material, orientation, or WebGL errors."
+    },
+    {
+      "engine": "Babylon.js",
+      "version": "9.22.1",
+      "viewer": "qa/viewer/babylon-viewer.html",
+      "variants": ["standard", "web"],
+      "views_per_variant": ["front", "rear", "left", "right", "top", "bottom", "front-left", "front-right", "rear-left", "rear-right"],
+      "successful_loads": 20,
+      "console_errors": 0,
+      "reported_bounds_min": [-0.219189999426445, -0.04450000211363658, -0.2788400014396757],
+      "reported_bounds_max": [0.219189999426445, 0.044660002105562015, 0.2770300157426391]
+    }
+  ],
+  "render_count": 40,
+  "render_root": "qa/renders-final",
+  "checksums": "qa/final-render-checksums.sha256",
+  "contact_sheets": [
+    "qa/comparisons/final-contact-threejs-standard.png",
+    "qa/comparisons/final-contact-threejs-web.png",
+    "qa/comparisons/final-contact-babylonjs-standard.png",
+    "qa/comparisons/final-contact-babylonjs-web.png"
+  ],
+  "status": "PASS"
+}

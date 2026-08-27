@@ -114,6 +114,29 @@ function addBox(parent, name, size, position, material, rotation = [0, 0, 0]) {
   return mesh;
 }
 
+function addClosedCore(parent, name, size, material) {
+  const [width, height, depth] = size;
+  const x = width / 2, y = height / 2, z = depth / 2;
+  const geometry = new THREE.BufferGeometry();
+  geometry.setAttribute('position', new THREE.Float32BufferAttribute([
+    -x,-y,-z, x,-y,-z, x,y,-z, -x,y,-z,
+    -x,-y,z, x,-y,z, x,y,z, -x,y,z,
+  ], 3));
+  geometry.setIndex([
+    4,5,6, 4,6,7,
+    1,0,3, 1,3,2,
+    5,1,2, 5,2,6,
+    0,4,7, 0,7,3,
+    7,6,2, 7,2,3,
+    0,1,5, 0,5,4,
+  ]);
+  geometry.computeVertexNormals();
+  const mesh = new THREE.Mesh(geometry, material);
+  mesh.name = name;
+  parent.add(mesh);
+  return mesh;
+}
+
 function addCylinder(parent, name, radius, length, position, material, rotation = [0, 0, 0], segments = 20) {
   const geometry = new THREE.CylinderGeometry(radius, radius, length, segments, 1, false);
   const mesh = new THREE.Mesh(geometry, material);
@@ -140,8 +163,8 @@ function addUHandleRear(parent, name, cx, cy, height, outwardZ) {
   group.name = name;
   const sign = Math.sign(outwardZ);
   addBox(group, `${name}_bar`, [5.6, height, 4.0], [cx, cy, outwardZ], MAT.handle);
-  addBox(group, `${name}_top_mount`, [8.2, 4.0, 2.2], [cx, cy + height / 2 - 2, outwardZ - sign * 2.5], MAT.handle);
-  addBox(group, `${name}_bottom_mount`, [8.2, 4.0, 2.2], [cx, cy - height / 2 + 2, outwardZ - sign * 2.5], MAT.handle);
+  addBox(group, `${name}_top_mount`, [8.2, 4.0, 2.2], [cx, cy + height / 2 - 2.6, outwardZ], MAT.handle);
+  addBox(group, `${name}_bottom_mount`, [8.2, 4.0, 2.2], [cx, cy - height / 2 + 2.6, outwardZ], MAT.handle);
   parent.add(group);
   return group;
 }
@@ -175,7 +198,7 @@ function facePlaneGeometry(width, height) {
 }
 
 // Closed base enclosure, inset behind the six canonical textured surfaces.
-addBox(appliance, 'closed_outward_shell', [437.4, 88.4, 550.0], [0, 0, 0], MAT.shell);
+addClosedCore(appliance, 'closed_outward_shell', [434.0, 86.0, 548.0], MAT.shell);
 
 // Canonical six face planes. UV orientation is explicit and contains no negative scale.
 const front = new THREE.Mesh(facePlaneGeometry(DIM.width, DIM.height), MAT.faces.front);
@@ -224,7 +247,8 @@ addBox(seams, 'top_left_perimeter_seam', [0.55, 0.5, 550.5], [-218.70, 44.23, 0]
 addBox(seams, 'top_right_perimeter_seam', [0.55, 0.5, 550.5], [218.70, 44.23, 0], MAT.seam);
 addBox(seams, 'top_front_perimeter_seam', [437.0, 0.5, 0.65], [0, 44.23, 275.7], MAT.seam);
 addBox(seams, 'top_rear_perimeter_seam', [437.0, 0.5, 0.65], [0, 44.23, -275.7], MAT.seam);
-appliance.add(seams);
+// The six source-locked textures already carry these flush seams. Keeping a
+// second geometric copy less than 0.5 mm away caused depth-order shimmer.
 
 // Front control area and forty identity-bearing network port frame reliefs.
 const frontRelief = new THREE.Group();
@@ -326,7 +350,9 @@ fanSpecs.forEach((spec, index) => {
     rearRelief.add(torus);
   });
 
-  for (let spoke = 0; spoke < 8; spoke += 1) {
+  // Four full bars create the visible eight radial spokes. The old 0..7 loop
+  // duplicated every 180-degree-symmetric bar byte-for-byte (192 triangles).
+  for (let spoke = 0; spoke < 4; spoke += 1) {
     const bar = addBox(
       rearRelief,
       `FAN_${index + 1}_GRILLE_SPOKE_${spoke + 1}`,
@@ -338,7 +364,7 @@ fanSpecs.forEach((spec, index) => {
     bar.renderOrder = 2;
   }
 
-  addCylinder(rearRelief, `FAN_${index + 1}_HUB`, 3.6, 0.65, [fanCenterX, fanCenterY, -276.83], MAT.grille, [Math.PI / 2, 0, 0], 32);
+  addCylinder(rearRelief, `FAN_${index + 1}_HUB`, 3.6, 0.65, [fanCenterX, fanCenterY, -277.80], MAT.grille, [Math.PI / 2, 0, 0], 32);
   const handleX = rearImagePxToWorldX(spec.leftPx + 38);
   addUHandleRear(rearRelief, `FAN_TRAY_${index + 1}_PULL_HANDLE`, handleX, cy, 29.0, -276.74);
 
@@ -402,20 +428,19 @@ appliance.add(rearRelief);
 // source-locked in the canonical texture and is not replaced with synthetic text.
 const sideDetails = new THREE.Group();
 sideDetails.name = 'NON_MIRRORED_SIDE_COVER_DETAILS';
-addBox(sideDetails, 'LEFT_UPPER_COVER_SEAM', [0.42, 0.62, 536], [-218.98, 36.6, -1], MAT.seam);
-addBox(sideDetails, 'RIGHT_UPPER_COVER_SEAM', [0.42, 0.62, 536], [218.98, 36.6, -1], MAT.seam);
+// Flush cover seams remain exclusively in the left/right source textures.
 
 [-246, -94, 118, 248].forEach((z, index) => {
-  addCylinder(sideDetails, `LEFT_SIDE_UPPER_FASTENER_${index + 1}`, 0.9, 0.38, [-218.99, 38.0, z], MAT.screw, [0, 0, Math.PI / 2], 16);
+  addCylinder(sideDetails, `LEFT_SIDE_UPPER_FASTENER_${index + 1}`, 0.9, 0.38, [-219.60, 38.0, z], MAT.screw, [0, 0, Math.PI / 2], 16);
 });
 [-242, -132, 54, 232].forEach((z, index) => {
-  addCylinder(sideDetails, `RIGHT_SIDE_UPPER_FASTENER_${index + 1}`, 0.9, 0.38, [218.99, 38.0, z], MAT.screw, [0, 0, Math.PI / 2], 16);
+  addCylinder(sideDetails, `RIGHT_SIDE_UPPER_FASTENER_${index + 1}`, 0.9, 0.38, [219.60, 38.0, z], MAT.screw, [0, 0, Math.PI / 2], 16);
 });
 [-235, -82, 104, 247].forEach((z, index) => {
-  addCylinder(sideDetails, `LEFT_SIDE_LOWER_FASTENER_${index + 1}`, 0.85, 0.38, [-218.99, -36.8, z], MAT.screw, [0, 0, Math.PI / 2], 16);
+  addCylinder(sideDetails, `LEFT_SIDE_LOWER_FASTENER_${index + 1}`, 0.85, 0.38, [-219.60, -36.8, z], MAT.screw, [0, 0, Math.PI / 2], 16);
 });
 [-226, -60, 126, 242].forEach((z, index) => {
-  addCylinder(sideDetails, `RIGHT_SIDE_LOWER_FASTENER_${index + 1}`, 0.85, 0.38, [218.99, -36.8, z], MAT.screw, [0, 0, Math.PI / 2], 16);
+  addCylinder(sideDetails, `RIGHT_SIDE_LOWER_FASTENER_${index + 1}`, 0.85, 0.38, [219.60, -36.8, z], MAT.screw, [0, 0, Math.PI / 2], 16);
 });
 appliance.add(sideDetails);
 
@@ -426,7 +451,7 @@ topDetails.name = 'TOP_COVER_EDGE_FASTENERS';
   [-185, -248], [-48, -248], [130, -248], [188, -188],
   [-186, 236], [46, 236], [184, 236],
 ].forEach(([x, z], index) => {
-  addCylinder(topDetails, `TOP_FASTENER_${index + 1}`, 0.85, 0.34, [x, 44.49, z], MAT.screw, [0, 0, 0], 16);
+  addCylinder(topDetails, `TOP_FASTENER_${index + 1}`, 0.85, 0.34, [x, 44.95, z], MAT.screw, [0, 0, 0], 16);
 });
 appliance.add(topDetails);
 
@@ -518,7 +543,8 @@ const buildReport = {
     frontManagementAndControlFrames: 3,
     rearFanTrays: 4,
     rearFanGrilleRings: 16,
-    rearFanGrilleSpokes: 32,
+    rearFanGrilleBars: 16,
+    rearFanVisibleSpokes: 32,
     rearFanHandles: 4,
     rearBlankServicePanel: 1,
     rearLowerPanels: 4,

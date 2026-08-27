@@ -1,0 +1,94 @@
+{
+  "model": "Fortinet-FG1500D",
+  "review_date": "2026-08-27",
+  "frozen_identity": {
+    "pid": "Fortinet FortiGate FG-1500D AC",
+    "generation": "D generation; excludes 1500DT and 1500D-DC",
+    "height": "2RU",
+    "front_configuration": "16x GE SFP, 16x GE RJ45, 8x 10GE SFP+/GE SFP, 2x MGMT RJ45, console, USB-A, USB mini-B",
+    "rear_configuration": "explicitly user-locked row-3 delivery appearance: four fan trays, service/blank panels, two vertical AC PSUs",
+    "bottom_mode": "GENERIC_BOTTOM_FALLBACK"
+  },
+  "glb_hashes": {
+    "before_standard": "23db204ad7fe973ddcd007b01e6a05d4d62d2c206ea9f4e3c524b310f51602ee",
+    "before_web": "2005bc62304731e6eb0c68dadb0ca4b799200a0d1afff0482afe84915d969d03",
+    "after_standard": "b1ce643236d9515ca7221375bea026a7525fe0bd80e0df25f80bbe17fcd52987",
+    "after_web": "aebec4e41028be1a73dc52beba4d6bf98d445a5bcd7e6c172cdc83daf4c39d36"
+  },
+  "before_reproduction": {
+    "viewer_combinations": 4,
+    "frames_per_combination": 84,
+    "total_frames": 336,
+    "gross_whole_device_disappearance_observed": false,
+    "result": "REWORK",
+    "finding": "The old GLBs contained 192 exact duplicate triangle groups in symmetric fan-bar construction, coplanar/near-coplanar face and relief surfaces, and a non-watertight core. These model-side defects were present in both viewers and were sufficient to create angle-dependent shimmer or apparent transparency."
+  },
+  "root_causes": [
+    "Eight full 180-degree-symmetric fan bars produced duplicate coincident triangles.",
+    "The prior Three.js-style box core was not watertight after export.",
+    "Perimeter seams, cover seams, rear handle mounts, hubs, fasteners, and source cards used overlapping or unstable depth layers."
+  ],
+  "repairs": [
+    "Replaced the chassis core with a custom indexed 8-vertex/12-triangle watertight outward shell.",
+    "Reduced eight redundant full fan bars to four bars while retaining eight visible spokes, eliminating all 192 duplicate groups.",
+    "Removed perimeter and side-cover geometry already represented by the source-locked textures.",
+    "Moved fan hubs, rear handle mounts, side/top fasteners, and card/backing relationships to stable, non-competing depth levels.",
+    "Preserved the source-locked PNGs and regenerated standard/web from identical visible geometry."
+  ],
+  "final_structural_gate": {
+    "status": "PASS",
+    "standard_and_web": {
+      "materials": "OPAQUE only; baseColor alpha 1; doubleSided false",
+      "embedded_alpha_lt_255_pixels": 0,
+      "negative_transforms": 0,
+      "exact_duplicate_triangle_groups": 0,
+      "opposite_orientation_duplicate_groups": 0,
+      "hazardous_coplanar_pairs": 0,
+      "hazardous_near_coplanar_pairs": 0,
+      "raw_sub_1mm2_solid_joint_pairs": 24,
+      "closed_core": "watertight, winding-consistent, positive volume"
+    }
+  },
+  "standard_audits": {
+    "views": {"status": "PASS", "errors": 0, "warnings": 0},
+    "standard_glb": {"status": "PASS", "errors": 0, "warnings": 0},
+    "web_glb": {"status": "PASS", "errors": 0, "warnings": 0},
+    "standard_web_visible_geometry_parity": "PASS"
+  },
+  "final_browser_gate": {
+    "viewers": ["Three.js r180 / WebGL 2.0 Chromium", "Babylon.js 9.23.0 / WebGL 2"],
+    "combinations": 4,
+    "yaw_step_degrees": 5,
+    "yaw_frames_per_combination": 72,
+    "pitch_keyframes_per_combination": 12,
+    "rotation_frames_per_combination": 84,
+    "total_rotation_frames": 336,
+    "specified_static_loads_per_combination": 10,
+    "total_specified_static_loads": 40,
+    "light_and_dark_checkerboards": true,
+    "visual_findings": {
+      "surface_flicker": false,
+      "transparency_jump": false,
+      "checkerboard_leak": false,
+      "face_disappearance": false,
+      "mirroring": false,
+      "texture_switch": false,
+      "sudden_gray": false
+    },
+    "status": "PASS"
+  },
+  "evidence": {
+    "before": "qa/rotation-review/before/{three,babylon}/{standard,web}/",
+    "after": "qa/rotation-review/after/{three,babylon}/{standard,web}/",
+    "matched_camera": "qa/rotation-review/after/matched-camera/contact-sheet.png",
+    "feature_inventory_review": "qa/rotation-review/after/feature-inventory-review.csv",
+    "structural_audit": "qa/rotation-review/after/structural-rotation-audit.json"
+  },
+  "authenticity_conclusion": "PASS_WITH_BOTTOM_FALLBACK for the frozen delivery subject: all front, user-locked rear, left/right, and top identity-bearing features match their locked sources. No non-bottom gap remains relative to that subject.",
+  "warnings_and_residual_risk": [
+    "The underside is a conservative opaque fallback with no unsupported detail.",
+    "The user-locked rear conflicts with Fortinet's catalog factory rear. The delivered asset intentionally follows the user's row-3 delivery appearance and does not claim that rear as catalog-authoritative.",
+    "Twenty-four reported coplanar contacts are sub-1 mm^2 solid fan/handle/bar joints; hazardous visible draw-order pairs are zero."
+  ],
+  "status": "PASS_WITH_BOTTOM_FALLBACK"
+}
