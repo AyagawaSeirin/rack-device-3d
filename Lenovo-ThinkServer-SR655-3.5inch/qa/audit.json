@@ -12,7 +12,7 @@
     "remaining_non_bottom_evidence_gaps": []
   },
   "views": {
-    "audit_file": "qa/views-audit.json",
+    "audit_file": "qa/rotation-review-20260827/after/views-audit.json",
     "status": "PASS",
     "errors": 0,
     "warnings": 6,
@@ -22,22 +22,22 @@
   },
   "standard_glb": {
     "path": "model/Lenovo-ThinkServer-SR655-3.5inch.glb",
-    "bytes": 11101288,
-    "sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
-    "audit_file": "qa/glb-audit-standard.json",
+    "bytes": 11098780,
+    "sha256": "2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+    "audit_file": "qa/rotation-review-20260827/after/glb-standard-audit.json",
     "status": "PASS"
   },
   "web_glb": {
     "path": "model/Lenovo-ThinkServer-SR655-3.5inch-web.glb",
-    "bytes": 7904740,
-    "sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
-    "audit_file": "qa/glb-audit-web.json",
+    "bytes": 7902232,
+    "sha256": "632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+    "audit_file": "qa/rotation-review-20260827/after/glb-web-audit.json",
     "status": "PASS"
   },
   "structure": {
-    "nodes": 189,
-    "meshes": 189,
-    "primitives": 189,
+    "nodes": 184,
+    "meshes": 184,
+    "primitives": 184,
     "materials": 16,
     "textures": 6,
     "images": 6,
@@ -45,14 +45,34 @@
     "external_resources": 0,
     "extensions_used": ["KHR_materials_unlit"],
     "unlit_photo_materials": 6,
-    "bounds_mm": [481.99999, 86.499996, 764.85997]
+    "bounds_mm": [481.999993, 86.499996, 764.699996]
   },
   "viewer_validation": {
     "paths": ["Three.js 0.180 GLTFLoader", "Babylon.js glTF loader"],
     "models_in_each_viewer": ["standard", "web"],
-    "views_per_model_per_viewer": 8,
-    "total_final_renders": 32,
+    "views_per_model_per_viewer": 10,
+    "total_final_renders": 40,
     "status": "PASS"
+  },
+  "rotation_review": {
+    "status": "PASS",
+    "report": "qa/rotation-review-20260827/final-report.md",
+    "stress_report": "qa/rotation-review-20260827/after/rotation-stress-report.json",
+    "static_real_browser_loads": 40,
+    "final_hash_http_loads": 44,
+    "rotation_combinations": 4,
+    "yaw_frames_per_combination": 72,
+    "yaw_step_degrees": 5,
+    "structural_extra": {
+      "exact_duplicate_triangles": 0,
+      "near_coplanar_pairs_le_0_25mm": 0,
+      "material_alpha_errors": 0,
+      "negative_transforms": 0,
+      "closed_core": "PASS"
+    },
+    "matched_camera_comparisons": 24,
+    "feature_inventory_rows_verified": 39,
+    "residual_visual_defects": []
   },
   "comparisons": {
     "orthographic": ["front", "rear", "right", "left", "top", "bottom"],

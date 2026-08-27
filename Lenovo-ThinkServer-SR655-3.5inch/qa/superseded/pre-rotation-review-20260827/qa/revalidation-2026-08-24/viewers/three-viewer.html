@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Three.js SR655 forced revalidation</title>
+  <style>
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #eef0f2; }
+    canvas { display: block; width: 100%; height: 100%; }
+  </style>
+</head>
+<body>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.180.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.180.0/examples/jsm/"
+  }
+}
+</script>
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+const params = new URLSearchParams(location.search);
+const view = params.get('view') || 'front';
+const model = params.get('model') === 'web' ? 'web' : 'standard';
+const run = params.get('run') || 'unrecorded';
+const expectedSha = params.get('sha') || '';
+const filename = `Lenovo-ThinkServer-SR655-3.5inch${model === 'web' ? '-web' : ''}.glb`;
+const loadQuery = new URLSearchParams({ loader: 'three', model, view, run, sha: expectedSha });
+const modelUrl = `/model/${filename}?${loadQuery}`;
+
+document.body.dataset.loader = 'three';
+document.body.dataset.model = model;
+document.body.dataset.view = view;
+document.body.dataset.run = run;
+document.body.dataset.expectedSha = expectedSha;
+document.body.dataset.modelUrl = modelUrl;
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false, preserveDrawingBuffer: true });
+renderer.setPixelRatio(1);
+renderer.setSize(innerWidth, innerHeight);
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.toneMapping = THREE.NoToneMapping;
+renderer.setClearColor(0xeef0f2, 1);
+document.body.appendChild(renderer.domElement);
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0xeef0f2);
+scene.add(new THREE.HemisphereLight(0xffffff, 0x90949a, 2.0));
+const key = new THREE.DirectionalLight(0xffffff, 2.1);
+key.position.set(2, 3, 4);
+scene.add(key);
+const fill = new THREE.DirectionalLight(0xffffff, 1.1);
+fill.position.set(-3, 1, -2);
+scene.add(fill);
+
+const definitions = {
+  front:      { dir: [0, 0, 1],  up: [0, 1, 0], projected: [0.4820, 0.0865], ortho: true },
+  rear:       { dir: [0, 0, -1], up: [0, 1, 0], projected: [0.4446, 0.0865], ortho: true },
+  right:      { dir: [1, 0, 0],  up: [0, 1, 0], projected: [0.7647, 0.0865], ortho: true },
+  left:       { dir: [-1, 0, 0], up: [0, 1, 0], projected: [0.7647, 0.0865], ortho: true },
+  top:        { dir: [0, 1, 0],  up: [0, 0, 1], projected: [0.4820, 0.7647], ortho: true },
+  bottom:     { dir: [0, -1, 0], up: [0, 0, 1], projected: [0.4820, 0.7647], ortho: true },
+  frontRight: { dir: [1.15, 0.62, 1.35],   up: [0, 1, 0], ortho: false },
+  frontLeft:  { dir: [-1.15, 0.62, 1.35],  up: [0, 1, 0], ortho: false },
+  rearRight:  { dir: [1.12, 0.58, -1.35],  up: [0, 1, 0], ortho: false },
+  rearLeft:   { dir: [-1.12, 0.58, -1.35], up: [0, 1, 0], ortho: false }
+};
+
+if (!definitions[view]) {
+  document.body.dataset.error = `unsupported view ${view}`;
+  document.title = 'ERROR Three unsupported view';
+  throw new Error(`unsupported view ${view}`);
+}
+
+const loader = new GLTFLoader();
+loader.load(modelUrl, (gltf) => {
+  const root = gltf.scene;
+  scene.add(root);
+  root.updateMatrixWorld(true);
+  const box = new THREE.Box3().setFromObject(root);
+  const center = box.getCenter(new THREE.Vector3());
+  const size = box.getSize(new THREE.Vector3());
+  const spec = definitions[view];
+  const direction = new THREE.Vector3(...spec.dir).normalize();
+  const up = new THREE.Vector3(...spec.up).normalize();
+  let camera;
+  if (spec.ortho) {
+    const aspect = innerWidth / innerHeight;
+    const halfH = Math.max(spec.projected[1] * 0.60, spec.projected[0] / aspect * 0.60);
+    const halfW = halfH * aspect;
+    camera = new THREE.OrthographicCamera(-halfW, halfW, halfH, -halfH, 0.01, 10);
+    camera.position.copy(center).add(direction.multiplyScalar(2.0));
+  } else {
+    camera = new THREE.PerspectiveCamera(30, innerWidth / innerHeight, 0.01, 20);
+    camera.position.copy(center).add(direction.multiplyScalar(Math.max(size.x, size.y, size.z) * 2.3));
+  }
+  camera.up.copy(up);
+  camera.lookAt(center);
+  camera.updateProjectionMatrix();
+  renderer.render(scene, camera);
+  let loadedNodes = 0;
+  root.traverse(() => { loadedNodes += 1; });
+  document.body.dataset.loadedNodes = String(loadedNodes);
+  document.body.dataset.bounds = `${size.x},${size.y},${size.z}`;
+  document.body.dataset.ready = '1';
+  document.title = `READY Three ${model} ${view} ${run}`;
+}, undefined, (error) => {
+  document.body.dataset.error = String(error);
+  document.title = 'ERROR Three';
+  console.error(error);
+});
+</script>
+</body>
+</html>

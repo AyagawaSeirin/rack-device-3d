@@ -1,6 +1,7 @@
 # Evidence and dimension ledger
 
-Access date for web sources: 2026-08-23 (Asia/Singapore).
+Initial access date for web sources: 2026-08-23 (Asia/Singapore).
+Rotation-review official refresh: 2026-08-27.
 
 ## PDF workflow fallback
 
@@ -31,6 +32,8 @@ URL: https://pubs.lenovo.com/sr655/
 Authority: official.
 
 Proves: original-generation ThinkSystem SR655, types 7Y00 and 7Z01, single-socket 2U identity; excludes SR655 V3.
+
+The official Lenovo 3D tour and LP1161 product guide were reopened on 2026-08-27. The tour still exposes the withdrawn original SR655 configuration viewer; LP1161 still identifies the 1-socket 2U original product and the documented 12x3.5/24x2.5 fronts, up to eight rear PCIe slots and dual hot-swap PSU configuration. No newer exact official GLB/glTF download was exposed.
 
 ### DCSC dynamic product page
 
@@ -122,7 +125,7 @@ Archive bytes: 16,590,938
 
 Archive SHA-256: `2d99c8fe4bc86f0ed28575421e76630a356cb69360e1dcb09b44c2c81af24a3e`
 
-Unpacked public files: 1,170 files, 39,986,840 bytes including checksum manifest.
+Unpacked public files: 1,170 files, 39,986,692 bytes including checksum manifest. The 1,169 files covered by `MANIFEST.sha256` all verify; the manifest intentionally excludes itself.
 
 Format: InfinityRT public WebGL viewer package; XML hierarchy, RAW/Draco mesh blocks, JPG/PNG textures, JavaScript and WASM runtime. It is not GLB/GLTF.
 

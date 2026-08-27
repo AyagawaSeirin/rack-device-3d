@@ -1,0 +1,213 @@
+{
+  "status": "PASS",
+  "root": "/root/Project/rack-device-3d/Lenovo-ThinkServer-SR655-3.5inch",
+  "face_count": 6,
+  "independent_primary_source_paths": true,
+  "rows": [
+    {
+      "face": "front",
+      "production_mode": "SOURCE_LOCKED_GENERATION",
+      "primary_source_path": "source/third-party/ebay-206238343567-1.jpg",
+      "primary_source_exists": true,
+      "recorded_primary_sha256": "b74ef6df1163cf7d66e221ee3281432cff38a6d762eb4c8a16bd98146b0a1b13",
+      "actual_primary_sha256": "b74ef6df1163cf7d66e221ee3281432cff38a6d762eb4c8a16bd98146b0a1b13",
+      "primary_sha256_match": true,
+      "visual_origin": "real-photograph",
+      "supporting_source_count": 4,
+      "missing_supporting_sources": [],
+      "final_output_path": "views/front.png",
+      "final_sha256": "fa688f596f4d876e1923ecb64f0ca6c4b72103faf8c0578d5788b3659d9f441b",
+      "final_image": {
+        "format": "PNG",
+        "mode": "RGBA",
+        "width": 2600,
+        "height": 467,
+        "has_alpha": true
+      }
+    },
+    {
+      "face": "rear",
+      "production_mode": "MULTI_REFERENCE_RECONSTRUCTION",
+      "primary_source_path": "qa/reference/lp1161-p005-rear-8pcie-crop.png",
+      "primary_source_exists": true,
+      "recorded_primary_sha256": "d1d87fab88ca98aa0bc15398e8a9c04cd3e2d5811d5fded97d4a7b95d475bcc5",
+      "actual_primary_sha256": "d1d87fab88ca98aa0bc15398e8a9c04cd3e2d5811d5fded97d4a7b95d475bcc5",
+      "primary_sha256_match": true,
+      "visual_origin": "official-render",
+      "supporting_source_count": 4,
+      "missing_supporting_sources": [],
+      "final_output_path": "views/rear.png",
+      "final_sha256": "166fa1ce1edfd09c9ec7ce5d20c393e15d72e11affccc5af317af5e4bed0af7b",
+      "final_image": {
+        "format": "PNG",
+        "mode": "RGBA",
+        "width": 2400,
+        "height": 467,
+        "has_alpha": true
+      }
+    },
+    {
+      "face": "left",
+      "production_mode": "MULTI_REFERENCE_RECONSTRUCTION",
+      "primary_source_path": "qa/reference/official-viewer-left-crop.png",
+      "primary_source_exists": true,
+      "recorded_primary_sha256": "f49fa36d60dc4ac1d4cf67f2b6397573739ff1f50aae971e101fc27d9ff08400",
+      "actual_primary_sha256": "f49fa36d60dc4ac1d4cf67f2b6397573739ff1f50aae971e101fc27d9ff08400",
+      "primary_sha256_match": true,
+      "visual_origin": "official-render",
+      "supporting_source_count": 4,
+      "missing_supporting_sources": [],
+      "final_output_path": "views/left.png",
+      "final_sha256": "66a7f2051ce3d3ede1c1a848750224498d0462599abf2a5fecacc0f76acb45a3",
+      "final_image": {
+        "format": "PNG",
+        "mode": "RGBA",
+        "width": 3000,
+        "height": 339,
+        "has_alpha": true
+      }
+    },
+    {
+      "face": "right",
+      "production_mode": "MULTI_REFERENCE_RECONSTRUCTION",
+      "primary_source_path": "qa/reference/official-viewer-right-crop.png",
+      "primary_source_exists": true,
+      "recorded_primary_sha256": "d63fe3dc77e31cff1931367030203f3efe9911d76ffbe3a61fa88df7a044fbc1",
+      "actual_primary_sha256": "d63fe3dc77e31cff1931367030203f3efe9911d76ffbe3a61fa88df7a044fbc1",
+      "primary_sha256_match": true,
+      "visual_origin": "official-render",
+      "supporting_source_count": 4,
+      "missing_supporting_sources": [],
+      "final_output_path": "views/right.png",
+      "final_sha256": "0ea6d60d8146e6552eb08d31ac861c683ffaa0c5e2377c90f2fb15e712b5039f",
+      "final_image": {
+        "format": "PNG",
+        "mode": "RGBA",
+        "width": 3000,
+        "height": 339,
+        "has_alpha": true
+      }
+    },
+    {
+      "face": "top",
+      "production_mode": "SOURCE_LOCKED_GENERATION",
+      "primary_source_path": "source/third-party/ebay-206238343567-3.jpg",
+      "primary_source_exists": true,
+      "recorded_primary_sha256": "ac4bc8b5b3f941b5baaadd6c73c95d8d57d026fe958095b14031bb017332ac89",
+      "actual_primary_sha256": "ac4bc8b5b3f941b5baaadd6c73c95d8d57d026fe958095b14031bb017332ac89",
+      "primary_sha256_match": true,
+      "visual_origin": "real-photograph",
+      "supporting_source_count": 3,
+      "missing_supporting_sources": [],
+      "final_output_path": "views/top.png",
+      "final_sha256": "ad60e6c970e4e404c7991f3387a8de5ca4df26aa0fa04b3842e58d11bddd2d43",
+      "final_image": {
+        "format": "PNG",
+        "mode": "RGBA",
+        "width": 1512,
+        "height": 2600,
+        "has_alpha": true
+      }
+    },
+    {
+      "face": "bottom",
+      "production_mode": "MULTI_REFERENCE_RECONSTRUCTION",
+      "primary_source_path": "qa/reference/official-viewer-bottom-full.png",
+      "primary_source_exists": true,
+      "recorded_primary_sha256": "66a3b6355e38d9ccf9c549a7faae6a2c4f3153eb3d7d681cdf55e7a74f5e4675",
+      "actual_primary_sha256": "66a3b6355e38d9ccf9c549a7faae6a2c4f3153eb3d7d681cdf55e7a74f5e4675",
+      "primary_sha256_match": true,
+      "visual_origin": "official-render",
+      "supporting_source_count": 4,
+      "missing_supporting_sources": [],
+      "final_output_path": "views/bottom.png",
+      "final_sha256": "a90c3081aaeabf14de0af15f9edb224793df64b1490ddbe5815aa2645998dbb9",
+      "final_image": {
+        "format": "PNG",
+        "mode": "RGBA",
+        "width": 1512,
+        "height": 2600,
+        "has_alpha": true
+      }
+    }
+  ],
+  "imagegen_records": [
+    {
+      "face": "front",
+      "call_count": 1,
+      "production_mode": "SOURCE_LOCKED_GENERATION",
+      "summary_final_sha256": "fa688f596f4d876e1923ecb64f0ca6c4b72103faf8c0578d5788b3659d9f441b",
+      "current_final_sha256": "fa688f596f4d876e1923ecb64f0ca6c4b72103faf8c0578d5788b3659d9f441b",
+      "prompt_record": "qa/imagegen-prompts/front.md",
+      "prompt_record_exists": true
+    },
+    {
+      "face": "rear",
+      "call_count": 1,
+      "production_mode": "MULTI_REFERENCE_RECONSTRUCTION",
+      "summary_final_sha256": "166fa1ce1edfd09c9ec7ce5d20c393e15d72e11affccc5af317af5e4bed0af7b",
+      "current_final_sha256": "166fa1ce1edfd09c9ec7ce5d20c393e15d72e11affccc5af317af5e4bed0af7b",
+      "prompt_record": "qa/imagegen-prompts/rear.md",
+      "prompt_record_exists": true
+    },
+    {
+      "face": "left",
+      "call_count": 1,
+      "production_mode": "MULTI_REFERENCE_RECONSTRUCTION",
+      "summary_final_sha256": "66a7f2051ce3d3ede1c1a848750224498d0462599abf2a5fecacc0f76acb45a3",
+      "current_final_sha256": "66a7f2051ce3d3ede1c1a848750224498d0462599abf2a5fecacc0f76acb45a3",
+      "prompt_record": "qa/imagegen-prompts/left.md",
+      "prompt_record_exists": true
+    },
+    {
+      "face": "right",
+      "call_count": 1,
+      "production_mode": "MULTI_REFERENCE_RECONSTRUCTION",
+      "summary_final_sha256": "0ea6d60d8146e6552eb08d31ac861c683ffaa0c5e2377c90f2fb15e712b5039f",
+      "current_final_sha256": "0ea6d60d8146e6552eb08d31ac861c683ffaa0c5e2377c90f2fb15e712b5039f",
+      "prompt_record": "qa/imagegen-prompts/right.md",
+      "prompt_record_exists": true
+    },
+    {
+      "face": "top",
+      "call_count": 1,
+      "production_mode": "SOURCE_LOCKED_GENERATION",
+      "summary_final_sha256": "ad60e6c970e4e404c7991f3387a8de5ca4df26aa0fa04b3842e58d11bddd2d43",
+      "current_final_sha256": "ad60e6c970e4e404c7991f3387a8de5ca4df26aa0fa04b3842e58d11bddd2d43",
+      "prompt_record": "qa/imagegen-prompts/top.md",
+      "prompt_record_exists": true
+    },
+    {
+      "face": "bottom",
+      "call_count": 1,
+      "production_mode": "MULTI_REFERENCE_RECONSTRUCTION",
+      "summary_final_sha256": "a90c3081aaeabf14de0af15f9edb224793df64b1490ddbe5815aa2645998dbb9",
+      "current_final_sha256": "a90c3081aaeabf14de0af15f9edb224793df64b1490ddbe5815aa2645998dbb9",
+      "prompt_record": "qa/imagegen-prompts/bottom.md",
+      "prompt_record_exists": true
+    }
+  ],
+  "left_right_independence": {
+    "dimensions": [
+      3000,
+      339
+    ],
+    "byte_identical": false,
+    "direct_mean_abs_rgba_0_255": [
+      29.168136676499508,
+      30.099216322517208,
+      30.48370796460177,
+      13.675827925270402
+    ],
+    "right_mirrored_mean_abs_rgba_0_255": [
+      21.852984267453294,
+      22.2602802359882,
+      22.86178859390364,
+      6.582838741396263
+    ],
+    "right_only_locked_landmark": "yellow weight/caution label",
+    "left_only_locked_landmark": "two small rectangular rear slots and distinct hole pattern"
+  },
+  "errors": [],
+  "warnings": []
+}

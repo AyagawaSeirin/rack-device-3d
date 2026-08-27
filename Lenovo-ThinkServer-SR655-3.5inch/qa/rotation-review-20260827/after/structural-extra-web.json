@@ -1,0 +1,339 @@
+{
+  "path": "Lenovo-ThinkServer-SR655-3.5inch/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb",
+  "bytes": 7902232,
+  "sha256": "632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+  "status": "PASS",
+  "error_count": 0,
+  "errors": [],
+  "geometry": {
+    "mesh_count": 184,
+    "triangle_count": 4128,
+    "exact_duplicate_triangle_group_count": 0,
+    "exact_duplicate_triangle_instance_count": 0,
+    "opposite_normal_duplicate_group_count": 0,
+    "duplicate_examples": [],
+    "near_coplanar_limit_mm": 0.25,
+    "near_coplanar_photographic_pair_count": 0,
+    "near_coplanar_photographic_pairs": [],
+    "closed_core": [
+      {
+        "mesh": "ChassisBody",
+        "watertight": true,
+        "winding_consistent": true,
+        "positive_volume": true,
+        "volume": 0.02616902584946736,
+        "euler_number": 2
+      }
+    ],
+    "visible_geometry_signature": "cea8cba1cbc8f50c0edfb722ee8613cdb444035ccdd0553091906dae4db7b90e"
+  },
+  "material_alpha_negative_transform": {
+    "materials": [
+      {
+        "index": 0,
+        "name": "silver",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          0.6745098039215687,
+          0.6901960784313725,
+          0.6901960784313725,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": false,
+        "texture_material": false
+      },
+      {
+        "index": 1,
+        "name": "dark",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          0.12549019607843137,
+          0.13333333333333333,
+          0.13725490196078433,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": false,
+        "texture_material": false
+      },
+      {
+        "index": 2,
+        "name": "light_silver",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          0.803921568627451,
+          0.8117647058823529,
+          0.803921568627451,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": false,
+        "texture_material": false
+      },
+      {
+        "index": 3,
+        "name": "red",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          0.6784313725490196,
+          0.047058823529411764,
+          0.08235294117647059,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": false,
+        "texture_material": false
+      },
+      {
+        "index": 4,
+        "name": "black",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          0.07058823529411765,
+          0.07450980392156863,
+          0.0784313725490196,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": false,
+        "texture_material": false
+      },
+      {
+        "index": 5,
+        "name": "dark_silver",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          0.4196078431372549,
+          0.4392156862745098,
+          0.44313725490196076,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": false,
+        "texture_material": false
+      },
+      {
+        "index": 6,
+        "name": "vent",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          0.023529411764705882,
+          0.027450980392156862,
+          0.03137254901960784,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": false,
+        "texture_material": false
+      },
+      {
+        "index": 7,
+        "name": "orange",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          0.9254901960784314,
+          0.3686274509803922,
+          0.03137254901960784,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": false,
+        "texture_material": false
+      },
+      {
+        "index": 8,
+        "name": "green",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          0.22745098039215686,
+          0.5882352941176471,
+          0.20392156862745098,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": false,
+        "texture_material": false
+      },
+      {
+        "index": 9,
+        "name": "blue",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          0.03137254901960784,
+          0.3568627450980392,
+          0.7176470588235294,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": false,
+        "texture_material": false
+      },
+      {
+        "index": 10,
+        "name": "FrontPhotographicSurface_opaque_texture",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": true,
+        "texture_material": true
+      },
+      {
+        "index": 11,
+        "name": "RearPhotographicSurface_opaque_texture",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": true,
+        "texture_material": true
+      },
+      {
+        "index": 12,
+        "name": "RightPhotographicSurface_opaque_texture",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": true,
+        "texture_material": true
+      },
+      {
+        "index": 13,
+        "name": "LeftPhotographicSurface_opaque_texture",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": true,
+        "texture_material": true
+      },
+      {
+        "index": 14,
+        "name": "TopPhotographicSurface_opaque_texture",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": true,
+        "texture_material": true
+      },
+      {
+        "index": 15,
+        "name": "BottomPhotographicSurface_opaque_texture",
+        "alpha_mode": "OPAQUE",
+        "base_color_factor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "double_sided": false,
+        "unlit": true,
+        "texture_material": true
+      }
+    ],
+    "images": [
+      {
+        "index": 0,
+        "bytes": 1263412,
+        "sha256": "8a2757783b66402a85139ad61ec443e1ce58241f428854dfacf9ae3328a8f482",
+        "mode": "RGB",
+        "size_px": [
+          2048,
+          368
+        ],
+        "alpha_min": 255,
+        "alpha_below_255_pixels": 0
+      },
+      {
+        "index": 1,
+        "bytes": 1322568,
+        "sha256": "58142d8b3c3ec0e8f670869c1a5bae9f49ac459102add557d91383143023146b",
+        "mode": "RGB",
+        "size_px": [
+          2048,
+          399
+        ],
+        "alpha_min": 255,
+        "alpha_below_255_pixels": 0
+      },
+      {
+        "index": 2,
+        "bytes": 572060,
+        "sha256": "66910bbf23bd548faf8a907fc06bc85d16045a01119fc431113523ee73051281",
+        "mode": "RGB",
+        "size_px": [
+          2048,
+          231
+        ],
+        "alpha_min": 255,
+        "alpha_below_255_pixels": 0
+      },
+      {
+        "index": 3,
+        "bytes": 737632,
+        "sha256": "3f9c549cfbc833d8f4abb5bc261e03a2511f878821e85f479d82218c1ae69683",
+        "mode": "RGB",
+        "size_px": [
+          2048,
+          231
+        ],
+        "alpha_min": 255,
+        "alpha_below_255_pixels": 0
+      },
+      {
+        "index": 4,
+        "bytes": 2474092,
+        "sha256": "cff3f1e3c5aabdcac850004fffdd2c8a7ea4881f79e42690fcb6e1c2c8887af4",
+        "mode": "RGB",
+        "size_px": [
+          1191,
+          2048
+        ],
+        "alpha_min": 255,
+        "alpha_below_255_pixels": 0
+      },
+      {
+        "index": 5,
+        "bytes": 1384348,
+        "sha256": "eb0e145d11728d69160aadb7fcc1ba26e041865b239341a457fc4b1b04d315b5",
+        "mode": "RGB",
+        "size_px": [
+          1191,
+          2048
+        ],
+        "alpha_min": 255,
+        "alpha_below_255_pixels": 0
+      }
+    ],
+    "negative_transform_nodes": [],
+    "external_buffers": [],
+    "external_images": [],
+    "extensions_used": [
+      "KHR_materials_unlit"
+    ],
+    "errors": []
+  }
+}

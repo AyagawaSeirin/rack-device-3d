@@ -2,6 +2,8 @@
 
 status: PASS
 
+2026-08-27 rotation re-review: **PASS**. The authoritative current hashes are standard `2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97` and web `632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868`; both completed 40/40 final-hash static loads and four 72-frame rotation gates. See `qa/rotation-review-20260827/final-report.md`. Hashes and counts in the older body below describe the preserved pre-rotation checkpoint and are superseded by that report.
+
 bottom_status: exact official-viewer underside; no fallback
 
 ## Identity gate
@@ -90,4 +92,3 @@ The three-quarter pixel differences include camera/crop and the real top service
 ## Final decision
 
 PASS. The bottom has exact official-model evidence, so `PASS_WITH_BOTTOM_FALLBACK` is not applicable.
-

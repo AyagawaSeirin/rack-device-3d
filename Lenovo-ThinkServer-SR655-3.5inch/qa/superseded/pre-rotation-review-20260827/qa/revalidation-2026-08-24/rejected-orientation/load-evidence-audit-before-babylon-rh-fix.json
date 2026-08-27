@@ -1,0 +1,1628 @@
+{
+  "status": "PASS",
+  "formal_load_count": 40,
+  "unique_run_id_count": 40,
+  "required_matrix": "2 loaders x 2 current-hash GLBs x 10 views",
+  "view_order": [
+    "front",
+    "rear",
+    "right",
+    "left",
+    "top",
+    "bottom",
+    "frontRight",
+    "frontLeft",
+    "rearRight",
+    "rearLeft"
+  ],
+  "current_models_after_all_loads": {
+    "standard": {
+      "path": "model/Lenovo-ThinkServer-SR655-3.5inch.glb",
+      "bytes": 11101288,
+      "sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6"
+    },
+    "web": {
+      "path": "model/Lenovo-ThinkServer-SR655-3.5inch-web.glb",
+      "bytes": 7904740,
+      "sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f"
+    }
+  },
+  "summary": {
+    "three-standard": {
+      "loads": 10,
+      "views": [
+        "front",
+        "rear",
+        "right",
+        "left",
+        "top",
+        "bottom",
+        "frontRight",
+        "frontLeft",
+        "rearRight",
+        "rearLeft"
+      ],
+      "bytes_served": 111012880,
+      "contact_sheet": "qa/revalidation-2026-08-24/contact-sheets/three-standard.png"
+    },
+    "three-web": {
+      "loads": 10,
+      "views": [
+        "front",
+        "rear",
+        "right",
+        "left",
+        "top",
+        "bottom",
+        "frontRight",
+        "frontLeft",
+        "rearRight",
+        "rearLeft"
+      ],
+      "bytes_served": 79047400,
+      "contact_sheet": "qa/revalidation-2026-08-24/contact-sheets/three-web.png"
+    },
+    "babylon-standard": {
+      "loads": 10,
+      "views": [
+        "front",
+        "rear",
+        "right",
+        "left",
+        "top",
+        "bottom",
+        "frontRight",
+        "frontLeft",
+        "rearRight",
+        "rearLeft"
+      ],
+      "bytes_served": 111012880,
+      "contact_sheet": "qa/revalidation-2026-08-24/contact-sheets/babylon-standard.png"
+    },
+    "babylon-web": {
+      "loads": 10,
+      "views": [
+        "front",
+        "rear",
+        "right",
+        "left",
+        "top",
+        "bottom",
+        "frontRight",
+        "frontLeft",
+        "rearRight",
+        "rearLeft"
+      ],
+      "bytes_served": 79047400,
+      "contact_sheet": "qa/revalidation-2026-08-24/contact-sheets/babylon-web.png"
+    }
+  },
+  "total_bytes_served": 380120560,
+  "raw_http_log": "qa/revalidation-2026-08-24/http-glb-loads.jsonl",
+  "csv_manifest": "qa/revalidation-2026-08-24/load-evidence.csv",
+  "records": [
+    {
+      "timestamp_utc": "2026-08-23T19:44:54.184768+00:00",
+      "loader": "three",
+      "model": "standard",
+      "view": "front",
+      "run_id": "RV-three-standard-01",
+      "http_status": 200,
+      "bytes": 11101288,
+      "actual_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "requested_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?loader=three&model=standard&view=front&run=RV-three-standard-01&sha=bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/three-standard/01-front.png",
+      "screenshot_sha256": "7c9ce18dd96f4e96be24e1954cd76d99257404438af85978f8aec029fc5e6af8",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          200.42763020833334,
+          201.67285729166667,
+          203.56254270833332
+        ],
+        "stddev_rgb": [
+          74.29194564428406,
+          75.56704091361559,
+          75.73468060765141
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:45:23.682915+00:00",
+      "loader": "three",
+      "model": "standard",
+      "view": "rear",
+      "run_id": "RV-three-standard-02",
+      "http_status": 200,
+      "bytes": 11101288,
+      "actual_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "requested_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?loader=three&model=standard&view=rear&run=RV-three-standard-02&sha=bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/three-standard/02-rear.png",
+      "screenshot_sha256": "1e291d9ac52b33ec0eebd20adf90b59b72319aca6fd7fa529f8603e7a2673051",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          218.21674270833333,
+          219.58361666666667,
+          220.956371875
+        ],
+        "stddev_rgb": [
+          52.318946144999764,
+          53.20063435479936,
+          54.19402989993497
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:45:49.606903+00:00",
+      "loader": "three",
+      "model": "standard",
+      "view": "right",
+      "run_id": "RV-three-standard-03",
+      "http_status": 200,
+      "bytes": 11101288,
+      "actual_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "requested_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?loader=three&model=standard&view=right&run=RV-three-standard-03&sha=bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/three-standard/03-right.png",
+      "screenshot_sha256": "1a470aa0aeeb807c36c59120cedc8c3d772ceddd537f34d217cab9a99158597c",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          229.39920104166666,
+          231.63652291666668,
+          233.13763645833333
+        ],
+        "stddev_rgb": [
+          26.34418851922876,
+          25.934308258107738,
+          27.48565915764685
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:46:10.681907+00:00",
+      "loader": "three",
+      "model": "standard",
+      "view": "left",
+      "run_id": "RV-three-standard-04",
+      "http_status": 200,
+      "bytes": 11101288,
+      "actual_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "requested_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?loader=three&model=standard&view=left&run=RV-three-standard-04&sha=bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/three-standard/04-left.png",
+      "screenshot_sha256": "afb726ada8f62ff9292be8022c6b3fc35c0f8230426bd28ecd97e3cc6b7378c2",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          229.88272708333332,
+          231.99257916666667,
+          233.66853958333334
+        ],
+        "stddev_rgb": [
+          25.23879200879093,
+          25.107918263260345,
+          25.842818486487122
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:46:31.859854+00:00",
+      "loader": "three",
+      "model": "standard",
+      "view": "top",
+      "run_id": "RV-three-standard-05",
+      "http_status": 200,
+      "bytes": 11101288,
+      "actual_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "requested_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?loader=three&model=standard&view=top&run=RV-three-standard-05&sha=bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/three-standard/05-top.png",
+      "screenshot_sha256": "1e1b92201cd2f037fc6d9ed059786e2f4977651b700db61942cf7b5fa2fed58f",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          218.99339270833335,
+          220.77855833333334,
+          222.51601770833332
+        ],
+        "stddev_rgb": [
+          39.981630457649324,
+          40.088406821734985,
+          40.37269394466623
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:46:52.404017+00:00",
+      "loader": "three",
+      "model": "standard",
+      "view": "bottom",
+      "run_id": "RV-three-standard-06",
+      "http_status": 200,
+      "bytes": 11101288,
+      "actual_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "requested_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?loader=three&model=standard&view=bottom&run=RV-three-standard-06&sha=bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/three-standard/06-bottom.png",
+      "screenshot_sha256": "a0f39361da71ed99904033a2a4ffd2c05c7262b0bc014b4c15c4766acc85406e",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          214.31195520833333,
+          215.833384375,
+          217.25687604166666
+        ],
+        "stddev_rgb": [
+          39.769832573275,
+          40.525384543006,
+          41.42222037434603
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:47:13.600001+00:00",
+      "loader": "three",
+      "model": "standard",
+      "view": "frontRight",
+      "run_id": "RV-three-standard-07",
+      "http_status": 200,
+      "bytes": 11101288,
+      "actual_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "requested_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?loader=three&model=standard&view=frontRight&run=RV-three-standard-07&sha=bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/three-standard/07-frontRight.png",
+      "screenshot_sha256": "b081be1cccb9d773fd10eef04df56e84b99656e9fbd9f32ff89918ee8770667b",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          225.45040208333333,
+          227.35970833333334,
+          229.20490208333334
+        ],
+        "stddev_rgb": [
+          37.134127111010166,
+          37.478429233781895,
+          37.79977075727995
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:47:35.413818+00:00",
+      "loader": "three",
+      "model": "standard",
+      "view": "frontLeft",
+      "run_id": "RV-three-standard-08",
+      "http_status": 200,
+      "bytes": 11101288,
+      "actual_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "requested_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?loader=three&model=standard&view=frontLeft&run=RV-three-standard-08&sha=bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/three-standard/08-frontLeft.png",
+      "screenshot_sha256": "c269c32e250d3de60106fbc9d578e5aac0d2f993614bf051031fa68d85fdccf1",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          225.47510520833333,
+          227.31658333333334,
+          229.08445833333334
+        ],
+        "stddev_rgb": [
+          37.120342988483856,
+          37.58374565544331,
+          37.948229483819084
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:47:55.671529+00:00",
+      "loader": "three",
+      "model": "standard",
+      "view": "rearRight",
+      "run_id": "RV-three-standard-09",
+      "http_status": 200,
+      "bytes": 11101288,
+      "actual_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "requested_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?loader=three&model=standard&view=rearRight&run=RV-three-standard-09&sha=bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/three-standard/09-rearRight.png",
+      "screenshot_sha256": "4fd0050ad95f662b980ecd65226838bdcb98af243f8b5e23737aeab4cb04ae75",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          228.127015625,
+          230.06650520833333,
+          231.84657395833332
+        ],
+        "stddev_rgb": [
+          29.11116812735867,
+          29.210720794751587,
+          29.766356621048033
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:48:14.510985+00:00",
+      "loader": "three",
+      "model": "standard",
+      "view": "rearLeft",
+      "run_id": "RV-three-standard-10",
+      "http_status": 200,
+      "bytes": 11101288,
+      "actual_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "requested_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?loader=three&model=standard&view=rearLeft&run=RV-three-standard-10&sha=bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/three-standard/10-rearLeft.png",
+      "screenshot_sha256": "a92d7dd9d94e6cc46a368ade49326bb2a281df724b2a816b3d356ded664861b3",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          228.2763375,
+          230.14070520833334,
+          231.83176041666667
+        ],
+        "stddev_rgb": [
+          29.03714277443219,
+          29.305488268741605,
+          29.972669836190164
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:49:13.487197+00:00",
+      "loader": "three",
+      "model": "web",
+      "view": "front",
+      "run_id": "RV-three-web-01",
+      "http_status": 200,
+      "bytes": 7904740,
+      "actual_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "requested_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?loader=three&model=web&view=front&run=RV-three-web-01&sha=a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/three-web/01-front.png",
+      "screenshot_sha256": "33aa4dbb82d63447ec0ac4ce3cee35ceaf9818727833fa3d83cdb65647bb0124",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          200.34881041666668,
+          201.59465208333333,
+          203.48440520833333
+        ],
+        "stddev_rgb": [
+          74.51546548117751,
+          75.78585417521177,
+          75.95149281593574
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:49:40.079940+00:00",
+      "loader": "three",
+      "model": "web",
+      "view": "rear",
+      "run_id": "RV-three-web-02",
+      "http_status": 200,
+      "bytes": 7904740,
+      "actual_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "requested_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?loader=three&model=web&view=rear&run=RV-three-web-02&sha=a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/three-web/02-rear.png",
+      "screenshot_sha256": "b771d958ac785cdbf342e4b056a99735d23ef1c572a9d98d791c5b8155d13325",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          218.03864895833334,
+          219.40354375,
+          220.77733020833332
+        ],
+        "stddev_rgb": [
+          52.990378853615354,
+          53.87389670510047,
+          54.85669002080676
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:50:00.908958+00:00",
+      "loader": "three",
+      "model": "web",
+      "view": "right",
+      "run_id": "RV-three-web-03",
+      "http_status": 200,
+      "bytes": 7904740,
+      "actual_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "requested_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?loader=three&model=web&view=right&run=RV-three-web-03&sha=a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/three-web/03-right.png",
+      "screenshot_sha256": "07445a0d3c53a0174ee7327592da180fc26b4dbacecd326f6aac8adfc2ba5fa8",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          229.391809375,
+          231.630646875,
+          233.12695416666668
+        ],
+        "stddev_rgb": [
+          26.41172283517294,
+          26.000037703063416,
+          27.561115296547182
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:50:19.037940+00:00",
+      "loader": "three",
+      "model": "web",
+      "view": "left",
+      "run_id": "RV-three-web-04",
+      "http_status": 200,
+      "bytes": 7904740,
+      "actual_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "requested_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?loader=three&model=web&view=left&run=RV-three-web-04&sha=a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/three-web/04-left.png",
+      "screenshot_sha256": "ed125a777b9c53fd585435820b3e008941fb38d4ea2a8ef72b94de1d3c74d76c",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          229.86801666666668,
+          231.97735416666666,
+          233.652909375
+        ],
+        "stddev_rgb": [
+          25.35836550791579,
+          25.233006940306645,
+          25.96663307605297
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:50:38.995110+00:00",
+      "loader": "three",
+      "model": "web",
+      "view": "top",
+      "run_id": "RV-three-web-05",
+      "http_status": 200,
+      "bytes": 7904740,
+      "actual_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "requested_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?loader=three&model=web&view=top&run=RV-three-web-05&sha=a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/three-web/05-top.png",
+      "screenshot_sha256": "1346924344c763cc8cbb117cca0adf4e2abde593c67ec8034190127f307de8c8",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          218.96725,
+          220.75154375,
+          222.487984375
+        ],
+        "stddev_rgb": [
+          39.97269954215622,
+          40.08294973021787,
+          40.36895542214036
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:50:58.837045+00:00",
+      "loader": "three",
+      "model": "web",
+      "view": "bottom",
+      "run_id": "RV-three-web-06",
+      "http_status": 200,
+      "bytes": 7904740,
+      "actual_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "requested_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?loader=three&model=web&view=bottom&run=RV-three-web-06&sha=a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/three-web/06-bottom.png",
+      "screenshot_sha256": "9aa2bc9815d0cdfcd1d5d45a21e77e787c30f167c4ccabe29116019c8ec48979",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          214.25040833333333,
+          215.77093541666667,
+          217.19691979166666
+        ],
+        "stddev_rgb": [
+          39.849382207673756,
+          40.60795878786158,
+          41.501142262038826
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:51:16.071191+00:00",
+      "loader": "three",
+      "model": "web",
+      "view": "frontRight",
+      "run_id": "RV-three-web-07",
+      "http_status": 200,
+      "bytes": 7904740,
+      "actual_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "requested_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?loader=three&model=web&view=frontRight&run=RV-three-web-07&sha=a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/three-web/07-frontRight.png",
+      "screenshot_sha256": "224403cb8bb1a3150d2b2470e355e5f7a34d17ab72c692acf19a36fcfe9d69f4",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          225.45862916666667,
+          227.367178125,
+          229.21141979166666
+        ],
+        "stddev_rgb": [
+          37.058045894751174,
+          37.40397371959547,
+          37.71608585047007
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:51:34.758385+00:00",
+      "loader": "three",
+      "model": "web",
+      "view": "frontLeft",
+      "run_id": "RV-three-web-08",
+      "http_status": 200,
+      "bytes": 7904740,
+      "actual_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "requested_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?loader=three&model=web&view=frontLeft&run=RV-three-web-08&sha=a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/three-web/08-frontLeft.png",
+      "screenshot_sha256": "61e31887bfc00b2a1c8b9563645510e066e5b0ca12eed1b711359a25ba1a159b",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          225.44993229166667,
+          227.29109791666667,
+          229.05767291666666
+        ],
+        "stddev_rgb": [
+          37.10243000093904,
+          37.566504660662424,
+          37.9345432521779
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:51:54.009987+00:00",
+      "loader": "three",
+      "model": "web",
+      "view": "rearRight",
+      "run_id": "RV-three-web-09",
+      "http_status": 200,
+      "bytes": 7904740,
+      "actual_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "requested_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?loader=three&model=web&view=rearRight&run=RV-three-web-09&sha=a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/three-web/09-rearRight.png",
+      "screenshot_sha256": "ea8904ac9e7ebe5095a0aae8150b4b0305beb9765360a1d9d205a22775f2c450",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          228.09425520833332,
+          230.03311770833332,
+          231.81373854166668
+        ],
+        "stddev_rgb": [
+          29.213571694745504,
+          29.320388918675604,
+          29.868849426185466
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:52:09.817134+00:00",
+      "loader": "three",
+      "model": "web",
+      "view": "rearLeft",
+      "run_id": "RV-three-web-10",
+      "http_status": 200,
+      "bytes": 7904740,
+      "actual_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "requested_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?loader=three&model=web&view=rearLeft&run=RV-three-web-10&sha=a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/three-web/10-rearLeft.png",
+      "screenshot_sha256": "3e3db2ad848c1f1a51a57db40c7619fc46de17032c2b58d7b97bc381d934b979",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          228.20800104166668,
+          230.07174895833333,
+          231.76314479166666
+        ],
+        "stddev_rgb": [
+          29.18199493309183,
+          29.458987398505645,
+          30.123609383980238
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:53:09.759347+00:00",
+      "loader": "babylon",
+      "model": "standard",
+      "view": "front",
+      "run_id": "RV-babylon-standard-01",
+      "http_status": 200,
+      "bytes": 11101288,
+      "actual_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "requested_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?loader=babylon&model=standard&view=front&run=RV-babylon-standard-01&sha=bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/babylon-standard/01-front.png",
+      "screenshot_sha256": "eaf4a76dfacb4be3f4f15be10b94dedf63c71404ca988d6e10091560910a84ca",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          199.43081458333333,
+          200.66413333333333,
+          202.52540416666668
+        ],
+        "stddev_rgb": [
+          73.79375191512797,
+          75.07850847778538,
+          75.30138495048847
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:53:44.141261+00:00",
+      "loader": "babylon",
+      "model": "standard",
+      "view": "rear",
+      "run_id": "RV-babylon-standard-02",
+      "http_status": 200,
+      "bytes": 11101288,
+      "actual_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "requested_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?loader=babylon&model=standard&view=rear&run=RV-babylon-standard-02&sha=bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/babylon-standard/02-rear.png",
+      "screenshot_sha256": "d4c66941aca41775118c19f83f7964a13c6816cad9bc5e4fedd0104a1897f3a0",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          218.53489583333334,
+          219.90552395833333,
+          221.28393229166667
+        ],
+        "stddev_rgb": [
+          51.027043758979595,
+          51.931869072075756,
+          52.93964470424868
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:54:08.602573+00:00",
+      "loader": "babylon",
+      "model": "standard",
+      "view": "right",
+      "run_id": "RV-babylon-standard-03",
+      "http_status": 200,
+      "bytes": 11101288,
+      "actual_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "requested_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?loader=babylon&model=standard&view=right&run=RV-babylon-standard-03&sha=bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/babylon-standard/03-right.png",
+      "screenshot_sha256": "172850af6cb324cadad489f88168d9dbdd0a240f9629a7d74f976365d5826ae1",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          230.75457395833334,
+          232.86884270833335,
+          234.56055625
+        ],
+        "stddev_rgb": [
+          24.53576692843337,
+          24.358452178997506,
+          25.082970642926643
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:54:35.747933+00:00",
+      "loader": "babylon",
+      "model": "standard",
+      "view": "left",
+      "run_id": "RV-babylon-standard-04",
+      "http_status": 200,
+      "bytes": 11101288,
+      "actual_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "requested_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?loader=babylon&model=standard&view=left&run=RV-babylon-standard-04&sha=bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/babylon-standard/04-left.png",
+      "screenshot_sha256": "d2dde2cf9ff61a2d18c10daca31db46e12cbc651fcf29b7da27dff1997e64312",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          230.231146875,
+          232.48175729166667,
+          234.009421875
+        ],
+        "stddev_rgb": [
+          25.38390388278585,
+          24.912797048644027,
+          26.452442738871497
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:55:09.273627+00:00",
+      "loader": "babylon",
+      "model": "standard",
+      "view": "top",
+      "run_id": "RV-babylon-standard-05",
+      "http_status": 200,
+      "bytes": 11101288,
+      "actual_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "requested_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?loader=babylon&model=standard&view=top&run=RV-babylon-standard-05&sha=bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/babylon-standard/05-top.png",
+      "screenshot_sha256": "5a4a7ced31fb04bc64ae9719a7d8076cf0474f9447dce77d7132ed77c0dd685b",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          218.91422083333333,
+          220.69030625,
+          222.433540625
+        ],
+        "stddev_rgb": [
+          39.771523919146425,
+          39.88331682062747,
+          40.147477891744856
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:55:42.040645+00:00",
+      "loader": "babylon",
+      "model": "standard",
+      "view": "bottom",
+      "run_id": "RV-babylon-standard-06",
+      "http_status": 200,
+      "bytes": 11101288,
+      "actual_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "requested_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?loader=babylon&model=standard&view=bottom&run=RV-babylon-standard-06&sha=bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/babylon-standard/06-bottom.png",
+      "screenshot_sha256": "be8dd95fa968a5e149025961f77134120f29f7a3dc81492e865c9f680fadd9ed",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          214.42984270833333,
+          215.9636,
+          217.40040416666668
+        ],
+        "stddev_rgb": [
+          39.77166027824035,
+          40.552517955609105,
+          41.46637424673133
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:56:13.637510+00:00",
+      "loader": "babylon",
+      "model": "standard",
+      "view": "frontRight",
+      "run_id": "RV-babylon-standard-07",
+      "http_status": 200,
+      "bytes": 11101288,
+      "actual_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "requested_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?loader=babylon&model=standard&view=frontRight&run=RV-babylon-standard-07&sha=bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/babylon-standard/07-frontRight.png",
+      "screenshot_sha256": "40bcdb6754783406cd14f3e41d87b86b81a2bad52841f340c79fea1cede921b4",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          225.63939895833335,
+          227.48058333333333,
+          229.25303854166665
+        ],
+        "stddev_rgb": [
+          37.351237920320926,
+          37.7926473513882,
+          38.156081614924304
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:56:45.689879+00:00",
+      "loader": "babylon",
+      "model": "standard",
+      "view": "frontLeft",
+      "run_id": "RV-babylon-standard-08",
+      "http_status": 200,
+      "bytes": 11101288,
+      "actual_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "requested_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?loader=babylon&model=standard&view=frontLeft&run=RV-babylon-standard-08&sha=bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/babylon-standard/08-frontLeft.png",
+      "screenshot_sha256": "d21b3bc10e79899f98502060807fb410237bfc6b22f8a64391dbaa5559912826",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          225.56556041666667,
+          227.47772291666666,
+          229.32956354166666
+        ],
+        "stddev_rgb": [
+          37.366963012110425,
+          37.695773906344186,
+          38.01504734089303
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:57:17.662990+00:00",
+      "loader": "babylon",
+      "model": "standard",
+      "view": "rearRight",
+      "run_id": "RV-babylon-standard-09",
+      "http_status": 200,
+      "bytes": 11101288,
+      "actual_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "requested_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?loader=babylon&model=standard&view=rearRight&run=RV-babylon-standard-09&sha=bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/babylon-standard/09-rearRight.png",
+      "screenshot_sha256": "99d6ac37af781985f703f98bb72f68c97164383b6fe8e23e9801c3cc3d3527b1",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          228.372034375,
+          230.23503958333333,
+          231.93329791666667
+        ],
+        "stddev_rgb": [
+          29.893491658700935,
+          30.159225442821533,
+          30.808274098290774
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:57:47.185402+00:00",
+      "loader": "babylon",
+      "model": "standard",
+      "view": "rearLeft",
+      "run_id": "RV-babylon-standard-10",
+      "http_status": 200,
+      "bytes": 11101288,
+      "actual_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "requested_sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?loader=babylon&model=standard&view=rearLeft&run=RV-babylon-standard-10&sha=bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/babylon-standard/10-rearLeft.png",
+      "screenshot_sha256": "68d9a7a1d53fe0d1ad61b9c08c266b58eb5bdd8786c9f629d2581fc16dfc386b",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          228.22458958333334,
+          230.16427083333335,
+          231.95004270833334
+        ],
+        "stddev_rgb": [
+          29.912678526042864,
+          30.013661967121774,
+          30.561595199596695
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:59:09.887854+00:00",
+      "loader": "babylon",
+      "model": "web",
+      "view": "front",
+      "run_id": "RV-babylon-web-01",
+      "http_status": 200,
+      "bytes": 7904740,
+      "actual_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "requested_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?loader=babylon&model=web&view=front&run=RV-babylon-web-01&sha=a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/babylon-web/01-front.png",
+      "screenshot_sha256": "d889a54cd69e4e0243cbf8812dbbbf4a82f3b1d0d68afd708e88e6cc3c5f383b",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          199.358746875,
+          200.59173125,
+          202.45354375
+        ],
+        "stddev_rgb": [
+          73.97761630534835,
+          75.25951862529487,
+          75.47967011156159
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T19:59:48.795921+00:00",
+      "loader": "babylon",
+      "model": "web",
+      "view": "rear",
+      "run_id": "RV-babylon-web-02",
+      "http_status": 200,
+      "bytes": 7904740,
+      "actual_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "requested_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?loader=babylon&model=web&view=rear&run=RV-babylon-web-02&sha=a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/babylon-web/02-rear.png",
+      "screenshot_sha256": "349359ab0e22b3640c8a7f68f111ebc26ec2589d61d218d61d577e518c5f8305",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          218.372765625,
+          219.74095208333333,
+          221.11980729166666
+        ],
+        "stddev_rgb": [
+          51.65261415372721,
+          52.55988101293171,
+          53.55828463930235
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T20:00:17.323210+00:00",
+      "loader": "babylon",
+      "model": "web",
+      "view": "right",
+      "run_id": "RV-babylon-web-03",
+      "http_status": 200,
+      "bytes": 7904740,
+      "actual_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "requested_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?loader=babylon&model=web&view=right&run=RV-babylon-web-03&sha=a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/babylon-web/03-right.png",
+      "screenshot_sha256": "34fbd26b3a50249fcd5f3e177ac291a8e1c49dc4e1b1990279ffd0c89cf80712",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          230.741953125,
+          232.85606875,
+          234.54718541666668
+        ],
+        "stddev_rgb": [
+          24.645058039465763,
+          24.472086829595657,
+          25.195900555178646
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T20:00:49.839006+00:00",
+      "loader": "babylon",
+      "model": "web",
+      "view": "left",
+      "run_id": "RV-babylon-web-04",
+      "http_status": 200,
+      "bytes": 7904740,
+      "actual_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "requested_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?loader=babylon&model=web&view=left&run=RV-babylon-web-04&sha=a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/babylon-web/04-left.png",
+      "screenshot_sha256": "14bcf0a613d24702891c33acf6e91bf1208080c34406b189708a59846b6f4a14",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          230.22510833333334,
+          232.47655833333334,
+          234.00017916666667
+        ],
+        "stddev_rgb": [
+          25.445428395652264,
+          24.9738777790234,
+          26.523938283204366
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T20:01:16.583535+00:00",
+      "loader": "babylon",
+      "model": "web",
+      "view": "top",
+      "run_id": "RV-babylon-web-05",
+      "http_status": 200,
+      "bytes": 7904740,
+      "actual_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "requested_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?loader=babylon&model=web&view=top&run=RV-babylon-web-05&sha=a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/babylon-web/05-top.png",
+      "screenshot_sha256": "c2306cd7c451be1fc417821e0f03eac739f69dfb5a855353cfeb1309f2b17965",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          218.885825,
+          220.66164791666668,
+          222.403634375
+        ],
+        "stddev_rgb": [
+          39.7659450397285,
+          39.87952637780078,
+          40.14578671230212
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T20:01:42.919985+00:00",
+      "loader": "babylon",
+      "model": "web",
+      "view": "bottom",
+      "run_id": "RV-babylon-web-06",
+      "http_status": 200,
+      "bytes": 7904740,
+      "actual_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "requested_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?loader=babylon&model=web&view=bottom&run=RV-babylon-web-06&sha=a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/babylon-web/06-bottom.png",
+      "screenshot_sha256": "b1c5c62d4a871e3dcde30577bf3fc0cf92d56bb106c56b92cf2b7a1b9e9098d0",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          214.36530104166667,
+          215.89755208333332,
+          217.33561770833333
+        ],
+        "stddev_rgb": [
+          39.85969149643065,
+          40.64385713947894,
+          41.55613922910614
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T20:02:10.659968+00:00",
+      "loader": "babylon",
+      "model": "web",
+      "view": "frontRight",
+      "run_id": "RV-babylon-web-07",
+      "http_status": 200,
+      "bytes": 7904740,
+      "actual_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "requested_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?loader=babylon&model=web&view=frontRight&run=RV-babylon-web-07&sha=a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/babylon-web/07-frontRight.png",
+      "screenshot_sha256": "7fcc801ee0d74657a4508d3b318b0d222897a8137fd9b3e53223402d74006c38",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          225.62913229166668,
+          227.470825,
+          229.242665625
+        ],
+        "stddev_rgb": [
+          37.354285785140064,
+          37.79275427780712,
+          38.15616005119981
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T20:02:37.417376+00:00",
+      "loader": "babylon",
+      "model": "web",
+      "view": "frontLeft",
+      "run_id": "RV-babylon-web-08",
+      "http_status": 200,
+      "bytes": 7904740,
+      "actual_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "requested_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?loader=babylon&model=web&view=frontLeft&run=RV-babylon-web-08&sha=a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/babylon-web/08-frontLeft.png",
+      "screenshot_sha256": "06dd5960a7829e68c31b91b796b0a1df4abdf638ae440a261a69e2b94836f662",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          225.57275,
+          227.484859375,
+          229.334003125
+        ],
+        "stddev_rgb": [
+          37.326230460015196,
+          37.65381689831024,
+          37.97404364655976
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T20:03:02.298915+00:00",
+      "loader": "babylon",
+      "model": "web",
+      "view": "rearRight",
+      "run_id": "RV-babylon-web-09",
+      "http_status": 200,
+      "bytes": 7904740,
+      "actual_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "requested_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?loader=babylon&model=web&view=rearRight&run=RV-babylon-web-09&sha=a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/babylon-web/09-rearRight.png",
+      "screenshot_sha256": "9100ec2cefe4e35dd1bc42a4ecc24c8de7b641859fd3d98d97db05e53bf1af93",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          228.337603125,
+          230.20112604166667,
+          231.89909479166667
+        ],
+        "stddev_rgb": [
+          30.013069204736926,
+          30.281243221236796,
+          30.927592023099155
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    },
+    {
+      "timestamp_utc": "2026-08-23T20:03:36.838590+00:00",
+      "loader": "babylon",
+      "model": "web",
+      "view": "rearLeft",
+      "run_id": "RV-babylon-web-10",
+      "http_status": 200,
+      "bytes": 7904740,
+      "actual_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "requested_sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "request_path": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?loader=babylon&model=web&view=rearLeft&run=RV-babylon-web-10&sha=a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.7977.8 Safari/537.36",
+      "screenshot_path": "qa/revalidation-2026-08-24/renders/babylon-web/10-rearLeft.png",
+      "screenshot_sha256": "4b8e81a64256fe1636adaa1d8e3762a3ca2bcb855dd087287c0f6f31d3792d06",
+      "screenshot": {
+        "width": 1200,
+        "height": 800,
+        "mean_rgb": [
+          228.21005833333334,
+          230.1502875,
+          231.93430833333332
+        ],
+        "stddev_rgb": [
+          29.987917922555535,
+          30.089354414543553,
+          30.637344811600936
+        ]
+      },
+      "checks": {
+        "http_200": true,
+        "bytes_match_current": true,
+        "actual_sha_matches_current": true,
+        "requested_sha_matches_current": true,
+        "server_sha_match_flag": true,
+        "unique_chromium_user_agent": true,
+        "screenshot_exists": true
+      }
+    }
+  ],
+  "missing_matrix_cells": [],
+  "non_singleton_matrix_cells": [],
+  "errors": []
+}

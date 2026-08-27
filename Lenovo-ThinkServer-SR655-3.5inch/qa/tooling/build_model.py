@@ -25,7 +25,11 @@ FRONT_PROJECTION = 0.0340
 Z_MAX = OVERALL_D / 2.0
 Z_MIN = -OVERALL_D / 2.0
 FLANGE_Z = Z_MAX - FRONT_PROJECTION
-BODY_REAR_Z = FLANGE_Z - 0.7300
+CORE_SHELL_INSET = 0.0024
+PHOTO_SKIN_INSET = 0.0012
+FACE_PHOTO_INSET = 0.0016
+FRAME_FACE_INSET = 0.0008
+BODY_REAR_Z = Z_MIN + CORE_SHELL_INSET
 BODY_D = FLANGE_Z - BODY_REAR_Z
 BODY_Z = (FLANGE_Z + BODY_REAR_Z) / 2.0
 EAR_W = (OVERALL_W - BODY_W) / 2.0
@@ -149,9 +153,17 @@ def make_rgb_texture(face: str, web: bool) -> Image.Image:
 
 
 def add_chassis_geometry(scene: trimesh.Scene) -> None:
-    # Leave a sub-millimetre skin allowance so the separately modelled top,
-    # bottom and photographic surfaces remain inside the published 86.5 mm.
-    add_box(scene, "ChassisBody", (BODY_W, HEIGHT - 0.0006, BODY_D), (0.0, 0.0, BODY_Z), "silver")
+    # The watertight core is deliberately inset from every photographic skin.
+    # The previous 0.08 mm offset was close enough to compete in the depth
+    # buffer during orbit. This 1.2 mm core/skin gap is invisible externally and
+    # leaves the published bounds to the evidence-locked skins and real relief.
+    add_box(
+        scene,
+        "ChassisBody",
+        (BODY_W - 2 * CORE_SHELL_INSET, HEIGHT - 2 * CORE_SHELL_INSET, BODY_D),
+        (0.0, 0.0, BODY_Z),
+        "silver",
+    )
     # Separate black front latch/ear assemblies, present only at the front plane.
     for side, sign in (("Left", -1.0), ("Right", 1.0)):
         x = sign * (BODY_W / 2.0 + EAR_W / 2.0)
@@ -186,11 +198,12 @@ def add_front_geometry(scene: trimesh.Scene) -> None:
             frame_h = cell_h * 0.96
             bar = 0.0022
             depth = 0.011
-            center_z = z_face - depth / 2.0
+            center_z = z_face - FRAME_FACE_INSET - depth / 2.0
             add_box(scene, f"LFFCarrier_{idx}_Top", (frame_w, bar, depth), (x, y + frame_h / 2.0 - bar / 2.0, center_z), "black")
             add_box(scene, f"LFFCarrier_{idx}_Bottom", (frame_w, bar, depth), (x, y - frame_h / 2.0 + bar / 2.0, center_z), "black")
-            add_box(scene, f"LFFCarrier_{idx}_Left", (bar, frame_h, depth), (x - frame_w / 2.0 + bar / 2.0, y, center_z), "black")
-            add_box(scene, f"LFFCarrier_{idx}_Right", (bar, frame_h, depth), (x + frame_w / 2.0 - bar / 2.0, y, center_z), "black")
+            side_h = frame_h - 2 * bar
+            add_box(scene, f"LFFCarrier_{idx}_Left", (bar, side_h, depth), (x - frame_w / 2.0 + bar / 2.0, y, center_z), "black")
+            add_box(scene, f"LFFCarrier_{idx}_Right", (bar, side_h, depth), (x + frame_w / 2.0 - bar / 2.0, y, center_z), "black")
             add_box(scene, f"LFFCarrier_{idx}_Handle", (frame_w * 0.70, 0.0018, 0.014), (x - frame_w * 0.05, y - frame_h * 0.30, z_face - 0.007), "dark")
             add_box(scene, f"LFFCarrier_{idx}_Latch", (0.012, frame_h * 0.80, 0.014), (x + frame_w * 0.40, y, z_face - 0.007), "dark")
 
@@ -213,13 +226,14 @@ def add_rear_geometry(scene: trimesh.Scene) -> None:
             y = row_y[row]
             slot_h = 0.014
             depth = 0.010
-            center_z = z_face + depth / 2.0
+            center_z = z_face + FRAME_FACE_INSET + depth / 2.0
             bar = 0.0016
             name = f"RearPCIe_{bank}_{row+1}"
             add_box(scene, f"{name}_Top", (slot_w, bar, depth), (x, y + slot_h / 2.0, center_z), "light_silver")
             add_box(scene, f"{name}_Bottom", (slot_w, bar, depth), (x, y - slot_h / 2.0, center_z), "light_silver")
-            add_box(scene, f"{name}_Left", (bar, slot_h, depth), (x + slot_w / 2.0, y, center_z), "dark_silver")
-            add_box(scene, f"{name}_Right", (bar, slot_h, depth), (x - slot_w / 2.0, y, center_z), "dark_silver")
+            side_h = slot_h - 2 * bar
+            add_box(scene, f"{name}_Left", (bar, side_h, depth), (x + slot_w / 2.0, y, center_z), "dark_silver")
+            add_box(scene, f"{name}_Right", (bar, side_h, depth), (x - slot_w / 2.0, y, center_z), "dark_silver")
             add_box(scene, f"{name}_HandleLip", (slot_w * 0.80, 0.0012, 0.013), (x, y - slot_h * 0.30, z_face + 0.0065), "dark_silver")
     for i, x in enumerate((0.096, -0.045, -0.165), 1):
         add_box(scene, f"RearBankDivider{i}", (0.013, 0.060, 0.014), (x, 0.010, z_face + 0.007), "silver")
@@ -263,65 +277,70 @@ def add_side_top_bottom_geometry(scene: trimesh.Scene) -> None:
     add_box(scene, "LeftSideSlot1", (0.004, 0.004, 0.010), (left_x, -0.020, -0.300), "vent")
     add_box(scene, "LeftSideSlot2", (0.004, 0.004, 0.010), (left_x, -0.028, -0.300), "vent")
 
-    # Top cover is a distinct assembly with stamped relief, latch and vent.
+    # The photographed cover already carries the shallow stamped seams. At the
+    # target web distance they do not change silhouette; extra colored rims
+    # obscured factual label pixels and rendered as synthetic white outlines.
+    # Keep only the genuinely projecting latch as separate geometry.
     top_y = HEIGHT / 2.0
-    add_box(scene, "TopCoverAssembly", (BODY_W - 0.006, 0.003, 0.700), (0.0, top_y - 0.0016, BODY_Z - 0.003), "silver")
-    add_box(scene, "TopCentralStamping", (0.300, 0.0020, 0.390), (-0.015, top_y - 0.0011, -0.020), "light_silver")
-    add_box(scene, "TopFrontStamping", (0.360, 0.0018, 0.075), (0.0, top_y - 0.0010, 0.280), "light_silver")
-    add_box(scene, "TopRearVentRecess", (0.145, 0.0012, 0.055), (0.065, top_y - 0.0007, -0.300), "vent")
-    add_box(scene, "TopReleaseLatch", (0.052, 0.006, 0.016), (0.072, top_y - 0.0031, -0.215), "black")
-    add_box(scene, "TopReleaseLatchBlueTab", (0.010, 0.007, 0.012), (0.050, top_y - 0.0036, -0.215), "blue")
+    # The dense rear perforation field stays in the exact opaque texture; a
+    # solid dark plate would cover its factual hole pattern.
+    add_box(scene, "TopReleaseLatch", (0.052, 0.006, 0.016), (0.072, top_y - 0.0033, -0.215), "black")
+    add_box(scene, "TopReleaseLatchBlueTab", (0.010, 0.007, 0.012), (0.050, top_y - 0.00355, -0.215), "blue")
 
-    # Bottom plate is closed; two exact crosswise seam paths get relief.
+    # The photographic bottom skin plus inset watertight core closes the body.
+    # Keep only the exact stamped seam relief and avoid a duplicate full plate.
     bottom_y = -HEIGHT / 2.0
-    add_box(scene, "BottomPlateAssembly", (BODY_W - 0.004, 0.0025, 0.715), (0.0, bottom_y + 0.00135, BODY_Z - 0.002), "silver")
     add_box(scene, "BottomStampedSeamFront", (BODY_W - 0.012, 0.0016, 0.004), (0.0, bottom_y + 0.0009, 0.160), "dark_silver")
     add_box(scene, "BottomStampedSeamRear", (BODY_W - 0.012, 0.0016, 0.004), (0.0, bottom_y + 0.0009, -0.120), "dark_silver")
 
 
 def add_textured_faces(scene: trimesh.Scene, textures: dict[str, Image.Image]) -> None:
-    e = 0.00008
+    side_x = BODY_W / 2.0 - PHOTO_SKIN_INSET
+    top_y = HEIGHT / 2.0 - PHOTO_SKIN_INSET
+    bottom_y = -HEIGHT / 2.0 + PHOTO_SKIN_INSET
+    front_z = Z_MAX - FACE_PHOTO_INSET
+    rear_z = Z_MIN + FACE_PHOTO_INSET
     # Front (+Z), image left is physical -X.
     add_plane(scene, "FrontPhotographicSurface", [
-        (-OVERALL_W / 2, -HEIGHT / 2, Z_MAX + e),
-        (OVERALL_W / 2, -HEIGHT / 2, Z_MAX + e),
-        (OVERALL_W / 2, HEIGHT / 2, Z_MAX + e),
-        (-OVERALL_W / 2, HEIGHT / 2, Z_MAX + e),
+        (-OVERALL_W / 2, -HEIGHT / 2, front_z),
+        (OVERALL_W / 2, -HEIGHT / 2, front_z),
+        (OVERALL_W / 2, HEIGHT / 2, front_z),
+        (-OVERALL_W / 2, HEIGHT / 2, front_z),
     ], textures["front"])
     # Rear (-Z): natural rear screen-left is physical +X.
     add_plane(scene, "RearPhotographicSurface", [
-        (BODY_W / 2, -HEIGHT / 2, Z_MIN - e),
-        (-BODY_W / 2, -HEIGHT / 2, Z_MIN - e),
-        (-BODY_W / 2, HEIGHT / 2, Z_MIN - e),
-        (BODY_W / 2, HEIGHT / 2, Z_MIN - e),
+        (BODY_W / 2, -HEIGHT / 2, rear_z),
+        (-BODY_W / 2, -HEIGHT / 2, rear_z),
+        (-BODY_W / 2, HEIGHT / 2, rear_z),
+        (BODY_W / 2, HEIGHT / 2, rear_z),
     ], textures["rear"])
     # Right (+X), front edge at image left.
     add_plane(scene, "RightPhotographicSurface", [
-        (BODY_W / 2 + e, -HEIGHT / 2, Z_MAX),
-        (BODY_W / 2 + e, -HEIGHT / 2, Z_MIN),
-        (BODY_W / 2 + e, HEIGHT / 2, Z_MIN),
-        (BODY_W / 2 + e, HEIGHT / 2, Z_MAX),
+        (side_x, -HEIGHT / 2, Z_MAX),
+        (side_x, -HEIGHT / 2, Z_MIN),
+        (side_x, HEIGHT / 2, Z_MIN),
+        (side_x, HEIGHT / 2, Z_MAX),
     ], textures["right"])
     # Left (-X), rear edge at image left and front edge at image right.
     add_plane(scene, "LeftPhotographicSurface", [
-        (-BODY_W / 2 - e, -HEIGHT / 2, Z_MIN),
-        (-BODY_W / 2 - e, -HEIGHT / 2, Z_MAX),
-        (-BODY_W / 2 - e, HEIGHT / 2, Z_MAX),
-        (-BODY_W / 2 - e, HEIGHT / 2, Z_MIN),
+        (-side_x, -HEIGHT / 2, Z_MIN),
+        (-side_x, -HEIGHT / 2, Z_MAX),
+        (-side_x, HEIGHT / 2, Z_MAX),
+        (-side_x, HEIGHT / 2, Z_MIN),
     ], textures["left"])
     # Top (+Y), front edge at image top.
     add_plane(scene, "TopPhotographicSurface", [
-        (BODY_W / 2, HEIGHT / 2, Z_MIN),
-        (-BODY_W / 2, HEIGHT / 2, Z_MIN),
-        (-BODY_W / 2, HEIGHT / 2, Z_MAX),
-        (BODY_W / 2, HEIGHT / 2, Z_MAX),
+        (BODY_W / 2, top_y, Z_MIN),
+        (-BODY_W / 2, top_y, Z_MIN),
+        (-BODY_W / 2, top_y, Z_MAX),
+        (BODY_W / 2, top_y, Z_MAX),
     ], textures["top"])
     # Bottom (-Y), front edge at image top with natural bottom left/right reversal.
     add_plane(scene, "BottomPhotographicSurface", [
-        (-BODY_W / 2, -HEIGHT / 2, Z_MIN),
-        (BODY_W / 2, -HEIGHT / 2, Z_MIN),
-        (BODY_W / 2, -HEIGHT / 2, Z_MAX),
-        (-BODY_W / 2, -HEIGHT / 2, Z_MAX),
+        (-BODY_W / 2, bottom_y, Z_MIN),
+        (BODY_W / 2, bottom_y, Z_MIN),
+        (BODY_W / 2, bottom_y, Z_MAX),
+        (-BODY_W / 2, bottom_y, Z_MAX),
     ], textures["bottom"])
 
 
@@ -332,7 +351,7 @@ def build(web: bool) -> Path:
         "product": "ThinkSystem SR655",
         "variant": "B5VK AUR9 12x3.5 LFF, 8-slot PCIe-rich rear, 2x750W AC",
         "coordinate_convention": "+X device right, +Y up, +Z front",
-        "build_type": "newly constructed exact exterior replica; official viewer mesh not copied",
+        "build_type": "newly constructed exact exterior replica; rotation-stable layered skins; official viewer mesh not copied",
     })
     add_chassis_geometry(scene)
     add_front_geometry(scene)

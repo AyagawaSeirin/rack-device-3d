@@ -1,0 +1,351 @@
+{
+  "status": "PASS",
+  "models": {
+    "standard": {
+      "status": "PASS",
+      "path": "model/Lenovo-ThinkServer-SR655-3.5inch.glb",
+      "bytes": 11101288,
+      "sha256": "bc4abc301d051b8396943855464c941993854cde23c4a6ad74f140a7545446f6",
+      "asset": {
+        "generator": "https://github.com/mikedh/trimesh",
+        "version": "2.0"
+      },
+      "scene_identity_metadata": {
+        "manufacturer": "Lenovo",
+        "product": "ThinkSystem SR655",
+        "variant": "B5VK AUR9 12x3.5 LFF, 8-slot PCIe-rich rear, 2x750W AC",
+        "coordinate_convention": "+X device right, +Y up, +Z front",
+        "build_type": "newly constructed exact exterior replica; official viewer mesh not copied"
+      },
+      "counts": {
+        "scenes": 1,
+        "nodes": 189,
+        "meshes": 189,
+        "materials": 16,
+        "textures": 6,
+        "images": 6
+      },
+      "feature_indices": {
+        "lff_carriers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "pcie_bank_a_slots": [
+          1,
+          2,
+          3
+        ],
+        "pcie_bank_b_slots": [
+          1,
+          2,
+          3
+        ],
+        "pcie_bank_c_slots": [
+          1,
+          2
+        ],
+        "psu_modules": [
+          1,
+          2
+        ],
+        "psu_c14_inlets": [
+          1,
+          2
+        ],
+        "psu_orange_handles": [
+          1,
+          2
+        ],
+        "ocp_ports": [
+          1,
+          2
+        ],
+        "left_raised_bosses": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "right_raised_bosses": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "left_side_slots": [
+          1,
+          2
+        ]
+      },
+      "photographic_surface_nodes": [
+        "BottomPhotographicSurface",
+        "FrontPhotographicSurface",
+        "LeftPhotographicSurface",
+        "RearPhotographicSurface",
+        "RightPhotographicSurface",
+        "TopPhotographicSurface"
+      ],
+      "texture_lineage": {
+        "front": {
+          "embedded_dimensions": [
+            2600,
+            467
+          ],
+          "expected_dimensions": [
+            2600,
+            467
+          ],
+          "pixel_equal_to_current_approved_view_pipeline": true,
+          "embedded_png_sha256": "856e1aa4b5e67978f78b29ce777b59f6666707b4f3837553e387122e569873c1"
+        },
+        "rear": {
+          "embedded_dimensions": [
+            2400,
+            467
+          ],
+          "expected_dimensions": [
+            2400,
+            467
+          ],
+          "pixel_equal_to_current_approved_view_pipeline": true,
+          "embedded_png_sha256": "55fb9698c5c212f0bb8a6885fd54e281870a5df84e3785ed91bfa1a60c61c16d"
+        },
+        "right": {
+          "embedded_dimensions": [
+            3000,
+            339
+          ],
+          "expected_dimensions": [
+            3000,
+            339
+          ],
+          "pixel_equal_to_current_approved_view_pipeline": true,
+          "embedded_png_sha256": "7d8fd212fe8128bcf751b560af2bb8ec99ac5ee9aa28b9cb9a1c1a9dea02ab88"
+        },
+        "left": {
+          "embedded_dimensions": [
+            3000,
+            339
+          ],
+          "expected_dimensions": [
+            3000,
+            339
+          ],
+          "pixel_equal_to_current_approved_view_pipeline": true,
+          "embedded_png_sha256": "b76347778e139f0799afd17fb9f23c0bdacfbfc92eb6b58a4d66dfbf2aea28d4"
+        },
+        "top": {
+          "embedded_dimensions": [
+            1512,
+            2600
+          ],
+          "expected_dimensions": [
+            1512,
+            2600
+          ],
+          "pixel_equal_to_current_approved_view_pipeline": true,
+          "embedded_png_sha256": "4ad112a82da1c4f0835d35dd7e7e7c64692f23c5ae66f3428945d06e98a33d06"
+        },
+        "bottom": {
+          "embedded_dimensions": [
+            1512,
+            2600
+          ],
+          "expected_dimensions": [
+            1512,
+            2600
+          ],
+          "pixel_equal_to_current_approved_view_pipeline": true,
+          "embedded_png_sha256": "aef19656a9a3e12fca4912f338dfbc5825e5d91fa9bf842bb747a34217f8340a"
+        }
+      },
+      "negative_or_mirrored_transforms": [],
+      "external_resources": [],
+      "errors": []
+    },
+    "web": {
+      "status": "PASS",
+      "path": "model/Lenovo-ThinkServer-SR655-3.5inch-web.glb",
+      "bytes": 7904740,
+      "sha256": "a7d9015d1a7a564acac7cab1ce497a1d1b11ca6f7053febeebc1a535916dbd3f",
+      "asset": {
+        "generator": "https://github.com/mikedh/trimesh",
+        "version": "2.0"
+      },
+      "scene_identity_metadata": {
+        "manufacturer": "Lenovo",
+        "product": "ThinkSystem SR655",
+        "variant": "B5VK AUR9 12x3.5 LFF, 8-slot PCIe-rich rear, 2x750W AC",
+        "coordinate_convention": "+X device right, +Y up, +Z front",
+        "build_type": "newly constructed exact exterior replica; official viewer mesh not copied"
+      },
+      "counts": {
+        "scenes": 1,
+        "nodes": 189,
+        "meshes": 189,
+        "materials": 16,
+        "textures": 6,
+        "images": 6
+      },
+      "feature_indices": {
+        "lff_carriers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "pcie_bank_a_slots": [
+          1,
+          2,
+          3
+        ],
+        "pcie_bank_b_slots": [
+          1,
+          2,
+          3
+        ],
+        "pcie_bank_c_slots": [
+          1,
+          2
+        ],
+        "psu_modules": [
+          1,
+          2
+        ],
+        "psu_c14_inlets": [
+          1,
+          2
+        ],
+        "psu_orange_handles": [
+          1,
+          2
+        ],
+        "ocp_ports": [
+          1,
+          2
+        ],
+        "left_raised_bosses": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "right_raised_bosses": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "left_side_slots": [
+          1,
+          2
+        ]
+      },
+      "photographic_surface_nodes": [
+        "BottomPhotographicSurface",
+        "FrontPhotographicSurface",
+        "LeftPhotographicSurface",
+        "RearPhotographicSurface",
+        "RightPhotographicSurface",
+        "TopPhotographicSurface"
+      ],
+      "texture_lineage": {
+        "front": {
+          "embedded_dimensions": [
+            2048,
+            368
+          ],
+          "expected_dimensions": [
+            2048,
+            368
+          ],
+          "pixel_equal_to_current_approved_view_pipeline": true,
+          "embedded_png_sha256": "8a2757783b66402a85139ad61ec443e1ce58241f428854dfacf9ae3328a8f482"
+        },
+        "rear": {
+          "embedded_dimensions": [
+            2048,
+            399
+          ],
+          "expected_dimensions": [
+            2048,
+            399
+          ],
+          "pixel_equal_to_current_approved_view_pipeline": true,
+          "embedded_png_sha256": "58142d8b3c3ec0e8f670869c1a5bae9f49ac459102add557d91383143023146b"
+        },
+        "right": {
+          "embedded_dimensions": [
+            2048,
+            231
+          ],
+          "expected_dimensions": [
+            2048,
+            231
+          ],
+          "pixel_equal_to_current_approved_view_pipeline": true,
+          "embedded_png_sha256": "66910bbf23bd548faf8a907fc06bc85d16045a01119fc431113523ee73051281"
+        },
+        "left": {
+          "embedded_dimensions": [
+            2048,
+            231
+          ],
+          "expected_dimensions": [
+            2048,
+            231
+          ],
+          "pixel_equal_to_current_approved_view_pipeline": true,
+          "embedded_png_sha256": "3f9c549cfbc833d8f4abb5bc261e03a2511f878821e85f479d82218c1ae69683"
+        },
+        "top": {
+          "embedded_dimensions": [
+            1191,
+            2048
+          ],
+          "expected_dimensions": [
+            1191,
+            2048
+          ],
+          "pixel_equal_to_current_approved_view_pipeline": true,
+          "embedded_png_sha256": "cff3f1e3c5aabdcac850004fffdd2c8a7ea4881f79e42690fcb6e1c2c8887af4"
+        },
+        "bottom": {
+          "embedded_dimensions": [
+            1191,
+            2048
+          ],
+          "expected_dimensions": [
+            1191,
+            2048
+          ],
+          "pixel_equal_to_current_approved_view_pipeline": true,
+          "embedded_png_sha256": "eb0e145d11728d69160aadb7fcc1ba26e041865b239341a457fc4b1b04d315b5"
+        }
+      },
+      "negative_or_mirrored_transforms": [],
+      "external_resources": [],
+      "errors": []
+    }
+  },
+  "standard_web_same_exterior_node_structure": true,
+  "errors": []
+}

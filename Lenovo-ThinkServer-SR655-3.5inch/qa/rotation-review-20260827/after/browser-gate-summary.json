@@ -1,0 +1,1689 @@
+{
+  "stage": "after",
+  "model_key": "Lenovo-ThinkServer-SR655-3.5inch",
+  "captured_utc": "2026-08-27T10:47:05.468780+00:00",
+  "models": {
+    "standard": {
+      "path": "/root/Project/rack-device-3d/Lenovo-ThinkServer-SR655-3.5inch/model/Lenovo-ThinkServer-SR655-3.5inch.glb",
+      "bytes": 11098780,
+      "sha256": "2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97"
+    },
+    "web": {
+      "path": "/root/Project/rack-device-3d/Lenovo-ThinkServer-SR655-3.5inch/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb",
+      "bytes": 7902232,
+      "sha256": "632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868"
+    }
+  },
+  "viewer_provenance": {
+    "viewers/three.html": {
+      "bytes": 6236,
+      "sha256": "95dd0679eae772bec79ecbad1f4a77d21539fba16b1ed3706e57d6c7d8ba2ce9"
+    },
+    "viewers/babylon.html": {
+      "bytes": 6065,
+      "sha256": "00b1c861257958c72cd20df11f1be5e6e8fdd8e089392a70ceb604ccb8dfbddd"
+    },
+    "viewers/vendor/three.module.js": {
+      "bytes": 1304820,
+      "sha256": "0a3368c165eea773490aec7b77c22de70e3eac288503409256fdbf4d12578416"
+    },
+    "viewers/vendor/GLTFLoader.js": {
+      "bytes": 110029,
+      "sha256": "6f1719dcc6a179d30273dfb0de07a8c898a7981f7b08e600b446387f5967371f"
+    },
+    "viewers/vendor/babylon.js": {
+      "bytes": 8258950,
+      "sha256": "873f60ec6665d0de1a030918a194eb70e12937e5f93ae23107e1cffb1bdf29d8"
+    },
+    "viewers/vendor/babylonjs.loaders.min.js": {
+      "bytes": 577937,
+      "sha256": "9f7b1a7a52f1e9649614992c7e41c5cde287fc3f07ca6d6f6119a21daf2132d0"
+    },
+    "viewers/utils/BufferGeometryUtils.js": {
+      "bytes": 31768,
+      "sha256": "c25b7930e570e9ec56173cd3b866ec8d2e10016630db3937efb439daf1cedbf6"
+    }
+  },
+  "rotation_manifests": [
+    {
+      "engine": "three",
+      "variant": "standard",
+      "status": "PASS",
+      "yaw_frame_count": 72,
+      "model_sha256": "2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97"
+    },
+    {
+      "engine": "three",
+      "variant": "web",
+      "status": "PASS",
+      "yaw_frame_count": 72,
+      "model_sha256": "632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868"
+    },
+    {
+      "engine": "babylon",
+      "variant": "standard",
+      "status": "PASS",
+      "yaw_frame_count": 72,
+      "model_sha256": "2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97"
+    },
+    {
+      "engine": "babylon",
+      "variant": "web",
+      "status": "PASS",
+      "yaw_frame_count": 72,
+      "model_sha256": "632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868"
+    }
+  ],
+  "static_loads": [
+    {
+      "index": 1,
+      "name": "front",
+      "yaw": 0,
+      "pitch": 0,
+      "background": "light",
+      "load_id": "after-three-standard-01-front",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/three.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=standard&bg=light&load=after-three-standard-01-front&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97&yaw=0&pitch=0",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-three-standard-01-front&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "load_id": "after-three-standard-01-front",
+        "yaw": 0,
+        "pitch": 0,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-three-standard-01-front&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "transferSize": 11099080,
+        "encodedBodySize": 11098780,
+        "decodedBodySize": 11098780,
+        "duration": 207.09999999962747
+      },
+      "screenshot_path": "after/static-40-loads/three/standard/01-front.png",
+      "screenshot_bytes": 78526,
+      "screenshot_sha256": "5e79d2f715c00b44f3e153adbcd2607a3b787a76940016e18b2dcc1aaafb9222",
+      "status": "PASS"
+    },
+    {
+      "index": 2,
+      "name": "rear",
+      "yaw": 180,
+      "pitch": 0,
+      "background": "dark",
+      "load_id": "after-three-standard-02-rear",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/three.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=standard&bg=dark&load=after-three-standard-02-rear&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97&yaw=180&pitch=0",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-three-standard-02-rear&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "load_id": "after-three-standard-02-rear",
+        "yaw": 180,
+        "pitch": 0,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-three-standard-02-rear&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "transferSize": 11099080,
+        "encodedBodySize": 11098780,
+        "decodedBodySize": 11098780,
+        "duration": 245.20000000018626
+      },
+      "screenshot_path": "after/static-40-loads/three/standard/02-rear.png",
+      "screenshot_bytes": 81843,
+      "screenshot_sha256": "711d15ba981e1e8c5d94f43a5456bf19b3441893b669ee51723299f5b252aabe",
+      "status": "PASS"
+    },
+    {
+      "index": 3,
+      "name": "left",
+      "yaw": 270,
+      "pitch": 0,
+      "background": "light",
+      "load_id": "after-three-standard-03-left",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/three.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=standard&bg=light&load=after-three-standard-03-left&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97&yaw=270&pitch=0",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-three-standard-03-left&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "load_id": "after-three-standard-03-left",
+        "yaw": 270,
+        "pitch": 0,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-three-standard-03-left&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "transferSize": 11099080,
+        "encodedBodySize": 11098780,
+        "decodedBodySize": 11098780,
+        "duration": 214.8999999994412
+      },
+      "screenshot_path": "after/static-40-loads/three/standard/03-left.png",
+      "screenshot_bytes": 80786,
+      "screenshot_sha256": "fbfa6f6871dbdc9dc5958942d96d31005bd3c3ee7fb07a8dd77753991276f777",
+      "status": "PASS"
+    },
+    {
+      "index": 4,
+      "name": "right",
+      "yaw": 90,
+      "pitch": 0,
+      "background": "dark",
+      "load_id": "after-three-standard-04-right",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/three.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=standard&bg=dark&load=after-three-standard-04-right&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97&yaw=90&pitch=0",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-three-standard-04-right&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "load_id": "after-three-standard-04-right",
+        "yaw": 90,
+        "pitch": 0,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-three-standard-04-right&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "transferSize": 11099080,
+        "encodedBodySize": 11098780,
+        "decodedBodySize": 11098780,
+        "duration": 165.79999999981374
+      },
+      "screenshot_path": "after/static-40-loads/three/standard/04-right.png",
+      "screenshot_bytes": 71070,
+      "screenshot_sha256": "3332443fc3bc19d5b9ffccd3bdec250f2aac4179e627d0615a25c9eee4ca34b7",
+      "status": "PASS"
+    },
+    {
+      "index": 5,
+      "name": "top",
+      "yaw": 0,
+      "pitch": 88,
+      "background": "light",
+      "load_id": "after-three-standard-05-top",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/three.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=standard&bg=light&load=after-three-standard-05-top&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97&yaw=0&pitch=88",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-three-standard-05-top&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "load_id": "after-three-standard-05-top",
+        "yaw": 0,
+        "pitch": 88,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-three-standard-05-top&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "transferSize": 11099080,
+        "encodedBodySize": 11098780,
+        "decodedBodySize": 11098780,
+        "duration": 151.09999999962747
+      },
+      "screenshot_path": "after/static-40-loads/three/standard/05-top.png",
+      "screenshot_bytes": 274386,
+      "screenshot_sha256": "bfa5c1dc6a51939330586955e7538601dc37c700f9b9d98c1a11885b3524b804",
+      "status": "PASS"
+    },
+    {
+      "index": 6,
+      "name": "bottom",
+      "yaw": 0,
+      "pitch": -88,
+      "background": "dark",
+      "load_id": "after-three-standard-06-bottom",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/three.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=standard&bg=dark&load=after-three-standard-06-bottom&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97&yaw=0&pitch=-88",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-three-standard-06-bottom&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "load_id": "after-three-standard-06-bottom",
+        "yaw": 0,
+        "pitch": -88,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-three-standard-06-bottom&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "transferSize": 11099080,
+        "encodedBodySize": 11098780,
+        "decodedBodySize": 11098780,
+        "duration": 223.5
+      },
+      "screenshot_path": "after/static-40-loads/three/standard/06-bottom.png",
+      "screenshot_bytes": 200569,
+      "screenshot_sha256": "43e8bb0f2c03f295dd450dc41d129a87bb243b4a6889b88c8c57ee96acdad411",
+      "status": "PASS"
+    },
+    {
+      "index": 7,
+      "name": "front-left",
+      "yaw": 315,
+      "pitch": 18,
+      "background": "light",
+      "load_id": "after-three-standard-07-front-left",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/three.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=standard&bg=light&load=after-three-standard-07-front-left&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97&yaw=315&pitch=18",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-three-standard-07-front-left&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "load_id": "after-three-standard-07-front-left",
+        "yaw": 315,
+        "pitch": 18,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-three-standard-07-front-left&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "transferSize": 11099080,
+        "encodedBodySize": 11098780,
+        "decodedBodySize": 11098780,
+        "duration": 177.6000000005588
+      },
+      "screenshot_path": "after/static-40-loads/three/standard/07-front-left.png",
+      "screenshot_bytes": 182372,
+      "screenshot_sha256": "08bb42c1f6ad30a90ec5d7253e11c1ae4bf173eefe2f354196c73717df46db76",
+      "status": "PASS"
+    },
+    {
+      "index": 8,
+      "name": "front-right",
+      "yaw": 45,
+      "pitch": 18,
+      "background": "dark",
+      "load_id": "after-three-standard-08-front-right",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/three.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=standard&bg=dark&load=after-three-standard-08-front-right&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97&yaw=45&pitch=18",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-three-standard-08-front-right&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "load_id": "after-three-standard-08-front-right",
+        "yaw": 45,
+        "pitch": 18,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-three-standard-08-front-right&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "transferSize": 11099080,
+        "encodedBodySize": 11098780,
+        "decodedBodySize": 11098780,
+        "duration": 184.1000000005588
+      },
+      "screenshot_path": "after/static-40-loads/three/standard/08-front-right.png",
+      "screenshot_bytes": 180379,
+      "screenshot_sha256": "042bc8e53eb4c990cab33b2f7bbd44ac341b6954956b4ffa829341a1575833f6",
+      "status": "PASS"
+    },
+    {
+      "index": 9,
+      "name": "rear-left",
+      "yaw": 225,
+      "pitch": 18,
+      "background": "light",
+      "load_id": "after-three-standard-09-rear-left",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/three.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=standard&bg=light&load=after-three-standard-09-rear-left&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97&yaw=225&pitch=18",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-three-standard-09-rear-left&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "load_id": "after-three-standard-09-rear-left",
+        "yaw": 225,
+        "pitch": 18,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-three-standard-09-rear-left&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "transferSize": 11099080,
+        "encodedBodySize": 11098780,
+        "decodedBodySize": 11098780,
+        "duration": 171.3999999994412
+      },
+      "screenshot_path": "after/static-40-loads/three/standard/09-rear-left.png",
+      "screenshot_bytes": 180405,
+      "screenshot_sha256": "da9768bbfb8b0c79bba78c65a5e0c1fc441011a778f956e6d2effe0feaa0a6bb",
+      "status": "PASS"
+    },
+    {
+      "index": 10,
+      "name": "rear-right",
+      "yaw": 135,
+      "pitch": 18,
+      "background": "dark",
+      "load_id": "after-three-standard-10-rear-right",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/three.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=standard&bg=dark&load=after-three-standard-10-rear-right&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97&yaw=135&pitch=18",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-three-standard-10-rear-right&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "load_id": "after-three-standard-10-rear-right",
+        "yaw": 135,
+        "pitch": 18,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-three-standard-10-rear-right&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "transferSize": 11099080,
+        "encodedBodySize": 11098780,
+        "decodedBodySize": 11098780,
+        "duration": 177.70000000018626
+      },
+      "screenshot_path": "after/static-40-loads/three/standard/10-rear-right.png",
+      "screenshot_bytes": 179437,
+      "screenshot_sha256": "34b9871308e434381de0ca846f56e1c92045864fade1b7fa559f898c8d0e1f92",
+      "status": "PASS"
+    },
+    {
+      "index": 1,
+      "name": "front",
+      "yaw": 0,
+      "pitch": 0,
+      "background": "light",
+      "load_id": "after-three-web-01-front",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/three.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=web&bg=light&load=after-three-web-01-front&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868&yaw=0&pitch=0",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-three-web-01-front&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "load_id": "after-three-web-01-front",
+        "yaw": 0,
+        "pitch": 0,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-three-web-01-front&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "transferSize": 7902532,
+        "encodedBodySize": 7902232,
+        "decodedBodySize": 7902232,
+        "duration": 219.30000000074506
+      },
+      "screenshot_path": "after/static-40-loads/three/web/01-front.png",
+      "screenshot_bytes": 78018,
+      "screenshot_sha256": "8d7ffd6ea395b029edd2711ec471741516a7da179b06eef00e789b78b6338ac6",
+      "status": "PASS"
+    },
+    {
+      "index": 2,
+      "name": "rear",
+      "yaw": 180,
+      "pitch": 0,
+      "background": "dark",
+      "load_id": "after-three-web-02-rear",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/three.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=web&bg=dark&load=after-three-web-02-rear&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868&yaw=180&pitch=0",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-three-web-02-rear&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "load_id": "after-three-web-02-rear",
+        "yaw": 180,
+        "pitch": 0,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-three-web-02-rear&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "transferSize": 7902532,
+        "encodedBodySize": 7902232,
+        "decodedBodySize": 7902232,
+        "duration": 236.69999999925494
+      },
+      "screenshot_path": "after/static-40-loads/three/web/02-rear.png",
+      "screenshot_bytes": 82091,
+      "screenshot_sha256": "cef6b7845f6e01b8427ec8fa0a2391c880299c75f32e3e68163e901db7f97d00",
+      "status": "PASS"
+    },
+    {
+      "index": 3,
+      "name": "left",
+      "yaw": 270,
+      "pitch": 0,
+      "background": "light",
+      "load_id": "after-three-web-03-left",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/three.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=web&bg=light&load=after-three-web-03-left&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868&yaw=270&pitch=0",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-three-web-03-left&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "load_id": "after-three-web-03-left",
+        "yaw": 270,
+        "pitch": 0,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-three-web-03-left&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "transferSize": 7902532,
+        "encodedBodySize": 7902232,
+        "decodedBodySize": 7902232,
+        "duration": 185.8999999994412
+      },
+      "screenshot_path": "after/static-40-loads/three/web/03-left.png",
+      "screenshot_bytes": 78610,
+      "screenshot_sha256": "a744094f48ae5b8594d5f24c090d38a886bc2d653ab2c3739f367d520f2faf4f",
+      "status": "PASS"
+    },
+    {
+      "index": 4,
+      "name": "right",
+      "yaw": 90,
+      "pitch": 0,
+      "background": "dark",
+      "load_id": "after-three-web-04-right",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/three.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=web&bg=dark&load=after-three-web-04-right&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868&yaw=90&pitch=0",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-three-web-04-right&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "load_id": "after-three-web-04-right",
+        "yaw": 90,
+        "pitch": 0,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-three-web-04-right&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "transferSize": 7902532,
+        "encodedBodySize": 7902232,
+        "decodedBodySize": 7902232,
+        "duration": 221.70000000018626
+      },
+      "screenshot_path": "after/static-40-loads/three/web/04-right.png",
+      "screenshot_bytes": 69322,
+      "screenshot_sha256": "044caa30ae3f665922474c08db0b0c248cd208311c7b106c48dfe0721481d15e",
+      "status": "PASS"
+    },
+    {
+      "index": 5,
+      "name": "top",
+      "yaw": 0,
+      "pitch": 88,
+      "background": "light",
+      "load_id": "after-three-web-05-top",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/three.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=web&bg=light&load=after-three-web-05-top&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868&yaw=0&pitch=88",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-three-web-05-top&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "load_id": "after-three-web-05-top",
+        "yaw": 0,
+        "pitch": 88,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-three-web-05-top&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "transferSize": 7902532,
+        "encodedBodySize": 7902232,
+        "decodedBodySize": 7902232,
+        "duration": 150.40000000037253
+      },
+      "screenshot_path": "after/static-40-loads/three/web/05-top.png",
+      "screenshot_bytes": 274372,
+      "screenshot_sha256": "e619650cc59324eaae2321fc3fc3a832a06622061176cf6b933a2e497e23ae4f",
+      "status": "PASS"
+    },
+    {
+      "index": 6,
+      "name": "bottom",
+      "yaw": 0,
+      "pitch": -88,
+      "background": "dark",
+      "load_id": "after-three-web-06-bottom",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/three.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=web&bg=dark&load=after-three-web-06-bottom&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868&yaw=0&pitch=-88",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-three-web-06-bottom&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "load_id": "after-three-web-06-bottom",
+        "yaw": 0,
+        "pitch": -88,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-three-web-06-bottom&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "transferSize": 7902532,
+        "encodedBodySize": 7902232,
+        "decodedBodySize": 7902232,
+        "duration": 229.6000000005588
+      },
+      "screenshot_path": "after/static-40-loads/three/web/06-bottom.png",
+      "screenshot_bytes": 201108,
+      "screenshot_sha256": "d84abd6e1e02e3395817c7e22c3ad7e77748b7b43048a00d3b5dbb8dcb2f1cd1",
+      "status": "PASS"
+    },
+    {
+      "index": 7,
+      "name": "front-left",
+      "yaw": 315,
+      "pitch": 18,
+      "background": "light",
+      "load_id": "after-three-web-07-front-left",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/three.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=web&bg=light&load=after-three-web-07-front-left&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868&yaw=315&pitch=18",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-three-web-07-front-left&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "load_id": "after-three-web-07-front-left",
+        "yaw": 315,
+        "pitch": 18,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-three-web-07-front-left&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "transferSize": 7902532,
+        "encodedBodySize": 7902232,
+        "decodedBodySize": 7902232,
+        "duration": 277.5
+      },
+      "screenshot_path": "after/static-40-loads/three/web/07-front-left.png",
+      "screenshot_bytes": 183380,
+      "screenshot_sha256": "9be543649188bd8b870b3f3db490484c8e67136d716dac62a9db433849fb4b50",
+      "status": "PASS"
+    },
+    {
+      "index": 8,
+      "name": "front-right",
+      "yaw": 45,
+      "pitch": 18,
+      "background": "dark",
+      "load_id": "after-three-web-08-front-right",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/three.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=web&bg=dark&load=after-three-web-08-front-right&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868&yaw=45&pitch=18",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-three-web-08-front-right&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "load_id": "after-three-web-08-front-right",
+        "yaw": 45,
+        "pitch": 18,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-three-web-08-front-right&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "transferSize": 7902532,
+        "encodedBodySize": 7902232,
+        "decodedBodySize": 7902232,
+        "duration": 181.79999999981374
+      },
+      "screenshot_path": "after/static-40-loads/three/web/08-front-right.png",
+      "screenshot_bytes": 180449,
+      "screenshot_sha256": "967569bbd8eab334b456eab960c1ac19bcd197ebef1ec4ddfaf1bdca3117bf15",
+      "status": "PASS"
+    },
+    {
+      "index": 9,
+      "name": "rear-left",
+      "yaw": 225,
+      "pitch": 18,
+      "background": "light",
+      "load_id": "after-three-web-09-rear-left",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/three.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=web&bg=light&load=after-three-web-09-rear-left&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868&yaw=225&pitch=18",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-three-web-09-rear-left&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "load_id": "after-three-web-09-rear-left",
+        "yaw": 225,
+        "pitch": 18,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-three-web-09-rear-left&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "transferSize": 7902532,
+        "encodedBodySize": 7902232,
+        "decodedBodySize": 7902232,
+        "duration": 188.5
+      },
+      "screenshot_path": "after/static-40-loads/three/web/09-rear-left.png",
+      "screenshot_bytes": 182408,
+      "screenshot_sha256": "235e85135b1ad6a30c960a6d24943129a1c12a1bf72ad197e121863fc7783b7d",
+      "status": "PASS"
+    },
+    {
+      "index": 10,
+      "name": "rear-right",
+      "yaw": 135,
+      "pitch": 18,
+      "background": "dark",
+      "load_id": "after-three-web-10-rear-right",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/three.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=web&bg=dark&load=after-three-web-10-rear-right&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868&yaw=135&pitch=18",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-three-web-10-rear-right&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "load_id": "after-three-web-10-rear-right",
+        "yaw": 135,
+        "pitch": 18,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-three-web-10-rear-right&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "transferSize": 7902532,
+        "encodedBodySize": 7902232,
+        "decodedBodySize": 7902232,
+        "duration": 278.8999999994412
+      },
+      "screenshot_path": "after/static-40-loads/three/web/10-rear-right.png",
+      "screenshot_bytes": 181779,
+      "screenshot_sha256": "cac79dfdf5f0e37e5f117aaa96baba483efc0dbf7d9c32137ba7dbfb590c2b95",
+      "status": "PASS"
+    },
+    {
+      "index": 1,
+      "name": "front",
+      "yaw": 0,
+      "pitch": 0,
+      "background": "light",
+      "load_id": "after-babylon-standard-01-front",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/babylon.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=standard&bg=light&load=after-babylon-standard-01-front&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97&yaw=0&pitch=0",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-babylon-standard-01-front&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "load_id": "after-babylon-standard-01-front",
+        "yaw": 0,
+        "pitch": 0,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-babylon-standard-01-front&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "transferSize": 11099080,
+        "encodedBodySize": 11098780,
+        "decodedBodySize": 11098780,
+        "duration": 193.5
+      },
+      "screenshot_path": "after/static-40-loads/babylon/standard/01-front.png",
+      "screenshot_bytes": 77166,
+      "screenshot_sha256": "327d52141d1bf7254eee0e0790d2db48412a32aff16b23b4b3f172780f0e5045",
+      "status": "PASS"
+    },
+    {
+      "index": 2,
+      "name": "rear",
+      "yaw": 180,
+      "pitch": 0,
+      "background": "dark",
+      "load_id": "after-babylon-standard-02-rear",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/babylon.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=standard&bg=dark&load=after-babylon-standard-02-rear&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97&yaw=180&pitch=0",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-babylon-standard-02-rear&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "load_id": "after-babylon-standard-02-rear",
+        "yaw": 180,
+        "pitch": 0,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-babylon-standard-02-rear&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "transferSize": 11099080,
+        "encodedBodySize": 11098780,
+        "decodedBodySize": 11098780,
+        "duration": 211.70000000018626
+      },
+      "screenshot_path": "after/static-40-loads/babylon/standard/02-rear.png",
+      "screenshot_bytes": 83176,
+      "screenshot_sha256": "90b5dace2ba019bf40c31476ef8c8e2906f0a3e89572f57a19e92645282a7e31",
+      "status": "PASS"
+    },
+    {
+      "index": 3,
+      "name": "left",
+      "yaw": 270,
+      "pitch": 0,
+      "background": "light",
+      "load_id": "after-babylon-standard-03-left",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/babylon.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=standard&bg=light&load=after-babylon-standard-03-left&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97&yaw=270&pitch=0",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-babylon-standard-03-left&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "load_id": "after-babylon-standard-03-left",
+        "yaw": 270,
+        "pitch": 0,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-babylon-standard-03-left&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "transferSize": 11099080,
+        "encodedBodySize": 11098780,
+        "decodedBodySize": 11098780,
+        "duration": 159.20000000018626
+      },
+      "screenshot_path": "after/static-40-loads/babylon/standard/03-left.png",
+      "screenshot_bytes": 80912,
+      "screenshot_sha256": "91c8d94e9eaf46c8b260e680cb59e2a3c623a1b9699a0e1f45fd78d303d72898",
+      "status": "PASS"
+    },
+    {
+      "index": 4,
+      "name": "right",
+      "yaw": 90,
+      "pitch": 0,
+      "background": "dark",
+      "load_id": "after-babylon-standard-04-right",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/babylon.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=standard&bg=dark&load=after-babylon-standard-04-right&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97&yaw=90&pitch=0",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-babylon-standard-04-right&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "load_id": "after-babylon-standard-04-right",
+        "yaw": 90,
+        "pitch": 0,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-babylon-standard-04-right&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "transferSize": 11099080,
+        "encodedBodySize": 11098780,
+        "decodedBodySize": 11098780,
+        "duration": 163.90000000037253
+      },
+      "screenshot_path": "after/static-40-loads/babylon/standard/04-right.png",
+      "screenshot_bytes": 70955,
+      "screenshot_sha256": "87b7eb52e5539293d76e6e8b666b2d249dae381d0fd635e66929feb73dfa6d0f",
+      "status": "PASS"
+    },
+    {
+      "index": 5,
+      "name": "top",
+      "yaw": 0,
+      "pitch": 88,
+      "background": "light",
+      "load_id": "after-babylon-standard-05-top",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/babylon.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=standard&bg=light&load=after-babylon-standard-05-top&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97&yaw=0&pitch=88",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-babylon-standard-05-top&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "load_id": "after-babylon-standard-05-top",
+        "yaw": 0,
+        "pitch": 88,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-babylon-standard-05-top&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "transferSize": 11099080,
+        "encodedBodySize": 11098780,
+        "decodedBodySize": 11098780,
+        "duration": 251.90000000037253
+      },
+      "screenshot_path": "after/static-40-loads/babylon/standard/05-top.png",
+      "screenshot_bytes": 271671,
+      "screenshot_sha256": "7ec59e9274998982b10e34413af426b9da13c9b15e5e9fdd708d84a785d6e2ef",
+      "status": "PASS"
+    },
+    {
+      "index": 6,
+      "name": "bottom",
+      "yaw": 0,
+      "pitch": -88,
+      "background": "dark",
+      "load_id": "after-babylon-standard-06-bottom",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/babylon.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=standard&bg=dark&load=after-babylon-standard-06-bottom&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97&yaw=0&pitch=-88",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-babylon-standard-06-bottom&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "load_id": "after-babylon-standard-06-bottom",
+        "yaw": 0,
+        "pitch": -88,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-babylon-standard-06-bottom&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "transferSize": 11099080,
+        "encodedBodySize": 11098780,
+        "decodedBodySize": 11098780,
+        "duration": 171.59999999962747
+      },
+      "screenshot_path": "after/static-40-loads/babylon/standard/06-bottom.png",
+      "screenshot_bytes": 199038,
+      "screenshot_sha256": "cd0b000602a2adfa9abaff94e4ea24eb4a65d08fff42b148f668e220b7822463",
+      "status": "PASS"
+    },
+    {
+      "index": 7,
+      "name": "front-left",
+      "yaw": 315,
+      "pitch": 18,
+      "background": "light",
+      "load_id": "after-babylon-standard-07-front-left",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/babylon.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=standard&bg=light&load=after-babylon-standard-07-front-left&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97&yaw=315&pitch=18",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-babylon-standard-07-front-left&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "load_id": "after-babylon-standard-07-front-left",
+        "yaw": 315,
+        "pitch": 18,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-babylon-standard-07-front-left&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "transferSize": 11099080,
+        "encodedBodySize": 11098780,
+        "decodedBodySize": 11098780,
+        "duration": 167.5
+      },
+      "screenshot_path": "after/static-40-loads/babylon/standard/07-front-left.png",
+      "screenshot_bytes": 201979,
+      "screenshot_sha256": "20be023fed989228b08fd286e3d0d8edec514c28fc6dc6cd73252045cb52ecc3",
+      "status": "PASS"
+    },
+    {
+      "index": 8,
+      "name": "front-right",
+      "yaw": 45,
+      "pitch": 18,
+      "background": "dark",
+      "load_id": "after-babylon-standard-08-front-right",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/babylon.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=standard&bg=dark&load=after-babylon-standard-08-front-right&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97&yaw=45&pitch=18",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-babylon-standard-08-front-right&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "load_id": "after-babylon-standard-08-front-right",
+        "yaw": 45,
+        "pitch": 18,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-babylon-standard-08-front-right&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "transferSize": 11099080,
+        "encodedBodySize": 11098780,
+        "decodedBodySize": 11098780,
+        "duration": 210.80000000074506
+      },
+      "screenshot_path": "after/static-40-loads/babylon/standard/08-front-right.png",
+      "screenshot_bytes": 197934,
+      "screenshot_sha256": "f44c2eadbb0f2b9ac007405e46c30fa0747dd163c5fdb5dccd5a2ffa3713cc38",
+      "status": "PASS"
+    },
+    {
+      "index": 9,
+      "name": "rear-left",
+      "yaw": 225,
+      "pitch": 18,
+      "background": "light",
+      "load_id": "after-babylon-standard-09-rear-left",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/babylon.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=standard&bg=light&load=after-babylon-standard-09-rear-left&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97&yaw=225&pitch=18",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-babylon-standard-09-rear-left&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "load_id": "after-babylon-standard-09-rear-left",
+        "yaw": 225,
+        "pitch": 18,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-babylon-standard-09-rear-left&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "transferSize": 11099080,
+        "encodedBodySize": 11098780,
+        "decodedBodySize": 11098780,
+        "duration": 228.90000000037253
+      },
+      "screenshot_path": "after/static-40-loads/babylon/standard/09-rear-left.png",
+      "screenshot_bytes": 202404,
+      "screenshot_sha256": "ed5dfc8dfeba62648fdab28492e8c2db72afd0beacdf0b75ad3eeb55c2c9a925",
+      "status": "PASS"
+    },
+    {
+      "index": 10,
+      "name": "rear-right",
+      "yaw": 135,
+      "pitch": 18,
+      "background": "dark",
+      "load_id": "after-babylon-standard-10-rear-right",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/babylon.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=standard&bg=dark&load=after-babylon-standard-10-rear-right&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97&yaw=135&pitch=18",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-babylon-standard-10-rear-right&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "load_id": "after-babylon-standard-10-rear-right",
+        "yaw": 135,
+        "pitch": 18,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch.glb?load=after-babylon-standard-10-rear-right&sha256=2a8925f1eb08f5fe67df99cac62bcfdcb823bc60ef152d710ab0dec0df59bb97",
+        "transferSize": 11099080,
+        "encodedBodySize": 11098780,
+        "decodedBodySize": 11098780,
+        "duration": 185.90000000037253
+      },
+      "screenshot_path": "after/static-40-loads/babylon/standard/10-rear-right.png",
+      "screenshot_bytes": 200475,
+      "screenshot_sha256": "623ccc9bae91aa6f1b0f0a388c283e8aae6f7dd0bbe0c4c589e808a581d26825",
+      "status": "PASS"
+    },
+    {
+      "index": 1,
+      "name": "front",
+      "yaw": 0,
+      "pitch": 0,
+      "background": "light",
+      "load_id": "after-babylon-web-01-front",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/babylon.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=web&bg=light&load=after-babylon-web-01-front&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868&yaw=0&pitch=0",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-babylon-web-01-front&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "load_id": "after-babylon-web-01-front",
+        "yaw": 0,
+        "pitch": 0,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-babylon-web-01-front&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "transferSize": 7902532,
+        "encodedBodySize": 7902232,
+        "decodedBodySize": 7902232,
+        "duration": 167.70000000018626
+      },
+      "screenshot_path": "after/static-40-loads/babylon/web/01-front.png",
+      "screenshot_bytes": 76712,
+      "screenshot_sha256": "8703245ce836a89abe689f45e7c24e91661affa1692b04351d32d0bede434645",
+      "status": "PASS"
+    },
+    {
+      "index": 2,
+      "name": "rear",
+      "yaw": 180,
+      "pitch": 0,
+      "background": "dark",
+      "load_id": "after-babylon-web-02-rear",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/babylon.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=web&bg=dark&load=after-babylon-web-02-rear&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868&yaw=180&pitch=0",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-babylon-web-02-rear&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "load_id": "after-babylon-web-02-rear",
+        "yaw": 180,
+        "pitch": 0,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-babylon-web-02-rear&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "transferSize": 7902532,
+        "encodedBodySize": 7902232,
+        "decodedBodySize": 7902232,
+        "duration": 160.5
+      },
+      "screenshot_path": "after/static-40-loads/babylon/web/02-rear.png",
+      "screenshot_bytes": 83053,
+      "screenshot_sha256": "f3dbd2daf78eebd8b517370865a9e816a2fa6e6f7d33db2718e130ad712a46b5",
+      "status": "PASS"
+    },
+    {
+      "index": 3,
+      "name": "left",
+      "yaw": 270,
+      "pitch": 0,
+      "background": "light",
+      "load_id": "after-babylon-web-03-left",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/babylon.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=web&bg=light&load=after-babylon-web-03-left&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868&yaw=270&pitch=0",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-babylon-web-03-left&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "load_id": "after-babylon-web-03-left",
+        "yaw": 270,
+        "pitch": 0,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-babylon-web-03-left&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "transferSize": 7902532,
+        "encodedBodySize": 7902232,
+        "decodedBodySize": 7902232,
+        "duration": 196.70000000018626
+      },
+      "screenshot_path": "after/static-40-loads/babylon/web/03-left.png",
+      "screenshot_bytes": 78884,
+      "screenshot_sha256": "e0e2d46c00d1ba27a04a9f687a93b6a89584684ee0d24bbf913c1d3412cbada7",
+      "status": "PASS"
+    },
+    {
+      "index": 4,
+      "name": "right",
+      "yaw": 90,
+      "pitch": 0,
+      "background": "dark",
+      "load_id": "after-babylon-web-04-right",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/babylon.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=web&bg=dark&load=after-babylon-web-04-right&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868&yaw=90&pitch=0",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-babylon-web-04-right&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "load_id": "after-babylon-web-04-right",
+        "yaw": 90,
+        "pitch": 0,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-babylon-web-04-right&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "transferSize": 7902532,
+        "encodedBodySize": 7902232,
+        "decodedBodySize": 7902232,
+        "duration": 208.40000000037253
+      },
+      "screenshot_path": "after/static-40-loads/babylon/web/04-right.png",
+      "screenshot_bytes": 69067,
+      "screenshot_sha256": "af0cd2f3881d50b35f38cc33c039e62d3ff6cabf818fff9d973b0a5bd3be2112",
+      "status": "PASS"
+    },
+    {
+      "index": 5,
+      "name": "top",
+      "yaw": 0,
+      "pitch": 88,
+      "background": "light",
+      "load_id": "after-babylon-web-05-top",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/babylon.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=web&bg=light&load=after-babylon-web-05-top&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868&yaw=0&pitch=88",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-babylon-web-05-top&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "load_id": "after-babylon-web-05-top",
+        "yaw": 0,
+        "pitch": 88,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-babylon-web-05-top&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "transferSize": 7902532,
+        "encodedBodySize": 7902232,
+        "decodedBodySize": 7902232,
+        "duration": 204
+      },
+      "screenshot_path": "after/static-40-loads/babylon/web/05-top.png",
+      "screenshot_bytes": 271331,
+      "screenshot_sha256": "31ea2e7bf4faa05fa1048348bf90056f458beb3d287e5039c629abf933648683",
+      "status": "PASS"
+    },
+    {
+      "index": 6,
+      "name": "bottom",
+      "yaw": 0,
+      "pitch": -88,
+      "background": "dark",
+      "load_id": "after-babylon-web-06-bottom",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/babylon.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=web&bg=dark&load=after-babylon-web-06-bottom&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868&yaw=0&pitch=-88",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-babylon-web-06-bottom&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "load_id": "after-babylon-web-06-bottom",
+        "yaw": 0,
+        "pitch": -88,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-babylon-web-06-bottom&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "transferSize": 7902532,
+        "encodedBodySize": 7902232,
+        "decodedBodySize": 7902232,
+        "duration": 185.1000000005588
+      },
+      "screenshot_path": "after/static-40-loads/babylon/web/06-bottom.png",
+      "screenshot_bytes": 198947,
+      "screenshot_sha256": "23a96ea66ff981b9216515cf4d79b981ad7bbe1b07ff537af15009d8bbbb30cc",
+      "status": "PASS"
+    },
+    {
+      "index": 7,
+      "name": "front-left",
+      "yaw": 315,
+      "pitch": 18,
+      "background": "light",
+      "load_id": "after-babylon-web-07-front-left",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/babylon.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=web&bg=light&load=after-babylon-web-07-front-left&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868&yaw=315&pitch=18",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-babylon-web-07-front-left&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "load_id": "after-babylon-web-07-front-left",
+        "yaw": 315,
+        "pitch": 18,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-babylon-web-07-front-left&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "transferSize": 7902532,
+        "encodedBodySize": 7902232,
+        "decodedBodySize": 7902232,
+        "duration": 119.70000000018626
+      },
+      "screenshot_path": "after/static-40-loads/babylon/web/07-front-left.png",
+      "screenshot_bytes": 202410,
+      "screenshot_sha256": "cf98a2ae72a565fce154c07b92f2db780656f4d8616b9c504879bda6cbb50285",
+      "status": "PASS"
+    },
+    {
+      "index": 8,
+      "name": "front-right",
+      "yaw": 45,
+      "pitch": 18,
+      "background": "dark",
+      "load_id": "after-babylon-web-08-front-right",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/babylon.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=web&bg=dark&load=after-babylon-web-08-front-right&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868&yaw=45&pitch=18",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-babylon-web-08-front-right&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "load_id": "after-babylon-web-08-front-right",
+        "yaw": 45,
+        "pitch": 18,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-babylon-web-08-front-right&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "transferSize": 7902532,
+        "encodedBodySize": 7902232,
+        "decodedBodySize": 7902232,
+        "duration": 302.70000000018626
+      },
+      "screenshot_path": "after/static-40-loads/babylon/web/08-front-right.png",
+      "screenshot_bytes": 197913,
+      "screenshot_sha256": "93bb78973a44c448274c4b33075b70c681f52283fc8ce3871f64c3eec6c2c6ab",
+      "status": "PASS"
+    },
+    {
+      "index": 9,
+      "name": "rear-left",
+      "yaw": 225,
+      "pitch": 18,
+      "background": "light",
+      "load_id": "after-babylon-web-09-rear-left",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/babylon.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=web&bg=light&load=after-babylon-web-09-rear-left&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868&yaw=225&pitch=18",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-babylon-web-09-rear-left&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "load_id": "after-babylon-web-09-rear-left",
+        "yaw": 225,
+        "pitch": 18,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-babylon-web-09-rear-left&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "transferSize": 7902532,
+        "encodedBodySize": 7902232,
+        "decodedBodySize": 7902232,
+        "duration": 155.1000000005588
+      },
+      "screenshot_path": "after/static-40-loads/babylon/web/09-rear-left.png",
+      "screenshot_bytes": 202777,
+      "screenshot_sha256": "c715777b9fd3e2ffe25f81784ccc5bc872d0d76f14b155d9a6526761dadf502b",
+      "status": "PASS"
+    },
+    {
+      "index": 10,
+      "name": "rear-right",
+      "yaw": 135,
+      "pitch": 18,
+      "background": "dark",
+      "load_id": "after-babylon-web-10-rear-right",
+      "url": "http://127.0.0.1:8861/qa/rotation-review-20260827/viewers/babylon.html?key=Lenovo-ThinkServer-SR655-3.5inch&model=web&bg=dark&load=after-babylon-web-10-rear-right&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868&yaw=135&pitch=18",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Lenovo-ThinkServer-SR655-3.5inch",
+        "expected_sha256": "632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "model_url": "/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-babylon-web-10-rear-right&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "load_id": "after-babylon-web-10-rear-right",
+        "yaw": 135,
+        "pitch": 18,
+        "radius": 1.7970449894666674,
+        "bounds": [
+          0.4819999933242798,
+          0.08649999648332596,
+          0.7646999955177307
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8861/model/Lenovo-ThinkServer-SR655-3.5inch-web.glb?load=after-babylon-web-10-rear-right&sha256=632af251f3d568340933e357eb425cf7d1e94b5727dc3400c8dc83b9031f3868",
+        "transferSize": 7902532,
+        "encodedBodySize": 7902232,
+        "decodedBodySize": 7902232,
+        "duration": 274.90000000037253
+      },
+      "screenshot_path": "after/static-40-loads/babylon/web/10-rear-right.png",
+      "screenshot_bytes": 200837,
+      "screenshot_sha256": "aecb3fae8f43ef0af963153368972071ee9333604ecefc1a0ccdef9d948d298b",
+      "status": "PASS"
+    }
+  ],
+  "static_load_count": 40,
+  "static_pass_count": 40,
+  "status": "PASS",
+  "visual_review": {
+    "all_four_rotation_combinations_pass": true,
+    "all_40_static_loads_pass": true,
+    "matched_camera_comparisons": 24,
+    "feature_inventory_rows": 39,
+    "residual_visual_defects": []
+  }
+}
