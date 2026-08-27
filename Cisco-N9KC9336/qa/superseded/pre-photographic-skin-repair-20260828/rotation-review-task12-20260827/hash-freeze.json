@@ -1,0 +1,37 @@
+{
+  "schema": "task12-final-hash-freeze-v1",
+  "model": "Cisco-N9KC9336",
+  "identity": "Cisco Nexus 9000 N9K-C9336C-FX2",
+  "artifacts": {
+    "standard": {
+      "path": "models/Cisco-N9K-C9336C-FX2-standard.glb",
+      "sha256": "09f05222ad93c617fcba3e62a0afe493251f43e2813638616e815863ef62df49",
+      "bytes": 20686644
+    },
+    "web": {
+      "path": "models/Cisco-N9K-C9336C-FX2-web.glb",
+      "sha256": "debdc3ee39fab17a6482b590a373b02673e592acf92487cd032efb1677aa2841",
+      "bytes": 1277204
+    },
+    "builder": {
+      "path": "model/build_glb.py",
+      "sha256": "1e4e6dde07b92e20c71412bbb5199778bbcfb260cf65785f7f3261c9e6148806",
+      "bytes": 26000
+    }
+  },
+  "shared_viewers": {
+    "three": {
+      "path": "Juniper-QFX5110/qa/rotation-review-20260827/viewers/three.html",
+      "sha256": "60c3b6b87fc981fdb3908545d42972b3a5882fcd32b46b625a3b8a1584f31ea7"
+    },
+    "babylon": {
+      "path": "Juniper-QFX5110/qa/rotation-review-20260827/viewers/babylon.html",
+      "sha256": "3f11d194bebe5b233d71940de18f86a5ce904eac7f1178eac90737b4f58445b9"
+    },
+    "three_orthographic": {
+      "path": "Juniper-QFX5110/qa/rotation-review-20260827/viewers/three-ortho.html",
+      "sha256": "1f57a08cf6966aeee1f354ab9cc6ec179cf72f0d1f004ddc486da4e9b254d69a"
+    }
+  },
+  "evidence_policy": "Any change to a frozen GLB hash supersedes all final-load, final-rotation, orthographic and comparison evidence and requires a complete rerun."
+}

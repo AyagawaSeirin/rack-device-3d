@@ -18,12 +18,23 @@ ROOT = Path(__file__).resolve().parents[1]
 VIEWS = ROOT / "views"
 MODELS = ROOT / "models"
 WEB_TEXTURES = ROOT / "qa" / "intermediate" / "web-textures"
+STANDARD_TEXTURES = ROOT / "qa" / "intermediate" / "standard-textures"
 
 # Cisco Hardware Installation Guide: 17.3 x 1.73 x 24.5 in overall.
 # The 22.5 in body is source-locked separately from the 24.5 in handle depth.
 W, H, BODY_D, OVERALL_D = 439.0, 44.0, 571.5, 623.0
 X, Y, Z_BODY = W / 2.0, H / 2.0, BODY_D / 2.0
 Z_HANDLE_REAR = Z_BODY - OVERALL_D  # front plane +285.75 to handle rear -337.25
+
+# Photo-derived source locks are the primary visible exterior.  Coarse support
+# volumes stay behind them; only narrow, source-aligned relief may sit in front.
+# Every skin/support and skin/relief gap is at least 0.25 mm.
+FRONT_SKIN_Z = Z_BODY - 0.55
+FRONT_SUPPORT_Z = FRONT_SKIN_Z - 0.65
+FRONT_RELIEF_Z = FRONT_SKIN_Z + 0.40
+REAR_SKIN_Z = -Z_BODY - 0.55
+REAR_SUPPORT_Z = REAR_SKIN_Z + 0.65
+REAR_RELIEF_Z = REAR_SKIN_Z - 0.40
 
 
 def align4(data: bytearray) -> None:
@@ -299,7 +310,20 @@ class GLBBuilder:
 def prepare_textures(variant: str):
     faces = ("front", "rear", "left", "right", "top", "bottom")
     if variant == "standard":
-        return {face: VIEWS / f"{face}.png" for face in faces}
+        # Keep the canonical RGBA elevations unchanged, but embed RGB-only
+        # base-color images in the GLB.  OPAQUE already requires alpha to be
+        # ignored; removing the unused channel also prevents viewer-specific
+        # alpha heuristics from entering the upload path.
+        STANDARD_TEXTURES.mkdir(parents=True, exist_ok=True)
+        result = {}
+        for face in faces:
+            with Image.open(VIEWS / f"{face}.png") as original:
+                target = STANDARD_TEXTURES / f"{face}.png"
+                temporary = target.with_suffix(".tmp.png")
+                original.convert("RGB").save(temporary, format="PNG", compress_level=6)
+                temporary.replace(target)
+            result[face] = target
+        return result
     WEB_TEXTURES.mkdir(parents=True, exist_ok=True)
     result = {}
     for face in faces:
@@ -309,7 +333,9 @@ def prepare_textures(variant: str):
             size = tuple(max(1, round(value * scale)) for value in image.size)
             image = image.resize(size, Image.Resampling.LANCZOS)
             target = WEB_TEXTURES / f"{face}.jpg"
-            image.save(target, format="JPEG", quality=90, optimize=True, progressive=True)
+            temporary = target.with_suffix(".tmp.jpg")
+            image.save(temporary, format="JPEG", quality=90, optimize=True, progressive=True)
+            temporary.replace(target)
         result[face] = target
     return result
 
@@ -320,6 +346,7 @@ def build(variant: str):
 
     steel = b.add_solid_material("Cisco_Galvanized_Steel", [.68,.70,.70,1], .55, .58)
     silver = b.add_solid_material("Bright_Module_Edges", [.82,.83,.81,1], .65, .43)
+    photo_edge = b.add_solid_material("Source_Aligned_Narrow_Relief", [.47,.48,.47,1], .30, .62)
     dark = b.add_solid_material("Dark_Recess", [.018,.022,.026,1], .02, .6)
     black = b.add_solid_material("Black_Polymer", [.009,.011,.014,1], .01, .48)
     burgundy = b.add_solid_material("Port_Intake_Burgundy", [.50,.025,.12,1], .02, .46)
@@ -339,10 +366,10 @@ def build(variant: str):
 
     # Six independently generated faces: all explicit winding and positive transforms.
     b.plane("Front_SourceLocked_Texture", photos["front"], [
-        (-X,-Y,Z_BODY-2.55),(X,-Y,Z_BODY-2.55),(X,Y,Z_BODY-2.55),(-X,Y,Z_BODY-2.55)
+        (-X,-Y,FRONT_SKIN_Z),(X,-Y,FRONT_SKIN_Z),(X,Y,FRONT_SKIN_Z),(-X,Y,FRONT_SKIN_Z)
     ], (0,0,1), extras={"source_lock":"front", "ports":"1-36", "not_mirrored":True})
     b.plane("Rear_SourceLocked_Texture", photos["rear"], [
-        (X,-Y,-Z_BODY-.02),(-X,-Y,-Z_BODY-.02),(-X,Y,-Z_BODY-.02),(X,Y,-Z_BODY-.02)
+        (X,-Y,REAR_SKIN_Z),(-X,-Y,REAR_SKIN_Z),(-X,Y,REAR_SKIN_Z),(X,Y,REAR_SKIN_Z)
     ], (0,0,-1), extras={"source_lock":"rear", "bom":"2x PI2 PSU + 3x PI fan", "not_mirrored":True})
     b.plane("Physical_Left_Independent_Texture", photos["left"], [
         (-X,-Y,-Z_BODY),(-X,-Y,Z_BODY),(-X,Y,Z_BODY),(-X,Y,-Z_BODY)
@@ -357,133 +384,155 @@ def build(variant: str):
         (X,-Y,Z_BODY),(-X,-Y,Z_BODY),(-X,-Y,-Z_BODY),(X,-Y,-Z_BODY)
     ], (0,-1,0), extras={"status":"GENERIC_BOTTOM_FALLBACK", "unsupported_detail_added":False})
 
-    # Front: 18 independent metal cages, each with two true lower dark recess levels.
+    # Front: the exact two-row port photograph is the appearance layer.  Broad
+    # cage/support/recess geometry is retained only behind that opaque skin.
+    # Narrow source-aligned rims and latch openings provide parallax without
+    # replacing the photographed cages with synthetic gray rectangles.
     port_start = -188.0
     pitch = 22.35
     for cage in range(18):
         x = port_start + cage * pitch
         cage_name = f"Front_QSFP28_Cage_{cage+1:02d}"
         for edge, center, size in (
-            ("Left",(x-9.6,1.2,Z_BODY-1.70),(1.4,35.0,3.4)),
-            ("Right",(x+9.6,1.2,Z_BODY-1.70),(1.4,35.0,3.4)),
-            ("Top",(x,17.7,Z_BODY-1.70),(20.6,2.0,3.4)),
-            ("Bottom",(x,-15.3,Z_BODY-1.70),(20.6,2.0,3.4)),
+            ("Left",(x-9.6,1.2,FRONT_SUPPORT_Z),(1.4,35.0,.60)),
+            ("Right",(x+9.6,1.2,FRONT_SUPPORT_Z),(1.4,35.0,.60)),
+            ("Top",(x,17.7,FRONT_SUPPORT_Z),(20.6,2.0,.60)),
+            ("Bottom",(x,-15.3,FRONT_SUPPORT_Z),(20.6,2.0,.60)),
         ):
-            b.box(cage_name + "_MetalFrame_" + edge, silver, center, size,
-                  {"ports":[cage*2+1,cage*2+2], "independent_cage":True})
+            b.box(cage_name + "_SupportFrame_" + edge, steel, center, size,
+                  {"ports":[cage*2+1,cage*2+2], "behind_photo_skin":True})
+        for edge, center, size in (
+            ("Left",(x-9.6,1.2,FRONT_RELIEF_Z),(.35,33.0,.30)),
+            ("Right",(x+9.6,1.2,FRONT_RELIEF_Z),(.35,33.0,.30)),
+            ("Top",(x,17.35,FRONT_RELIEF_Z),(19.5,.40,.30)),
+            ("Bottom",(x,-14.95,FRONT_RELIEF_Z),(19.5,.40,.30)),
+        ):
+            b.box(cage_name + "_SourceAlignedFineRim_" + edge, photo_edge, center, size,
+                  {"ports":[cage*2+1,cage*2+2], "narrow_relief":True, "skin_clearance_mm":.25})
         for row, y in enumerate((9.4,-7.2)):
             port = cage*2 + row + 1
-            b.box(f"Front_QSFP28_Port_{port:02d}_Recess", dark,
-                  (x,y,Z_BODY-1.05), (17.8,12.6,1.0),
-                  {"port_index":port, "port_family":"QSFP28", "empty":True, "recessed":True})
-        b.box(cage_name + "_CenterLatchBar", steel, (x,1.0,Z_BODY-.45), (17.0,5.0,.7),
-              {"visible_relief":True})
+            b.box(f"Front_QSFP28_Port_{port:02d}_SupportRecess", dark,
+                  (x,y,FRONT_SUPPORT_Z), (17.8,12.6,.50),
+                  {"port_index":port, "port_family":"QSFP28", "empty":True, "behind_photo_skin":True})
+        b.box(cage_name + "_CenterLatchSupport", steel, (x,1.0,FRONT_SUPPORT_Z), (17.0,5.0,.50),
+              {"behind_photo_skin":True})
+        b.box(cage_name + "_SourceAlignedCenterLip", photo_edge,
+              (x,1.0,FRONT_RELIEF_Z), (16.0,.42,.30),
+              {"narrow_relief":True, "skin_clearance_mm":.25})
         for aperture in range(4):
             ax = x - 5.4 + aperture * 3.6
             b.box(cage_name + f"_LatchAperture_{aperture+1}", dark,
-                  (ax,1.0,Z_BODY-.48), (1.8,1.7,.25), {"visible_opening":True})
+                  (ax,1.0,FRONT_RELIEF_Z), (.8,.65,.30),
+                  {"visible_opening":True, "skin_clearance_mm":.25})
 
     # Left front status/button zone and the full lower ventilation strip.
     for index, (x,y,material,label) in enumerate((
         (-210,10,green,"BCN"),(-210,3,green,"STS"),(-210,-4,amber,"ENV"),
         (-201,10,green,"Lane1"),(-201,4,green,"Lane2"),(-201,-2,green,"Lane3"),(-201,-8,green,"Lane4"),
     ), 1):
-        b.cylinder(f"Front_Status_{index}_{label}", material, (x,y,Z_BODY-.35), (2.2,2.2,.7),
-                   extras={"label":label})
-    b.cylinder("Front_Lane_Select_Button", black, (-208,-13,Z_BODY-.40), (5.2,5.2,.8),
-               extras={"label":"LS", "push_button":True})
+        b.cylinder(f"Front_Status_{index}_{label}", material, (x,y,FRONT_RELIEF_Z), (1.5,1.5,.30),
+                   extras={"label":label, "skin_clearance_mm":.25})
+    b.cylinder("Front_Lane_Select_Button", black, (-208,-13,FRONT_RELIEF_Z), (3.6,3.6,.30),
+               extras={"label":"LS", "push_button":True, "skin_clearance_mm":.25})
     for index, x in enumerate(range(-213,214,7), 1):
         for row, y in enumerate((-17.2,-20.0), 1):
-            b.box(f"Front_LowerVent_{index:02d}_{row}", dark, (x,y,Z_BODY-.275),
-                  (3.4,1.45,.55), {"perforation_recess":True})
+            b.box(f"Front_LowerVentSupport_{index:02d}_{row}", dark, (x,y,FRONT_SUPPORT_Z),
+                  (3.4,1.45,.50), {"perforation_in_photo_skin":True, "behind_photo_skin":True})
     for index, y in enumerate((14,7,0,-7,-14), 1):
-        b.cylinder(f"Front_RightFastener_{index}", dark, (214,y,Z_BODY-.25), (2.1,2.1,.5))
+        b.cylinder(f"Front_RightFastener_{index}", dark, (214,y,FRONT_RELIEF_Z), (1.3,1.3,.30),
+                   extras={"skin_clearance_mm":.25})
 
     # Rear canonical screen order maps to world +X -> -X when viewed from behind.
     psu_centers = (("PSU1_RearLeft", 189.0), ("PSU2_RearRight", -189.0))
     for label, x in psu_centers:
         prefix = f"Rear_NXA_PAC_1100W_PI2_{label}"
         b.box(prefix + "_InstalledVolume", steel, (x,0,-Z_BODY+1.0), (59.0,40.0,2.0),
-              {"pid":"NXA-PAC-1100W-PI2", "power":"1100W AC", "airflow":"port-side intake"})
+              {"pid":"NXA-PAC-1100W-PI2", "power":"1100W AC", "airflow":"port-side intake", "behind_photo_skin":True})
         for edge, center, size in (
-            ("Top",(x,19.5,-Z_BODY-1.0),(59,2.0,2.0)),
-            ("Bottom",(x,-19.5,-Z_BODY-1.0),(59,2.0,2.0)),
-            ("Left",(x-28.5,0,-Z_BODY-1.0),(2.0,39,2.0)),
-            ("Right",(x+28.5,0,-Z_BODY-1.0),(2.0,39,2.0)),
+            ("Top",(x,19.5,REAR_SUPPORT_Z),(59,2.0,.50)),
+            ("Bottom",(x,-19.5,REAR_SUPPORT_Z),(59,2.0,.50)),
+            ("Left",(x-28.5,0,REAR_SUPPORT_Z),(2.0,39,.50)),
+            ("Right",(x+28.5,0,REAR_SUPPORT_Z),(2.0,39,.50)),
         ):
-            b.box(prefix + "_Frame_" + edge, silver, center, size, {"module_edge":True})
+            b.box(prefix + "_SupportFrame_" + edge, steel, center, size, {"behind_photo_skin":True})
+        for edge, center, size in (
+            ("Top",(x,19.1,REAR_RELIEF_Z),(58,.40,.30)),
+            ("Bottom",(x,-19.1,REAR_RELIEF_Z),(58,.40,.30)),
+            ("Left",(x-28.1,0,REAR_RELIEF_Z),(.40,38,.30)),
+            ("Right",(x+28.1,0,REAR_RELIEF_Z),(.40,38,.30)),
+        ):
+            b.box(prefix + "_SourceAlignedFineRim_" + edge, photo_edge, center, size,
+                  {"narrow_relief":True, "skin_clearance_mm":.25})
         inlet_x = x + (9 if x > 0 else -9)
-        b.box(prefix + "_IEC_C14_Recess", black, (inlet_x,0,-Z_BODY-2.0), (24,22,2.2),
-              {"connector":"IEC C14 AC", "recessed":True})
+        b.box(prefix + "_IEC_C14_Support", black, (inlet_x,0,REAR_SUPPORT_Z), (24,22,.50),
+              {"connector":"IEC C14 AC", "behind_photo_skin":True})
         latch_x = x - (26 if x > 0 else -26)
-        b.box(prefix + "_BurgundyRelease", burgundy, (latch_x,-3,-Z_BODY-3.0), (7,20,4.5),
-              {"airflow_code":"PI burgundy"})
+        b.box(prefix + "_BurgundyRelease", burgundy, (latch_x,-3,REAR_SKIN_Z-.55), (2.5,10,.60),
+              {"airflow_code":"PI burgundy", "skin_clearance_mm":.25})
         handle_x = x - (13 if x > 0 else -13)
-        handle_mid = (Z_HANDLE_REAR + (-Z_BODY-4.0)) / 2
-        handle_depth = (-Z_BODY-4.0) - Z_HANDLE_REAR
-        b.box(prefix + "_HandleVertical", silver, (handle_x,0,Z_HANDLE_REAR+6.0), (5,28,12),
+        handle_near_z = REAR_SKIN_Z - 1.0
+        handle_far_inner_z = Z_HANDLE_REAR + 6.0
+        handle_mid = (handle_near_z + handle_far_inner_z) / 2
+        handle_depth = handle_near_z - handle_far_inner_z
+        b.box(prefix + "_HandleVertical", silver, (handle_x,0,Z_HANDLE_REAR+3.0), (2.0,20,6),
               {"visible_protrusion":True})
-        for side_y in (-13,13):
+        for side_y in (-9,9):
             b.box(prefix + f"_HandleStem_{side_y:+d}", silver, (handle_x,side_y,handle_mid),
-                  (5,5,handle_depth), {"visible_protrusion":True})
-        b.cylinder(prefix + "_FAIL_LED", amber, (x+23,7,-Z_BODY-2.3), (2.4,2.4,1.0), extras={"label":"FAIL"})
-        b.cylinder(prefix + "_OK_LED", green, (x+23,-6,-Z_BODY-2.3), (2.4,2.4,1.0), extras={"label":"OK"})
+                  (2.0,2.0,handle_depth), {"visible_protrusion":True})
+        b.cylinder(prefix + "_FAIL_LED", amber, (x+23,7,REAR_RELIEF_Z), (1.5,1.5,.30), extras={"label":"FAIL", "skin_clearance_mm":.25})
+        b.cylinder(prefix + "_OK_LED", green, (x+23,-6,REAR_RELIEF_Z), (1.5,1.5,.30), extras={"label":"OK", "skin_clearance_mm":.25})
 
     fan_centers = (115.5, 32.5, -50.5)
     for slot, x in enumerate(fan_centers, 1):
         prefix = f"Rear_NXA_FAN_65CFM_PI_Slot{slot}"
         b.box(prefix + "_InstalledVolume", steel, (x,0,-Z_BODY+1.0), (79.0,40.0,2.0),
-              {"pid":"NXA-FAN-65CFM-PI", "slot":slot, "airflow":"port-side intake"})
-        b.box(prefix + "_HoneycombRecess", dark, (x,-1,-Z_BODY-1.2), (72,27,1.8),
-              {"grille":"honeycomb field", "recessed":True})
-        b.box(prefix + "_TopPIDPlate", black, (x,15,-Z_BODY-2.0), (72,6,2.0),
-              {"visible_pid_in_source_texture":"NXA-FAN-65CFM-PI"})
+              {"pid":"NXA-FAN-65CFM-PI", "slot":slot, "airflow":"port-side intake", "behind_photo_skin":True})
+        b.box(prefix + "_HoneycombSupport", dark, (x,-1,REAR_SUPPORT_Z), (72,27,.50),
+              {"grille_in_photo_skin":True, "behind_photo_skin":True})
+        b.box(prefix + "_PIDPlateSupport", black, (x,15,REAR_SUPPORT_Z), (72,6,.50),
+              {"visible_pid_in_source_texture":"NXA-FAN-65CFM-PI", "behind_photo_skin":True})
         for side_x in (-34,34):
             b.box(prefix + f"_BurgundyLatch_{side_x:+d}", burgundy,
-                  (x+side_x,0,-Z_BODY-4.0), (8,20,6), {"airflow_code":"PI burgundy"})
-        b.box(prefix + "_HandleCrossbar", black, (x,0,Z_HANDLE_REAR+7.0), (56,7,14),
+                  (x+side_x,0,REAR_SKIN_Z-.55), (3.0,10,.60),
+                  {"airflow_code":"PI burgundy", "skin_clearance_mm":.25})
+        b.box(prefix + "_HandleCrossbar", black, (x,0,Z_HANDLE_REAR+3.0), (46,3.0,6),
               {"visible_protrusion":True})
-        stem_mid = (Z_HANDLE_REAR+14.0 + (-Z_BODY-5.0)) / 2
-        stem_depth = (-Z_BODY-5.0) - (Z_HANDLE_REAR+14.0)
-        for side_x in (-27,27):
+        handle_near_z = REAR_SKIN_Z - 1.0
+        handle_far_inner_z = Z_HANDLE_REAR + 6.0
+        stem_mid = (handle_near_z + handle_far_inner_z) / 2
+        stem_depth = handle_near_z - handle_far_inner_z
+        for side_x in (-22,22):
             b.box(prefix + f"_HandleStem_{side_x:+d}", black, (x+side_x,0,stem_mid),
-                  (6,18,stem_depth), {"visible_protrusion":True})
-        # Visible grille bridges keep the fan face from being a flat dark rectangle.
+                  (2.0,3.5,stem_depth), {"visible_protrusion":True})
+        # The exact honeycomb and PID typography stay in the photo skin.  These
+        # former grille bridges are support-only so they cannot overwrite it.
         for bar in range(-5,6):
-            b.box(prefix + f"_GrilleBridge_{bar:+d}", silver,
-                  (x+bar*6.0,-1,-Z_BODY-2.35), (1.1,24,.45), {"grille_relief":True})
+            b.box(prefix + f"_GrilleBridgeSupport_{bar:+d}", steel,
+                  (x+bar*6.0,-1,REAR_SUPPORT_Z), (.8,24,.40), {"behind_photo_skin":True})
 
     io_x = -125.5
-    b.box("Rear_Management_IO_Plate", steel, (io_x,0,-Z_BODY+.8), (62,40,1.6),
-          {"order":"RJ45 management; RJ45 console; SFP; USB; BCN/STS"})
+    b.box("Rear_Management_IO_Support", steel, (io_x,0,REAR_SUPPORT_Z), (62,40,.50),
+          {"order":"RJ45 management; RJ45 console; SFP; USB; BCN/STS", "behind_photo_skin":True})
     for row, (y,label) in enumerate(((9,"OOB_Management_RJ45"),(-5,"RS232_Console_RJ45")), 1):
-        b.box("Rear_" + label + "_Shield", beige, (io_x-10,y,-Z_BODY-1.8), (15,12,2.0))
-        b.box("Rear_" + label + "_Recess", dark, (io_x-10,y,-Z_BODY-3.0), (11,8,1.0),
-              {"recessed":True})
-    b.box("Rear_OOB_Management_SFP_Recess", dark, (io_x+9,-6,-Z_BODY-2.2), (14,10,2.6),
-          {"port":"SFP", "recessed":True})
-    b.box("Rear_USB_Port_Recess", black, (io_x+23,-4,-Z_BODY-2.3), (6,17,2.8),
-          {"port":"USB", "recessed":True})
-    b.box("Rear_USB_Blue_Insert", blue, (io_x+23,-4,-Z_BODY-3.75), (3,12,.2))
-    b.cylinder("Rear_BCN_LED", green, (io_x+7,-16,-Z_BODY-2.2), (2.4,2.4,1.5), extras={"label":"BCN"})
-    b.cylinder("Rear_STS_LED", green, (io_x+20,-16,-Z_BODY-2.2), (2.4,2.4,1.5), extras={"label":"STS"})
+        b.box("Rear_" + label + "_ShieldSupport", beige, (io_x-10,y,REAR_SUPPORT_Z), (15,12,.50),
+              {"behind_photo_skin":True})
+        b.box("Rear_" + label + "_RecessSupport", dark, (io_x-10,y,REAR_SUPPORT_Z), (11,8,.40),
+              {"behind_photo_skin":True})
+    b.box("Rear_OOB_Management_SFP_Support", dark, (io_x+9,-6,REAR_SUPPORT_Z), (14,10,.50),
+          {"port":"SFP", "behind_photo_skin":True})
+    b.box("Rear_USB_Port_Support", black, (io_x+23,-4,REAR_SUPPORT_Z), (6,17,.50),
+          {"port":"USB", "behind_photo_skin":True})
+    b.box("Rear_USB_Blue_InsertSupport", blue, (io_x+23,-4,REAR_SUPPORT_Z), (3,12,.30),
+          {"behind_photo_skin":True})
+    b.cylinder("Rear_BCN_LED", green, (io_x+7,-16,REAR_RELIEF_Z), (1.5,1.5,.30), extras={"label":"BCN", "skin_clearance_mm":.25})
+    b.cylinder("Rear_STS_LED", green, (io_x+20,-16,REAR_RELIEF_Z), (1.5,1.5,.30), extras={"label":"STS", "skin_clearance_mm":.25})
 
-    # Side-specific stamped mounting zones. No negative scales and no mirrored nodes.
-    for side, x, z_centers, x_out in (
-        ("Left",-X,(-228,222),-X+.30),
-        ("Right",X,(-221,230),X-.30),
-    ):
-        for zone, zc in enumerate(z_centers, 1):
-            for column, dz in enumerate((-7,7), 1):
-                for row, y in enumerate((11,0,-11), 1):
-                    b.box(f"Physical_{side}_BracketZone{zone}_Slot_{column}_{row}", dark,
-                          (x_out,y,zc+dz), (.6,6.0,9.0),
-                          {"side":side.lower(), "mounting_zone":zone, "not_mirrored":True})
-    b.box("Physical_Right_GroundingPad", silver, (X-.15,3,104), (.3,16,30),
-          {"side":"right", "two_hole_grounding_pad":True})
-    for index, z in enumerate((97,111), 1):
-        b.box(f"Physical_Right_GroundingHole_{index}", dark, (X-.15,3,z), (.3,4.5,4.5),
-              {"side":"right", "threaded_hole":True})
+    # The stamped side slots and right-side grounding pad are shallow/flush
+    # features already locked pixel-for-pixel in the two independent side
+    # elevations.  Earlier duplicate boxes ended exactly on the texture planes,
+    # producing same-normal coplanar surfaces during orbit.  They add no verified
+    # silhouette or parallax, so the source-locked side textures are the causal
+    # representation and the redundant overpaint geometry is intentionally gone.
 
     # Top port-side intake band and flush fasteners are real visible relief.
     for column, x in enumerate(range(-210,211,7), 1):

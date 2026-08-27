@@ -1,0 +1,200 @@
+{
+  "schema": "task12-final-validation-v1",
+  "model": "Cisco-N9KC9336",
+  "identity": "Cisco Nexus 9000 N9K-C9336C-FX2",
+  "frozen_artifacts": {
+    "standard": {
+      "path": "models/Cisco-N9K-C9336C-FX2-standard.glb",
+      "sha256": "09f05222ad93c617fcba3e62a0afe493251f43e2813638616e815863ef62df49",
+      "bytes": 20686644
+    },
+    "web": {
+      "path": "models/Cisco-N9K-C9336C-FX2-web.glb",
+      "sha256": "debdc3ee39fab17a6482b590a373b02673e592acf92487cd032efb1677aa2841",
+      "bytes": 1277204
+    },
+    "builder": {
+      "path": "model/build_glb.py",
+      "sha256": "1e4e6dde07b92e20c71412bbb5199778bbcfb260cf65785f7f3261c9e6148806",
+      "bytes": 26000
+    }
+  },
+  "audits": {
+    "standard": {
+      "glb_audit": "PASS",
+      "glb_errors": 0,
+      "structural_audit": "PASS",
+      "structural_errors": 0,
+      "material_alpha_violations": 0,
+      "embedded_image_errors": 0,
+      "sampler_violations": 0,
+      "negative_transforms": 0,
+      "degenerate_triangles": 0,
+      "exact_duplicate_triangle_groups": 0,
+      "opposite_duplicate_triangle_pairs": 0,
+      "unresolved_visible_coplanar_pairs_below_0_05mm": 0,
+      "primitives_without_normals": 0,
+      "closed_core_winding_consistent": true,
+      "closed_core_pass": true
+    },
+    "web": {
+      "glb_audit": "PASS",
+      "glb_errors": 0,
+      "structural_audit": "PASS",
+      "structural_errors": 0,
+      "material_alpha_violations": 0,
+      "embedded_image_errors": 0,
+      "sampler_violations": 0,
+      "negative_transforms": 0,
+      "degenerate_triangles": 0,
+      "exact_duplicate_triangle_groups": 0,
+      "opposite_duplicate_triangle_pairs": 0,
+      "unresolved_visible_coplanar_pairs_below_0_05mm": 0,
+      "primitives_without_normals": 0,
+      "closed_core_winding_consistent": true,
+      "closed_core_pass": true
+    }
+  },
+  "independent_loads": {
+    "three-standard": {
+      "loads": 10,
+      "unique_cache_busters": 10,
+      "sha256": "09f05222ad93c617fcba3e62a0afe493251f43e2813638616e815863ef62df49",
+      "bytes": 20686644,
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "all_materials_opaque": true,
+      "result": "PASS"
+    },
+    "three-web": {
+      "loads": 10,
+      "unique_cache_busters": 10,
+      "sha256": "debdc3ee39fab17a6482b590a373b02673e592acf92487cd032efb1677aa2841",
+      "bytes": 1277204,
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "all_materials_opaque": true,
+      "result": "PASS"
+    },
+    "babylon-standard": {
+      "loads": 10,
+      "unique_cache_busters": 10,
+      "sha256": "09f05222ad93c617fcba3e62a0afe493251f43e2813638616e815863ef62df49",
+      "bytes": 20686644,
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "all_materials_opaque": true,
+      "result": "PASS"
+    },
+    "babylon-web": {
+      "loads": 10,
+      "unique_cache_busters": 10,
+      "sha256": "debdc3ee39fab17a6482b590a373b02673e592acf92487cd032efb1677aa2841",
+      "bytes": 1277204,
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "all_materials_opaque": true,
+      "result": "PASS"
+    }
+  },
+  "load_totals": {
+    "required": 40,
+    "actual": 40
+  },
+  "rotation": {
+    "three-standard": {
+      "yaw_frames": 72,
+      "yaw_step_degrees": 5,
+      "pitch_frames": 4,
+      "checkerboards": [
+        "light",
+        "dark"
+      ],
+      "same_angle_frames": 3,
+      "same_angle_sha256": "44b86b764ea360afb83a9d253dbc4ade85363509767c1e72f653ec9f5efe7b77",
+      "same_angle_byte_identical": true,
+      "sha256": "09f05222ad93c617fcba3e62a0afe493251f43e2813638616e815863ef62df49",
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "result": "PASS"
+    },
+    "three-web": {
+      "yaw_frames": 72,
+      "yaw_step_degrees": 5,
+      "pitch_frames": 4,
+      "checkerboards": [
+        "light",
+        "dark"
+      ],
+      "same_angle_frames": 3,
+      "same_angle_sha256": "dbc68eeeadec2f250e8b29048d9b631b44d226ea629c6785ebe477789e3665af",
+      "same_angle_byte_identical": true,
+      "sha256": "debdc3ee39fab17a6482b590a373b02673e592acf92487cd032efb1677aa2841",
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "result": "PASS"
+    },
+    "babylon-standard": {
+      "yaw_frames": 72,
+      "yaw_step_degrees": 5,
+      "pitch_frames": 4,
+      "checkerboards": [
+        "light",
+        "dark"
+      ],
+      "same_angle_frames": 3,
+      "same_angle_sha256": "bc440b64f4c380088c9e70929bfdb7fbe9f51bf34b1eafd90e4c668c85fe9e21",
+      "same_angle_byte_identical": true,
+      "sha256": "09f05222ad93c617fcba3e62a0afe493251f43e2813638616e815863ef62df49",
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "result": "PASS"
+    },
+    "babylon-web": {
+      "yaw_frames": 72,
+      "yaw_step_degrees": 5,
+      "pitch_frames": 4,
+      "checkerboards": [
+        "light",
+        "dark"
+      ],
+      "same_angle_frames": 3,
+      "same_angle_sha256": "8dffc7c27d5bb7d595d80eb908f41d7b2ad4f1f7b6f2b0f7d11d947b0c1a928e",
+      "same_angle_byte_identical": true,
+      "sha256": "debdc3ee39fab17a6482b590a373b02673e592acf92487cd032efb1677aa2841",
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "result": "PASS"
+    }
+  },
+  "rotation_totals": {
+    "yaw": 288,
+    "pitch": 16,
+    "same_angle_stability": 12,
+    "all_frames": 316
+  },
+  "orthographic": {
+    "standard": {
+      "faces": 6,
+      "proof_hash_matches": true,
+      "result": "PASS"
+    },
+    "web": {
+      "faces": 6,
+      "proof_hash_matches": true,
+      "result": "PASS"
+    }
+  },
+  "matched_camera_comparisons": {
+    "standard": 6,
+    "web": 6,
+    "manual_review": {
+      "result": "PASS",
+      "notes": [
+        "36-port front, two NXA-PAC-1100W-PI2 PSUs, three NXA-FAN-65CFM-PI fans, management group and factory markings remain aligned with the locked sources.",
+        "Left and right source faces remain distinct and correctly oriented.",
+        "Only the documented bottom face uses a generic closed-sheet fallback."
+      ]
+    }
+  },
+  "inventory": {
+    "rows_reviewed": 23,
+    "matched": 23,
+    "unresolved": 0
+  },
+  "task_configuration_conflicts": [],
+  "model_and_viewer_evidence_result": "PASS",
+  "task_status": "PASS_WITH_BOTTOM_FALLBACK"
+}

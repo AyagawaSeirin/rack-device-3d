@@ -1,0 +1,2178 @@
+{
+  "schema": "rotation-risk-structural-audit-v1",
+  "path": "Cisco-N9KC9336/models/Cisco-N9K-C9336C-FX2-web.glb",
+  "byte_size": 1277204,
+  "triangle_count": 10152,
+  "node_geometry_count": 627,
+  "textured_materials": [
+    {
+      "index": 9,
+      "name": "FACE_FRONT_SOURCE_LOCKED",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    },
+    {
+      "index": 10,
+      "name": "FACE_REAR_SOURCE_LOCKED",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    },
+    {
+      "index": 11,
+      "name": "FACE_LEFT_SOURCE_LOCKED",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    },
+    {
+      "index": 12,
+      "name": "FACE_RIGHT_SOURCE_LOCKED",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    },
+    {
+      "index": 13,
+      "name": "FACE_TOP_SOURCE_LOCKED",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    },
+    {
+      "index": 14,
+      "name": "FACE_BOTTOM_SOURCE_LOCKED",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    }
+  ],
+  "material_violations": [],
+  "embedded_image_alpha": [
+    {
+      "index": 0,
+      "mode": "RGB",
+      "size": [
+        2048,
+        206
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    },
+    {
+      "index": 1,
+      "mode": "RGB",
+      "size": [
+        2048,
+        206
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    },
+    {
+      "index": 2,
+      "mode": "RGB",
+      "size": [
+        2048,
+        158
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    },
+    {
+      "index": 3,
+      "mode": "RGB",
+      "size": [
+        2048,
+        158
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    },
+    {
+      "index": 4,
+      "mode": "RGB",
+      "size": [
+        1573,
+        2048
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    },
+    {
+      "index": 5,
+      "mode": "RGB",
+      "size": [
+        1573,
+        2048
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    }
+  ],
+  "image_errors": [],
+  "samplers": [
+    {
+      "index": 0,
+      "wrapS": 33071,
+      "wrapT": 33071
+    }
+  ],
+  "sampler_violations": [],
+  "negative_transforms": [],
+  "degenerate_triangles": [],
+  "exact_duplicate_triangle_groups": [],
+  "opposite_duplicate_triangle_pairs": [],
+  "coplanar_or_near_pairs_within_0_25mm": [
+    {
+      "node_a": "Rear_NXA_PAC_1100W_PI2_PSU2_RearRight_Frame_Bottom",
+      "node_b": "Rear_NXA_PAC_1100W_PI2_PSU2_RearRight_InstalledVolume",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 354.0,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_NXA_PAC_1100W_PI2_PSU2_RearRight_Frame_Top",
+      "node_b": "Rear_NXA_PAC_1100W_PI2_PSU2_RearRight_InstalledVolume",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 354.0,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_NXA_PAC_1100W_PI2_PSU1_RearLeft_Frame_Bottom",
+      "node_b": "Rear_NXA_PAC_1100W_PI2_PSU1_RearLeft_InstalledVolume",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 354.0,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_NXA_PAC_1100W_PI2_PSU1_RearLeft_Frame_Top",
+      "node_b": "Rear_NXA_PAC_1100W_PI2_PSU1_RearLeft_InstalledVolume",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 354.0,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_NXA_PAC_1100W_PI2_PSU2_RearRight_HandleStem_+13",
+      "node_b": "Rear_NXA_PAC_1100W_PI2_PSU2_RearRight_HandleVertical",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 336.0,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Rear_NXA_PAC_1100W_PI2_PSU2_RearRight_HandleStem_-13",
+      "node_b": "Rear_NXA_PAC_1100W_PI2_PSU2_RearRight_HandleVertical",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 336.0,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Rear_NXA_PAC_1100W_PI2_PSU1_RearLeft_HandleStem_+13",
+      "node_b": "Rear_NXA_PAC_1100W_PI2_PSU1_RearLeft_HandleVertical",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 336.0,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Rear_NXA_PAC_1100W_PI2_PSU1_RearLeft_HandleStem_-13",
+      "node_b": "Rear_NXA_PAC_1100W_PI2_PSU1_RearLeft_HandleVertical",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 336.0,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Rear_NXA_PAC_1100W_PI2_PSU2_RearRight_Frame_Right",
+      "node_b": "Rear_NXA_PAC_1100W_PI2_PSU2_RearRight_InstalledVolume",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 312.0,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_NXA_PAC_1100W_PI2_PSU2_RearRight_Frame_Left",
+      "node_b": "Rear_NXA_PAC_1100W_PI2_PSU2_RearRight_InstalledVolume",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 312.0,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_NXA_PAC_1100W_PI2_PSU1_RearLeft_Frame_Right",
+      "node_b": "Rear_NXA_PAC_1100W_PI2_PSU1_RearLeft_InstalledVolume",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 312.0,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_NXA_PAC_1100W_PI2_PSU1_RearLeft_Frame_Left",
+      "node_b": "Rear_NXA_PAC_1100W_PI2_PSU1_RearLeft_InstalledVolume",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 312.0,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_NXA_FAN_65CFM_PI_Slot3_HandleStem_-27",
+      "node_b": "Rear_NXA_FAN_65CFM_PI_Slot3_BurgundyLatch_-34",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 144.0,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_NXA_FAN_65CFM_PI_Slot3_HandleStem_+27",
+      "node_b": "Rear_NXA_FAN_65CFM_PI_Slot3_BurgundyLatch_+34",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 144.0,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_NXA_FAN_65CFM_PI_Slot2_HandleStem_-27",
+      "node_b": "Rear_NXA_FAN_65CFM_PI_Slot2_BurgundyLatch_-34",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 144.0,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_NXA_FAN_65CFM_PI_Slot2_HandleStem_+27",
+      "node_b": "Rear_NXA_FAN_65CFM_PI_Slot2_BurgundyLatch_+34",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 144.0,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_NXA_FAN_65CFM_PI_Slot1_HandleStem_-27",
+      "node_b": "Rear_NXA_FAN_65CFM_PI_Slot1_BurgundyLatch_-34",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 144.0,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_NXA_FAN_65CFM_PI_Slot1_HandleStem_+27",
+      "node_b": "Rear_NXA_FAN_65CFM_PI_Slot1_BurgundyLatch_+34",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 144.0,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_NXA_FAN_65CFM_PI_Slot3_HandleStem_+27",
+      "node_b": "Rear_NXA_FAN_65CFM_PI_Slot3_HandleCrossbar",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 112.0,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_NXA_FAN_65CFM_PI_Slot3_HandleStem_-27",
+      "node_b": "Rear_NXA_FAN_65CFM_PI_Slot3_HandleCrossbar",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 112.0,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_NXA_FAN_65CFM_PI_Slot2_HandleStem_+27",
+      "node_b": "Rear_NXA_FAN_65CFM_PI_Slot2_HandleCrossbar",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 112.0,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_NXA_FAN_65CFM_PI_Slot2_HandleStem_-27",
+      "node_b": "Rear_NXA_FAN_65CFM_PI_Slot2_HandleCrossbar",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 112.0,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_NXA_FAN_65CFM_PI_Slot1_HandleStem_+27",
+      "node_b": "Rear_NXA_FAN_65CFM_PI_Slot1_HandleCrossbar",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 112.0,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_NXA_FAN_65CFM_PI_Slot1_HandleStem_-27",
+      "node_b": "Rear_NXA_FAN_65CFM_PI_Slot1_HandleCrossbar",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 112.0,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_NXA_PAC_1100W_PI2_PSU2_RearRight_BurgundyRelease",
+      "node_b": "Rear_NXA_PAC_1100W_PI2_PSU2_RearRight_Frame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 100.0,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_NXA_PAC_1100W_PI2_PSU1_RearLeft_BurgundyRelease",
+      "node_b": "Rear_NXA_PAC_1100W_PI2_PSU1_RearLeft_Frame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 100.0,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_NXA_PAC_1100W_PI2_PSU2_RearRight_HandleStem_+13",
+      "node_b": "Rear_NXA_PAC_1100W_PI2_PSU2_RearRight_HandleVertical",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 70.0,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_NXA_PAC_1100W_PI2_PSU2_RearRight_HandleStem_-13",
+      "node_b": "Rear_NXA_PAC_1100W_PI2_PSU2_RearRight_HandleVertical",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 70.0,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_NXA_PAC_1100W_PI2_PSU1_RearLeft_HandleStem_+13",
+      "node_b": "Rear_NXA_PAC_1100W_PI2_PSU1_RearLeft_HandleVertical",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 70.0,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear_NXA_PAC_1100W_PI2_PSU1_RearLeft_HandleStem_-13",
+      "node_b": "Rear_NXA_PAC_1100W_PI2_PSU1_RearLeft_HandleVertical",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 70.0,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Top_FlushFastener_12",
+      "node_b": "Top_PortSideVent_31_2",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 64.0149806115758,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "Top_FlushFastener_13",
+      "node_b": "Top_PortSideVent_56_2",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 51.05642996705859,
+      "triangle_pairs": 48
+    },
+    {
+      "node_a": "Front_QSFP28_Port_02_Recess",
+      "node_b": "Front_QSFP28_Cage_01_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.4,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_02_Recess",
+      "node_b": "Front_QSFP28_Cage_01_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.4,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_04_Recess",
+      "node_b": "Front_QSFP28_Cage_02_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.4,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_04_Recess",
+      "node_b": "Front_QSFP28_Cage_02_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.4,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_06_Recess",
+      "node_b": "Front_QSFP28_Cage_03_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.4,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_08_Recess",
+      "node_b": "Front_QSFP28_Cage_04_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.4,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_10_Recess",
+      "node_b": "Front_QSFP28_Cage_05_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.4,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_14_Recess",
+      "node_b": "Front_QSFP28_Cage_07_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.4,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_14_Recess",
+      "node_b": "Front_QSFP28_Cage_07_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.4,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_16_Recess",
+      "node_b": "Front_QSFP28_Cage_08_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.4,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_18_Recess",
+      "node_b": "Front_QSFP28_Cage_09_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.4,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_20_Recess",
+      "node_b": "Front_QSFP28_Cage_10_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.4,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_20_Recess",
+      "node_b": "Front_QSFP28_Cage_10_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.4,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_22_Recess",
+      "node_b": "Front_QSFP28_Cage_11_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.4,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_24_Recess",
+      "node_b": "Front_QSFP28_Cage_12_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.4,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_24_Recess",
+      "node_b": "Front_QSFP28_Cage_12_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.4,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_26_Recess",
+      "node_b": "Front_QSFP28_Cage_13_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.4,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_28_Recess",
+      "node_b": "Front_QSFP28_Cage_14_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.4,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_30_Recess",
+      "node_b": "Front_QSFP28_Cage_15_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.4,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_30_Recess",
+      "node_b": "Front_QSFP28_Cage_15_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.4,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_32_Recess",
+      "node_b": "Front_QSFP28_Cage_16_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.4,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_32_Recess",
+      "node_b": "Front_QSFP28_Cage_16_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.4,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_34_Recess",
+      "node_b": "Front_QSFP28_Cage_17_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.4,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_34_Recess",
+      "node_b": "Front_QSFP28_Cage_17_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.4,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_36_Recess",
+      "node_b": "Front_QSFP28_Cage_18_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.4,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_01_Recess",
+      "node_b": "Front_QSFP28_Cage_01_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.39999999999999,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_01_Recess",
+      "node_b": "Front_QSFP28_Cage_01_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.39999999999999,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_03_Recess",
+      "node_b": "Front_QSFP28_Cage_02_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.39999999999999,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_03_Recess",
+      "node_b": "Front_QSFP28_Cage_02_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.39999999999999,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_05_Recess",
+      "node_b": "Front_QSFP28_Cage_03_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.39999999999999,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_07_Recess",
+      "node_b": "Front_QSFP28_Cage_04_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.39999999999999,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_09_Recess",
+      "node_b": "Front_QSFP28_Cage_05_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.39999999999999,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_13_Recess",
+      "node_b": "Front_QSFP28_Cage_07_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.39999999999999,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_13_Recess",
+      "node_b": "Front_QSFP28_Cage_07_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.39999999999999,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_15_Recess",
+      "node_b": "Front_QSFP28_Cage_08_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.39999999999999,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_17_Recess",
+      "node_b": "Front_QSFP28_Cage_09_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.39999999999999,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_19_Recess",
+      "node_b": "Front_QSFP28_Cage_10_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.39999999999999,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_19_Recess",
+      "node_b": "Front_QSFP28_Cage_10_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.39999999999999,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_21_Recess",
+      "node_b": "Front_QSFP28_Cage_11_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.39999999999999,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_23_Recess",
+      "node_b": "Front_QSFP28_Cage_12_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.39999999999999,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_23_Recess",
+      "node_b": "Front_QSFP28_Cage_12_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.39999999999999,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_25_Recess",
+      "node_b": "Front_QSFP28_Cage_13_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.39999999999999,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_27_Recess",
+      "node_b": "Front_QSFP28_Cage_14_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.39999999999999,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_29_Recess",
+      "node_b": "Front_QSFP28_Cage_15_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.39999999999999,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_29_Recess",
+      "node_b": "Front_QSFP28_Cage_15_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.39999999999999,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_31_Recess",
+      "node_b": "Front_QSFP28_Cage_16_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.39999999999999,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_31_Recess",
+      "node_b": "Front_QSFP28_Cage_16_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.39999999999999,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_33_Recess",
+      "node_b": "Front_QSFP28_Cage_17_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.39999999999999,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_33_Recess",
+      "node_b": "Front_QSFP28_Cage_17_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.39999999999999,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Port_35_Recess",
+      "node_b": "Front_QSFP28_Cage_18_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 50.39999999999999,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_03_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_03_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_03_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_03_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_04_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_04_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_04_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_04_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_05_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_05_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_05_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_05_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_06_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_06_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_06_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_06_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_06_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_06_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_06_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_06_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_07_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_07_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_07_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_07_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_07_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_07_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_07_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_07_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_08_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_08_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_08_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_08_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_08_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_08_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_08_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_08_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_09_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_09_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_09_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_09_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_10_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_10_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_10_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_10_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_11_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_11_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_11_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_11_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_12_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_12_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_12_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_12_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_12_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_12_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_12_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_12_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_13_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_13_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_13_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_13_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_14_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_14_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_14_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_14_MetalFrame_Left",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_18_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_18_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_18_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_18_MetalFrame_Right",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 27.199999999999818,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_14_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_14_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.40000000000009,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_14_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_14_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.40000000000009,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_13_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_13_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.40000000000009,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_13_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_13_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.40000000000009,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_12_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_12_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.40000000000009,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_12_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_12_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.40000000000009,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_12_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_12_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.40000000000009,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_12_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_12_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.40000000000009,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_08_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_08_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.40000000000009,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_08_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_08_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.40000000000009,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_07_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_07_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.40000000000009,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_07_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_07_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.40000000000009,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_07_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_07_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.40000000000009,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_07_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_07_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.40000000000009,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_06_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_06_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.40000000000009,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_06_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_06_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.40000000000009,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_06_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_06_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.40000000000009,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_06_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_06_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.40000000000009,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_05_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_05_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.40000000000009,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_05_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_05_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.40000000000009,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_10_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_10_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.400000000000006,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_10_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_10_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.400000000000006,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_09_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_09_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.400000000000002,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_09_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_09_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.400000000000002,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_11_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_11_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999977,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_11_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_11_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999977,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_11_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_11_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999977,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_11_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_11_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999977,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_10_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_10_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999977,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_10_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_10_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999977,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_09_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_09_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999977,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_09_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_09_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999977,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_08_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_08_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999977,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_08_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_08_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999977,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_15_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_15_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999864,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_15_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_15_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999864,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_14_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_14_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999864,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_14_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_14_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999864,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_13_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_13_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999864,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_13_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_13_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999864,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_05_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_05_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999864,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_05_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_05_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999864,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_04_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_04_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999864,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_04_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_04_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999864,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_18_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_18_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999636,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_18_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_18_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999636,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_18_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_18_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999636,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_18_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_18_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999636,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_17_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_17_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999636,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_17_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_17_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999636,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_17_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_17_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999636,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_17_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_17_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999636,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_16_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_16_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999636,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_16_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_16_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999636,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_16_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_16_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999636,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_16_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_16_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999636,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_15_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_15_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999636,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_15_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_15_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999636,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_04_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_04_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999636,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_04_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_04_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999636,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_03_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_03_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999636,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_03_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_03_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999636,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_03_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_03_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999636,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_03_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_03_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999636,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_02_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_02_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999636,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_02_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_02_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999636,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_02_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_02_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999636,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_02_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_02_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999636,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_01_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_01_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999636,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_01_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_01_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999636,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_01_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_01_MetalFrame_Right",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999636,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_01_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_01_MetalFrame_Left",
+      "axis": 2,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 22.399999999999636,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_14_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_14_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.03999999999995,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_13_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_13_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.03999999999995,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_12_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_12_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.03999999999995,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_12_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_12_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.03999999999995,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_08_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_08_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.03999999999995,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_07_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_07_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.03999999999995,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_07_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_07_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.03999999999995,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_06_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_06_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.03999999999995,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_06_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_06_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.03999999999995,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_05_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_05_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.03999999999995,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_14_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_14_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.03999999999995,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_13_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_13_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.03999999999995,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_12_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_12_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.03999999999995,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_12_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_12_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.03999999999995,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_08_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_08_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.03999999999995,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_07_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_07_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.03999999999995,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_07_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_07_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.03999999999995,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_06_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_06_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.03999999999995,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_06_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_06_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.03999999999995,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_05_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_05_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.03999999999995,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_10_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_10_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.03999999999988,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_10_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_10_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.03999999999988,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_09_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_09_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.03999999999987,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_09_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_09_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.03999999999987,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_11_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_11_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999853,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_11_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_11_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999853,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_10_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_10_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999853,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_09_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_09_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999853,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_08_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_08_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999853,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_11_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_11_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999853,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_11_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_11_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999853,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_10_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_10_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999853,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_09_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_09_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999853,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_08_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_08_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999853,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_15_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_15_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999758,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_14_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_14_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999758,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_13_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_13_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999758,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_05_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_05_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999758,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_04_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_04_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999758,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_15_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_15_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999758,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_14_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_14_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999758,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_13_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_13_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999758,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_05_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_05_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999758,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_04_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_04_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999758,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_18_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_18_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999562,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_18_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_18_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999562,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_17_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_17_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999562,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_17_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_17_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999562,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_16_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_16_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999562,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_16_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_16_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999562,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_15_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_15_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999562,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_04_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_04_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999562,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_03_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_03_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999562,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_03_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_03_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999562,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_02_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_02_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999562,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_02_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_02_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999562,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_01_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_01_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999562,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_01_MetalFrame_Bottom",
+      "node_b": "Front_QSFP28_Cage_01_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999562,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_18_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_18_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999562,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_18_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_18_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999562,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_17_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_17_MetalFrame_Right",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999562,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front_QSFP28_Cage_17_MetalFrame_Top",
+      "node_b": "Front_QSFP28_Cage_17_MetalFrame_Left",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 19.039999999999562,
+      "triangle_pairs": 4
+    }
+  ],
+  "unresolved_visible_coplanar_pairs_below_0_05mm": [],
+  "closed_core_nodes": [
+    {
+      "node": "Closed_1RU_C9336C_FX2_Chassis_Core",
+      "watertight": true,
+      "winding_consistent": true,
+      "volume_m3": 10752376.32
+    }
+  ],
+  "closed_core_pass": true,
+  "errors": [],
+  "error_count": 0,
+  "status": "PASS"
+}

@@ -1,0 +1,675 @@
+{
+  "path": "Cisco-N9KC9336/models/Cisco-N9K-C9336C-FX2-standard.glb",
+  "byte_size": 22217816,
+  "asset": {
+    "version": "2.0",
+    "generator": "Codex exact-appearance rack-device builder",
+    "copyright": "Cisco and Nexus marks remain property of Cisco Systems, Inc.",
+    "extras": {
+      "identity": "Cisco Nexus 9000 C9336C-FX2 Chassis",
+      "pid": "N9K-C9336C-FX2",
+      "identity_status": "VERIFIED",
+      "installed_configuration": "2 x NXA-PAC-1100W-PI2 AC PSU; 3 x NXA-FAN-65CFM-PI",
+      "airflow": "port-side intake; burgundy PI hardware",
+      "front_ports": "36 empty QSFP28 ports in 18 vertical two-port cages",
+      "not_variants": [
+        "N9K-C9336PQ",
+        "N9K-C9336-FX2",
+        "N9K-C9336C-FX2-E"
+      ],
+      "dimensions_mm": {
+        "width": 439.0,
+        "height": 44.0,
+        "body_depth": 571.5,
+        "overall_depth_with_handles": 623.0
+      },
+      "orientation": "+X device right from front, +Y up, +Z port/front side",
+      "bottom_evidence": "GENERIC_BOTTOM_FALLBACK after documented search escalation",
+      "official_public_3d": "not found in documented public-source search",
+      "variant": "standard"
+    }
+  },
+  "extensions_used": [
+    "KHR_materials_unlit"
+  ],
+  "extensions_required": [],
+  "counts": {
+    "scenes": 1,
+    "nodes": 726,
+    "meshes": 19,
+    "primitives": 19,
+    "materials": 16,
+    "textures": 6,
+    "images": 6,
+    "unique_basecolor_images": 6
+  },
+  "geometry": {
+    "mirrored_nodes": [],
+    "missing_accessor_bounds": [],
+    "bounds_min": [
+      -219.5,
+      -22.0,
+      -337.25
+    ],
+    "bounds_max": [
+      219.5,
+      22.000000000000004,
+      285.75
+    ],
+    "dimensions_xyz": [
+      439.0,
+      44.0,
+      623.0
+    ]
+  },
+  "dimension_check": {
+    "expected_mm": [
+      439.0,
+      44.0,
+      623.0
+    ],
+    "errors": [],
+    "warnings": [],
+    "actual_xyz": [
+      439.0,
+      44.0,
+      623.0
+    ],
+    "units_per_mm_xyz": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "nonuniform_ratio_error_percent": 0.0
+  },
+  "images": [
+    {
+      "index": 0,
+      "name": "FACE_FRONT_SOURCE_LOCKED_Image",
+      "errors": [],
+      "warnings": [],
+      "format": "PNG",
+      "mode": "RGB",
+      "size_px": [
+        4096,
+        411
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    },
+    {
+      "index": 1,
+      "name": "FACE_REAR_SOURCE_LOCKED_Image",
+      "errors": [],
+      "warnings": [],
+      "format": "PNG",
+      "mode": "RGB",
+      "size_px": [
+        4096,
+        411
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    },
+    {
+      "index": 2,
+      "name": "FACE_LEFT_SOURCE_LOCKED_Image",
+      "errors": [],
+      "warnings": [],
+      "format": "PNG",
+      "mode": "RGB",
+      "size_px": [
+        4096,
+        315
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    },
+    {
+      "index": 3,
+      "name": "FACE_RIGHT_SOURCE_LOCKED_Image",
+      "errors": [],
+      "warnings": [],
+      "format": "PNG",
+      "mode": "RGB",
+      "size_px": [
+        4096,
+        315
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    },
+    {
+      "index": 4,
+      "name": "FACE_TOP_SOURCE_LOCKED_Image",
+      "errors": [],
+      "warnings": [],
+      "format": "PNG",
+      "mode": "RGB",
+      "size_px": [
+        3146,
+        4096
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    },
+    {
+      "index": 5,
+      "name": "FACE_BOTTOM_SOURCE_LOCKED_Image",
+      "errors": [],
+      "warnings": [],
+      "format": "PNG",
+      "mode": "RGB",
+      "size_px": [
+        3146,
+        4096
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    }
+  ],
+  "materials": [
+    {
+      "index": 0,
+      "name": "Cisco_Galvanized_Steel",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.68,
+        0.7,
+        0.7,
+        1
+      ],
+      "metallic_factor": 0.55,
+      "roughness_factor": 0.58,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 1,
+      "name": "Bright_Module_Edges",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.82,
+        0.83,
+        0.81,
+        1
+      ],
+      "metallic_factor": 0.65,
+      "roughness_factor": 0.43,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 2,
+      "name": "Source_Aligned_Narrow_Relief",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.47,
+        0.48,
+        0.47,
+        1
+      ],
+      "metallic_factor": 0.3,
+      "roughness_factor": 0.62,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 3,
+      "name": "Dark_Recess",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.018,
+        0.022,
+        0.026,
+        1
+      ],
+      "metallic_factor": 0.02,
+      "roughness_factor": 0.6,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 4,
+      "name": "Black_Polymer",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.009,
+        0.011,
+        0.014,
+        1
+      ],
+      "metallic_factor": 0.01,
+      "roughness_factor": 0.48,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 5,
+      "name": "Port_Intake_Burgundy",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.5,
+        0.025,
+        0.12,
+        1
+      ],
+      "metallic_factor": 0.02,
+      "roughness_factor": 0.46,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 6,
+      "name": "RJ45_Shield",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.68,
+        0.62,
+        0.52,
+        1
+      ],
+      "metallic_factor": 0.25,
+      "roughness_factor": 0.55,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 7,
+      "name": "Status_LED_Green",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.01,
+        0.7,
+        0.08,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 0.25,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 8,
+      "name": "Status_LED_Amber",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.95,
+        0.5,
+        0.01,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 0.25,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 9,
+      "name": "USB_Blue_Insert",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.02,
+        0.14,
+        0.58,
+        1
+      ],
+      "metallic_factor": 0.02,
+      "roughness_factor": 0.4,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 10,
+      "name": "FACE_FRONT_SOURCE_LOCKED",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 1.0,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 0,
+      "base_color_image": 0
+    },
+    {
+      "index": 11,
+      "name": "FACE_REAR_SOURCE_LOCKED",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 1.0,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 1,
+      "base_color_image": 1
+    },
+    {
+      "index": 12,
+      "name": "FACE_LEFT_SOURCE_LOCKED",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 1.0,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 2,
+      "base_color_image": 2
+    },
+    {
+      "index": 13,
+      "name": "FACE_RIGHT_SOURCE_LOCKED",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 1.0,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 3,
+      "base_color_image": 3
+    },
+    {
+      "index": 14,
+      "name": "FACE_TOP_SOURCE_LOCKED",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 1.0,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 4,
+      "base_color_image": 4
+    },
+    {
+      "index": 15,
+      "name": "FACE_BOTTOM_SOURCE_LOCKED",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 1.0,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 5,
+      "base_color_image": 5
+    }
+  ],
+  "primitives": [
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "material": 0,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 1,
+      "primitive": 0,
+      "material": 10,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 2,
+      "primitive": 0,
+      "material": 11,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 3,
+      "primitive": 0,
+      "material": 12,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 4,
+      "primitive": 0,
+      "material": 13,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 5,
+      "primitive": 0,
+      "material": 14,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 6,
+      "primitive": 0,
+      "material": 15,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 7,
+      "primitive": 0,
+      "material": 2,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 8,
+      "primitive": 0,
+      "material": 3,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 9,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 10,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 11,
+      "primitive": 0,
+      "material": 4,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 12,
+      "primitive": 0,
+      "material": 3,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 13,
+      "primitive": 0,
+      "material": 4,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 14,
+      "primitive": 0,
+      "material": 5,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 15,
+      "primitive": 0,
+      "material": 1,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 16,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 17,
+      "primitive": 0,
+      "material": 9,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 18,
+      "primitive": 0,
+      "material": 1,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    }
+  ],
+  "external_buffers": [],
+  "errors": [],
+  "warnings": [],
+  "error_count": 0,
+  "warning_count": 0,
+  "status": "PASS"
+}

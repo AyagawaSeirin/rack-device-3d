@@ -37,3 +37,6 @@ Relevant official pages checked:
 - https://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-742282.html
 - https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/hw/n9336cfx2_hig/guide/b_n9336cFX2_nxos_hardware_installation_guide/b_n9336cFX2_nxos_hardware_installation_guide_chapter_01.html
 
+## Task-12 current cross-check — 2026-08-27
+
+The exact-PID official support, product, installation-guide and public-index searches were repeated for `N9K-C9336C-FX2` with the 3D/CAD file terms above. No exact public official GLB, glTF, OBJ, FBX, STEP/STP, CAD payload or public interactive 3D package was found. The official documentation still confirms the C9336C-FX2 identity and its 1100 W PI2 / 65 CFM PI module family. There is therefore no new official 3D byte stream to preserve; both active standard/web GLBs remain the self-built deliverables.

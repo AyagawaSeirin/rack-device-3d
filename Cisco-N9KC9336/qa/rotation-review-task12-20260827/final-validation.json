@@ -1,0 +1,217 @@
+{
+  "schema": "task12-final-validation-v1",
+  "model": "Cisco-N9KC9336",
+  "identity": "Cisco Nexus 9000 N9K-C9336C-FX2",
+  "frozen_artifacts": {
+    "standard": {
+      "path": "models/Cisco-N9K-C9336C-FX2-standard.glb",
+      "sha256": "c33f9ae3d36b7710e336e2aeecbad1bfd2416d20bb379e3beed84a133485868d",
+      "bytes": 22217816
+    },
+    "web": {
+      "path": "models/Cisco-N9K-C9336C-FX2-web.glb",
+      "sha256": "cdb6e37999ed720aabe1f9da0641383f1d6320abd270a6c2696d493bea6584c6",
+      "bytes": 1307548
+    },
+    "builder": {
+      "path": "model/build_glb.py",
+      "sha256": "f1d523ba8762ac63ea99ee3dcce9d89f3b4f6fd45d625c2615382786fac882d9",
+      "bytes": 29100
+    }
+  },
+  "audits": {
+    "standard": {
+      "glb_audit": "PASS",
+      "glb_errors": 0,
+      "structural_audit": "PASS",
+      "structural_errors": 0,
+      "material_alpha_violations": 0,
+      "embedded_image_errors": 0,
+      "sampler_violations": 0,
+      "negative_transforms": 0,
+      "degenerate_triangles": 0,
+      "exact_duplicate_triangle_groups": 0,
+      "opposite_duplicate_triangle_pairs": 0,
+      "unresolved_visible_coplanar_pairs_below_0_05mm": 0,
+      "primitives_without_normals": 0,
+      "closed_core_winding_consistent": true,
+      "closed_core_pass": true
+    },
+    "web": {
+      "glb_audit": "PASS",
+      "glb_errors": 0,
+      "structural_audit": "PASS",
+      "structural_errors": 0,
+      "material_alpha_violations": 0,
+      "embedded_image_errors": 0,
+      "sampler_violations": 0,
+      "negative_transforms": 0,
+      "degenerate_triangles": 0,
+      "exact_duplicate_triangle_groups": 0,
+      "opposite_duplicate_triangle_pairs": 0,
+      "unresolved_visible_coplanar_pairs_below_0_05mm": 0,
+      "primitives_without_normals": 0,
+      "closed_core_winding_consistent": true,
+      "closed_core_pass": true
+    }
+  },
+  "independent_loads": {
+    "three-standard": {
+      "loads": 10,
+      "unique_cache_busters": 10,
+      "sha256": "c33f9ae3d36b7710e336e2aeecbad1bfd2416d20bb379e3beed84a133485868d",
+      "bytes": 22217816,
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "all_materials_opaque": true,
+      "result": "PASS"
+    },
+    "three-web": {
+      "loads": 10,
+      "unique_cache_busters": 10,
+      "sha256": "cdb6e37999ed720aabe1f9da0641383f1d6320abd270a6c2696d493bea6584c6",
+      "bytes": 1307548,
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "all_materials_opaque": true,
+      "result": "PASS"
+    },
+    "babylon-standard": {
+      "loads": 10,
+      "unique_cache_busters": 10,
+      "sha256": "c33f9ae3d36b7710e336e2aeecbad1bfd2416d20bb379e3beed84a133485868d",
+      "bytes": 22217816,
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "all_materials_opaque": true,
+      "result": "PASS"
+    },
+    "babylon-web": {
+      "loads": 10,
+      "unique_cache_busters": 10,
+      "sha256": "cdb6e37999ed720aabe1f9da0641383f1d6320abd270a6c2696d493bea6584c6",
+      "bytes": 1307548,
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "all_materials_opaque": true,
+      "result": "PASS"
+    }
+  },
+  "load_totals": {
+    "required": 40,
+    "actual": 40
+  },
+  "rotation": {
+    "three-standard": {
+      "yaw_frames": 72,
+      "yaw_step_degrees": 5,
+      "pitch_frames": 4,
+      "checkerboards": [
+        "light",
+        "dark"
+      ],
+      "same_angle_frames": 3,
+      "same_angle_sha256": "ac91789b1734a7a7055c40a200adcc82de5a656c56df482584c6158408dd0923",
+      "same_angle_byte_identical": true,
+      "sha256": "c33f9ae3d36b7710e336e2aeecbad1bfd2416d20bb379e3beed84a133485868d",
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "result": "PASS"
+    },
+    "three-web": {
+      "yaw_frames": 72,
+      "yaw_step_degrees": 5,
+      "pitch_frames": 4,
+      "checkerboards": [
+        "light",
+        "dark"
+      ],
+      "same_angle_frames": 3,
+      "same_angle_sha256": "9253b1feef288d7c606226bfb1c6417c648ebfe0ca0b13b4da4de4d37af6dcf6",
+      "same_angle_byte_identical": true,
+      "sha256": "cdb6e37999ed720aabe1f9da0641383f1d6320abd270a6c2696d493bea6584c6",
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "result": "PASS"
+    },
+    "babylon-standard": {
+      "yaw_frames": 72,
+      "yaw_step_degrees": 5,
+      "pitch_frames": 4,
+      "checkerboards": [
+        "light",
+        "dark"
+      ],
+      "same_angle_frames": 3,
+      "same_angle_sha256": "7a94d38e2535618e7217568c50a7129a48bdd02ee37809d3fb83e098f03b7fe5",
+      "same_angle_byte_identical": true,
+      "sha256": "c33f9ae3d36b7710e336e2aeecbad1bfd2416d20bb379e3beed84a133485868d",
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "result": "PASS"
+    },
+    "babylon-web": {
+      "yaw_frames": 72,
+      "yaw_step_degrees": 5,
+      "pitch_frames": 4,
+      "checkerboards": [
+        "light",
+        "dark"
+      ],
+      "same_angle_frames": 3,
+      "same_angle_sha256": "33a756795cf0f51ca81edc40933a5ccf0911d42a15063b01e21a45acc0a928c5",
+      "same_angle_byte_identical": true,
+      "sha256": "cdb6e37999ed720aabe1f9da0641383f1d6320abd270a6c2696d493bea6584c6",
+      "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "result": "PASS"
+    }
+  },
+  "rotation_totals": {
+    "yaw": 288,
+    "pitch": 16,
+    "same_angle_stability": 12,
+    "all_frames": 316
+  },
+  "orthographic": {
+    "standard": {
+      "faces": 6,
+      "proof_hash_matches": true,
+      "result": "PASS"
+    },
+    "web": {
+      "faces": 6,
+      "proof_hash_matches": true,
+      "result": "PASS"
+    }
+  },
+  "matched_camera_comparisons": {
+    "standard": 6,
+    "web": 6,
+    "mean_absolute_rgb_difference": {
+      "standard-front": 1.824464,
+      "standard-rear": 1.615475,
+      "standard-left": 0.688249,
+      "standard-right": 0.945626,
+      "standard-top": 2.461387,
+      "standard-bottom": 11.796994,
+      "web-front": 1.799814,
+      "web-rear": 1.624491,
+      "web-left": 0.707176,
+      "web-right": 0.964226,
+      "web-top": 2.502502,
+      "web-bottom": 11.81312
+    },
+    "manual_review": {
+      "result": "PASS",
+      "notes": [
+        "36-port front, two NXA-PAC-1100W-PI2 PSUs, three NXA-FAN-65CFM-PI fans, management group and factory markings remain aligned with the locked sources.",
+        "The front/rear source-photo skins are now the primary visible layers; coarse cage, grille, PID-plate, inlet and I/O support volumes are behind the opaque skins with at least 0.25 mm clearance.",
+        "Only narrow source-aligned rims, latch openings, LEDs and real handle protrusions remain in front; the prior gray cage blocks and coarse rear grille/handle overpaint no longer obscure photographic detail.",
+        "Left and right source faces remain distinct and correctly oriented.",
+        "Only the documented bottom face uses a generic closed-sheet fallback."
+      ]
+    }
+  },
+  "inventory": {
+    "rows_reviewed": 23,
+    "matched": 23,
+    "unresolved": 0
+  },
+  "task_configuration_conflicts": [],
+  "compatibility_notes": [],
+  "model_and_viewer_evidence_result": "PASS",
+  "task_status": "PASS_WITH_BOTTOM_FALLBACK"
+}

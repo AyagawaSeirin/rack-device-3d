@@ -1,0 +1,318 @@
+{
+  "schema": "task12-matched-camera-comparisons-v1",
+  "model": "Cisco-N9KC9336",
+  "profiles": [
+    "standard",
+    "web"
+  ],
+  "faces_per_profile": 6,
+  "comparison_count": 12,
+  "panels": [
+    "matched source",
+    "actual GLB render",
+    "50% overlay",
+    "absolute difference x3"
+  ],
+  "rows": [
+    {
+      "model": "Cisco-N9KC9336",
+      "profile": "standard",
+      "face": "front",
+      "source_bbox": [
+        0,
+        0,
+        4096,
+        411
+      ],
+      "render_bbox": [
+        14,
+        341,
+        1186,
+        459
+      ],
+      "matched_body_target": [
+        14,
+        341,
+        1186,
+        459
+      ],
+      "mean_absolute_rgb_difference": 1.824464,
+      "comparison": "qa/rotation-review-task12-20260827/candidate-comparisons/standard/front.png"
+    },
+    {
+      "model": "Cisco-N9KC9336",
+      "profile": "standard",
+      "face": "rear",
+      "source_bbox": [
+        0,
+        0,
+        4096,
+        411
+      ],
+      "render_bbox": [
+        14,
+        341,
+        1186,
+        459
+      ],
+      "matched_body_target": [
+        14,
+        341,
+        1186,
+        459
+      ],
+      "mean_absolute_rgb_difference": 1.615475,
+      "comparison": "qa/rotation-review-task12-20260827/candidate-comparisons/standard/rear.png"
+    },
+    {
+      "model": "Cisco-N9KC9336",
+      "profile": "standard",
+      "face": "left",
+      "source_bbox": [
+        0,
+        0,
+        4096,
+        315
+      ],
+      "render_bbox": [
+        14,
+        358,
+        1186,
+        442
+      ],
+      "matched_body_target": [
+        111,
+        358,
+        1186,
+        442
+      ],
+      "mean_absolute_rgb_difference": 0.688249,
+      "comparison": "qa/rotation-review-task12-20260827/candidate-comparisons/standard/left.png"
+    },
+    {
+      "model": "Cisco-N9KC9336",
+      "profile": "standard",
+      "face": "right",
+      "source_bbox": [
+        0,
+        0,
+        4096,
+        315
+      ],
+      "render_bbox": [
+        14,
+        358,
+        1186,
+        442
+      ],
+      "matched_body_target": [
+        14,
+        358,
+        1089,
+        442
+      ],
+      "mean_absolute_rgb_difference": 0.945626,
+      "comparison": "qa/rotation-review-task12-20260827/candidate-comparisons/standard/right.png"
+    },
+    {
+      "model": "Cisco-N9KC9336",
+      "profile": "standard",
+      "face": "top",
+      "source_bbox": [
+        0,
+        0,
+        3146,
+        4096
+      ],
+      "render_bbox": [
+        325,
+        9,
+        875,
+        791
+      ],
+      "matched_body_target": [
+        325,
+        74,
+        875,
+        791
+      ],
+      "mean_absolute_rgb_difference": 2.461387,
+      "comparison": "qa/rotation-review-task12-20260827/candidate-comparisons/standard/top.png"
+    },
+    {
+      "model": "Cisco-N9KC9336",
+      "profile": "standard",
+      "face": "bottom",
+      "source_bbox": [
+        0,
+        0,
+        3146,
+        4096
+      ],
+      "render_bbox": [
+        325,
+        9,
+        875,
+        791
+      ],
+      "matched_body_target": [
+        325,
+        9,
+        875,
+        726
+      ],
+      "mean_absolute_rgb_difference": 11.796994,
+      "comparison": "qa/rotation-review-task12-20260827/candidate-comparisons/standard/bottom.png"
+    },
+    {
+      "model": "Cisco-N9KC9336",
+      "profile": "web",
+      "face": "front",
+      "source_bbox": [
+        0,
+        0,
+        4096,
+        411
+      ],
+      "render_bbox": [
+        14,
+        341,
+        1186,
+        459
+      ],
+      "matched_body_target": [
+        14,
+        341,
+        1186,
+        459
+      ],
+      "mean_absolute_rgb_difference": 1.799814,
+      "comparison": "qa/rotation-review-task12-20260827/candidate-comparisons/web/front.png"
+    },
+    {
+      "model": "Cisco-N9KC9336",
+      "profile": "web",
+      "face": "rear",
+      "source_bbox": [
+        0,
+        0,
+        4096,
+        411
+      ],
+      "render_bbox": [
+        14,
+        341,
+        1186,
+        459
+      ],
+      "matched_body_target": [
+        14,
+        341,
+        1186,
+        459
+      ],
+      "mean_absolute_rgb_difference": 1.624491,
+      "comparison": "qa/rotation-review-task12-20260827/candidate-comparisons/web/rear.png"
+    },
+    {
+      "model": "Cisco-N9KC9336",
+      "profile": "web",
+      "face": "left",
+      "source_bbox": [
+        0,
+        0,
+        4096,
+        315
+      ],
+      "render_bbox": [
+        14,
+        358,
+        1186,
+        442
+      ],
+      "matched_body_target": [
+        111,
+        358,
+        1186,
+        442
+      ],
+      "mean_absolute_rgb_difference": 0.707176,
+      "comparison": "qa/rotation-review-task12-20260827/candidate-comparisons/web/left.png"
+    },
+    {
+      "model": "Cisco-N9KC9336",
+      "profile": "web",
+      "face": "right",
+      "source_bbox": [
+        0,
+        0,
+        4096,
+        315
+      ],
+      "render_bbox": [
+        14,
+        358,
+        1186,
+        442
+      ],
+      "matched_body_target": [
+        14,
+        358,
+        1089,
+        442
+      ],
+      "mean_absolute_rgb_difference": 0.964226,
+      "comparison": "qa/rotation-review-task12-20260827/candidate-comparisons/web/right.png"
+    },
+    {
+      "model": "Cisco-N9KC9336",
+      "profile": "web",
+      "face": "top",
+      "source_bbox": [
+        0,
+        0,
+        3146,
+        4096
+      ],
+      "render_bbox": [
+        325,
+        9,
+        875,
+        791
+      ],
+      "matched_body_target": [
+        325,
+        74,
+        875,
+        791
+      ],
+      "mean_absolute_rgb_difference": 2.502502,
+      "comparison": "qa/rotation-review-task12-20260827/candidate-comparisons/web/top.png"
+    },
+    {
+      "model": "Cisco-N9KC9336",
+      "profile": "web",
+      "face": "bottom",
+      "source_bbox": [
+        0,
+        0,
+        3146,
+        4096
+      ],
+      "render_bbox": [
+        325,
+        9,
+        875,
+        791
+      ],
+      "matched_body_target": [
+        325,
+        9,
+        875,
+        726
+      ],
+      "mean_absolute_rgb_difference": 11.81312,
+      "comparison": "qa/rotation-review-task12-20260827/candidate-comparisons/web/bottom.png"
+    }
+  ]
+}

@@ -1,0 +1,425 @@
+{
+  "schema": "task12-per-row-inventory-review-v1",
+  "model": "Cisco-N9KC9336",
+  "rows_reviewed": 23,
+  "matched": 23,
+  "unresolved": 0,
+  "task_configuration_conflicts": [],
+  "compatibility_notes": [],
+  "rows": [
+    {
+      "row": 1,
+      "face": "front",
+      "component": "chassis status LEDs",
+      "expected_count": "3",
+      "expected_order": "BCN; STS; ENV",
+      "expected_relief": "recessed indicator lenses",
+      "source_url": "https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/hw/n9336cfx2_hig/guide/b_n9336cFX2_nxos_hardware_installation_guide/b_n9336cFX2_nxos_hardware_installation_guide_chapter_01.html",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/front.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/front.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/front.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/front.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 2,
+      "face": "front",
+      "component": "lane-selector LEDs",
+      "expected_count": "4",
+      "expected_order": "1; 2; 3; 4 top-to-bottom",
+      "expected_relief": "recessed indicator lenses",
+      "source_url": "https://serverlama.com/cdn/shop/files/N9K-C9336C-FX2front.jpg?v=1747814953&width=1500",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/front.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/front.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/front.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/front.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 3,
+      "face": "front",
+      "component": "lane-selection button",
+      "expected_count": "1",
+      "expected_order": "LS",
+      "expected_relief": "shallow round push button",
+      "source_url": "https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/hw/n9336cfx2_hig/guide/b_n9336cFX2_nxos_hardware_installation_guide/b_n9336cFX2_nxos_hardware_installation_guide_chapter_01.html",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/front.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/front.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/front.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/front.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 4,
+      "face": "front",
+      "component": "QSFP28 ports",
+      "expected_count": "36",
+      "expected_order": "odd ports on top and following even ports below; 1/2 through 35/36",
+      "expected_relief": "18 independent recessed two-port metal cages",
+      "source_url": "https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/hw/n9336cfx2_hig/guide/b_n9336cFX2_nxos_hardware_installation_guide/b_n9336cFX2_nxos_hardware_installation_guide_chapter_01.html",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/front.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/front.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/front.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/front.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 5,
+      "face": "front",
+      "component": "lower ventilation strip",
+      "expected_count": "1",
+      "expected_order": "continuous",
+      "expected_relief": "perforated sheet-metal relief",
+      "source_url": "https://serverlama.com/cdn/shop/files/N9K-C9336C-FX2front.jpg?v=1747814953&width=1500",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/front.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/front.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/front.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/front.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 6,
+      "face": "front",
+      "component": "rack ears",
+      "expected_count": "0",
+      "expected_order": "none",
+      "expected_relief": "not installed",
+      "source_url": "https://serverlama.com/cdn/shop/files/N9K-C9336C-FX2front.jpg?v=1747814953&width=1500",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/front.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/front.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/front.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/front.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 7,
+      "face": "rear",
+      "component": "AC power-supply modules",
+      "expected_count": "2",
+      "expected_order": "NXA-PAC-1100W-PI2 PSU1 at far left; PSU2 at far right",
+      "expected_relief": "deep hot-swappable modules with protruding handles",
+      "source_url": "https://dedicatednetworksinc.com/product/cisco-n9k-c9336c-fx2-managed-switch-36x-100gb-qsfp28-40gb-qsfp28-intake/",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/rear.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/rear.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/rear.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/rear.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 8,
+      "face": "rear",
+      "component": "fan modules",
+      "expected_count": "3",
+      "expected_order": "fan slot 1; fan slot 2; fan slot 3",
+      "expected_relief": "deep independent trays with protruding black handle and paired burgundy latches",
+      "source_url": "https://res.cloudinary.com/dmwxtja1g/image/upload/v1/media/catalog/product/c/i/cisco_nexus_n9k-c9336c-fx2_36x_40100g_qsfp28_rear_zoom_1_1.jpg",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/rear.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/rear.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/rear.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/rear.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 9,
+      "face": "rear",
+      "component": "out-of-band management RJ-45",
+      "expected_count": "1",
+      "expected_order": "top of stacked pair",
+      "expected_relief": "recessed shielded jack",
+      "source_url": "https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/hw/n9336cfx2_hig/guide/b_n9336cFX2_nxos_hardware_installation_guide/b_n9336cFX2_nxos_hardware_installation_guide_chapter_01.html",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/rear.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/rear.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/rear.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/rear.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 10,
+      "face": "rear",
+      "component": "RS-232 console RJ-45",
+      "expected_count": "1",
+      "expected_order": "bottom of stacked pair",
+      "expected_relief": "recessed shielded jack",
+      "source_url": "https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/hw/n9336cfx2_hig/guide/b_n9336cFX2_nxos_hardware_installation_guide/b_n9336cFX2_nxos_hardware_installation_guide_chapter_01.html",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/rear.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/rear.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/rear.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/rear.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 11,
+      "face": "rear",
+      "component": "out-of-band management SFP",
+      "expected_count": "1",
+      "expected_order": "left of USB in lower management row",
+      "expected_relief": "recessed cage",
+      "source_url": "https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/hw/n9336cfx2_hig/guide/b_n9336cFX2_nxos_hardware_installation_guide/b_n9336cFX2_nxos_hardware_installation_guide_chapter_01.html",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/rear.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/rear.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/rear.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/rear.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 12,
+      "face": "rear",
+      "component": "USB port",
+      "expected_count": "1",
+      "expected_order": "right of SFP in lower management row",
+      "expected_relief": "recessed connector",
+      "source_url": "https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/hw/n9336cfx2_hig/guide/b_n9336cFX2_nxos_hardware_installation_guide/b_n9336cFX2_nxos_hardware_installation_guide_chapter_01.html",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/rear.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/rear.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/rear.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/rear.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 13,
+      "face": "rear",
+      "component": "chassis LEDs",
+      "expected_count": "2",
+      "expected_order": "BCN; STS",
+      "expected_relief": "shallow indicators",
+      "source_url": "https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/hw/n9336cfx2_hig/guide/b_n9336cFX2_nxos_hardware_installation_guide/b_n9336cFX2_nxos_hardware_installation_guide_chapter_01.html",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/rear.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/rear.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/rear.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/rear.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 14,
+      "face": "rear",
+      "component": "rack ears",
+      "expected_count": "0",
+      "expected_order": "none",
+      "expected_relief": "not installed",
+      "source_url": "https://content.etilize.com/Alternate-Image2/1045693780.jpg",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/rear.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/rear.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/rear.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/rear.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 15,
+      "face": "left",
+      "component": "rack-bracket mounting holes",
+      "expected_count": "12",
+      "expected_order": "six-hole rear mounting zone and six-hole front mounting zone",
+      "expected_relief": "recessed slots/holes",
+      "source_url": "https://i.ebayimg.com/images/g/LekAAeSwkvJqKxp5/s-l1600.jpg",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/left.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/left.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/left.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/left.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 16,
+      "face": "left",
+      "component": "factory caution label",
+      "expected_count": "1",
+      "expected_order": "not applicable",
+      "expected_relief": "flush sticker",
+      "source_url": "https://i.ebayimg.com/images/g/LekAAeSwkvJqKxp5/s-l1600.jpg",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/left.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/left.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/left.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/left.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 17,
+      "face": "left",
+      "component": "grounding-lug pad",
+      "expected_count": "0",
+      "expected_order": "none",
+      "expected_relief": "absent",
+      "source_url": "https://i.ebayimg.com/images/g/LekAAeSwkvJqKxp5/s-l1600.jpg",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/left.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/left.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/left.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/left.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 18,
+      "face": "right",
+      "component": "rack-bracket mounting holes",
+      "expected_count": "12",
+      "expected_order": "six-hole rear mounting zone and six-hole front mounting zone",
+      "expected_relief": "recessed slots/holes",
+      "source_url": "https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/hw/n9336cfx2_hig/guide/b_n9336cFX2_nxos_hardware_installation_guide/b_n9336cFX2_nxos_hardware_installation_guide_chapter_01.html",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/right.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/right.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/right.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/right.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 19,
+      "face": "right",
+      "component": "grounding-lug screw holes",
+      "expected_count": "2",
+      "expected_order": "paired holes",
+      "expected_relief": "recessed threaded holes on outlined pad",
+      "source_url": "https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/hw/n9336cfx2_hig/guide/b_n9336cFX2_nxos_hardware_installation_guide/b_n9336cFX2_nxos_hardware_installation_guide_chapter_01.html",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/right.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/right.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/right.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/right.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 20,
+      "face": "top",
+      "component": "top cover",
+      "expected_count": "1",
+      "expected_order": "not applicable",
+      "expected_relief": "flat sheet with shallow cover seams and flush fasteners",
+      "source_url": "https://serverlama.com/cdn/shop/files/N9K-C9336C-FX2angledtop.jpg?v=1747814953&width=1500",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/top.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/top.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/top.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/top.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 21,
+      "face": "top",
+      "component": "port-side perforated ventilation band",
+      "expected_count": "1",
+      "expected_order": "continuous",
+      "expected_relief": "recessed perforation field",
+      "source_url": "https://serverlama.com/cdn/shop/files/N9K-C9336C-FX2angledtop.jpg?v=1747814953&width=1500",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/top.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/top.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/top.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/top.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 22,
+      "face": "top",
+      "component": "factory label cluster",
+      "expected_count": "3",
+      "expected_order": "white regulatory; yellow caution; small blue-white inventory",
+      "expected_relief": "flush stickers",
+      "source_url": "https://serverlama.com/cdn/shop/files/N9K-C9336C-FX2angledtop.jpg?v=1747814953&width=1500",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/top.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/top.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/top.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/top.png"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 23,
+      "face": "bottom",
+      "component": "conservative underside sheet",
+      "expected_count": "1",
+      "expected_order": "not applicable",
+      "expected_relief": "flat closed surface",
+      "source_url": "source/bottom-search-log.md",
+      "source_confidence": "GENERIC_BOTTOM_FALLBACK",
+      "review_status": "MATCHED_DECLARED_BOTTOM_FALLBACK",
+      "review_basis": [
+        "qa/rotation-review-task12-20260827/comparisons/standard/bottom.png",
+        "qa/rotation-review-task12-20260827/comparisons/web/bottom.png",
+        "qa/rotation-review-task12-20260827/orthographic/standard/bottom.png",
+        "qa/rotation-review-task12-20260827/orthographic/web/bottom.png"
+      ],
+      "unresolved": false
+    }
+  ]
+}
