@@ -1,6 +1,8 @@
 # Evidence and dimension ledger
 
-Access date: 2026-08-23
+Initial access date: 2026-08-23
+Forced-review refresh: 2026-08-24
+Rotation-review official refresh: 2026-08-27
 
 ## PDF-tool fallback
 
@@ -80,9 +82,9 @@ The corrected identity is now VERIFIED: official 24-SFF front, no rear disks, st
 ### Exact-model right-side and top references
 
 - URL: https://www.qgserver.com/fusionserver-rh2288-v3-2u-rack-server
-- Local: `source/third-party/qgserver-rh2288v3-3.jpg`, `qgserver-rh2288v3-5.jpg`, `qgserver-rh2288v3-6.jpg`.
+- Local accepted side/top evidence: `source/third-party/qgserver-rh2288v3-3.jpg`, `qgserver-rh2288v3-5.jpg`.
 - Visual origin: secondary exact-model product photography/diagram.
-- Proves: right side, top, rear structure and material.
+- Proves: right side and top structure/material.
 
 ### Huawei V3 chassis left-side references
 
@@ -96,6 +98,7 @@ The corrected identity is now VERIFIED: official 24-SFF front, no rear disks, st
 
 - `source/third-party/zhiding-eddc088f719295cf.jpg`: CPU heatsink only, no exterior proof.
 - `source/third-party/mydraw-rh2288h-v3-diagram.png`: useful topology lead for the H variant, not color/style or base RH2288 V3 identity proof.
+- `source/third-party/qgserver-rh2288v3-6.jpg`: seller illustration with two PSUs arranged horizontally; conflicts with Huawei Figure 4-6 and the exact ZOL rear photograph, so it is excluded from rear generation and identity proof.
 - `source/originals/rh2288-v3-user-guide-issue32.pdf`: one-page public viewer placeholder saying the document cannot load; not the manual.
 - `source/originals/fusionserver-rack-v100r003-product-doc-package.bin`: public Huawei link returned an ASCII PGP signature rather than the document package.
 - `source/originals/rh2288-v3-white-paper-download-page.html`: anti-bot/download landing HTML, not a PDF.
@@ -105,3 +108,7 @@ The corrected identity is now VERIFIED: official 24-SFF front, no rear disks, st
 Exact underside searches covered Huawei official support/documents/multimedia, dynamic Browser inspection, exact-model reseller/used/eBay/marketplace queries, Chinese and English bottom/underside/底部 queries, teardown/review pages and the available image galleries. No exact underside was found. After the user's rear correction resolved the only non-bottom conflict, the delivered bottom uses the documented conservative `GENERIC_BOTTOM_FALLBACK` only.
 
 Searches for `RH2288 V3` plus 3D, CAD, STEP, GLB, glTF, OBJ, FBX, AR, Visio and interactive viewer found no public exact official model. No login, paywall, private API or access control was bypassed.
+
+During the 2026-08-24 forced review, Huawei's current public Product Visuals entry was opened in real Chromium at `currentProduct=38`. The public response identifies `RH2288 V3 Rack Server` and exposes two official images plus an image ZIP, but returns `threeUrl: null` and the page has no `Visualize in 3D` button. This confirms that the neighboring gallery's 3D capability is not available for this exact PID. The captured page is under `qa/forced-review-2026-08-24/evidence-inspection/`; the public response is retained under `source/optional-3d/`.
+
+The same Product Visuals entry and public JSON response were reopened in real Chromium on 2026-08-27. They still identify `RH2288 V3 Rack Server`, retain update date 2025-08-14, expose only the two raster images and ZIP, and return `threeUrl: null`; the current screenshots are under `qa/rotation-review-20260827/after/research/`. No public exact-PID official 3D became available.

@@ -25,7 +25,7 @@ evidence_urls:
   - https://pdfcoffee.com/user-manual-rh2288-v3-pdf-free.html
   - https://img2.zol.com.cn/product/146/150/cejpY66MME9Z2.jpg
 status: VERIFIED
-delivery_status: PASS_WITH_BOTTOM_FALLBACK
+delivery_status: PASS_WITH_BOTTOM_FALLBACK (rotation review completed 2026-08-27)
 standard_glb: model/Huawei-RH2288V3-2.5inch.glb
 web_glb: model/Huawei-RH2288V3-2.5inch-web.glb
 official_optional_3d: not found in public exact-PID search

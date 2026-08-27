@@ -1,6 +1,8 @@
 # Huawei FusionServer RH2288 V3 / H22M-03 24-SFF final QA
 
-Final status: **PASS_WITH_BOTTOM_FALLBACK**
+Final rotation-review status: **PASS_WITH_BOTTOM_FALLBACK** (2026-08-27)
+
+Authoritative current hashes: standard `99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff`; web `26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41`. Both completed 40/40 final-hash static loads and four 72-frame rotation gates with no flicker/gray/opacity failure. See `qa/rotation-review-20260827/final-report.md`; older hashes and counts below describe the superseded pre-rotation checkpoint.
 
 ## Delivered identity
 

@@ -1,0 +1,149 @@
+{
+  "identity": "Huawei FusionServer RH2288 V3 / H22M-03 24x2.5-inch SFF",
+  "power": "dual hot-swap AC, vertically stacked on one rear side",
+  "bottom": "GENERIC_BOTTOM_FALLBACK",
+  "left_view_sha256": "c375a1138b2133d6acf370f50782a164547964cdf19f9474ff63f8cf3b6c1965",
+  "right_view_sha256": "1147a1ecb81ea2e491b92756a96c11e5cd4ead6045da9f920888ba3915b26324",
+  "left_right_images_are_byte_distinct": true,
+  "models": [
+    {
+      "path": "/root/Project/rack-device-3d/Huawei-RH2288V3-2.5inch/model/Huawei-RH2288V3-2.5inch.glb",
+      "sha256": "daa3ff261e7f7e40b9e3566ebff5430c8dafe78054bec673487cf9828a6e34ee",
+      "node_count": 453,
+      "front_bay_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "ac_psu_indices": [
+        0,
+        1
+      ],
+      "rear_drive_names": [],
+      "mirrored_node_names": [],
+      "front_usb_names": [
+        "FRONT_Left_USB_2_0"
+      ],
+      "left_ethernet_indicator_names": [
+        "FRONT_Left_Ethernet_Indicator_1",
+        "FRONT_Left_Ethernet_Indicator_2",
+        "FRONT_Left_Ethernet_Indicator_3",
+        "FRONT_Left_Ethernet_Indicator_4"
+      ],
+      "right_control_names": [
+        "FRONT_Right_Fault_Diagnostic_Display",
+        "FRONT_Right_Health_Control",
+        "FRONT_Right_UID_Control",
+        "FRONT_Right_Power_Control",
+        "FRONT_Right_NMI_Control",
+        "FRONT_Right_VGA_Relief"
+      ],
+      "requirements": {
+        "front_bay_indices_are_00_through_23": true,
+        "dual_ac_psu_indices_are_0_and_1": true,
+        "no_rear_drive_geometry": true,
+        "closed_chassis_node_present": true,
+        "independent_left_texture_node": true,
+        "independent_right_texture_node": true,
+        "no_mirror_named_nodes": true,
+        "two_port_flexible_nic": true,
+        "standard_mgmt_cluster": true,
+        "exactly_one_front_usb_on_physical_left": true,
+        "four_front_ethernet_indicators_on_physical_left": true,
+        "complete_right_diagnostic_control_group": true
+      },
+      "status": "PASS"
+    },
+    {
+      "path": "/root/Project/rack-device-3d/Huawei-RH2288V3-2.5inch/model/Huawei-RH2288V3-2.5inch-web.glb",
+      "sha256": "10e11be59a635642e8f3ec289e12766b1a028384ab73edc0060792ff2ae9d570",
+      "node_count": 453,
+      "front_bay_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "ac_psu_indices": [
+        0,
+        1
+      ],
+      "rear_drive_names": [],
+      "mirrored_node_names": [],
+      "front_usb_names": [
+        "FRONT_Left_USB_2_0"
+      ],
+      "left_ethernet_indicator_names": [
+        "FRONT_Left_Ethernet_Indicator_1",
+        "FRONT_Left_Ethernet_Indicator_2",
+        "FRONT_Left_Ethernet_Indicator_3",
+        "FRONT_Left_Ethernet_Indicator_4"
+      ],
+      "right_control_names": [
+        "FRONT_Right_Fault_Diagnostic_Display",
+        "FRONT_Right_Health_Control",
+        "FRONT_Right_UID_Control",
+        "FRONT_Right_Power_Control",
+        "FRONT_Right_NMI_Control",
+        "FRONT_Right_VGA_Relief"
+      ],
+      "requirements": {
+        "front_bay_indices_are_00_through_23": true,
+        "dual_ac_psu_indices_are_0_and_1": true,
+        "no_rear_drive_geometry": true,
+        "closed_chassis_node_present": true,
+        "independent_left_texture_node": true,
+        "independent_right_texture_node": true,
+        "no_mirror_named_nodes": true,
+        "two_port_flexible_nic": true,
+        "standard_mgmt_cluster": true,
+        "exactly_one_front_usb_on_physical_left": true,
+        "four_front_ethernet_indicators_on_physical_left": true,
+        "complete_right_diagnostic_control_group": true
+      },
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS"
+}

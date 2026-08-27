@@ -27,17 +27,17 @@
   "models": {
     "standard": {
       "path": "model/Huawei-RH2288V3-2.5inch.glb",
-      "bytes": 26207588,
-      "sha256": "daa3ff261e7f7e40b9e3566ebff5430c8dafe78054bec673487cf9828a6e34ee",
+      "bytes": 26217524,
+      "sha256": "99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
       "audit": "PASS"
     },
     "web": {
       "path": "model/Huawei-RH2288V3-2.5inch-web.glb",
-      "bytes": 10089824,
-      "sha256": "10e11be59a635642e8f3ec289e12766b1a028384ab73edc0060792ff2ae9d570",
+      "bytes": 10099756,
+      "sha256": "26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
       "audit": "PASS"
     },
-    "bounds_m": [0.4826000035, 0.0863000005, 0.7153500021],
+    "bounds_m": [0.4826000035, 0.0860999972, 0.7153500021],
     "node_count": 453,
     "mesh_count": 453,
     "primitive_count": 453,
@@ -54,10 +54,30 @@
     "three_web": "PASS_10_VIEWS",
     "babylon_standard": "PASS_10_VIEWS",
     "babylon_web": "PASS_10_VIEWS",
-    "headed_attempt": "X_SERVER_UNAVAILABLE",
-    "headless_real_chromium": "PASS",
+    "real_chromium_webgl2": "PASS",
     "post_repair_render_count": 40,
-    "details": "qa/browser-qa.md"
+    "details": "qa/rotation-review-20260827/after/browser-gate-summary.json"
+  },
+  "rotation_review": {
+    "status": "PASS_WITH_BOTTOM_FALLBACK",
+    "report": "qa/rotation-review-20260827/final-report.md",
+    "stress_report": "qa/rotation-review-20260827/after/rotation-stress-report.json",
+    "static_real_browser_loads": 40,
+    "final_hash_http_loads": 44,
+    "rotation_combinations": 4,
+    "yaw_frames_per_combination": 72,
+    "yaw_step_degrees": 5,
+    "structural_extra": {
+      "exact_duplicate_triangles": 0,
+      "near_coplanar_pairs_le_0_25mm": 0,
+      "material_alpha_errors": 0,
+      "negative_transforms": 0,
+      "closed_core": "PASS"
+    },
+    "matched_camera_comparisons": 24,
+    "feature_inventory_rows_verified": 12,
+    "residual_visual_defects": [],
+    "known_fallback": "GENERIC_BOTTOM_FALLBACK"
   },
   "front_imagegen_repair": {
     "applied": true,
@@ -78,10 +98,12 @@
     "Exact underside was not found after documented search exhaustion; a closed plain zinc-grey bottom is used without invented detail."
   ],
   "audit_files": [
-    "qa/audits/views.json",
-    "qa/audits/glb-standard.json",
-    "qa/audits/glb-web.json",
-    "qa/audits/structure.json",
-    "repair-imagegen-front/browser-audit.json"
+    "qa/rotation-review-20260827/after/views-audit.json",
+    "qa/rotation-review-20260827/after/glb-standard-audit.json",
+    "qa/rotation-review-20260827/after/glb-web-audit.json",
+    "qa/rotation-review-20260827/after/structural-extra-standard.json",
+    "qa/rotation-review-20260827/after/structural-extra-web.json",
+    "qa/rotation-review-20260827/after/browser-gate-summary.json",
+    "qa/rotation-review-20260827/after/http-final-hash-audit.json"
   ]
 }

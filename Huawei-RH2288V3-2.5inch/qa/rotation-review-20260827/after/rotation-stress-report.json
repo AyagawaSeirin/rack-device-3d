@@ -1,0 +1,30 @@
+{
+  "model_key": "Huawei-RH2288V3-2.5inch",
+  "status": "PASS_WITH_BOTTOM_FALLBACK",
+  "standard_sha256": "99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+  "web_sha256": "26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+  "viewer_model_combinations": [
+    {"viewer": "three", "variant": "standard", "yaw_frames": 72, "yaw_step_degrees": 5, "continuous_animation_frames": 58, "dark_checker_pitch_frames": 8, "status": "PASS"},
+    {"viewer": "three", "variant": "web", "yaw_frames": 72, "yaw_step_degrees": 5, "continuous_animation_frames": 57, "dark_checker_pitch_frames": 8, "status": "PASS"},
+    {"viewer": "babylon", "variant": "standard", "yaw_frames": 72, "yaw_step_degrees": 5, "continuous_animation_frames": 23, "dark_checker_pitch_frames": 8, "status": "PASS"},
+    {"viewer": "babylon", "variant": "web", "yaw_frames": 72, "yaw_step_degrees": 5, "continuous_animation_frames": 22, "dark_checker_pitch_frames": 8, "status": "PASS"}
+  ],
+  "findings": {
+    "surface_flicker": false,
+    "opacity_jump": false,
+    "checkerboard_leakage": false,
+    "face_disappearance": false,
+    "mirroring": false,
+    "texture_switch": false,
+    "sudden_gray": false
+  },
+  "known_fallback": "GENERIC_BOTTOM_FALLBACK",
+  "evidence": {
+    "combination_manifests": "rotation/<viewer>/<variant>/rotation-manifest.json",
+    "yaw_contact_sheets": "rotation/<viewer>/<variant>/yaw-72-contact-sheet.jpg",
+    "pitch_contact_sheets": "rotation/<viewer>/<variant>/pitch-dark-contact-sheet.png",
+    "continuous_videos": "rotation/<viewer>/<variant>/continuous-360.webm",
+    "browser_gate_summary": "browser-gate-summary.json",
+    "final_hash_http_audit": "http-final-hash-audit.json"
+  }
+}

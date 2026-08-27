@@ -11,6 +11,7 @@ from pathlib import Path
 
 import numpy as np
 from PIL import Image
+from pygltflib import GLTF2
 import trimesh
 from trimesh.visual import TextureVisuals
 from trimesh.visual.material import PBRMaterial
@@ -27,6 +28,9 @@ HEIGHT = 86.1
 DEPTH = 708.0
 FRONT_Z = DEPTH / 2.0
 REAR_Z = -DEPTH / 2.0
+CORE_SHELL_INSET = 2.4
+PHOTO_SKIN_INSET = 1.2
+FACE_PHOTO_INSET = 1.6
 
 
 def material(name: str, rgba: tuple[int, int, int, int], roughness: float = 0.72,
@@ -126,38 +130,47 @@ def add_textured_shell(scene: trimesh.Scene, web: bool) -> None:
     tex = {face: texture_material(face, web) for face in
            ("front", "rear", "left", "right", "top", "bottom")}
     add_box(scene, "Closed_Chassis_Sheet_Metal_447x708x86.1mm",
-            (BODY_W, HEIGHT, DEPTH), (0, 0, 0), ZINC)
+            (BODY_W - 2 * CORE_SHELL_INSET,
+             HEIGHT - 2 * CORE_SHELL_INSET,
+             DEPTH - 2 * CORE_SHELL_INSET),
+            (0, 0, 0), ZINC)
+
+    side_x = BODY_W / 2.0 - PHOTO_SKIN_INSET
+    top_y = HEIGHT / 2.0 - PHOTO_SKIN_INSET
+    bottom_y = -HEIGHT / 2.0 + PHOTO_SKIN_INSET
+    front_z = FRONT_Z - FACE_PHOTO_INSET
+    rear_z = REAR_Z + FACE_PHOTO_INSET
 
     add_quad(scene, "Texture_FRONT_24SFF_and_Ears",
-             [(-OVERALL_W / 2, -HEIGHT / 2, FRONT_Z + 0.10),
-              (OVERALL_W / 2, -HEIGHT / 2, FRONT_Z + 0.10),
-              (OVERALL_W / 2, HEIGHT / 2, FRONT_Z + 0.10),
-              (-OVERALL_W / 2, HEIGHT / 2, FRONT_Z + 0.10)], tex["front"])
+             [(-OVERALL_W / 2, -HEIGHT / 2, front_z),
+              (OVERALL_W / 2, -HEIGHT / 2, front_z),
+              (OVERALL_W / 2, HEIGHT / 2, front_z),
+              (-OVERALL_W / 2, HEIGHT / 2, front_z)], tex["front"])
     add_quad(scene, "Texture_REAR_Corrected_No_Rear_Drives",
-             [(BODY_W / 2, -HEIGHT / 2, REAR_Z - 0.10),
-              (-BODY_W / 2, -HEIGHT / 2, REAR_Z - 0.10),
-              (-BODY_W / 2, HEIGHT / 2, REAR_Z - 0.10),
-              (BODY_W / 2, HEIGHT / 2, REAR_Z - 0.10)], tex["rear"])
+             [(BODY_W / 2, -HEIGHT / 2, rear_z),
+              (-BODY_W / 2, -HEIGHT / 2, rear_z),
+              (-BODY_W / 2, HEIGHT / 2, rear_z),
+              (BODY_W / 2, HEIGHT / 2, rear_z)], tex["rear"])
     add_quad(scene, "Texture_LEFT_Independent",
-             [(-BODY_W / 2 - 0.10, -HEIGHT / 2, REAR_Z),
-              (-BODY_W / 2 - 0.10, -HEIGHT / 2, FRONT_Z),
-              (-BODY_W / 2 - 0.10, HEIGHT / 2, FRONT_Z),
-              (-BODY_W / 2 - 0.10, HEIGHT / 2, REAR_Z)], tex["left"])
+             [(-side_x, -HEIGHT / 2, REAR_Z),
+              (-side_x, -HEIGHT / 2, FRONT_Z),
+              (-side_x, HEIGHT / 2, FRONT_Z),
+              (-side_x, HEIGHT / 2, REAR_Z)], tex["left"])
     add_quad(scene, "Texture_RIGHT_Independent",
-             [(BODY_W / 2 + 0.10, -HEIGHT / 2, FRONT_Z),
-              (BODY_W / 2 + 0.10, -HEIGHT / 2, REAR_Z),
-              (BODY_W / 2 + 0.10, HEIGHT / 2, REAR_Z),
-              (BODY_W / 2 + 0.10, HEIGHT / 2, FRONT_Z)], tex["right"])
+             [(side_x, -HEIGHT / 2, FRONT_Z),
+              (side_x, -HEIGHT / 2, REAR_Z),
+              (side_x, HEIGHT / 2, REAR_Z),
+              (side_x, HEIGHT / 2, FRONT_Z)], tex["right"])
     add_quad(scene, "Texture_TOP_Cover",
-             [(BODY_W / 2, HEIGHT / 2 + 0.10, REAR_Z),
-              (-BODY_W / 2, HEIGHT / 2 + 0.10, REAR_Z),
-              (-BODY_W / 2, HEIGHT / 2 + 0.10, FRONT_Z),
-              (BODY_W / 2, HEIGHT / 2 + 0.10, FRONT_Z)], tex["top"])
+             [(BODY_W / 2, top_y, REAR_Z),
+              (-BODY_W / 2, top_y, REAR_Z),
+              (-BODY_W / 2, top_y, FRONT_Z),
+              (BODY_W / 2, top_y, FRONT_Z)], tex["top"])
     add_quad(scene, "Texture_BOTTOM_Generic_Fallback",
-             [(-BODY_W / 2, -HEIGHT / 2 - 0.10, REAR_Z),
-              (BODY_W / 2, -HEIGHT / 2 - 0.10, REAR_Z),
-              (BODY_W / 2, -HEIGHT / 2 - 0.10, FRONT_Z),
-              (-BODY_W / 2, -HEIGHT / 2 - 0.10, FRONT_Z)], tex["bottom"])
+             [(-BODY_W / 2, bottom_y, REAR_Z),
+              (BODY_W / 2, bottom_y, REAR_Z),
+              (BODY_W / 2, bottom_y, FRONT_Z),
+              (-BODY_W / 2, bottom_y, FRONT_Z)], tex["bottom"])
 
 
 def add_front_geometry(scene: trimesh.Scene) -> None:
@@ -282,6 +295,7 @@ def build_scene(web: bool) -> trimesh.Scene:
         "dimensions_mm": [OVERALL_W, HEIGHT, DEPTH],
         "body_dimensions_mm": [BODY_W, HEIGHT, DEPTH],
         "bottom_evidence": "GENERIC_BOTTOM_FALLBACK",
+        "rotation_stability": "inset watertight core; ordered photographic skins and relief",
     })
     add_textured_shell(scene, web)
     add_front_geometry(scene)
@@ -299,6 +313,21 @@ def main() -> None:
     for web, path in outputs:
         scene = build_scene(web)
         path.write_bytes(scene.export(file_type="glb", include_normals=True))
+        # Photo-derived faces already contain their photographic lighting. Mark
+        # only those six materials unlit so Three.js and Babylon.js cannot apply
+        # divergent PBR lighting that made the same face jump between gray and
+        # near-white during orbit. Structural relief keeps ordinary PBR materials.
+        document = GLTF2().load_binary(str(path))
+        used = list(document.extensionsUsed or [])
+        if "KHR_materials_unlit" not in used:
+            used.append("KHR_materials_unlit")
+        document.extensionsUsed = used
+        for gltf_material in document.materials or []:
+            if gltf_material.name and "evidence-locked texture" in gltf_material.name:
+                extensions = dict(gltf_material.extensions or {})
+                extensions["KHR_materials_unlit"] = {}
+                gltf_material.extensions = extensions
+        document.save_binary(str(path))
         print(path, path.stat().st_size, "bytes", len(scene.geometry), "geometry objects")
 
 

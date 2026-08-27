@@ -1,0 +1,1689 @@
+{
+  "stage": "after",
+  "model_key": "Huawei-RH2288V3-2.5inch",
+  "captured_utc": "2026-08-27T10:17:28.847253+00:00",
+  "models": {
+    "standard": {
+      "path": "/root/Project/rack-device-3d/Huawei-RH2288V3-2.5inch/model/Huawei-RH2288V3-2.5inch.glb",
+      "bytes": 26217524,
+      "sha256": "99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff"
+    },
+    "web": {
+      "path": "/root/Project/rack-device-3d/Huawei-RH2288V3-2.5inch/model/Huawei-RH2288V3-2.5inch-web.glb",
+      "bytes": 10099756,
+      "sha256": "26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41"
+    }
+  },
+  "viewer_provenance": {
+    "viewers/three.html": {
+      "bytes": 6236,
+      "sha256": "95dd0679eae772bec79ecbad1f4a77d21539fba16b1ed3706e57d6c7d8ba2ce9"
+    },
+    "viewers/babylon.html": {
+      "bytes": 6065,
+      "sha256": "00b1c861257958c72cd20df11f1be5e6e8fdd8e089392a70ceb604ccb8dfbddd"
+    },
+    "viewers/vendor/three.module.js": {
+      "bytes": 1304820,
+      "sha256": "0a3368c165eea773490aec7b77c22de70e3eac288503409256fdbf4d12578416"
+    },
+    "viewers/vendor/GLTFLoader.js": {
+      "bytes": 110029,
+      "sha256": "6f1719dcc6a179d30273dfb0de07a8c898a7981f7b08e600b446387f5967371f"
+    },
+    "viewers/vendor/babylon.js": {
+      "bytes": 8258950,
+      "sha256": "873f60ec6665d0de1a030918a194eb70e12937e5f93ae23107e1cffb1bdf29d8"
+    },
+    "viewers/vendor/babylonjs.loaders.min.js": {
+      "bytes": 577937,
+      "sha256": "9f7b1a7a52f1e9649614992c7e41c5cde287fc3f07ca6d6f6119a21daf2132d0"
+    },
+    "viewers/utils/BufferGeometryUtils.js": {
+      "bytes": 31768,
+      "sha256": "c25b7930e570e9ec56173cd3b866ec8d2e10016630db3937efb439daf1cedbf6"
+    }
+  },
+  "rotation_manifests": [
+    {
+      "engine": "three",
+      "variant": "standard",
+      "status": "PASS",
+      "yaw_frame_count": 72,
+      "model_sha256": "99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff"
+    },
+    {
+      "engine": "three",
+      "variant": "web",
+      "status": "PASS",
+      "yaw_frame_count": 72,
+      "model_sha256": "26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41"
+    },
+    {
+      "engine": "babylon",
+      "variant": "standard",
+      "status": "PASS",
+      "yaw_frame_count": 72,
+      "model_sha256": "99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff"
+    },
+    {
+      "engine": "babylon",
+      "variant": "web",
+      "status": "PASS",
+      "yaw_frame_count": 72,
+      "model_sha256": "26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41"
+    }
+  ],
+  "static_loads": [
+    {
+      "index": 1,
+      "name": "front",
+      "yaw": 0,
+      "pitch": 0,
+      "background": "light",
+      "load_id": "after-three-standard-01-front",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/three.html?key=Huawei-RH2288V3-2.5inch&model=standard&bg=light&load=after-three-standard-01-front&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff&yaw=0&pitch=0",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch.glb?load=after-three-standard-01-front&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "load_id": "after-three-standard-01-front",
+        "yaw": 0,
+        "pitch": 0,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch.glb?load=after-three-standard-01-front&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "transferSize": 26217824,
+        "encodedBodySize": 26217524,
+        "decodedBodySize": 26217524,
+        "duration": 324.59999999962747
+      },
+      "screenshot_path": "after/static-40-loads/three/standard/01-front.png",
+      "screenshot_bytes": 87536,
+      "screenshot_sha256": "71254b4ffd7f2f5c3c3bff4caa62b4b97f0b1ea8b31875dce404a335c2cbabe2",
+      "status": "PASS"
+    },
+    {
+      "index": 2,
+      "name": "rear",
+      "yaw": 180,
+      "pitch": 0,
+      "background": "dark",
+      "load_id": "after-three-standard-02-rear",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/three.html?key=Huawei-RH2288V3-2.5inch&model=standard&bg=dark&load=after-three-standard-02-rear&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff&yaw=180&pitch=0",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch.glb?load=after-three-standard-02-rear&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "load_id": "after-three-standard-02-rear",
+        "yaw": 180,
+        "pitch": 0,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch.glb?load=after-three-standard-02-rear&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "transferSize": 26217824,
+        "encodedBodySize": 26217524,
+        "decodedBodySize": 26217524,
+        "duration": 332.20000000018626
+      },
+      "screenshot_path": "after/static-40-loads/three/standard/02-rear.png",
+      "screenshot_bytes": 88264,
+      "screenshot_sha256": "3528935259f5707f5436e8d3df9b2fcb6d37e495bfa8a627b4cd725392b1d613",
+      "status": "PASS"
+    },
+    {
+      "index": 3,
+      "name": "left",
+      "yaw": 270,
+      "pitch": 0,
+      "background": "light",
+      "load_id": "after-three-standard-03-left",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/three.html?key=Huawei-RH2288V3-2.5inch&model=standard&bg=light&load=after-three-standard-03-left&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff&yaw=270&pitch=0",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch.glb?load=after-three-standard-03-left&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "load_id": "after-three-standard-03-left",
+        "yaw": 270,
+        "pitch": 0,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch.glb?load=after-three-standard-03-left&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "transferSize": 26217824,
+        "encodedBodySize": 26217524,
+        "decodedBodySize": 26217524,
+        "duration": 164.3999999994412
+      },
+      "screenshot_path": "after/static-40-loads/three/standard/03-left.png",
+      "screenshot_bytes": 86742,
+      "screenshot_sha256": "511ac68641e1ba0e2b57ab72ae8f66bfc967751f541be1d73c85f78a5e4fce0d",
+      "status": "PASS"
+    },
+    {
+      "index": 4,
+      "name": "right",
+      "yaw": 90,
+      "pitch": 0,
+      "background": "dark",
+      "load_id": "after-three-standard-04-right",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/three.html?key=Huawei-RH2288V3-2.5inch&model=standard&bg=dark&load=after-three-standard-04-right&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff&yaw=90&pitch=0",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch.glb?load=after-three-standard-04-right&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "load_id": "after-three-standard-04-right",
+        "yaw": 90,
+        "pitch": 0,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch.glb?load=after-three-standard-04-right&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "transferSize": 26217824,
+        "encodedBodySize": 26217524,
+        "decodedBodySize": 26217524,
+        "duration": 168.6000000005588
+      },
+      "screenshot_path": "after/static-40-loads/three/standard/04-right.png",
+      "screenshot_bytes": 92921,
+      "screenshot_sha256": "0ae1bd071c065bec7a42dd9c37ff0551e36980cba6ce722512245b7958515cf9",
+      "status": "PASS"
+    },
+    {
+      "index": 5,
+      "name": "top",
+      "yaw": 0,
+      "pitch": 88,
+      "background": "light",
+      "load_id": "after-three-standard-05-top",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/three.html?key=Huawei-RH2288V3-2.5inch&model=standard&bg=light&load=after-three-standard-05-top&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff&yaw=0&pitch=88",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch.glb?load=after-three-standard-05-top&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "load_id": "after-three-standard-05-top",
+        "yaw": 0,
+        "pitch": 88,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch.glb?load=after-three-standard-05-top&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "transferSize": 26217824,
+        "encodedBodySize": 26217524,
+        "decodedBodySize": 26217524,
+        "duration": 247.09999999962747
+      },
+      "screenshot_path": "after/static-40-loads/three/standard/05-top.png",
+      "screenshot_bytes": 255024,
+      "screenshot_sha256": "01f2af14f67ff313d884a5f65d473b5f817ff71fae5c1e6b656a1f197ea7a239",
+      "status": "PASS"
+    },
+    {
+      "index": 6,
+      "name": "bottom",
+      "yaw": 0,
+      "pitch": -88,
+      "background": "dark",
+      "load_id": "after-three-standard-06-bottom",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/three.html?key=Huawei-RH2288V3-2.5inch&model=standard&bg=dark&load=after-three-standard-06-bottom&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff&yaw=0&pitch=-88",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch.glb?load=after-three-standard-06-bottom&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "load_id": "after-three-standard-06-bottom",
+        "yaw": 0,
+        "pitch": -88,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch.glb?load=after-three-standard-06-bottom&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "transferSize": 26217824,
+        "encodedBodySize": 26217524,
+        "decodedBodySize": 26217524,
+        "duration": 273.29999999981374
+      },
+      "screenshot_path": "after/static-40-loads/three/standard/06-bottom.png",
+      "screenshot_bytes": 252489,
+      "screenshot_sha256": "a66759824668c5fc977ee90fe1831770fd770851b3c003bf4994081cf504fb6a",
+      "status": "PASS"
+    },
+    {
+      "index": 7,
+      "name": "front-left",
+      "yaw": 315,
+      "pitch": 18,
+      "background": "light",
+      "load_id": "after-three-standard-07-front-left",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/three.html?key=Huawei-RH2288V3-2.5inch&model=standard&bg=light&load=after-three-standard-07-front-left&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff&yaw=315&pitch=18",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch.glb?load=after-three-standard-07-front-left&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "load_id": "after-three-standard-07-front-left",
+        "yaw": 315,
+        "pitch": 18,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch.glb?load=after-three-standard-07-front-left&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "transferSize": 26217824,
+        "encodedBodySize": 26217524,
+        "decodedBodySize": 26217524,
+        "duration": 218.90000000037253
+      },
+      "screenshot_path": "after/static-40-loads/three/standard/07-front-left.png",
+      "screenshot_bytes": 157491,
+      "screenshot_sha256": "a08fe6a54f8b5fd3cee378ae2ec1b2af97fb05ff315b3fff46e9ed0390346817",
+      "status": "PASS"
+    },
+    {
+      "index": 8,
+      "name": "front-right",
+      "yaw": 45,
+      "pitch": 18,
+      "background": "dark",
+      "load_id": "after-three-standard-08-front-right",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/three.html?key=Huawei-RH2288V3-2.5inch&model=standard&bg=dark&load=after-three-standard-08-front-right&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff&yaw=45&pitch=18",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch.glb?load=after-three-standard-08-front-right&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "load_id": "after-three-standard-08-front-right",
+        "yaw": 45,
+        "pitch": 18,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch.glb?load=after-three-standard-08-front-right&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "transferSize": 26217824,
+        "encodedBodySize": 26217524,
+        "decodedBodySize": 26217524,
+        "duration": 233.3999999994412
+      },
+      "screenshot_path": "after/static-40-loads/three/standard/08-front-right.png",
+      "screenshot_bytes": 158408,
+      "screenshot_sha256": "e618782a9cb41568525540351de61a95b843c31882958a6b0b6dffc9e618af36",
+      "status": "PASS"
+    },
+    {
+      "index": 9,
+      "name": "rear-left",
+      "yaw": 225,
+      "pitch": 18,
+      "background": "light",
+      "load_id": "after-three-standard-09-rear-left",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/three.html?key=Huawei-RH2288V3-2.5inch&model=standard&bg=light&load=after-three-standard-09-rear-left&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff&yaw=225&pitch=18",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch.glb?load=after-three-standard-09-rear-left&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "load_id": "after-three-standard-09-rear-left",
+        "yaw": 225,
+        "pitch": 18,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch.glb?load=after-three-standard-09-rear-left&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "transferSize": 26217824,
+        "encodedBodySize": 26217524,
+        "decodedBodySize": 26217524,
+        "duration": 208
+      },
+      "screenshot_path": "after/static-40-loads/three/standard/09-rear-left.png",
+      "screenshot_bytes": 155287,
+      "screenshot_sha256": "1e89a1f689196a140cf8ab8c96a595692689150449470b7c55894b1b7e9e4529",
+      "status": "PASS"
+    },
+    {
+      "index": 10,
+      "name": "rear-right",
+      "yaw": 135,
+      "pitch": 18,
+      "background": "dark",
+      "load_id": "after-three-standard-10-rear-right",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/three.html?key=Huawei-RH2288V3-2.5inch&model=standard&bg=dark&load=after-three-standard-10-rear-right&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff&yaw=135&pitch=18",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch.glb?load=after-three-standard-10-rear-right&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "load_id": "after-three-standard-10-rear-right",
+        "yaw": 135,
+        "pitch": 18,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch.glb?load=after-three-standard-10-rear-right&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "transferSize": 26217824,
+        "encodedBodySize": 26217524,
+        "decodedBodySize": 26217524,
+        "duration": 212.90000000037253
+      },
+      "screenshot_path": "after/static-40-loads/three/standard/10-rear-right.png",
+      "screenshot_bytes": 163851,
+      "screenshot_sha256": "5e0e04d6a2b98aaecd47c4952e254f8c90f150d6757e76925048eb4c83bc3574",
+      "status": "PASS"
+    },
+    {
+      "index": 1,
+      "name": "front",
+      "yaw": 0,
+      "pitch": 0,
+      "background": "light",
+      "load_id": "after-three-web-01-front",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/three.html?key=Huawei-RH2288V3-2.5inch&model=web&bg=light&load=after-three-web-01-front&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41&yaw=0&pitch=0",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-three-web-01-front&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "load_id": "after-three-web-01-front",
+        "yaw": 0,
+        "pitch": 0,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-three-web-01-front&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "transferSize": 10100056,
+        "encodedBodySize": 10099756,
+        "decodedBodySize": 10099756,
+        "duration": 207.20000000018626
+      },
+      "screenshot_path": "after/static-40-loads/three/web/01-front.png",
+      "screenshot_bytes": 87297,
+      "screenshot_sha256": "1843db7507b8704328601bd079905728e537674432a49a19964f13fb18b0577d",
+      "status": "PASS"
+    },
+    {
+      "index": 2,
+      "name": "rear",
+      "yaw": 180,
+      "pitch": 0,
+      "background": "dark",
+      "load_id": "after-three-web-02-rear",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/three.html?key=Huawei-RH2288V3-2.5inch&model=web&bg=dark&load=after-three-web-02-rear&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41&yaw=180&pitch=0",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-three-web-02-rear&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "load_id": "after-three-web-02-rear",
+        "yaw": 180,
+        "pitch": 0,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-three-web-02-rear&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "transferSize": 10100056,
+        "encodedBodySize": 10099756,
+        "decodedBodySize": 10099756,
+        "duration": 169.5
+      },
+      "screenshot_path": "after/static-40-loads/three/web/02-rear.png",
+      "screenshot_bytes": 87816,
+      "screenshot_sha256": "a66192d0ed7ea43f61b0401fd16dd94725177529262be1162488195752b3466e",
+      "status": "PASS"
+    },
+    {
+      "index": 3,
+      "name": "left",
+      "yaw": 270,
+      "pitch": 0,
+      "background": "light",
+      "load_id": "after-three-web-03-left",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/three.html?key=Huawei-RH2288V3-2.5inch&model=web&bg=light&load=after-three-web-03-left&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41&yaw=270&pitch=0",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-three-web-03-left&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "load_id": "after-three-web-03-left",
+        "yaw": 270,
+        "pitch": 0,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-three-web-03-left&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "transferSize": 10100056,
+        "encodedBodySize": 10099756,
+        "decodedBodySize": 10099756,
+        "duration": 146.5
+      },
+      "screenshot_path": "after/static-40-loads/three/web/03-left.png",
+      "screenshot_bytes": 86882,
+      "screenshot_sha256": "da5fc31bf6f8fb21eb1b526f21704d7bd5365eb8fff9d0dff2f275bb34e1d1ee",
+      "status": "PASS"
+    },
+    {
+      "index": 4,
+      "name": "right",
+      "yaw": 90,
+      "pitch": 0,
+      "background": "dark",
+      "load_id": "after-three-web-04-right",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/three.html?key=Huawei-RH2288V3-2.5inch&model=web&bg=dark&load=after-three-web-04-right&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41&yaw=90&pitch=0",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-three-web-04-right&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "load_id": "after-three-web-04-right",
+        "yaw": 90,
+        "pitch": 0,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-three-web-04-right&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "transferSize": 10100056,
+        "encodedBodySize": 10099756,
+        "decodedBodySize": 10099756,
+        "duration": 170.90000000037253
+      },
+      "screenshot_path": "after/static-40-loads/three/web/04-right.png",
+      "screenshot_bytes": 92896,
+      "screenshot_sha256": "aa3b79be97cfaebc1b1f04bd00b285f174c12623bd5ba4bfabf85f47b6b48874",
+      "status": "PASS"
+    },
+    {
+      "index": 5,
+      "name": "top",
+      "yaw": 0,
+      "pitch": 88,
+      "background": "light",
+      "load_id": "after-three-web-05-top",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/three.html?key=Huawei-RH2288V3-2.5inch&model=web&bg=light&load=after-three-web-05-top&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41&yaw=0&pitch=88",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-three-web-05-top&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "load_id": "after-three-web-05-top",
+        "yaw": 0,
+        "pitch": 88,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-three-web-05-top&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "transferSize": 10100056,
+        "encodedBodySize": 10099756,
+        "decodedBodySize": 10099756,
+        "duration": 103.79999999981374
+      },
+      "screenshot_path": "after/static-40-loads/three/web/05-top.png",
+      "screenshot_bytes": 257310,
+      "screenshot_sha256": "8538f472d74f9d8c2644079159edecd9e6c82b494e8429cf7f84226f9a939084",
+      "status": "PASS"
+    },
+    {
+      "index": 6,
+      "name": "bottom",
+      "yaw": 0,
+      "pitch": -88,
+      "background": "dark",
+      "load_id": "after-three-web-06-bottom",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/three.html?key=Huawei-RH2288V3-2.5inch&model=web&bg=dark&load=after-three-web-06-bottom&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41&yaw=0&pitch=-88",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-three-web-06-bottom&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "load_id": "after-three-web-06-bottom",
+        "yaw": 0,
+        "pitch": -88,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-three-web-06-bottom&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "transferSize": 10100056,
+        "encodedBodySize": 10099756,
+        "decodedBodySize": 10099756,
+        "duration": 168.5
+      },
+      "screenshot_path": "after/static-40-loads/three/web/06-bottom.png",
+      "screenshot_bytes": 254072,
+      "screenshot_sha256": "a7abb949e7ff85b1d30f37061b9aa6bbd98e3fcbdf1d65790b6ede33e2a4f8ce",
+      "status": "PASS"
+    },
+    {
+      "index": 7,
+      "name": "front-left",
+      "yaw": 315,
+      "pitch": 18,
+      "background": "light",
+      "load_id": "after-three-web-07-front-left",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/three.html?key=Huawei-RH2288V3-2.5inch&model=web&bg=light&load=after-three-web-07-front-left&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41&yaw=315&pitch=18",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-three-web-07-front-left&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "load_id": "after-three-web-07-front-left",
+        "yaw": 315,
+        "pitch": 18,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-three-web-07-front-left&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "transferSize": 10100056,
+        "encodedBodySize": 10099756,
+        "decodedBodySize": 10099756,
+        "duration": 162.40000000037253
+      },
+      "screenshot_path": "after/static-40-loads/three/web/07-front-left.png",
+      "screenshot_bytes": 157594,
+      "screenshot_sha256": "0ac14d18f5606719b200dc1eb024181ff4d4a2441970234629b50ca2ee117aa6",
+      "status": "PASS"
+    },
+    {
+      "index": 8,
+      "name": "front-right",
+      "yaw": 45,
+      "pitch": 18,
+      "background": "dark",
+      "load_id": "after-three-web-08-front-right",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/three.html?key=Huawei-RH2288V3-2.5inch&model=web&bg=dark&load=after-three-web-08-front-right&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41&yaw=45&pitch=18",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-three-web-08-front-right&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "load_id": "after-three-web-08-front-right",
+        "yaw": 45,
+        "pitch": 18,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-three-web-08-front-right&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "transferSize": 10100056,
+        "encodedBodySize": 10099756,
+        "decodedBodySize": 10099756,
+        "duration": 138.70000000018626
+      },
+      "screenshot_path": "after/static-40-loads/three/web/08-front-right.png",
+      "screenshot_bytes": 158156,
+      "screenshot_sha256": "bbe8ad5d2611b154a0b2df54dafa6ca89f10fc4cbb2a815ca58d0e91e5344e52",
+      "status": "PASS"
+    },
+    {
+      "index": 9,
+      "name": "rear-left",
+      "yaw": 225,
+      "pitch": 18,
+      "background": "light",
+      "load_id": "after-three-web-09-rear-left",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/three.html?key=Huawei-RH2288V3-2.5inch&model=web&bg=light&load=after-three-web-09-rear-left&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41&yaw=225&pitch=18",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-three-web-09-rear-left&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "load_id": "after-three-web-09-rear-left",
+        "yaw": 225,
+        "pitch": 18,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-three-web-09-rear-left&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "transferSize": 10100056,
+        "encodedBodySize": 10099756,
+        "decodedBodySize": 10099756,
+        "duration": 150.30000000074506
+      },
+      "screenshot_path": "after/static-40-loads/three/web/09-rear-left.png",
+      "screenshot_bytes": 155307,
+      "screenshot_sha256": "dce398443b97b0743e24b343a070927822a1faff2c351fa5e6dd7770bf245037",
+      "status": "PASS"
+    },
+    {
+      "index": 10,
+      "name": "rear-right",
+      "yaw": 135,
+      "pitch": 18,
+      "background": "dark",
+      "load_id": "after-three-web-10-rear-right",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/three.html?key=Huawei-RH2288V3-2.5inch&model=web&bg=dark&load=after-three-web-10-rear-right&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41&yaw=135&pitch=18",
+      "state": {
+        "engine": "three",
+        "engine_revision": "169",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-three-web-10-rear-right&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "load_id": "after-three-web-10-rear-right",
+        "yaw": 135,
+        "pitch": 18,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-three-web-10-rear-right&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "transferSize": 10100056,
+        "encodedBodySize": 10099756,
+        "decodedBodySize": 10099756,
+        "duration": 158.80000000074506
+      },
+      "screenshot_path": "after/static-40-loads/three/web/10-rear-right.png",
+      "screenshot_bytes": 163983,
+      "screenshot_sha256": "3b141b24524b1902ba49684ec60c01369c5ac12a46bff3e52ef2475d5939cdd1",
+      "status": "PASS"
+    },
+    {
+      "index": 1,
+      "name": "front",
+      "yaw": 0,
+      "pitch": 0,
+      "background": "light",
+      "load_id": "after-babylon-standard-01-front",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/babylon.html?key=Huawei-RH2288V3-2.5inch&model=standard&bg=light&load=after-babylon-standard-01-front&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff&yaw=0&pitch=0",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch.glb?load=after-babylon-standard-01-front&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "load_id": "after-babylon-standard-01-front",
+        "yaw": 0,
+        "pitch": 0,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch.glb?load=after-babylon-standard-01-front&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "transferSize": 26217824,
+        "encodedBodySize": 26217524,
+        "decodedBodySize": 26217524,
+        "duration": 203.6000000005588
+      },
+      "screenshot_path": "after/static-40-loads/babylon/standard/01-front.png",
+      "screenshot_bytes": 86831,
+      "screenshot_sha256": "5ee66357e3024a75e78c7ae9e4930e95c757c2f43099137aec873be1b25c7c89",
+      "status": "PASS"
+    },
+    {
+      "index": 2,
+      "name": "rear",
+      "yaw": 180,
+      "pitch": 0,
+      "background": "dark",
+      "load_id": "after-babylon-standard-02-rear",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/babylon.html?key=Huawei-RH2288V3-2.5inch&model=standard&bg=dark&load=after-babylon-standard-02-rear&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff&yaw=180&pitch=0",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch.glb?load=after-babylon-standard-02-rear&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "load_id": "after-babylon-standard-02-rear",
+        "yaw": 180,
+        "pitch": 0,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch.glb?load=after-babylon-standard-02-rear&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "transferSize": 26217824,
+        "encodedBodySize": 26217524,
+        "decodedBodySize": 26217524,
+        "duration": 201.79999999981374
+      },
+      "screenshot_path": "after/static-40-loads/babylon/standard/02-rear.png",
+      "screenshot_bytes": 88802,
+      "screenshot_sha256": "badc5159d60831460fb4c6d072f04fecccd5ae34d8f1c45869a84df5b5837774",
+      "status": "PASS"
+    },
+    {
+      "index": 3,
+      "name": "left",
+      "yaw": 270,
+      "pitch": 0,
+      "background": "light",
+      "load_id": "after-babylon-standard-03-left",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/babylon.html?key=Huawei-RH2288V3-2.5inch&model=standard&bg=light&load=after-babylon-standard-03-left&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff&yaw=270&pitch=0",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch.glb?load=after-babylon-standard-03-left&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "load_id": "after-babylon-standard-03-left",
+        "yaw": 270,
+        "pitch": 0,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch.glb?load=after-babylon-standard-03-left&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "transferSize": 26217824,
+        "encodedBodySize": 26217524,
+        "decodedBodySize": 26217524,
+        "duration": 181
+      },
+      "screenshot_path": "after/static-40-loads/babylon/standard/03-left.png",
+      "screenshot_bytes": 86798,
+      "screenshot_sha256": "b467c7951b26732485efc8256c386a7b083f0fdf487f536dab7affb1b3089a3d",
+      "status": "PASS"
+    },
+    {
+      "index": 4,
+      "name": "right",
+      "yaw": 90,
+      "pitch": 0,
+      "background": "dark",
+      "load_id": "after-babylon-standard-04-right",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/babylon.html?key=Huawei-RH2288V3-2.5inch&model=standard&bg=dark&load=after-babylon-standard-04-right&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff&yaw=90&pitch=0",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch.glb?load=after-babylon-standard-04-right&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "load_id": "after-babylon-standard-04-right",
+        "yaw": 90,
+        "pitch": 0,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch.glb?load=after-babylon-standard-04-right&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "transferSize": 26217824,
+        "encodedBodySize": 26217524,
+        "decodedBodySize": 26217524,
+        "duration": 167
+      },
+      "screenshot_path": "after/static-40-loads/babylon/standard/04-right.png",
+      "screenshot_bytes": 93348,
+      "screenshot_sha256": "c138dc8ed5bec9580b51a91917305fe2caa7e177cc5db65798e9a4ad20ac1ba7",
+      "status": "PASS"
+    },
+    {
+      "index": 5,
+      "name": "top",
+      "yaw": 0,
+      "pitch": 88,
+      "background": "light",
+      "load_id": "after-babylon-standard-05-top",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/babylon.html?key=Huawei-RH2288V3-2.5inch&model=standard&bg=light&load=after-babylon-standard-05-top&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff&yaw=0&pitch=88",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch.glb?load=after-babylon-standard-05-top&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "load_id": "after-babylon-standard-05-top",
+        "yaw": 0,
+        "pitch": 88,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch.glb?load=after-babylon-standard-05-top&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "transferSize": 26217824,
+        "encodedBodySize": 26217524,
+        "decodedBodySize": 26217524,
+        "duration": 204.8999999994412
+      },
+      "screenshot_path": "after/static-40-loads/babylon/standard/05-top.png",
+      "screenshot_bytes": 255683,
+      "screenshot_sha256": "09d4cfe1365a80a5e6994aee2a623f528410d9659752e4d8ffd583d0fea12aa7",
+      "status": "PASS"
+    },
+    {
+      "index": 6,
+      "name": "bottom",
+      "yaw": 0,
+      "pitch": -88,
+      "background": "dark",
+      "load_id": "after-babylon-standard-06-bottom",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/babylon.html?key=Huawei-RH2288V3-2.5inch&model=standard&bg=dark&load=after-babylon-standard-06-bottom&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff&yaw=0&pitch=-88",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch.glb?load=after-babylon-standard-06-bottom&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "load_id": "after-babylon-standard-06-bottom",
+        "yaw": 0,
+        "pitch": -88,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch.glb?load=after-babylon-standard-06-bottom&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "transferSize": 26217824,
+        "encodedBodySize": 26217524,
+        "decodedBodySize": 26217524,
+        "duration": 178.1000000005588
+      },
+      "screenshot_path": "after/static-40-loads/babylon/standard/06-bottom.png",
+      "screenshot_bytes": 252380,
+      "screenshot_sha256": "e7b5106459c12ed6c311303d180a73653583d5bd58b348a05f6afa1997ca1210",
+      "status": "PASS"
+    },
+    {
+      "index": 7,
+      "name": "front-left",
+      "yaw": 315,
+      "pitch": 18,
+      "background": "light",
+      "load_id": "after-babylon-standard-07-front-left",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/babylon.html?key=Huawei-RH2288V3-2.5inch&model=standard&bg=light&load=after-babylon-standard-07-front-left&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff&yaw=315&pitch=18",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch.glb?load=after-babylon-standard-07-front-left&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "load_id": "after-babylon-standard-07-front-left",
+        "yaw": 315,
+        "pitch": 18,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch.glb?load=after-babylon-standard-07-front-left&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "transferSize": 26217824,
+        "encodedBodySize": 26217524,
+        "decodedBodySize": 26217524,
+        "duration": 128.70000000018626
+      },
+      "screenshot_path": "after/static-40-loads/babylon/standard/07-front-left.png",
+      "screenshot_bytes": 183336,
+      "screenshot_sha256": "6a29a03f12ccc40598dbce953aba580a93607e3ca5bbc6bc606b7856e1614650",
+      "status": "PASS"
+    },
+    {
+      "index": 8,
+      "name": "front-right",
+      "yaw": 45,
+      "pitch": 18,
+      "background": "dark",
+      "load_id": "after-babylon-standard-08-front-right",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/babylon.html?key=Huawei-RH2288V3-2.5inch&model=standard&bg=dark&load=after-babylon-standard-08-front-right&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff&yaw=45&pitch=18",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch.glb?load=after-babylon-standard-08-front-right&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "load_id": "after-babylon-standard-08-front-right",
+        "yaw": 45,
+        "pitch": 18,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch.glb?load=after-babylon-standard-08-front-right&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "transferSize": 26217824,
+        "encodedBodySize": 26217524,
+        "decodedBodySize": 26217524,
+        "duration": 199.79999999981374
+      },
+      "screenshot_path": "after/static-40-loads/babylon/standard/08-front-right.png",
+      "screenshot_bytes": 190118,
+      "screenshot_sha256": "87dc44e8ae768774139b8ef926cadb1f2e418218ce3d941fa7e57004939c34d0",
+      "status": "PASS"
+    },
+    {
+      "index": 9,
+      "name": "rear-left",
+      "yaw": 225,
+      "pitch": 18,
+      "background": "light",
+      "load_id": "after-babylon-standard-09-rear-left",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/babylon.html?key=Huawei-RH2288V3-2.5inch&model=standard&bg=light&load=after-babylon-standard-09-rear-left&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff&yaw=225&pitch=18",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch.glb?load=after-babylon-standard-09-rear-left&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "load_id": "after-babylon-standard-09-rear-left",
+        "yaw": 225,
+        "pitch": 18,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch.glb?load=after-babylon-standard-09-rear-left&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "transferSize": 26217824,
+        "encodedBodySize": 26217524,
+        "decodedBodySize": 26217524,
+        "duration": 208.29999999981374
+      },
+      "screenshot_path": "after/static-40-loads/babylon/standard/09-rear-left.png",
+      "screenshot_bytes": 185953,
+      "screenshot_sha256": "a32c311185d61dad272fa142794a8caca2801e757695224e1c5a4eb028859467",
+      "status": "PASS"
+    },
+    {
+      "index": 10,
+      "name": "rear-right",
+      "yaw": 135,
+      "pitch": 18,
+      "background": "dark",
+      "load_id": "after-babylon-standard-10-rear-right",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/babylon.html?key=Huawei-RH2288V3-2.5inch&model=standard&bg=dark&load=after-babylon-standard-10-rear-right&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff&yaw=135&pitch=18",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "standard",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch.glb?load=after-babylon-standard-10-rear-right&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "load_id": "after-babylon-standard-10-rear-right",
+        "yaw": 135,
+        "pitch": 18,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch.glb?load=after-babylon-standard-10-rear-right&sha256=99784848fa3bc592b4273af59d79fc1d9e34586a92064f475693d980e32dd9ff",
+        "transferSize": 26217824,
+        "encodedBodySize": 26217524,
+        "decodedBodySize": 26217524,
+        "duration": 265
+      },
+      "screenshot_path": "after/static-40-loads/babylon/standard/10-rear-right.png",
+      "screenshot_bytes": 193564,
+      "screenshot_sha256": "362787e95a9c6f7cd5cd35e83cf147381cfeb4a22a8ccab0ebb5da3edad97531",
+      "status": "PASS"
+    },
+    {
+      "index": 1,
+      "name": "front",
+      "yaw": 0,
+      "pitch": 0,
+      "background": "light",
+      "load_id": "after-babylon-web-01-front",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/babylon.html?key=Huawei-RH2288V3-2.5inch&model=web&bg=light&load=after-babylon-web-01-front&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41&yaw=0&pitch=0",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-babylon-web-01-front&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "load_id": "after-babylon-web-01-front",
+        "yaw": 0,
+        "pitch": 0,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-babylon-web-01-front&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "transferSize": 10100056,
+        "encodedBodySize": 10099756,
+        "decodedBodySize": 10099756,
+        "duration": 88
+      },
+      "screenshot_path": "after/static-40-loads/babylon/web/01-front.png",
+      "screenshot_bytes": 86440,
+      "screenshot_sha256": "b72d1fa0da94926f5d7e83a8fd08fc18ec401fa0a7dc5f8af248b7d7412a2407",
+      "status": "PASS"
+    },
+    {
+      "index": 2,
+      "name": "rear",
+      "yaw": 180,
+      "pitch": 0,
+      "background": "dark",
+      "load_id": "after-babylon-web-02-rear",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/babylon.html?key=Huawei-RH2288V3-2.5inch&model=web&bg=dark&load=after-babylon-web-02-rear&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41&yaw=180&pitch=0",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-babylon-web-02-rear&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "load_id": "after-babylon-web-02-rear",
+        "yaw": 180,
+        "pitch": 0,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-babylon-web-02-rear&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "transferSize": 10100056,
+        "encodedBodySize": 10099756,
+        "decodedBodySize": 10099756,
+        "duration": 149.1000000005588
+      },
+      "screenshot_path": "after/static-40-loads/babylon/web/02-rear.png",
+      "screenshot_bytes": 88327,
+      "screenshot_sha256": "13ab9071adacf908a0826d700b1d86eccb5f8cefbcf782a5ca70479a547923fe",
+      "status": "PASS"
+    },
+    {
+      "index": 3,
+      "name": "left",
+      "yaw": 270,
+      "pitch": 0,
+      "background": "light",
+      "load_id": "after-babylon-web-03-left",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/babylon.html?key=Huawei-RH2288V3-2.5inch&model=web&bg=light&load=after-babylon-web-03-left&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41&yaw=270&pitch=0",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-babylon-web-03-left&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "load_id": "after-babylon-web-03-left",
+        "yaw": 270,
+        "pitch": 0,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-babylon-web-03-left&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "transferSize": 10100056,
+        "encodedBodySize": 10099756,
+        "decodedBodySize": 10099756,
+        "duration": 104.79999999981374
+      },
+      "screenshot_path": "after/static-40-loads/babylon/web/03-left.png",
+      "screenshot_bytes": 86948,
+      "screenshot_sha256": "4218646654f37ad12f4838cdeb2e638d9b39ac143eac5acadbe3602ddb351bd1",
+      "status": "PASS"
+    },
+    {
+      "index": 4,
+      "name": "right",
+      "yaw": 90,
+      "pitch": 0,
+      "background": "dark",
+      "load_id": "after-babylon-web-04-right",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/babylon.html?key=Huawei-RH2288V3-2.5inch&model=web&bg=dark&load=after-babylon-web-04-right&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41&yaw=90&pitch=0",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-babylon-web-04-right&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "load_id": "after-babylon-web-04-right",
+        "yaw": 90,
+        "pitch": 0,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-babylon-web-04-right&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "transferSize": 10100056,
+        "encodedBodySize": 10099756,
+        "decodedBodySize": 10099756,
+        "duration": 111.69999999925494
+      },
+      "screenshot_path": "after/static-40-loads/babylon/web/04-right.png",
+      "screenshot_bytes": 93370,
+      "screenshot_sha256": "25a38e5e47ed755a2d39ba05938882ea36f8b09056fc584db86fc114cd5e3c00",
+      "status": "PASS"
+    },
+    {
+      "index": 5,
+      "name": "top",
+      "yaw": 0,
+      "pitch": 88,
+      "background": "light",
+      "load_id": "after-babylon-web-05-top",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/babylon.html?key=Huawei-RH2288V3-2.5inch&model=web&bg=light&load=after-babylon-web-05-top&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41&yaw=0&pitch=88",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-babylon-web-05-top&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "load_id": "after-babylon-web-05-top",
+        "yaw": 0,
+        "pitch": 88,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-babylon-web-05-top&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "transferSize": 10100056,
+        "encodedBodySize": 10099756,
+        "decodedBodySize": 10099756,
+        "duration": 98.3999999994412
+      },
+      "screenshot_path": "after/static-40-loads/babylon/web/05-top.png",
+      "screenshot_bytes": 257899,
+      "screenshot_sha256": "8a720f8d8059edcb77225a859301b6938aa043dfaacaaa9e11a4848dfd8eef2e",
+      "status": "PASS"
+    },
+    {
+      "index": 6,
+      "name": "bottom",
+      "yaw": 0,
+      "pitch": -88,
+      "background": "dark",
+      "load_id": "after-babylon-web-06-bottom",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/babylon.html?key=Huawei-RH2288V3-2.5inch&model=web&bg=dark&load=after-babylon-web-06-bottom&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41&yaw=0&pitch=-88",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-babylon-web-06-bottom&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "load_id": "after-babylon-web-06-bottom",
+        "yaw": 0,
+        "pitch": -88,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-babylon-web-06-bottom&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "transferSize": 10100056,
+        "encodedBodySize": 10099756,
+        "decodedBodySize": 10099756,
+        "duration": 106.90000000037253
+      },
+      "screenshot_path": "after/static-40-loads/babylon/web/06-bottom.png",
+      "screenshot_bytes": 254871,
+      "screenshot_sha256": "648c5d74a1dd60b4959ea8d48daf181272cb6c9b265c56aad407a4681a3c28a1",
+      "status": "PASS"
+    },
+    {
+      "index": 7,
+      "name": "front-left",
+      "yaw": 315,
+      "pitch": 18,
+      "background": "light",
+      "load_id": "after-babylon-web-07-front-left",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/babylon.html?key=Huawei-RH2288V3-2.5inch&model=web&bg=light&load=after-babylon-web-07-front-left&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41&yaw=315&pitch=18",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-babylon-web-07-front-left&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "load_id": "after-babylon-web-07-front-left",
+        "yaw": 315,
+        "pitch": 18,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-babylon-web-07-front-left&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "transferSize": 10100056,
+        "encodedBodySize": 10099756,
+        "decodedBodySize": 10099756,
+        "duration": 114.70000000018626
+      },
+      "screenshot_path": "after/static-40-loads/babylon/web/07-front-left.png",
+      "screenshot_bytes": 183915,
+      "screenshot_sha256": "2cde23b03f66773f25b1d8d3b14bf7821a31949df2bc1ea3cc70968d4e3998c0",
+      "status": "PASS"
+    },
+    {
+      "index": 8,
+      "name": "front-right",
+      "yaw": 45,
+      "pitch": 18,
+      "background": "dark",
+      "load_id": "after-babylon-web-08-front-right",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/babylon.html?key=Huawei-RH2288V3-2.5inch&model=web&bg=dark&load=after-babylon-web-08-front-right&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41&yaw=45&pitch=18",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-babylon-web-08-front-right&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "load_id": "after-babylon-web-08-front-right",
+        "yaw": 45,
+        "pitch": 18,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-babylon-web-08-front-right&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "transferSize": 10100056,
+        "encodedBodySize": 10099756,
+        "decodedBodySize": 10099756,
+        "duration": 125.5
+      },
+      "screenshot_path": "after/static-40-loads/babylon/web/08-front-right.png",
+      "screenshot_bytes": 190589,
+      "screenshot_sha256": "27cb8cfee3c8fe7088c2fff1a2bca484e5c62cffc04be89eda9399922ec4d75d",
+      "status": "PASS"
+    },
+    {
+      "index": 9,
+      "name": "rear-left",
+      "yaw": 225,
+      "pitch": 18,
+      "background": "light",
+      "load_id": "after-babylon-web-09-rear-left",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/babylon.html?key=Huawei-RH2288V3-2.5inch&model=web&bg=light&load=after-babylon-web-09-rear-left&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41&yaw=225&pitch=18",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-babylon-web-09-rear-left&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "load_id": "after-babylon-web-09-rear-left",
+        "yaw": 225,
+        "pitch": 18,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "light"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-babylon-web-09-rear-left&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "transferSize": 10100056,
+        "encodedBodySize": 10099756,
+        "decodedBodySize": 10099756,
+        "duration": 93.59999999962747
+      },
+      "screenshot_path": "after/static-40-loads/babylon/web/09-rear-left.png",
+      "screenshot_bytes": 186668,
+      "screenshot_sha256": "699213a16f808671ac34cbd2ae4adfc747ee8efd39e5ea9891fc59ae785f1b57",
+      "status": "PASS"
+    },
+    {
+      "index": 10,
+      "name": "rear-right",
+      "yaw": 135,
+      "pitch": 18,
+      "background": "dark",
+      "load_id": "after-babylon-web-10-rear-right",
+      "url": "http://127.0.0.1:8863/qa/rotation-review-20260827/viewers/babylon.html?key=Huawei-RH2288V3-2.5inch&model=web&bg=dark&load=after-babylon-web-10-rear-right&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41&yaw=135&pitch=18",
+      "state": {
+        "engine": "babylon",
+        "engine_revision": "9.22.0",
+        "webgl_version": 2,
+        "variant": "web",
+        "key": "Huawei-RH2288V3-2.5inch",
+        "expected_sha256": "26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "model_url": "/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-babylon-web-10-rear-right&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "load_id": "after-babylon-web-10-rear-right",
+        "yaw": 135,
+        "pitch": 18,
+        "radius": 1.6810725048184396,
+        "bounds": [
+          0.48260000348091125,
+          0.08609999716281891,
+          0.7153500020503998
+        ],
+        "background": "dark"
+      },
+      "error": null,
+      "resource": {
+        "name": "http://127.0.0.1:8863/model/Huawei-RH2288V3-2.5inch-web.glb?load=after-babylon-web-10-rear-right&sha256=26e40115ac095319ddbd3903e0a6e576e1172d854740eb39da3a90985969cf41",
+        "transferSize": 10100056,
+        "encodedBodySize": 10099756,
+        "decodedBodySize": 10099756,
+        "duration": 116
+      },
+      "screenshot_path": "after/static-40-loads/babylon/web/10-rear-right.png",
+      "screenshot_bytes": 194080,
+      "screenshot_sha256": "b74035ee128880dc3bbb053a2109653bad827f4d2ee9829bc55e887998e024df",
+      "status": "PASS"
+    }
+  ],
+  "static_load_count": 40,
+  "static_pass_count": 40,
+  "status": "PASS_WITH_BOTTOM_FALLBACK",
+  "visual_review": {
+    "all_four_rotation_combinations_pass": true,
+    "all_40_static_loads_pass": true,
+    "matched_camera_comparisons": 24,
+    "feature_inventory_rows": 12,
+    "residual_visual_defects": []
+  }
+}

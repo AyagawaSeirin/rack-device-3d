@@ -55,7 +55,7 @@ Accepted content: `left-v4.png`, physically rectified without flipping into `vie
 Input roles:
 
 - Primary evidence: `source/third-party/qgserver-rh2288v3-3.jpg`.
-- Supporting shell evidence: official image and `source/third-party/burrill-rh2288-v3-4.jpg`.
+- Supporting shell evidence: official image and exact-page `source/third-party/qgserver-rh2288v3-5.jpg`.
 - Immutable prompt contract: pure physical-right orthographic; black front ear at image left, rear tabs at image right; independent mostly plain fastener pattern; explicitly no copied left vent; no mirroring; magenta background.
 
 Raw calls: `right.png`, `right-v2.png`. The first reversed the front/rear direction. `right-v2.png` was accepted and rectified into `views/right.png`.
