@@ -1,0 +1,1767 @@
+{
+  "path": "Dell-R630-2.5inch/model/Dell-R630-2.5inch.glb",
+  "byte_size": 5087076,
+  "asset": {
+    "version": "2.0",
+    "generator": "Codex exact-exterior GLB builder",
+    "extras": {
+      "manufacturer": "Dell",
+      "model": "PowerEdge R630",
+      "variant": "10x2.5-inch SFF, bezel absent",
+      "rear": "three-riser, quad RJ45, dual matching EPP 1100W AC PSU",
+      "status": "PASS_WITH_BOTTOM_FALLBACK",
+      "coordinateConvention": "+X right, +Y up, +Z front",
+      "dimensionsMm": {
+        "width": 482.4,
+        "height": 42.8,
+        "depth": 752.1
+      },
+      "profile": "standard"
+    }
+  },
+  "extensions_used": [
+    "KHR_materials_unlit"
+  ],
+  "extensions_required": [],
+  "counts": {
+    "scenes": 1,
+    "nodes": 133,
+    "meshes": 133,
+    "primitives": 133,
+    "materials": 14,
+    "textures": 6,
+    "images": 6,
+    "unique_basecolor_images": 6
+  },
+  "geometry": {
+    "mirrored_nodes": [],
+    "missing_accessor_bounds": [],
+    "bounds_min": [
+      -0.2412,
+      -0.0214,
+      -0.37615
+    ],
+    "bounds_max": [
+      0.2412,
+      0.0214,
+      0.37605
+    ],
+    "dimensions_xyz": [
+      0.4824,
+      0.0428,
+      0.7522
+    ]
+  },
+  "dimension_check": {
+    "expected_mm": [
+      482.4,
+      42.8,
+      752.1
+    ],
+    "errors": [],
+    "warnings": [],
+    "actual_xyz": [
+      0.4824,
+      0.0428,
+      0.7522
+    ],
+    "units_per_mm_xyz": [
+      0.001,
+      0.001,
+      0.001000133
+    ],
+    "nonuniform_ratio_error_percent": 0.0089
+  },
+  "images": [
+    {
+      "index": 0,
+      "name": "front-standard",
+      "errors": [],
+      "warnings": [],
+      "format": "JPEG",
+      "mode": "RGB",
+      "size_px": [
+        4096,
+        364
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    },
+    {
+      "index": 1,
+      "name": "rear-standard",
+      "errors": [],
+      "warnings": [],
+      "format": "JPEG",
+      "mode": "RGB",
+      "size_px": [
+        4096,
+        404
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    },
+    {
+      "index": 2,
+      "name": "left-standard",
+      "errors": [],
+      "warnings": [],
+      "format": "JPEG",
+      "mode": "RGB",
+      "size_px": [
+        4096,
+        240
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    },
+    {
+      "index": 3,
+      "name": "right-standard",
+      "errors": [],
+      "warnings": [],
+      "format": "JPEG",
+      "mode": "RGB",
+      "size_px": [
+        4096,
+        240
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    },
+    {
+      "index": 4,
+      "name": "top-standard",
+      "errors": [],
+      "warnings": [],
+      "format": "JPEG",
+      "mode": "RGB",
+      "size_px": [
+        2048,
+        3449
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    },
+    {
+      "index": 5,
+      "name": "bottom-standard",
+      "errors": [],
+      "warnings": [],
+      "format": "JPEG",
+      "mode": "RGB",
+      "size_px": [
+        2048,
+        3449
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    }
+  ],
+  "materials": [
+    {
+      "index": 0,
+      "name": "front-source-locked",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 1,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 0,
+      "base_color_image": 0
+    },
+    {
+      "index": 1,
+      "name": "rear-source-locked",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 1,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 1,
+      "base_color_image": 1
+    },
+    {
+      "index": 2,
+      "name": "left-source-locked",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 1,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 2,
+      "base_color_image": 2
+    },
+    {
+      "index": 3,
+      "name": "right-source-locked",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 1,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 3,
+      "base_color_image": 3
+    },
+    {
+      "index": 4,
+      "name": "top-source-locked",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 1,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 4,
+      "base_color_image": 4
+    },
+    {
+      "index": 5,
+      "name": "bottom-source-locked",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 1,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 5,
+      "base_color_image": 5
+    },
+    {
+      "index": 6,
+      "name": "galvanized steel",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.56,
+        0.58,
+        0.58,
+        1
+      ],
+      "metallic_factor": 0.28,
+      "roughness_factor": 0.72,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 7,
+      "name": "Dell black textured plastic",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.035,
+        0.038,
+        0.041,
+        1
+      ],
+      "metallic_factor": 0.02,
+      "roughness_factor": 0.82,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 8,
+      "name": "recess black",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.006,
+        0.008,
+        0.009,
+        1
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.95,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 9,
+      "name": "hot-swap orange",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.92,
+        0.2,
+        0.025,
+        1
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 10,
+      "name": "activity green",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.1,
+        0.72,
+        0.16,
+        1
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.65,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 11,
+      "name": "connector blue",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.04,
+        0.22,
+        0.78,
+        1
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.55,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 12,
+      "name": "serial teal",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.1,
+        0.48,
+        0.48,
+        1
+      ],
+      "metallic_factor": 0.1,
+      "roughness_factor": 0.55,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 13,
+      "name": "rigid PSU pull handle",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.67,
+        0.69,
+        0.68,
+        1
+      ],
+      "metallic_factor": 0.2,
+      "roughness_factor": 0.42,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    }
+  ],
+  "primitives": [
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 1,
+      "primitive": 0,
+      "material": 0,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 2,
+      "primitive": 0,
+      "material": 1,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 3,
+      "primitive": 0,
+      "material": 2,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 4,
+      "primitive": 0,
+      "material": 3,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 5,
+      "primitive": 0,
+      "material": 4,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 6,
+      "primitive": 0,
+      "material": 5,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 7,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 8,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 9,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 10,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 11,
+      "primitive": 0,
+      "material": 9,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 12,
+      "primitive": 0,
+      "material": 10,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 13,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 14,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 15,
+      "primitive": 0,
+      "material": 9,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 16,
+      "primitive": 0,
+      "material": 10,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 17,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 18,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 19,
+      "primitive": 0,
+      "material": 9,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 20,
+      "primitive": 0,
+      "material": 10,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 21,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 22,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 23,
+      "primitive": 0,
+      "material": 9,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 24,
+      "primitive": 0,
+      "material": 10,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 25,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 26,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 27,
+      "primitive": 0,
+      "material": 9,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 28,
+      "primitive": 0,
+      "material": 10,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 29,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 30,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 31,
+      "primitive": 0,
+      "material": 9,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 32,
+      "primitive": 0,
+      "material": 10,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 33,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 34,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 35,
+      "primitive": 0,
+      "material": 9,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 36,
+      "primitive": 0,
+      "material": 10,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 37,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 38,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 39,
+      "primitive": 0,
+      "material": 9,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 40,
+      "primitive": 0,
+      "material": 10,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 41,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 42,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 43,
+      "primitive": 0,
+      "material": 9,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 44,
+      "primitive": 0,
+      "material": 10,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 45,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 46,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 47,
+      "primitive": 0,
+      "material": 9,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 48,
+      "primitive": 0,
+      "material": 10,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 49,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 50,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 51,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 52,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 53,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 54,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 55,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 56,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 57,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 58,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 59,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 60,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 61,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 62,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 63,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 64,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 65,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 66,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 67,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 68,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 69,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 70,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 71,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 72,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 73,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 74,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 75,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 76,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 77,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 78,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 79,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 80,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 81,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 82,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 83,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 84,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 85,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 86,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 87,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 88,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 89,
+      "primitive": 0,
+      "material": 11,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 90,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 91,
+      "primitive": 0,
+      "material": 12,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 92,
+      "primitive": 0,
+      "material": 11,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 93,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 94,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 95,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 96,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 97,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 98,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 99,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 100,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 101,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 102,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 103,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 104,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 105,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 106,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 107,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 108,
+      "primitive": 0,
+      "material": 9,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 109,
+      "primitive": 0,
+      "material": 13,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 110,
+      "primitive": 0,
+      "material": 13,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 111,
+      "primitive": 0,
+      "material": 13,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 112,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 113,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 114,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 115,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 116,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 117,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 118,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 119,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 120,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 121,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 122,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 123,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 124,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 125,
+      "primitive": 0,
+      "material": 9,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 126,
+      "primitive": 0,
+      "material": 13,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 127,
+      "primitive": 0,
+      "material": 13,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 128,
+      "primitive": 0,
+      "material": 13,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 129,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 130,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 131,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 132,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    }
+  ],
+  "external_buffers": [],
+  "errors": [],
+  "warnings": [],
+  "error_count": 0,
+  "warning_count": 0,
+  "status": "PASS"
+}

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>R630 QA Viewer B — Three.js</title>
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.185.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.185.1/examples/jsm/"}}</script>
+  <style>
+    html,body,#stage{margin:0;width:100%;height:100%;overflow:hidden;background:#e3e7e9;font:14px system-ui;color:#17212b}
+    #stage{background-image:linear-gradient(45deg,#cbd0d4 25%,transparent 25%),linear-gradient(-45deg,#cbd0d4 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#cbd0d4 75%),linear-gradient(-45deg,transparent 75%,#cbd0d4 75%);background-size:32px 32px;background-position:0 0,0 16px,16px -16px,-16px 0}
+    canvas{display:block} #badge{position:fixed;left:18px;top:16px;padding:9px 12px;border-radius:8px;background:#ffffffdc;box-shadow:0 2px 12px #0002;z-index:3}#badge b{display:block}#status{color:#256b36}
+  </style>
+</head>
+<body>
+  <div id="stage"></div><div id="badge"><b>Viewer B · Three.js GLTFLoader</b><span id="status">loading…</span></div>
+  <script type="module">
+    import * as THREE from 'three';
+    import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+    const q=new URLSearchParams(location.search),variant=q.get('model')==='web'?'web':'standard',view=q.get('view')||'front';
+    const src=variant==='web'?'../../model/Dell-R630-2.5inch-web.glb':'../../model/Dell-R630-2.5inch.glb';
+    const dirs={front:[0,0,1],rear:[0,0,-1],left:[-1,0,0],right:[1,0,0],top:[0,1,0],bottom:[0,-1,0],
+      'front-left':[-1,.58,1],'front-right':[1,.58,1],'rear-left':[-1,.58,-1],'rear-right':[1,.58,-1]};
+    const stage=document.querySelector('#stage'),scene=new THREE.Scene();
+    const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true,preserveDrawingBuffer:true});
+    renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(innerWidth,innerHeight);renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.NoToneMapping;stage.appendChild(renderer.domElement);
+    scene.add(new THREE.HemisphereLight(0xffffff,0x75808a,2.0));const dl=new THREE.DirectionalLight(0xffffff,2.2);dl.position.set(2,3,4);scene.add(dl);
+    window.__QA__={viewer:'three-0.185.1-gltfloader',variant,view,src,loaded:false};
+    new GLTFLoader().load(src,gltf=>{
+      scene.add(gltf.scene);gltf.scene.updateMatrixWorld(true);
+      const box=new THREE.Box3().setFromObject(gltf.scene),center=box.getCenter(new THREE.Vector3()),size=box.getSize(new THREE.Vector3());
+      const d=new THREE.Vector3(...(dirs[view]||dirs.front)).normalize(),forward=d.clone().negate();
+      const up=(view==='top'||view==='bottom')?new THREE.Vector3(0,0,-1):new THREE.Vector3(0,1,0);
+      const right=new THREE.Vector3().crossVectors(forward,up).normalize();const trueUp=new THREE.Vector3().crossVectors(right,forward).normalize();
+      const corners=[];for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z])corners.push(new THREE.Vector3(x,y,z).sub(center));
+      const halfW=Math.max(...corners.map(c=>Math.abs(c.dot(right)))),halfH=Math.max(...corners.map(c=>Math.abs(c.dot(trueUp))));
+      const aspect=innerWidth/innerHeight,frustumH=Math.max(halfH*2,halfW*2/aspect)*1.13;
+      const camera=new THREE.OrthographicCamera(-frustumH*aspect/2,frustumH*aspect/2,frustumH/2,-frustumH/2,.01,10);
+      camera.up.copy(trueUp);camera.position.copy(center).addScaledVector(d,2);camera.lookAt(center);camera.updateProjectionMatrix();
+      const draw=()=>renderer.render(scene,camera);draw();requestAnimationFrame(()=>{draw();window.__QA__.loaded=true;window.__QA__.nodes=0;gltf.scene.traverse(()=>window.__QA__.nodes++);window.__QA__.bounds={min:box.min.toArray(),max:box.max.toArray(),size:size.toArray()};document.querySelector('#status').textContent=`loaded · ${variant} · ${view}`;});
+      addEventListener('resize',()=>{renderer.setSize(innerWidth,innerHeight);draw();});
+    },undefined,e=>{window.__QA__.error=String(e);document.querySelector('#status').textContent='ERROR';});
+  </script>
+</body>
+</html>

@@ -1,0 +1,574 @@
+{
+  "path": "Dell-R630-2.5inch/model/Dell-R630-2.5inch-web.glb",
+  "bytes": 1414904,
+  "sha256": "d7faa446aee8642b7a4b40cfe7f13467651915659bf8f652597a50cda098b1cc",
+  "meshCount": 133,
+  "materialAlpha": {
+    "materials": [
+      {
+        "index": 0,
+        "name": "front-source-locked",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": true,
+        "unlit": true
+      },
+      {
+        "index": 1,
+        "name": "rear-source-locked",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": true,
+        "unlit": true
+      },
+      {
+        "index": 2,
+        "name": "left-source-locked",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": true,
+        "unlit": true
+      },
+      {
+        "index": 3,
+        "name": "right-source-locked",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": true,
+        "unlit": true
+      },
+      {
+        "index": 4,
+        "name": "top-source-locked",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": true,
+        "unlit": true
+      },
+      {
+        "index": 5,
+        "name": "bottom-source-locked",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": true,
+        "unlit": true
+      },
+      {
+        "index": 6,
+        "name": "galvanized steel",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          0.56,
+          0.58,
+          0.58,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": false,
+        "unlit": false
+      },
+      {
+        "index": 7,
+        "name": "Dell black textured plastic",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          0.035,
+          0.038,
+          0.041,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": false,
+        "unlit": false
+      },
+      {
+        "index": 8,
+        "name": "recess black",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          0.006,
+          0.008,
+          0.009,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": false,
+        "unlit": false
+      },
+      {
+        "index": 9,
+        "name": "hot-swap orange",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          0.92,
+          0.2,
+          0.025,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": false,
+        "unlit": false
+      },
+      {
+        "index": 10,
+        "name": "activity green",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          0.1,
+          0.72,
+          0.16,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": false,
+        "unlit": false
+      },
+      {
+        "index": 11,
+        "name": "connector blue",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          0.04,
+          0.22,
+          0.78,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": false,
+        "unlit": false
+      },
+      {
+        "index": 12,
+        "name": "serial teal",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          0.1,
+          0.48,
+          0.48,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": false,
+        "unlit": false
+      },
+      {
+        "index": 13,
+        "name": "rigid PSU pull handle",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          0.67,
+          0.69,
+          0.68,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": false,
+        "unlit": false
+      }
+    ],
+    "violations": []
+  },
+  "negativeTransforms": [],
+  "duplicates": {
+    "sameFacingExact": [],
+    "reverseExact": []
+  },
+  "coplanar": {
+    "sameFacingOverlaps": [],
+    "exteriorSameFacingOverlaps": [],
+    "oppositeFacingContacts": [
+      {
+        "nodes": [
+          "closed chassis body",
+          "right recessed rail channel"
+        ],
+        "axis": 0,
+        "plane": 0.217,
+        "projectedContactArea": 0.007800000442005697
+      },
+      {
+        "nodes": [
+          "closed chassis body",
+          "left recessed rail channel"
+        ],
+        "axis": 0,
+        "plane": -0.217,
+        "projectedContactArea": 0.007800000442005697
+      },
+      {
+        "nodes": [
+          "closed chassis body",
+          "right upper folded rail lip"
+        ],
+        "axis": 0,
+        "plane": 0.217,
+        "projectedContactArea": 0.004140000664293764
+      },
+      {
+        "nodes": [
+          "closed chassis body",
+          "left upper folded rail lip"
+        ],
+        "axis": 0,
+        "plane": -0.217,
+        "projectedContactArea": 0.004140000664293764
+      },
+      {
+        "nodes": [
+          "EPP 1100W AC PSU 2 body",
+          "closed chassis body"
+        ],
+        "axis": 2,
+        "plane": -0.356,
+        "projectedContactArea": 0.003354000183105471
+      },
+      {
+        "nodes": [
+          "EPP 1100W AC PSU 1 body",
+          "closed chassis body"
+        ],
+        "axis": 2,
+        "plane": -0.356,
+        "projectedContactArea": 0.003353999965175984
+      },
+      {
+        "nodes": [
+          "closed chassis body",
+          "rear LP PCIe blanking assembly 1"
+        ],
+        "axis": 2,
+        "plane": -0.356,
+        "projectedContactArea": 0.0010540000656656875
+      },
+      {
+        "nodes": [
+          "closed chassis body",
+          "rear LP PCIe blanking assembly 3"
+        ],
+        "axis": 2,
+        "plane": -0.356,
+        "projectedContactArea": 0.0010539999390058227
+      },
+      {
+        "nodes": [
+          "closed chassis body",
+          "rear LP PCIe blanking assembly 2"
+        ],
+        "axis": 2,
+        "plane": -0.356,
+        "projectedContactArea": 0.0010539999390058227
+      },
+      {
+        "nodes": [
+          "closed chassis body",
+          "left front control strip body"
+        ],
+        "axis": 2,
+        "plane": 0.35565,
+        "projectedContactArea": 0.0006659997042417487
+      },
+      {
+        "nodes": [
+          "top DELL service hatch front frame",
+          "top canonical face"
+        ],
+        "axis": 1,
+        "plane": 0.0208,
+        "projectedContactArea": 0.00017952059708115087
+      },
+      {
+        "nodes": [
+          "top DELL service hatch rear frame",
+          "top canonical face"
+        ],
+        "axis": 1,
+        "plane": 0.0208,
+        "projectedContactArea": 0.0001795193811464646
+      },
+      {
+        "nodes": [
+          "top DELL service hatch left frame",
+          "top canonical face"
+        ],
+        "axis": 1,
+        "plane": 0.0208,
+        "projectedContactArea": 0.00016060057344446932
+      },
+      {
+        "nodes": [
+          "top DELL service hatch right frame",
+          "top canonical face"
+        ],
+        "axis": 1,
+        "plane": 0.0208,
+        "projectedContactArea": 0.00016060002955198271
+      },
+      {
+        "nodes": [
+          "top cover latch finger recess",
+          "top cover latch spine"
+        ],
+        "axis": 1,
+        "plane": 0.0214,
+        "projectedContactArea": 0.0001487785636893335
+      },
+      {
+        "nodes": [
+          "PSU 2 left frame",
+          "PSU 2 top frame"
+        ],
+        "axis": 1,
+        "plane": 0.018,
+        "projectedContactArea": 9.800018858641124e-07
+      },
+      {
+        "nodes": [
+          "PSU 2 bottom frame",
+          "PSU 2 left frame"
+        ],
+        "axis": 1,
+        "plane": -0.018,
+        "projectedContactArea": 9.800018858641124e-07
+      },
+      {
+        "nodes": [
+          "PSU 2 right frame",
+          "PSU 2 top frame"
+        ],
+        "axis": 1,
+        "plane": 0.018,
+        "projectedContactArea": 9.79996670480432e-07
+      },
+      {
+        "nodes": [
+          "PSU 2 bottom frame",
+          "PSU 2 right frame"
+        ],
+        "axis": 1,
+        "plane": -0.018,
+        "projectedContactArea": 9.79996670480432e-07
+      },
+      {
+        "nodes": [
+          "PSU 1 right frame",
+          "PSU 1 top frame"
+        ],
+        "axis": 1,
+        "plane": 0.018,
+        "projectedContactArea": 9.799953666345118e-07
+      },
+      {
+        "nodes": [
+          "PSU 1 bottom frame",
+          "PSU 1 right frame"
+        ],
+        "axis": 1,
+        "plane": -0.018,
+        "projectedContactArea": 9.799953666345118e-07
+      },
+      {
+        "nodes": [
+          "PSU 1 left frame",
+          "PSU 1 top frame"
+        ],
+        "axis": 1,
+        "plane": 0.018,
+        "projectedContactArea": 9.799914550967515e-07
+      },
+      {
+        "nodes": [
+          "PSU 1 bottom frame",
+          "PSU 1 left frame"
+        ],
+        "axis": 1,
+        "plane": -0.018,
+        "projectedContactArea": 9.799914550967515e-07
+      }
+    ]
+  },
+  "closedCore": {
+    "candidates": [
+      {
+        "node": "closed chassis body",
+        "watertight": true,
+        "windingConsistent": true,
+        "volume": 0.012724871387392927
+      }
+    ],
+    "errors": []
+  },
+  "openMeshes": [
+    "PSU 2 screw 1 1",
+    "PSU 2 screw 1 -1",
+    "PSU 2 screw -1 1",
+    "PSU 2 screw -1 -1",
+    "PSU 2 rigid handle grasp",
+    "PSU 2 rigid handle lower mount",
+    "PSU 2 rigid handle upper mount",
+    "PSU 2 orange release tab",
+    "PSU 2 IEC C14 right rim",
+    "PSU 2 IEC C14 left rim",
+    "PSU 2 IEC C14 bottom rim",
+    "PSU 2 IEC C14 top rim",
+    "PSU 2 right frame",
+    "PSU 2 left frame",
+    "PSU 2 bottom frame",
+    "PSU 2 top frame",
+    "EPP 1100W AC PSU 2 body",
+    "PSU 1 screw 1 1",
+    "PSU 1 screw 1 -1",
+    "PSU 1 screw -1 1",
+    "PSU 1 screw -1 -1",
+    "PSU 1 rigid handle grasp",
+    "PSU 1 rigid handle lower mount",
+    "PSU 1 rigid handle upper mount",
+    "PSU 1 orange release tab",
+    "PSU 1 IEC C14 right rim",
+    "PSU 1 IEC C14 left rim",
+    "PSU 1 IEC C14 bottom rim",
+    "PSU 1 IEC C14 top rim",
+    "PSU 1 right frame",
+    "PSU 1 left frame",
+    "PSU 1 bottom frame",
+    "PSU 1 top frame",
+    "EPP 1100W AC PSU 1 body",
+    "quad RJ45 NDC port 4 recess",
+    "quad RJ45 NDC port 3 recess",
+    "quad RJ45 NDC port 2 recess",
+    "quad RJ45 NDC port 1 recess",
+    "rear USB 3.0 port 2 recess",
+    "rear USB 3.0 port 1 recess",
+    "rear VGA HD15 recess",
+    "rear DB9 serial recess",
+    "rear iDRAC8 Enterprise RJ45 recess",
+    "rear system ID button",
+    "rear LP PCIe blanking assembly 3",
+    "rear LP PCIe blanking assembly 2",
+    "rear LP PCIe blanking assembly 1",
+    "top cover latch finger recess",
+    "top cover latch spine",
+    "top DELL service hatch rear frame",
+    "top DELL service hatch front frame",
+    "top DELL service hatch right frame",
+    "top DELL service hatch left frame",
+    "right rail mounting stud 4",
+    "right rail mounting stud 3",
+    "right rail mounting stud 2",
+    "right rail mounting stud 1",
+    "right upper folded rail lip",
+    "right recessed rail channel",
+    "left rail mounting stud 4",
+    "left rail mounting stud 3",
+    "left rail mounting stud 2",
+    "left rail mounting stud 1",
+    "left upper folded rail lip",
+    "left recessed rail channel",
+    "internal cooling fan 7 rotor",
+    "internal cooling fan 7 housing",
+    "internal cooling fan 6 rotor",
+    "internal cooling fan 6 housing",
+    "internal cooling fan 5 rotor",
+    "internal cooling fan 5 housing",
+    "internal cooling fan 4 rotor",
+    "internal cooling fan 4 housing",
+    "internal cooling fan 3 rotor",
+    "internal cooling fan 3 housing",
+    "internal cooling fan 2 rotor",
+    "internal cooling fan 2 housing",
+    "internal cooling fan 1 rotor",
+    "internal cooling fan 1 housing",
+    "iDRAC Direct micro USB recess",
+    "front control button 3",
+    "front control button 2",
+    "front control button 1",
+    "left front control strip body",
+    "carrier 9 activity LED",
+    "carrier 9 orange release",
+    "carrier 9 pull handle",
+    "SFF carrier 9",
+    "carrier 8 activity LED",
+    "carrier 8 orange release",
+    "carrier 8 pull handle",
+    "SFF carrier 8",
+    "carrier 7 activity LED",
+    "carrier 7 orange release",
+    "carrier 7 pull handle",
+    "SFF carrier 7",
+    "carrier 6 activity LED",
+    "carrier 6 orange release",
+    "carrier 6 pull handle",
+    "SFF carrier 6",
+    "carrier 5 activity LED",
+    "carrier 5 orange release",
+    "carrier 5 pull handle",
+    "SFF carrier 5",
+    "carrier 4 activity LED",
+    "carrier 4 orange release",
+    "carrier 4 pull handle",
+    "SFF carrier 4",
+    "carrier 3 activity LED",
+    "carrier 3 orange release",
+    "carrier 3 pull handle",
+    "SFF carrier 3",
+    "carrier 2 activity LED",
+    "carrier 2 orange release",
+    "carrier 2 pull handle",
+    "SFF carrier 2",
+    "carrier 1 activity LED",
+    "carrier 1 orange release",
+    "carrier 1 pull handle",
+    "SFF carrier 1",
+    "carrier 0 activity LED",
+    "carrier 0 orange release",
+    "carrier 0 pull handle",
+    "SFF carrier 0",
+    "front right wing housing",
+    "front left wing housing",
+    "bottom fallback canonical face",
+    "top canonical face",
+    "physical right canonical face",
+    "physical left canonical face",
+    "rear canonical face",
+    "front canonical face",
+    "closed chassis body"
+  ],
+  "errors": [],
+  "errorCount": 0,
+  "status": "PASS"
+}

@@ -1,0 +1,30 @@
+face,component,count,rows,columns,left_to_right_order,relative_size,position,depth_or_relief,color_material,source_url,confidence
+front,front mounting wing housings,2,1,2,"left control wing; right badge wing",full-height narrow,"outer ends",separate front-protruding geometry,"black textured plastic",source/config-lock/row-3-r630-2.5inch.png,verified
+front,SFF carrier assemblies,10,2,5,"bay pairs 0/1 2/3 4/5 6/7 8/9",equal,"between control strip and right wing",separate recessed bays plus projecting handles,"black plastic with metal inserts orange release circles and green activity indicators",source/pdf-pages/technical-guide-page-01.png,verified
+front,carrier pull handles,10,2,5,"one per carrier",carrier width,"carrier fronts",projecting separate geometry,"black plastic",source/third-party/techmikeny-10bay-front.jpg,verified
+front,left control strip,1,1,1,"Dell/PowerEdge marking; power/health/ID/NMI controls; micro-USB iDRAC Direct",narrow vertical,"inside left wing",recessed panel with raised controls,"black plastic; white OEM text; small green/blue indicators",source/pdf-pages/technical-guide-page-01.png,verified
+front,right Intel badge,1,1,1,"Intel Xeon badge",small,"lower right wing",flush label relief,"blue/silver label on black plastic",source/third-party/techmikeny-10bay-front.jpg,verified
+front,bezel,0,0,0,"absent",none,"front",none,none,source/config-lock/row-3-r630-2.5inch.png,verified
+rear,LP PCIe blanking plates,3,1,3,"riser 1; riser 2; riser 3",equal,"upper left/middle half in rear view",recessed perforated metal plates with border and fastener relief,"galvanized metal with dark slot apertures",source/pdf-pages/owners-manual-page-06.png,verified
+rear,system ID button and connector group,1,1,1,"ID button; status connector",small,"rear far left lower group",small circular/recessed geometry,"metal/black/blue",source/pdf-pages/owners-manual-page-06.png,verified
+rear,iDRAC8 Enterprise RJ45,1,1,1,"after ID group",RJ45,"lower I/O row",recessed connector geometry,"black RJ45 in galvanized plate",source/pdf-pages/owners-manual-page-06.png,verified
+rear,DB9 serial,1,1,1,"after iDRAC",DB9,"lower I/O row",recessed D-shell with pin relief,"teal/metal",source/pdf-pages/technical-guide-page-02.png,verified
+rear,VGA,1,1,1,"after serial",HD15,"lower I/O row",recessed D-shell with pin relief,"blue/metal",source/pdf-pages/technical-guide-page-02.png,verified
+rear,USB 3.0 ports,2,2,1,"stacked vertical",USB-A,"lower I/O row after VGA",recessed connector geometry,"black",source/pdf-pages/owners-manual-page-06.png,verified
+rear,quad RJ45 NDC ports,4,1,4,"port 1; port 2; port 3; port 4",equal,"lower center before PSUs",four independent recessed connectors with latch cavities and LED insets,"black/metal with green indicator detail",source/config-lock/row-3-r630-2.5inch.png,verified
+rear,AC PSU modules,2,1,2,"PSU1; PSU2",equal,"rear right half",separate hot-plug blocks projecting to rear,"galvanized metal black inlet/fan orange latch clear-metal handle",source/third-party/oneclickservers-r630-rear.png,verified
+rear,IEC AC inlets,2,1,2,"one per PSU",large,"left side of each PSU face",deep recessed C14 geometry,"black",source/third-party/oneclickservers-r630-rear.png,verified
+rear,PSU release tabs,2,1,2,"one per PSU",small,"beside inlet",projecting paddle,"orange plastic",source/third-party/ebay-257483086393-16.webp,verified
+rear,PSU rear fans,2,1,2,"one per PSU",large circular,"right side of each PSU face",recessed circular fan cavity with blades and guard,"black fan silver guard Dell EPP hub",source/third-party/ebay-257483086393-16.webp,verified
+rear,PSU pull handles,2,1,2,"one per PSU",medium,"crossing lower fan/inlet region",separate protruding loop geometry,"translucent/silver molded handle",source/third-party/ebay-257483086393-16.webp,verified
+left,side wall and rail channel,1,1,1,"independent left profile",full depth,"body left",folded sheet-metal step; no vents,"galvanized steel with real grain",source/third-party/ebay-257483086393-7.webp,verified
+left,rail mounting studs,4,1,4,"front to rear as photographed",small,"lower/mid left wall",projecting round studs,"galvanized metal",source/third-party/ebay-257483086393-7.webp,verified
+right,side wall and rail channel,1,1,1,"independent right profile",full depth,"body right",folded sheet-metal step; no vents,"galvanized steel with real grain",source/third-party/ebay-257483086393-8.webp,verified
+right,rail mounting studs,4,1,4,"front to rear as photographed",small,"lower/mid right wall",projecting round studs with independent placement,"galvanized metal",source/third-party/ebay-257483086393-8.webp,verified
+top,removable cover,1,1,1,"front edge to rear edge",full body,"top",thin raised removable panel with edge folds,"galvanized steel with scratches and stamped grain",source/third-party/ebay-257483086393-10.webp,verified
+top,front perforation band,1,1,1,"continuous with segmented density",wide narrow band,"near front edge",verified perforation relief/openings,"dark holes in galvanized cover",source/third-party/ebay-257483086393-10.webp,verified
+top,rear L-shaped vent field,1,1,1,"asymmetric L field",medium,"rear portion",verified perforation relief/openings,"dark holes in galvanized cover",source/third-party/ebay-257483086393-10.webp,verified
+top,cover latch,1,1,1,"single latch",medium,"front half offset",raised hinged geometry with circular recess,"dark gray metal/plastic",source/third-party/ebay-257483086393-10.webp,verified
+top,Dell embossed service hatch,1,1,1,"square hatch",medium,"front-left area in locked top orientation",shallow stamped plate,"galvanized metal with black warning label",source/third-party/ebay-257483086393-10.webp,verified
+top,factory configuration label group,1,1,1,"configuration/layout and safety panels",large,"front area opposite service hatch",flush texture only,"white/black/orange factory print",source/third-party/ebay-257483086393-10.webp,verified
+bottom,conservative fallback plate,1,1,1,"none",full body,"bottom",closed opaque sheet preserving only side-proven folded edge silhouette,"galvanized steel",source/bottom-search-log.md,bottom-fallback

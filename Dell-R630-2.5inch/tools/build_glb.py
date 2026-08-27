@@ -208,6 +208,12 @@ class GLBBuilder:
             for k in range(segments):
                 a, b = ring[k], ring[(k + 1) % segments]
                 idx.extend([center, b, a] if sign < 0 else [center, a, b])
+        # Mapping local (u,v,w) to world (x,w,v) for a Y-axis cylinder is an
+        # odd permutation and reverses handedness. Restore outward winding for
+        # every triangle while retaining the explicitly transformed normals.
+        if axis == "y":
+            for offset in range(0, len(idx), 3):
+                idx[offset + 1], idx[offset + 2] = idx[offset + 2], idx[offset + 1]
         self.primitive(name, pos, nor, uv, idx, material)
 
     def card(self, name: str, face: str, center: Sequence[float], size: Sequence[float], material: int, uv_rect=(0, 0, 1, 1)) -> None:
@@ -297,8 +303,8 @@ def build(profile: str, output: Path) -> dict:
     g.box("closed chassis body", (0, 0, (z_front_body + z_rear_body) / 2), (x_body, y_h - 0.0016, z_front_body - z_rear_body), metal)
 
     # Six independent source-locked faces. Cards are slightly proud of the closed shell.
-    g.card("front canonical face", "front", (0, 0, zh - 0.0010), (x_overall, y_h), face_mat["front"])
-    g.card("rear canonical face", "rear", (0, 0, -zh + 0.0010), (x_body, y_h), face_mat["rear"])
+    g.card("front canonical face", "front", (0, 0, zh - 0.00050), (x_overall, y_h), face_mat["front"])
+    g.card("rear canonical face", "rear", (0, 0, -zh + 0.00055), (x_body, y_h), face_mat["rear"])
     g.card("physical left canonical face", "left", (-xh - 0.00025, 0, 0), (z_overall, y_h), face_mat["left"])
     g.card("physical right canonical face", "right", (xh + 0.00025, 0, 0), (z_overall, y_h), face_mat["right"])
     top_depth = z_front_body - (-zh + 0.0007)
@@ -312,7 +318,7 @@ def build(profile: str, output: Path) -> dict:
         # Keep the solid wing depth behind the canonical front photograph so it
         # supplies real quarter-view parallax without hiding the left controls or
         # the source-locked right Intel badge.
-        g.box(f"front {side} wing housing", (sx * (xh + ear_w / 2), 0, z_front_body + 0.0082), (ear_w, y_h, 0.018), dark)
+        g.box(f"front {side} wing housing", (sx * (xh + ear_w / 2), 0, zh - 0.0090), (ear_w, y_h, 0.018), dark)
 
     # Ten real 2.5-inch carriers, two rows by five columns, with separate handles/releases/LEDs.
     col_centres = [-0.1472, -0.0736, 0.0, 0.0736, 0.1472]
@@ -321,15 +327,21 @@ def build(profile: str, output: Path) -> dict:
         for row, y in enumerate(row_centres):
             bay = col * 2 + row
             g.box(f"SFF carrier {bay}", (x, y, z_front_body + 0.0084), (0.0686, 0.0182, 0.0166), dark)
-            g.box(f"carrier {bay} pull handle", (x + 0.0300, y, zh - 0.0008), (0.0040, 0.0120, 0.0016), dark)
-            g.cylinder(f"carrier {bay} orange release", (x - 0.0260, y + 0.0042, zh - 0.0004), 0.0015, 0.0008, "z", orange, 16)
-            g.box(f"carrier {bay} activity LED", (x - 0.0260, y - 0.0045, zh - 0.00025), (0.0009, 0.0025, 0.0005), green)
+            g.box(f"carrier {bay} pull handle", (x + 0.0300, y, zh - 0.00012), (0.0040, 0.0120, 0.00020), dark)
+            g.cylinder(f"carrier {bay} orange release", (x - 0.0260, y + 0.0042, zh - 0.00008), 0.0015, 0.00012, "z", orange, 16)
+            g.box(f"carrier {bay} activity LED", (x - 0.0260, y - 0.0045, zh - 0.00006), (0.0009, 0.0025, 0.00010), green)
 
     # Front control strip relief without covering the source-locked DELL/PowerEdge printing.
     g.box("left front control strip body", (-0.202, 0, z_front_body + 0.0065), (0.018, 0.037, 0.013), dark)
     for j, yy in enumerate((0.009, 0.002, -0.005)):
-        g.cylinder(f"front control button {j+1}", (-0.202, yy, zh - 0.00035), 0.0018, 0.0007, "z", black, 14)
-    g.box("iDRAC Direct micro USB recess", (-0.202, -0.014, zh - 0.0004), (0.005, 0.005, 0.0008), black)
+        g.cylinder(f"front control button {j+1}", (-0.202, yy, zh - 0.00008), 0.0018, 0.00012, "z", black, 14)
+    g.box("iDRAC Direct micro USB recess", (-0.202, -0.014, zh - 0.00010), (0.005, 0.005, 0.00014), black)
+
+    # Seven source-verified internal hot-swap cooling fans. They remain under
+    # the opaque installed cover but are explicit configuration nodes.
+    for j, x in enumerate((-0.150, -0.100, -0.050, 0.0, 0.050, 0.100, 0.150), 1):
+        g.box(f"internal cooling fan {j} housing", (x, 0, 0.245), (0.043, 0.033, 0.052), black)
+        g.cylinder(f"internal cooling fan {j} rotor", (x, 0, 0.245), 0.015, 0.018, "z", metal, 20)
 
     # Side rail channels and independent stud layouts.
     for side, sx, zs in (
@@ -346,10 +358,12 @@ def build(profile: str, output: Path) -> dict:
     hatch_x, hatch_z, hatch_w, hatch_d = -0.134, 0.273, 0.086, 0.073
     g.box("top DELL service hatch left frame", (hatch_x - hatch_w / 2, yh - 0.0003, hatch_z), (0.0022, 0.0006, hatch_d), metal)
     g.box("top DELL service hatch right frame", (hatch_x + hatch_w / 2, yh - 0.0003, hatch_z), (0.0022, 0.0006, hatch_d), metal)
-    g.box("top DELL service hatch front frame", (hatch_x, yh - 0.0003, hatch_z + hatch_d / 2), (hatch_w, 0.0006, 0.0022), metal)
-    g.box("top DELL service hatch rear frame", (hatch_x, yh - 0.0003, hatch_z - hatch_d / 2), (hatch_w, 0.0006, 0.0022), metal)
+    # Horizontal rails terminate between the vertical rails instead of
+    # overlapping their top faces at all four corners.
+    g.box("top DELL service hatch front frame", (hatch_x, yh - 0.0003, hatch_z + hatch_d / 2), (hatch_w - 0.0044, 0.0006, 0.0022), metal)
+    g.box("top DELL service hatch rear frame", (hatch_x, yh - 0.0003, hatch_z - hatch_d / 2), (hatch_w - 0.0044, 0.0006, 0.0022), metal)
     g.box("top cover latch spine", (0.071, yh - 0.0014, 0.164), (0.015, 0.0028, 0.052), dark)
-    g.cylinder("top cover latch finger recess", (0.071, yh - 0.0010, 0.188), 0.0080, 0.0020, "y", dark, 22)
+    g.cylinder("top cover latch finger recess", (0.071, yh - 0.0010, 0.188), 0.0080, 0.0012, "y", dark, 22)
 
     # Rear three-riser blocks.
     for j, x in enumerate((0.171, 0.101, 0.031), 1):
@@ -376,7 +390,7 @@ def build(profile: str, output: Path) -> dict:
         # perimeter rails provide real separation/parallax without painting over
         # the exact C14, fan guard, EPP 1100W hub label or factory screw detail.
         g.box(f"EPP 1100W AC PSU {j} body", (x, 0, z_rear_body - 0.008), (0.086, 0.039, 0.016), metal)
-        zf = -zh + 0.00050
+        zf = -zh + 0.00035
         g.box(f"PSU {j} top frame", (x, 0.0187, zf), (0.086, 0.0014, 0.0007), metal)
         g.box(f"PSU {j} bottom frame", (x, -0.0187, zf), (0.086, 0.0014, 0.0007), metal)
         g.box(f"PSU {j} left frame", (x - 0.0423, 0, zf), (0.0014, 0.036, 0.0007), metal)
@@ -385,17 +399,17 @@ def build(profile: str, output: Path) -> dict:
         # C14 is recessed in the locked texture; a narrow four-sided rim supplies
         # relief while leaving the real inlet interior visible.
         ix, iy, iw, ih, rim = x + 0.022, -0.001, 0.024, 0.024, 0.0012
-        g.box(f"PSU {j} IEC C14 top rim", (ix, iy + ih / 2, zf - 0.0001), (iw, rim, 0.0007), black)
-        g.box(f"PSU {j} IEC C14 bottom rim", (ix, iy - ih / 2, zf - 0.0001), (iw, rim, 0.0007), black)
+        g.box(f"PSU {j} IEC C14 top rim", (ix, iy + ih / 2, zf - 0.0001), (iw - 2 * rim, rim, 0.0007), black)
+        g.box(f"PSU {j} IEC C14 bottom rim", (ix, iy - ih / 2, zf - 0.0001), (iw - 2 * rim, rim, 0.0007), black)
         g.box(f"PSU {j} IEC C14 left rim", (ix - iw / 2, iy, zf - 0.0001), (rim, ih, 0.0007), black)
         g.box(f"PSU {j} IEC C14 right rim", (ix + iw / 2, iy, zf - 0.0001), (rim, ih, 0.0007), black)
-        g.box(f"PSU {j} orange release tab", (x + 0.035, 0.001, zf - 0.0001), (0.0045, 0.018, 0.0007), orange)
+        g.box(f"PSU {j} orange release tab", (x + 0.039, 0.001, zf - 0.0001), (0.0040, 0.018, 0.0007), orange)
 
         # Rigid molded pull handle only—no black fabric retention strap. Keep the
         # members narrow so the source-locked fan guard and EPP hub remain legible.
         g.box(f"PSU {j} rigid handle upper mount", (x + 0.002, 0.0148, zf - 0.0001), (0.016, 0.0024, 0.0007), handle)
         g.box(f"PSU {j} rigid handle lower mount", (x + 0.002, -0.0148, zf - 0.0001), (0.016, 0.0024, 0.0007), handle)
-        g.box(f"PSU {j} rigid handle grasp", (x - 0.006, 0, zf - 0.0001), (0.0026, 0.0296, 0.0007), handle)
+        g.box(f"PSU {j} rigid handle grasp", (x - 0.006, 0, zf - 0.0001), (0.0026, 0.0270, 0.0007), handle)
         for sx in (-1, 1):
             for sy in (-1, 1):
                 g.cylinder(f"PSU {j} screw {sx} {sy}", (x + sx * 0.036, sy * 0.016, zf - 0.00015), 0.0012, 0.0005, "z", metal, 12)

@@ -1,0 +1,30 @@
+face,component,expectedCount,standardObserved,webObserved,mode,status,confidence
+front,front mounting wing housings,2,2,2,NODE_REGEX:^front (left|right) wing housing$,PASS,verified
+front,SFF carrier assemblies,10,10,10,NODE_REGEX:^SFF carrier \d+$,PASS,verified
+front,carrier pull handles,10,10,10,NODE_REGEX:^carrier \d+ pull handle$,PASS,verified
+front,left control strip,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:front canonical face,PASS,verified
+front,right Intel badge,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:front canonical face,PASS,verified
+front,bezel,0,0,0,REQUIRED_ABSENCE_PLUS_RENDER_REVIEW,PASS,verified
+rear,LP PCIe blanking plates,3,3,3,NODE_REGEX:^rear LP PCIe blanking assembly \d$,PASS,verified
+rear,system ID button and connector group,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:rear canonical face,PASS,verified
+rear,iDRAC8 Enterprise RJ45,1,1,1,NODE_REGEX:^rear iDRAC8 Enterprise RJ45 recess$,PASS,verified
+rear,DB9 serial,1,1,1,NODE_REGEX:^rear DB9 serial recess$,PASS,verified
+rear,VGA,1,1,1,NODE_REGEX:^rear VGA HD15 recess$,PASS,verified
+rear,USB 3.0 ports,2,2,2,NODE_REGEX:^rear USB 3.0 port \d recess$,PASS,verified
+rear,quad RJ45 NDC ports,4,4,4,NODE_REGEX:^quad RJ45 NDC port \d recess$,PASS,verified
+rear,AC PSU modules,2,2,2,NODE_REGEX:^EPP 1100W AC PSU \d body$,PASS,verified
+rear,IEC AC inlets,2,2,2,NODE_REGEX:^PSU \d IEC C14 top rim$,PASS,verified
+rear,PSU release tabs,2,2,2,NODE_REGEX:^PSU \d orange release tab$,PASS,verified
+rear,PSU rear fans,2,2,2,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:rear canonical face,PASS,verified
+rear,PSU pull handles,2,2,2,NODE_REGEX:^PSU \d rigid handle grasp$,PASS,verified
+left,side wall and rail channel,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:physical left canonical face,PASS,verified
+left,rail mounting studs,4,4,4,NODE_REGEX:^left rail mounting stud \d$,PASS,verified
+right,side wall and rail channel,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:physical right canonical face,PASS,verified
+right,rail mounting studs,4,4,4,NODE_REGEX:^right rail mounting stud \d$,PASS,verified
+top,removable cover,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:top canonical face,PASS,verified
+top,front perforation band,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:top canonical face,PASS,verified
+top,rear L-shaped vent field,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:top canonical face,PASS,verified
+top,cover latch,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:top canonical face,PASS,verified
+top,Dell embossed service hatch,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:top canonical face,PASS,verified
+top,factory configuration label group,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:top canonical face,PASS,verified
+bottom,conservative fallback plate,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:bottom fallback canonical face,PASS,bottom-fallback

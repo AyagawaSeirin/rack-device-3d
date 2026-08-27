@@ -1,0 +1,170 @@
+{
+  "status": "PASS_WITH_BOTTOM_FALLBACK",
+  "errors": [],
+  "identity": "VERIFIED",
+  "fallback": {
+    "face": "bottom",
+    "mode": "GENERIC_BOTTOM_FALLBACK",
+    "reason": "No usable exact underside image after documented exhaustive search."
+  },
+  "models": {
+    "standard": {
+      "path": "model/Dell-R630-2.5inch.glb",
+      "bytes": 5038912,
+      "sha256": "7645e39ef922b86174f68b3ee36e1d5b40a34d104d58d3e2d1881d3e27587194",
+      "nodes": 119,
+      "meshes": 119,
+      "embedded_images": 6,
+      "dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "audit": "PASS"
+    },
+    "web": {
+      "path": "model/Dell-R630-2.5inch-web.glb",
+      "bytes": 1366752,
+      "sha256": "c6e68df3a4a4def8ae9db1f3773d802b445614e84933f2de454c6bb230f87214",
+      "nodes": 119,
+      "meshes": 119,
+      "embedded_images": 6,
+      "dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "audit": "PASS"
+    }
+  },
+  "standard_web_geometry_sha256": {
+    "standard": "6da4a6044103554c65f96560721882fc3f0595c267c26a540d70e451cd6c0f9d",
+    "web": "6da4a6044103554c65f96560721882fc3f0595c267c26a540d70e451cd6c0f9d"
+  },
+  "standard_web_same_geometry": true,
+  "standard_web_render_differences": [
+    {
+      "viewer": "A",
+      "view": "front",
+      "mean_absolute_rgb_difference_0_to_255": 0.195765
+    },
+    {
+      "viewer": "A",
+      "view": "rear",
+      "mean_absolute_rgb_difference_0_to_255": 0.182683
+    },
+    {
+      "viewer": "A",
+      "view": "left",
+      "mean_absolute_rgb_difference_0_to_255": 0.097072
+    },
+    {
+      "viewer": "A",
+      "view": "right",
+      "mean_absolute_rgb_difference_0_to_255": 0.098682
+    },
+    {
+      "viewer": "A",
+      "view": "top",
+      "mean_absolute_rgb_difference_0_to_255": 0.480453
+    },
+    {
+      "viewer": "A",
+      "view": "bottom",
+      "mean_absolute_rgb_difference_0_to_255": 0.28644
+    },
+    {
+      "viewer": "A",
+      "view": "front-left",
+      "mean_absolute_rgb_difference_0_to_255": 0.2442
+    },
+    {
+      "viewer": "A",
+      "view": "front-right",
+      "mean_absolute_rgb_difference_0_to_255": 0.273006
+    },
+    {
+      "viewer": "A",
+      "view": "rear-left",
+      "mean_absolute_rgb_difference_0_to_255": 0.227201
+    },
+    {
+      "viewer": "A",
+      "view": "rear-right",
+      "mean_absolute_rgb_difference_0_to_255": 0.242704
+    },
+    {
+      "viewer": "B",
+      "view": "front",
+      "mean_absolute_rgb_difference_0_to_255": 0.152687
+    },
+    {
+      "viewer": "B",
+      "view": "rear",
+      "mean_absolute_rgb_difference_0_to_255": 0.141667
+    },
+    {
+      "viewer": "B",
+      "view": "left",
+      "mean_absolute_rgb_difference_0_to_255": 0.076442
+    },
+    {
+      "viewer": "B",
+      "view": "right",
+      "mean_absolute_rgb_difference_0_to_255": 0.082144
+    },
+    {
+      "viewer": "B",
+      "view": "top",
+      "mean_absolute_rgb_difference_0_to_255": 0.503062
+    },
+    {
+      "viewer": "B",
+      "view": "bottom",
+      "mean_absolute_rgb_difference_0_to_255": 0.293287
+    },
+    {
+      "viewer": "B",
+      "view": "front-left",
+      "mean_absolute_rgb_difference_0_to_255": 0.464351
+    },
+    {
+      "viewer": "B",
+      "view": "front-right",
+      "mean_absolute_rgb_difference_0_to_255": 0.468254
+    },
+    {
+      "viewer": "B",
+      "view": "rear-left",
+      "mean_absolute_rgb_difference_0_to_255": 0.452883
+    },
+    {
+      "viewer": "B",
+      "view": "rear-right",
+      "mean_absolute_rgb_difference_0_to_255": 0.459162
+    }
+  ],
+  "views_audit": {
+    "status": "PASS",
+    "errors": 0,
+    "warnings": 5,
+    "warning_disposition": "Five warnings are edge-only antialias/true-hole diagnostics; every face has 0% transparent core pixels."
+  },
+  "lineage": {
+    "face_source_locks": 6,
+    "inspected_source_rasters": 44,
+    "imagegen_faces": 6,
+    "visible_feature_rows": 29,
+    "visible_feature_gates_passed": 29
+  },
+  "webgl": {
+    "expected": 40,
+    "rows": 40,
+    "loaded_true": 40,
+    "console_errors": 0,
+    "fresh_screenshots": 40
+  },
+  "comparisons_present": 13,
+  "official_exact_3d": "NOT_FOUND_AFTER_EXHAUSTIVE_SEARCH",
+  "official_backup_directory": "source/optional-3d/"
+}

@@ -1,0 +1,985 @@
+{
+  "generated_utc": "2026-08-23T18:54:11.595634+00:00",
+  "method": "Real Chromium loads through two independent WebGL paths. Each screenshot was written only after window.__QA__.loaded===true; final batch listeners returned zero page/console errors.",
+  "expected_views": [
+    "front",
+    "rear",
+    "left",
+    "right",
+    "top",
+    "bottom",
+    "front-left",
+    "front-right",
+    "rear-left",
+    "rear-right"
+  ],
+  "summary": {
+    "expected": 40,
+    "rows": 40,
+    "loaded_true": 40,
+    "console_errors": 0,
+    "fresh_screenshots": 40
+  },
+  "rows": [
+    {
+      "viewer": "A",
+      "engine": "model-viewer-4.3.1",
+      "variant": "standard",
+      "view": "front",
+      "class": "orthographic",
+      "glb": "model/Dell-R630-2.5inch.glb",
+      "glb_sha256": "7645e39ef922b86174f68b3ee36e1d5b40a34d104d58d3e2d1881d3e27587194",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": null,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-a-standard-front.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "d4ceb155fd0711685e00596e08689d5c916a8b7b64164f773479d3a3fe39fb26",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "A",
+      "engine": "model-viewer-4.3.1",
+      "variant": "standard",
+      "view": "rear",
+      "class": "orthographic",
+      "glb": "model/Dell-R630-2.5inch.glb",
+      "glb_sha256": "7645e39ef922b86174f68b3ee36e1d5b40a34d104d58d3e2d1881d3e27587194",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": null,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-a-standard-rear.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "af7928bc374c20cb344d0209765f4ad79523fed97118d37c874f660d30dbba58",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "A",
+      "engine": "model-viewer-4.3.1",
+      "variant": "standard",
+      "view": "left",
+      "class": "orthographic",
+      "glb": "model/Dell-R630-2.5inch.glb",
+      "glb_sha256": "7645e39ef922b86174f68b3ee36e1d5b40a34d104d58d3e2d1881d3e27587194",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": null,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-a-standard-left.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "10dd0c178b1443f69865d05d230aa924630e8d3b4cd254f039e4153a21a32083",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "A",
+      "engine": "model-viewer-4.3.1",
+      "variant": "standard",
+      "view": "right",
+      "class": "orthographic",
+      "glb": "model/Dell-R630-2.5inch.glb",
+      "glb_sha256": "7645e39ef922b86174f68b3ee36e1d5b40a34d104d58d3e2d1881d3e27587194",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": null,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-a-standard-right.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "8d591623d70c03e6584a54d9dc9a152158c44100cf37b3627079741a40d585dc",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "A",
+      "engine": "model-viewer-4.3.1",
+      "variant": "standard",
+      "view": "top",
+      "class": "orthographic",
+      "glb": "model/Dell-R630-2.5inch.glb",
+      "glb_sha256": "7645e39ef922b86174f68b3ee36e1d5b40a34d104d58d3e2d1881d3e27587194",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": null,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-a-standard-top.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "39549fe1275c828029d59aa4156f2a8c3257c0b542ba19606d942b2b1d870651",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "A",
+      "engine": "model-viewer-4.3.1",
+      "variant": "standard",
+      "view": "bottom",
+      "class": "orthographic",
+      "glb": "model/Dell-R630-2.5inch.glb",
+      "glb_sha256": "7645e39ef922b86174f68b3ee36e1d5b40a34d104d58d3e2d1881d3e27587194",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": null,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-a-standard-bottom.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "76883b5fe68c054817cdbd285cf9a41907562828c68c933bc05e331099d02a71",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "A",
+      "engine": "model-viewer-4.3.1",
+      "variant": "standard",
+      "view": "front-left",
+      "class": "three-quarter",
+      "glb": "model/Dell-R630-2.5inch.glb",
+      "glb_sha256": "7645e39ef922b86174f68b3ee36e1d5b40a34d104d58d3e2d1881d3e27587194",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": null,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-a-standard-front-left.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "fc24828a5233a8bc47e8493e5f94fd82e40c3c11a03e1d3406ed6bcffe011eee",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "A",
+      "engine": "model-viewer-4.3.1",
+      "variant": "standard",
+      "view": "front-right",
+      "class": "three-quarter",
+      "glb": "model/Dell-R630-2.5inch.glb",
+      "glb_sha256": "7645e39ef922b86174f68b3ee36e1d5b40a34d104d58d3e2d1881d3e27587194",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": null,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-a-standard-front-right.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "add911cc465e3e14ccfb854b80b7e9c4242d01fa17a136bbd65152585ae8f619",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "A",
+      "engine": "model-viewer-4.3.1",
+      "variant": "standard",
+      "view": "rear-left",
+      "class": "three-quarter",
+      "glb": "model/Dell-R630-2.5inch.glb",
+      "glb_sha256": "7645e39ef922b86174f68b3ee36e1d5b40a34d104d58d3e2d1881d3e27587194",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": null,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-a-standard-rear-left.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "c9fe942ca5c787ce9fb5dc6a73f9667ecfd0a0565825c02c931946dabf6f54d9",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "A",
+      "engine": "model-viewer-4.3.1",
+      "variant": "standard",
+      "view": "rear-right",
+      "class": "three-quarter",
+      "glb": "model/Dell-R630-2.5inch.glb",
+      "glb_sha256": "7645e39ef922b86174f68b3ee36e1d5b40a34d104d58d3e2d1881d3e27587194",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": null,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-a-standard-rear-right.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "82c0e95d9ab986196104cce181e13c93ea4c0e8de9c1a047e0b645574f916dd9",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "A",
+      "engine": "model-viewer-4.3.1",
+      "variant": "web",
+      "view": "front",
+      "class": "orthographic",
+      "glb": "model/Dell-R630-2.5inch-web.glb",
+      "glb_sha256": "c6e68df3a4a4def8ae9db1f3773d802b445614e84933f2de454c6bb230f87214",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": null,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-a-web-front.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "b20b80da58c0e27d8ffb74be771cdac2fee33c8a8dbebc60ffa809c29921b2ae",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "A",
+      "engine": "model-viewer-4.3.1",
+      "variant": "web",
+      "view": "rear",
+      "class": "orthographic",
+      "glb": "model/Dell-R630-2.5inch-web.glb",
+      "glb_sha256": "c6e68df3a4a4def8ae9db1f3773d802b445614e84933f2de454c6bb230f87214",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": null,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-a-web-rear.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "1976bfe62fbebfc5b7fccd6d9fb8d83e0540a32ecc63f38a916a647077d3ad4d",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "A",
+      "engine": "model-viewer-4.3.1",
+      "variant": "web",
+      "view": "left",
+      "class": "orthographic",
+      "glb": "model/Dell-R630-2.5inch-web.glb",
+      "glb_sha256": "c6e68df3a4a4def8ae9db1f3773d802b445614e84933f2de454c6bb230f87214",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": null,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-a-web-left.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "b43dfccb512dfafb0fda1a8aad47569ab1372256b1fff972bcb68940623a2eb3",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "A",
+      "engine": "model-viewer-4.3.1",
+      "variant": "web",
+      "view": "right",
+      "class": "orthographic",
+      "glb": "model/Dell-R630-2.5inch-web.glb",
+      "glb_sha256": "c6e68df3a4a4def8ae9db1f3773d802b445614e84933f2de454c6bb230f87214",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": null,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-a-web-right.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "6b3b1219e0467cb3fbe6d0cffa8583773cade9d0c726753b9489f3cd2c2482f6",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "A",
+      "engine": "model-viewer-4.3.1",
+      "variant": "web",
+      "view": "top",
+      "class": "orthographic",
+      "glb": "model/Dell-R630-2.5inch-web.glb",
+      "glb_sha256": "c6e68df3a4a4def8ae9db1f3773d802b445614e84933f2de454c6bb230f87214",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": null,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-a-web-top.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "8f31db653aa8bbd97dbae6aa17070d9aa7e3ec6e9e523c68c24415c60f420811",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "A",
+      "engine": "model-viewer-4.3.1",
+      "variant": "web",
+      "view": "bottom",
+      "class": "orthographic",
+      "glb": "model/Dell-R630-2.5inch-web.glb",
+      "glb_sha256": "c6e68df3a4a4def8ae9db1f3773d802b445614e84933f2de454c6bb230f87214",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": null,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-a-web-bottom.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "f55cea53610d74e9d013b039ef4372b55921e693467767f298058cd81007c07c",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "A",
+      "engine": "model-viewer-4.3.1",
+      "variant": "web",
+      "view": "front-left",
+      "class": "three-quarter",
+      "glb": "model/Dell-R630-2.5inch-web.glb",
+      "glb_sha256": "c6e68df3a4a4def8ae9db1f3773d802b445614e84933f2de454c6bb230f87214",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": null,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-a-web-front-left.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "846e7e3dbabb7b1c2355785e929b85e8b2a9ed062492a362a21b7d9b4258e05b",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "A",
+      "engine": "model-viewer-4.3.1",
+      "variant": "web",
+      "view": "front-right",
+      "class": "three-quarter",
+      "glb": "model/Dell-R630-2.5inch-web.glb",
+      "glb_sha256": "c6e68df3a4a4def8ae9db1f3773d802b445614e84933f2de454c6bb230f87214",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": null,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-a-web-front-right.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "177c6a428de6dce9ee1f45235af98ce8d3eddaa4bc16375e0e1df8acc8af5c3e",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "A",
+      "engine": "model-viewer-4.3.1",
+      "variant": "web",
+      "view": "rear-left",
+      "class": "three-quarter",
+      "glb": "model/Dell-R630-2.5inch-web.glb",
+      "glb_sha256": "c6e68df3a4a4def8ae9db1f3773d802b445614e84933f2de454c6bb230f87214",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": null,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-a-web-rear-left.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "f6152abe702fc951fc8816179871184e327b992c928536379c3c0fe163850f80",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "A",
+      "engine": "model-viewer-4.3.1",
+      "variant": "web",
+      "view": "rear-right",
+      "class": "three-quarter",
+      "glb": "model/Dell-R630-2.5inch-web.glb",
+      "glb_sha256": "c6e68df3a4a4def8ae9db1f3773d802b445614e84933f2de454c6bb230f87214",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": null,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-a-web-rear-right.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "e627651a16b37cf4b7f8d79768b7b778e58918a17a93427841d8fc29b46f0670",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "B",
+      "engine": "three-0.185.1-gltfloader",
+      "variant": "standard",
+      "view": "front",
+      "class": "orthographic",
+      "glb": "model/Dell-R630-2.5inch.glb",
+      "glb_sha256": "7645e39ef922b86174f68b3ee36e1d5b40a34d104d58d3e2d1881d3e27587194",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": 120,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-b-standard-front.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "3e6ef39cb862b67ba79ebb88a725e46675625f6a94edc44301603e976d73a8a4",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "B",
+      "engine": "three-0.185.1-gltfloader",
+      "variant": "standard",
+      "view": "rear",
+      "class": "orthographic",
+      "glb": "model/Dell-R630-2.5inch.glb",
+      "glb_sha256": "7645e39ef922b86174f68b3ee36e1d5b40a34d104d58d3e2d1881d3e27587194",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": 120,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-b-standard-rear.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "79c00e6b0b237cb779adaf5de4f7a8edeb678731a5ba956c6368f45f39b3aef3",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "B",
+      "engine": "three-0.185.1-gltfloader",
+      "variant": "standard",
+      "view": "left",
+      "class": "orthographic",
+      "glb": "model/Dell-R630-2.5inch.glb",
+      "glb_sha256": "7645e39ef922b86174f68b3ee36e1d5b40a34d104d58d3e2d1881d3e27587194",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": 120,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-b-standard-left.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "4c8315ee356de586d2d5f744fbd50d7ec7c76f95dae89988296f52ef9545b64f",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "B",
+      "engine": "three-0.185.1-gltfloader",
+      "variant": "standard",
+      "view": "right",
+      "class": "orthographic",
+      "glb": "model/Dell-R630-2.5inch.glb",
+      "glb_sha256": "7645e39ef922b86174f68b3ee36e1d5b40a34d104d58d3e2d1881d3e27587194",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": 120,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-b-standard-right.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "bb0b7cb04cfc163d725b232d88ca9b0babeba66ed592f5dc566c5a9b8720c343",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "B",
+      "engine": "three-0.185.1-gltfloader",
+      "variant": "standard",
+      "view": "top",
+      "class": "orthographic",
+      "glb": "model/Dell-R630-2.5inch.glb",
+      "glb_sha256": "7645e39ef922b86174f68b3ee36e1d5b40a34d104d58d3e2d1881d3e27587194",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": 120,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-b-standard-top.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "c79d9f98f7a7b03ab9c143a34eaa08ecd6d6e62669cb3372e419469824d9dca0",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "B",
+      "engine": "three-0.185.1-gltfloader",
+      "variant": "standard",
+      "view": "bottom",
+      "class": "orthographic",
+      "glb": "model/Dell-R630-2.5inch.glb",
+      "glb_sha256": "7645e39ef922b86174f68b3ee36e1d5b40a34d104d58d3e2d1881d3e27587194",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": 120,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-b-standard-bottom.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "c5b036b32595aa71ec2d4d480aa88ae8c5635e5df3198f82aad0568ebe7d35d9",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "B",
+      "engine": "three-0.185.1-gltfloader",
+      "variant": "standard",
+      "view": "front-left",
+      "class": "three-quarter",
+      "glb": "model/Dell-R630-2.5inch.glb",
+      "glb_sha256": "7645e39ef922b86174f68b3ee36e1d5b40a34d104d58d3e2d1881d3e27587194",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": 120,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-b-standard-front-left.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "3e2898594ce78ca6040d5fad3cdf1c6ccda0462c279abe2af0cd85fd847c5846",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "B",
+      "engine": "three-0.185.1-gltfloader",
+      "variant": "standard",
+      "view": "front-right",
+      "class": "three-quarter",
+      "glb": "model/Dell-R630-2.5inch.glb",
+      "glb_sha256": "7645e39ef922b86174f68b3ee36e1d5b40a34d104d58d3e2d1881d3e27587194",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": 120,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-b-standard-front-right.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "00c854b16057a1c93f3c5f3ce920a8151262e71d53cea3fc936233b48101a33a",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "B",
+      "engine": "three-0.185.1-gltfloader",
+      "variant": "standard",
+      "view": "rear-left",
+      "class": "three-quarter",
+      "glb": "model/Dell-R630-2.5inch.glb",
+      "glb_sha256": "7645e39ef922b86174f68b3ee36e1d5b40a34d104d58d3e2d1881d3e27587194",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": 120,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-b-standard-rear-left.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "ba3592c3318e27d9be37b071e450b8a01fb7e55a0cadb021fab687dfffdcd62f",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "B",
+      "engine": "three-0.185.1-gltfloader",
+      "variant": "standard",
+      "view": "rear-right",
+      "class": "three-quarter",
+      "glb": "model/Dell-R630-2.5inch.glb",
+      "glb_sha256": "7645e39ef922b86174f68b3ee36e1d5b40a34d104d58d3e2d1881d3e27587194",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": 120,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-b-standard-rear-right.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "8edfc7db546164de533d31178337a6464bf7604ae0b6640c3bc94e6798a7a347",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "B",
+      "engine": "three-0.185.1-gltfloader",
+      "variant": "web",
+      "view": "front",
+      "class": "orthographic",
+      "glb": "model/Dell-R630-2.5inch-web.glb",
+      "glb_sha256": "c6e68df3a4a4def8ae9db1f3773d802b445614e84933f2de454c6bb230f87214",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": 120,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-b-web-front.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "3f6b6cd56ab4267d5433dabf1e51fe8f3b7880186e7898a44265dba3f2eb05a0",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "B",
+      "engine": "three-0.185.1-gltfloader",
+      "variant": "web",
+      "view": "rear",
+      "class": "orthographic",
+      "glb": "model/Dell-R630-2.5inch-web.glb",
+      "glb_sha256": "c6e68df3a4a4def8ae9db1f3773d802b445614e84933f2de454c6bb230f87214",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": 120,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-b-web-rear.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "f265d9913b15f65bf8ccd0b5f2c7677f6c01bef8c7526e50990feb221ef9d070",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "B",
+      "engine": "three-0.185.1-gltfloader",
+      "variant": "web",
+      "view": "left",
+      "class": "orthographic",
+      "glb": "model/Dell-R630-2.5inch-web.glb",
+      "glb_sha256": "c6e68df3a4a4def8ae9db1f3773d802b445614e84933f2de454c6bb230f87214",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": 120,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-b-web-left.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "73397825e719bc1df9c86ec44eb410772516ccda38b6dc20c765a57cd393d0cf",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "B",
+      "engine": "three-0.185.1-gltfloader",
+      "variant": "web",
+      "view": "right",
+      "class": "orthographic",
+      "glb": "model/Dell-R630-2.5inch-web.glb",
+      "glb_sha256": "c6e68df3a4a4def8ae9db1f3773d802b445614e84933f2de454c6bb230f87214",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": 120,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-b-web-right.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "3a702b40c33a5cd683985a94b754e73a150c416e88b2b0178710d6d9e0d535ef",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "B",
+      "engine": "three-0.185.1-gltfloader",
+      "variant": "web",
+      "view": "top",
+      "class": "orthographic",
+      "glb": "model/Dell-R630-2.5inch-web.glb",
+      "glb_sha256": "c6e68df3a4a4def8ae9db1f3773d802b445614e84933f2de454c6bb230f87214",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": 120,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-b-web-top.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "ea3a5d6130cf40b701c894ae808fecedf3d40a372af524f8745acfebc0e90423",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "B",
+      "engine": "three-0.185.1-gltfloader",
+      "variant": "web",
+      "view": "bottom",
+      "class": "orthographic",
+      "glb": "model/Dell-R630-2.5inch-web.glb",
+      "glb_sha256": "c6e68df3a4a4def8ae9db1f3773d802b445614e84933f2de454c6bb230f87214",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": 120,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-b-web-bottom.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "36895bd9d6c5f407be08b5b63e62bea1cf75ce27f7e46c7c836db74a9bde45a6",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "B",
+      "engine": "three-0.185.1-gltfloader",
+      "variant": "web",
+      "view": "front-left",
+      "class": "three-quarter",
+      "glb": "model/Dell-R630-2.5inch-web.glb",
+      "glb_sha256": "c6e68df3a4a4def8ae9db1f3773d802b445614e84933f2de454c6bb230f87214",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": 120,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-b-web-front-left.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "0c362e5dc1d8efc93476a79eb9ef74b1c0cbecbf226750ca587a75ea0911c704",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "B",
+      "engine": "three-0.185.1-gltfloader",
+      "variant": "web",
+      "view": "front-right",
+      "class": "three-quarter",
+      "glb": "model/Dell-R630-2.5inch-web.glb",
+      "glb_sha256": "c6e68df3a4a4def8ae9db1f3773d802b445614e84933f2de454c6bb230f87214",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": 120,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-b-web-front-right.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "d9eed295097de4ca3580a66de431d33084a63b0cb7ff77ba9166252460676d36",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "B",
+      "engine": "three-0.185.1-gltfloader",
+      "variant": "web",
+      "view": "rear-left",
+      "class": "three-quarter",
+      "glb": "model/Dell-R630-2.5inch-web.glb",
+      "glb_sha256": "c6e68df3a4a4def8ae9db1f3773d802b445614e84933f2de454c6bb230f87214",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": 120,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-b-web-rear-left.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "c1d8ee44a4b683da6935d3a51c0b0ee90ccb345b81155b840f19085adfe224cf",
+      "captured_after_glb": true
+    },
+    {
+      "viewer": "B",
+      "engine": "three-0.185.1-gltfloader",
+      "variant": "web",
+      "view": "rear-right",
+      "class": "three-quarter",
+      "glb": "model/Dell-R630-2.5inch-web.glb",
+      "glb_sha256": "c6e68df3a4a4def8ae9db1f3773d802b445614e84933f2de454c6bb230f87214",
+      "loaded": true,
+      "runtime_dimensions_m": [
+        0.4824,
+        0.0428,
+        0.7521
+      ],
+      "runtime_nodes": 120,
+      "console_errors": 0,
+      "screenshot": "qa/renders/viewer-b-web-rear-right.png",
+      "screenshot_pixels": [
+        1400,
+        900
+      ],
+      "screenshot_sha256": "a94867877a2ffecf94b9773481e0598c03b070a27f0d11723c7d2cfd0f99d935",
+      "captured_after_glb": true
+    }
+  ]
+}
