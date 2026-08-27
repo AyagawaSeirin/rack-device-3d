@@ -1,0 +1,1478 @@
+{
+  "schema": "rotation-risk-structural-audit-v1",
+  "path": "Juniper-MX304/model/Juniper-MX304-web.glb",
+  "byte_size": 2318044,
+  "triangle_count": 50342,
+  "node_geometry_count": 121,
+  "textured_materials": [
+    {
+      "index": 0,
+      "name": "Front source-locked photo material",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    },
+    {
+      "index": 1,
+      "name": "Rear AC source-locked photo material",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    },
+    {
+      "index": 2,
+      "name": "Left reconstructed photo material",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    },
+    {
+      "index": 3,
+      "name": "Right reconstructed photo material",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    },
+    {
+      "index": 4,
+      "name": "Top reconstructed photo material",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    },
+    {
+      "index": 5,
+      "name": "Bottom fallback photo material",
+      "alphaMode": "OPAQUE",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "doubleSided": false,
+      "unlit": true
+    }
+  ],
+  "material_violations": [],
+  "embedded_image_alpha": [
+    {
+      "index": 0,
+      "mode": "RGB",
+      "size": [
+        2048,
+        413
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    },
+    {
+      "index": 1,
+      "mode": "RGB",
+      "size": [
+        2048,
+        413
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    },
+    {
+      "index": 2,
+      "mode": "RGB",
+      "size": [
+        2048,
+        298
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    },
+    {
+      "index": 3,
+      "mode": "RGB",
+      "size": [
+        2048,
+        298
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    },
+    {
+      "index": 4,
+      "mode": "RGB",
+      "size": [
+        1481,
+        2048
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    },
+    {
+      "index": 5,
+      "mode": "RGB",
+      "size": [
+        1481,
+        2048
+      ],
+      "alpha_below_255_pixels": 0,
+      "alpha_below_250_pixels": 0
+    }
+  ],
+  "image_errors": [],
+  "samplers": [
+    {
+      "index": 0,
+      "wrapS": 33071,
+      "wrapT": 33071
+    }
+  ],
+  "sampler_violations": [],
+  "negative_transforms": [],
+  "degenerate_triangles": [],
+  "exact_duplicate_triangle_groups": [],
+  "opposite_duplicate_triangle_pairs": [],
+  "coplanar_or_near_pairs_within_0_25mm": [
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "Closed chassis core",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.0007048136205462757,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Closed rear FRU backing",
+      "node_b": "Closed chassis core",
+      "axis": 1,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.0007048128722545318,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "Closed chassis core",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.0001416027401715861,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Closed rear FRU backing",
+      "node_b": "Closed chassis core",
+      "axis": 0,
+      "gap_mm": 0.0,
+      "overlap_area_m2": 0.00014160258983374037,
+      "triangle_pairs": 8
+    },
+    {
+      "node_a": "Front rack ear left with holes",
+      "node_b": "Left reconstructed face",
+      "axis": 0,
+      "gap_mm": 5.736947306100859e-07,
+      "overlap_area_m2": 2.548085895955765e-09,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Right reconstructed face",
+      "node_b": "Front rack ear right with holes",
+      "axis": 0,
+      "gap_mm": 5.736947306100859e-07,
+      "overlap_area_m2": 2.548085895955765e-09,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Ground and ESD end panel",
+      "node_b": "Fan tray 2",
+      "axis": 0,
+      "gap_mm": 1.2293457918310935e-06,
+      "overlap_area_m2": 0.012000000208616246,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "RE management port 103",
+      "axis": 2,
+      "gap_mm": 0.04999986998743822,
+      "overlap_area_m2": 0.0005766399907028673,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "RE console port 103",
+      "axis": 2,
+      "gap_mm": 0.04999986998743822,
+      "overlap_area_m2": 0.0005766399907028673,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "RE management port -103",
+      "axis": 2,
+      "gap_mm": 0.04999986998743822,
+      "overlap_area_m2": 0.0005766399907028673,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "RE console port -103",
+      "axis": 2,
+      "gap_mm": 0.04999986998743822,
+      "overlap_area_m2": 0.0005766399907028673,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC0 empty cage 6-1",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600174,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC0 empty cage 6-0",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600174,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC1 empty cage 7-1",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC1 empty cage 7-0",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC1 empty cage 6-1",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC1 empty cage 6-0",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC1 empty cage 5-1",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC1 empty cage 5-0",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC1 empty cage 4-1",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC1 empty cage 4-0",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC1 empty cage 3-1",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC1 empty cage 3-0",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC1 empty cage 2-1",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC1 empty cage 2-0",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC1 empty cage 1-1",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC1 empty cage 1-0",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC0 empty cage 7-1",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC0 empty cage 7-0",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC0 empty cage 5-1",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC0 empty cage 5-0",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC0 empty cage 4-1",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC0 empty cage 4-0",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC0 empty cage 3-1",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC0 empty cage 3-0",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC0 empty cage 2-1",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC0 empty cage 2-0",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC0 empty cage 1-1",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC0 empty cage 1-0",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC0 empty cage 0-1",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC0 empty cage 0-0",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC1 empty cage 0-1",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600171,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "LMIC1 empty cage 0-0",
+      "axis": 2,
+      "gap_mm": 0.09999988246711666,
+      "overlap_area_m2": 0.0004349999777600171,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "RE USB port 103",
+      "axis": 2,
+      "gap_mm": 0.09999990146614124,
+      "overlap_area_m2": 0.0002080000141710045,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "RE USB port -103",
+      "axis": 2,
+      "gap_mm": 0.09999990146614124,
+      "overlap_area_m2": 0.0002080000141710045,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "Cyan ejector handle depth shell -22-3",
+      "axis": 2,
+      "gap_mm": 0.10000000372534235,
+      "overlap_area_m2": 0.0008639999703168866,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "Cyan ejector handle depth shell -22-2",
+      "axis": 2,
+      "gap_mm": 0.10000000372534235,
+      "overlap_area_m2": 0.0008639999703168866,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "Cyan ejector handle depth shell -22-1",
+      "axis": 2,
+      "gap_mm": 0.10000000372534235,
+      "overlap_area_m2": 0.0008639999703168866,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "Cyan ejector handle depth shell -22-0",
+      "axis": 2,
+      "gap_mm": 0.10000000372534235,
+      "overlap_area_m2": 0.0008639999703168866,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "Cyan ejector handle depth shell 22-3",
+      "axis": 2,
+      "gap_mm": 0.10000000372534235,
+      "overlap_area_m2": 0.0008639999703168866,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "Cyan ejector handle depth shell 22-2",
+      "axis": 2,
+      "gap_mm": 0.10000000372534235,
+      "overlap_area_m2": 0.0008639999703168866,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "Cyan ejector handle depth shell 22-1",
+      "axis": 2,
+      "gap_mm": 0.10000000372534235,
+      "overlap_area_m2": 0.0008639999703168866,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "Cyan ejector handle depth shell 22-0",
+      "axis": 2,
+      "gap_mm": 0.10000000372534235,
+      "overlap_area_m2": 0.0008639999703168866,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Cyan ejector handle depth shell -22-3",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001038461920908,
+      "overlap_area_m2": 0.0008639999703168866,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Cyan ejector handle depth shell -22-2",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001038461920908,
+      "overlap_area_m2": 0.0008639999703168866,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Cyan ejector handle depth shell -22-1",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001038461920908,
+      "overlap_area_m2": 0.0008639999703168866,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Cyan ejector handle depth shell -22-0",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001038461920908,
+      "overlap_area_m2": 0.0008639999703168866,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Cyan ejector handle depth shell 22-3",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001038461920908,
+      "overlap_area_m2": 0.0008639999703168866,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Cyan ejector handle depth shell 22-2",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001038461920908,
+      "overlap_area_m2": 0.0008639999703168866,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Cyan ejector handle depth shell 22-1",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001038461920908,
+      "overlap_area_m2": 0.0008639999703168866,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Cyan ejector handle depth shell 22-0",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001038461920908,
+      "overlap_area_m2": 0.0008639999703168866,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "RE USB port 103",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001048687841019,
+      "overlap_area_m2": 0.0002080000141710045,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "RE USB port -103",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001048687841019,
+      "overlap_area_m2": 0.0002080000141710045,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC0 empty cage 6-1",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600174,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC0 empty cage 6-0",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600174,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC1 empty cage 7-1",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC1 empty cage 7-0",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC1 empty cage 6-1",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC1 empty cage 6-0",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC1 empty cage 5-1",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC1 empty cage 5-0",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC1 empty cage 4-1",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC1 empty cage 4-0",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC1 empty cage 3-1",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC1 empty cage 3-0",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC1 empty cage 2-1",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC1 empty cage 2-0",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC1 empty cage 1-1",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC1 empty cage 1-0",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC0 empty cage 7-1",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC0 empty cage 7-0",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC0 empty cage 5-1",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC0 empty cage 5-0",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC0 empty cage 4-1",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC0 empty cage 4-0",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC0 empty cage 3-1",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC0 empty cage 3-0",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC0 empty cage 2-1",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC0 empty cage 2-0",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC0 empty cage 1-1",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC0 empty cage 1-0",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC0 empty cage 0-1",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC0 empty cage 0-0",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600172,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC1 empty cage 0-1",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600171,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC1 empty cage 0-0",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.10001050587743476,
+      "overlap_area_m2": 0.0004349999777600171,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "RE management port 103",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.1500105183571132,
+      "overlap_area_m2": 0.0005766399907028673,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "RE console port 103",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.1500105183571132,
+      "overlap_area_m2": 0.0005766399907028673,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "RE management port -103",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.1500105183571132,
+      "overlap_area_m2": 0.0005766399907028673,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "RE console port -103",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.1500105183571132,
+      "overlap_area_m2": 0.0005766399907028673,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Rear source-locked AC face",
+      "node_b": "Closed rear FRU backing",
+      "axis": 2,
+      "gap_mm": 0.19999248087404498,
+      "overlap_area_m2": 0.1559369978224039,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Fan tray 2",
+      "node_b": "Closed chassis core",
+      "axis": 2,
+      "gap_mm": 0.1999953240156005,
+      "overlap_area_m2": 0.030719999580383295,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Fan tray 1",
+      "node_b": "Closed chassis core",
+      "axis": 2,
+      "gap_mm": 0.1999953240156005,
+      "overlap_area_m2": 0.030719999580383295,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Fan tray 0",
+      "node_b": "Closed chassis core",
+      "axis": 2,
+      "gap_mm": 0.1999953240156005,
+      "overlap_area_m2": 0.030719999580383295,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "AC PSU1",
+      "node_b": "Closed chassis core",
+      "axis": 2,
+      "gap_mm": 0.1999953240156005,
+      "overlap_area_m2": 0.010639999703168868,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "AC PSU0",
+      "node_b": "Closed chassis core",
+      "axis": 2,
+      "gap_mm": 0.1999953240156005,
+      "overlap_area_m2": 0.010639999703168868,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Timing interface panel",
+      "node_b": "Closed chassis core",
+      "axis": 2,
+      "gap_mm": 0.1999953240156005,
+      "overlap_area_m2": 0.009455039821944233,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Ground and ESD end panel",
+      "node_b": "Closed chassis core",
+      "axis": 2,
+      "gap_mm": 0.1999953240156005,
+      "overlap_area_m2": 0.003344639906451702,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed chassis core",
+      "node_b": "LMIC16 module 1-1",
+      "axis": 2,
+      "gap_mm": 0.1999962069094141,
+      "overlap_area_m2": 0.029007999615192404,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed chassis core",
+      "node_b": "LMIC16 module 1-0",
+      "axis": 2,
+      "gap_mm": 0.1999962069094141,
+      "overlap_area_m2": 0.029007999615192404,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed chassis core",
+      "node_b": "Routing Engine module 0-1",
+      "axis": 2,
+      "gap_mm": 0.1999962069094141,
+      "overlap_area_m2": 0.029007999615192404,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed chassis core",
+      "node_b": "Routing Engine module 0-0",
+      "axis": 2,
+      "gap_mm": 0.1999962069094141,
+      "overlap_area_m2": 0.029007999615192404,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Bottom fallback face",
+      "node_b": "Closed chassis core",
+      "axis": 1,
+      "gap_mm": 0.19999966025352478,
+      "overlap_area_m2": 1.0741151917646405,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed chassis core",
+      "node_b": "Top reconstructed face",
+      "axis": 1,
+      "gap_mm": 0.19999966025352478,
+      "overlap_area_m2": 1.0741151917646405,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Bottom fallback face",
+      "node_b": "Closed front fascia backing",
+      "axis": 1,
+      "gap_mm": 0.19999966025352478,
+      "overlap_area_m2": 0.000704812768544045,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "Top reconstructed face",
+      "axis": 1,
+      "gap_mm": 0.19999966025352478,
+      "overlap_area_m2": 0.000704812768544045,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Bottom fallback face",
+      "node_b": "Closed rear FRU backing",
+      "axis": 1,
+      "gap_mm": 0.19999966025352478,
+      "overlap_area_m2": 0.0007048123943981731,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed rear FRU backing",
+      "node_b": "Top reconstructed face",
+      "axis": 1,
+      "gap_mm": 0.19999966025352478,
+      "overlap_area_m2": 0.0007048123943981731,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-0",
+      "node_b": "LMIC0 cage rim 6-1",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301348,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-0",
+      "node_b": "LMIC0 cage rim 6-0",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301348,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-1",
+      "node_b": "LMIC1 cage rim 7-1",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301345,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-1",
+      "node_b": "LMIC1 cage rim 7-0",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301345,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-1",
+      "node_b": "LMIC1 cage rim 6-1",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301345,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-1",
+      "node_b": "LMIC1 cage rim 6-0",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301345,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-1",
+      "node_b": "LMIC1 cage rim 5-1",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301345,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-1",
+      "node_b": "LMIC1 cage rim 5-0",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301345,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-1",
+      "node_b": "LMIC1 cage rim 4-1",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301345,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-1",
+      "node_b": "LMIC1 cage rim 4-0",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301345,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-1",
+      "node_b": "LMIC1 cage rim 3-1",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301345,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-1",
+      "node_b": "LMIC1 cage rim 3-0",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301345,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-1",
+      "node_b": "LMIC1 cage rim 2-1",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301345,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-1",
+      "node_b": "LMIC1 cage rim 2-0",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301345,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-1",
+      "node_b": "LMIC1 cage rim 1-1",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301345,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-1",
+      "node_b": "LMIC1 cage rim 1-0",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301345,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-0",
+      "node_b": "LMIC0 cage rim 7-1",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301345,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-0",
+      "node_b": "LMIC0 cage rim 7-0",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301345,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-0",
+      "node_b": "LMIC0 cage rim 5-1",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301345,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-0",
+      "node_b": "LMIC0 cage rim 5-0",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301345,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-0",
+      "node_b": "LMIC0 cage rim 4-1",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301345,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-0",
+      "node_b": "LMIC0 cage rim 4-0",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301345,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-0",
+      "node_b": "LMIC0 cage rim 3-1",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301345,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-0",
+      "node_b": "LMIC0 cage rim 3-0",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301345,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-0",
+      "node_b": "LMIC0 cage rim 2-1",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301345,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-0",
+      "node_b": "LMIC0 cage rim 2-0",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301345,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-0",
+      "node_b": "LMIC0 cage rim 1-1",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301345,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-0",
+      "node_b": "LMIC0 cage rim 1-0",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301345,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-0",
+      "node_b": "LMIC0 cage rim 0-1",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301345,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-0",
+      "node_b": "LMIC0 cage rim 0-0",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301345,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-1",
+      "node_b": "LMIC1 cage rim 0-1",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301344,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "LMIC16 module 1-1",
+      "node_b": "LMIC1 cage rim 0-0",
+      "axis": 2,
+      "gap_mm": 0.19999992642549813,
+      "overlap_area_m2": 0.0006166399941301344,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Left reconstructed face",
+      "node_b": "Closed chassis core",
+      "axis": 0,
+      "gap_mm": 0.20000338554382324,
+      "overlap_area_m2": 0.2157984039751053,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed chassis core",
+      "node_b": "Right reconstructed face",
+      "axis": 0,
+      "gap_mm": 0.20000338554382324,
+      "overlap_area_m2": 0.2157984039751053,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Left reconstructed face",
+      "node_b": "Closed front fascia backing",
+      "axis": 0,
+      "gap_mm": 0.20000338554382324,
+      "overlap_area_m2": 0.00014160256899746718,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "Right reconstructed face",
+      "axis": 0,
+      "gap_mm": 0.20000338554382324,
+      "overlap_area_m2": 0.00014160256899746718,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Left reconstructed face",
+      "node_b": "Closed rear FRU backing",
+      "axis": 0,
+      "gap_mm": 0.20000338554382324,
+      "overlap_area_m2": 0.0001416024938285443,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed rear FRU backing",
+      "node_b": "Right reconstructed face",
+      "axis": 0,
+      "gap_mm": 0.20000338554382324,
+      "overlap_area_m2": 0.0001416024938285443,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed chassis core",
+      "node_b": "Closed rear FRU backing",
+      "axis": 2,
+      "gap_mm": 0.20000365674494036,
+      "overlap_area_m2": 0.1559369978224039,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "Closed chassis core",
+      "axis": 2,
+      "gap_mm": 0.20000386908652912,
+      "overlap_area_m2": 0.1559369978224039,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Front rack ear left with holes",
+      "node_b": "Closed front fascia backing",
+      "axis": 0,
+      "gap_mm": 0.20000395923855385,
+      "overlap_area_m2": 0.001062000015668571,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "Front rack ear right with holes",
+      "axis": 0,
+      "gap_mm": 0.20000395923855385,
+      "overlap_area_m2": 0.001062000015668571,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed front fascia backing",
+      "node_b": "Front source-locked face",
+      "axis": 2,
+      "gap_mm": 0.20001038834455143,
+      "overlap_area_m2": 0.1559369978224039,
+      "triangle_pairs": 4
+    },
+    {
+      "node_a": "Closed rear FRU backing",
+      "node_b": "Ground and ESD end panel",
+      "axis": 0,
+      "gap_mm": 0.24999553710222666,
+      "overlap_area_m2": 0.012188639886603347,
+      "triangle_pairs": 4
+    }
+  ],
+  "unresolved_visible_coplanar_pairs_below_0_05mm": [],
+  "closed_core_nodes": [
+    {
+      "node": "Closed rear FRU backing",
+      "watertight": true,
+      "winding_consistent": true,
+      "volume_m3": 0.0015866589442454827
+    },
+    {
+      "node": "Closed front fascia backing",
+      "watertight": true,
+      "winding_consistent": true,
+      "volume_m3": 0.000358655102950004
+    },
+    {
+      "node": "Closed chassis core",
+      "watertight": true,
+      "winding_consistent": true,
+      "volume_m3": 0.023764798761842745
+    }
+  ],
+  "closed_core_pass": true,
+  "errors": [],
+  "error_count": 0,
+  "status": "PASS"
+}

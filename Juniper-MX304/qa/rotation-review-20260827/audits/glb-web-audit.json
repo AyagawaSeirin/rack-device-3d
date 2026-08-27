@@ -1,0 +1,758 @@
+{
+  "path": "../model/Juniper-MX304-web.glb",
+  "byte_size": 2318044,
+  "asset": {
+    "generator": "glTF-Transform v4.4.2",
+    "version": "2.0"
+  },
+  "extensions_used": [
+    "KHR_materials_unlit"
+  ],
+  "extensions_required": [],
+  "counts": {
+    "scenes": 1,
+    "nodes": 122,
+    "meshes": 24,
+    "primitives": 24,
+    "materials": 19,
+    "textures": 6,
+    "images": 6,
+    "unique_basecolor_images": 6
+  },
+  "geometry": {
+    "mirrored_nodes": [],
+    "missing_accessor_bounds": [],
+    "bounds_min": [
+      -0.24130000045150518,
+      -0.044449999928474426,
+      -0.34549999237060547
+    ],
+    "bounds_max": [
+      0.24130000045150518,
+      0.044449999928474426,
+      0.3216999998942018
+    ],
+    "dimensions_xyz": [
+      0.48260000090301036,
+      0.08889999985694885,
+      0.6671999922648073
+    ]
+  },
+  "dimension_check": {
+    "expected_mm": [
+      482.6,
+      88.9,
+      667.2
+    ],
+    "errors": [],
+    "warnings": [],
+    "actual_xyz": [
+      0.4826,
+      0.0889,
+      0.66719999
+    ],
+    "units_per_mm_xyz": [
+      0.001,
+      0.001,
+      0.001
+    ],
+    "nonuniform_ratio_error_percent": 0.0
+  },
+  "images": [
+    {
+      "index": 0,
+      "name": "Front source-locked photo material texture",
+      "errors": [],
+      "warnings": [],
+      "format": "JPEG",
+      "mode": "RGB",
+      "size_px": [
+        2048,
+        413
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    },
+    {
+      "index": 1,
+      "name": "Rear AC source-locked photo material texture",
+      "errors": [],
+      "warnings": [],
+      "format": "JPEG",
+      "mode": "RGB",
+      "size_px": [
+        2048,
+        413
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    },
+    {
+      "index": 2,
+      "name": "Left reconstructed photo material texture",
+      "errors": [],
+      "warnings": [],
+      "format": "JPEG",
+      "mode": "RGB",
+      "size_px": [
+        2048,
+        298
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    },
+    {
+      "index": 3,
+      "name": "Right reconstructed photo material texture",
+      "errors": [],
+      "warnings": [],
+      "format": "JPEG",
+      "mode": "RGB",
+      "size_px": [
+        2048,
+        298
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    },
+    {
+      "index": 4,
+      "name": "Top reconstructed photo material texture",
+      "errors": [],
+      "warnings": [],
+      "format": "JPEG",
+      "mode": "RGB",
+      "size_px": [
+        1481,
+        2048
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    },
+    {
+      "index": 5,
+      "name": "Bottom fallback photo material texture",
+      "errors": [],
+      "warnings": [],
+      "format": "JPEG",
+      "mode": "RGB",
+      "size_px": [
+        1481,
+        2048
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    }
+  ],
+  "materials": [
+    {
+      "index": 0,
+      "name": "Front source-locked photo material",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 1.0,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 0,
+      "base_color_image": 0
+    },
+    {
+      "index": 1,
+      "name": "Rear AC source-locked photo material",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 1.0,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 1,
+      "base_color_image": 1
+    },
+    {
+      "index": 2,
+      "name": "Left reconstructed photo material",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 1.0,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 2,
+      "base_color_image": 2
+    },
+    {
+      "index": 3,
+      "name": "Right reconstructed photo material",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 1.0,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 3,
+      "base_color_image": 3
+    },
+    {
+      "index": 4,
+      "name": "Top reconstructed photo material",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 1.0,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 4,
+      "base_color_image": 4
+    },
+    {
+      "index": 5,
+      "name": "Bottom fallback photo material",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 1.0,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 5,
+      "base_color_image": 5
+    },
+    {
+      "index": 6,
+      "name": "Brushed silver FRU metal",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.72,
+        0.73,
+        0.73,
+        1
+      ],
+      "metallic_factor": 0.05,
+      "roughness_factor": 0.52,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 7,
+      "name": "Silver fastener metal",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.58,
+        0.6,
+        0.61,
+        1
+      ],
+      "metallic_factor": 0.55,
+      "roughness_factor": 0.3,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 8,
+      "name": "Juniper cyan ejector plastic",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.2,
+        0.67,
+        0.84,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 0.45,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 9,
+      "name": "Juniper orange fan and PSU handle",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        0.27,
+        0.035,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 0.46,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 10,
+      "name": "Black recessed connector and grille",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.008,
+        0.01,
+        0.012,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 0.86,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 11,
+      "name": "Rear dark gray panel",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.22,
+        0.23,
+        0.24,
+        1
+      ],
+      "metallic_factor": 0.03,
+      "roughness_factor": 0.62,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 12,
+      "name": "AC PSU housing",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.43,
+        0.44,
+        0.45,
+        1
+      ],
+      "metallic_factor": 0.12,
+      "roughness_factor": 0.52,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 13,
+      "name": "Timing BNC gold metal",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.86,
+        0.52,
+        0.12,
+        1
+      ],
+      "metallic_factor": 0.75,
+      "roughness_factor": 0.28,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 14,
+      "name": "QSFP cage rim",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.62,
+        0.63,
+        0.62,
+        1
+      ],
+      "metallic_factor": 0.32,
+      "roughness_factor": 0.42,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 15,
+      "name": "USB 3 blue insert",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.01,
+        0.25,
+        0.68,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 0.65,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 16,
+      "name": "Side rail recess",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.23,
+        0.24,
+        0.24,
+        1
+      ],
+      "metallic_factor": 0.02,
+      "roughness_factor": 0.85,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 17,
+      "name": "Side and top inset panel",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.51,
+        0.52,
+        0.52,
+        1
+      ],
+      "metallic_factor": 0.04,
+      "roughness_factor": 0.75,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 18,
+      "name": "Panel seam",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.15,
+        0.16,
+        0.16,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 0.92,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    }
+  ],
+  "primitives": [
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "material": 11,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 1,
+      "primitive": 0,
+      "material": 11,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 2,
+      "primitive": 0,
+      "material": 11,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 3,
+      "primitive": 0,
+      "material": 0,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 4,
+      "primitive": 0,
+      "material": 1,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 5,
+      "primitive": 0,
+      "material": 3,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 6,
+      "primitive": 0,
+      "material": 2,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 7,
+      "primitive": 0,
+      "material": 4,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 8,
+      "primitive": 0,
+      "material": 5,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 9,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 10,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 11,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 12,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": false,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 13,
+      "primitive": 0,
+      "material": 14,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 14,
+      "primitive": 0,
+      "material": 10,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 15,
+      "primitive": 0,
+      "material": 10,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 16,
+      "primitive": 0,
+      "material": 15,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 17,
+      "primitive": 0,
+      "material": 16,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": false,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 18,
+      "primitive": 0,
+      "material": 17,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": false,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 19,
+      "primitive": 0,
+      "material": 12,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 20,
+      "primitive": 0,
+      "material": 11,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 21,
+      "primitive": 0,
+      "material": 17,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 22,
+      "primitive": 0,
+      "material": 9,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": false,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 23,
+      "primitive": 0,
+      "material": 11,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    }
+  ],
+  "external_buffers": [],
+  "errors": [],
+  "warnings": [],
+  "error_count": 0,
+  "warning_count": 0,
+  "status": "PASS"
+}

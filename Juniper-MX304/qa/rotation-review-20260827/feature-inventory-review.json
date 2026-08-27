@@ -1,0 +1,620 @@
+{
+  "model": "Juniper-MX304",
+  "rows_reviewed": 36,
+  "matched": 36,
+  "unresolved": 0,
+  "rows": [
+    {
+      "row": 1,
+      "face": "front",
+      "component": "chassis face and occupied slot matrix",
+      "expected_count": "1",
+      "expected_order": "top RE0 | RE1; bottom LMIC0 | LMIC1",
+      "expected_relief": "four separately seated FRU faceplates with visible seams and shallow recesses",
+      "source_url": "https://www.juniper.net/documentation/us/en/hardware/mx304/topics/topic-map/mx304-chassis.html",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/front.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 2,
+      "face": "front",
+      "component": "front rack ears",
+      "expected_count": "2",
+      "expected_order": "physical left | physical right",
+      "expected_relief": "separate thin stamped parts; six real openings per ear: four large horizontal oblong and two small round",
+      "source_url": "https://www.juniper.net/content/dam/www/assets/images/us/en/image-library/mx-series/mx304/mx304-front-high.jpg",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/front.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 3,
+      "face": "front",
+      "component": "JNP304-RE modules",
+      "expected_count": "2",
+      "expected_order": "RE0 | RE1 in RE1/LMIC2",
+      "expected_relief": "separate faceplates recessed into chassis; two projecting cyan ejector handles each",
+      "source_url": "https://www.juniper.net/content/dam/www/assets/images/us/en/image-library/mx-series/mx304/mx304-front-high.jpg",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/front.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 4,
+      "face": "front",
+      "component": "RE ejector handles",
+      "expected_count": "4",
+      "expected_order": "two on RE0 | two on RE1",
+      "expected_relief": "project forward and cast side shadows",
+      "source_url": "https://www.juniper.net/content/dam/www/assets/images/us/en/image-library/mx-series/mx304/mx304-front-high.jpg",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/front.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 5,
+      "face": "front",
+      "component": "RE honeycomb ventilation groups",
+      "expected_count": "2",
+      "expected_order": "one per RE",
+      "expected_relief": "dark perforated recess behind metal face",
+      "source_url": "https://www.juniper.net/content/dam/www/assets/images/us/en/image-library/mx-series/mx304/mx304-front-high.jpg",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/front.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 6,
+      "face": "front",
+      "component": "RE RJ45 ports",
+      "expected_count": "4",
+      "expected_order": "CONSOLE then MGMT on each RE",
+      "expected_relief": "recessed black connector cavities with metal rims",
+      "source_url": "https://www.juniper.net/documentation/us/en/hardware/mx304/topics/topic-map/mx304-rcb.html",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/front.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 7,
+      "face": "front",
+      "component": "RE USB-A ports",
+      "expected_count": "2",
+      "expected_order": "one per RE after MGMT",
+      "expected_relief": "recessed connector",
+      "source_url": "https://www.juniper.net/content/dam/www/assets/images/us/en/image-library/mx-series/mx304/mx304-front-high.jpg",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/front.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 8,
+      "face": "front",
+      "component": "RE controls and indicators",
+      "expected_count": "2",
+      "expected_order": "OK/FAIL and alarm group | reset | ONLINE/OFFLINE MASTER DISK0 DISK1 per RE",
+      "expected_relief": "flush labels and shallow pinhole",
+      "source_url": "https://www.juniper.net/documentation/us/en/hardware/mx304/topics/topic-map/mx304-rcb.html",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/front.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 9,
+      "face": "front",
+      "component": "MX304-LMIC16-BASE modules",
+      "expected_count": "2",
+      "expected_order": "LMIC0 | LMIC1",
+      "expected_relief": "separate faceplates recessed into chassis; two projecting cyan ejector handles each",
+      "source_url": "https://www.juniper.net/documentation/us/en/hardware/mx304/topics/topic-map/mx304-system-overview.html",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/front.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 10,
+      "face": "front",
+      "component": "LMIC ejector handles",
+      "expected_count": "4",
+      "expected_order": "two on LMIC0 | two on LMIC1",
+      "expected_relief": "project forward and cast side shadows",
+      "source_url": "https://www.juniper.net/content/dam/www/assets/images/us/en/image-library/mx-series/mx304/mx304-front-high.jpg",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/front.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 11,
+      "face": "front",
+      "component": "empty QSFP-family port cages",
+      "expected_count": "32",
+      "expected_order": "ports 0 through 15 on LMIC0 then ports 0 through 15 on LMIC1",
+      "expected_relief": "deep black cage openings with silver grille/cage lips; no optics installed",
+      "source_url": "https://www.juniper.net/content/dam/www/assets/images/us/en/image-library/mx-series/mx304/mx304-front-high.jpg",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/front.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 12,
+      "face": "front",
+      "component": "LMIC port-group and status markings",
+      "expected_count": "2",
+      "expected_order": "0-15 numbering and 400G markers; OK/FAIL/OFFLINE group per LMIC",
+      "expected_relief": "texture-level printing; no invented serial text",
+      "source_url": "https://community.juniper.net/blogs/reema-ray/2023/03/28/mx304-deepdive",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/front.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 13,
+      "face": "front",
+      "component": "right chassis identity and vent strip",
+      "expected_count": "1",
+      "expected_order": "RE1/MIC2 upper | Juniper Networks MX304 badge middle | LMIC1 lower",
+      "expected_relief": "recessed black square vent grid; badge slightly proud",
+      "source_url": "https://www.juniper.net/content/dam/www/assets/images/us/en/image-library/mx-series/mx304/mx304-front-high.jpg",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/front.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 14,
+      "face": "front",
+      "component": "optional cable managers and front filter cover",
+      "expected_count": "0",
+      "expected_order": "absent",
+      "expected_relief": "no geometry",
+      "source_url": "https://www.juniper.net/documentation/us/en/hardware/mx304/topics/topic-map/mx304-installing.html",
+      "source_confidence": "VERIFIED_ABSENT",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/front.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 15,
+      "face": "rear",
+      "component": "JNP-PWR2200-AC power supplies",
+      "expected_count": "2",
+      "expected_order": "PSU0 top | PSU1 bottom",
+      "expected_relief": "separate FRU blocks projecting about 40.5 mm; round fan and inlet depths",
+      "source_url": "https://www.juniper.net/documentation/us/en/hardware/mx304/topics/topic-map/mx304-power-system.html",
+      "source_confidence": "VERIFIED_AC",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/rear.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 16,
+      "face": "rear",
+      "component": "AC PSU fan grilles",
+      "expected_count": "2",
+      "expected_order": "one per PSU",
+      "expected_relief": "recessed fan behind radial grille",
+      "source_url": "https://www.juniper.net/content/dam/www/assets/images/us/en/image-library/mx-series/mx304/mx304-rear-ac-high.jpg",
+      "source_confidence": "VERIFIED_AC",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/rear.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 17,
+      "face": "rear",
+      "component": "AC PSU IEC inlets and retainers",
+      "expected_count": "2",
+      "expected_order": "one per PSU",
+      "expected_relief": "deep connector cavity and projecting retention hardware",
+      "source_url": "https://www.juniper.net/content/dam/www/assets/images/us/en/image-library/mx-series/mx304/mx304-rear-ac-high.jpg",
+      "source_confidence": "VERIFIED_AC",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/rear.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 18,
+      "face": "rear",
+      "component": "AC PSU orange pull handles",
+      "expected_count": "2",
+      "expected_order": "one per PSU",
+      "expected_relief": "projects beyond rear plane",
+      "source_url": "https://www.juniper.net/content/dam/www/assets/images/us/en/image-library/mx-series/mx304/mx304-rear-ac-high.jpg",
+      "source_confidence": "VERIFIED_AC",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/rear.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 19,
+      "face": "rear",
+      "component": "timing interface BNC connectors",
+      "expected_count": "4",
+      "expected_order": "10MHz IN/OUT and 1PPS IN/OUT",
+      "expected_relief": "projecting metal cylinders",
+      "source_url": "https://community.juniper.net/blogs/reema-ray/2023/03/28/mx304-deepdive",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/rear.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 20,
+      "face": "rear",
+      "component": "timing interface rectangular ports",
+      "expected_count": "3",
+      "expected_order": "BITS | ToD | GM/PTP top-to-bottom",
+      "expected_relief": "recessed connector cavities",
+      "source_url": "https://community.juniper.net/blogs/reema-ray/2023/03/28/mx304-deepdive",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/rear.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 21,
+      "face": "rear",
+      "component": "JNP-FAN-2RU fan modules",
+      "expected_count": "3",
+      "expected_order": "Fan 0 | Fan 1 | Fan 2 rear-elevation screen-left-to-right after timing panel (physical +X to -X)",
+      "expected_relief": "separate FRU blocks projecting about 40.5 mm; deep grille recesses and molded frames",
+      "source_url": "https://www.juniper.net/documentation/us/en/hardware/mx304/topics/topic-map/mx304-cooling-system.html",
+      "source_confidence": "VERIFIED_AC",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/rear.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 22,
+      "face": "rear",
+      "component": "fan grilles",
+      "expected_count": "6",
+      "expected_order": "upper/lower pair per Fan 0/1/2",
+      "expected_relief": "deep recessed perforation",
+      "source_url": "https://www.juniper.net/content/dam/www/assets/images/us/en/image-library/mx-series/mx304/mx304-rear-ac-high.jpg",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/rear.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 23,
+      "face": "rear",
+      "component": "fan orange frames and AIR OUT badges",
+      "expected_count": "3",
+      "expected_order": "Fan 0 | Fan 1 | Fan 2",
+      "expected_relief": "strong projecting relief and lateral latches",
+      "source_url": "https://www.juniper.net/content/dam/www/assets/images/us/en/image-library/mx-series/mx304/mx304-rear-ac-high.jpg",
+      "source_confidence": "VERIFIED_AC",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/rear.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 24,
+      "face": "rear",
+      "component": "fan separators and status markings",
+      "expected_count": "3",
+      "expected_order": "0 | 1 | 2",
+      "expected_relief": "flush LED and icon with shallow panel relief",
+      "source_url": "https://community.juniper.net/blogs/reema-ray/2023/03/28/mx304-deepdive",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/rear.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 25,
+      "face": "rear",
+      "component": "grounding and ESD panel",
+      "expected_count": "1",
+      "expected_order": "ESD hole | two M6 ground studs | ground symbol",
+      "expected_relief": "two large projecting circular studs and one recessed hole",
+      "source_url": "https://www.juniper.net/content/dam/www/assets/images/us/en/image-library/mx-series/mx304/mx304-rear-ac-high.jpg",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/rear.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 26,
+      "face": "rear",
+      "component": "rear rack ears",
+      "expected_count": "0",
+      "expected_order": "absent",
+      "expected_relief": "no separate rear-ear geometry",
+      "source_url": "https://www.juniper.net/content/dam/www/assets/images/us/en/image-library/mx-series/mx304/mx304-rear-ac-high.jpg",
+      "source_confidence": "VERIFIED_ABSENT",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/rear.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 27,
+      "face": "left",
+      "component": "side rail-slot recesses",
+      "expected_count": "8",
+      "expected_order": "rear-to-front at screen-left-to-right; four in upper row | four in lower row",
+      "expected_relief": "independently generated recessed stamped slots with source-matched shadows; no right-face pixels",
+      "source_url": "https://www.ebay.com/itm/357632213474",
+      "source_confidence": "VERIFIED_PHYSICAL_LEFT_REAL_PHOTO",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/left.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 28,
+      "face": "left",
+      "component": "side shell fasteners and asymmetric landmarks",
+      "expected_count": "1",
+      "expected_order": "rear AC/fan projection screen-left | nonuniform screw/black-locator sequence | one large front pad | front ear and two cyan handles screen-right",
+      "expected_relief": "closed sheet-metal wall; feature pixels remain unstretched; blank inter-feature spans rectified to official length",
+      "source_url": "https://www.juniper.net/us/en/company/images/image-library-logos-and-product-photos/products/mx304.html",
+      "source_confidence": "VERIFIED_INDEPENDENT_LEFT",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/left.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 29,
+      "face": "right",
+      "component": "side rail-slot recesses",
+      "expected_count": "8",
+      "expected_order": "front-to-rear at screen-left-to-right; four in upper row | four in lower row",
+      "expected_relief": "independently generated right-side recessed slots",
+      "source_url": "https://www.juniper.net/us/en/company/images/image-library-logos-and-product-photos/products/mx304.html",
+      "source_confidence": "VERIFIED_EXACT_RIGHT_SOURCES",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/right.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 30,
+      "face": "right",
+      "component": "side shell and fasteners",
+      "expected_count": "1",
+      "expected_order": "front end step | main shell | rear end step",
+      "expected_relief": "closed sheet-metal wall with its independently generated screw/pad layout",
+      "source_url": "https://www.juniper.net/documentation/us/en/hardware/mx304/topics/topic-map/mx304-installing.html",
+      "source_confidence": "VERIFIED_EXACT_RIGHT_SOURCES",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/right.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 31,
+      "face": "top",
+      "component": "major top cover panels",
+      "expected_count": "2",
+      "expected_order": "rear panel | front panel along depth",
+      "expected_relief": "two slightly stepped sheet-metal panels with transverse seam and perimeter fasteners",
+      "source_url": "https://www.ebay.com/itm/357632213474",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/top.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 32,
+      "face": "top",
+      "component": "embossed Juniper Networks marking",
+      "expected_count": "1",
+      "expected_order": "reads normally from verified top orientation",
+      "expected_relief": "low raised/embossed relief",
+      "source_url": "https://www.ebay.com/itm/357632213474",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/top.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 33,
+      "face": "top",
+      "component": "rectangular service hatch",
+      "expected_count": "1",
+      "expected_order": "single hatch with one screw",
+      "expected_relief": "shallow recessed seam and one screw",
+      "source_url": "https://www.ebay.com/itm/357632213474",
+      "source_confidence": "VERIFIED",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/top.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 34,
+      "face": "top",
+      "component": "variable inventory and serial stickers",
+      "expected_count": "0",
+      "expected_order": "excluded",
+      "expected_relief": "omit rather than fabricate or copy serial values",
+      "source_url": "https://www.ebay.com/itm/357632213474",
+      "source_confidence": "VERIFIED_EXCLUSION",
+      "review_status": "MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/top.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 35,
+      "face": "bottom",
+      "component": "conservative underside sheet",
+      "expected_count": "1",
+      "expected_order": "no identifying layout",
+      "expected_relief": "closed opaque plane; preserve only side-edge silhouette",
+      "source_url": "https://www.bkipc.com/Uploads/17627777296911d60e5fb57.jpg",
+      "source_confidence": "GENERIC_BOTTOM_FALLBACK",
+      "review_status": "FALLBACK_MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/bottom.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    },
+    {
+      "row": 36,
+      "face": "bottom",
+      "component": "unsupported underside details",
+      "expected_count": "0",
+      "expected_order": "no holes | labels | vents | feet | rails | seams | fasteners | branding",
+      "expected_relief": "no geometry or texture detail",
+      "source_url": "https://www.juniper.net/documentation/us/en/hardware/mx304/mx304.pdf",
+      "source_confidence": "GENERIC_BOTTOM_FALLBACK",
+      "review_status": "FALLBACK_MATCHED",
+      "review_basis": [
+        "qa/rotation-review-20260827/comparisons/matched-camera/bottom.png",
+        "qa/rotation-review-20260827/after/three-standard/static",
+        "qa/rotation-review-20260827/after/babylon-web/static"
+      ],
+      "unresolved": false
+    }
+  ]
+}

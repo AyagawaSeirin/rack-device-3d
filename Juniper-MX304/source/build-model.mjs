@@ -1,9 +1,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import * as THREE from '/tmp/codex-mx304/node/node_modules/three/build/three.module.js';
-import { RoundedBoxGeometry } from '/tmp/codex-mx304/node/node_modules/three/examples/jsm/geometries/RoundedBoxGeometry.js';
-import { Document, NodeIO } from '/tmp/codex-mx304/node/node_modules/@gltf-transform/core/dist/index.js';
-import { KHRMaterialsUnlit } from '/tmp/codex-mx304/node/node_modules/@gltf-transform/extensions/dist/index.js';
+import * as THREE from 'three';
+import { RoundedBoxGeometry } from 'three/examples/jsm/geometries/RoundedBoxGeometry.js';
+import { Document, NodeIO } from '@gltf-transform/core';
+import { KHRMaterialsUnlit } from '@gltf-transform/extensions';
 
 const MODEL_DIR = '/root/Project/rack-device-3d/Juniper-MX304';
 const MM = 0.001;
@@ -22,6 +22,7 @@ function makeMaterial(document, name, rgba, metallic = 0, roughness = 0.72) {
     .setBaseColorFactor(rgba)
     .setMetallicFactor(metallic)
     .setRoughnessFactor(roughness)
+    .setAlphaMode('OPAQUE')
     .setDoubleSided(false);
 }
 
@@ -34,7 +35,9 @@ function makeTextureMaterial(document, unlitExtension, name, imagePath) {
     .setBaseColorTexture(texture)
     .setMetallicFactor(0)
     .setRoughnessFactor(1)
+    .setAlphaMode('OPAQUE')
     .setDoubleSided(false);
+  material.getBaseColorTextureInfo().setWrapS(33071).setWrapT(33071);
   material.setExtension('KHR_materials_unlit', unlitExtension.createUnlit());
   return material;
 }
@@ -186,6 +189,28 @@ function addFaceQuads(context, materials) {
   addQuad(context, 'Bottom fallback face', [
     x0, y0, z1, x0, y0, z0, x1, y0, z0, x1, y0, z1
   ], uv, [0, 1, 2, 0, 2, 3], materials.bottom);
+}
+
+function addClosedCore(context, material) {
+  // The source-locked quads are the visible exterior and remain at their
+  // audited coordinates.  A 0.20 mm-backed closed shell removes the previous
+  // empty-card construction without introducing a coplanar competing surface.
+  const CLEARANCE = 0.2;
+  addBox(context, 'Closed chassis core',
+    [BODY_W - 2 * CLEARANCE, BODY_H - 2 * CLEARANCE, BODY_D - 2 * CLEARANCE],
+    [0, 0, 0], material);
+
+  const frontInner = BODY_D / 2 - CLEARANCE;
+  const frontOuter = 314.0 - CLEARANCE;
+  addBox(context, 'Closed front fascia backing',
+    [BODY_W - 2 * CLEARANCE, BODY_H - 2 * CLEARANCE, frontOuter - frontInner + CLEARANCE],
+    [0, 0, (frontOuter + frontInner - CLEARANCE) / 2], material);
+
+  const rearInner = -(BODY_D / 2 - CLEARANCE);
+  const rearOuter = -(BODY_D / 2 + REAR_PROJ - CLEARANCE);
+  addBox(context, 'Closed rear FRU backing',
+    [BODY_W - 2 * CLEARANCE, BODY_H - 2 * CLEARANCE, rearInner - rearOuter + CLEARANCE],
+    [0, 0, (rearInner + rearOuter + CLEARANCE) / 2], material);
 }
 
 function addRackEars(context, material) {
@@ -349,11 +374,14 @@ async function build(textureVariant, outputName) {
     seam: makeMaterial(document, 'Panel seam', [0.15, 0.16, 0.16, 1], 0, 0.92)
   };
 
+  addClosedCore(context, materials.darkGray);
   addFaceQuads(context, faceMaterials);
   addRackEars(context, materials.steel);
   addFrontGeometry(context, materials);
   addSideGeometry(context, materials);
-  addTopGeometry(context, materials);
+  // The verified top seam is shallow stamped/flush detail already locked in
+  // the top photograph.  A previous box ended exactly coplanar with that card
+  // and added no supported silhouette, so it is intentionally not duplicated.
   addRearGeometry(context, materials);
 
   const io = new NodeIO().registerExtensions([KHRMaterialsUnlit]);
