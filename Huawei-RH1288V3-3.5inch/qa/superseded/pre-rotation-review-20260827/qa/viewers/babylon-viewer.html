@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Babylon.js RH1288 V3 GLB QA</title>
+  <style>
+    html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#d9dde2;font-family:system-ui,sans-serif}
+    body.dark{background:#25282d}
+    body.checker{background-color:#d9dde2;background-image:linear-gradient(45deg,#aeb4bc 25%,transparent 25%),linear-gradient(-45deg,#aeb4bc 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#aeb4bc 75%),linear-gradient(-45deg,transparent 75%,#aeb4bc 75%);background-size:32px 32px;background-position:0 0,0 16px,16px -16px,-16px 0}
+    canvas{display:block;width:100%;height:100%;outline:none}
+    #status{position:fixed;left:14px;top:12px;padding:7px 10px;border-radius:6px;background:#101318d9;color:#fff3de;font:13px/1.35 ui-monospace,monospace;z-index:2}
+  </style>
+</head>
+<body>
+<div id="status">BABYLON_LOADING</div>
+<canvas id="renderCanvas"></canvas>
+<script src="./node_modules/babylonjs/babylon.js"></script>
+<script src="./node_modules/babylonjs-loaders/babylonjs.loaders.min.js"></script>
+<script>
+  const params=new URLSearchParams(location.search);
+  const modelUrl=params.get("model")||"../../model/Huawei-RH1288V3-3.5inch-web.glb";
+  const view=params.get("view")||"rear-left";
+  document.body.className=params.get("bg")||"checker";
+  const canvas=document.getElementById("renderCanvas");
+  const engine=new BABYLON.Engine(canvas,true,{preserveDrawingBuffer:true,stencil:true,alpha:true});
+  BABYLON.SceneLoader.ShowLoadingScreen=false;
+  const scene=new BABYLON.Scene(engine);
+  // glTF is right-handed.  Preserve its authored +X right / +Z front frame so
+  // the named cameras agree with the independent Three.js viewer.
+  scene.useRightHandedSystem=true;
+  scene.clearColor=new BABYLON.Color4(0,0,0,0);
+  const camera=new BABYLON.FreeCamera("qa-camera",new BABYLON.Vector3(1,1,1),scene);
+  camera.mode=BABYLON.Camera.ORTHOGRAPHIC_CAMERA;
+  camera.minZ=0.001;camera.maxZ=20;
+
+  const settings={
+    front:[[0,0,1],[0,1,0]],rear:[[0,0,-1],[0,1,0]],
+    left:[[-1,0,0],[0,1,0]],right:[[1,0,0],[0,1,0]],
+    top:[[0,1,0],[0,0,-1]],bottom:[[0,-1,0],[0,0,-1]],
+    "front-left":[[-1,.55,1],[0,1,0]],"front-right":[[1,.55,1],[0,1,0]],
+    "rear-left":[[-1,.55,-1],[0,1,0]],"rear-right":[[1,.55,-1],[0,1,0]]
+  };
+
+  function v(a){return new BABYLON.Vector3(a[0],a[1],a[2]);}
+  function fitCamera(meshes,key){
+    let min=new BABYLON.Vector3(Number.POSITIVE_INFINITY,Number.POSITIVE_INFINITY,Number.POSITIVE_INFINITY);
+    let max=new BABYLON.Vector3(Number.NEGATIVE_INFINITY,Number.NEGATIVE_INFINITY,Number.NEGATIVE_INFINITY);
+    meshes.filter(m=>m.getTotalVertices&&m.getTotalVertices()>0).forEach(m=>{
+      const b=m.getBoundingInfo().boundingBox;min=BABYLON.Vector3.Minimize(min,b.minimumWorld);max=BABYLON.Vector3.Maximize(max,b.maximumWorld);
+    });
+    const center=min.add(max).scale(.5);
+    const pair=settings[key]||settings["rear-left"];
+    const eye=v(pair[0]).normalize();const up=v(pair[1]).normalize();
+    camera.position=center.add(eye.scale(2));camera.upVector=up;camera.setTarget(center);
+    const forward=center.subtract(camera.position).normalize();
+    const right=BABYLON.Vector3.Cross(forward,up).normalize();
+    const correctedUp=BABYLON.Vector3.Cross(right,forward).normalize();
+    const corners=[];for(const x of [min.x,max.x])for(const y of [min.y,max.y])for(const z of [min.z,max.z])corners.push(new BABYLON.Vector3(x,y,z).subtract(center));
+    const xs=corners.map(p=>BABYLON.Vector3.Dot(p,right)),ys=corners.map(p=>BABYLON.Vector3.Dot(p,correctedUp));
+    let width=(Math.max(...xs)-Math.min(...xs))*1.10,height=(Math.max(...ys)-Math.min(...ys))*1.16;
+    const aspect=engine.getRenderWidth()/engine.getRenderHeight();if(width/height>aspect)height=width/aspect;else width=height*aspect;
+    camera.orthoLeft=-width/2;camera.orthoRight=width/2;camera.orthoTop=height/2;camera.orthoBottom=-height/2;
+    return {min:min.asArray(),max:max.asArray(),dimensions:max.subtract(min).asArray()};
+  }
+
+  BABYLON.SceneLoader.AppendAsync("",modelUrl,scene).then(()=>{
+    const bounds=fitCamera(scene.meshes,view);
+    engine.hideLoadingUI();
+    scene.render();
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      window.viewerInfo={renderer:"Babylon.js",model:modelUrl,view,bounds,meshes:scene.meshes.length};
+      window.viewerReady=true;
+      document.getElementById("status").textContent=`BABYLON_READY | ${view} | ${bounds.dimensions.map(v=>v.toFixed(5)).join(" × ")} m`;
+    }));
+  }).catch(error=>{window.viewerError=String(error?.message||error);document.getElementById("status").textContent=`BABYLON_ERROR | ${window.viewerError}`;});
+  engine.runRenderLoop(()=>scene.render());addEventListener("resize",()=>engine.resize());
+</script>
+</body>
+</html>

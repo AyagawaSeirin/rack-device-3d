@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Three.js RH1288 V3 GLB QA</title>
+  <style>
+    html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#d9dde2;font-family:system-ui,sans-serif}
+    body.dark{background:#25282d}
+    body.checker{background-color:#d9dde2;background-image:linear-gradient(45deg,#aeb4bc 25%,transparent 25%),linear-gradient(-45deg,#aeb4bc 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#aeb4bc 75%),linear-gradient(-45deg,transparent 75%,#aeb4bc 75%);background-size:32px 32px;background-position:0 0,0 16px,16px -16px,-16px 0}
+    canvas{display:block;width:100%;height:100%}
+    #status{position:fixed;left:14px;top:12px;padding:7px 10px;border-radius:6px;background:#101318d9;color:#e7f3ff;font:13px/1.35 ui-monospace,monospace;z-index:2}
+  </style>
+  <script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js"}}</script>
+</head>
+<body>
+<div id="status">THREE_LOADING</div>
+<script type="module">
+  import * as THREE from "three";
+  import { GLTFLoader } from "./node_modules/three/examples/jsm/loaders/GLTFLoader.js";
+
+  const params = new URLSearchParams(location.search);
+  const modelUrl = params.get("model") || "../../model/Huawei-RH1288V3-3.5inch.glb";
+  const view = params.get("view") || "front-right";
+  const bg = params.get("bg") || "checker";
+  document.body.className = bg;
+
+  const renderer = new THREE.WebGLRenderer({antialias:true,alpha:true,preserveDrawingBuffer:true});
+  renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+  renderer.setSize(innerWidth,innerHeight);
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  renderer.setClearColor(0x000000,0);
+  document.body.appendChild(renderer.domElement);
+  const scene = new THREE.Scene();
+  const camera = new THREE.OrthographicCamera(-1,1,1,-1,0.001,20);
+  let loadedRoot = null;
+
+  const settings = {
+    front: [[0,0,1],[0,1,0]], rear: [[0,0,-1],[0,1,0]],
+    left: [[-1,0,0],[0,1,0]], right: [[1,0,0],[0,1,0]],
+    top: [[0,1,0],[0,0,-1]], bottom: [[0,-1,0],[0,0,-1]],
+    "front-left": [[-1,0.55,1],[0,1,0]], "front-right": [[1,0.55,1],[0,1,0]],
+    "rear-left": [[-1,0.55,-1],[0,1,0]], "rear-right": [[1,0.55,-1],[0,1,0]]
+  };
+
+  function fitCamera(object, key){
+    const box = new THREE.Box3().setFromObject(object);
+    const center = box.getCenter(new THREE.Vector3());
+    const [eyeRaw,upRaw] = settings[key] || settings["front-right"];
+    const eye = new THREE.Vector3(...eyeRaw).normalize();
+    camera.position.copy(center).addScaledVector(eye,2);
+    camera.up.set(...upRaw).normalize();
+    camera.lookAt(center);
+    camera.updateMatrixWorld(true);
+    const corners=[];
+    for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z])corners.push(new THREE.Vector3(x,y,z).applyMatrix4(camera.matrixWorldInverse));
+    const xs=corners.map(p=>p.x), ys=corners.map(p=>p.y);
+    let width=Math.max(...xs)-Math.min(...xs), height=Math.max(...ys)-Math.min(...ys);
+    width*=1.10; height*=1.16;
+    const aspect=innerWidth/innerHeight;
+    if(width/height>aspect) height=width/aspect; else width=height*aspect;
+    camera.left=-width/2;camera.right=width/2;camera.top=height/2;camera.bottom=-height/2;
+    camera.near=0.001;camera.far=10;camera.updateProjectionMatrix();
+    return {min:box.min.toArray(),max:box.max.toArray(),dimensions:box.getSize(new THREE.Vector3()).toArray()};
+  }
+
+  new GLTFLoader().load(modelUrl,(gltf)=>{
+    scene.add(gltf.scene);
+    loadedRoot = gltf.scene;
+    const bounds=fitCamera(gltf.scene,view);
+    renderer.render(scene,camera);
+    window.viewerInfo={renderer:"Three.js",model:modelUrl,view,bounds,meshes:gltf.scene.getObjectByProperty?gltf.scene.children.length:null};
+    window.viewerReady=true;
+    document.getElementById("status").textContent=`THREE_READY | ${view} | ${bounds.dimensions.map(v=>v.toFixed(5)).join(" × ")} m`;
+  },undefined,(error)=>{
+    window.viewerError=String(error?.message||error);
+    document.getElementById("status").textContent=`THREE_ERROR | ${window.viewerError}`;
+  });
+  renderer.setAnimationLoop(()=>renderer.render(scene,camera));
+  addEventListener("resize",()=>{
+    renderer.setSize(innerWidth,innerHeight);
+    if(loadedRoot) fitCamera(loadedRoot,view);
+  });
+</script>
+</body>
+</html>

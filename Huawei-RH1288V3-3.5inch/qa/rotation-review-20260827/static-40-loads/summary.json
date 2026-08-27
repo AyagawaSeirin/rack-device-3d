@@ -1,0 +1,80 @@
+{
+  "requiredLoads": 40,
+  "actualLoads": 40,
+  "uniqueNonces": 40,
+  "combinations": [
+    {
+      "viewer": "three",
+      "variant": "standard",
+      "modelBase": "/Huawei-RH1288V3-3.5inch/model/Huawei-RH1288V3-3.5inch.glb",
+      "loadCount": 10,
+      "pngCount": 10,
+      "checks": {
+        "loadCount10": true,
+        "pngCount10": true,
+        "viewOrderExact": true,
+        "topBottomPitchWithMargin": true,
+        "cacheBusted": true,
+        "independentPageNavigations": true,
+        "webgl2": true,
+        "overlayAbsent": true
+      },
+      "pass": true
+    },
+    {
+      "viewer": "three",
+      "variant": "web",
+      "modelBase": "/Huawei-RH1288V3-3.5inch/model/Huawei-RH1288V3-3.5inch-web.glb",
+      "loadCount": 10,
+      "pngCount": 10,
+      "checks": {
+        "loadCount10": true,
+        "pngCount10": true,
+        "viewOrderExact": true,
+        "topBottomPitchWithMargin": true,
+        "cacheBusted": true,
+        "independentPageNavigations": true,
+        "webgl2": true,
+        "overlayAbsent": true
+      },
+      "pass": true
+    },
+    {
+      "viewer": "babylon",
+      "variant": "standard",
+      "modelBase": "/Huawei-RH1288V3-3.5inch/model/Huawei-RH1288V3-3.5inch.glb",
+      "loadCount": 10,
+      "pngCount": 10,
+      "checks": {
+        "loadCount10": true,
+        "pngCount10": true,
+        "viewOrderExact": true,
+        "topBottomPitchWithMargin": true,
+        "cacheBusted": true,
+        "independentPageNavigations": true,
+        "webgl2": true,
+        "overlayAbsent": true
+      },
+      "pass": true
+    },
+    {
+      "viewer": "babylon",
+      "variant": "web",
+      "modelBase": "/Huawei-RH1288V3-3.5inch/model/Huawei-RH1288V3-3.5inch-web.glb",
+      "loadCount": 10,
+      "pngCount": 10,
+      "checks": {
+        "loadCount10": true,
+        "pngCount10": true,
+        "viewOrderExact": true,
+        "topBottomPitchWithMargin": true,
+        "cacheBusted": true,
+        "independentPageNavigations": true,
+        "webgl2": true,
+        "overlayAbsent": true
+      },
+      "pass": true
+    }
+  ],
+  "pass": true
+}

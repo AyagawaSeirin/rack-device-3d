@@ -14,3 +14,9 @@ Preserved files:
 - `../originals/Huawei-product-gallery-RH1288-V3-official-download-all.zip`: Huawei's current official download-all archive, unchanged; it contains only two 2.5-inch/SFF PNG product photographs at 720p and 1080p.
 
 The archived viewer's visible component names include the DVD-based 8-SFF front, so it is not proven to be the requested 4-LFF exterior even if its model payload later becomes available. No file is represented as an exact public official 4-LFF 3D model.
+
+## 2026-08-27 independent revalidation
+
+A fresh real-Chromium/Playwright check of Huawei's current product gallery confirmed that the RH1288 V3 detail page still presents a `查看3D` action, but the action resolves to the same historic `/computing/server3D/res/server/rh1288v3/index.html` endpoint. That endpoint, its `tree.json`, and direct model-resource paths all return HTTP 302 to Huawei's generic migration page. Searching the migrated 3D catalogue for `RH1288 V3` returns no model entry. Public Internet Archive/CDX checks did not expose the missing payload.
+
+Accordingly, the preserved official viewer index remains untouched, but no exact official 4-LFF model file was available to preserve. Final standard/web GLBs remain independently constructed and are not claimed to be official Huawei model payloads.
