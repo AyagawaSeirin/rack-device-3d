@@ -1,0 +1,169 @@
+{
+  "schema": "rack-device-3d-final-gate/v1",
+  "model_key": "Dell-R7515-2.5inch",
+  "status": "PASS_WITH_BOTTOM_FALLBACK",
+  "exact_identity": {
+    "product": "Dell PowerEdge R7515",
+    "generation": "15G/YX5X",
+    "u_height": "2U",
+    "drive_configuration": "24 x 2.5-inch SFF; installed security bezel; no rear drives",
+    "rear_configuration": "Riser 1B; slots 4/5; dual onboard 1GbE; dual-port LOM; iDRAC; DB9; VGA; dual USB",
+    "power": {
+      "count": 2,
+      "type": "AC",
+      "rating_each": "750 W Dell EPP",
+      "psu_blank": false
+    },
+    "factory_logo": "DELL EMC factory mark retained"
+  },
+  "official_3d": {
+    "found": false,
+    "preservation": "not applicable"
+  },
+  "frozen_hashes": {
+    "builder": "91514dc50735e3916aa9d840120fa664b117d36346c9e4a0025a1210c9039211",
+    "standard_glb": "9a25733362476989fd0947202932f7c38b5483d05df3c43be4e685987e71a47c",
+    "web_glb": "aeba647e9f07f557f371fc8505313d06b8c1114f14c43dddbc7ead59f9f37996",
+    "viewer": {
+      "three.html": "28c5fb1c83975c9f484fad69e5a305e8c9f6596ca501efc5995a7696d778e318",
+      "babylon.html": "c9ab50e3be29e713a212c86e3826f6cf5b4ca377643384196f60009eeffe2125",
+      "control.html": "0df0b66c554d54fbafc3bd92843eb73aefda8c2a615a8be9464df07b5dec34b1",
+      "run_capture.js": "4c708ca420936b97c30e16f2d0480a878a7782ce43f7856080d20278d19d13b3",
+      "run_loads.js": "87941c9317dfcdbe4211b6b153240a1aa959ebefc966417e3e9ae54566dcdb64",
+      "deep_glb_audit.mjs": "5f8974632c9916456eedfcb320a52d87be93831c6c7ab37b6ad92fe45fd8b0ee"
+    }
+  },
+  "audits": {
+    "views": {
+      "status": "PASS",
+      "errors": 0
+    },
+    "standard": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0
+    },
+    "web": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0
+    },
+    "deep_standard": {
+      "status": "PASS",
+      "unresolved": 0,
+      "counts": {
+        "nodes": 104,
+        "meshes": 104,
+        "triangles_world_instances": 2860,
+        "duplicate_triangle_groups": 0,
+        "exact_coplanar_triangle_pairs": 0,
+        "near_coplanar_triangle_pairs": 0,
+        "negative_transforms": 0,
+        "singular_transforms": 0,
+        "blend_materials": 0,
+        "double_sided_materials": 0,
+        "primary_material_errors": 0,
+        "closed_core_nodes": 1,
+        "closed_core_failures": 0,
+        "watertight_mesh_instances": 94,
+        "inward_watertight_mesh_instances": 0,
+        "normal_attribute_mismatch_triangles": 0
+      }
+    },
+    "deep_web": {
+      "status": "PASS",
+      "unresolved": 0,
+      "counts": {
+        "nodes": 104,
+        "meshes": 104,
+        "triangles_world_instances": 2860,
+        "duplicate_triangle_groups": 0,
+        "exact_coplanar_triangle_pairs": 0,
+        "near_coplanar_triangle_pairs": 0,
+        "negative_transforms": 0,
+        "singular_transforms": 0,
+        "blend_materials": 0,
+        "double_sided_materials": 0,
+        "primary_material_errors": 0,
+        "closed_core_nodes": 1,
+        "closed_core_failures": 0,
+        "watertight_mesh_instances": 94,
+        "inward_watertight_mesh_instances": 0,
+        "normal_attribute_mismatch_triangles": 0
+      }
+    }
+  },
+  "browser_gate": {
+    "real_webgl2": true,
+    "engines": [
+      "Three.js",
+      "Babylon.js"
+    ],
+    "tiers": [
+      "standard",
+      "web"
+    ],
+    "combinations": 4,
+    "yaw_step_degrees": 5,
+    "yaw_frames_per_combination": 72,
+    "pitch_frames_per_combination": 16,
+    "stability_frames_per_combination": 8,
+    "total_yaw_frames": 288,
+    "total_pitch_frames": 64,
+    "total_stability_frames": 32,
+    "independent_cache_busted_loads": 40,
+    "loads_by_combination": {
+      "three-standard": 10,
+      "three-web": 10,
+      "babylon-standard": 10,
+      "babylon-web": 10
+    },
+    "page_errors": 0,
+    "all_loading_overlays_hidden": true,
+    "all_loaded_hashes_matched": true
+  },
+  "flicker_gate": {
+    "status": "PASS_NO_FLICKER",
+    "byte_identical_stability_pairs": 16,
+    "matched_camera_four_up_views": 8,
+    "contact_sheets_visually_reviewed": true,
+    "absent_artifacts": [
+      "z-fighting",
+      "alpha transition",
+      "open-core leak",
+      "face disappearance",
+      "mirroring",
+      "texture switch",
+      "gray-white jump",
+      "mask mixed-frame"
+    ]
+  },
+  "inventory_gate": {
+    "rows": 40,
+    "verified": 40,
+    "failures": 0,
+    "csv": "final/inventory-verification.csv",
+    "summary": "final/manifests/inventory-summary.json"
+  },
+  "evidence_integrity": {
+    "builder_sha256": "91514dc50735e3916aa9d840120fa664b117d36346c9e4a0025a1210c9039211",
+    "standard_glb_sha256": "9a25733362476989fd0947202932f7c38b5483d05df3c43be4e685987e71a47c",
+    "web_glb_sha256": "aeba647e9f07f557f371fc8505313d06b8c1114f14c43dddbc7ead59f9f37996",
+    "viewer_sha256": {
+      "three.html": "28c5fb1c83975c9f484fad69e5a305e8c9f6596ca501efc5995a7696d778e318",
+      "babylon.html": "c9ab50e3be29e713a212c86e3826f6cf5b4ca377643384196f60009eeffe2125",
+      "control.html": "0df0b66c554d54fbafc3bd92843eb73aefda8c2a615a8be9464df07b5dec34b1",
+      "run_capture.js": "4c708ca420936b97c30e16f2d0480a878a7782ce43f7856080d20278d19d13b3",
+      "run_loads.js": "87941c9317dfcdbe4211b6b153240a1aa959ebefc966417e3e9ae54566dcdb64",
+      "deep_glb_audit.mjs": "5f8974632c9916456eedfcb320a52d87be93831c6c7ab37b6ad92fe45fd8b0ee"
+    },
+    "rotation_manifests": 4,
+    "stability_pairs_byte_identical": 16,
+    "load_records_hash_matched": 40,
+    "status": "PASS"
+  },
+  "non_bottom_gaps": 0,
+  "bottom_mode": "GENERIC_BOTTOM_FALLBACK",
+  "residual_risk": "generic underside only",
+  "browser_recollection_required": false
+}

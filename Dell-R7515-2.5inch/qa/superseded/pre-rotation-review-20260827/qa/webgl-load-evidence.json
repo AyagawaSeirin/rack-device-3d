@@ -1,0 +1,1445 @@
+{
+  "status": "PASS",
+  "model_status_constraint": "PASS_WITH_BOTTOM_FALLBACK",
+  "models": [
+    {
+      "flavor": "standard",
+      "path": "model/Dell-R7515-2.5inch.glb",
+      "bytes": 17680308,
+      "sha256": "1d6614f4f869c3daefd59f13655a85435deb935f19c1949aad43af5faea51c78"
+    },
+    {
+      "flavor": "web",
+      "path": "model/Dell-R7515-2.5inch-web.glb",
+      "bytes": 8114260,
+      "sha256": "2c01f2405f0562b86ad2d78b3849e01723748e3816aa59f056697d797e62cb54"
+    }
+  ],
+  "view_matrix": {
+    "orthogonal": [
+      "front",
+      "rear",
+      "left",
+      "right",
+      "top",
+      "bottom"
+    ],
+    "oblique": [
+      "front-left",
+      "front-right",
+      "rear-left",
+      "rear-right"
+    ]
+  },
+  "summary": {
+    "capture_count": 40,
+    "expected_capture_count": 40,
+    "all_runtime_ready": true,
+    "all_model_viewer_visible": true,
+    "all_screenshots_nonempty": true,
+    "counts_by_viewer_and_model": {
+      "model-viewer/standard": 10,
+      "model-viewer/web": 10,
+      "threejs/standard": 10,
+      "threejs/web": 10
+    },
+    "threejs_webgl_version": [
+      "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+    ],
+    "threejs_meshes": [
+      118
+    ],
+    "threejs_triangles": [
+      2614
+    ]
+  },
+  "captures": [
+    {
+      "viewer": "model-viewer",
+      "viewer_version": "model-viewer-4.3.1",
+      "renderer_path": "google-model-viewer-webgl",
+      "model": "standard",
+      "view": "bottom",
+      "view_class": "orthogonal",
+      "ready": true,
+      "model_is_visible": true,
+      "canvas_count": 2,
+      "webgl_version": null,
+      "nodes": null,
+      "meshes": null,
+      "textured_meshes": null,
+      "render_info": null,
+      "bounds": null,
+      "loaded_at": "2026-08-23T16:33:02.811Z",
+      "run_evidence_file": "qa/webgl-model-viewer-standard-b-final.json",
+      "screenshot": "qa/renders/model-viewer/standard/bottom.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 720,
+      "screenshot_bytes": 211593,
+      "screenshot_sha256": "43cd50b2b03919c010582b4978c0208aee62de72b2377f05c739c8e95e6b7b8a",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "model-viewer",
+      "viewer_version": "model-viewer-4.3.1",
+      "renderer_path": "google-model-viewer-webgl",
+      "model": "standard",
+      "view": "front",
+      "view_class": "orthogonal",
+      "ready": true,
+      "model_is_visible": true,
+      "canvas_count": 2,
+      "webgl_version": null,
+      "nodes": null,
+      "meshes": null,
+      "textured_meshes": null,
+      "render_info": null,
+      "bounds": null,
+      "loaded_at": "2026-08-23T15:48:22.247Z",
+      "run_evidence_file": "qa/webgl-model-viewer-standard-a-final.json",
+      "screenshot": "qa/renders/model-viewer/standard/front.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 900,
+      "screenshot_bytes": 265782,
+      "screenshot_sha256": "f8af74d7f9e8aa78f8199d811af706158a16683fb92d93c34872512202ca4356",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "model-viewer",
+      "viewer_version": "model-viewer-4.3.1",
+      "renderer_path": "google-model-viewer-webgl",
+      "model": "standard",
+      "view": "front-left",
+      "view_class": "oblique",
+      "ready": true,
+      "model_is_visible": true,
+      "canvas_count": 2,
+      "webgl_version": null,
+      "nodes": null,
+      "meshes": null,
+      "textured_meshes": null,
+      "render_info": null,
+      "bounds": null,
+      "loaded_at": "2026-08-23T16:33:02.811Z",
+      "run_evidence_file": "qa/webgl-model-viewer-standard-b-final.json",
+      "screenshot": "qa/renders/model-viewer/standard/front-left.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 720,
+      "screenshot_bytes": 158775,
+      "screenshot_sha256": "e4dfb02b6b7566576ba37475c90c21c0f6fd3d361163788d118ddb6b51cfdf45",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "model-viewer",
+      "viewer_version": "model-viewer-4.3.1",
+      "renderer_path": "google-model-viewer-webgl",
+      "model": "standard",
+      "view": "front-right",
+      "view_class": "oblique",
+      "ready": true,
+      "model_is_visible": true,
+      "canvas_count": 2,
+      "webgl_version": null,
+      "nodes": null,
+      "meshes": null,
+      "textured_meshes": null,
+      "render_info": null,
+      "bounds": null,
+      "loaded_at": "2026-08-23T16:33:02.811Z",
+      "run_evidence_file": "qa/webgl-model-viewer-standard-b-final.json",
+      "screenshot": "qa/renders/model-viewer/standard/front-right.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 720,
+      "screenshot_bytes": 154686,
+      "screenshot_sha256": "0cbb276407e45fde46bf9e6ed58cefafd0890bf8bc8a20931584ef3e94cd490e",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "model-viewer",
+      "viewer_version": "model-viewer-4.3.1",
+      "renderer_path": "google-model-viewer-webgl",
+      "model": "standard",
+      "view": "left",
+      "view_class": "orthogonal",
+      "ready": true,
+      "model_is_visible": true,
+      "canvas_count": 2,
+      "webgl_version": null,
+      "nodes": null,
+      "meshes": null,
+      "textured_meshes": null,
+      "render_info": null,
+      "bounds": null,
+      "loaded_at": "2026-08-23T15:48:22.247Z",
+      "run_evidence_file": "qa/webgl-model-viewer-standard-a-final.json",
+      "screenshot": "qa/renders/model-viewer/standard/left.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 900,
+      "screenshot_bytes": 137396,
+      "screenshot_sha256": "7a7850225fe16babf005b886f53bf29c49a6569d284176cd2f131188633a3d0f",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "model-viewer",
+      "viewer_version": "model-viewer-4.3.1",
+      "renderer_path": "google-model-viewer-webgl",
+      "model": "standard",
+      "view": "rear",
+      "view_class": "orthogonal",
+      "ready": true,
+      "model_is_visible": true,
+      "canvas_count": 2,
+      "webgl_version": null,
+      "nodes": null,
+      "meshes": null,
+      "textured_meshes": null,
+      "render_info": null,
+      "bounds": null,
+      "loaded_at": "2026-08-23T15:48:22.247Z",
+      "run_evidence_file": "qa/webgl-model-viewer-standard-a-final.json",
+      "screenshot": "qa/renders/model-viewer/standard/rear.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 900,
+      "screenshot_bytes": 319378,
+      "screenshot_sha256": "a978b7b35b6e35555ede0bf26e773bd501b30ba15e78de4237d44a2093929d86",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "model-viewer",
+      "viewer_version": "model-viewer-4.3.1",
+      "renderer_path": "google-model-viewer-webgl",
+      "model": "standard",
+      "view": "rear-left",
+      "view_class": "oblique",
+      "ready": true,
+      "model_is_visible": true,
+      "canvas_count": 2,
+      "webgl_version": null,
+      "nodes": null,
+      "meshes": null,
+      "textured_meshes": null,
+      "render_info": null,
+      "bounds": null,
+      "loaded_at": "2026-08-23T16:33:02.811Z",
+      "run_evidence_file": "qa/webgl-model-viewer-standard-b-final.json",
+      "screenshot": "qa/renders/model-viewer/standard/rear-left.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 720,
+      "screenshot_bytes": 157434,
+      "screenshot_sha256": "38a6eb872dbdfcde08e8c7cc531436142462a0f6bfc9f70fda1e5b698cb4a54a",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "model-viewer",
+      "viewer_version": "model-viewer-4.3.1",
+      "renderer_path": "google-model-viewer-webgl",
+      "model": "standard",
+      "view": "rear-right",
+      "view_class": "oblique",
+      "ready": true,
+      "model_is_visible": true,
+      "canvas_count": 2,
+      "webgl_version": null,
+      "nodes": null,
+      "meshes": null,
+      "textured_meshes": null,
+      "render_info": null,
+      "bounds": null,
+      "loaded_at": "2026-08-23T16:33:02.811Z",
+      "run_evidence_file": "qa/webgl-model-viewer-standard-b-final.json",
+      "screenshot": "qa/renders/model-viewer/standard/rear-right.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 720,
+      "screenshot_bytes": 152049,
+      "screenshot_sha256": "2a63a4b3f406aba053b37b3d4af071d3fcc3fdb396ffd67c1d4e1e2fa1a2b64d",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "model-viewer",
+      "viewer_version": "model-viewer-4.3.1",
+      "renderer_path": "google-model-viewer-webgl",
+      "model": "standard",
+      "view": "right",
+      "view_class": "orthogonal",
+      "ready": true,
+      "model_is_visible": true,
+      "canvas_count": 2,
+      "webgl_version": null,
+      "nodes": null,
+      "meshes": null,
+      "textured_meshes": null,
+      "render_info": null,
+      "bounds": null,
+      "loaded_at": "2026-08-23T15:48:22.247Z",
+      "run_evidence_file": "qa/webgl-model-viewer-standard-a-final.json",
+      "screenshot": "qa/renders/model-viewer/standard/right.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 900,
+      "screenshot_bytes": 122516,
+      "screenshot_sha256": "f76459f59ea282b793e5f673d7a267873d84122823b39df2bcb635bb651d0b74",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "model-viewer",
+      "viewer_version": "model-viewer-4.3.1",
+      "renderer_path": "google-model-viewer-webgl",
+      "model": "standard",
+      "view": "top",
+      "view_class": "orthogonal",
+      "ready": true,
+      "model_is_visible": true,
+      "canvas_count": 2,
+      "webgl_version": null,
+      "nodes": null,
+      "meshes": null,
+      "textured_meshes": null,
+      "render_info": null,
+      "bounds": null,
+      "loaded_at": "2026-08-23T15:48:22.247Z",
+      "run_evidence_file": "qa/webgl-model-viewer-standard-a-final.json",
+      "screenshot": "qa/renders/model-viewer/standard/top.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 900,
+      "screenshot_bytes": 319214,
+      "screenshot_sha256": "46cfb453f9640cd308baca60250d7b36f3cdb6c94411039babf1c81c6f16c020",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "model-viewer",
+      "viewer_version": "model-viewer-4.3.1",
+      "renderer_path": "google-model-viewer-webgl",
+      "model": "web",
+      "view": "bottom",
+      "view_class": "orthogonal",
+      "ready": true,
+      "model_is_visible": true,
+      "canvas_count": 2,
+      "webgl_version": null,
+      "nodes": null,
+      "meshes": null,
+      "textured_meshes": null,
+      "render_info": null,
+      "bounds": null,
+      "loaded_at": "2026-08-23T16:01:12.087Z",
+      "run_evidence_file": "qa/webgl-model-viewer-web-b-final.json",
+      "screenshot": "qa/renders/model-viewer/web/bottom.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 900,
+      "screenshot_bytes": 366933,
+      "screenshot_sha256": "77d2cfae3c17f77d64a2202e45f6a39acb5159288e25eb72c4f8d4e28e34df0a",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "model-viewer",
+      "viewer_version": "model-viewer-4.3.1",
+      "renderer_path": "google-model-viewer-webgl",
+      "model": "web",
+      "view": "front",
+      "view_class": "orthogonal",
+      "ready": true,
+      "model_is_visible": true,
+      "canvas_count": 2,
+      "webgl_version": null,
+      "nodes": null,
+      "meshes": null,
+      "textured_meshes": null,
+      "render_info": null,
+      "bounds": null,
+      "loaded_at": "2026-08-23T16:00:21.191Z",
+      "run_evidence_file": "qa/webgl-model-viewer-web-a-final.json",
+      "screenshot": "qa/renders/model-viewer/web/front.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 900,
+      "screenshot_bytes": 265274,
+      "screenshot_sha256": "309305674f9042eebe7e4e4862bdc0f6d5536babc637082969ed82a069807b7e",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "model-viewer",
+      "viewer_version": "model-viewer-4.3.1",
+      "renderer_path": "google-model-viewer-webgl",
+      "model": "web",
+      "view": "front-left",
+      "view_class": "oblique",
+      "ready": true,
+      "model_is_visible": true,
+      "canvas_count": 2,
+      "webgl_version": null,
+      "nodes": null,
+      "meshes": null,
+      "textured_meshes": null,
+      "render_info": null,
+      "bounds": null,
+      "loaded_at": "2026-08-23T16:01:12.087Z",
+      "run_evidence_file": "qa/webgl-model-viewer-web-b-final.json",
+      "screenshot": "qa/renders/model-viewer/web/front-left.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 900,
+      "screenshot_bytes": 245342,
+      "screenshot_sha256": "db355588ab8344cc9257f8904cf4a078abfcbe797188a08dfa93c0fac53f35a3",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "model-viewer",
+      "viewer_version": "model-viewer-4.3.1",
+      "renderer_path": "google-model-viewer-webgl",
+      "model": "web",
+      "view": "front-right",
+      "view_class": "oblique",
+      "ready": true,
+      "model_is_visible": true,
+      "canvas_count": 2,
+      "webgl_version": null,
+      "nodes": null,
+      "meshes": null,
+      "textured_meshes": null,
+      "render_info": null,
+      "bounds": null,
+      "loaded_at": "2026-08-23T16:01:12.087Z",
+      "run_evidence_file": "qa/webgl-model-viewer-web-b-final.json",
+      "screenshot": "qa/renders/model-viewer/web/front-right.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 900,
+      "screenshot_bytes": 240607,
+      "screenshot_sha256": "f5eca9b18f6e16c47317c39b90c98b2149613c0440c29ed1cf36970271256101",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "model-viewer",
+      "viewer_version": "model-viewer-4.3.1",
+      "renderer_path": "google-model-viewer-webgl",
+      "model": "web",
+      "view": "left",
+      "view_class": "orthogonal",
+      "ready": true,
+      "model_is_visible": true,
+      "canvas_count": 2,
+      "webgl_version": null,
+      "nodes": null,
+      "meshes": null,
+      "textured_meshes": null,
+      "render_info": null,
+      "bounds": null,
+      "loaded_at": "2026-08-23T16:00:21.191Z",
+      "run_evidence_file": "qa/webgl-model-viewer-web-a-final.json",
+      "screenshot": "qa/renders/model-viewer/web/left.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 900,
+      "screenshot_bytes": 136735,
+      "screenshot_sha256": "ff0916730fb27f1f8f23fc25eda32451c5faa3a8d9606019ce6c4ca3464dba04",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "model-viewer",
+      "viewer_version": "model-viewer-4.3.1",
+      "renderer_path": "google-model-viewer-webgl",
+      "model": "web",
+      "view": "rear",
+      "view_class": "orthogonal",
+      "ready": true,
+      "model_is_visible": true,
+      "canvas_count": 2,
+      "webgl_version": null,
+      "nodes": null,
+      "meshes": null,
+      "textured_meshes": null,
+      "render_info": null,
+      "bounds": null,
+      "loaded_at": "2026-08-23T16:00:21.191Z",
+      "run_evidence_file": "qa/webgl-model-viewer-web-a-final.json",
+      "screenshot": "qa/renders/model-viewer/web/rear.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 900,
+      "screenshot_bytes": 319801,
+      "screenshot_sha256": "7b45a8d56a2fb80a0d1a74dfbbf14136f74d0e0edf867901d18f9f4e824f7ded",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "model-viewer",
+      "viewer_version": "model-viewer-4.3.1",
+      "renderer_path": "google-model-viewer-webgl",
+      "model": "web",
+      "view": "rear-left",
+      "view_class": "oblique",
+      "ready": true,
+      "model_is_visible": true,
+      "canvas_count": 2,
+      "webgl_version": null,
+      "nodes": null,
+      "meshes": null,
+      "textured_meshes": null,
+      "render_info": null,
+      "bounds": null,
+      "loaded_at": "2026-08-23T16:01:12.087Z",
+      "run_evidence_file": "qa/webgl-model-viewer-web-b-final.json",
+      "screenshot": "qa/renders/model-viewer/web/rear-left.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 900,
+      "screenshot_bytes": 246438,
+      "screenshot_sha256": "f346f16e20d75512915a7c5fbd273f92fdb86d1da060b8795219bd4f4cd6d90e",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "model-viewer",
+      "viewer_version": "model-viewer-4.3.1",
+      "renderer_path": "google-model-viewer-webgl",
+      "model": "web",
+      "view": "rear-right",
+      "view_class": "oblique",
+      "ready": true,
+      "model_is_visible": true,
+      "canvas_count": 2,
+      "webgl_version": null,
+      "nodes": null,
+      "meshes": null,
+      "textured_meshes": null,
+      "render_info": null,
+      "bounds": null,
+      "loaded_at": "2026-08-23T16:01:12.087Z",
+      "run_evidence_file": "qa/webgl-model-viewer-web-b-final.json",
+      "screenshot": "qa/renders/model-viewer/web/rear-right.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 900,
+      "screenshot_bytes": 239201,
+      "screenshot_sha256": "573c9f21cb1c0745c07e782b0753f0ff02d88530fd454881513df683aef2acbb",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "model-viewer",
+      "viewer_version": "model-viewer-4.3.1",
+      "renderer_path": "google-model-viewer-webgl",
+      "model": "web",
+      "view": "right",
+      "view_class": "orthogonal",
+      "ready": true,
+      "model_is_visible": true,
+      "canvas_count": 2,
+      "webgl_version": null,
+      "nodes": null,
+      "meshes": null,
+      "textured_meshes": null,
+      "render_info": null,
+      "bounds": null,
+      "loaded_at": "2026-08-23T16:00:21.191Z",
+      "run_evidence_file": "qa/webgl-model-viewer-web-a-final.json",
+      "screenshot": "qa/renders/model-viewer/web/right.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 900,
+      "screenshot_bytes": 121547,
+      "screenshot_sha256": "b4223e9107303b6e9b087df0e97ada976c812d172b7b2799cfd160f817ef7146",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "model-viewer",
+      "viewer_version": "model-viewer-4.3.1",
+      "renderer_path": "google-model-viewer-webgl",
+      "model": "web",
+      "view": "top",
+      "view_class": "orthogonal",
+      "ready": true,
+      "model_is_visible": true,
+      "canvas_count": 2,
+      "webgl_version": null,
+      "nodes": null,
+      "meshes": null,
+      "textured_meshes": null,
+      "render_info": null,
+      "bounds": null,
+      "loaded_at": "2026-08-23T16:00:21.191Z",
+      "run_evidence_file": "qa/webgl-model-viewer-web-a-final.json",
+      "screenshot": "qa/renders/model-viewer/web/top.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 900,
+      "screenshot_bytes": 322948,
+      "screenshot_sha256": "2e6158badb1ab2e13cd24817ed47ac712bc2b61604c5f4ca91fb7f2df4a07c94",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "threejs",
+      "viewer_version": "threejs-GLTFLoader-0.180.0",
+      "renderer_path": "threejs-webglrenderer-gltfloader",
+      "model": "standard",
+      "view": "bottom",
+      "view_class": "orthogonal",
+      "ready": true,
+      "model_is_visible": null,
+      "canvas_count": 1,
+      "webgl_version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "nodes": 119,
+      "meshes": 118,
+      "textured_meshes": 9,
+      "render_info": {
+        "calls": 118,
+        "triangles": 2614
+      },
+      "bounds": {
+        "min": [
+          -0.2409999966621399,
+          -0.043549999594688416,
+          -0.35822999477386475
+        ],
+        "max": [
+          0.2409999966621399,
+          0.043549999594688416,
+          0.3595750033855438
+        ],
+        "center": [
+          0,
+          0,
+          0.0006725043058395386
+        ]
+      },
+      "loaded_at": "2026-08-23T16:07:57.211Z",
+      "run_evidence_file": "qa/webgl-threejs-final-chunk-1.json",
+      "screenshot": "qa/renders/threejs/standard/bottom.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 720,
+      "screenshot_bytes": 148279,
+      "screenshot_sha256": "32af44c216c6847c952b0529f53ee65bf1fde2e884b4d0910366e768447a81bf",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "threejs",
+      "viewer_version": "threejs-GLTFLoader-0.180.0",
+      "renderer_path": "threejs-webglrenderer-gltfloader",
+      "model": "standard",
+      "view": "front",
+      "view_class": "orthogonal",
+      "ready": true,
+      "model_is_visible": null,
+      "canvas_count": 1,
+      "webgl_version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "nodes": 119,
+      "meshes": 118,
+      "textured_meshes": 9,
+      "render_info": {
+        "calls": 118,
+        "triangles": 2614
+      },
+      "bounds": {
+        "min": [
+          -0.2409999966621399,
+          -0.043549999594688416,
+          -0.35822999477386475
+        ],
+        "max": [
+          0.2409999966621399,
+          0.043549999594688416,
+          0.3595750033855438
+        ],
+        "center": [
+          0,
+          0,
+          0.0006725043058395386
+        ]
+      },
+      "loaded_at": "2026-08-23T16:06:44.403Z",
+      "run_evidence_file": "qa/webgl-threejs-final-chunk-0.json",
+      "screenshot": "qa/renders/threejs/standard/front.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 720,
+      "screenshot_bytes": 213311,
+      "screenshot_sha256": "6dad01bf29d7738d4ce24dc91f13f8fa6429a1412c0f507c1057cc3f31603f53",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "threejs",
+      "viewer_version": "threejs-GLTFLoader-0.180.0",
+      "renderer_path": "threejs-webglrenderer-gltfloader",
+      "model": "standard",
+      "view": "front-left",
+      "view_class": "oblique",
+      "ready": true,
+      "model_is_visible": null,
+      "canvas_count": 1,
+      "webgl_version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "nodes": 119,
+      "meshes": 118,
+      "textured_meshes": 9,
+      "render_info": {
+        "calls": 118,
+        "triangles": 2614
+      },
+      "bounds": {
+        "min": [
+          -0.2409999966621399,
+          -0.043549999594688416,
+          -0.35822999477386475
+        ],
+        "max": [
+          0.2409999966621399,
+          0.043549999594688416,
+          0.3595750033855438
+        ],
+        "center": [
+          0,
+          0,
+          0.0006725043058395386
+        ]
+      },
+      "loaded_at": "2026-08-23T16:12:19.445Z",
+      "run_evidence_file": "qa/webgl-threejs-final-chunk-2.json",
+      "screenshot": "qa/renders/threejs/standard/front-left.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 720,
+      "screenshot_bytes": 288970,
+      "screenshot_sha256": "c81427f4ee9fc995abd138428098e5a33bda6fb16da0d98450d616b8a48184be",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "threejs",
+      "viewer_version": "threejs-GLTFLoader-0.180.0",
+      "renderer_path": "threejs-webglrenderer-gltfloader",
+      "model": "standard",
+      "view": "front-right",
+      "view_class": "oblique",
+      "ready": true,
+      "model_is_visible": null,
+      "canvas_count": 1,
+      "webgl_version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "nodes": 119,
+      "meshes": 118,
+      "textured_meshes": 9,
+      "render_info": {
+        "calls": 118,
+        "triangles": 2614
+      },
+      "bounds": {
+        "min": [
+          -0.2409999966621399,
+          -0.043549999594688416,
+          -0.35822999477386475
+        ],
+        "max": [
+          0.2409999966621399,
+          0.043549999594688416,
+          0.3595750033855438
+        ],
+        "center": [
+          0,
+          0,
+          0.0006725043058395386
+        ]
+      },
+      "loaded_at": "2026-08-23T16:12:29.808Z",
+      "run_evidence_file": "qa/webgl-threejs-final-chunk-2.json",
+      "screenshot": "qa/renders/threejs/standard/front-right.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 720,
+      "screenshot_bytes": 282083,
+      "screenshot_sha256": "1ec17f4b433104152f4dba4889a2fdbdedf2aa06f0b91142b90591a957e0df6f",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "threejs",
+      "viewer_version": "threejs-GLTFLoader-0.180.0",
+      "renderer_path": "threejs-webglrenderer-gltfloader",
+      "model": "standard",
+      "view": "left",
+      "view_class": "orthogonal",
+      "ready": true,
+      "model_is_visible": null,
+      "canvas_count": 1,
+      "webgl_version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "nodes": 119,
+      "meshes": 118,
+      "textured_meshes": 9,
+      "render_info": {
+        "calls": 118,
+        "triangles": 2614
+      },
+      "bounds": {
+        "min": [
+          -0.2409999966621399,
+          -0.043549999594688416,
+          -0.35822999477386475
+        ],
+        "max": [
+          0.2409999966621399,
+          0.043549999594688416,
+          0.3595750033855438
+        ],
+        "center": [
+          0,
+          0,
+          0.0006725043058395386
+        ]
+      },
+      "loaded_at": "2026-08-23T16:06:53.473Z",
+      "run_evidence_file": "qa/webgl-threejs-final-chunk-0.json",
+      "screenshot": "qa/renders/threejs/standard/left.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 720,
+      "screenshot_bytes": 164206,
+      "screenshot_sha256": "0763e8c06ed91d90f437be7ce6839d16f8a5f2f02aee36a23b34e503cd33f1cf",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "threejs",
+      "viewer_version": "threejs-GLTFLoader-0.180.0",
+      "renderer_path": "threejs-webglrenderer-gltfloader",
+      "model": "standard",
+      "view": "rear",
+      "view_class": "orthogonal",
+      "ready": true,
+      "model_is_visible": null,
+      "canvas_count": 1,
+      "webgl_version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "nodes": 119,
+      "meshes": 118,
+      "textured_meshes": 9,
+      "render_info": {
+        "calls": 118,
+        "triangles": 2614
+      },
+      "bounds": {
+        "min": [
+          -0.2409999966621399,
+          -0.043549999594688416,
+          -0.35822999477386475
+        ],
+        "max": [
+          0.2409999966621399,
+          0.043549999594688416,
+          0.3595750033855438
+        ],
+        "center": [
+          0,
+          0,
+          0.0006725043058395386
+        ]
+      },
+      "loaded_at": "2026-08-23T16:06:48.953Z",
+      "run_evidence_file": "qa/webgl-threejs-final-chunk-0.json",
+      "screenshot": "qa/renders/threejs/standard/rear.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 720,
+      "screenshot_bytes": 254164,
+      "screenshot_sha256": "87065666847d09786243269d96ec7806aac36cba17b2da580d4e7c3805c94d95",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "threejs",
+      "viewer_version": "threejs-GLTFLoader-0.180.0",
+      "renderer_path": "threejs-webglrenderer-gltfloader",
+      "model": "standard",
+      "view": "rear-left",
+      "view_class": "oblique",
+      "ready": true,
+      "model_is_visible": null,
+      "canvas_count": 1,
+      "webgl_version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "nodes": 119,
+      "meshes": 118,
+      "textured_meshes": 9,
+      "render_info": {
+        "calls": 118,
+        "triangles": 2614
+      },
+      "bounds": {
+        "min": [
+          -0.2409999966621399,
+          -0.043549999594688416,
+          -0.35822999477386475
+        ],
+        "max": [
+          0.2409999966621399,
+          0.043549999594688416,
+          0.3595750033855438
+        ],
+        "center": [
+          0,
+          0,
+          0.0006725043058395386
+        ]
+      },
+      "loaded_at": "2026-08-23T16:12:39.645Z",
+      "run_evidence_file": "qa/webgl-threejs-final-chunk-2.json",
+      "screenshot": "qa/renders/threejs/standard/rear-left.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 720,
+      "screenshot_bytes": 295399,
+      "screenshot_sha256": "968021afd86f591cc034f6b4ad5cc82decd1fee9f6cd0808117e1648cbe5913c",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "threejs",
+      "viewer_version": "threejs-GLTFLoader-0.180.0",
+      "renderer_path": "threejs-webglrenderer-gltfloader",
+      "model": "standard",
+      "view": "rear-right",
+      "view_class": "oblique",
+      "ready": true,
+      "model_is_visible": null,
+      "canvas_count": 1,
+      "webgl_version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "nodes": 119,
+      "meshes": 118,
+      "textured_meshes": 9,
+      "render_info": {
+        "calls": 118,
+        "triangles": 2614
+      },
+      "bounds": {
+        "min": [
+          -0.2409999966621399,
+          -0.043549999594688416,
+          -0.35822999477386475
+        ],
+        "max": [
+          0.2409999966621399,
+          0.043549999594688416,
+          0.3595750033855438
+        ],
+        "center": [
+          0,
+          0,
+          0.0006725043058395386
+        ]
+      },
+      "loaded_at": "2026-08-23T16:15:18.145Z",
+      "run_evidence_file": "qa/webgl-threejs-final-chunk-3.json",
+      "screenshot": "qa/renders/threejs/standard/rear-right.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 900,
+      "screenshot_bytes": 292240,
+      "screenshot_sha256": "1affc36685ebc8609603cdca47b93e29ccbe1471c3bb1f7d0e84d8276ec7b822",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "threejs",
+      "viewer_version": "threejs-GLTFLoader-0.180.0",
+      "renderer_path": "threejs-webglrenderer-gltfloader",
+      "model": "standard",
+      "view": "right",
+      "view_class": "orthogonal",
+      "ready": true,
+      "model_is_visible": null,
+      "canvas_count": 1,
+      "webgl_version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "nodes": 119,
+      "meshes": 118,
+      "textured_meshes": 9,
+      "render_info": {
+        "calls": 118,
+        "triangles": 2614
+      },
+      "bounds": {
+        "min": [
+          -0.2409999966621399,
+          -0.043549999594688416,
+          -0.35822999477386475
+        ],
+        "max": [
+          0.2409999966621399,
+          0.043549999594688416,
+          0.3595750033855438
+        ],
+        "center": [
+          0,
+          0,
+          0.0006725043058395386
+        ]
+      },
+      "loaded_at": "2026-08-23T16:07:44.855Z",
+      "run_evidence_file": "qa/webgl-threejs-final-chunk-1.json",
+      "screenshot": "qa/renders/threejs/standard/right.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 720,
+      "screenshot_bytes": 152259,
+      "screenshot_sha256": "de9c085f821203ec665b4f72a3056851193712bfce2b6ff43d6281b9aead73a2",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "threejs",
+      "viewer_version": "threejs-GLTFLoader-0.180.0",
+      "renderer_path": "threejs-webglrenderer-gltfloader",
+      "model": "standard",
+      "view": "top",
+      "view_class": "orthogonal",
+      "ready": true,
+      "model_is_visible": null,
+      "canvas_count": 1,
+      "webgl_version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "nodes": 119,
+      "meshes": 118,
+      "textured_meshes": 9,
+      "render_info": {
+        "calls": 118,
+        "triangles": 2614
+      },
+      "bounds": {
+        "min": [
+          -0.2409999966621399,
+          -0.043549999594688416,
+          -0.35822999477386475
+        ],
+        "max": [
+          0.2409999966621399,
+          0.043549999594688416,
+          0.3595750033855438
+        ],
+        "center": [
+          0,
+          0,
+          0.0006725043058395386
+        ]
+      },
+      "loaded_at": "2026-08-23T16:07:50.059Z",
+      "run_evidence_file": "qa/webgl-threejs-final-chunk-1.json",
+      "screenshot": "qa/renders/threejs/standard/top.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 720,
+      "screenshot_bytes": 156403,
+      "screenshot_sha256": "ef87395bda957a4d032e5521b4ff6391cbe9196be91b4a5baec9485794fd1750",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "threejs",
+      "viewer_version": "threejs-GLTFLoader-0.180.0",
+      "renderer_path": "threejs-webglrenderer-gltfloader",
+      "model": "web",
+      "view": "bottom",
+      "view_class": "orthogonal",
+      "ready": true,
+      "model_is_visible": null,
+      "canvas_count": 1,
+      "webgl_version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "nodes": 119,
+      "meshes": 118,
+      "textured_meshes": 9,
+      "render_info": {
+        "calls": 118,
+        "triangles": 2614
+      },
+      "bounds": {
+        "min": [
+          -0.2409999966621399,
+          -0.043549999594688416,
+          -0.35822999477386475
+        ],
+        "max": [
+          0.2409999966621399,
+          0.043549999594688416,
+          0.3595750033855438
+        ],
+        "center": [
+          0,
+          0,
+          0.0006725043058395386
+        ]
+      },
+      "loaded_at": "2026-08-23T16:33:24.486Z",
+      "run_evidence_file": "qa/webgl-threejs-final-chunk-5.json",
+      "screenshot": "qa/renders/threejs/web/bottom.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 720,
+      "screenshot_bytes": 149768,
+      "screenshot_sha256": "abc355ed4d2eab508018532954eb58c2aad9d7608bd0ef1b3794960ffa01f635",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "threejs",
+      "viewer_version": "threejs-GLTFLoader-0.180.0",
+      "renderer_path": "threejs-webglrenderer-gltfloader",
+      "model": "web",
+      "view": "front",
+      "view_class": "orthogonal",
+      "ready": true,
+      "model_is_visible": null,
+      "canvas_count": 1,
+      "webgl_version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "nodes": 119,
+      "meshes": 118,
+      "textured_meshes": 9,
+      "render_info": {
+        "calls": 118,
+        "triangles": 2614
+      },
+      "bounds": {
+        "min": [
+          -0.2409999966621399,
+          -0.043549999594688416,
+          -0.35822999477386475
+        ],
+        "max": [
+          0.2409999966621399,
+          0.043549999594688416,
+          0.3595750033855438
+        ],
+        "center": [
+          0,
+          0,
+          0.0006725043058395386
+        ]
+      },
+      "loaded_at": "2026-08-23T16:15:26.716Z",
+      "run_evidence_file": "qa/webgl-threejs-final-chunk-3.json",
+      "screenshot": "qa/renders/threejs/web/front.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 900,
+      "screenshot_bytes": 215402,
+      "screenshot_sha256": "cfd82d04de82ac22c54455ca70bee4b2aad989bb6b57c53a6ee524baff27c563",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "threejs",
+      "viewer_version": "threejs-GLTFLoader-0.180.0",
+      "renderer_path": "threejs-webglrenderer-gltfloader",
+      "model": "web",
+      "view": "front-left",
+      "view_class": "oblique",
+      "ready": true,
+      "model_is_visible": null,
+      "canvas_count": 1,
+      "webgl_version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "nodes": 119,
+      "meshes": 118,
+      "textured_meshes": 9,
+      "render_info": {
+        "calls": 118,
+        "triangles": 2614
+      },
+      "bounds": {
+        "min": [
+          -0.2409999966621399,
+          -0.043549999594688416,
+          -0.35822999477386475
+        ],
+        "max": [
+          0.2409999966621399,
+          0.043549999594688416,
+          0.3595750033855438
+        ],
+        "center": [
+          0,
+          0,
+          0.0006725043058395386
+        ]
+      },
+      "loaded_at": "2026-08-23T16:33:28.146Z",
+      "run_evidence_file": "qa/webgl-threejs-final-chunk-5.json",
+      "screenshot": "qa/renders/threejs/web/front-left.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 720,
+      "screenshot_bytes": 288752,
+      "screenshot_sha256": "e869d667bed045d4fe5c6cf502c688e2b89af9489e140040ddc1f544d68498e2",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "threejs",
+      "viewer_version": "threejs-GLTFLoader-0.180.0",
+      "renderer_path": "threejs-webglrenderer-gltfloader",
+      "model": "web",
+      "view": "front-right",
+      "view_class": "oblique",
+      "ready": true,
+      "model_is_visible": null,
+      "canvas_count": 1,
+      "webgl_version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "nodes": 119,
+      "meshes": 118,
+      "textured_meshes": 9,
+      "render_info": {
+        "calls": 118,
+        "triangles": 2614
+      },
+      "bounds": {
+        "min": [
+          -0.2409999966621399,
+          -0.043549999594688416,
+          -0.35822999477386475
+        ],
+        "max": [
+          0.2409999966621399,
+          0.043549999594688416,
+          0.3595750033855438
+        ],
+        "center": [
+          0,
+          0,
+          0.0006725043058395386
+        ]
+      },
+      "loaded_at": "2026-08-23T16:33:31.735Z",
+      "run_evidence_file": "qa/webgl-threejs-final-chunk-5.json",
+      "screenshot": "qa/renders/threejs/web/front-right.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 720,
+      "screenshot_bytes": 281324,
+      "screenshot_sha256": "f3dbc5afa4b4444b7a15b9aa1bc988cecd4ba8f17c3b26c47ceb27ed58c9fa45",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "threejs",
+      "viewer_version": "threejs-GLTFLoader-0.180.0",
+      "renderer_path": "threejs-webglrenderer-gltfloader",
+      "model": "web",
+      "view": "left",
+      "view_class": "orthogonal",
+      "ready": true,
+      "model_is_visible": null,
+      "canvas_count": 1,
+      "webgl_version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "nodes": 119,
+      "meshes": 118,
+      "textured_meshes": 9,
+      "render_info": {
+        "calls": 118,
+        "triangles": 2614
+      },
+      "bounds": {
+        "min": [
+          -0.2409999966621399,
+          -0.043549999594688416,
+          -0.35822999477386475
+        ],
+        "max": [
+          0.2409999966621399,
+          0.043549999594688416,
+          0.3595750033855438
+        ],
+        "center": [
+          0,
+          0,
+          0.0006725043058395386
+        ]
+      },
+      "loaded_at": "2026-08-23T16:16:09.298Z",
+      "run_evidence_file": "qa/webgl-threejs-final-chunk-4.json",
+      "screenshot": "qa/renders/threejs/web/left.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 900,
+      "screenshot_bytes": 168568,
+      "screenshot_sha256": "e0288d1b69e108c2ed780ee47206c888d0926f5c888b82d3258e8a8197badfc6",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "threejs",
+      "viewer_version": "threejs-GLTFLoader-0.180.0",
+      "renderer_path": "threejs-webglrenderer-gltfloader",
+      "model": "web",
+      "view": "rear",
+      "view_class": "orthogonal",
+      "ready": true,
+      "model_is_visible": null,
+      "canvas_count": 1,
+      "webgl_version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "nodes": 119,
+      "meshes": 118,
+      "textured_meshes": 9,
+      "render_info": {
+        "calls": 118,
+        "triangles": 2614
+      },
+      "bounds": {
+        "min": [
+          -0.2409999966621399,
+          -0.043549999594688416,
+          -0.35822999477386475
+        ],
+        "max": [
+          0.2409999966621399,
+          0.043549999594688416,
+          0.3595750033855438
+        ],
+        "center": [
+          0,
+          0,
+          0.0006725043058395386
+        ]
+      },
+      "loaded_at": "2026-08-23T16:15:29.754Z",
+      "run_evidence_file": "qa/webgl-threejs-final-chunk-3.json",
+      "screenshot": "qa/renders/threejs/web/rear.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 900,
+      "screenshot_bytes": 256968,
+      "screenshot_sha256": "6f0156cf6a45cf887dac7b4166f6a9ccfad6cb57c6edda3eb38617951ceda99f",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "threejs",
+      "viewer_version": "threejs-GLTFLoader-0.180.0",
+      "renderer_path": "threejs-webglrenderer-gltfloader",
+      "model": "web",
+      "view": "rear-left",
+      "view_class": "oblique",
+      "ready": true,
+      "model_is_visible": null,
+      "canvas_count": 1,
+      "webgl_version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "nodes": 119,
+      "meshes": 118,
+      "textured_meshes": 9,
+      "render_info": {
+        "calls": 118,
+        "triangles": 2614
+      },
+      "bounds": {
+        "min": [
+          -0.2409999966621399,
+          -0.043549999594688416,
+          -0.35822999477386475
+        ],
+        "max": [
+          0.2409999966621399,
+          0.043549999594688416,
+          0.3595750033855438
+        ],
+        "center": [
+          0,
+          0,
+          0.0006725043058395386
+        ]
+      },
+      "loaded_at": "2026-08-23T16:24:51.232Z",
+      "run_evidence_file": "qa/webgl-threejs-final-chunk-6.json",
+      "screenshot": "qa/renders/threejs/web/rear-left.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 900,
+      "screenshot_bytes": 297103,
+      "screenshot_sha256": "4594f2c753a208d55d8e14e9ffbccc9dd76fcdf5acebed30a11dbb9ee1a869b0",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "threejs",
+      "viewer_version": "threejs-GLTFLoader-0.180.0",
+      "renderer_path": "threejs-webglrenderer-gltfloader",
+      "model": "web",
+      "view": "rear-right",
+      "view_class": "oblique",
+      "ready": true,
+      "model_is_visible": null,
+      "canvas_count": 1,
+      "webgl_version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "nodes": 119,
+      "meshes": 118,
+      "textured_meshes": 9,
+      "render_info": {
+        "calls": 118,
+        "triangles": 2614
+      },
+      "bounds": {
+        "min": [
+          -0.2409999966621399,
+          -0.043549999594688416,
+          -0.35822999477386475
+        ],
+        "max": [
+          0.2409999966621399,
+          0.043549999594688416,
+          0.3595750033855438
+        ],
+        "center": [
+          0,
+          0,
+          0.0006725043058395386
+        ]
+      },
+      "loaded_at": "2026-08-23T16:24:54.496Z",
+      "run_evidence_file": "qa/webgl-threejs-final-chunk-6.json",
+      "screenshot": "qa/renders/threejs/web/rear-right.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 900,
+      "screenshot_bytes": 291374,
+      "screenshot_sha256": "09692788688ec14455da1a5005ebb3edae78a99b863397a55f683195c6579bec",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "threejs",
+      "viewer_version": "threejs-GLTFLoader-0.180.0",
+      "renderer_path": "threejs-webglrenderer-gltfloader",
+      "model": "web",
+      "view": "right",
+      "view_class": "orthogonal",
+      "ready": true,
+      "model_is_visible": null,
+      "canvas_count": 1,
+      "webgl_version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "nodes": 119,
+      "meshes": 118,
+      "textured_meshes": 9,
+      "render_info": {
+        "calls": 118,
+        "triangles": 2614
+      },
+      "bounds": {
+        "min": [
+          -0.2409999966621399,
+          -0.043549999594688416,
+          -0.35822999477386475
+        ],
+        "max": [
+          0.2409999966621399,
+          0.043549999594688416,
+          0.3595750033855438
+        ],
+        "center": [
+          0,
+          0,
+          0.0006725043058395386
+        ]
+      },
+      "loaded_at": "2026-08-23T16:16:15.874Z",
+      "run_evidence_file": "qa/webgl-threejs-final-chunk-4.json",
+      "screenshot": "qa/renders/threejs/web/right.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 900,
+      "screenshot_bytes": 157653,
+      "screenshot_sha256": "44314ba2625d537f0f3f6b953f518ba026d0e0b9126818f4ae4d573c68361162",
+      "visible_overlay_status": "LOADED"
+    },
+    {
+      "viewer": "threejs",
+      "viewer_version": "threejs-GLTFLoader-0.180.0",
+      "renderer_path": "threejs-webglrenderer-gltfloader",
+      "model": "web",
+      "view": "top",
+      "view_class": "orthogonal",
+      "ready": true,
+      "model_is_visible": null,
+      "canvas_count": 1,
+      "webgl_version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+      "nodes": 119,
+      "meshes": 118,
+      "textured_meshes": 9,
+      "render_info": {
+        "calls": 118,
+        "triangles": 2614
+      },
+      "bounds": {
+        "min": [
+          -0.2409999966621399,
+          -0.043549999594688416,
+          -0.35822999477386475
+        ],
+        "max": [
+          0.2409999966621399,
+          0.043549999594688416,
+          0.3595750033855438
+        ],
+        "center": [
+          0,
+          0,
+          0.0006725043058395386
+        ]
+      },
+      "loaded_at": "2026-08-23T16:16:24.526Z",
+      "run_evidence_file": "qa/webgl-threejs-final-chunk-4.json",
+      "screenshot": "qa/renders/threejs/web/top.png",
+      "screenshot_width_px": 1280,
+      "screenshot_height_px": 900,
+      "screenshot_bytes": 255109,
+      "screenshot_sha256": "b0a8c9eddad2a2f0e77254608cd6026952ed85b210c326aef7dc0d1915356d87",
+      "visible_overlay_status": "LOADED"
+    }
+  ],
+  "standard_web_parity": {
+    "path": "qa/standard-web-parity.csv",
+    "row_count": 20,
+    "max_mae": 19.528181,
+    "max_rmse": 42.446114,
+    "structural_basis": "identical 118-mesh/2614-triangle topology and identical audited bounds"
+  }
+}

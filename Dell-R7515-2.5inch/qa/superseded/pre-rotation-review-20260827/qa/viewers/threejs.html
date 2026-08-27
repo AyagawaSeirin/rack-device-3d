@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>R7515 Three.js GLTFLoader QA</title>
+  <link rel="icon" href="data:,">
+  <script type="importmap">
+    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"}}
+  </script>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #e7e7e7; color: #171717; }
+    header { height: 88px; display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; background: #fff; border-bottom: 1px solid #aaa; }
+    h1 { margin: 0; font-size: 24px; }
+    #status { font: 600 15px/1.4 ui-monospace, monospace; text-align: right; }
+    main { height: calc(100vh - 88px); padding: 20px; }
+    #stage { width: 100%; height: 100%; border: 1px solid #8d8d8d; background-color: #d7d7d7; background-image: linear-gradient(45deg,#eee 25%,transparent 25%),linear-gradient(-45deg,#eee 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#eee 75%),linear-gradient(-45deg,transparent 75%,#eee 75%); background-size: 32px 32px; background-position: 0 0,0 16px,16px -16px,-16px 0; }
+    canvas { display: block; width: 100%; height: 100%; }
+    body.raw header { display: none; }
+    body.raw main { height: 100vh; padding: 0; }
+    body.raw #stage { border: 0; background: #fff; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dell PowerEdge R7515 — Three.js GLTFLoader 0.180.0</h1>
+    <div id="status">initializing</div>
+  </header>
+  <main><div id="stage"></div></main>
+  <script type="module">
+    import * as THREE from 'three';
+    import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+    const params = new URLSearchParams(location.search);
+    const modelKey = params.get('model') === 'web' ? 'web' : 'standard';
+    const viewKey = params.get('view') || 'front';
+    const run = params.get('run') || 'manual';
+    const rawMode = params.get('raw') === '1';
+    if (rawMode) document.body.classList.add('raw');
+    const models = {
+      standard: '../../model/Dell-R7515-2.5inch.glb',
+      web: '../../model/Dell-R7515-2.5inch-web.glb'
+    };
+    const directions = {
+      front: [0,0,1], rear: [0,0,-1], right: [1,0,0], left: [-1,0,0],
+      top: [0,1,0], bottom: [0,-1,0],
+      'front-right': [1,0.45,1], 'front-left': [-1,0.45,1],
+      'rear-right': [1,0.45,-1], 'rear-left': [-1,0.45,-1]
+    };
+    const stage = document.querySelector('#stage');
+    const status = document.querySelector('#status');
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, preserveDrawingBuffer: true });
+    renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+    renderer.setSize(stage.clientWidth, stage.clientHeight, false);
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+    renderer.toneMapping = THREE.NoToneMapping;
+    renderer.setClearColor(rawMode ? 0xffffff : 0x000000, rawMode ? 1 : 0);
+    stage.appendChild(renderer.domElement);
+
+    const scene = new THREE.Scene();
+    scene.add(new THREE.AmbientLight(0xffffff, 0.65));
+    const key = new THREE.DirectionalLight(0xffffff, 1.15); key.position.set(2, 3, 4); scene.add(key);
+    const fill = new THREE.DirectionalLight(0xcfd8e8, 0.35); fill.position.set(-3, 1, -2); scene.add(fill);
+    const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.01, 20);
+
+    function boxCorners(box) {
+      const points = [];
+      for (const x of [box.min.x, box.max.x]) for (const y of [box.min.y, box.max.y]) for (const z of [box.min.z, box.max.z]) points.push(new THREE.Vector3(x,y,z));
+      return points;
+    }
+
+    function fitCamera(root, direction) {
+      const box = new THREE.Box3().setFromObject(root);
+      const center = box.getCenter(new THREE.Vector3());
+      const dir = new THREE.Vector3(...direction).normalize();
+      camera.position.copy(center).addScaledVector(dir, 3);
+      camera.up.set(0, 1, 0);
+      if (Math.abs(dir.y) > 0.9) camera.up.set(0, 0, -1);
+      camera.lookAt(center);
+      camera.updateMatrixWorld(true);
+      camera.matrixWorldInverse.copy(camera.matrixWorld).invert();
+      let maxX = 0, maxY = 0;
+      for (const point of boxCorners(box)) {
+        const local = point.clone().applyMatrix4(camera.matrixWorldInverse);
+        maxX = Math.max(maxX, Math.abs(local.x));
+        maxY = Math.max(maxY, Math.abs(local.y));
+      }
+      const aspect = stage.clientWidth / stage.clientHeight;
+      maxX *= 1.14; maxY *= 1.14;
+      if (maxX / maxY > aspect) maxY = maxX / aspect; else maxX = maxY * aspect;
+      camera.left = -maxX; camera.right = maxX; camera.top = maxY; camera.bottom = -maxY;
+      camera.near = 0.01; camera.far = 20; camera.updateProjectionMatrix();
+      return { min: box.min.toArray(), max: box.max.toArray(), center: center.toArray() };
+    }
+
+    const loader = new GLTFLoader();
+    loader.load(models[modelKey], (gltf) => {
+      scene.add(gltf.scene);
+      let meshes = 0, nodes = 0, texturedMeshes = 0;
+      gltf.scene.traverse((node) => {
+        nodes += 1;
+        if (node.isMesh) {
+          meshes += 1;
+          const materials = Array.isArray(node.material) ? node.material : [node.material];
+          if (materials.some((material) => material && material.map)) texturedMeshes += 1;
+        }
+      });
+      const bounds = fitCamera(gltf.scene, directions[viewKey] || directions.front);
+      renderer.render(scene, camera);
+      window.__qaThree = { renderer, camera, scene, root: gltf.scene, fitCamera, directions, stage };
+      requestAnimationFrame(() => {
+        renderer.render(scene, camera);
+        const gl = renderer.getContext();
+        window.__qa = {
+          ready: true,
+          viewer: 'threejs-GLTFLoader-0.180.0',
+          rendererPath: 'threejs-webglrenderer-gltfloader',
+          model: modelKey,
+          modelUrl: models[modelKey],
+          view: viewKey,
+          run,
+          canvasCount: stage.querySelectorAll('canvas').length,
+          webglVersion: gl.getParameter(gl.VERSION),
+          nodes, meshes, texturedMeshes,
+          renderInfo: { calls: renderer.info.render.calls, triangles: renderer.info.render.triangles },
+          bounds,
+          loadedAt: new Date().toISOString()
+        };
+        status.textContent = `LOADED · ${modelKey} · ${viewKey} · ${meshes} meshes`;
+      });
+    }, (progress) => {
+      status.textContent = `loading ${modelKey} ${Math.round(100 * progress.loaded / Math.max(progress.total, 1))}%`;
+    }, (error) => {
+      status.textContent = `ERROR ${modelKey} ${viewKey}`;
+      window.__qa = { ready: false, error: String(error?.message || error), viewer: 'threejs-GLTFLoader-0.180.0', model: modelKey, view: viewKey, run };
+    });
+  </script>
+</body>
+</html>

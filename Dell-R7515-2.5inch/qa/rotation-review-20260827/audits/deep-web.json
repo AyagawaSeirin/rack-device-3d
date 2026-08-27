@@ -1,0 +1,291 @@
+{
+  "input": "Dell-R7515-2.5inch/model/Dell-R7515-2.5inch-web.glb",
+  "byte_size": 8173788,
+  "thresholds": {
+    "exact_duplicate_m": 1e-7,
+    "exact_coplanar_m": 1e-7,
+    "near_coplanar_m": 0.0002
+  },
+  "counts": {
+    "nodes": 104,
+    "meshes": 104,
+    "triangles_world_instances": 2860,
+    "duplicate_triangle_groups": 0,
+    "exact_coplanar_triangle_pairs": 0,
+    "near_coplanar_triangle_pairs": 0,
+    "negative_transforms": 0,
+    "singular_transforms": 0,
+    "blend_materials": 0,
+    "double_sided_materials": 0,
+    "primary_material_errors": 0,
+    "closed_core_nodes": 1,
+    "closed_core_failures": 0,
+    "watertight_mesh_instances": 94,
+    "inward_watertight_mesh_instances": 0,
+    "normal_attribute_mismatch_triangles": 0
+  },
+  "duplicate_triangle_groups": [],
+  "exact_coplanar_pairs": [],
+  "near_coplanar_pairs": [],
+  "negative_or_singular_transforms": [],
+  "materials": [
+    {
+      "name": "galvanized-steel",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.6823529411764706,
+        0.6980392156862745,
+        0.7098039215686275,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "photo-front-body",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 2048,
+        "height": 407,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "photo-rear",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 2048,
+        "height": 410,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "photo-right-body",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 2048,
+        "height": 275,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "photo-left-body",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 2048,
+        "height": 275,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "photo-top-body",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 1029,
+        "height": 1536,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "photo-bottom",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 1031,
+        "height": 1536,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "photo-front-logo",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 1024,
+        "height": 365,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "bezel-graphite",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.18823529411764706,
+        0.18823529411764706,
+        0.19607843137254902,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "mechanical-black",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.07450980392156863,
+        0.08235294117647059,
+        0.09019607843137255,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    },
+    {
+      "name": "photo-rear-psu-top",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 1024,
+        "height": 488,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "photo-rear-psu-bottom",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "double_sided": false,
+      "unlit": true,
+      "embedded_image": {
+        "format": "PNG",
+        "width": 1024,
+        "height": 487,
+        "channels": "srgb",
+        "alpha_min": 2.7431e+303,
+        "alpha_max": -2.7431e+303,
+        "contains_nonopaque_alpha": false
+      }
+    },
+    {
+      "name": "recess-dark",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.03137254901960784,
+        0.0392156862745098,
+        0.047058823529411764,
+        1
+      ],
+      "double_sided": false,
+      "unlit": false,
+      "embedded_image": null
+    }
+  ],
+  "primary_material_errors": [],
+  "closed_core": [
+    {
+      "node": "closed-chassis-core",
+      "triangle_count": 12,
+      "edge_count": 18,
+      "boundary_edge_count": 0,
+      "non_manifold_edge_count": 0,
+      "signed_volume": 0.023405003246724832,
+      "watertight": true,
+      "outward_signed_volume": true
+    }
+  ],
+  "inward_watertight_meshes": [],
+  "normal_attribute_mismatches": [],
+  "unresolved": [],
+  "status": "PASS"
+}

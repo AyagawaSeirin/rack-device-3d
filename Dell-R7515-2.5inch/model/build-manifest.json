@@ -24,35 +24,47 @@
     "independent_side_relief": true,
     "closed_chassis_core": true
   },
+  "material_contract": {
+    "photo_materials": "KHR_materials_unlit",
+    "alpha_mode": "OPAQUE",
+    "base_color_factor": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "double_sided": false,
+    "mechanical_relief": "PBR"
+  },
   "builds": [
     {
       "flavor": "standard",
       "path": "model/Dell-R7515-2.5inch.glb",
-      "bytes": 17680308,
-      "nodes": 118,
-      "meshes": 118,
-      "triangles": 2614,
-      "vertices": 1526,
+      "bytes": 17739812,
+      "nodes": 104,
+      "meshes": 104,
+      "triangles": 2862,
+      "vertices": 3886,
       "bounds": {
         "min_m": [
           -0.241,
           -0.04355,
-          -0.35822999
+          -0.35822001
         ],
         "max_m": [
           0.241,
-          0.04355,
+          0.0434,
           0.359575
         ],
         "extents_m": [
           0.482,
-          0.0871,
-          0.717805
+          0.08695,
+          0.71779501
         ],
         "extents_mm": [
           482.0,
-          87.1,
-          717.805
+          86.95,
+          717.795
         ]
       },
       "texture_paths": {
@@ -70,31 +82,31 @@
     {
       "flavor": "web",
       "path": "model/Dell-R7515-2.5inch-web.glb",
-      "bytes": 8114260,
-      "nodes": 118,
-      "meshes": 118,
-      "triangles": 2614,
-      "vertices": 1526,
+      "bytes": 8173788,
+      "nodes": 104,
+      "meshes": 104,
+      "triangles": 2862,
+      "vertices": 3886,
       "bounds": {
         "min_m": [
           -0.241,
           -0.04355,
-          -0.35822999
+          -0.35822001
         ],
         "max_m": [
           0.241,
-          0.04355,
+          0.0434,
           0.359575
         ],
         "extents_m": [
           0.482,
-          0.0871,
-          0.717805
+          0.08695,
+          0.71779501
         ],
         "extents_mm": [
           482.0,
-          87.1,
-          717.805
+          86.95,
+          717.795
         ]
       },
       "texture_paths": {

@@ -1,0 +1,38 @@
+### Browser `rr-r7515-three-standard` opened with pid 244960.
+### Ran Playwright code
+```js
+await page.goto('http://127.0.0.1:8899/Dell-R7515-2.5inch/qa/rotation-review/three.html?flavor=standard&cb=rotation-review-20260827-three-standard-load-01&run=rotation-review-20260827&load=1');
+```
+### Page
+- Page URL: http://127.0.0.1:8899/Dell-R7515-2.5inch/qa/rotation-review/three.html?flavor=standard&cb=rotation-review-20260827-three-standard-load-01&run=rotation-review-20260827&load=1
+- Page Title: Three.js rotation review
+- Console: 0 errors, 1 warnings
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-08-27T12-31-58-761Z.yml)
+### Events
+- New console entries: .playwright-cli/console-2026-08-27T12-29-57-124Z.log#L1
+### Ran Playwright code
+```js
+await page.setViewportSize({ width: 1024, height: 768 });
+```
+### Page
+- Page URL: http://127.0.0.1:8899/Dell-R7515-2.5inch/qa/rotation-review/three.html?flavor=standard&cb=rotation-review-20260827-three-standard-load-01&run=rotation-review-20260827&load=1
+- Page Title: Three.js rotation review
+- Console: 0 errors, 2 warnings
+### Page
+- Page URL: about:blank
+### Snapshot
+```yaml
+
+```
+### Events
+- New console entries: .playwright-cli/console-2026-08-27T12-34-08-719Z.log#L1-L6
+### Error
+ReferenceError: URL is not defined
+### Result
+Total messages: 0 (Errors: 0, Warnings: 0)
+
+### Result
+
+Browser 'rr-r7515-three-standard' closed
+

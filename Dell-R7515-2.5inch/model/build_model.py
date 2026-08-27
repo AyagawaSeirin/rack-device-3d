@@ -12,12 +12,14 @@ import argparse
 import gc
 import json
 import math
+import struct
 from pathlib import Path
 
 import numpy as np
 import trimesh
 from PIL import Image
-from shapely.geometry import Polygon
+from shapely.geometry import Polygon, box as shapely_box
+from shapely.ops import unary_union
 from trimesh.visual.material import PBRMaterial
 from trimesh.visual.texture import TextureVisuals
 
@@ -168,6 +170,61 @@ def material_texture(name: str, path: Path) -> PBRMaterial:
     )
 
 
+def enforce_glb_material_contract(payload: bytes) -> bytes:
+    """Make source-photo materials deterministic across glTF renderers.
+
+    Trimesh does not currently expose KHR_materials_unlit on PBRMaterial, so
+    apply the extension to the exported JSON chunk.  The photo materials keep
+    neutral factors, OPAQUE mode, and single-sided rasterization; mechanical
+    relief stays PBR so its depth remains visible under neutral viewer light.
+    """
+    magic, version, _ = struct.unpack_from("<4sII", payload, 0)
+    if magic != b"glTF" or version != 2:
+        raise ValueError("expected a glTF 2.0 GLB")
+    offset = 12
+    chunks: list[tuple[bytes, bytes]] = []
+    while offset < len(payload):
+        chunk_length, chunk_type = struct.unpack_from("<I4s", payload, offset)
+        offset += 8
+        chunk = payload[offset:offset + chunk_length]
+        offset += chunk_length
+        chunks.append((chunk_type, chunk))
+    json_index = next(i for i, (kind, _) in enumerate(chunks) if kind == b"JSON")
+    gltf = json.loads(chunks[json_index][1].decode("utf-8").rstrip(" \t\r\n\0"))
+    for material in gltf.get("materials", []):
+        if not material.get("name", "").startswith("photo-"):
+            continue
+        material["alphaMode"] = "OPAQUE"
+        material["doubleSided"] = False
+        pbr = material.setdefault("pbrMetallicRoughness", {})
+        pbr["baseColorFactor"] = [1.0, 1.0, 1.0, 1.0]
+        pbr["metallicFactor"] = 0.0
+        material.setdefault("extensions", {})["KHR_materials_unlit"] = {}
+    samplers = gltf.get("samplers", [])
+    if gltf.get("textures") and not samplers:
+        samplers = [{"magFilter": 9729, "minFilter": 9987, "wrapS": 33071, "wrapT": 33071}]
+        gltf["samplers"] = samplers
+        for texture in gltf["textures"]:
+            texture["sampler"] = 0
+    else:
+        for sampler in samplers:
+            sampler.update({"magFilter": 9729, "minFilter": 9987, "wrapS": 33071, "wrapT": 33071})
+    asset_extras = gltf.setdefault("asset", {}).setdefault("extras", {})
+    asset_extras.update({
+        "coordinateConvention": "right-handed; +X device right from front; +Y up; +Z front",
+        "photoMaterialContract": "OPAQUE neutral sRGB KHR_materials_unlit single-sided",
+    })
+    used = list(gltf.get("extensionsUsed", []))
+    if "KHR_materials_unlit" not in used:
+        used.append("KHR_materials_unlit")
+    gltf["extensionsUsed"] = used
+    json_chunk = json.dumps(gltf, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+    json_chunk += b" " * ((-len(json_chunk)) % 4)
+    chunks[json_index] = (b"JSON", json_chunk)
+    body = b"".join(struct.pack("<I4s", len(chunk), kind) + chunk for kind, chunk in chunks)
+    return struct.pack("<4sII", b"glTF", 2, 12 + len(body)) + body
+
+
 def assign_material(mesh: trimesh.Trimesh, material: PBRMaterial) -> trimesh.Trimesh:
     mesh.visual = TextureVisuals(material=material)
     mesh.metadata["material_name"] = material.name
@@ -249,11 +306,12 @@ def add_textured_faces(scene: trimesh.Scene, textures: dict[str, Path]) -> dict[
         (-BODY_W/2 - 0.00015, Y_TOP,    Z_REAR_WALL),
     ], (-1, 0, 0), mats["left-body"]), "left-photo")
 
+    top_photo_y = Y_TOP - 0.0013
     add_mesh(scene, quad_mesh("top-photo", [
-        (-BODY_W/2, Y_TOP + 0.00015, Z_FRONT_REF),
-        ( BODY_W/2, Y_TOP + 0.00015, Z_FRONT_REF),
-        ( BODY_W/2, Y_TOP + 0.00015, Z_REAR_WALL),
-        (-BODY_W/2, Y_TOP + 0.00015, Z_REAR_WALL),
+        (-BODY_W/2, top_photo_y, Z_FRONT_REF),
+        ( BODY_W/2, top_photo_y, Z_FRONT_REF),
+        ( BODY_W/2, top_photo_y, Z_REAR_WALL),
+        (-BODY_W/2, top_photo_y, Z_REAR_WALL),
     ], (0, 1, 0), mats["top-body"]), "top-photo")
 
     add_mesh(scene, quad_mesh("bottom-photo", [
@@ -292,19 +350,27 @@ def add_front_assemblies(scene: trimesh.Scene, graphite: PBRMaterial, black: PBR
     # The installed bezel is the silhouette/parallax assembly in front of it.
     depth = 0.008
     zbase = Z_FRONT_OUT - depth
-    add_box(scene, "bezel-top-frame", (0.430, 0.005, depth), (0, Y_TOP - 0.0025, zbase + depth/2), graphite)
-    add_box(scene, "bezel-bottom-frame", (0.430, 0.005, depth), (0, Y_BOTTOM + 0.0025, zbase + depth/2), graphite)
-    add_box(scene, "bezel-left-lock-block", (0.033, 0.081, 0.015), (-0.205, 0, Z_FRONT_OUT - 0.0075), black)
-    add_box(scene, "bezel-right-attachment-block", (0.033, 0.081, 0.015), (0.205, 0, Z_FRONT_OUT - 0.0075), black)
+    add_box(scene, "bezel-left-lock-block", (0.033, 0.081, 0.015), (-0.205, 0, Z_FRONT_OUT - 0.0083), black)
+    add_box(scene, "bezel-right-attachment-block", (0.033, 0.081, 0.015), (0.205, 0, Z_FRONT_OUT - 0.0083), black)
     add_cylinder_z(scene, "bezel-key-lock", 0.0085, 0.004, (-0.177, 0.020, Z_FRONT_OUT - 0.0018), graphite, 40)
 
     top_centers = [(-0.186 + 0.062 * i, 0.0165) for i in range(7)]
     bottom_centers = [(-0.155 + 0.062 * i, -0.0165) for i in range(6)]
-    for index, (cx, cy) in enumerate(top_centers + bottom_centers):
-        ring = Polygon(regular_hex(cx, cy, 0.031), [regular_hex(cx, cy, 0.0248)])
-        mesh = trimesh.creation.extrude_polygon(ring, height=depth)
-        mesh.apply_translation((0, 0, zbase))
-        add_mesh(scene, mesh, f"bezel-hex-ring-{index:02d}", graphite)
+    rings = [
+        Polygon(regular_hex(cx, cy, 0.031), [regular_hex(cx, cy, 0.0248)])
+        for cx, cy in top_centers + bottom_centers
+    ]
+    top_frame = shapely_box(-0.215, Y_TOP - 0.005, 0.215, Y_TOP)
+    bottom_frame = shapely_box(-0.215, Y_BOTTOM, 0.215, Y_BOTTOM + 0.005)
+    lattice = unary_union([*rings, top_frame, bottom_frame])
+    mesh = trimesh.creation.extrude_polygon(lattice, height=depth)
+    # The stamped lattice has hard edges. Split vertices before recomputing
+    # normals so its front, rear and through-hole walls never share smoothed
+    # normals at grazing orbit angles.
+    mesh.unmerge_vertices()
+    mesh.fix_normals(multibody=True)
+    mesh.apply_translation((0, 0, zbase))
+    add_mesh(scene, mesh, "bezel-13-cell-unified-lattice", graphite)
 
 
 def rear_x(u: float) -> float:
@@ -315,17 +381,20 @@ def add_rear_assemblies(scene: trimesh.Scene, silver: PBRMaterial, photo_mats: d
     # The source-locked rear photo remains unobstructed for exact port, slot,
     # grille and stamped-panel appearance. Thin frames supply verified shallow
     # relief without replacing the photographic faces with generic rectangles.
-    def add_frame(name: str, cx: float, cy: float, width: float, height: float) -> None:
+    def add_frame(name: str, cx: float, cy: float, width: float, height: float, z_offset: float = 0.0) -> None:
         thickness = 0.0011
         depth = 0.0012
-        z = Z_REAR_WALL - 0.0008
-        add_box(scene, f"{name}-top", (width, thickness, depth), (cx, cy + height/2, z), silver)
-        add_box(scene, f"{name}-bottom", (width, thickness, depth), (cx, cy - height/2, z), silver)
+        z = Z_REAR_WALL - 0.0010 + z_offset
+        horizontal_width = width - 2 * thickness
+        add_box(scene, f"{name}-top", (horizontal_width, thickness, depth), (cx, cy + height/2, z), silver)
+        add_box(scene, f"{name}-bottom", (horizontal_width, thickness, depth), (cx, cy - height/2, z), silver)
         add_box(scene, f"{name}-left", (thickness, height, depth), (cx - width/2, cy, z), silver)
         add_box(scene, f"{name}-right", (thickness, height, depth), (cx + width/2, cy, z), silver)
 
-    add_frame("riser1B-slot-2-frame", rear_x(0.225), 0.023, 0.125, 0.018)
-    add_frame("riser1B-slot-3-frame", rear_x(0.225), 0.003, 0.125, 0.018)
+    # Keep adjoining source-derived frame layers 0.30 mm apart instead of
+    # overlapping on the same visible rear depth plane.
+    add_frame("riser1B-slot-2-frame", rear_x(0.225), 0.023, 0.125, 0.018, 0.00030)
+    add_frame("riser1B-slot-3-frame", rear_x(0.225), 0.003, 0.125, 0.018, 0.00030)
     add_frame("rear-exhaust-field-frame", rear_x(0.460), 0.004, 0.125, 0.067)
     add_frame("pcie-slot-4-frame", rear_x(0.625), 0.003, 0.016, 0.061)
     add_frame("pcie-slot-5-frame", rear_x(0.675), 0.003, 0.016, 0.061)
@@ -334,11 +403,22 @@ def add_rear_assemblies(scene: trimesh.Scene, silver: PBRMaterial, photo_mats: d
     # outer faces use exact source-locked photo crops, preserving IEC inputs,
     # orange latches, black handles, guarded fans and readable EPP 750W badges.
     psu_x = rear_x(0.850)
-    psu_w, psu_h = 0.0911, 0.0420
+    psu_w, psu_h = 0.0911, 0.0418
+    psu_face_clearance = 0.0006
+    psu_volume_depth = REAR_PROJ - psu_face_clearance
     for index, y in enumerate((0.0210, -0.0210), start=1):
-        add_box(scene, f"AC-PSU-{index}-volume", (psu_w, psu_h, REAR_PROJ), (psu_x, y, Z_REAR_WALL - REAR_PROJ/2), silver)
+        add_box(
+            scene,
+            f"AC-PSU-{index}-volume",
+            (psu_w, psu_h, psu_volume_depth),
+            (psu_x, y, Z_REAR_WALL - psu_volume_depth/2),
+            silver,
+        )
         mat = photo_mats["rear-psu-top" if index == 1 else "rear-psu-bottom"]
-        z = Z_REAR_OUT - 0.00001
+        # Keep the source-locked end face at the authoritative rearmost plane,
+        # with 0.6 mm clearance to the closed PSU volume.  The prior 0.01 mm
+        # separation was below a safe depth-buffer margin during deep orbit.
+        z = Z_REAR_OUT
         add_mesh(scene, quad_mesh(f"AC-PSU-{index}-source-locked-face", [
             (psu_x + psu_w/2, y - psu_h/2, z),
             (psu_x - psu_w/2, y - psu_h/2, z),
@@ -357,8 +437,8 @@ def add_side_and_top_relief(scene: trimesh.Scene, silver: PBRMaterial, dark: PBR
         add_cylinder_x(scene, f"left-side-black-plug-{index}", 0.004, 0.003, (-BODY_W/2 - 0.0015, y, z), black)
 
     # Separate front drive-backplane cover and top release latch.
-    add_box(scene, "top-front-drive-backplane-cover", (0.424, 0.0028, 0.175), (0, Y_TOP - 0.0014, 0.232), silver)
-    add_box(scene, "top-cover-release-latch", (0.020, 0.003, 0.045), (0.025, Y_TOP - 0.0015, 0.105), black)
+    add_box(scene, "top-front-drive-backplane-cover", (0.424, 0.0011, 0.175), (0, Y_TOP - 0.00055, 0.232), silver)
+    add_box(scene, "top-cover-release-latch", (0.020, 0.0011, 0.045), (0.025, Y_TOP - 0.00055, 0.105), black)
     # Narrow verified top perforation rows near both edges; dark recessed slots.
     for side_x in (-0.202, 0.202):
         for i in range(27):
@@ -378,7 +458,7 @@ def build_scene(texture_paths: dict[str, Path]) -> trimesh.Scene:
     teal = material_color("connector-teal", (31, 142, 145, 255), metallic=0.0, roughness=0.65)
 
     # Closed opaque chassis core; textures and relief sit over it.
-    add_box(scene, "closed-chassis-core", (BODY_W, 0.0850, BODY_D), (0, -0.0009, 0), silver)
+    add_box(scene, "closed-chassis-core", (BODY_W - 0.0008, H - 0.0032, BODY_D - 0.0008), (0, 0, 0), silver)
     photo_mats = add_textured_faces(scene, texture_paths)
     add_rack_ears(scene, graphite)
     add_front_assemblies(scene, graphite, black, silver, orange, green, blue)
@@ -412,6 +492,7 @@ def build(flavor: str, texture_paths: dict[str, Path]) -> dict:
     name = "Dell-R7515-2.5inch.glb" if flavor == "standard" else "Dell-R7515-2.5inch-web.glb"
     path = MODEL / name
     payload = trimesh.exchange.gltf.export_glb(scene, include_normals=True, unitize_normals=True)
+    payload = enforce_glb_material_contract(payload)
     path.write_bytes(payload)
     triangles = sum(len(mesh.faces) for mesh in scene.geometry.values())
     vertices = sum(len(mesh.vertices) for mesh in scene.geometry.values())
@@ -461,6 +542,13 @@ def main() -> None:
             "top_vent_slots": 54,
             "independent_side_relief": True,
             "closed_chassis_core": True,
+        },
+        "material_contract": {
+            "photo_materials": "KHR_materials_unlit",
+            "alpha_mode": "OPAQUE",
+            "base_color_factor": [1.0, 1.0, 1.0, 1.0],
+            "double_sided": False,
+            "mechanical_relief": "PBR",
         },
         "builds": builds,
     }

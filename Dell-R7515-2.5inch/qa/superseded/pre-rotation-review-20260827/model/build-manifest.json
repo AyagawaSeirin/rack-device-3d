@@ -1,0 +1,113 @@
+{
+  "generator": "model/build_model.py",
+  "newly_constructed": true,
+  "official_mesh_imported": false,
+  "dimensions_mm": {
+    "body_width": 434.0,
+    "overall_width": 482.0,
+    "height": 86.8,
+    "body_depth": 647.07,
+    "front_projection": 35.839999999999996,
+    "rear_projection": 34.685,
+    "overall_depth": 717.595
+  },
+  "visible_geometry": {
+    "front_mounting_flange_extensions_without_unverified_holes": 2,
+    "security_bezel_hex_rings": 13,
+    "sff_carriers_source_textured_behind_bezel": 24,
+    "sff_pull_handles_source_textured_behind_bezel": 24,
+    "ac_psu_volumes": 2,
+    "ac_psu_source_locked_end_faces": 2,
+    "rear_source_textured_component_groups": "ports, Riser 1B slots, PCIe slots, exhaust, stamped seams",
+    "rear_relieved_group_frames": 5,
+    "top_vent_slots": 54,
+    "independent_side_relief": true,
+    "closed_chassis_core": true
+  },
+  "builds": [
+    {
+      "flavor": "standard",
+      "path": "model/Dell-R7515-2.5inch.glb",
+      "bytes": 17680308,
+      "nodes": 118,
+      "meshes": 118,
+      "triangles": 2614,
+      "vertices": 1526,
+      "bounds": {
+        "min_m": [
+          -0.241,
+          -0.04355,
+          -0.35822999
+        ],
+        "max_m": [
+          0.241,
+          0.04355,
+          0.359575
+        ],
+        "extents_m": [
+          0.482,
+          0.0871,
+          0.717805
+        ],
+        "extents_mm": [
+          482.0,
+          87.1,
+          717.805
+        ]
+      },
+      "texture_paths": {
+        "front-body": "model/textures/standard/front-body.png",
+        "front-logo": "model/textures/standard/front-logo.png",
+        "rear": "model/textures/standard/rear.png",
+        "rear-psu-top": "model/textures/standard/rear-psu-top.png",
+        "rear-psu-bottom": "model/textures/standard/rear-psu-bottom.png",
+        "left-body": "model/textures/standard/left-body.png",
+        "right-body": "model/textures/standard/right-body.png",
+        "top-body": "model/textures/standard/top-body.png",
+        "bottom": "model/textures/standard/bottom.png"
+      }
+    },
+    {
+      "flavor": "web",
+      "path": "model/Dell-R7515-2.5inch-web.glb",
+      "bytes": 8114260,
+      "nodes": 118,
+      "meshes": 118,
+      "triangles": 2614,
+      "vertices": 1526,
+      "bounds": {
+        "min_m": [
+          -0.241,
+          -0.04355,
+          -0.35822999
+        ],
+        "max_m": [
+          0.241,
+          0.04355,
+          0.359575
+        ],
+        "extents_m": [
+          0.482,
+          0.0871,
+          0.717805
+        ],
+        "extents_mm": [
+          482.0,
+          87.1,
+          717.805
+        ]
+      },
+      "texture_paths": {
+        "front-body": "model/textures/web/front-body.png",
+        "front-logo": "model/textures/web/front-logo.png",
+        "rear": "model/textures/web/rear.png",
+        "rear-psu-top": "model/textures/web/rear-psu-top.png",
+        "rear-psu-bottom": "model/textures/web/rear-psu-bottom.png",
+        "left-body": "model/textures/web/left-body.png",
+        "right-body": "model/textures/web/right-body.png",
+        "top-body": "model/textures/web/top-body.png",
+        "bottom": "model/textures/web/bottom.png"
+      }
+    }
+  ]
+}

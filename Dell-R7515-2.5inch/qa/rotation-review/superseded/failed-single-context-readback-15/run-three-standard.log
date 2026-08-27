@@ -1,0 +1,23 @@
+### Browser `rr-r7515-three-standard` opened with pid 258821.
+### Ran Playwright code
+```js
+await page.goto('http://127.0.0.1:8899/Dell-R7515-2.5inch/qa/rotation-review/control.html?engine=three&flavor=standard&run=rotation-review-20260827');
+```
+### Page
+- Page URL: http://127.0.0.1:8899/Dell-R7515-2.5inch/qa/rotation-review/control.html?engine=three&flavor=standard&run=rotation-review-20260827
+- Page Title: Rotation review control
+### Snapshot
+- [Snapshot](.playwright-cli/page-2026-08-27T12-55-22-560Z.yml)
+### Page
+- Page URL: http://127.0.0.1:8899/Dell-R7515-2.5inch/qa/rotation-review/control.html?engine=three&flavor=standard&run=rotation-review-20260827
+- Page Title: Rotation review control
+### Snapshot
+```yaml
+- main [ref=e2]:
+  - heading "Rotation review control" [level=1] [ref=e3]
+  - paragraph [ref=e4]: READY_FOR_PLAYWRIGHT_NAVIGATION
+```
+### Error
+Error: page.evaluate: Target crashed 
+Browser 'rr-r7515-three-standard' closed
+
