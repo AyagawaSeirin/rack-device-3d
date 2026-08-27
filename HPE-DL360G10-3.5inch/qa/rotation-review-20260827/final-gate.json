@@ -1,0 +1,326 @@
+{
+  "model": "HPE-DL360G10-3.5inch",
+  "models": {
+    "standard": {
+      "path": "model/HPE-DL360G10-3.5inch.glb",
+      "sha256": "d6439e734fc85aaef0125f8c40cf0807bf9a147050d594026a3e4d8e1f3a2ac1"
+    },
+    "web": {
+      "path": "model/HPE-DL360G10-3.5inch-web.glb",
+      "sha256": "ab529ee20cb9d295165bb47cdd0429ada6d44b48f87ba4fca315d0cde3cec4bc"
+    }
+  },
+  "viewerSha256": {
+    "three": "d6ac8c05c9162fc403b459eec373e61cdbb1a192dbed50578493536e7f742681",
+    "babylon": "dee3e02e93a3ceee0b2151da9ee77d6b0effe8577bb3c7e705a64a859ef6055b"
+  },
+  "featureInventory": {
+    "path": "qa/rotation-review-20260827/feature-inventory-review.csv",
+    "rows": 26,
+    "counts": {
+      "PASS_EXACT": 25,
+      "PASS_BOTTOM_FALLBACK": 1
+    }
+  },
+  "static40Loads": {
+    "requiredLoads": 40,
+    "actualLoads": 40,
+    "uniqueNonces": 40,
+    "combinations": [
+      {
+        "viewer": "three",
+        "variant": "standard",
+        "modelBase": "/HPE-DL360G10-3.5inch/model/HPE-DL360G10-3.5inch.glb",
+        "loadCount": 10,
+        "pngCount": 10,
+        "checks": {
+          "loadCount10": true,
+          "pngCount10": true,
+          "viewOrderExact": true,
+          "topBottomPitchWithMargin": true,
+          "cacheBusted": true,
+          "independentPageNavigations": true,
+          "webgl2": true,
+          "overlayAbsent": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "three",
+        "variant": "web",
+        "modelBase": "/HPE-DL360G10-3.5inch/model/HPE-DL360G10-3.5inch-web.glb",
+        "loadCount": 10,
+        "pngCount": 10,
+        "checks": {
+          "loadCount10": true,
+          "pngCount10": true,
+          "viewOrderExact": true,
+          "topBottomPitchWithMargin": true,
+          "cacheBusted": true,
+          "independentPageNavigations": true,
+          "webgl2": true,
+          "overlayAbsent": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "babylon",
+        "variant": "standard",
+        "modelBase": "/HPE-DL360G10-3.5inch/model/HPE-DL360G10-3.5inch.glb",
+        "loadCount": 10,
+        "pngCount": 10,
+        "checks": {
+          "loadCount10": true,
+          "pngCount10": true,
+          "viewOrderExact": true,
+          "topBottomPitchWithMargin": true,
+          "cacheBusted": true,
+          "independentPageNavigations": true,
+          "webgl2": true,
+          "overlayAbsent": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "babylon",
+        "variant": "web",
+        "modelBase": "/HPE-DL360G10-3.5inch/model/HPE-DL360G10-3.5inch-web.glb",
+        "loadCount": 10,
+        "pngCount": 10,
+        "checks": {
+          "loadCount10": true,
+          "pngCount10": true,
+          "viewOrderExact": true,
+          "topBottomPitchWithMargin": true,
+          "cacheBusted": true,
+          "independentPageNavigations": true,
+          "webgl2": true,
+          "overlayAbsent": true
+        },
+        "pass": true
+      }
+    ],
+    "pass": true
+  },
+  "rotation": {
+    "yawFrames": 288,
+    "pitchFrames": 64,
+    "combinations": [
+      {
+        "viewer": "three",
+        "variant": "standard",
+        "runtime": {
+          "engine": "Three.js 0.179.1",
+          "webgl2": true,
+          "model": "/HPE-DL360G10-3.5inch/model/HPE-DL360G10-3.5inch.glb?cb=final3-three-standard-d6439e73",
+          "bounds": {
+            "min": [
+              -0.24130000174045563,
+              -0.02160000056028366,
+              -0.3765999972820282
+            ],
+            "max": [
+              0.24130000174045563,
+              0.02160000056028366,
+              0.37514999508857727
+            ],
+            "size": [
+              0.48260000348091125,
+              0.04320000112056732,
+              0.7517499923706055
+            ]
+          },
+          "near": 0.01,
+          "far": 10,
+          "loadingOverlayHidden": true,
+          "overlayVisible": false
+        },
+        "yawFrames": 72,
+        "pitchFrames": 16,
+        "checks": {
+          "yawStep5": true,
+          "yawManifest72": true,
+          "yawFiles72": true,
+          "pitchManifest16": true,
+          "pitchFiles16": true,
+          "checkerboard": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "noFrameAnomalies": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "three",
+        "variant": "web",
+        "runtime": {
+          "engine": "Three.js 0.179.1",
+          "webgl2": true,
+          "model": "/HPE-DL360G10-3.5inch/model/HPE-DL360G10-3.5inch-web.glb?cb=final-three-web-ab529ee2",
+          "bounds": {
+            "min": [
+              -0.24130000174045563,
+              -0.02160000056028366,
+              -0.3765999972820282
+            ],
+            "max": [
+              0.24130000174045563,
+              0.02160000056028366,
+              0.37514999508857727
+            ],
+            "size": [
+              0.48260000348091125,
+              0.04320000112056732,
+              0.7517499923706055
+            ]
+          },
+          "near": 0.01,
+          "far": 10,
+          "loadingOverlayHidden": true,
+          "overlayVisible": false
+        },
+        "yawFrames": 72,
+        "pitchFrames": 16,
+        "checks": {
+          "yawStep5": true,
+          "yawManifest72": true,
+          "yawFiles72": true,
+          "pitchManifest16": true,
+          "pitchFiles16": true,
+          "checkerboard": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "noFrameAnomalies": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "babylon",
+        "variant": "standard",
+        "runtime": {
+          "engine": "Babylon.js 8.22.2",
+          "webgl2": true,
+          "model": "/HPE-DL360G10-3.5inch/model/HPE-DL360G10-3.5inch.glb?cb=final-babylon-standard-d6439e73",
+          "bounds": {
+            "min": [
+              -0.24130000174045563,
+              -0.02160000056028366,
+              -0.3765999972820282
+            ],
+            "max": [
+              0.24130000174045563,
+              0.02160000056028366,
+              0.37514999508857727
+            ],
+            "size": [
+              0.48260000348091125,
+              0.04320000112056732,
+              0.7517499923706055
+            ]
+          },
+          "near": 0.01,
+          "far": 10,
+          "loadingOverlayHidden": true,
+          "overlayVisible": false
+        },
+        "yawFrames": 72,
+        "pitchFrames": 16,
+        "checks": {
+          "yawStep5": true,
+          "yawManifest72": true,
+          "yawFiles72": true,
+          "pitchManifest16": true,
+          "pitchFiles16": true,
+          "checkerboard": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "noFrameAnomalies": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "babylon",
+        "variant": "web",
+        "runtime": {
+          "engine": "Babylon.js 8.22.2",
+          "webgl2": true,
+          "model": "/HPE-DL360G10-3.5inch/model/HPE-DL360G10-3.5inch-web.glb?cb=final-babylon-web-ab529ee2",
+          "bounds": {
+            "min": [
+              -0.24130000174045563,
+              -0.02160000056028366,
+              -0.3765999972820282
+            ],
+            "max": [
+              0.24130000174045563,
+              0.02160000056028366,
+              0.37514999508857727
+            ],
+            "size": [
+              0.48260000348091125,
+              0.04320000112056732,
+              0.7517499923706055
+            ]
+          },
+          "near": 0.01,
+          "far": 10,
+          "loadingOverlayHidden": true,
+          "overlayVisible": false
+        },
+        "yawFrames": 72,
+        "pitchFrames": 16,
+        "checks": {
+          "yawStep5": true,
+          "yawManifest72": true,
+          "yawFiles72": true,
+          "pitchManifest16": true,
+          "pitchFiles16": true,
+          "checkerboard": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "noFrameAnomalies": true
+        },
+        "pass": true
+      }
+    ],
+    "pass": true
+  },
+  "audits": {
+    "views": {
+      "status": "PASS",
+      "errorCount": 0,
+      "warningCount": 6
+    },
+    "standard": {
+      "status": "PASS",
+      "errorCount": 0,
+      "warningCount": 0
+    },
+    "web": {
+      "status": "PASS",
+      "errorCount": 0,
+      "warningCount": 0
+    },
+    "structureStandard": {
+      "status": "PASS",
+      "errorCount": 0,
+      "warningCount": 0
+    },
+    "structureWeb": {
+      "status": "PASS",
+      "errorCount": 0,
+      "warningCount": 0
+    }
+  },
+  "matchedCameraFaces": [
+    "front",
+    "rear",
+    "left",
+    "right",
+    "top",
+    "bottom"
+  ],
+  "onlyIdentityFallback": "bottom",
+  "pass": true,
+  "status": "PASS_WITH_BOTTOM_FALLBACK"
+}

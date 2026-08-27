@@ -1,0 +1,90 @@
+{
+  "model_key": "HPE-DL360G10-3.5inch",
+  "status": "PASS_WITH_BOTTOM_FALLBACK",
+  "completed_at": "2026-08-23 Asia/Singapore",
+  "identity": {
+    "manufacturer": "Hewlett Packard Enterprise",
+    "product": "HPE ProLiant DL360 Gen10",
+    "variant": "1U 4LFF / 3.5-inch",
+    "configuration_generation": "867958-B21 embedded-LOM generation",
+    "power": "two HPE 500W Flex Slot Platinum 94% hot-plug AC power supplies",
+    "branding_preserved": true,
+    "status": "VERIFIED"
+  },
+  "glbs": [
+    {
+      "profile": "standard",
+      "path": "model/HPE-DL360G10-3.5inch.glb",
+      "bytes": 20458036,
+      "sha256": "d6439e734fc85aaef0125f8c40cf0807bf9a147050d594026a3e4d8e1f3a2ac1",
+      "structural_audit": "PASS"
+    },
+    {
+      "profile": "web",
+      "path": "model/HPE-DL360G10-3.5inch-web.glb",
+      "bytes": 8165268,
+      "sha256": "ab529ee20cb9d295165bb47cdd0429ada6d44b48f87ba4fca315d0cde3cec4bc",
+      "structural_audit": "PASS"
+    }
+  ],
+  "glb_structure": {
+    "nodes": 159,
+    "meshes": 159,
+    "primitives": 159,
+    "materials": 17,
+    "textures": 6,
+    "embedded_images": 6,
+    "main_face_materials": "OPAQUE KHR_materials_unlit",
+    "mirrored_nodes": 0,
+    "external_buffers": 0,
+    "actual_bounds_mm": [482.6, 43.2, 751.75],
+    "dimension_ratio_error_percent": 0.3783,
+    "standard_web_scene_bounds_equal": true
+  },
+  "view_assets": {
+    "count": 6,
+    "audit": "PASS",
+    "automatic_warnings": 6,
+    "warning_disposition": "manual original-detail review confirms transparent pixels are confined to the external silhouette/antialiasing; opaque core alpha below 250 is 0% for every face"
+  },
+  "viewer_validation": {
+    "viewers": [
+      "Three.js 0.179.1",
+      "Babylon.js 8.22.2"
+    ],
+    "models_per_viewer": 2,
+    "required_views_per_model": 10,
+    "required_actual_glb_renders": 40,
+    "additional_dark_front_checks": 4,
+    "total_screenshots": 44,
+    "console_errors": 0,
+    "console_warnings": 0,
+    "standard_web_mean_pixel_mae_percent": {
+      "threejs": 0.0643,
+      "babylonjs": 0.0427
+    },
+    "status": "PASS"
+  },
+  "comparisons": {
+    "orthographic_reference_render_sheets": 24,
+    "ten_view_contact_sheets": 4,
+    "three_quarter_source_review_sheets": 2,
+    "repair_before_after_sheets": 1,
+    "total": 31,
+    "status": "PASS"
+  },
+  "official_3d": {
+    "result": "NO_EXACT_PUBLIC_OFFICIAL_3D_FOUND",
+    "record": "source/optional-3d/README.md",
+    "official_file_saved": false
+  },
+  "bottom": {
+    "mode": "GENERIC_BOTTOM_FALLBACK",
+    "search_exhausted": true,
+    "unsupported_identity_detail_added": false
+  },
+  "remaining_risks": [
+    "No usable exact-model underside photograph or public official 3D/CAD file was found; the conservative bottom-only fallback is therefore disclosed.",
+    "HPE publishes 434.6 x 42.9 x 749.8 mm body/system dimensions but not the independent ear span or removable-handle envelope; the model records the 482.6 mm rack span and 1.95 mm rear handle relief separately."
+  ]
+}

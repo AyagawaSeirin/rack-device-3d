@@ -7,3 +7,7 @@ No exact public HPE 3D/CAD/AR asset was found. Public HPE QuickSpecs and User Gu
 Result: `NO_EXACT_PUBLIC_OFFICIAL_3D_FOUND`. This does not replace or relax the independent standard/web GLB build.
 
 Bottom search also covered official manuals, service material, dynamic HPE pages, exact-model reseller galleries, used-equipment listings, marketplaces, auction/image search, and English/Chinese/Japanese/German/Russian underside terms. No usable exact underside photograph was found. Bottom status is therefore `GENERIC_BOTTOM_FALLBACK`, using same-exact-chassis material/edge evidence and introducing no identity-bearing underside detail.
+
+## 2026-08-27 independent revalidation
+
+The public HPE product/support, current QuickSpecs, exact-PID, CAD/AR and common interchange-format searches were repeated. No public exact-configuration official 3D payload was found. The result remains `NO_EXACT_PUBLIC_OFFICIAL_3D_FOUND`; no third-party file was promoted as an official model.
