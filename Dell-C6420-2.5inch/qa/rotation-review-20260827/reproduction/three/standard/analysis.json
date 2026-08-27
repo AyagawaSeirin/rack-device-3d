@@ -1,0 +1,1528 @@
+{
+  "combo": "qa/rotation-review-20260827/reproduction/three/standard",
+  "runtime": {
+    "engine": "Three.js 179",
+    "webgl2": true,
+    "model": "/Dell-C6420-2.5inch/model/Dell-C6420-2.5inch.glb?cb=pre-three-standard",
+    "bounds": {
+      "min": [
+        -0.24130000174045563,
+        -0.04340000078082085,
+        -0.39864999055862427
+      ],
+      "max": [
+        0.24130000174045563,
+        0.04340000078082085,
+        0.39864999055862427
+      ],
+      "size": [
+        0.48260000348091125,
+        0.0868000015616417,
+        0.7972999811172485
+      ]
+    },
+    "near": 0.01,
+    "far": 10,
+    "frozenFrustum": true,
+    "loadingOverlayHidden": true,
+    "checker": "dark",
+    "overlayVisible": false
+  },
+  "frameCount": 122,
+  "yaw": {
+    "count": 72,
+    "thresholds": {
+      "pixelMAE": {
+        "limit": 18.0,
+        "median": 4.216846227645874,
+        "mad": 0.4577740430831909
+      },
+      "objectFractionDelta": {
+        "limit": 0.05,
+        "median": 0.0019473379629629597,
+        "mad": 0.0012557870370370414
+      },
+      "objectLumaDelta": {
+        "limit": 18.0,
+        "median": 1.942718505859375,
+        "mad": 0.856689453125
+      }
+    },
+    "anomalies": [],
+    "frames": [
+      {
+        "file": "frame-000-yaw-000.png",
+        "objectFraction": 0.09402777777777778,
+        "objectMeanRGB": [
+          123.87684631347656,
+          122.5980453491211,
+          121.60087585449219
+        ],
+        "objectMeanLuma": 122.79792022705078,
+        "overlayFraction": 0.01177662037037037
+      },
+      {
+        "file": "frame-001-yaw-005.png",
+        "objectFraction": 0.09273148148148148,
+        "objectMeanRGB": [
+          122.79979705810547,
+          121.55422973632812,
+          120.57183074951172
+        ],
+        "objectMeanLuma": 121.74810791015625,
+        "overlayFraction": 0.011950231481481482
+      },
+      {
+        "file": "frame-002-yaw-010.png",
+        "objectFraction": 0.09471064814814815,
+        "objectMeanRGB": [
+          124.02517700195312,
+          122.89398956298828,
+          122.04301452636719
+        ],
+        "objectMeanLuma": 123.07303619384766,
+        "overlayFraction": 0.012042824074074074
+      },
+      {
+        "file": "frame-003-yaw-015.png",
+        "objectFraction": 0.09502314814814815,
+        "objectMeanRGB": [
+          124.93257904052734,
+          123.89244842529297,
+          123.14646911621094
+        ],
+        "objectMeanLuma": 124.05972290039062,
+        "overlayFraction": 0.01173611111111111
+      },
+      {
+        "file": "frame-004-yaw-020.png",
+        "objectFraction": 0.0962962962962963,
+        "objectMeanRGB": [
+          126.16905212402344,
+          125.21784973144531,
+          124.59146881103516
+        ],
+        "objectMeanLuma": 125.37483978271484,
+        "overlayFraction": 0.011394675925925926
+      },
+      {
+        "file": "frame-005-yaw-025.png",
+        "objectFraction": 0.0972800925925926,
+        "objectMeanRGB": [
+          127.8723373413086,
+          127.02373504638672,
+          126.4967269897461
+        ],
+        "objectMeanLuma": 127.16609191894531,
+        "overlayFraction": 0.010983796296296297
+      },
+      {
+        "file": "frame-006-yaw-030.png",
+        "objectFraction": 0.09756944444444444,
+        "objectMeanRGB": [
+          129.5319061279297,
+          128.7861785888672,
+          128.3970947265625
+        ],
+        "objectMeanLuma": 128.91664123535156,
+        "overlayFraction": 0.011111111111111112
+      },
+      {
+        "file": "frame-007-yaw-035.png",
+        "objectFraction": 0.09659722222222222,
+        "objectMeanRGB": [
+          131.73316955566406,
+          131.04852294921875,
+          130.78517150878906
+        ],
+        "objectMeanLuma": 131.17506408691406,
+        "overlayFraction": 0.010601851851851852
+      },
+      {
+        "file": "frame-008-yaw-040.png",
+        "objectFraction": 0.09671875,
+        "objectMeanRGB": [
+          134.01112365722656,
+          133.4339141845703,
+          133.306640625
+        ],
+        "objectMeanLuma": 133.54745483398438,
+        "overlayFraction": 0.010445601851851852
+      },
+      {
+        "file": "frame-009-yaw-045.png",
+        "objectFraction": 0.09641782407407408,
+        "objectMeanRGB": [
+          135.60333251953125,
+          135.13108825683594,
+          135.1196746826172
+        ],
+        "objectMeanLuma": 135.23065185546875,
+        "overlayFraction": 0.009895833333333333
+      },
+      {
+        "file": "frame-010-yaw-050.png",
+        "objectFraction": 0.0955150462962963,
+        "objectMeanRGB": [
+          137.4459228515625,
+          137.06907653808594,
+          137.18231201171875
+        ],
+        "objectMeanLuma": 137.15737915039062,
+        "overlayFraction": 0.00902199074074074
+      },
+      {
+        "file": "frame-011-yaw-055.png",
+        "objectFraction": 0.09307291666666667,
+        "objectMeanRGB": [
+          140.6490020751953,
+          140.35496520996094,
+          140.5848388671875
+        ],
+        "objectMeanLuma": 140.43408203125,
+        "overlayFraction": 0.008043981481481482
+      },
+      {
+        "file": "frame-012-yaw-060.png",
+        "objectFraction": 0.09105324074074074,
+        "objectMeanRGB": [
+          143.6583251953125,
+          143.46530151367188,
+          143.8092041015625
+        ],
+        "objectMeanLuma": 143.5311737060547,
+        "overlayFraction": 0.007025462962962963
+      },
+      {
+        "file": "frame-013-yaw-065.png",
+        "objectFraction": 0.08681134259259259,
+        "objectMeanRGB": [
+          146.52923583984375,
+          146.41416931152344,
+          146.86334228515625
+        ],
+        "objectMeanLuma": 146.4710693359375,
+        "overlayFraction": 0.0064756944444444445
+      },
+      {
+        "file": "frame-014-yaw-070.png",
+        "objectFraction": 0.08486689814814814,
+        "objectMeanRGB": [
+          149.95240783691406,
+          149.977294921875,
+          150.5301055908203
+        ],
+        "objectMeanLuma": 150.0119171142578,
+        "overlayFraction": 0.004756944444444445
+      },
+      {
+        "file": "frame-015-yaw-075.png",
+        "objectFraction": 0.08118055555555556,
+        "objectMeanRGB": [
+          154.048828125,
+          154.17515563964844,
+          154.85293579101562
+        ],
+        "objectMeanLuma": 154.19723510742188,
+        "overlayFraction": 0.002991898148148148
+      },
+      {
+        "file": "frame-016-yaw-080.png",
+        "objectFraction": 0.07953703703703703,
+        "objectMeanRGB": [
+          156.1576690673828,
+          156.40977478027344,
+          157.17774963378906
+        ],
+        "objectMeanLuma": 156.41163635253906,
+        "overlayFraction": 0.0013599537037037037
+      },
+      {
+        "file": "frame-017-yaw-085.png",
+        "objectFraction": 0.07578703703703704,
+        "objectMeanRGB": [
+          160.48373413085938,
+          160.908447265625,
+          161.78665161132812
+        ],
+        "objectMeanLuma": 160.88156127929688,
+        "overlayFraction": 0.0012789351851851853
+      },
+      {
+        "file": "frame-018-yaw-090.png",
+        "objectFraction": 0.07028935185185185,
+        "objectMeanRGB": [
+          162.88975524902344,
+          163.37799072265625,
+          164.25860595703125
+        ],
+        "objectMeanLuma": 163.3377685546875,
+        "overlayFraction": 0.0012268518518518518
+      },
+      {
+        "file": "frame-019-yaw-095.png",
+        "objectFraction": 0.07197337962962963,
+        "objectMeanRGB": [
+          164.33746337890625,
+          164.95826721191406,
+          166.0970458984375
+        ],
+        "objectMeanLuma": 164.9084930419922,
+        "overlayFraction": 0.00109375
+      },
+      {
+        "file": "frame-020-yaw-100.png",
+        "objectFraction": 0.07579282407407407,
+        "objectMeanRGB": [
+          162.52027893066406,
+          163.24891662597656,
+          164.4345245361328
+        ],
+        "objectMeanLuma": 163.17959594726562,
+        "overlayFraction": 0.0012152777777777778
+      },
+      {
+        "file": "frame-021-yaw-105.png",
+        "objectFraction": 0.07898148148148149,
+        "objectMeanRGB": [
+          160.5746612548828,
+          161.40057373046875,
+          162.65122985839844
+        ],
+        "objectMeanLuma": 161.31527709960938,
+        "overlayFraction": 0.001400462962962963
+      },
+      {
+        "file": "frame-022-yaw-110.png",
+        "objectFraction": 0.0835763888888889,
+        "objectMeanRGB": [
+          157.75453186035156,
+          158.63702392578125,
+          159.88478088378906
+        ],
+        "objectMeanLuma": 158.5395050048828,
+        "overlayFraction": 0.0016377314814814815
+      },
+      {
+        "file": "frame-023-yaw-115.png",
+        "objectFraction": 0.08414930555555555,
+        "objectMeanRGB": [
+          157.0634002685547,
+          158.0063934326172,
+          159.28897094726562
+        ],
+        "objectMeanLuma": 157.89852905273438,
+        "overlayFraction": 0.001730324074074074
+      },
+      {
+        "file": "frame-024-yaw-120.png",
+        "objectFraction": 0.08866319444444444,
+        "objectMeanRGB": [
+          147.80137634277344,
+          148.66587829589844,
+          149.6002197265625
+        ],
+        "objectMeanLuma": 148.54954528808594,
+        "overlayFraction": 0.006377314814814815
+      },
+      {
+        "file": "frame-025-yaw-125.png",
+        "objectFraction": 0.08898726851851851,
+        "objectMeanRGB": [
+          152.63348388671875,
+          153.8105010986328,
+          155.1181640625
+        ],
+        "objectMeanLuma": 153.65467834472656,
+        "overlayFraction": 0.002667824074074074
+      },
+      {
+        "file": "frame-026-yaw-130.png",
+        "objectFraction": 0.0908449074074074,
+        "objectMeanRGB": [
+          152.3514404296875,
+          153.3924102783203,
+          154.57472229003906
+        ],
+        "objectMeanLuma": 153.2564697265625,
+        "overlayFraction": 0.0022511574074074074
+      },
+      {
+        "file": "frame-027-yaw-135.png",
+        "objectFraction": 0.09134259259259259,
+        "objectMeanRGB": [
+          149.0762176513672,
+          150.21578979492188,
+          151.40313720703125
+        ],
+        "objectMeanLuma": 150.05923461914062,
+        "overlayFraction": 0.003883101851851852
+      },
+      {
+        "file": "frame-028-yaw-140.png",
+        "objectFraction": 0.09206018518518519,
+        "objectMeanRGB": [
+          150.73239135742188,
+          151.8219757080078,
+          152.9515380859375
+        ],
+        "objectMeanLuma": 151.67189025878906,
+        "overlayFraction": 0.0024016203703703704
+      },
+      {
+        "file": "frame-029-yaw-145.png",
+        "objectFraction": 0.09081018518518519,
+        "objectMeanRGB": [
+          150.02249145507812,
+          151.1122283935547,
+          152.17697143554688
+        ],
+        "objectMeanLuma": 150.95741271972656,
+        "overlayFraction": 0.0026157407407407405
+      },
+      {
+        "file": "frame-030-yaw-150.png",
+        "objectFraction": 0.09046875,
+        "objectMeanRGB": [
+          149.13433837890625,
+          150.21697998046875,
+          151.1841583251953
+        ],
+        "objectMeanLuma": 150.05662536621094,
+        "overlayFraction": 0.0026446759259259258
+      },
+      {
+        "file": "frame-031-yaw-155.png",
+        "objectFraction": 0.09122685185185185,
+        "objectMeanRGB": [
+          147.98641967773438,
+          149.04592895507812,
+          149.948486328125
+        ],
+        "objectMeanLuma": 148.88584899902344,
+        "overlayFraction": 0.0031134259259259257
+      },
+      {
+        "file": "frame-032-yaw-160.png",
+        "objectFraction": 0.09067708333333334,
+        "objectMeanRGB": [
+          147.3716278076172,
+          148.43040466308594,
+          149.2577667236328
+        ],
+        "objectMeanLuma": 148.26504516601562,
+        "overlayFraction": 0.0031134259259259257
+      },
+      {
+        "file": "frame-033-yaw-165.png",
+        "objectFraction": 0.08994212962962964,
+        "objectMeanRGB": [
+          147.94517517089844,
+          148.9703369140625,
+          149.75086975097656
+        ],
+        "objectMeanLuma": 148.80874633789062,
+        "overlayFraction": 0.0030150462962962965
+      },
+      {
+        "file": "frame-034-yaw-170.png",
+        "objectFraction": 0.08986111111111111,
+        "objectMeanRGB": [
+          147.77015686035156,
+          148.7800750732422,
+          149.4879608154297
+        ],
+        "objectMeanLuma": 148.61647033691406,
+        "overlayFraction": 0.003096064814814815
+      },
+      {
+        "file": "frame-035-yaw-175.png",
+        "objectFraction": 0.08640625,
+        "objectMeanRGB": [
+          146.86343383789062,
+          147.8087921142578,
+          148.38108825683594
+        ],
+        "objectMeanLuma": 147.6491241455078,
+        "overlayFraction": 0.0030613425925925925
+      },
+      {
+        "file": "frame-036-yaw-180.png",
+        "objectFraction": 0.08670717592592593,
+        "objectMeanRGB": [
+          144.94813537597656,
+          145.85777282714844,
+          146.39971923828125
+        ],
+        "objectMeanLuma": 145.70350646972656,
+        "overlayFraction": 0.0036631944444444446
+      },
+      {
+        "file": "frame-037-yaw-185.png",
+        "objectFraction": 0.08992476851851852,
+        "objectMeanRGB": [
+          148.37326049804688,
+          149.27389526367188,
+          149.717041015625
+        ],
+        "objectMeanLuma": 149.1144256591797,
+        "overlayFraction": 0.002841435185185185
+      },
+      {
+        "file": "frame-038-yaw-190.png",
+        "objectFraction": 0.09596643518518519,
+        "objectMeanRGB": [
+          150.51161193847656,
+          151.39956665039062,
+          151.8251190185547
+        ],
+        "objectMeanLuma": 151.24151611328125,
+        "overlayFraction": 0.0030208333333333333
+      },
+      {
+        "file": "frame-039-yaw-195.png",
+        "objectFraction": 0.10053819444444445,
+        "objectMeanRGB": [
+          152.31790161132812,
+          153.2040557861328,
+          153.5924072265625
+        ],
+        "objectMeanLuma": 153.043701171875,
+        "overlayFraction": 0.002991898148148148
+      },
+      {
+        "file": "frame-040-yaw-200.png",
+        "objectFraction": 0.10419560185185185,
+        "objectMeanRGB": [
+          153.42098999023438,
+          154.26715087890625,
+          154.6125030517578
+        ],
+        "objectMeanLuma": 154.11219787597656,
+        "overlayFraction": 0.0028993055555555556
+      },
+      {
+        "file": "frame-041-yaw-205.png",
+        "objectFraction": 0.10858217592592592,
+        "objectMeanRGB": [
+          154.85134887695312,
+          155.6697235107422,
+          155.9549102783203
+        ],
+        "objectMeanLuma": 155.51634216308594,
+        "overlayFraction": 0.003275462962962963
+      },
+      {
+        "file": "frame-042-yaw-210.png",
+        "objectFraction": 0.11218171296296296,
+        "objectMeanRGB": [
+          157.49327087402344,
+          158.2679443359375,
+          158.50209045410156
+        ],
+        "objectMeanLuma": 158.12014770507812,
+        "overlayFraction": 0.002980324074074074
+      },
+      {
+        "file": "frame-043-yaw-215.png",
+        "objectFraction": 0.11432870370370371,
+        "objectMeanRGB": [
+          158.9386444091797,
+          159.67164611816406,
+          159.8433380126953
+        ],
+        "objectMeanLuma": 159.5281982421875,
+        "overlayFraction": 0.002766203703703704
+      },
+      {
+        "file": "frame-044-yaw-220.png",
+        "objectFraction": 0.11677662037037037,
+        "objectMeanRGB": [
+          160.4209747314453,
+          161.11354064941406,
+          161.242431640625
+        ],
+        "objectMeanLuma": 160.97560119628906,
+        "overlayFraction": 0.0025868055555555557
+      },
+      {
+        "file": "frame-045-yaw-225.png",
+        "objectFraction": 0.11942708333333334,
+        "objectMeanRGB": [
+          160.44105529785156,
+          161.1063690185547,
+          161.1368865966797
+        ],
+        "objectMeanLuma": 160.9671173095703,
+        "overlayFraction": 0.004149305555555555
+      },
+      {
+        "file": "frame-046-yaw-230.png",
+        "objectFraction": 0.11865162037037037,
+        "objectMeanRGB": [
+          162.55299377441406,
+          163.1512908935547,
+          163.1544189453125
+        ],
+        "objectMeanLuma": 163.02430725097656,
+        "overlayFraction": 0.0024247685185185184
+      },
+      {
+        "file": "frame-047-yaw-235.png",
+        "objectFraction": 0.11997685185185185,
+        "objectMeanRGB": [
+          164.24232482910156,
+          164.78671264648438,
+          164.74440002441406
+        ],
+        "objectMeanLuma": 164.6679229736328,
+        "overlayFraction": 0.002980324074074074
+      },
+      {
+        "file": "frame-048-yaw-240.png",
+        "objectFraction": 0.12069444444444444,
+        "objectMeanRGB": [
+          159.8748016357422,
+          160.29075622558594,
+          159.94932556152344
+        ],
+        "objectMeanLuma": 160.17767333984375,
+        "overlayFraction": 0.006649305555555556
+      },
+      {
+        "file": "frame-049-yaw-245.png",
+        "objectFraction": 0.11909722222222222,
+        "objectMeanRGB": [
+          168.27487182617188,
+          168.6853790283203,
+          168.46607971191406
+        ],
+        "objectMeanLuma": 168.582275390625,
+        "overlayFraction": 0.0021122685185185185
+      },
+      {
+        "file": "frame-050-yaw-250.png",
+        "objectFraction": 0.11722800925925926,
+        "objectMeanRGB": [
+          168.79833984375,
+          169.17372131347656,
+          168.91159057617188
+        ],
+        "objectMeanLuma": 169.07498168945312,
+        "overlayFraction": 0.002002314814814815
+      },
+      {
+        "file": "frame-051-yaw-255.png",
+        "objectFraction": 0.11579861111111112,
+        "objectMeanRGB": [
+          171.1335906982422,
+          171.44387817382812,
+          171.1191864013672
+        ],
+        "objectMeanLuma": 171.35447692871094,
+        "overlayFraction": 0.0017939814814814815
+      },
+      {
+        "file": "frame-052-yaw-260.png",
+        "objectFraction": 0.11347800925925926,
+        "objectMeanRGB": [
+          172.6349639892578,
+          172.85374450683594,
+          172.3851318359375
+        ],
+        "objectMeanLuma": 172.7733917236328,
+        "overlayFraction": 0.001591435185185185
+      },
+      {
+        "file": "frame-053-yaw-265.png",
+        "objectFraction": 0.11152777777777778,
+        "objectMeanRGB": [
+          173.41578674316406,
+          173.58551025390625,
+          173.06402587890625
+        ],
+        "objectMeanLuma": 173.51177978515625,
+        "overlayFraction": 0.0015393518518518519
+      },
+      {
+        "file": "frame-054-yaw-270.png",
+        "objectFraction": 0.10715277777777778,
+        "objectMeanRGB": [
+          174.5116729736328,
+          174.5315399169922,
+          173.8394317626953
+        ],
+        "objectMeanLuma": 174.4773406982422,
+        "overlayFraction": 0.0016145833333333333
+      },
+      {
+        "file": "frame-055-yaw-275.png",
+        "objectFraction": 0.11204282407407408,
+        "objectMeanRGB": [
+          172.89247131347656,
+          172.88430786132812,
+          172.19131469726562
+        ],
+        "objectMeanLuma": 172.8360137939453,
+        "overlayFraction": 0.0016956018518518518
+      },
+      {
+        "file": "frame-056-yaw-280.png",
+        "objectFraction": 0.11526041666666667,
+        "objectMeanRGB": [
+          170.115478515625,
+          170.02098083496094,
+          169.30577087402344
+        ],
+        "objectMeanLuma": 169.9894256591797,
+        "overlayFraction": 0.0016261574074074073
+      },
+      {
+        "file": "frame-057-yaw-285.png",
+        "objectFraction": 0.1187962962962963,
+        "objectMeanRGB": [
+          166.25433349609375,
+          166.11038208007812,
+          165.39268493652344
+        ],
+        "objectMeanLuma": 166.08917236328125,
+        "overlayFraction": 0.0030671296296296297
+      },
+      {
+        "file": "frame-058-yaw-290.png",
+        "objectFraction": 0.12117476851851852,
+        "objectMeanRGB": [
+          162.78274536132812,
+          162.58432006835938,
+          161.87730407714844
+        ],
+        "objectMeanLuma": 162.57545471191406,
+        "overlayFraction": 0.004878472222222222
+      },
+      {
+        "file": "frame-059-yaw-295.png",
+        "objectFraction": 0.1230787037037037,
+        "objectMeanRGB": [
+          160.93060302734375,
+          160.6838836669922,
+          159.96304321289062
+        ],
+        "objectMeanLuma": 160.68429565429688,
+        "overlayFraction": 0.006556712962962963
+      },
+      {
+        "file": "frame-060-yaw-300.png",
+        "objectFraction": 0.12454282407407408,
+        "objectMeanRGB": [
+          158.1924591064453,
+          157.89219665527344,
+          157.14967346191406
+        ],
+        "objectMeanLuma": 157.9024200439453,
+        "overlayFraction": 0.007170138888888889
+      },
+      {
+        "file": "frame-061-yaw-305.png",
+        "objectFraction": 0.12471643518518519,
+        "objectMeanRGB": [
+          154.21832275390625,
+          153.8417205810547,
+          153.0966033935547
+        ],
+        "objectMeanLuma": 153.86798095703125,
+        "overlayFraction": 0.008038194444444445
+      },
+      {
+        "file": "frame-062-yaw-310.png",
+        "objectFraction": 0.12406828703703704,
+        "objectMeanRGB": [
+          151.12332153320312,
+          150.68954467773438,
+          149.9365692138672
+        ],
+        "objectMeanLuma": 150.72740173339844,
+        "overlayFraction": 0.008993055555555556
+      },
+      {
+        "file": "frame-063-yaw-315.png",
+        "objectFraction": 0.12350694444444445,
+        "objectMeanRGB": [
+          148.66563415527344,
+          148.1873321533203,
+          147.4075469970703
+        ],
+        "objectMeanLuma": 148.2327117919922,
+        "overlayFraction": 0.009675925925925926
+      },
+      {
+        "file": "frame-064-yaw-320.png",
+        "objectFraction": 0.1214699074074074,
+        "objectMeanRGB": [
+          146.20558166503906,
+          145.6497344970703,
+          144.85765075683594
+        ],
+        "objectMeanLuma": 145.71072387695312,
+        "overlayFraction": 0.009895833333333333
+      },
+      {
+        "file": "frame-065-yaw-325.png",
+        "objectFraction": 0.12019097222222222,
+        "objectMeanRGB": [
+          144.31268310546875,
+          143.70127868652344,
+          142.86537170410156
+        ],
+        "objectMeanLuma": 143.77090454101562,
+        "overlayFraction": 0.010202546296296296
+      },
+      {
+        "file": "frame-066-yaw-330.png",
+        "objectFraction": 0.11694444444444445,
+        "objectMeanRGB": [
+          140.31333923339844,
+          139.63450622558594,
+          138.78746032714844
+        ],
+        "objectMeanLuma": 139.71766662597656,
+        "overlayFraction": 0.010833333333333334
+      },
+      {
+        "file": "frame-067-yaw-335.png",
+        "objectFraction": 0.11423611111111111,
+        "objectMeanRGB": [
+          137.74508666992188,
+          137.0006561279297,
+          136.13748168945312
+        ],
+        "objectMeanLuma": 137.09658813476562,
+        "overlayFraction": 0.011082175925925926
+      },
+      {
+        "file": "frame-068-yaw-340.png",
+        "objectFraction": 0.10988425925925926,
+        "objectMeanRGB": [
+          134.66873168945312,
+          133.8267364501953,
+          132.93179321289062
+        ],
+        "objectMeanLuma": 133.94113159179688,
+        "overlayFraction": 0.01171875
+      },
+      {
+        "file": "frame-069-yaw-345.png",
+        "objectFraction": 0.10682291666666667,
+        "objectMeanRGB": [
+          132.65122985839844,
+          131.70713806152344,
+          130.79380798339844
+        ],
+        "objectMeanLuma": 131.84188842773438,
+        "overlayFraction": 0.011869212962962963
+      },
+      {
+        "file": "frame-070-yaw-350.png",
+        "objectFraction": 0.1019212962962963,
+        "objectMeanRGB": [
+          129.10952758789062,
+          128.06614685058594,
+          127.10589599609375
+        ],
+        "objectMeanLuma": 128.21864318847656,
+        "overlayFraction": 0.011741898148148149
+      },
+      {
+        "file": "frame-071-yaw-355.png",
+        "objectFraction": 0.09609953703703704,
+        "objectMeanRGB": [
+          125.24834442138672,
+          124.0316162109375,
+          122.99789428710938
+        ],
+        "objectMeanLuma": 124.21565246582031,
+        "overlayFraction": 0.011707175925925926
+      }
+    ],
+    "adjacent": [
+      {
+        "from": "frame-000-yaw-000.png",
+        "to": "frame-001-yaw-005.png",
+        "pixelMAE": 3.991323232650757,
+        "objectFractionDelta": 0.0012962962962962954,
+        "objectLumaDelta": 1.0498123168945312
+      },
+      {
+        "from": "frame-001-yaw-005.png",
+        "to": "frame-002-yaw-010.png",
+        "pixelMAE": 4.1791839599609375,
+        "objectFractionDelta": 0.0019791666666666707,
+        "objectLumaDelta": 1.3249282836914062
+      },
+      {
+        "from": "frame-002-yaw-010.png",
+        "to": "frame-003-yaw-015.png",
+        "pixelMAE": 4.391409873962402,
+        "objectFractionDelta": 0.00031249999999999334,
+        "objectLumaDelta": 0.9866867065429688
+      },
+      {
+        "from": "frame-003-yaw-015.png",
+        "to": "frame-004-yaw-020.png",
+        "pixelMAE": 4.584446430206299,
+        "objectFractionDelta": 0.0012731481481481483,
+        "objectLumaDelta": 1.3151168823242188
+      },
+      {
+        "from": "frame-004-yaw-020.png",
+        "to": "frame-005-yaw-025.png",
+        "pixelMAE": 4.789669990539551,
+        "objectFractionDelta": 0.000983796296296302,
+        "objectLumaDelta": 1.7912521362304688
+      },
+      {
+        "from": "frame-005-yaw-025.png",
+        "to": "frame-006-yaw-030.png",
+        "pixelMAE": 4.904658794403076,
+        "objectFractionDelta": 0.0002893518518518462,
+        "objectLumaDelta": 1.75054931640625
+      },
+      {
+        "from": "frame-006-yaw-030.png",
+        "to": "frame-007-yaw-035.png",
+        "pixelMAE": 5.014230251312256,
+        "objectFractionDelta": 0.0009722222222222215,
+        "objectLumaDelta": 2.2584228515625
+      },
+      {
+        "from": "frame-007-yaw-035.png",
+        "to": "frame-008-yaw-040.png",
+        "pixelMAE": 4.9096760749816895,
+        "objectFractionDelta": 0.0001215277777777829,
+        "objectLumaDelta": 2.3723907470703125
+      },
+      {
+        "from": "frame-008-yaw-040.png",
+        "to": "frame-009-yaw-045.png",
+        "pixelMAE": 4.907145023345947,
+        "objectFractionDelta": 0.0003009259259259267,
+        "objectLumaDelta": 1.683197021484375
+      },
+      {
+        "from": "frame-009-yaw-045.png",
+        "to": "frame-010-yaw-050.png",
+        "pixelMAE": 4.62716817855835,
+        "objectFractionDelta": 0.0009027777777777801,
+        "objectLumaDelta": 1.926727294921875
+      },
+      {
+        "from": "frame-010-yaw-050.png",
+        "to": "frame-011-yaw-055.png",
+        "pixelMAE": 4.4125213623046875,
+        "objectFractionDelta": 0.0024421296296296274,
+        "objectLumaDelta": 3.276702880859375
+      },
+      {
+        "from": "frame-011-yaw-055.png",
+        "to": "frame-012-yaw-060.png",
+        "pixelMAE": 4.174687385559082,
+        "objectFractionDelta": 0.0020196759259259317,
+        "objectLumaDelta": 3.0970916748046875
+      },
+      {
+        "from": "frame-012-yaw-060.png",
+        "to": "frame-013-yaw-065.png",
+        "pixelMAE": 4.017019748687744,
+        "objectFractionDelta": 0.004241898148148154,
+        "objectLumaDelta": 2.9398956298828125
+      },
+      {
+        "from": "frame-013-yaw-065.png",
+        "to": "frame-014-yaw-070.png",
+        "pixelMAE": 3.9996893405914307,
+        "objectFractionDelta": 0.001944444444444443,
+        "objectLumaDelta": 3.5408477783203125
+      },
+      {
+        "from": "frame-014-yaw-070.png",
+        "to": "frame-015-yaw-075.png",
+        "pixelMAE": 3.8642361164093018,
+        "objectFractionDelta": 0.0036863425925925813,
+        "objectLumaDelta": 4.1853179931640625
+      },
+      {
+        "from": "frame-015-yaw-075.png",
+        "to": "frame-016-yaw-080.png",
+        "pixelMAE": 3.887019634246826,
+        "objectFractionDelta": 0.0016435185185185303,
+        "objectLumaDelta": 2.2144012451171875
+      },
+      {
+        "from": "frame-016-yaw-080.png",
+        "to": "frame-017-yaw-085.png",
+        "pixelMAE": 3.709820508956909,
+        "objectFractionDelta": 0.0037499999999999895,
+        "objectLumaDelta": 4.4699249267578125
+      },
+      {
+        "from": "frame-017-yaw-085.png",
+        "to": "frame-018-yaw-090.png",
+        "pixelMAE": 3.7352333068847656,
+        "objectFractionDelta": 0.005497685185185189,
+        "objectLumaDelta": 2.456207275390625
+      },
+      {
+        "from": "frame-018-yaw-090.png",
+        "to": "frame-019-yaw-095.png",
+        "pixelMAE": 3.8800888061523438,
+        "objectFractionDelta": 0.0016840277777777773,
+        "objectLumaDelta": 1.5707244873046875
+      },
+      {
+        "from": "frame-019-yaw-095.png",
+        "to": "frame-020-yaw-100.png",
+        "pixelMAE": 3.7106692790985107,
+        "objectFractionDelta": 0.0038194444444444448,
+        "objectLumaDelta": 1.7288970947265625
+      },
+      {
+        "from": "frame-020-yaw-100.png",
+        "to": "frame-021-yaw-105.png",
+        "pixelMAE": 3.743159770965576,
+        "objectFractionDelta": 0.003188657407407411,
+        "objectLumaDelta": 1.86431884765625
+      },
+      {
+        "from": "frame-021-yaw-105.png",
+        "to": "frame-022-yaw-110.png",
+        "pixelMAE": 3.8516743183135986,
+        "objectFractionDelta": 0.004594907407407409,
+        "objectLumaDelta": 2.7757720947265625
+      },
+      {
+        "from": "frame-022-yaw-110.png",
+        "to": "frame-023-yaw-115.png",
+        "pixelMAE": 3.9048495292663574,
+        "objectFractionDelta": 0.0005729166666666591,
+        "objectLumaDelta": 0.6409759521484375
+      },
+      {
+        "from": "frame-023-yaw-115.png",
+        "to": "frame-024-yaw-120.png",
+        "pixelMAE": 4.100194931030273,
+        "objectFractionDelta": 0.004513888888888887,
+        "objectLumaDelta": 9.348983764648438
+      },
+      {
+        "from": "frame-024-yaw-120.png",
+        "to": "frame-025-yaw-125.png",
+        "pixelMAE": 4.417079448699951,
+        "objectFractionDelta": 0.00032407407407407385,
+        "objectLumaDelta": 5.105133056640625
+      },
+      {
+        "from": "frame-025-yaw-125.png",
+        "to": "frame-026-yaw-130.png",
+        "pixelMAE": 4.2540202140808105,
+        "objectFractionDelta": 0.0018576388888888878,
+        "objectLumaDelta": 0.3982086181640625
+      },
+      {
+        "from": "frame-026-yaw-130.png",
+        "to": "frame-027-yaw-135.png",
+        "pixelMAE": 4.636956214904785,
+        "objectFractionDelta": 0.0004976851851851843,
+        "objectLumaDelta": 3.197235107421875
+      },
+      {
+        "from": "frame-027-yaw-135.png",
+        "to": "frame-028-yaw-140.png",
+        "pixelMAE": 4.926111221313477,
+        "objectFractionDelta": 0.000717592592592603,
+        "objectLumaDelta": 1.6126556396484375
+      },
+      {
+        "from": "frame-028-yaw-140.png",
+        "to": "frame-029-yaw-145.png",
+        "pixelMAE": 4.848150253295898,
+        "objectFractionDelta": 0.0012500000000000011,
+        "objectLumaDelta": 0.7144775390625
+      },
+      {
+        "from": "frame-029-yaw-145.png",
+        "to": "frame-030-yaw-150.png",
+        "pixelMAE": 4.839188098907471,
+        "objectFractionDelta": 0.0003414351851851877,
+        "objectLumaDelta": 0.900787353515625
+      },
+      {
+        "from": "frame-030-yaw-150.png",
+        "to": "frame-031-yaw-155.png",
+        "pixelMAE": 5.080092430114746,
+        "objectFractionDelta": 0.0007581018518518501,
+        "objectLumaDelta": 1.1707763671875
+      },
+      {
+        "from": "frame-031-yaw-155.png",
+        "to": "frame-032-yaw-160.png",
+        "pixelMAE": 5.1231560707092285,
+        "objectFractionDelta": 0.0005497685185185119,
+        "objectLumaDelta": 0.6208038330078125
+      },
+      {
+        "from": "frame-032-yaw-160.png",
+        "to": "frame-033-yaw-165.png",
+        "pixelMAE": 5.157644748687744,
+        "objectFractionDelta": 0.0007349537037037029,
+        "objectLumaDelta": 0.543701171875
+      },
+      {
+        "from": "frame-033-yaw-165.png",
+        "to": "frame-034-yaw-170.png",
+        "pixelMAE": 5.090765953063965,
+        "objectFractionDelta": 8.101851851852193e-05,
+        "objectLumaDelta": 0.1922760009765625
+      },
+      {
+        "from": "frame-034-yaw-170.png",
+        "to": "frame-035-yaw-175.png",
+        "pixelMAE": 5.076014518737793,
+        "objectFractionDelta": 0.00345486111111111,
+        "objectLumaDelta": 0.96734619140625
+      },
+      {
+        "from": "frame-035-yaw-175.png",
+        "to": "frame-036-yaw-180.png",
+        "pixelMAE": 5.053015232086182,
+        "objectFractionDelta": 0.0003009259259259267,
+        "objectLumaDelta": 1.94561767578125
+      },
+      {
+        "from": "frame-036-yaw-180.png",
+        "to": "frame-037-yaw-185.png",
+        "pixelMAE": 4.91564416885376,
+        "objectFractionDelta": 0.0032175925925925913,
+        "objectLumaDelta": 3.410919189453125
+      },
+      {
+        "from": "frame-037-yaw-185.png",
+        "to": "frame-038-yaw-190.png",
+        "pixelMAE": 4.851512432098389,
+        "objectFractionDelta": 0.006041666666666667,
+        "objectLumaDelta": 2.1270904541015625
+      },
+      {
+        "from": "frame-038-yaw-190.png",
+        "to": "frame-039-yaw-195.png",
+        "pixelMAE": 4.925455093383789,
+        "objectFractionDelta": 0.0045717592592592615,
+        "objectLumaDelta": 1.80218505859375
+      },
+      {
+        "from": "frame-039-yaw-195.png",
+        "to": "frame-040-yaw-200.png",
+        "pixelMAE": 4.895503520965576,
+        "objectFractionDelta": 0.003657407407407401,
+        "objectLumaDelta": 1.0684967041015625
+      },
+      {
+        "from": "frame-040-yaw-200.png",
+        "to": "frame-041-yaw-205.png",
+        "pixelMAE": 4.840048313140869,
+        "objectFractionDelta": 0.0043865740740740705,
+        "objectLumaDelta": 1.404144287109375
+      },
+      {
+        "from": "frame-041-yaw-205.png",
+        "to": "frame-042-yaw-210.png",
+        "pixelMAE": 4.733574390411377,
+        "objectFractionDelta": 0.00359953703703704,
+        "objectLumaDelta": 2.6038055419921875
+      },
+      {
+        "from": "frame-042-yaw-210.png",
+        "to": "frame-043-yaw-215.png",
+        "pixelMAE": 4.528703689575195,
+        "objectFractionDelta": 0.002146990740740748,
+        "objectLumaDelta": 1.408050537109375
+      },
+      {
+        "from": "frame-043-yaw-215.png",
+        "to": "frame-044-yaw-220.png",
+        "pixelMAE": 4.4239912033081055,
+        "objectFractionDelta": 0.0024479166666666607,
+        "objectLumaDelta": 1.4474029541015625
+      },
+      {
+        "from": "frame-044-yaw-220.png",
+        "to": "frame-045-yaw-225.png",
+        "pixelMAE": 4.326589584350586,
+        "objectFractionDelta": 0.0026504629629629656,
+        "objectLumaDelta": 0.00848388671875
+      },
+      {
+        "from": "frame-045-yaw-225.png",
+        "to": "frame-046-yaw-230.png",
+        "pixelMAE": 4.100088596343994,
+        "objectFractionDelta": 0.0007754629629629639,
+        "objectLumaDelta": 2.05718994140625
+      },
+      {
+        "from": "frame-046-yaw-230.png",
+        "to": "frame-047-yaw-235.png",
+        "pixelMAE": 3.7425637245178223,
+        "objectFractionDelta": 0.0013252314814814758,
+        "objectLumaDelta": 1.64361572265625
+      },
+      {
+        "from": "frame-047-yaw-235.png",
+        "to": "frame-048-yaw-240.png",
+        "pixelMAE": 3.834380865097046,
+        "objectFractionDelta": 0.0007175925925925891,
+        "objectLumaDelta": 4.4902496337890625
+      },
+      {
+        "from": "frame-048-yaw-240.png",
+        "to": "frame-049-yaw-245.png",
+        "pixelMAE": 3.77498459815979,
+        "objectFractionDelta": 0.001597222222222222,
+        "objectLumaDelta": 8.40460205078125
+      },
+      {
+        "from": "frame-049-yaw-245.png",
+        "to": "frame-050-yaw-250.png",
+        "pixelMAE": 3.4394657611846924,
+        "objectFractionDelta": 0.0018692129629629545,
+        "objectLumaDelta": 0.492706298828125
+      },
+      {
+        "from": "frame-050-yaw-250.png",
+        "to": "frame-051-yaw-255.png",
+        "pixelMAE": 3.3463213443756104,
+        "objectFractionDelta": 0.001429398148148145,
+        "objectLumaDelta": 2.2794952392578125
+      },
+      {
+        "from": "frame-051-yaw-255.png",
+        "to": "frame-052-yaw-260.png",
+        "pixelMAE": 3.1962904930114746,
+        "objectFractionDelta": 0.0023206018518518584,
+        "objectLumaDelta": 1.418914794921875
+      },
+      {
+        "from": "frame-052-yaw-260.png",
+        "to": "frame-053-yaw-265.png",
+        "pixelMAE": 3.1916821002960205,
+        "objectFractionDelta": 0.0019502314814814764,
+        "objectLumaDelta": 0.7383880615234375
+      },
+      {
+        "from": "frame-053-yaw-265.png",
+        "to": "frame-054-yaw-270.png",
+        "pixelMAE": 3.147961139678955,
+        "objectFractionDelta": 0.004375000000000004,
+        "objectLumaDelta": 0.9655609130859375
+      },
+      {
+        "from": "frame-054-yaw-270.png",
+        "to": "frame-055-yaw-275.png",
+        "pixelMAE": 3.3519251346588135,
+        "objectFractionDelta": 0.004890046296296302,
+        "objectLumaDelta": 1.641326904296875
+      },
+      {
+        "from": "frame-055-yaw-275.png",
+        "to": "frame-056-yaw-280.png",
+        "pixelMAE": 3.304537057876587,
+        "objectFractionDelta": 0.0032175925925925913,
+        "objectLumaDelta": 2.846588134765625
+      },
+      {
+        "from": "frame-056-yaw-280.png",
+        "to": "frame-057-yaw-285.png",
+        "pixelMAE": 3.4259605407714844,
+        "objectFractionDelta": 0.003535879629629632,
+        "objectLumaDelta": 3.9002532958984375
+      },
+      {
+        "from": "frame-057-yaw-285.png",
+        "to": "frame-058-yaw-290.png",
+        "pixelMAE": 3.542544364929199,
+        "objectFractionDelta": 0.0023784722222222193,
+        "objectLumaDelta": 3.5137176513671875
+      },
+      {
+        "from": "frame-058-yaw-290.png",
+        "to": "frame-059-yaw-295.png",
+        "pixelMAE": 3.657114267349243,
+        "objectFractionDelta": 0.0019039351851851821,
+        "objectLumaDelta": 1.8911590576171875
+      },
+      {
+        "from": "frame-059-yaw-295.png",
+        "to": "frame-060-yaw-300.png",
+        "pixelMAE": 3.5441088676452637,
+        "objectFractionDelta": 0.0014641203703703726,
+        "objectLumaDelta": 2.7818756103515625
+      },
+      {
+        "from": "frame-060-yaw-300.png",
+        "to": "frame-061-yaw-305.png",
+        "pixelMAE": 3.785796642303467,
+        "objectFractionDelta": 0.0001736111111111105,
+        "objectLumaDelta": 4.0344390869140625
+      },
+      {
+        "from": "frame-061-yaw-305.png",
+        "to": "frame-062-yaw-310.png",
+        "pixelMAE": 3.9926891326904297,
+        "objectFractionDelta": 0.0006481481481481477,
+        "objectLumaDelta": 3.1405792236328125
+      },
+      {
+        "from": "frame-062-yaw-310.png",
+        "to": "frame-063-yaw-315.png",
+        "pixelMAE": 4.1796722412109375,
+        "objectFractionDelta": 0.0005613425925925924,
+        "objectLumaDelta": 2.49468994140625
+      },
+      {
+        "from": "frame-063-yaw-315.png",
+        "to": "frame-064-yaw-320.png",
+        "pixelMAE": 4.470115661621094,
+        "objectFractionDelta": 0.0020370370370370455,
+        "objectLumaDelta": 2.5219879150390625
+      },
+      {
+        "from": "frame-064-yaw-320.png",
+        "to": "frame-065-yaw-325.png",
+        "pixelMAE": 4.495696544647217,
+        "objectFractionDelta": 0.0012789351851851816,
+        "objectLumaDelta": 1.9398193359375
+      },
+      {
+        "from": "frame-065-yaw-325.png",
+        "to": "frame-066-yaw-330.png",
+        "pixelMAE": 4.531733989715576,
+        "objectFractionDelta": 0.003246527777777772,
+        "objectLumaDelta": 4.0532379150390625
+      },
+      {
+        "from": "frame-066-yaw-330.png",
+        "to": "frame-067-yaw-335.png",
+        "pixelMAE": 4.537968635559082,
+        "objectFractionDelta": 0.0027083333333333404,
+        "objectLumaDelta": 2.6210784912109375
+      },
+      {
+        "from": "frame-067-yaw-335.png",
+        "to": "frame-068-yaw-340.png",
+        "pixelMAE": 4.410438060760498,
+        "objectFractionDelta": 0.004351851851851843,
+        "objectLumaDelta": 3.15545654296875
+      },
+      {
+        "from": "frame-068-yaw-340.png",
+        "to": "frame-069-yaw-345.png",
+        "pixelMAE": 4.310160160064697,
+        "objectFractionDelta": 0.0030613425925925947,
+        "objectLumaDelta": 2.0992431640625
+      },
+      {
+        "from": "frame-069-yaw-345.png",
+        "to": "frame-070-yaw-350.png",
+        "pixelMAE": 4.167272567749023,
+        "objectFractionDelta": 0.004901620370370369,
+        "objectLumaDelta": 3.6232452392578125
+      },
+      {
+        "from": "frame-070-yaw-350.png",
+        "to": "frame-071-yaw-355.png",
+        "pixelMAE": 4.00700044631958,
+        "objectFractionDelta": 0.005821759259259263,
+        "objectLumaDelta": 4.00299072265625
+      },
+      {
+        "from": "frame-071-yaw-355.png",
+        "to": "frame-000-yaw-000.png",
+        "pixelMAE": 3.9416916370391846,
+        "objectFractionDelta": 0.0020717592592592593,
+        "objectLumaDelta": 1.4177322387695312
+      }
+    ]
+  },
+  "stable": {
+    "groups": [
+      {
+        "checker": "dark",
+        "yaw": 0,
+        "pitch": 10,
+        "samples": 3,
+        "maxMAE": 0.0,
+        "maxPixelDelta": 0.0
+      },
+      {
+        "checker": "dark",
+        "yaw": 135,
+        "pitch": -25,
+        "samples": 3,
+        "maxMAE": 0.0,
+        "maxPixelDelta": 0.0
+      },
+      {
+        "checker": "dark",
+        "yaw": 270,
+        "pitch": 25,
+        "samples": 3,
+        "maxMAE": 0.0,
+        "maxPixelDelta": 0.0
+      },
+      {
+        "checker": "light",
+        "yaw": 0,
+        "pitch": 10,
+        "samples": 3,
+        "maxMAE": 0.0,
+        "maxPixelDelta": 0.0
+      },
+      {
+        "checker": "light",
+        "yaw": 135,
+        "pitch": -25,
+        "samples": 3,
+        "maxMAE": 0.0,
+        "maxPixelDelta": 0.0
+      },
+      {
+        "checker": "light",
+        "yaw": 270,
+        "pitch": 25,
+        "samples": 3,
+        "maxMAE": 0.0,
+        "maxPixelDelta": 0.0
+      }
+    ],
+    "failures": []
+  },
+  "checkerOpacity": {
+    "pairs": [
+      {
+        "yaw": 0,
+        "pitch": -35,
+        "objectPixels": 2793,
+        "objectChangedFraction": 0.0,
+        "objectMedianDelta": 0.0
+      },
+      {
+        "yaw": 0,
+        "pitch": -15,
+        "objectPixels": 1161,
+        "objectChangedFraction": 0.0,
+        "objectMedianDelta": 0.0
+      },
+      {
+        "yaw": 0,
+        "pitch": 15,
+        "objectPixels": 1414,
+        "objectChangedFraction": 0.0,
+        "objectMedianDelta": 0.0
+      },
+      {
+        "yaw": 0,
+        "pitch": 35,
+        "objectPixels": 4157,
+        "objectChangedFraction": 0.0,
+        "objectMedianDelta": 0.0
+      },
+      {
+        "yaw": 90,
+        "pitch": -35,
+        "objectPixels": 3209,
+        "objectChangedFraction": 0.0,
+        "objectMedianDelta": 0.0
+      },
+      {
+        "yaw": 90,
+        "pitch": -15,
+        "objectPixels": 1711,
+        "objectChangedFraction": 0.0,
+        "objectMedianDelta": 0.0
+      },
+      {
+        "yaw": 90,
+        "pitch": 15,
+        "objectPixels": 2338,
+        "objectChangedFraction": 0.0,
+        "objectMedianDelta": 0.0
+      },
+      {
+        "yaw": 90,
+        "pitch": 35,
+        "objectPixels": 5423,
+        "objectChangedFraction": 0.0,
+        "objectMedianDelta": 0.0
+      },
+      {
+        "yaw": 180,
+        "pitch": -35,
+        "objectPixels": 3010,
+        "objectChangedFraction": 0.0,
+        "objectMedianDelta": 0.0
+      },
+      {
+        "yaw": 180,
+        "pitch": -15,
+        "objectPixels": 1376,
+        "objectChangedFraction": 0.0,
+        "objectMedianDelta": 0.0
+      },
+      {
+        "yaw": 180,
+        "pitch": 15,
+        "objectPixels": 2375,
+        "objectChangedFraction": 0.0,
+        "objectMedianDelta": 0.0
+      },
+      {
+        "yaw": 180,
+        "pitch": 35,
+        "objectPixels": 4514,
+        "objectChangedFraction": 0.0,
+        "objectMedianDelta": 0.0
+      },
+      {
+        "yaw": 270,
+        "pitch": -35,
+        "objectPixels": 6426,
+        "objectChangedFraction": 0.0,
+        "objectMedianDelta": 0.0
+      },
+      {
+        "yaw": 270,
+        "pitch": -15,
+        "objectPixels": 5798,
+        "objectChangedFraction": 0.0,
+        "objectMedianDelta": 0.0
+      },
+      {
+        "yaw": 270,
+        "pitch": 15,
+        "objectPixels": 6359,
+        "objectChangedFraction": 0.0,
+        "objectMedianDelta": 0.0
+      },
+      {
+        "yaw": 270,
+        "pitch": 35,
+        "objectPixels": 8057,
+        "objectChangedFraction": 0.0,
+        "objectMedianDelta": 0.0
+      }
+    ],
+    "failures": []
+  },
+  "overlayFrames": [],
+  "missingFiles": [],
+  "errors": [],
+  "errorCount": 0,
+  "status": "PASS"
+}

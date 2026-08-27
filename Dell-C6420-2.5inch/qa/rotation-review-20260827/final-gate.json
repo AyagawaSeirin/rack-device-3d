@@ -1,0 +1,530 @@
+{
+  "model": "Dell-C6420-2.5inch",
+  "frozen": {
+    "frozenAt": "2026-08-27T23:20:00+08:00",
+    "model": "Dell-C6420-2.5inch",
+    "standard": {
+      "path": "model/Dell-C6420-2.5inch.glb",
+      "bytes": 16380516,
+      "sha256": "88348a13c53b99c31408225b483cdf5c7adba612b9505ea9b7466d684ce60151",
+      "preReviewSha256": "ecc0f7ff5b5cd595ae72e00af83f63e0857fefb079787c4737b61ef353d674f9"
+    },
+    "web": {
+      "path": "model/Dell-C6420-2.5inch-web.glb",
+      "bytes": 6890888,
+      "sha256": "7a8c3b7442786f723ec71bb21220d9a3d716a02a5ed3e72b66d5ca756186c680",
+      "preReviewSha256": "b78c3c55807c96d9831ceb8da5e162684558f253135c438cd96a238ad1f61553"
+    },
+    "viewers": {
+      "three": {
+        "path": "qa/rotation-review-20260827/viewers/three-orbit.html",
+        "sha256": "399fd9bf1986b29f205ea526dae84d302bbd4164b5e9f851f4c0c5b1add10328"
+      },
+      "babylon": {
+        "path": "qa/rotation-review-20260827/viewers/babylon-orbit.html",
+        "sha256": "8a4df2e3080fff783450aa60bab6daae446035ddb50a0aeffe7af69ef72272ad"
+      }
+    },
+    "builder": {
+      "path": "model/build_model.py",
+      "sha256": "fb39666925ed5d1453288f4d0a7ecefc196fde58fd73eaf43ee8c6a2eacd38a1"
+    },
+    "preReviewHashesUnchanged": false,
+    "repair": "separated source-locked cards, boundaries, ports/grilles and fasteners into camera-correct mechanical depth layers; rear order is body, photo card, boundary, port/grille, handle"
+  },
+  "checks": {
+    "preReviewArchive": true,
+    "frozenHashes": true,
+    "auditViews": true,
+    "auditStandard": true,
+    "auditWeb": true,
+    "rotationStructureStandard": true,
+    "rotationStructureWeb": true,
+    "loads40": true,
+    "rotationFourCombinations": true,
+    "inventory": true,
+    "matchedCamera": true,
+    "textureSamplingAndAtlas": true,
+    "official3DReview": true
+  },
+  "audits": {
+    "views": {
+      "status": "PASS",
+      "errors": [],
+      "errorCount": 0,
+      "unresolvedCount": 0
+    },
+    "standard": {
+      "status": "PASS",
+      "errors": [],
+      "errorCount": 0,
+      "unresolvedCount": 0
+    },
+    "web": {
+      "status": "PASS",
+      "errors": [],
+      "errorCount": 0,
+      "unresolvedCount": 0
+    },
+    "rotation-structure-standard": {
+      "status": "PASS",
+      "errors": [],
+      "errorCount": 0,
+      "unresolvedCount": 0
+    },
+    "rotation-structure-web": {
+      "status": "PASS",
+      "errors": [],
+      "errorCount": 0,
+      "unresolvedCount": 0
+    }
+  },
+  "loads": {
+    "required": 40,
+    "actual": 40,
+    "uniqueNonces": 40,
+    "combos": [
+      {
+        "viewer": "three",
+        "variant": "standard",
+        "modelBase": "/Dell-C6420-2.5inch/model/Dell-C6420-2.5inch.glb",
+        "checks": {
+          "loadCount10": true,
+          "pngCount10": true,
+          "viewOrderExact": true,
+          "cacheBusted": true,
+          "independentPageNavigations": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "three",
+        "variant": "web",
+        "modelBase": "/Dell-C6420-2.5inch/model/Dell-C6420-2.5inch-web.glb",
+        "checks": {
+          "loadCount10": true,
+          "pngCount10": true,
+          "viewOrderExact": true,
+          "cacheBusted": true,
+          "independentPageNavigations": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "babylon",
+        "variant": "standard",
+        "modelBase": "/Dell-C6420-2.5inch/model/Dell-C6420-2.5inch.glb",
+        "checks": {
+          "loadCount10": true,
+          "pngCount10": true,
+          "viewOrderExact": true,
+          "cacheBusted": true,
+          "independentPageNavigations": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "babylon",
+        "variant": "web",
+        "modelBase": "/Dell-C6420-2.5inch/model/Dell-C6420-2.5inch-web.glb",
+        "checks": {
+          "loadCount10": true,
+          "pngCount10": true,
+          "viewOrderExact": true,
+          "cacheBusted": true,
+          "independentPageNavigations": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      }
+    ]
+  },
+  "rotation": {
+    "yawFrames": 288,
+    "pitchCheckerFrames": 128,
+    "stableFrames": 72,
+    "combos": [
+      {
+        "viewer": "three",
+        "variant": "standard",
+        "runtime": {
+          "engine": "Three.js 179",
+          "webgl2": true,
+          "model": "/Dell-C6420-2.5inch/model/Dell-C6420-2.5inch.glb?cb=final-88348a13",
+          "bounds": {
+            "min": [
+              -0.24130000174045563,
+              -0.04340000078082085,
+              -0.39864999055862427
+            ],
+            "max": [
+              0.24130000174045563,
+              0.04340000078082085,
+              0.39864999055862427
+            ],
+            "size": [
+              0.48260000348091125,
+              0.0868000015616417,
+              0.7972999811172485
+            ]
+          },
+          "near": 0.01,
+          "far": 10,
+          "frozenFrustum": true,
+          "loadingOverlayHidden": true,
+          "checker": "dark",
+          "overlayVisible": false
+        },
+        "checks": {
+          "analysisPass": true,
+          "yaw72x5": true,
+          "pitchChecker32": true,
+          "stable18": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "three",
+        "variant": "web",
+        "runtime": {
+          "engine": "Three.js 179",
+          "webgl2": true,
+          "model": "/Dell-C6420-2.5inch/model/Dell-C6420-2.5inch-web.glb?cb=final-7a8c3b74",
+          "bounds": {
+            "min": [
+              -0.24130000174045563,
+              -0.04340000078082085,
+              -0.39864999055862427
+            ],
+            "max": [
+              0.24130000174045563,
+              0.04340000078082085,
+              0.39864999055862427
+            ],
+            "size": [
+              0.48260000348091125,
+              0.0868000015616417,
+              0.7972999811172485
+            ]
+          },
+          "near": 0.01,
+          "far": 10,
+          "frozenFrustum": true,
+          "loadingOverlayHidden": true,
+          "checker": "dark",
+          "overlayVisible": false
+        },
+        "checks": {
+          "analysisPass": true,
+          "yaw72x5": true,
+          "pitchChecker32": true,
+          "stable18": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "babylon",
+        "variant": "standard",
+        "runtime": {
+          "engine": "Babylon.js 8.22.2",
+          "webgl2": true,
+          "model": "/Dell-C6420-2.5inch/model/Dell-C6420-2.5inch.glb?cb=final-88348a13",
+          "bounds": {
+            "min": [
+              -0.24130000174045563,
+              -0.04340000078082085,
+              -0.39864999055862427
+            ],
+            "max": [
+              0.24130000174045563,
+              0.04340000078082085,
+              0.39864999055862427
+            ],
+            "size": [
+              0.48260000348091125,
+              0.0868000015616417,
+              0.7972999811172485
+            ]
+          },
+          "near": 0.01,
+          "far": 10,
+          "frozenFrustum": true,
+          "loadingOverlayHidden": true,
+          "checker": "dark",
+          "overlayVisible": false
+        },
+        "checks": {
+          "analysisPass": true,
+          "yaw72x5": true,
+          "pitchChecker32": true,
+          "stable18": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "babylon",
+        "variant": "web",
+        "runtime": {
+          "engine": "Babylon.js 8.22.2",
+          "webgl2": true,
+          "model": "/Dell-C6420-2.5inch/model/Dell-C6420-2.5inch-web.glb?cb=final-7a8c3b74",
+          "bounds": {
+            "min": [
+              -0.24130000174045563,
+              -0.04340000078082085,
+              -0.39864999055862427
+            ],
+            "max": [
+              0.24130000174045563,
+              0.04340000078082085,
+              0.39864999055862427
+            ],
+            "size": [
+              0.48260000348091125,
+              0.0868000015616417,
+              0.7972999811172485
+            ]
+          },
+          "near": 0.01,
+          "far": 10,
+          "frozenFrustum": true,
+          "loadingOverlayHidden": true,
+          "checker": "dark",
+          "overlayVisible": false
+        },
+        "checks": {
+          "analysisPass": true,
+          "yaw72x5": true,
+          "pitchChecker32": true,
+          "stable18": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      }
+    ]
+  },
+  "inventory": {
+    "model": "Dell-C6420-2.5inch",
+    "sourceRows": 45,
+    "reviewRows": 45,
+    "statusCounts": {
+      "PASS_EXACT": 43,
+      "PASS_BOTTOM_FALLBACK": 2
+    },
+    "globalEvidencePass": true,
+    "standardNodeCount": 123,
+    "webNodeCount": 123,
+    "standardWebNodeNamesEqual": true,
+    "errors": [],
+    "status": "PASS"
+  },
+  "textureSampling": {
+    "model": "Dell-C6420-2.5inch",
+    "records": {
+      "standard": {
+        "path": "/root/Project/rack-device-3d/Dell-C6420-2.5inch/model/Dell-C6420-2.5inch.glb",
+        "textureCount": 6,
+        "imageCount": 6,
+        "samplers": [],
+        "textures": [
+          {
+            "index": 0,
+            "source": 0,
+            "sampler": null,
+            "effectiveMinFilter": "GLTF_DEFAULT_LINEAR",
+            "usesMipmaps": false
+          },
+          {
+            "index": 1,
+            "source": 1,
+            "sampler": null,
+            "effectiveMinFilter": "GLTF_DEFAULT_LINEAR",
+            "usesMipmaps": false
+          },
+          {
+            "index": 2,
+            "source": 2,
+            "sampler": null,
+            "effectiveMinFilter": "GLTF_DEFAULT_LINEAR",
+            "usesMipmaps": false
+          },
+          {
+            "index": 3,
+            "source": 3,
+            "sampler": null,
+            "effectiveMinFilter": "GLTF_DEFAULT_LINEAR",
+            "usesMipmaps": false
+          },
+          {
+            "index": 4,
+            "source": 4,
+            "sampler": null,
+            "effectiveMinFilter": "GLTF_DEFAULT_LINEAR",
+            "usesMipmaps": false
+          },
+          {
+            "index": 5,
+            "source": 5,
+            "sampler": null,
+            "effectiveMinFilter": "GLTF_DEFAULT_LINEAR",
+            "usesMipmaps": false
+          }
+        ],
+        "sharedAtlasDetected": false,
+        "atlasBleedRisk": false,
+        "mipmapNote": "glTF default LINEAR minification; no atlas and frozen-hash orbit evidence showed no sampling shimmer"
+      },
+      "web": {
+        "path": "/root/Project/rack-device-3d/Dell-C6420-2.5inch/model/Dell-C6420-2.5inch-web.glb",
+        "textureCount": 6,
+        "imageCount": 6,
+        "samplers": [],
+        "textures": [
+          {
+            "index": 0,
+            "source": 0,
+            "sampler": null,
+            "effectiveMinFilter": "GLTF_DEFAULT_LINEAR",
+            "usesMipmaps": false
+          },
+          {
+            "index": 1,
+            "source": 1,
+            "sampler": null,
+            "effectiveMinFilter": "GLTF_DEFAULT_LINEAR",
+            "usesMipmaps": false
+          },
+          {
+            "index": 2,
+            "source": 2,
+            "sampler": null,
+            "effectiveMinFilter": "GLTF_DEFAULT_LINEAR",
+            "usesMipmaps": false
+          },
+          {
+            "index": 3,
+            "source": 3,
+            "sampler": null,
+            "effectiveMinFilter": "GLTF_DEFAULT_LINEAR",
+            "usesMipmaps": false
+          },
+          {
+            "index": 4,
+            "source": 4,
+            "sampler": null,
+            "effectiveMinFilter": "GLTF_DEFAULT_LINEAR",
+            "usesMipmaps": false
+          },
+          {
+            "index": 5,
+            "source": 5,
+            "sampler": null,
+            "effectiveMinFilter": "GLTF_DEFAULT_LINEAR",
+            "usesMipmaps": false
+          }
+        ],
+        "sharedAtlasDetected": false,
+        "atlasBleedRisk": false,
+        "mipmapNote": "glTF default LINEAR minification; no atlas and frozen-hash orbit evidence showed no sampling shimmer"
+      }
+    },
+    "errors": [],
+    "errorCount": 0,
+    "status": "PASS"
+  },
+  "matchedCamera": {
+    "front": {
+      "files": [
+        "qa/rotation-review-20260827/matched-camera/three-standard/front/source.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/front/render.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/front/overlay.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/front/difference.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/front/sheet.png"
+      ],
+      "complete": true
+    },
+    "rear": {
+      "files": [
+        "qa/rotation-review-20260827/matched-camera/three-standard/rear/source.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/rear/render.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/rear/overlay.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/rear/difference.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/rear/sheet.png"
+      ],
+      "complete": true
+    },
+    "left": {
+      "files": [
+        "qa/rotation-review-20260827/matched-camera/three-standard/left/source.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/left/render.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/left/overlay.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/left/difference.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/left/sheet.png"
+      ],
+      "complete": true
+    },
+    "right": {
+      "files": [
+        "qa/rotation-review-20260827/matched-camera/three-standard/right/source.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/right/render.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/right/overlay.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/right/difference.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/right/sheet.png"
+      ],
+      "complete": true
+    },
+    "top": {
+      "files": [
+        "qa/rotation-review-20260827/matched-camera/three-standard/top/source.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/top/render.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/top/overlay.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/top/difference.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/top/sheet.png"
+      ],
+      "complete": true
+    },
+    "bottom": {
+      "files": [
+        "qa/rotation-review-20260827/matched-camera/three-standard/bottom/source.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/bottom/render.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/bottom/overlay.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/bottom/difference.png",
+        "qa/rotation-review-20260827/matched-camera/three-standard/bottom/sheet.png"
+      ],
+      "complete": true
+    }
+  },
+  "errors": [],
+  "errorCount": 0,
+  "status": "PASS_WITH_BOTTOM_FALLBACK"
+}

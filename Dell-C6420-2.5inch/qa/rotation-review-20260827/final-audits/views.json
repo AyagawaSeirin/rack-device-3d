@@ -1,0 +1,196 @@
+{
+  "model": "Dell-C6420-2.5inch",
+  "viewsDir": "/root/Project/rack-device-3d/Dell-C6420-2.5inch/views",
+  "note": "C6400 canonical sides and top/bottom use the body envelope; front includes control/mounting housings.",
+  "expectedRatios": {
+    "front": 5.559907834101383,
+    "rear": 5.161290322580645,
+    "left": 8.7926267281106,
+    "right": 8.7926267281106,
+    "top": 0.5870020964360587,
+    "bottom": 0.5870020964360587
+  },
+  "faces": {
+    "front": {
+      "path": "/root/Project/rack-device-3d/Dell-C6420-2.5inch/views/front.png",
+      "errors": [],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        3203,
+        576
+      ],
+      "content_bbox_px": [
+        0,
+        0,
+        3203,
+        576
+      ],
+      "content_px": [
+        3203,
+        576
+      ],
+      "actual_ratio": 5.560764,
+      "expected_ratio": 5.559908,
+      "ratio_error_percent": 0.0154,
+      "core_alpha_below_250_percent": 0.001,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 2.51045
+    },
+    "rear": {
+      "path": "/root/Project/rack-device-3d/Dell-C6420-2.5inch/views/rear.png",
+      "errors": [],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        2973,
+        576
+      ],
+      "content_bbox_px": [
+        0,
+        0,
+        2973,
+        576
+      ],
+      "content_px": [
+        2973,
+        576
+      ],
+      "actual_ratio": 5.161458,
+      "expected_ratio": 5.16129,
+      "ratio_error_percent": 0.0033,
+      "core_alpha_below_250_percent": 0.00306,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 2.1544
+    },
+    "left": {
+      "path": "/root/Project/rack-device-3d/Dell-C6420-2.5inch/views/left.png",
+      "errors": [],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        3376,
+        384
+      ],
+      "content_bbox_px": [
+        0,
+        0,
+        3376,
+        383
+      ],
+      "content_px": [
+        3376,
+        383
+      ],
+      "actual_ratio": 8.814621,
+      "expected_ratio": 8.792627,
+      "ratio_error_percent": 0.2501,
+      "core_alpha_below_250_percent": 0.00121,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 7.20127
+    },
+    "right": {
+      "path": "/root/Project/rack-device-3d/Dell-C6420-2.5inch/views/right.png",
+      "errors": [],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        3376,
+        384
+      ],
+      "content_bbox_px": [
+        0,
+        0,
+        3375,
+        383
+      ],
+      "content_px": [
+        3375,
+        383
+      ],
+      "actual_ratio": 8.81201,
+      "expected_ratio": 8.792627,
+      "ratio_error_percent": 0.2205,
+      "core_alpha_below_250_percent": 0.00055,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 5.76238
+    },
+    "top": {
+      "path": "/root/Project/rack-device-3d/Dell-C6420-2.5inch/views/top.png",
+      "errors": [],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        1803,
+        3072
+      ],
+      "content_bbox_px": [
+        0,
+        0,
+        1803,
+        3072
+      ],
+      "content_px": [
+        1803,
+        3072
+      ],
+      "actual_ratio": 0.586914,
+      "expected_ratio": 0.587002,
+      "ratio_error_percent": 0.015,
+      "core_alpha_below_250_percent": 0.00274,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 0.538
+    },
+    "bottom": {
+      "path": "/root/Project/rack-device-3d/Dell-C6420-2.5inch/views/bottom.png",
+      "errors": [],
+      "warnings": [
+        "transparent/semi-transparent pixels exist inside content bounds; verify they are only true holes or anti-aliased silhouette edges"
+      ],
+      "mode": "RGBA",
+      "canvas_px": [
+        1803,
+        3072
+      ],
+      "content_bbox_px": [
+        0,
+        0,
+        1803,
+        3072
+      ],
+      "content_px": [
+        1803,
+        3072
+      ],
+      "actual_ratio": 0.586914,
+      "expected_ratio": 0.587002,
+      "ratio_error_percent": 0.015,
+      "core_alpha_below_250_percent": 0.0,
+      "core_transparent_percent": 0.0,
+      "content_alpha_below_250_percent": 0.95932
+    }
+  },
+  "warningResolutions": {
+    "front": "RESOLVED: original-detail alpha inspection found no fully transparent inset-core pixel; at most 0.005% sub-250 samples are antialiased source/silhouette transitions. Actual GLB textures are RGB and the six main materials are OPAQUE.",
+    "rear": "RESOLVED: original-detail alpha inspection found no fully transparent inset-core pixel; at most 0.005% sub-250 samples are antialiased source/silhouette transitions. Actual GLB textures are RGB and the six main materials are OPAQUE.",
+    "left": "RESOLVED: original-detail alpha inspection found no fully transparent inset-core pixel; at most 0.005% sub-250 samples are antialiased source/silhouette transitions. Actual GLB textures are RGB and the six main materials are OPAQUE.",
+    "right": "RESOLVED: original-detail alpha inspection found no fully transparent inset-core pixel; at most 0.005% sub-250 samples are antialiased source/silhouette transitions. Actual GLB textures are RGB and the six main materials are OPAQUE.",
+    "top": "RESOLVED: original-detail alpha inspection found no fully transparent inset-core pixel; at most 0.005% sub-250 samples are antialiased source/silhouette transitions. Actual GLB textures are RGB and the six main materials are OPAQUE.",
+    "bottom": "RESOLVED: original-detail alpha inspection found no fully transparent inset-core pixel; at most 0.005% sub-250 samples are antialiased source/silhouette transitions. Actual GLB textures are RGB and the six main materials are OPAQUE."
+  },
+  "errorCount": 0,
+  "warningCount": 6,
+  "unresolvedWarningCount": 0,
+  "unresolvedCount": 0,
+  "status": "PASS"
+}

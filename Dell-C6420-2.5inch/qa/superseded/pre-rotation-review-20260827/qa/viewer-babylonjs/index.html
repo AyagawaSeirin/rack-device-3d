@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dell C6400 / C6420 Babylon.js QA viewer</title>
+  <style>
+    html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #dfe3e6; }
+    canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+    #status { position: fixed; left: 12px; bottom: 9px; color: #293038;
+      font: 14px/1.2 system-ui, sans-serif; background: rgba(255,255,255,.84);
+      padding: 5px 8px; border-radius: 3px; }
+  </style>
+</head>
+<body>
+<canvas id="renderCanvas" width="1600" height="1200"></canvas>
+<div id="status">loading</div>
+<script src="../../node_modules/babylonjs/babylon.js"></script>
+<script src="../../node_modules/babylonjs-loaders/babylonjs.loaders.min.js"></script>
+<script>
+const WIDTH = 1600;
+const HEIGHT = 1200;
+const ASPECT = WIDTH / HEIGHT;
+const query = new URLSearchParams(location.search);
+const modelUrl = query.get("model") || "../../model/Dell-C6420-2.5inch.glb";
+const view = query.get("view") || "front";
+const canvas = document.getElementById("renderCanvas");
+const status = document.getElementById("status");
+const engine = new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true }, true);
+engine.setSize(WIDTH, HEIGHT);
+BABYLON.SceneLoader.ShowLoadingScreen = false;
+const scene = new BABYLON.Scene(engine);
+scene.useRightHandedSystem = true;
+scene.clearColor = new BABYLON.Color4(0.8745, 0.8902, 0.9020, 1.0);
+scene.imageProcessingConfiguration.toneMappingEnabled = false;
+scene.imageProcessingConfiguration.exposure = 1.0;
+scene.imageProcessingConfiguration.contrast = 1.0;
+
+const hemi = new BABYLON.HemisphericLight("hemi", new BABYLON.Vector3(-0.4, 1.0, 0.6), scene);
+hemi.intensity = 1.55;
+hemi.groundColor = new BABYLON.Color3(0.45, 0.48, 0.50);
+const key = new BABYLON.DirectionalLight("key", new BABYLON.Vector3(0.4, -0.8, -0.7), scene);
+key.intensity = 1.15;
+const fill = new BABYLON.DirectionalLight("fill", new BABYLON.Vector3(-0.7, -0.2, 0.7), scene);
+fill.intensity = 0.52;
+
+const orthographic = {
+  front: { dir: [0, 0, 1], up: [0, 1, 0], axes: ["x", "y"] },
+  rear: { dir: [0, 0, -1], up: [0, 1, 0], axes: ["x", "y"] },
+  left: { dir: [-1, 0, 0], up: [0, 1, 0], axes: ["z", "y"] },
+  right: { dir: [1, 0, 0], up: [0, 1, 0], axes: ["z", "y"] },
+  top: { dir: [0, 1, 0], up: [0, 0, -1], axes: ["x", "z"] },
+  bottom: { dir: [0, -1, 0], up: [0, 0, -1], axes: ["x", "z"] }
+};
+const perspective = {
+  "front-left": [-1.0, 0.62, 1.15],
+  "front-right": [1.0, 0.62, 1.15],
+  "rear-left": [-1.0, 0.62, -1.15],
+  "rear-right": [1.0, 0.62, -1.15]
+};
+
+function vector(values) { return new BABYLON.Vector3(values[0], values[1], values[2]); }
+
+function cameraFor(center, size) {
+  const camera = new BABYLON.FreeCamera("qa-camera", new BABYLON.Vector3(0, 0, 2), scene);
+  camera.minZ = 0.01;
+  camera.maxZ = 20;
+  if (orthographic[view]) {
+    const spec = orthographic[view];
+    const projectedWidth = size[spec.axes[0]];
+    const projectedHeight = size[spec.axes[1]];
+    const halfH = Math.max(projectedHeight * 0.56, projectedWidth / ASPECT * 0.56);
+    const halfW = halfH * ASPECT;
+    camera.mode = BABYLON.Camera.ORTHOGRAPHIC_CAMERA;
+    camera.orthoLeft = -halfW;
+    camera.orthoRight = halfW;
+    camera.orthoTop = halfH;
+    camera.orthoBottom = -halfH;
+    camera.position = center.add(vector(spec.dir).scale(2.0));
+    camera.upVector = vector(spec.up);
+  } else {
+    const dir = vector(perspective[view] || perspective["front-left"]).normalize();
+    const radius = Math.max(size.x, size.y, size.z) * 0.5;
+    const fov = 28 * Math.PI / 180;
+    camera.fov = fov;
+    camera.position = center.add(dir.scale(radius / Math.tan(fov / 2) * 1.18));
+    camera.upVector = new BABYLON.Vector3(0, 1, 0);
+  }
+  camera.setTarget(center);
+  return camera;
+}
+
+BABYLON.SceneLoader.AppendAsync("", modelUrl, scene).then(() => {
+  const extents = scene.getWorldExtends(mesh => mesh.isEnabled() && mesh.getTotalVertices() > 0);
+  const center = extents.min.add(extents.max).scale(0.5);
+  const size = extents.max.subtract(extents.min);
+  scene.activeCamera = cameraFor(center, size);
+  scene.render();
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    scene.render();
+    window.qaReady = true;
+    document.body.dataset.ready = "true";
+    document.body.dataset.engine = "babylonjs-8.22.2";
+    document.body.dataset.model = modelUrl.split("/").pop();
+    document.body.dataset.view = view;
+    status.textContent = `Babylon.js 8.22.2 · ${view} · ${modelUrl.split("/").pop()}`;
+  }));
+}).catch(error => {
+  console.error(error);
+  status.textContent = "load error";
+  window.qaError = String(error);
+});
+</script>
+</body>
+</html>

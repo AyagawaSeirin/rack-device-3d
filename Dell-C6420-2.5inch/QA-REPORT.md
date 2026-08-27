@@ -1,5 +1,7 @@
 # Dell C6420 2.5-inch final QA report
 
+> Superseded for current acceptance by `qa/rotation-review-20260827/final-report.md` and its frozen-hash `final-gate.json`. Current hashes are `88348a13…` (standard) and `7a8c3b74…` (web); this older report is retained for lineage.
+
 **Status: PASS_WITH_BOTTOM_FALLBACK**
 
 Delivered subject: the complete Dell EMC PowerEdge C6400 2U enclosure shown by the user, populated with four C6420 compute sleds, 24 front 2.5-inch carriers, and two shared center EPP 1600 W AC PSUs. It is not a standalone sled.

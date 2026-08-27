@@ -1,0 +1,215 @@
+{
+  "model": "Dell EMC PowerEdge C6400 enclosure with four PowerEdge C6420 compute sleds, 24 x 2.5-inch carriers, two shared EPP 1600 W AC PSUs",
+  "date": "2026-08-24",
+  "status": "PASS_WITH_BOTTOM_FALLBACK",
+  "identity_lock": "VERIFIED complete C6400/C6420 assembly; not a standalone C6420 sled",
+  "power_configuration": "AC; two center shared hot-swap EPP 1600 W PSUs; no DC PSU modeled",
+  "bottom_mode": "GENERIC_BOTTOM_FALLBACK",
+  "official_public_exact_3d": {
+    "found": false,
+    "result": "No exact public official Dell C6400 + four C6420 assembly 3D asset was found after official CAD/3D/AR/model and broader exact-model searches.",
+    "optional_3d_contents": [
+      "README.md"
+    ]
+  },
+  "six_face_gate": {
+    "prompt_files": 6,
+    "independent_alpha_faces": 6,
+    "source_lock_rows": 6,
+    "bottom_mode": "GENERIC_BOTTOM_FALLBACK",
+    "left_right_source_modes": {
+      "right": "SOURCE_LOCKED_GENERATION",
+      "left": "MULTI_REFERENCE_RECONSTRUCTION"
+    }
+  },
+  "standard_glb": {
+    "path": "model/Dell-C6420-2.5inch.glb",
+    "bytes": 16380768,
+    "sha256": "ecc0f7ff5b5cd595ae72e00af83f63e0857fefb079787c4737b61ef353d674f9",
+    "asset_extras": {
+      "manufacturer": "Dell Technologies / Dell EMC",
+      "product_family": "PowerEdge C Series",
+      "enclosure": "PowerEdge C6400",
+      "compute_sled": "PowerEdge C6420",
+      "configuration": "2U / 4x C6420 / 24x2.5-inch / 2x shared EPP 1600W AC",
+      "profile": "standard",
+      "body_dimensions_mm": [
+        448.0,
+        86.8,
+        763.2
+      ],
+      "installed_bounds_mm": [
+        482.6,
+        86.8,
+        797.3
+      ],
+      "bottom_mode": "GENERIC_BOTTOM_FALLBACK",
+      "official_public_exact_3d_found": false,
+      "source_model_used": false,
+      "visible_counts": {
+        "2_5_inch_drive_carriers": 24,
+        "C6420_compute_sleds": 4,
+        "shared_AC_EPP1600W_PSU": 2,
+        "sled_USB_A": 8,
+        "sled_iDRAC_RJ45": 4,
+        "sled_VGA": 4,
+        "sled_blue_pull_handles": 4
+      }
+    },
+    "node_count": 123,
+    "mesh_count": 123,
+    "material_count": 15,
+    "image_count": 6
+  },
+  "web_glb": {
+    "path": "model/Dell-C6420-2.5inch-web.glb",
+    "bytes": 6890984,
+    "sha256": "b78c3c55807c96d9831ceb8da5e162684558f253135c438cd96a238ad1f61553",
+    "asset_extras": {
+      "manufacturer": "Dell Technologies / Dell EMC",
+      "product_family": "PowerEdge C Series",
+      "enclosure": "PowerEdge C6400",
+      "compute_sled": "PowerEdge C6420",
+      "configuration": "2U / 4x C6420 / 24x2.5-inch / 2x shared EPP 1600W AC",
+      "profile": "web",
+      "body_dimensions_mm": [
+        448.0,
+        86.8,
+        763.2
+      ],
+      "installed_bounds_mm": [
+        482.6,
+        86.8,
+        797.3
+      ],
+      "bottom_mode": "GENERIC_BOTTOM_FALLBACK",
+      "official_public_exact_3d_found": false,
+      "source_model_used": false,
+      "visible_counts": {
+        "2_5_inch_drive_carriers": 24,
+        "C6420_compute_sleds": 4,
+        "shared_AC_EPP1600W_PSU": 2,
+        "sled_USB_A": 8,
+        "sled_iDRAC_RJ45": 4,
+        "sled_VGA": 4,
+        "sled_blue_pull_handles": 4
+      }
+    },
+    "node_count": 123,
+    "mesh_count": 123,
+    "material_count": 15,
+    "image_count": 6
+  },
+  "structural_audits": {
+    "views": "PASS",
+    "standard_glb": "PASS",
+    "web_glb": "PASS",
+    "named_geometry": "PASS"
+  },
+  "webgl_gate": {
+    "expected_unique_loads": 40,
+    "logged_load_rows": 40,
+    "pass_rows": 40,
+    "unique_engine_profile_view_tuples": 40,
+    "http_200_glb_requests": 40,
+    "render_size_px": [
+      1600,
+      1200
+    ],
+    "status": "PASS"
+  },
+  "comparison_rows": [
+    {
+      "view": "front",
+      "three_vs_babylon_standard_mad": 1.656576,
+      "three_vs_babylon_web_mad": 1.673445,
+      "three_standard_vs_web_mad": 0.589937,
+      "visual_feature_review": "PASS"
+    },
+    {
+      "view": "rear",
+      "three_vs_babylon_standard_mad": 1.957043,
+      "three_vs_babylon_web_mad": 1.975329,
+      "three_standard_vs_web_mad": 0.634124,
+      "visual_feature_review": "PASS"
+    },
+    {
+      "view": "left",
+      "three_vs_babylon_standard_mad": 0.603026,
+      "three_vs_babylon_web_mad": 0.615642,
+      "three_standard_vs_web_mad": 0.15662,
+      "visual_feature_review": "PASS"
+    },
+    {
+      "view": "right",
+      "three_vs_babylon_standard_mad": 0.614056,
+      "three_vs_babylon_web_mad": 0.627422,
+      "three_standard_vs_web_mad": 0.159713,
+      "visual_feature_review": "PASS"
+    },
+    {
+      "view": "top",
+      "three_vs_babylon_standard_mad": 2.320643,
+      "three_vs_babylon_web_mad": 2.385485,
+      "three_standard_vs_web_mad": 0.333531,
+      "visual_feature_review": "PASS"
+    },
+    {
+      "view": "bottom",
+      "three_vs_babylon_standard_mad": 1.761235,
+      "three_vs_babylon_web_mad": 1.818841,
+      "three_standard_vs_web_mad": 0.341747,
+      "visual_feature_review": "PASS"
+    },
+    {
+      "view": "front-left",
+      "three_vs_babylon_standard_mad": 1.273981,
+      "three_vs_babylon_web_mad": 1.270786,
+      "three_standard_vs_web_mad": 0.452147,
+      "visual_feature_review": "PASS"
+    },
+    {
+      "view": "front-right",
+      "three_vs_babylon_standard_mad": 1.236095,
+      "three_vs_babylon_web_mad": 1.236471,
+      "three_standard_vs_web_mad": 0.453888,
+      "visual_feature_review": "PASS"
+    },
+    {
+      "view": "rear-left",
+      "three_vs_babylon_standard_mad": 1.180355,
+      "three_vs_babylon_web_mad": 1.186924,
+      "three_standard_vs_web_mad": 0.467688,
+      "visual_feature_review": "PASS"
+    },
+    {
+      "view": "rear-right",
+      "three_vs_babylon_standard_mad": 1.178722,
+      "three_vs_babylon_web_mad": 1.180531,
+      "three_standard_vs_web_mad": 0.466353,
+      "visual_feature_review": "PASS"
+    }
+  ],
+  "manual_feature_review": {
+    "front_24_vertical_2_5_carriers": "PASS",
+    "front_Dell_EMC_and_C6400_marks_visible": "PASS",
+    "rear_four_C6420_sleds_order_3_4_left_1_2_right": "PASS",
+    "rear_two_shared_EPP1600W_AC_PSU": "PASS",
+    "rear_ports_handles_and_grilles": "PASS",
+    "left_right_not_mirrored": "PASS",
+    "top_panel_and_label_layout": "PASS",
+    "bottom_fallback_is_conservative_and_unbranded": "PASS"
+  },
+  "resolved_notes": [
+    "Six source PNG alpha warnings were visually resolved as silhouette edge anti-aliasing; all inset opaque chassis cores pass.",
+    "The broad front/rear body geometry sits behind source-locked opaque faces, while carrier frames, releases, ports, handles, PSU rings, grilles, seams and fasteners remain visible geometry.",
+    "Babylon.js uses a right-handed scene and its loading overlay is disabled, preserving physical left/right and clean ready-state captures.",
+    "All 40 captures waited for body[data-ready=true] and each corresponding GLB request returned HTTP 200."
+  ],
+  "remaining_risks": [
+    "No trustworthy underside photograph was found after the documented official, manual, reseller, auction, video and multilingual search; the bottom is a conservative generic sheet-metal fallback.",
+    "Unreadable serial/microprint glyphs on source labels were neutralized; label block positions, Dell/EMC branding and visible caution colors were retained.",
+    "No exact public official Dell 3D asset was located, so both GLBs are independently authored from dimensions and visual evidence."
+  ],
+  "errors": []
+}

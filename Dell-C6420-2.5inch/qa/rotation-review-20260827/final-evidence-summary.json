@@ -1,0 +1,282 @@
+{
+  "model": "Dell-C6420-2.5inch",
+  "frozenHashChecks": {
+    "standard": {
+      "expected": "88348a13c53b99c31408225b483cdf5c7adba612b9505ea9b7466d684ce60151",
+      "actual": "88348a13c53b99c31408225b483cdf5c7adba612b9505ea9b7466d684ce60151",
+      "match": true
+    },
+    "web": {
+      "expected": "7a8c3b7442786f723ec71bb21220d9a3d716a02a5ed3e72b66d5ca756186c680",
+      "actual": "7a8c3b7442786f723ec71bb21220d9a3d716a02a5ed3e72b66d5ca756186c680",
+      "match": true
+    },
+    "viewer-three": {
+      "expected": "399fd9bf1986b29f205ea526dae84d302bbd4164b5e9f851f4c0c5b1add10328",
+      "actual": "399fd9bf1986b29f205ea526dae84d302bbd4164b5e9f851f4c0c5b1add10328",
+      "match": true
+    },
+    "viewer-babylon": {
+      "expected": "8a4df2e3080fff783450aa60bab6daae446035ddb50a0aeffe7af69ef72272ad",
+      "actual": "8a4df2e3080fff783450aa60bab6daae446035ddb50a0aeffe7af69ef72272ad",
+      "match": true
+    }
+  },
+  "loads": {
+    "required": 40,
+    "actual": 40,
+    "uniqueNonces": 40,
+    "combos": [
+      {
+        "viewer": "three",
+        "variant": "standard",
+        "modelBase": "/Dell-C6420-2.5inch/model/Dell-C6420-2.5inch.glb",
+        "checks": {
+          "loadCount10": true,
+          "pngCount10": true,
+          "viewOrderExact": true,
+          "cacheBusted": true,
+          "independentPageNavigations": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "three",
+        "variant": "web",
+        "modelBase": "/Dell-C6420-2.5inch/model/Dell-C6420-2.5inch-web.glb",
+        "checks": {
+          "loadCount10": true,
+          "pngCount10": true,
+          "viewOrderExact": true,
+          "cacheBusted": true,
+          "independentPageNavigations": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "babylon",
+        "variant": "standard",
+        "modelBase": "/Dell-C6420-2.5inch/model/Dell-C6420-2.5inch.glb",
+        "checks": {
+          "loadCount10": true,
+          "pngCount10": true,
+          "viewOrderExact": true,
+          "cacheBusted": true,
+          "independentPageNavigations": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "babylon",
+        "variant": "web",
+        "modelBase": "/Dell-C6420-2.5inch/model/Dell-C6420-2.5inch-web.glb",
+        "checks": {
+          "loadCount10": true,
+          "pngCount10": true,
+          "viewOrderExact": true,
+          "cacheBusted": true,
+          "independentPageNavigations": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      }
+    ]
+  },
+  "rotation": {
+    "yawFrames": 288,
+    "pitchCheckerFrames": 128,
+    "stableFrames": 72,
+    "combos": [
+      {
+        "viewer": "three",
+        "variant": "standard",
+        "runtime": {
+          "engine": "Three.js 179",
+          "webgl2": true,
+          "model": "/Dell-C6420-2.5inch/model/Dell-C6420-2.5inch.glb?cb=final-88348a13",
+          "bounds": {
+            "min": [
+              -0.24130000174045563,
+              -0.04340000078082085,
+              -0.39864999055862427
+            ],
+            "max": [
+              0.24130000174045563,
+              0.04340000078082085,
+              0.39864999055862427
+            ],
+            "size": [
+              0.48260000348091125,
+              0.0868000015616417,
+              0.7972999811172485
+            ]
+          },
+          "near": 0.01,
+          "far": 10,
+          "frozenFrustum": true,
+          "loadingOverlayHidden": true,
+          "checker": "dark",
+          "overlayVisible": false
+        },
+        "checks": {
+          "analysisPass": true,
+          "yaw72x5": true,
+          "pitchChecker32": true,
+          "stable18": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "three",
+        "variant": "web",
+        "runtime": {
+          "engine": "Three.js 179",
+          "webgl2": true,
+          "model": "/Dell-C6420-2.5inch/model/Dell-C6420-2.5inch-web.glb?cb=final-7a8c3b74",
+          "bounds": {
+            "min": [
+              -0.24130000174045563,
+              -0.04340000078082085,
+              -0.39864999055862427
+            ],
+            "max": [
+              0.24130000174045563,
+              0.04340000078082085,
+              0.39864999055862427
+            ],
+            "size": [
+              0.48260000348091125,
+              0.0868000015616417,
+              0.7972999811172485
+            ]
+          },
+          "near": 0.01,
+          "far": 10,
+          "frozenFrustum": true,
+          "loadingOverlayHidden": true,
+          "checker": "dark",
+          "overlayVisible": false
+        },
+        "checks": {
+          "analysisPass": true,
+          "yaw72x5": true,
+          "pitchChecker32": true,
+          "stable18": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "babylon",
+        "variant": "standard",
+        "runtime": {
+          "engine": "Babylon.js 8.22.2",
+          "webgl2": true,
+          "model": "/Dell-C6420-2.5inch/model/Dell-C6420-2.5inch.glb?cb=final-88348a13",
+          "bounds": {
+            "min": [
+              -0.24130000174045563,
+              -0.04340000078082085,
+              -0.39864999055862427
+            ],
+            "max": [
+              0.24130000174045563,
+              0.04340000078082085,
+              0.39864999055862427
+            ],
+            "size": [
+              0.48260000348091125,
+              0.0868000015616417,
+              0.7972999811172485
+            ]
+          },
+          "near": 0.01,
+          "far": 10,
+          "frozenFrustum": true,
+          "loadingOverlayHidden": true,
+          "checker": "dark",
+          "overlayVisible": false
+        },
+        "checks": {
+          "analysisPass": true,
+          "yaw72x5": true,
+          "pitchChecker32": true,
+          "stable18": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      },
+      {
+        "viewer": "babylon",
+        "variant": "web",
+        "runtime": {
+          "engine": "Babylon.js 8.22.2",
+          "webgl2": true,
+          "model": "/Dell-C6420-2.5inch/model/Dell-C6420-2.5inch-web.glb?cb=final-7a8c3b74",
+          "bounds": {
+            "min": [
+              -0.24130000174045563,
+              -0.04340000078082085,
+              -0.39864999055862427
+            ],
+            "max": [
+              0.24130000174045563,
+              0.04340000078082085,
+              0.39864999055862427
+            ],
+            "size": [
+              0.48260000348091125,
+              0.0868000015616417,
+              0.7972999811172485
+            ]
+          },
+          "near": 0.01,
+          "far": 10,
+          "frozenFrustum": true,
+          "loadingOverlayHidden": true,
+          "checker": "dark",
+          "overlayVisible": false
+        },
+        "checks": {
+          "analysisPass": true,
+          "yaw72x5": true,
+          "pitchChecker32": true,
+          "stable18": true,
+          "webgl2": true,
+          "overlayAbsent": true,
+          "frozenFrustum": true,
+          "nearFar": true
+        },
+        "pass": true
+      }
+    ]
+  },
+  "errors": [],
+  "errorCount": 0,
+  "status": "PASS"
+}
