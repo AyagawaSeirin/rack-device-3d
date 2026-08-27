@@ -1,0 +1,43 @@
+{
+  "model": "Dell-R240-3.5inch",
+  "frozenAt": "2026-08-27T15:10:36Z",
+  "checkedAtEvidenceFinalization": true,
+  "allMatch": true,
+  "records": [
+    {
+      "key": "standardGlb",
+      "path": "model/Dell-R240-3.5inch.glb",
+      "expectedSha256": "f3593d8c33703b3975c428499f7f0d28e9f44e949a625a9d95d05841da40c863",
+      "actualSha256": "f3593d8c33703b3975c428499f7f0d28e9f44e949a625a9d95d05841da40c863",
+      "match": true
+    },
+    {
+      "key": "webGlb",
+      "path": "model/Dell-R240-3.5inch-web.glb",
+      "expectedSha256": "7308ddf9ff281d039390ad09559b892dc8da5237f28667da05ae303742a15ef1",
+      "actualSha256": "7308ddf9ff281d039390ad09559b892dc8da5237f28667da05ae303742a15ef1",
+      "match": true
+    },
+    {
+      "key": "builder",
+      "path": "model/build-model.js",
+      "expectedSha256": "a4f91977253a5f12665b39f00bf1672da473fede04aa3d090b8eba8b42cc4955",
+      "actualSha256": "a4f91977253a5f12665b39f00bf1672da473fede04aa3d090b8eba8b42cc4955",
+      "match": true
+    },
+    {
+      "key": "threeViewer",
+      "path": "qa/rotation-review-20260827/viewers/three-orbit.html",
+      "expectedSha256": "09397e305ac39f3a87af77d253a848eed6f0be8d163fa75d2b3580fc665a116a",
+      "actualSha256": "09397e305ac39f3a87af77d253a848eed6f0be8d163fa75d2b3580fc665a116a",
+      "match": true
+    },
+    {
+      "key": "babylonViewer",
+      "path": "qa/rotation-review-20260827/viewers/babylon-orbit.html",
+      "expectedSha256": "37ee630ebd49c0c28fb2a62c98f549b6112d099a41196d881f84e12a07347ca6",
+      "actualSha256": "37ee630ebd49c0c28fb2a62c98f549b6112d099a41196d881f84e12a07347ca6",
+      "match": true
+    }
+  ]
+}

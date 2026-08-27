@@ -1,0 +1,1500 @@
+{
+  "status": "PASS",
+  "required_loads": 40,
+  "accepted_evidence_loads": 40,
+  "total_final_gate_loads": 40,
+  "viewers": [
+    "Three.js 0.170.0 / WebGL2",
+    "Babylon.js 7.44.0 / WebGL2"
+  ],
+  "models": {
+    "standard": {
+      "file": "model/Dell-R240-3.5inch.glb",
+      "byte_size": 12842888,
+      "sha256": "ec58f70b517cc465ae4f6ca5b344acfc008880bd35736928b8c325b0c40de5b4"
+    },
+    "web": {
+      "file": "model/Dell-R240-3.5inch-web.glb",
+      "byte_size": 4656604,
+      "sha256": "820443089544918595ab062b7bca93d895084a000dc58c35bc282a251d9782a9"
+    }
+  },
+  "viewport_px": [
+    1280,
+    800
+  ],
+  "browser_errors_in_accepted_runs": 0,
+  "groups": [
+    {
+      "viewer": "three",
+      "variant": "standard",
+      "loads": 10,
+      "views": [
+        "front",
+        "rear",
+        "left",
+        "right",
+        "top",
+        "bottom",
+        "front-left",
+        "front-right",
+        "rear-left",
+        "rear-right"
+      ]
+    },
+    {
+      "viewer": "three",
+      "variant": "web",
+      "loads": 10,
+      "views": [
+        "front",
+        "rear",
+        "left",
+        "right",
+        "top",
+        "bottom",
+        "front-left",
+        "front-right",
+        "rear-left",
+        "rear-right"
+      ]
+    },
+    {
+      "viewer": "babylon",
+      "variant": "standard",
+      "loads": 10,
+      "views": [
+        "front",
+        "rear",
+        "left",
+        "right",
+        "top",
+        "bottom",
+        "front-left",
+        "front-right",
+        "rear-left",
+        "rear-right"
+      ]
+    },
+    {
+      "viewer": "babylon",
+      "variant": "web",
+      "loads": 10,
+      "views": [
+        "front",
+        "rear",
+        "left",
+        "right",
+        "top",
+        "bottom",
+        "front-left",
+        "front-right",
+        "rear-left",
+        "rear-right"
+      ]
+    }
+  ],
+  "retry_note": "Earlier diagnostic and pre-repair browser loads are intentionally excluded. After the last model repair, all four viewer/model groups were rerun from scratch in fresh browser processes. This accepted set is exactly 40 final-artifact loads with zero browser errors.",
+  "records": [
+    {
+      "load_index": 1,
+      "viewer": "three",
+      "engine": "Three.js 0.170.0",
+      "webgl": "WebGL2",
+      "variant": "standard",
+      "view": "front",
+      "url": "http://127.0.0.1:8794/qa/viewers/three.html?view=front&variant=standard&labels=1&bg=light&load=three-standard-final-1",
+      "model_request": "/model/Dell-R240-3.5inch.glb?viewer=three&load=three-standard-final-1",
+      "http_status": 200,
+      "byte_length": 12842888,
+      "glb_sha256": "ec58f70b517cc465ae4f6ca5b344acfc008880bd35736928b8c325b0c40de5b4",
+      "bounds": {
+        "min": [
+          -0.24100000000000002,
+          -0.021400000000000002,
+          -0.28435000000000005
+        ],
+        "max": [
+          0.24100000000000002,
+          0.0214,
+          0.289248
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/three-standard/front.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "2b3750b86cc1f79a00f5664aaeca265b00b0516fcdacf544791c0e809bcdd835",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 2,
+      "viewer": "three",
+      "engine": "Three.js 0.170.0",
+      "webgl": "WebGL2",
+      "variant": "standard",
+      "view": "rear",
+      "url": "http://127.0.0.1:8794/qa/viewers/three.html?view=rear&variant=standard&labels=1&bg=light&load=three-standard-final-2",
+      "model_request": "/model/Dell-R240-3.5inch.glb?viewer=three&load=three-standard-final-2",
+      "http_status": 200,
+      "byte_length": 12842888,
+      "glb_sha256": "ec58f70b517cc465ae4f6ca5b344acfc008880bd35736928b8c325b0c40de5b4",
+      "bounds": {
+        "min": [
+          -0.24100000000000002,
+          -0.021400000000000002,
+          -0.28435000000000005
+        ],
+        "max": [
+          0.24100000000000002,
+          0.0214,
+          0.289248
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/three-standard/rear.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "6cb5d5fdadb11fc5bacc8b48d01321e5a9c62dba6a75438d9fa867758003661a",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 3,
+      "viewer": "three",
+      "engine": "Three.js 0.170.0",
+      "webgl": "WebGL2",
+      "variant": "standard",
+      "view": "left",
+      "url": "http://127.0.0.1:8794/qa/viewers/three.html?view=left&variant=standard&labels=1&bg=light&load=three-standard-final-3",
+      "model_request": "/model/Dell-R240-3.5inch.glb?viewer=three&load=three-standard-final-3",
+      "http_status": 200,
+      "byte_length": 12842888,
+      "glb_sha256": "ec58f70b517cc465ae4f6ca5b344acfc008880bd35736928b8c325b0c40de5b4",
+      "bounds": {
+        "min": [
+          -0.24100000000000002,
+          -0.021400000000000002,
+          -0.28435000000000005
+        ],
+        "max": [
+          0.24100000000000002,
+          0.0214,
+          0.289248
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/three-standard/left.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "db884286f6fb89cabd702c83cd4753f42ca6b8cc7246a971dc16f685bb95a9f6",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 4,
+      "viewer": "three",
+      "engine": "Three.js 0.170.0",
+      "webgl": "WebGL2",
+      "variant": "standard",
+      "view": "right",
+      "url": "http://127.0.0.1:8794/qa/viewers/three.html?view=right&variant=standard&labels=1&bg=light&load=three-standard-final-4",
+      "model_request": "/model/Dell-R240-3.5inch.glb?viewer=three&load=three-standard-final-4",
+      "http_status": 200,
+      "byte_length": 12842888,
+      "glb_sha256": "ec58f70b517cc465ae4f6ca5b344acfc008880bd35736928b8c325b0c40de5b4",
+      "bounds": {
+        "min": [
+          -0.24100000000000002,
+          -0.021400000000000002,
+          -0.28435000000000005
+        ],
+        "max": [
+          0.24100000000000002,
+          0.0214,
+          0.289248
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/three-standard/right.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "4febbeacad7a51261d32aec449464dc8211f5e6cac6b303dbd56ddc2733bc142",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 5,
+      "viewer": "three",
+      "engine": "Three.js 0.170.0",
+      "webgl": "WebGL2",
+      "variant": "standard",
+      "view": "top",
+      "url": "http://127.0.0.1:8794/qa/viewers/three.html?view=top&variant=standard&labels=1&bg=light&load=three-standard-final-5",
+      "model_request": "/model/Dell-R240-3.5inch.glb?viewer=three&load=three-standard-final-5",
+      "http_status": 200,
+      "byte_length": 12842888,
+      "glb_sha256": "ec58f70b517cc465ae4f6ca5b344acfc008880bd35736928b8c325b0c40de5b4",
+      "bounds": {
+        "min": [
+          -0.24100000000000002,
+          -0.021400000000000002,
+          -0.28435000000000005
+        ],
+        "max": [
+          0.24100000000000002,
+          0.0214,
+          0.289248
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/three-standard/top.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "ac2a0fa3e7d88c4fda9b73952733014640310a94e938ec8f8d4640bb3f62ca03",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 6,
+      "viewer": "three",
+      "engine": "Three.js 0.170.0",
+      "webgl": "WebGL2",
+      "variant": "standard",
+      "view": "bottom",
+      "url": "http://127.0.0.1:8794/qa/viewers/three.html?view=bottom&variant=standard&labels=1&bg=light&load=three-standard-final-6",
+      "model_request": "/model/Dell-R240-3.5inch.glb?viewer=three&load=three-standard-final-6",
+      "http_status": 200,
+      "byte_length": 12842888,
+      "glb_sha256": "ec58f70b517cc465ae4f6ca5b344acfc008880bd35736928b8c325b0c40de5b4",
+      "bounds": {
+        "min": [
+          -0.24100000000000002,
+          -0.021400000000000002,
+          -0.28435000000000005
+        ],
+        "max": [
+          0.24100000000000002,
+          0.0214,
+          0.289248
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/three-standard/bottom.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "4bd0036cf0573292e67a67853b3ea80bb188f70153c8680f2c1d860a5a861361",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 7,
+      "viewer": "three",
+      "engine": "Three.js 0.170.0",
+      "webgl": "WebGL2",
+      "variant": "standard",
+      "view": "front-left",
+      "url": "http://127.0.0.1:8794/qa/viewers/three.html?view=front-left&variant=standard&labels=1&bg=light&load=three-standard-final-7",
+      "model_request": "/model/Dell-R240-3.5inch.glb?viewer=three&load=three-standard-final-7",
+      "http_status": 200,
+      "byte_length": 12842888,
+      "glb_sha256": "ec58f70b517cc465ae4f6ca5b344acfc008880bd35736928b8c325b0c40de5b4",
+      "bounds": {
+        "min": [
+          -0.24100000000000002,
+          -0.021400000000000002,
+          -0.28435000000000005
+        ],
+        "max": [
+          0.24100000000000002,
+          0.0214,
+          0.289248
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/three-standard/front-left.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "7edfd7764367d09e559452bec79865cc2ad1d9079fe7fed72a691fb6cd177b34",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 8,
+      "viewer": "three",
+      "engine": "Three.js 0.170.0",
+      "webgl": "WebGL2",
+      "variant": "standard",
+      "view": "front-right",
+      "url": "http://127.0.0.1:8794/qa/viewers/three.html?view=front-right&variant=standard&labels=1&bg=light&load=three-standard-final-8",
+      "model_request": "/model/Dell-R240-3.5inch.glb?viewer=three&load=three-standard-final-8",
+      "http_status": 200,
+      "byte_length": 12842888,
+      "glb_sha256": "ec58f70b517cc465ae4f6ca5b344acfc008880bd35736928b8c325b0c40de5b4",
+      "bounds": {
+        "min": [
+          -0.24100000000000002,
+          -0.021400000000000002,
+          -0.28435000000000005
+        ],
+        "max": [
+          0.24100000000000002,
+          0.0214,
+          0.289248
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/three-standard/front-right.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "835cd4f3a926e08e9c5f17e9692bc49576af51467d705397b463af011b3055f1",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 9,
+      "viewer": "three",
+      "engine": "Three.js 0.170.0",
+      "webgl": "WebGL2",
+      "variant": "standard",
+      "view": "rear-left",
+      "url": "http://127.0.0.1:8794/qa/viewers/three.html?view=rear-left&variant=standard&labels=1&bg=light&load=three-standard-final-9",
+      "model_request": "/model/Dell-R240-3.5inch.glb?viewer=three&load=three-standard-final-9",
+      "http_status": 200,
+      "byte_length": 12842888,
+      "glb_sha256": "ec58f70b517cc465ae4f6ca5b344acfc008880bd35736928b8c325b0c40de5b4",
+      "bounds": {
+        "min": [
+          -0.24100000000000002,
+          -0.021400000000000002,
+          -0.28435000000000005
+        ],
+        "max": [
+          0.24100000000000002,
+          0.0214,
+          0.289248
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/three-standard/rear-left.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "b785cc31659219d3fdee966a2bd0093c7decf55d3ae9655857c18b725b2853b7",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 10,
+      "viewer": "three",
+      "engine": "Three.js 0.170.0",
+      "webgl": "WebGL2",
+      "variant": "standard",
+      "view": "rear-right",
+      "url": "http://127.0.0.1:8794/qa/viewers/three.html?view=rear-right&variant=standard&labels=1&bg=light&load=three-standard-final-10",
+      "model_request": "/model/Dell-R240-3.5inch.glb?viewer=three&load=three-standard-final-10",
+      "http_status": 200,
+      "byte_length": 12842888,
+      "glb_sha256": "ec58f70b517cc465ae4f6ca5b344acfc008880bd35736928b8c325b0c40de5b4",
+      "bounds": {
+        "min": [
+          -0.24100000000000002,
+          -0.021400000000000002,
+          -0.28435000000000005
+        ],
+        "max": [
+          0.24100000000000002,
+          0.0214,
+          0.289248
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/three-standard/rear-right.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "e620617dc89e765b145891acc2631c7de494cffecb350a58e1cb947c987f4be4",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 11,
+      "viewer": "three",
+      "engine": "Three.js 0.170.0",
+      "webgl": "WebGL2",
+      "variant": "web",
+      "view": "front",
+      "url": "http://127.0.0.1:8794/qa/viewers/three.html?view=front&variant=web&labels=1&bg=light&load=three-web-final-1",
+      "model_request": "/model/Dell-R240-3.5inch-web.glb?viewer=three&load=three-web-final-1",
+      "http_status": 200,
+      "byte_length": 4656604,
+      "glb_sha256": "820443089544918595ab062b7bca93d895084a000dc58c35bc282a251d9782a9",
+      "bounds": {
+        "min": [
+          -0.24100000000000002,
+          -0.021400000000000002,
+          -0.28435000000000005
+        ],
+        "max": [
+          0.24100000000000002,
+          0.0214,
+          0.289248
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/three-web/front.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "c07996ee44b47e96b0cd28b159d7a50fe67b2ccdb7362d4279736b59a2cac5ec",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 12,
+      "viewer": "three",
+      "engine": "Three.js 0.170.0",
+      "webgl": "WebGL2",
+      "variant": "web",
+      "view": "rear",
+      "url": "http://127.0.0.1:8794/qa/viewers/three.html?view=rear&variant=web&labels=1&bg=light&load=three-web-final-2",
+      "model_request": "/model/Dell-R240-3.5inch-web.glb?viewer=three&load=three-web-final-2",
+      "http_status": 200,
+      "byte_length": 4656604,
+      "glb_sha256": "820443089544918595ab062b7bca93d895084a000dc58c35bc282a251d9782a9",
+      "bounds": {
+        "min": [
+          -0.24100000000000002,
+          -0.021400000000000002,
+          -0.28435000000000005
+        ],
+        "max": [
+          0.24100000000000002,
+          0.0214,
+          0.289248
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/three-web/rear.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "5f26a6cfa8056a9125016e997edcbde22e89d9df928f0acbbcf578226283bc1b",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 13,
+      "viewer": "three",
+      "engine": "Three.js 0.170.0",
+      "webgl": "WebGL2",
+      "variant": "web",
+      "view": "left",
+      "url": "http://127.0.0.1:8794/qa/viewers/three.html?view=left&variant=web&labels=1&bg=light&load=three-web-final-3",
+      "model_request": "/model/Dell-R240-3.5inch-web.glb?viewer=three&load=three-web-final-3",
+      "http_status": 200,
+      "byte_length": 4656604,
+      "glb_sha256": "820443089544918595ab062b7bca93d895084a000dc58c35bc282a251d9782a9",
+      "bounds": {
+        "min": [
+          -0.24100000000000002,
+          -0.021400000000000002,
+          -0.28435000000000005
+        ],
+        "max": [
+          0.24100000000000002,
+          0.0214,
+          0.289248
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/three-web/left.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "862fae099d79435dd535e9771a0ab789cb312daf9326d5a37aeb12fea76713bd",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 14,
+      "viewer": "three",
+      "engine": "Three.js 0.170.0",
+      "webgl": "WebGL2",
+      "variant": "web",
+      "view": "right",
+      "url": "http://127.0.0.1:8794/qa/viewers/three.html?view=right&variant=web&labels=1&bg=light&load=three-web-final-4",
+      "model_request": "/model/Dell-R240-3.5inch-web.glb?viewer=three&load=three-web-final-4",
+      "http_status": 200,
+      "byte_length": 4656604,
+      "glb_sha256": "820443089544918595ab062b7bca93d895084a000dc58c35bc282a251d9782a9",
+      "bounds": {
+        "min": [
+          -0.24100000000000002,
+          -0.021400000000000002,
+          -0.28435000000000005
+        ],
+        "max": [
+          0.24100000000000002,
+          0.0214,
+          0.289248
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/three-web/right.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "8d3fde6a2190450d8ca0d7e3ad803a842420e77e0ba94ecc23ae0d29eb1121d4",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 15,
+      "viewer": "three",
+      "engine": "Three.js 0.170.0",
+      "webgl": "WebGL2",
+      "variant": "web",
+      "view": "top",
+      "url": "http://127.0.0.1:8794/qa/viewers/three.html?view=top&variant=web&labels=1&bg=light&load=three-web-final-5",
+      "model_request": "/model/Dell-R240-3.5inch-web.glb?viewer=three&load=three-web-final-5",
+      "http_status": 200,
+      "byte_length": 4656604,
+      "glb_sha256": "820443089544918595ab062b7bca93d895084a000dc58c35bc282a251d9782a9",
+      "bounds": {
+        "min": [
+          -0.24100000000000002,
+          -0.021400000000000002,
+          -0.28435000000000005
+        ],
+        "max": [
+          0.24100000000000002,
+          0.0214,
+          0.289248
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/three-web/top.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "df3c095cc6df75a455c2f63bdba503fb0bf1069d2f4dbfbce2555e0a06737c63",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 16,
+      "viewer": "three",
+      "engine": "Three.js 0.170.0",
+      "webgl": "WebGL2",
+      "variant": "web",
+      "view": "bottom",
+      "url": "http://127.0.0.1:8794/qa/viewers/three.html?view=bottom&variant=web&labels=1&bg=light&load=three-web-final-6",
+      "model_request": "/model/Dell-R240-3.5inch-web.glb?viewer=three&load=three-web-final-6",
+      "http_status": 200,
+      "byte_length": 4656604,
+      "glb_sha256": "820443089544918595ab062b7bca93d895084a000dc58c35bc282a251d9782a9",
+      "bounds": {
+        "min": [
+          -0.24100000000000002,
+          -0.021400000000000002,
+          -0.28435000000000005
+        ],
+        "max": [
+          0.24100000000000002,
+          0.0214,
+          0.289248
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/three-web/bottom.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "b07c8ac67570d6491258b9dc4b7a5a55df90fd02edabbfe42e65634e98423f2e",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 17,
+      "viewer": "three",
+      "engine": "Three.js 0.170.0",
+      "webgl": "WebGL2",
+      "variant": "web",
+      "view": "front-left",
+      "url": "http://127.0.0.1:8794/qa/viewers/three.html?view=front-left&variant=web&labels=1&bg=light&load=three-web-final-7",
+      "model_request": "/model/Dell-R240-3.5inch-web.glb?viewer=three&load=three-web-final-7",
+      "http_status": 200,
+      "byte_length": 4656604,
+      "glb_sha256": "820443089544918595ab062b7bca93d895084a000dc58c35bc282a251d9782a9",
+      "bounds": {
+        "min": [
+          -0.24100000000000002,
+          -0.021400000000000002,
+          -0.28435000000000005
+        ],
+        "max": [
+          0.24100000000000002,
+          0.0214,
+          0.289248
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/three-web/front-left.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "5dcb523dd092c954416a51f61bc5d43339ecb7720bbeb3e7599eeb8547680b0a",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 18,
+      "viewer": "three",
+      "engine": "Three.js 0.170.0",
+      "webgl": "WebGL2",
+      "variant": "web",
+      "view": "front-right",
+      "url": "http://127.0.0.1:8794/qa/viewers/three.html?view=front-right&variant=web&labels=1&bg=light&load=three-web-final-8",
+      "model_request": "/model/Dell-R240-3.5inch-web.glb?viewer=three&load=three-web-final-8",
+      "http_status": 200,
+      "byte_length": 4656604,
+      "glb_sha256": "820443089544918595ab062b7bca93d895084a000dc58c35bc282a251d9782a9",
+      "bounds": {
+        "min": [
+          -0.24100000000000002,
+          -0.021400000000000002,
+          -0.28435000000000005
+        ],
+        "max": [
+          0.24100000000000002,
+          0.0214,
+          0.289248
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/three-web/front-right.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "a292a0640832a29cef2fb58415d960b073f77a20b2b787670a40ccbfff7e4843",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 19,
+      "viewer": "three",
+      "engine": "Three.js 0.170.0",
+      "webgl": "WebGL2",
+      "variant": "web",
+      "view": "rear-left",
+      "url": "http://127.0.0.1:8794/qa/viewers/three.html?view=rear-left&variant=web&labels=1&bg=light&load=three-web-final-9",
+      "model_request": "/model/Dell-R240-3.5inch-web.glb?viewer=three&load=three-web-final-9",
+      "http_status": 200,
+      "byte_length": 4656604,
+      "glb_sha256": "820443089544918595ab062b7bca93d895084a000dc58c35bc282a251d9782a9",
+      "bounds": {
+        "min": [
+          -0.24100000000000002,
+          -0.021400000000000002,
+          -0.28435000000000005
+        ],
+        "max": [
+          0.24100000000000002,
+          0.0214,
+          0.289248
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/three-web/rear-left.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "0f1c6cf7298c8e4230e449ac5c48adcc5efcc7460d8bec0043fa18d2753edcdd",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 20,
+      "viewer": "three",
+      "engine": "Three.js 0.170.0",
+      "webgl": "WebGL2",
+      "variant": "web",
+      "view": "rear-right",
+      "url": "http://127.0.0.1:8794/qa/viewers/three.html?view=rear-right&variant=web&labels=1&bg=light&load=three-web-final-10",
+      "model_request": "/model/Dell-R240-3.5inch-web.glb?viewer=three&load=three-web-final-10",
+      "http_status": 200,
+      "byte_length": 4656604,
+      "glb_sha256": "820443089544918595ab062b7bca93d895084a000dc58c35bc282a251d9782a9",
+      "bounds": {
+        "min": [
+          -0.24100000000000002,
+          -0.021400000000000002,
+          -0.28435000000000005
+        ],
+        "max": [
+          0.24100000000000002,
+          0.0214,
+          0.289248
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/three-web/rear-right.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "fa8d133e0207c2b6ed6a03e96187e32c8c22a3bae9de059def009d5bcf2b75a8",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 21,
+      "viewer": "babylon",
+      "engine": "Babylon.js 7.44.0",
+      "webgl": "WebGL2",
+      "variant": "standard",
+      "view": "front",
+      "url": "http://127.0.0.1:8794/qa/viewers/babylon.html?view=front&variant=standard&labels=1&bg=light&load=babylon-standard-1",
+      "model_request": "/model/Dell-R240-3.5inch.glb?viewer=babylon&load=babylon-standard-1",
+      "http_status": 200,
+      "byte_length": 12842888,
+      "glb_sha256": "ec58f70b517cc465ae4f6ca5b344acfc008880bd35736928b8c325b0c40de5b4",
+      "bounds": {
+        "min": [
+          -0.24100000225007534,
+          -0.021400000900030136,
+          -0.2843480110168457
+        ],
+        "max": [
+          0.24100000225007534,
+          0.021400000900030136,
+          0.289247989654541
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/babylon-standard/front.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "1bd891119be895c660a4293d1b74bbac2d7eb316f568c837a7c8935100d2d00f",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 22,
+      "viewer": "babylon",
+      "engine": "Babylon.js 7.44.0",
+      "webgl": "WebGL2",
+      "variant": "standard",
+      "view": "rear",
+      "url": "http://127.0.0.1:8794/qa/viewers/babylon.html?view=rear&variant=standard&labels=1&bg=light&load=babylon-standard-2",
+      "model_request": "/model/Dell-R240-3.5inch.glb?viewer=babylon&load=babylon-standard-2",
+      "http_status": 200,
+      "byte_length": 12842888,
+      "glb_sha256": "ec58f70b517cc465ae4f6ca5b344acfc008880bd35736928b8c325b0c40de5b4",
+      "bounds": {
+        "min": [
+          -0.24100000225007534,
+          -0.021400000900030136,
+          -0.2843480110168457
+        ],
+        "max": [
+          0.24100000225007534,
+          0.021400000900030136,
+          0.289247989654541
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/babylon-standard/rear.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "4980b2c983a992dcdcaf2563957d114d9609395b03aa2fe586edf9ee2a536b50",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 23,
+      "viewer": "babylon",
+      "engine": "Babylon.js 7.44.0",
+      "webgl": "WebGL2",
+      "variant": "standard",
+      "view": "left",
+      "url": "http://127.0.0.1:8794/qa/viewers/babylon.html?view=left&variant=standard&labels=1&bg=light&load=babylon-standard-3",
+      "model_request": "/model/Dell-R240-3.5inch.glb?viewer=babylon&load=babylon-standard-3",
+      "http_status": 200,
+      "byte_length": 12842888,
+      "glb_sha256": "ec58f70b517cc465ae4f6ca5b344acfc008880bd35736928b8c325b0c40de5b4",
+      "bounds": {
+        "min": [
+          -0.24100000225007534,
+          -0.021400000900030136,
+          -0.2843480110168457
+        ],
+        "max": [
+          0.24100000225007534,
+          0.021400000900030136,
+          0.289247989654541
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/babylon-standard/left.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "5d6cc16d11001011df198e0547b330b28d41c9dbbe3180db6123ef4d008cc498",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 24,
+      "viewer": "babylon",
+      "engine": "Babylon.js 7.44.0",
+      "webgl": "WebGL2",
+      "variant": "standard",
+      "view": "right",
+      "url": "http://127.0.0.1:8794/qa/viewers/babylon.html?view=right&variant=standard&labels=1&bg=light&load=babylon-standard-4",
+      "model_request": "/model/Dell-R240-3.5inch.glb?viewer=babylon&load=babylon-standard-4",
+      "http_status": 200,
+      "byte_length": 12842888,
+      "glb_sha256": "ec58f70b517cc465ae4f6ca5b344acfc008880bd35736928b8c325b0c40de5b4",
+      "bounds": {
+        "min": [
+          -0.24100000225007534,
+          -0.021400000900030136,
+          -0.2843480110168457
+        ],
+        "max": [
+          0.24100000225007534,
+          0.021400000900030136,
+          0.289247989654541
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/babylon-standard/right.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "1ca8ac9f11fb71cf69397ddbfcbaea1bec6268062ada2f6dea2ab36668fe3588",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 25,
+      "viewer": "babylon",
+      "engine": "Babylon.js 7.44.0",
+      "webgl": "WebGL2",
+      "variant": "standard",
+      "view": "top",
+      "url": "http://127.0.0.1:8794/qa/viewers/babylon.html?view=top&variant=standard&labels=1&bg=light&load=babylon-standard-5",
+      "model_request": "/model/Dell-R240-3.5inch.glb?viewer=babylon&load=babylon-standard-5",
+      "http_status": 200,
+      "byte_length": 12842888,
+      "glb_sha256": "ec58f70b517cc465ae4f6ca5b344acfc008880bd35736928b8c325b0c40de5b4",
+      "bounds": {
+        "min": [
+          -0.24100000225007534,
+          -0.021400000900030136,
+          -0.2843480110168457
+        ],
+        "max": [
+          0.24100000225007534,
+          0.021400000900030136,
+          0.289247989654541
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/babylon-standard/top.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "951951cc89e4769603e726f2e1df7eb579db35f03f5e5fead6e4d6d991c27112",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 26,
+      "viewer": "babylon",
+      "engine": "Babylon.js 7.44.0",
+      "webgl": "WebGL2",
+      "variant": "standard",
+      "view": "bottom",
+      "url": "http://127.0.0.1:8794/qa/viewers/babylon.html?view=bottom&variant=standard&labels=1&bg=light&load=babylon-standard-6",
+      "model_request": "/model/Dell-R240-3.5inch.glb?viewer=babylon&load=babylon-standard-6",
+      "http_status": 200,
+      "byte_length": 12842888,
+      "glb_sha256": "ec58f70b517cc465ae4f6ca5b344acfc008880bd35736928b8c325b0c40de5b4",
+      "bounds": {
+        "min": [
+          -0.24100000225007534,
+          -0.021400000900030136,
+          -0.2843480110168457
+        ],
+        "max": [
+          0.24100000225007534,
+          0.021400000900030136,
+          0.289247989654541
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/babylon-standard/bottom.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "9d991c4f803169a9532af1bf9a7b06f29373899d9e5dde748ed24235050863b0",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 27,
+      "viewer": "babylon",
+      "engine": "Babylon.js 7.44.0",
+      "webgl": "WebGL2",
+      "variant": "standard",
+      "view": "front-left",
+      "url": "http://127.0.0.1:8794/qa/viewers/babylon.html?view=front-left&variant=standard&labels=1&bg=light&load=babylon-standard-7",
+      "model_request": "/model/Dell-R240-3.5inch.glb?viewer=babylon&load=babylon-standard-7",
+      "http_status": 200,
+      "byte_length": 12842888,
+      "glb_sha256": "ec58f70b517cc465ae4f6ca5b344acfc008880bd35736928b8c325b0c40de5b4",
+      "bounds": {
+        "min": [
+          -0.24100000225007534,
+          -0.021400000900030136,
+          -0.2843480110168457
+        ],
+        "max": [
+          0.24100000225007534,
+          0.021400000900030136,
+          0.289247989654541
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/babylon-standard/front-left.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "68ce339e9691db1b05d9055c9971572bf19a54a985ace5f0eb8aeb4c1988a5a5",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 28,
+      "viewer": "babylon",
+      "engine": "Babylon.js 7.44.0",
+      "webgl": "WebGL2",
+      "variant": "standard",
+      "view": "front-right",
+      "url": "http://127.0.0.1:8794/qa/viewers/babylon.html?view=front-right&variant=standard&labels=1&bg=light&load=babylon-standard-8",
+      "model_request": "/model/Dell-R240-3.5inch.glb?viewer=babylon&load=babylon-standard-8",
+      "http_status": 200,
+      "byte_length": 12842888,
+      "glb_sha256": "ec58f70b517cc465ae4f6ca5b344acfc008880bd35736928b8c325b0c40de5b4",
+      "bounds": {
+        "min": [
+          -0.24100000225007534,
+          -0.021400000900030136,
+          -0.2843480110168457
+        ],
+        "max": [
+          0.24100000225007534,
+          0.021400000900030136,
+          0.289247989654541
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/babylon-standard/front-right.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "3519000ed948372379391ad14b3f68685f2cd8b0d297e98c563ff772fa6ba1f1",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 29,
+      "viewer": "babylon",
+      "engine": "Babylon.js 7.44.0",
+      "webgl": "WebGL2",
+      "variant": "standard",
+      "view": "rear-left",
+      "url": "http://127.0.0.1:8794/qa/viewers/babylon.html?view=rear-left&variant=standard&labels=1&bg=light&load=babylon-standard-9",
+      "model_request": "/model/Dell-R240-3.5inch.glb?viewer=babylon&load=babylon-standard-9",
+      "http_status": 200,
+      "byte_length": 12842888,
+      "glb_sha256": "ec58f70b517cc465ae4f6ca5b344acfc008880bd35736928b8c325b0c40de5b4",
+      "bounds": {
+        "min": [
+          -0.24100000225007534,
+          -0.021400000900030136,
+          -0.2843480110168457
+        ],
+        "max": [
+          0.24100000225007534,
+          0.021400000900030136,
+          0.289247989654541
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/babylon-standard/rear-left.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "df5d026ace5a0307c511585e94cf3df4fba0b6bde5b861348b53593709241d0e",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 30,
+      "viewer": "babylon",
+      "engine": "Babylon.js 7.44.0",
+      "webgl": "WebGL2",
+      "variant": "standard",
+      "view": "rear-right",
+      "url": "http://127.0.0.1:8794/qa/viewers/babylon.html?view=rear-right&variant=standard&labels=1&bg=light&load=babylon-standard-10",
+      "model_request": "/model/Dell-R240-3.5inch.glb?viewer=babylon&load=babylon-standard-10",
+      "http_status": 200,
+      "byte_length": 12842888,
+      "glb_sha256": "ec58f70b517cc465ae4f6ca5b344acfc008880bd35736928b8c325b0c40de5b4",
+      "bounds": {
+        "min": [
+          -0.24100000225007534,
+          -0.021400000900030136,
+          -0.2843480110168457
+        ],
+        "max": [
+          0.24100000225007534,
+          0.021400000900030136,
+          0.289247989654541
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/babylon-standard/rear-right.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "0f9e75cb00d8b73b13e27c2d5e802706b373e63d0bbe8f29436fa319cd325ea3",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 31,
+      "viewer": "babylon",
+      "engine": "Babylon.js 7.44.0",
+      "webgl": "WebGL2",
+      "variant": "web",
+      "view": "front",
+      "url": "http://127.0.0.1:8794/qa/viewers/babylon.html?view=front&variant=web&labels=1&bg=light&load=babylon-web-1",
+      "model_request": "/model/Dell-R240-3.5inch-web.glb?viewer=babylon&load=babylon-web-1",
+      "http_status": 200,
+      "byte_length": 4656604,
+      "glb_sha256": "820443089544918595ab062b7bca93d895084a000dc58c35bc282a251d9782a9",
+      "bounds": {
+        "min": [
+          -0.24100000225007534,
+          -0.021400000900030136,
+          -0.2843480110168457
+        ],
+        "max": [
+          0.24100000225007534,
+          0.021400000900030136,
+          0.289247989654541
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/babylon-web/front.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "ce399db922123453710e567ed13da746f04af956763ebd0d80014212955b1673",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 32,
+      "viewer": "babylon",
+      "engine": "Babylon.js 7.44.0",
+      "webgl": "WebGL2",
+      "variant": "web",
+      "view": "rear",
+      "url": "http://127.0.0.1:8794/qa/viewers/babylon.html?view=rear&variant=web&labels=1&bg=light&load=babylon-web-2",
+      "model_request": "/model/Dell-R240-3.5inch-web.glb?viewer=babylon&load=babylon-web-2",
+      "http_status": 200,
+      "byte_length": 4656604,
+      "glb_sha256": "820443089544918595ab062b7bca93d895084a000dc58c35bc282a251d9782a9",
+      "bounds": {
+        "min": [
+          -0.24100000225007534,
+          -0.021400000900030136,
+          -0.2843480110168457
+        ],
+        "max": [
+          0.24100000225007534,
+          0.021400000900030136,
+          0.289247989654541
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/babylon-web/rear.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "499078e5082c37a2dc5ada10aa6c43a3a7dae1ee7ad385fae2bbf8586465a907",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 33,
+      "viewer": "babylon",
+      "engine": "Babylon.js 7.44.0",
+      "webgl": "WebGL2",
+      "variant": "web",
+      "view": "left",
+      "url": "http://127.0.0.1:8794/qa/viewers/babylon.html?view=left&variant=web&labels=1&bg=light&load=babylon-web-3",
+      "model_request": "/model/Dell-R240-3.5inch-web.glb?viewer=babylon&load=babylon-web-3",
+      "http_status": 200,
+      "byte_length": 4656604,
+      "glb_sha256": "820443089544918595ab062b7bca93d895084a000dc58c35bc282a251d9782a9",
+      "bounds": {
+        "min": [
+          -0.24100000225007534,
+          -0.021400000900030136,
+          -0.2843480110168457
+        ],
+        "max": [
+          0.24100000225007534,
+          0.021400000900030136,
+          0.289247989654541
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/babylon-web/left.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "931fa1dbee1bcfdaa18a81a09cc31822b647412a2f112c336245df50c8a21cf6",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 34,
+      "viewer": "babylon",
+      "engine": "Babylon.js 7.44.0",
+      "webgl": "WebGL2",
+      "variant": "web",
+      "view": "right",
+      "url": "http://127.0.0.1:8794/qa/viewers/babylon.html?view=right&variant=web&labels=1&bg=light&load=babylon-web-4",
+      "model_request": "/model/Dell-R240-3.5inch-web.glb?viewer=babylon&load=babylon-web-4",
+      "http_status": 200,
+      "byte_length": 4656604,
+      "glb_sha256": "820443089544918595ab062b7bca93d895084a000dc58c35bc282a251d9782a9",
+      "bounds": {
+        "min": [
+          -0.24100000225007534,
+          -0.021400000900030136,
+          -0.2843480110168457
+        ],
+        "max": [
+          0.24100000225007534,
+          0.021400000900030136,
+          0.289247989654541
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/babylon-web/right.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "c430dc582ff25192cdc931de8483c516d458509eb6f1ccdd83db0af74bc177a4",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 35,
+      "viewer": "babylon",
+      "engine": "Babylon.js 7.44.0",
+      "webgl": "WebGL2",
+      "variant": "web",
+      "view": "top",
+      "url": "http://127.0.0.1:8794/qa/viewers/babylon.html?view=top&variant=web&labels=1&bg=light&load=babylon-web-5",
+      "model_request": "/model/Dell-R240-3.5inch-web.glb?viewer=babylon&load=babylon-web-5",
+      "http_status": 200,
+      "byte_length": 4656604,
+      "glb_sha256": "820443089544918595ab062b7bca93d895084a000dc58c35bc282a251d9782a9",
+      "bounds": {
+        "min": [
+          -0.24100000225007534,
+          -0.021400000900030136,
+          -0.2843480110168457
+        ],
+        "max": [
+          0.24100000225007534,
+          0.021400000900030136,
+          0.289247989654541
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/babylon-web/top.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "a882e78d1681ae65cd8c7af70640f5f3ccc7a399e5393a1792cee621e31eba08",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 36,
+      "viewer": "babylon",
+      "engine": "Babylon.js 7.44.0",
+      "webgl": "WebGL2",
+      "variant": "web",
+      "view": "bottom",
+      "url": "http://127.0.0.1:8794/qa/viewers/babylon.html?view=bottom&variant=web&labels=1&bg=light&load=babylon-web-6",
+      "model_request": "/model/Dell-R240-3.5inch-web.glb?viewer=babylon&load=babylon-web-6",
+      "http_status": 200,
+      "byte_length": 4656604,
+      "glb_sha256": "820443089544918595ab062b7bca93d895084a000dc58c35bc282a251d9782a9",
+      "bounds": {
+        "min": [
+          -0.24100000225007534,
+          -0.021400000900030136,
+          -0.2843480110168457
+        ],
+        "max": [
+          0.24100000225007534,
+          0.021400000900030136,
+          0.289247989654541
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/babylon-web/bottom.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "09fc49364fc630f1d9d8df0e5375e622020bbe91d2643c2f1fc6f9f0d16cddab",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 37,
+      "viewer": "babylon",
+      "engine": "Babylon.js 7.44.0",
+      "webgl": "WebGL2",
+      "variant": "web",
+      "view": "front-left",
+      "url": "http://127.0.0.1:8794/qa/viewers/babylon.html?view=front-left&variant=web&labels=1&bg=light&load=babylon-web-7",
+      "model_request": "/model/Dell-R240-3.5inch-web.glb?viewer=babylon&load=babylon-web-7",
+      "http_status": 200,
+      "byte_length": 4656604,
+      "glb_sha256": "820443089544918595ab062b7bca93d895084a000dc58c35bc282a251d9782a9",
+      "bounds": {
+        "min": [
+          -0.24100000225007534,
+          -0.021400000900030136,
+          -0.2843480110168457
+        ],
+        "max": [
+          0.24100000225007534,
+          0.021400000900030136,
+          0.289247989654541
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/babylon-web/front-left.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "219e0e7ba2b787ae102a357c2d6b899f5703317c8cc9927c33cfa528d4bca41a",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 38,
+      "viewer": "babylon",
+      "engine": "Babylon.js 7.44.0",
+      "webgl": "WebGL2",
+      "variant": "web",
+      "view": "front-right",
+      "url": "http://127.0.0.1:8794/qa/viewers/babylon.html?view=front-right&variant=web&labels=1&bg=light&load=babylon-web-8",
+      "model_request": "/model/Dell-R240-3.5inch-web.glb?viewer=babylon&load=babylon-web-8",
+      "http_status": 200,
+      "byte_length": 4656604,
+      "glb_sha256": "820443089544918595ab062b7bca93d895084a000dc58c35bc282a251d9782a9",
+      "bounds": {
+        "min": [
+          -0.24100000225007534,
+          -0.021400000900030136,
+          -0.2843480110168457
+        ],
+        "max": [
+          0.24100000225007534,
+          0.021400000900030136,
+          0.289247989654541
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/babylon-web/front-right.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "1fa05f5e82eb33ab070e184958ab09758539a01c658ebabd0ecf4e780943d330",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 39,
+      "viewer": "babylon",
+      "engine": "Babylon.js 7.44.0",
+      "webgl": "WebGL2",
+      "variant": "web",
+      "view": "rear-left",
+      "url": "http://127.0.0.1:8794/qa/viewers/babylon.html?view=rear-left&variant=web&labels=1&bg=light&load=babylon-web-9",
+      "model_request": "/model/Dell-R240-3.5inch-web.glb?viewer=babylon&load=babylon-web-9",
+      "http_status": 200,
+      "byte_length": 4656604,
+      "glb_sha256": "820443089544918595ab062b7bca93d895084a000dc58c35bc282a251d9782a9",
+      "bounds": {
+        "min": [
+          -0.24100000225007534,
+          -0.021400000900030136,
+          -0.2843480110168457
+        ],
+        "max": [
+          0.24100000225007534,
+          0.021400000900030136,
+          0.289247989654541
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/babylon-web/rear-left.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "dc288d082d231b6c31740f751f04d6489c62124c961ef88bd5d35734f3e80821",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    },
+    {
+      "load_index": 40,
+      "viewer": "babylon",
+      "engine": "Babylon.js 7.44.0",
+      "webgl": "WebGL2",
+      "variant": "web",
+      "view": "rear-right",
+      "url": "http://127.0.0.1:8794/qa/viewers/babylon.html?view=rear-right&variant=web&labels=1&bg=light&load=babylon-web-10",
+      "model_request": "/model/Dell-R240-3.5inch-web.glb?viewer=babylon&load=babylon-web-10",
+      "http_status": 200,
+      "byte_length": 4656604,
+      "glb_sha256": "820443089544918595ab062b7bca93d895084a000dc58c35bc282a251d9782a9",
+      "bounds": {
+        "min": [
+          -0.24100000225007534,
+          -0.021400000900030136,
+          -0.2843480110168457
+        ],
+        "max": [
+          0.24100000225007534,
+          0.021400000900030136,
+          0.289247989654541
+        ]
+      },
+      "screenshot": "qa/webgl-evidence/babylon-web/rear-right.png",
+      "screenshot_size_px": [
+        1280,
+        800
+      ],
+      "screenshot_sha256": "e24c7b6e0332353e145ceda471ccc07a7ebefdbbaa438d844fc67d9788d11bb1",
+      "parsed": true,
+      "rendered": true,
+      "browser_errors": 0,
+      "status": "PASS"
+    }
+  ]
+}

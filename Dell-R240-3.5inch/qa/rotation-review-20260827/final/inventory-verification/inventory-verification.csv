@@ -1,0 +1,23 @@
+face,component,expectedCount,standardObserved,webObserved,mode,status,confidence
+front,front rack ears/control endcaps,2,2,2,NODE_REGEX:^Front_(Left_Rack_Ear|Right_Control_Ear)$,PASS,verified
+front,3.5-inch hot-swap carriers,4,4,4,NODE_REGEX:^LFF_Carrier_\d+$,PASS,verified
+front,upper ventilation band,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Front,PASS,verified
+front,optical-drive position/blank,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Front,PASS,verified
+front,right control ports,3,3,3,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Front,PASS,verified
+front,left status/control strip,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Front,PASS,verified
+front,information tag and model badge,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Front,PASS,verified
+rear,onboard serial and VGA,2,2,2,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Rear,PASS,verified
+rear,onboard network and USB,5,5,5,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Rear,PASS,verified
+rear,system ID/CMA controls,2,2,2,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Rear,PASS,verified
+rear,blue riser retention latch,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Rear,PASS,verified
+rear,PCIe blanking plates,2,2,2,NODE_REGEX:^PCIe_.*Blanking_Plate$,PASS,verified
+rear,lower ventilation bank,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Rear,PASS,verified
+rear,fixed AC PSU,1,1,1,NODE_REGEX:^AC_PSU_Fixed_Body$,PASS,verified
+rear,rear rack ears,0,0,0,REQUIRED_ABSENCE_PLUS_RENDER_REVIEW,PASS,verified
+right,side shell and rail features,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Right,PASS,verified-from-multiple-angles
+left,side shell and rail features,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Left,PASS,verified-from-multiple-angles
+top,removable main cover,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Top,PASS,verified-from-multiple-angles
+top,front fixed deck,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Top,PASS,verified-from-multiple-angles
+top,factory labels,2,2,2,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Top,PASS,verified
+inside,cooling fans,4,4,4,NODE_REGEX:^Internal_Cabled_Fan_\d+_Housing$,PASS,verified
+bottom,conservative fallback sheet,1,1,1,SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Bottom,PASS,GENERIC_BOTTOM_FALLBACK

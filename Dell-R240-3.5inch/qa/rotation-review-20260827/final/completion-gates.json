@@ -1,0 +1,23 @@
+{
+  "model": "Dell-R240-3.5inch",
+  "finalStatus": "PASS_WITH_BOTTOM_FALLBACK",
+  "checks": {
+    "viewsAuditPass": true,
+    "viewWarningsResolved": true,
+    "standardGlbAuditZero": true,
+    "webGlbAuditZero": true,
+    "standardEnhancedAuditZero": true,
+    "webEnhancedAuditZero": true,
+    "rotationFourCombosPass": true,
+    "fortyIndependentLoadsPass": true,
+    "inventoryAllRowsPass": true,
+    "matchedCameraComplete": true,
+    "frozenHashesStillMatch": true
+  },
+  "viewWarningResolution": {
+    "warningCount": 6,
+    "unresolvedCount": 0,
+    "resolution": "all warnings are external transparent canvas, anti-aliased silhouette, or verified openings; each inset equipment core is 0% transparent"
+  },
+  "allPass": true
+}

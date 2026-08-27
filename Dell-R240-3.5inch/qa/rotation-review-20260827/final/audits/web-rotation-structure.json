@@ -1,0 +1,1685 @@
+{
+  "path": "Dell-R240-3.5inch/model/Dell-R240-3.5inch-web.glb",
+  "bytes": 4657824,
+  "sha256": "7308ddf9ff281d039390ad09559b892dc8da5237f28667da05ae303742a15ef1",
+  "meshCount": 130,
+  "materialAlpha": {
+    "materials": [
+      {
+        "index": 0,
+        "name": "Galvanized_Steel",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          0.59,
+          0.61,
+          0.62,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": false,
+        "unlit": false
+      },
+      {
+        "index": 1,
+        "name": "Stamped_Steel_Shadow",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          0.31,
+          0.33,
+          0.34,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": false,
+        "unlit": false
+      },
+      {
+        "index": 2,
+        "name": "Dell_Graphite",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          0.075,
+          0.083,
+          0.088,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": false,
+        "unlit": false
+      },
+      {
+        "index": 3,
+        "name": "Port_and_Vent_Black",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          0.008,
+          0.011,
+          0.013,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": false,
+        "unlit": false
+      },
+      {
+        "index": 4,
+        "name": "Dell_Carrier_Release_Orange",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          0.96,
+          0.24,
+          0.018,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": false,
+        "unlit": false
+      },
+      {
+        "index": 5,
+        "name": "Dell_Service_Blue",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          0.01,
+          0.25,
+          0.74,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": false,
+        "unlit": false
+      },
+      {
+        "index": 6,
+        "name": "PSU_BIST_Green",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          0.02,
+          0.69,
+          0.12,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": false,
+        "unlit": false
+      },
+      {
+        "index": 7,
+        "name": "Face_Front_SourceLocked",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": true,
+        "unlit": true
+      },
+      {
+        "index": 8,
+        "name": "Face_Rear_SourceLocked",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": true,
+        "unlit": true
+      },
+      {
+        "index": 9,
+        "name": "Face_Left_SourceLocked",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": true,
+        "unlit": true
+      },
+      {
+        "index": 10,
+        "name": "Face_Right_SourceLocked",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": true,
+        "unlit": true
+      },
+      {
+        "index": 11,
+        "name": "Face_Top_SourceLocked",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": true,
+        "unlit": true
+      },
+      {
+        "index": 12,
+        "name": "Face_Bottom_ConservativeFallback",
+        "alphaMode": "OPAQUE",
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "doubleSided": false,
+        "textured": true,
+        "unlit": true
+      }
+    ],
+    "violations": []
+  },
+  "negativeTransforms": [],
+  "duplicates": {
+    "sameFacingExact": [],
+    "reverseExact": []
+  },
+  "coplanar": {
+    "sameFacingOverlaps": [
+      {
+        "nodes": [
+          "Front_Pullout_Information_Tag",
+          "LFF_Carrier_4_Lower_Handle"
+        ],
+        "axis": 2,
+        "plane": 0.28875,
+        "projectedOverlapArea": 5.450000000000007e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "Front_Pullout_Information_Tag",
+          "LFF_Carrier_4_Lower_Handle"
+        ],
+        "axis": 2,
+        "plane": 0.28725,
+        "projectedOverlapArea": 5.450000000000007e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "Rear_Blue_Expansion_Latch",
+          "Rear_CMA_Connector"
+        ],
+        "axis": 2,
+        "plane": -0.2842,
+        "projectedOverlapArea": 5.16e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "AC_PSU_Exhaust_4_3",
+          "AC_PSU_Fixed_Body"
+        ],
+        "axis": 2,
+        "plane": -0.2842,
+        "projectedOverlapArea": 3.84399999999999e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "AC_PSU_Exhaust_4_2",
+          "AC_PSU_Fixed_Body"
+        ],
+        "axis": 2,
+        "plane": -0.2842,
+        "projectedOverlapArea": 3.84399999999999e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "AC_PSU_Exhaust_4_1",
+          "AC_PSU_Fixed_Body"
+        ],
+        "axis": 2,
+        "plane": -0.2842,
+        "projectedOverlapArea": 3.84399999999999e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "AC_PSU_Exhaust_3_3",
+          "AC_PSU_Fixed_Body"
+        ],
+        "axis": 2,
+        "plane": -0.2842,
+        "projectedOverlapArea": 3.84399999999999e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "AC_PSU_Exhaust_3_2",
+          "AC_PSU_Fixed_Body"
+        ],
+        "axis": 2,
+        "plane": -0.2842,
+        "projectedOverlapArea": 3.84399999999999e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "AC_PSU_Exhaust_3_1",
+          "AC_PSU_Fixed_Body"
+        ],
+        "axis": 2,
+        "plane": -0.2842,
+        "projectedOverlapArea": 3.84399999999999e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "AC_PSU_Exhaust_2_3",
+          "AC_PSU_Fixed_Body"
+        ],
+        "axis": 2,
+        "plane": -0.2842,
+        "projectedOverlapArea": 3.84399999999999e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "AC_PSU_Exhaust_2_2",
+          "AC_PSU_Fixed_Body"
+        ],
+        "axis": 2,
+        "plane": -0.2842,
+        "projectedOverlapArea": 3.84399999999999e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "AC_PSU_Exhaust_2_1",
+          "AC_PSU_Fixed_Body"
+        ],
+        "axis": 2,
+        "plane": -0.2842,
+        "projectedOverlapArea": 3.84399999999999e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "AC_PSU_Exhaust_1_3",
+          "AC_PSU_Fixed_Body"
+        ],
+        "axis": 2,
+        "plane": -0.2842,
+        "projectedOverlapArea": 3.84399999999999e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "AC_PSU_Exhaust_1_2",
+          "AC_PSU_Fixed_Body"
+        ],
+        "axis": 2,
+        "plane": -0.2842,
+        "projectedOverlapArea": 3.84399999999999e-05,
+        "exteriorRisk": false
+      },
+      {
+        "nodes": [
+          "AC_PSU_Exhaust_1_1",
+          "AC_PSU_Fixed_Body"
+        ],
+        "axis": 2,
+        "plane": -0.2842,
+        "projectedOverlapArea": 3.84399999999999e-05,
+        "exteriorRisk": false
+      }
+    ],
+    "exteriorSameFacingOverlaps": [],
+    "oppositeFacingContacts": [
+      {
+        "nodes": [
+          "Rear_Lower_Vent_Cell_07",
+          "Rear_iDRAC_RJ45"
+        ],
+        "axis": 0,
+        "plane": 0.114,
+        "projectedContactArea": 1.2479999999999926e-05
+      }
+    ]
+  },
+  "closedCore": {
+    "candidates": [
+      {
+        "node": "Closed_Chassis_Body",
+        "watertight": true,
+        "windingConsistent": true,
+        "volume": 0.009062926602239998
+      }
+    ],
+    "errors": []
+  },
+  "normalChecks": {
+    "meshes": [
+      {
+        "node": "Internal_Cabled_Fan_4_Rotor",
+        "triangleCount": 112,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Internal_Cabled_Fan_4_Housing",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Internal_Cabled_Fan_3_Rotor",
+        "triangleCount": 112,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Internal_Cabled_Fan_3_Housing",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Internal_Cabled_Fan_2_Rotor",
+        "triangleCount": 112,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Internal_Cabled_Fan_2_Housing",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Internal_Cabled_Fan_1_Rotor",
+        "triangleCount": 112,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Internal_Cabled_Fan_1_Housing",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Top_Rear_Vent_Cell_18",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Top_Rear_Vent_Cell_17",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Top_Rear_Vent_Cell_16",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Top_Rear_Vent_Cell_15",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Top_Rear_Vent_Cell_14",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Top_Rear_Vent_Cell_13",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Top_Rear_Vent_Cell_12",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Top_Rear_Vent_Cell_11",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Top_Rear_Vent_Cell_10",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Top_Rear_Vent_Cell_09",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Top_Rear_Vent_Cell_08",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Top_Rear_Vent_Cell_07",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Top_Rear_Vent_Cell_06",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Top_Rear_Vent_Cell_05",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Top_Rear_Vent_Cell_04",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Top_Rear_Vent_Cell_03",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Top_Rear_Vent_Cell_02",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Top_Rear_Vent_Cell_01",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Top_Service_Latch",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Left_Side_Rail_Feature_5",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Left_Side_Rail_Feature_4",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Left_Side_Rail_Feature_3",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Left_Side_Rail_Feature_2",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Left_Side_Rail_Feature_1",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Right_Side_Rail_Feature_5",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Right_Side_Rail_Feature_4",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Right_Side_Rail_Feature_3",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Right_Side_Rail_Feature_2",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Right_Side_Rail_Feature_1",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "AC_PSU_Cable_Retention_Strap",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "AC_PSU_Exhaust_4_3",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "AC_PSU_Exhaust_4_2",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "AC_PSU_Exhaust_4_1",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "AC_PSU_Exhaust_3_3",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "AC_PSU_Exhaust_3_2",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "AC_PSU_Exhaust_3_1",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "AC_PSU_Exhaust_2_3",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "AC_PSU_Exhaust_2_2",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "AC_PSU_Exhaust_2_1",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "AC_PSU_Exhaust_1_3",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "AC_PSU_Exhaust_1_2",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "AC_PSU_Exhaust_1_1",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "AC_PSU_BIST_LED",
+        "triangleCount": 112,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "AC_PSU_IEC_C14_Inlet",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "AC_PSU_Fixed_Body",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_Lower_Vent_Cell_24",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_Lower_Vent_Cell_23",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_Lower_Vent_Cell_22",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_Lower_Vent_Cell_21",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_Lower_Vent_Cell_20",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_Lower_Vent_Cell_19",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_Lower_Vent_Cell_18",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_Lower_Vent_Cell_17",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_Lower_Vent_Cell_16",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_Lower_Vent_Cell_15",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_Lower_Vent_Cell_14",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_Lower_Vent_Cell_13",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_Lower_Vent_Cell_12",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_Lower_Vent_Cell_11",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_Lower_Vent_Cell_10",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_Lower_Vent_Cell_09",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_Lower_Vent_Cell_08",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_Lower_Vent_Cell_07",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_Lower_Vent_Cell_06",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_Lower_Vent_Cell_05",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_Lower_Vent_Cell_04",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_Lower_Vent_Cell_03",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_Lower_Vent_Cell_02",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_Lower_Vent_Cell_01",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_Blue_Expansion_Latch",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "PCIe_FullHeight_Blanking_Plate",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "PCIe_HalfHeight_Blanking_Plate",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_CMA_Connector",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_System_ID_Button",
+        "triangleCount": 112,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_USB3_Port_2",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_USB3_Port_1",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_LOM2_RJ45",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_LOM1_RJ45",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_iDRAC_RJ45",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_VGA",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Rear_Serial_DB9",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Front_Pullout_Information_Tag",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Front_Upper_Vent_Recess",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "LFF_Carrier_4_Vent_Rib_4",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "LFF_Carrier_4_Vent_Rib_3",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "LFF_Carrier_4_Vent_Rib_2",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "LFF_Carrier_4_Vent_Rib_1",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "LFF_Carrier_4_Release_Ring",
+        "triangleCount": 112,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "LFF_Carrier_4_Lower_Handle",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "LFF_Carrier_4",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "LFF_Carrier_3_Vent_Rib_4",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "LFF_Carrier_3_Vent_Rib_3",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "LFF_Carrier_3_Vent_Rib_2",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "LFF_Carrier_3_Vent_Rib_1",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "LFF_Carrier_3_Release_Ring",
+        "triangleCount": 112,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "LFF_Carrier_3_Lower_Handle",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "LFF_Carrier_3",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "LFF_Carrier_2_Vent_Rib_4",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "LFF_Carrier_2_Vent_Rib_3",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "LFF_Carrier_2_Vent_Rib_2",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "LFF_Carrier_2_Vent_Rib_1",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "LFF_Carrier_2_Release_Ring",
+        "triangleCount": 112,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "LFF_Carrier_2_Lower_Handle",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "LFF_Carrier_2",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "LFF_Carrier_1_Vent_Rib_4",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "LFF_Carrier_1_Vent_Rib_3",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "LFF_Carrier_1_Vent_Rib_2",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "LFF_Carrier_1_Vent_Rib_1",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "LFF_Carrier_1_Release_Ring",
+        "triangleCount": 112,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "LFF_Carrier_1_Lower_Handle",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "LFF_Carrier_1",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Front_Right_Control_Ear",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "Front_Left_Rack_Ear",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "Texture_Bottom",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "Texture_Top",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "Texture_Left",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "Texture_Right",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "Texture_Rear",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "Texture_Front",
+        "triangleCount": 2,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": false,
+        "positiveVolumeWhenWatertight": null
+      },
+      {
+        "node": "Bottom_Deck_Panel",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Top_Cover_Stamped_Panel",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      },
+      {
+        "node": "Closed_Chassis_Body",
+        "triangleCount": 12,
+        "degenerateTriangles": 0,
+        "finiteGeometryAndNormals": true,
+        "windingConsistent": true,
+        "watertight": true,
+        "positiveVolumeWhenWatertight": true
+      }
+    ],
+    "violations": []
+  },
+  "openMeshes": [
+    "Internal_Cabled_Fan_4_Rotor",
+    "Internal_Cabled_Fan_4_Housing",
+    "Internal_Cabled_Fan_3_Rotor",
+    "Internal_Cabled_Fan_3_Housing",
+    "Internal_Cabled_Fan_2_Rotor",
+    "Internal_Cabled_Fan_2_Housing",
+    "Internal_Cabled_Fan_1_Rotor",
+    "Internal_Cabled_Fan_1_Housing",
+    "Top_Rear_Vent_Cell_18",
+    "Top_Rear_Vent_Cell_17",
+    "Top_Rear_Vent_Cell_16",
+    "Top_Rear_Vent_Cell_15",
+    "Top_Rear_Vent_Cell_14",
+    "Top_Rear_Vent_Cell_13",
+    "Top_Rear_Vent_Cell_12",
+    "Top_Rear_Vent_Cell_11",
+    "Top_Rear_Vent_Cell_10",
+    "Top_Rear_Vent_Cell_09",
+    "Top_Rear_Vent_Cell_08",
+    "Top_Rear_Vent_Cell_07",
+    "Top_Rear_Vent_Cell_06",
+    "Top_Rear_Vent_Cell_05",
+    "Top_Rear_Vent_Cell_04",
+    "Top_Rear_Vent_Cell_03",
+    "Top_Rear_Vent_Cell_02",
+    "Top_Rear_Vent_Cell_01",
+    "Top_Service_Latch",
+    "Left_Side_Rail_Feature_5",
+    "Left_Side_Rail_Feature_4",
+    "Left_Side_Rail_Feature_3",
+    "Left_Side_Rail_Feature_2",
+    "Left_Side_Rail_Feature_1",
+    "Right_Side_Rail_Feature_5",
+    "Right_Side_Rail_Feature_4",
+    "Right_Side_Rail_Feature_3",
+    "Right_Side_Rail_Feature_2",
+    "Right_Side_Rail_Feature_1",
+    "AC_PSU_Cable_Retention_Strap",
+    "AC_PSU_Exhaust_4_3",
+    "AC_PSU_Exhaust_4_2",
+    "AC_PSU_Exhaust_4_1",
+    "AC_PSU_Exhaust_3_3",
+    "AC_PSU_Exhaust_3_2",
+    "AC_PSU_Exhaust_3_1",
+    "AC_PSU_Exhaust_2_3",
+    "AC_PSU_Exhaust_2_2",
+    "AC_PSU_Exhaust_2_1",
+    "AC_PSU_Exhaust_1_3",
+    "AC_PSU_Exhaust_1_2",
+    "AC_PSU_Exhaust_1_1",
+    "AC_PSU_BIST_LED",
+    "AC_PSU_IEC_C14_Inlet",
+    "AC_PSU_Fixed_Body",
+    "Rear_Lower_Vent_Cell_24",
+    "Rear_Lower_Vent_Cell_23",
+    "Rear_Lower_Vent_Cell_22",
+    "Rear_Lower_Vent_Cell_21",
+    "Rear_Lower_Vent_Cell_20",
+    "Rear_Lower_Vent_Cell_19",
+    "Rear_Lower_Vent_Cell_18",
+    "Rear_Lower_Vent_Cell_17",
+    "Rear_Lower_Vent_Cell_16",
+    "Rear_Lower_Vent_Cell_15",
+    "Rear_Lower_Vent_Cell_14",
+    "Rear_Lower_Vent_Cell_13",
+    "Rear_Lower_Vent_Cell_12",
+    "Rear_Lower_Vent_Cell_11",
+    "Rear_Lower_Vent_Cell_10",
+    "Rear_Lower_Vent_Cell_09",
+    "Rear_Lower_Vent_Cell_08",
+    "Rear_Lower_Vent_Cell_07",
+    "Rear_Lower_Vent_Cell_06",
+    "Rear_Lower_Vent_Cell_05",
+    "Rear_Lower_Vent_Cell_04",
+    "Rear_Lower_Vent_Cell_03",
+    "Rear_Lower_Vent_Cell_02",
+    "Rear_Lower_Vent_Cell_01",
+    "Rear_Blue_Expansion_Latch",
+    "PCIe_FullHeight_Blanking_Plate",
+    "PCIe_HalfHeight_Blanking_Plate",
+    "Rear_CMA_Connector",
+    "Rear_System_ID_Button",
+    "Rear_USB3_Port_2",
+    "Rear_USB3_Port_1",
+    "Rear_LOM2_RJ45",
+    "Rear_LOM1_RJ45",
+    "Rear_iDRAC_RJ45",
+    "Rear_VGA",
+    "Rear_Serial_DB9",
+    "Front_Pullout_Information_Tag",
+    "Front_Upper_Vent_Recess",
+    "LFF_Carrier_4_Vent_Rib_4",
+    "LFF_Carrier_4_Vent_Rib_3",
+    "LFF_Carrier_4_Vent_Rib_2",
+    "LFF_Carrier_4_Vent_Rib_1",
+    "LFF_Carrier_4_Release_Ring",
+    "LFF_Carrier_4_Lower_Handle",
+    "LFF_Carrier_4",
+    "LFF_Carrier_3_Vent_Rib_4",
+    "LFF_Carrier_3_Vent_Rib_3",
+    "LFF_Carrier_3_Vent_Rib_2",
+    "LFF_Carrier_3_Vent_Rib_1",
+    "LFF_Carrier_3_Release_Ring",
+    "LFF_Carrier_3_Lower_Handle",
+    "LFF_Carrier_3",
+    "LFF_Carrier_2_Vent_Rib_4",
+    "LFF_Carrier_2_Vent_Rib_3",
+    "LFF_Carrier_2_Vent_Rib_2",
+    "LFF_Carrier_2_Vent_Rib_1",
+    "LFF_Carrier_2_Release_Ring",
+    "LFF_Carrier_2_Lower_Handle",
+    "LFF_Carrier_2",
+    "LFF_Carrier_1_Vent_Rib_4",
+    "LFF_Carrier_1_Vent_Rib_3",
+    "LFF_Carrier_1_Vent_Rib_2",
+    "LFF_Carrier_1_Vent_Rib_1",
+    "LFF_Carrier_1_Release_Ring",
+    "LFF_Carrier_1_Lower_Handle",
+    "LFF_Carrier_1",
+    "Front_Right_Control_Ear",
+    "Front_Left_Rack_Ear",
+    "Texture_Bottom",
+    "Texture_Top",
+    "Texture_Left",
+    "Texture_Right",
+    "Texture_Rear",
+    "Texture_Front",
+    "Bottom_Deck_Panel",
+    "Top_Cover_Stamped_Panel",
+    "Closed_Chassis_Body"
+  ],
+  "errors": [],
+  "errorCount": 0,
+  "status": "PASS"
+}

@@ -1,0 +1,109 @@
+{
+  "model": "Dell-R240-3.5inch",
+  "engine": "babylon",
+  "variant": "web",
+  "modelSha256": "7308ddf9ff281d039390ad09559b892dc8da5237f28667da05ae303742a15ef1",
+  "counts": {
+    "yaw": 72,
+    "pitch": 16,
+    "stabilityFrames": 16,
+    "stabilityPairs": 8
+  },
+  "runtime": {
+    "engine": "Babylon.js 9.22.1",
+    "webgl2": true,
+    "model": "http://127.0.0.1:35389/Dell-R240-3.5inch/model/Dell-R240-3.5inch-web.glb?cb=1787843513795-babylon-web",
+    "modelSha256": "7308ddf9ff281d039390ad09559b892dc8da5237f28667da05ae303742a15ef1",
+    "byteLength": 4657824,
+    "bounds": {
+      "min": [
+        -0.24100000225007534,
+        -0.021400000900030136,
+        -0.2843000036664307
+      ],
+      "max": [
+        0.24100000225007534,
+        0.021400000900030136,
+        0.2888999879360199
+      ],
+      "size": [
+        0.4820000045001507,
+        0.04280000180006027,
+        0.5731999916024506
+      ]
+    },
+    "near": 0.028659999580122532,
+    "far": 3.4391999496147037,
+    "nearFarRatio": 120,
+    "loadingOverlayHidden": true,
+    "loadDurationMs": 621,
+    "overlayVisible": false
+  },
+  "objectFraction": {
+    "min": 0.05007161458333333,
+    "max": 0.06614583333333333,
+    "maxAdjacentDelta": 0.0019563802083333304
+  },
+  "objectLuma": {
+    "min": 140.94863891601562,
+    "max": 173.90902709960938,
+    "maxAdjacentDelta": 3.7768402099609375
+  },
+  "pixelMotionMAE": {
+    "median": 1.5853288173675537,
+    "max": 1.7562423944473267
+  },
+  "stability": [
+    {
+      "a": "yaw-000-dark-a.png",
+      "b": "yaw-000-dark-b.png",
+      "pixelMAE": 0.0,
+      "maxChannelDelta": 0.0
+    },
+    {
+      "a": "yaw-000-light-a.png",
+      "b": "yaw-000-light-b.png",
+      "pixelMAE": 0.0,
+      "maxChannelDelta": 0.0
+    },
+    {
+      "a": "yaw-090-dark-a.png",
+      "b": "yaw-090-dark-b.png",
+      "pixelMAE": 0.0,
+      "maxChannelDelta": 0.0
+    },
+    {
+      "a": "yaw-090-light-a.png",
+      "b": "yaw-090-light-b.png",
+      "pixelMAE": 0.0,
+      "maxChannelDelta": 0.0
+    },
+    {
+      "a": "yaw-180-dark-a.png",
+      "b": "yaw-180-dark-b.png",
+      "pixelMAE": 0.0,
+      "maxChannelDelta": 0.0
+    },
+    {
+      "a": "yaw-180-light-a.png",
+      "b": "yaw-180-light-b.png",
+      "pixelMAE": 0.0,
+      "maxChannelDelta": 0.0
+    },
+    {
+      "a": "yaw-270-dark-a.png",
+      "b": "yaw-270-dark-b.png",
+      "pixelMAE": 0.0,
+      "maxChannelDelta": 0.0
+    },
+    {
+      "a": "yaw-270-light-a.png",
+      "b": "yaw-270-light-b.png",
+      "pixelMAE": 0.0,
+      "maxChannelDelta": 0.0
+    }
+  ],
+  "errors": [],
+  "errorCount": 0,
+  "status": "PASS"
+}

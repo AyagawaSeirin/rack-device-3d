@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "glb": "model/Dell-R240-3.5inch.glb",
+  "node_count": 132,
+  "checks": {
+    "source_locked_faces": {
+      "actual": 6,
+      "expected": 6
+    },
+    "lff_carrier_bodies": {
+      "actual": 4,
+      "expected": 4
+    },
+    "lff_carrier_handles": {
+      "actual": 4,
+      "expected": 4
+    },
+    "lff_release_rings": {
+      "actual": 4,
+      "expected": 4
+    },
+    "fixed_ac_psu_installed": {
+      "actual": 1,
+      "expected": 1
+    },
+    "second_psu_absent_marker": {
+      "actual": 1,
+      "expected": 1
+    },
+    "pcie_blanking_plates": {
+      "actual": 2,
+      "expected": 2
+    },
+    "cabled_fan_housings": {
+      "actual": 4,
+      "expected": 4
+    },
+    "physical_right_side_features": {
+      "actual": 5,
+      "expected": 5
+    },
+    "physical_left_side_features": {
+      "actual": 5,
+      "expected": 5
+    },
+    "front_only_rack_ears": {
+      "actual": 2,
+      "expected": 2
+    }
+  },
+  "required_rear_io_nodes": [
+    "Rear_Serial_DB9",
+    "Rear_VGA",
+    "Rear_iDRAC_RJ45",
+    "Rear_LOM1_RJ45",
+    "Rear_LOM2_RJ45",
+    "Rear_USB3_Port_1",
+    "Rear_USB3_Port_2",
+    "Rear_System_ID_Button",
+    "Rear_CMA_Connector",
+    "Rear_Blue_Expansion_Latch",
+    "AC_PSU_IEC_C14_Inlet"
+  ],
+  "missing_rear_io_nodes": [],
+  "mismatches": [],
+  "note": "Fine factual branding, carrier grille patterns and port face appearance are retained in the source-locked OPAQUE textures; these node checks verify the distinct structural assemblies and installed-count lock."
+}

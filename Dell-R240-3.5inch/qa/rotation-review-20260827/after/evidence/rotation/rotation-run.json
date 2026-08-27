@@ -1,0 +1,77 @@
+{
+  "modelKey": "Dell-R240-3.5inch",
+  "phase": "after",
+  "capturedAt": "2026-08-27T15:11:21.031Z",
+  "yawStepDegrees": 5,
+  "yawFramesPerCombination": 72,
+  "pitchDegrees": [
+    -35,
+    -15,
+    15,
+    35
+  ],
+  "pitchYaws": [
+    0,
+    90,
+    180,
+    270
+  ],
+  "checkerboards": [
+    "light",
+    "dark"
+  ],
+  "combinations": [
+    {
+      "engine": "three",
+      "variant": "standard",
+      "modelSha256": "f3593d8c33703b3975c428499f7f0d28e9f44e949a625a9d95d05841da40c863",
+      "yawFrames": 72,
+      "pitchFrames": 16,
+      "stabilityPairs": 8,
+      "stabilityFrames": 16,
+      "webgl2": true,
+      "overlayVisible": false,
+      "consoleErrorCount": 0,
+      "manifest": "after/evidence/rotation/three/standard/rotation-manifest.json"
+    },
+    {
+      "engine": "three",
+      "variant": "web",
+      "modelSha256": "7308ddf9ff281d039390ad09559b892dc8da5237f28667da05ae303742a15ef1",
+      "yawFrames": 72,
+      "pitchFrames": 16,
+      "stabilityPairs": 8,
+      "stabilityFrames": 16,
+      "webgl2": true,
+      "overlayVisible": false,
+      "consoleErrorCount": 0,
+      "manifest": "after/evidence/rotation/three/web/rotation-manifest.json"
+    },
+    {
+      "engine": "babylon",
+      "variant": "standard",
+      "modelSha256": "f3593d8c33703b3975c428499f7f0d28e9f44e949a625a9d95d05841da40c863",
+      "yawFrames": 72,
+      "pitchFrames": 16,
+      "stabilityPairs": 8,
+      "stabilityFrames": 16,
+      "webgl2": true,
+      "overlayVisible": false,
+      "consoleErrorCount": 0,
+      "manifest": "after/evidence/rotation/babylon/standard/rotation-manifest.json"
+    },
+    {
+      "engine": "babylon",
+      "variant": "web",
+      "modelSha256": "7308ddf9ff281d039390ad09559b892dc8da5237f28667da05ae303742a15ef1",
+      "yawFrames": 72,
+      "pitchFrames": 16,
+      "stabilityPairs": 8,
+      "stabilityFrames": 16,
+      "webgl2": true,
+      "overlayVisible": false,
+      "consoleErrorCount": 0,
+      "manifest": "after/evidence/rotation/babylon/web/rotation-manifest.json"
+    }
+  ]
+}

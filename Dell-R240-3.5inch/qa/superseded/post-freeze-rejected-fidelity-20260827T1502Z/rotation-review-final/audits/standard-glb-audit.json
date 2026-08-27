@@ -1,0 +1,586 @@
+{
+  "path": "Dell-R240-3.5inch/model/Dell-R240-3.5inch.glb",
+  "byte_size": 12843860,
+  "asset": {
+    "version": "2.0",
+    "generator": "Codex Dell R240 exact-appearance builder (standard)",
+    "copyright": "Independent exact-appearance reconstruction; factual Dell and PowerEdge markings retained.",
+    "extras": {
+      "exactProductId": "Dell EMC PowerEdge R240",
+      "regulatoryModel": "E57S / E57S001",
+      "configuration": "4 x 3.5-inch LFF hot-swap; bezel absent; standard rear; one fixed/cabled AC PSU installed; four cabled fans",
+      "dimensionsMillimeters": {
+        "overallWidth": 482,
+        "bodyWidth": 434,
+        "height": 42.8,
+        "bodyDepth": 534.496,
+        "overallDepth": 573.596,
+        "frontProjectionWithoutBezel": 22,
+        "rearProjection": 17.1
+      },
+      "coordinateConvention": "+X device right from front; +Y up; +Z front",
+      "bottomStatus": "GENERIC_BOTTOM_FALLBACK",
+      "faceTextureEmbedding": "All six materials OPAQUE; card/core/relief layers have deterministic positive clearance; six canonical transparent PNGs remain in ../views.",
+      "textureVariant": "standard",
+      "sourceManifest": "../source/identity-manifest.md",
+      "featureInventory": "../source/feature-inventory.csv",
+      "faceSourceLock": "../source/face-source-lock.csv"
+    }
+  },
+  "extensions_used": [
+    "KHR_materials_unlit"
+  ],
+  "extensions_required": [],
+  "counts": {
+    "scenes": 1,
+    "nodes": 132,
+    "meshes": 16,
+    "primitives": 16,
+    "materials": 13,
+    "textures": 6,
+    "images": 6,
+    "unique_basecolor_images": 6
+  },
+  "geometry": {
+    "mirrored_nodes": [],
+    "missing_accessor_bounds": [],
+    "bounds_min": [
+      -0.24100000000000002,
+      -0.0214,
+      -0.2843
+    ],
+    "bounds_max": [
+      0.24100000000000002,
+      0.0214,
+      0.2889
+    ],
+    "dimensions_xyz": [
+      0.48200000000000004,
+      0.0428,
+      0.5731999999999999
+    ]
+  },
+  "dimension_check": {
+    "expected_mm": [
+      482.0,
+      42.8,
+      573.596
+    ],
+    "errors": [],
+    "warnings": [],
+    "actual_xyz": [
+      0.482,
+      0.0428,
+      0.5732
+    ],
+    "units_per_mm_xyz": [
+      0.001,
+      0.001,
+      0.0009993096
+    ],
+    "nonuniform_ratio_error_percent": 0.046
+  },
+  "images": [
+    {
+      "index": 0,
+      "name": "Face_Front_SourceLocked_Image",
+      "errors": [],
+      "warnings": [],
+      "format": "PNG",
+      "mode": "RGB",
+      "size_px": [
+        2400,
+        213
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    },
+    {
+      "index": 1,
+      "name": "Face_Rear_SourceLocked_Image",
+      "errors": [],
+      "warnings": [],
+      "format": "PNG",
+      "mode": "RGB",
+      "size_px": [
+        2400,
+        236
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    },
+    {
+      "index": 2,
+      "name": "Face_Left_SourceLocked_Image",
+      "errors": [],
+      "warnings": [],
+      "format": "PNG",
+      "mode": "RGB",
+      "size_px": [
+        2400,
+        192
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    },
+    {
+      "index": 3,
+      "name": "Face_Right_SourceLocked_Image",
+      "errors": [],
+      "warnings": [],
+      "format": "PNG",
+      "mode": "RGB",
+      "size_px": [
+        2400,
+        193
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    },
+    {
+      "index": 4,
+      "name": "Face_Top_SourceLocked_Image",
+      "errors": [],
+      "warnings": [],
+      "format": "PNG",
+      "mode": "RGB",
+      "size_px": [
+        2048,
+        2522
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    },
+    {
+      "index": 5,
+      "name": "Face_Bottom_ConservativeFallback_Image",
+      "errors": [],
+      "warnings": [],
+      "format": "PNG",
+      "mode": "RGB",
+      "size_px": [
+        2018,
+        2485
+      ],
+      "transparent_percent": 0.0,
+      "semi_transparent_percent": 0.0
+    }
+  ],
+  "materials": [
+    {
+      "index": 0,
+      "name": "Galvanized_Steel",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.59,
+        0.61,
+        0.62,
+        1
+      ],
+      "metallic_factor": 0.34,
+      "roughness_factor": 0.65,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 1,
+      "name": "Stamped_Steel_Shadow",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.31,
+        0.33,
+        0.34,
+        1
+      ],
+      "metallic_factor": 0.28,
+      "roughness_factor": 0.72,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 2,
+      "name": "Dell_Graphite",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.075,
+        0.083,
+        0.088,
+        1
+      ],
+      "metallic_factor": 0.05,
+      "roughness_factor": 0.68,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 3,
+      "name": "Port_and_Vent_Black",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.008,
+        0.011,
+        0.013,
+        1
+      ],
+      "metallic_factor": 0.01,
+      "roughness_factor": 0.88,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 4,
+      "name": "Dell_Carrier_Release_Orange",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.96,
+        0.24,
+        0.018,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 0.48,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 5,
+      "name": "Dell_Service_Blue",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.01,
+        0.25,
+        0.74,
+        1
+      ],
+      "metallic_factor": 0.02,
+      "roughness_factor": 0.48,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 6,
+      "name": "PSU_BIST_Green",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        0.02,
+        0.69,
+        0.12,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 0.38,
+      "double_sided": false,
+      "unlit": false,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": null,
+      "base_color_image": null
+    },
+    {
+      "index": 7,
+      "name": "Face_Front_SourceLocked",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 1,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 0,
+      "base_color_image": 0
+    },
+    {
+      "index": 8,
+      "name": "Face_Rear_SourceLocked",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 1,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 1,
+      "base_color_image": 1
+    },
+    {
+      "index": 9,
+      "name": "Face_Left_SourceLocked",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 1,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 2,
+      "base_color_image": 2
+    },
+    {
+      "index": 10,
+      "name": "Face_Right_SourceLocked",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 1,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 3,
+      "base_color_image": 3
+    },
+    {
+      "index": 11,
+      "name": "Face_Top_SourceLocked",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 1,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 4,
+      "base_color_image": 4
+    },
+    {
+      "index": 12,
+      "name": "Face_Bottom_ConservativeFallback",
+      "alpha_mode": "OPAQUE",
+      "base_color_factor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic_factor": 0,
+      "roughness_factor": 1,
+      "double_sided": false,
+      "unlit": true,
+      "errors": [],
+      "warnings": [],
+      "base_color_texture": 5,
+      "base_color_image": 5
+    }
+  ],
+  "primitives": [
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "material": 0,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 1,
+      "primitive": 0,
+      "material": 7,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 2,
+      "primitive": 0,
+      "material": 8,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 3,
+      "primitive": 0,
+      "material": 10,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 4,
+      "primitive": 0,
+      "material": 9,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 5,
+      "primitive": 0,
+      "material": 11,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 6,
+      "primitive": 0,
+      "material": 12,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 7,
+      "primitive": 0,
+      "material": 2,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 8,
+      "primitive": 0,
+      "material": 2,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 9,
+      "primitive": 0,
+      "material": 1,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 10,
+      "primitive": 0,
+      "material": 4,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 11,
+      "primitive": 0,
+      "material": 3,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 12,
+      "primitive": 0,
+      "material": 5,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 13,
+      "primitive": 0,
+      "material": 5,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 14,
+      "primitive": 0,
+      "material": 6,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "mesh": 15,
+      "primitive": 0,
+      "material": 1,
+      "has_position": true,
+      "has_normal": true,
+      "has_uv0": true,
+      "errors": [],
+      "warnings": []
+    }
+  ],
+  "external_buffers": [],
+  "errors": [],
+  "warnings": [],
+  "error_count": 0,
+  "warning_count": 0,
+  "status": "PASS"
+}

@@ -1,0 +1,265 @@
+{
+  "model": "Dell-R240-3.5inch",
+  "inventoryRows": 22,
+  "inventoryPass": 22,
+  "hardGateCount": 4,
+  "checks": [
+    {
+      "face": "front",
+      "component": "front rack ears/control endcaps",
+      "expectedCount": 2,
+      "standardObserved": 2,
+      "webObserved": 2,
+      "mode": "NODE_REGEX:^Front_(Left_Rack_Ear|Right_Control_Ear)$",
+      "status": "PASS",
+      "confidence": "verified"
+    },
+    {
+      "face": "front",
+      "component": "3.5-inch hot-swap carriers",
+      "expectedCount": 4,
+      "standardObserved": 4,
+      "webObserved": 4,
+      "mode": "NODE_REGEX:^LFF_Carrier_\\d+$",
+      "status": "PASS",
+      "confidence": "verified"
+    },
+    {
+      "face": "front",
+      "component": "upper ventilation band",
+      "expectedCount": 1,
+      "standardObserved": 1,
+      "webObserved": 1,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Front",
+      "status": "PASS",
+      "confidence": "verified"
+    },
+    {
+      "face": "front",
+      "component": "optical-drive position/blank",
+      "expectedCount": 1,
+      "standardObserved": 1,
+      "webObserved": 1,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Front",
+      "status": "PASS",
+      "confidence": "verified"
+    },
+    {
+      "face": "front",
+      "component": "right control ports",
+      "expectedCount": 3,
+      "standardObserved": 3,
+      "webObserved": 3,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Front",
+      "status": "PASS",
+      "confidence": "verified"
+    },
+    {
+      "face": "front",
+      "component": "left status/control strip",
+      "expectedCount": 1,
+      "standardObserved": 1,
+      "webObserved": 1,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Front",
+      "status": "PASS",
+      "confidence": "verified"
+    },
+    {
+      "face": "front",
+      "component": "information tag and model badge",
+      "expectedCount": 1,
+      "standardObserved": 1,
+      "webObserved": 1,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Front",
+      "status": "PASS",
+      "confidence": "verified"
+    },
+    {
+      "face": "rear",
+      "component": "onboard serial and VGA",
+      "expectedCount": 2,
+      "standardObserved": 2,
+      "webObserved": 2,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Rear",
+      "status": "PASS",
+      "confidence": "verified"
+    },
+    {
+      "face": "rear",
+      "component": "onboard network and USB",
+      "expectedCount": 5,
+      "standardObserved": 5,
+      "webObserved": 5,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Rear",
+      "status": "PASS",
+      "confidence": "verified"
+    },
+    {
+      "face": "rear",
+      "component": "system ID/CMA controls",
+      "expectedCount": 2,
+      "standardObserved": 2,
+      "webObserved": 2,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Rear",
+      "status": "PASS",
+      "confidence": "verified"
+    },
+    {
+      "face": "rear",
+      "component": "blue riser retention latch",
+      "expectedCount": 1,
+      "standardObserved": 1,
+      "webObserved": 1,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Rear",
+      "status": "PASS",
+      "confidence": "verified"
+    },
+    {
+      "face": "rear",
+      "component": "PCIe blanking plates",
+      "expectedCount": 2,
+      "standardObserved": 2,
+      "webObserved": 2,
+      "mode": "NODE_REGEX:^PCIe_.*Blanking_Plate$",
+      "status": "PASS",
+      "confidence": "verified"
+    },
+    {
+      "face": "rear",
+      "component": "lower ventilation bank",
+      "expectedCount": 1,
+      "standardObserved": 1,
+      "webObserved": 1,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Rear",
+      "status": "PASS",
+      "confidence": "verified"
+    },
+    {
+      "face": "rear",
+      "component": "fixed AC PSU",
+      "expectedCount": 1,
+      "standardObserved": 1,
+      "webObserved": 1,
+      "mode": "NODE_REGEX:^AC_PSU_Fixed_Body$",
+      "status": "PASS",
+      "confidence": "verified"
+    },
+    {
+      "face": "rear",
+      "component": "rear rack ears",
+      "expectedCount": 0,
+      "standardObserved": 0,
+      "webObserved": 0,
+      "mode": "REQUIRED_ABSENCE_PLUS_RENDER_REVIEW",
+      "status": "PASS",
+      "confidence": "verified"
+    },
+    {
+      "face": "right",
+      "component": "side shell and rail features",
+      "expectedCount": 1,
+      "standardObserved": 1,
+      "webObserved": 1,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Right",
+      "status": "PASS",
+      "confidence": "verified-from-multiple-angles"
+    },
+    {
+      "face": "left",
+      "component": "side shell and rail features",
+      "expectedCount": 1,
+      "standardObserved": 1,
+      "webObserved": 1,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Left",
+      "status": "PASS",
+      "confidence": "verified-from-multiple-angles"
+    },
+    {
+      "face": "top",
+      "component": "removable main cover",
+      "expectedCount": 1,
+      "standardObserved": 1,
+      "webObserved": 1,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Top",
+      "status": "PASS",
+      "confidence": "verified-from-multiple-angles"
+    },
+    {
+      "face": "top",
+      "component": "front fixed deck",
+      "expectedCount": 1,
+      "standardObserved": 1,
+      "webObserved": 1,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Top",
+      "status": "PASS",
+      "confidence": "verified-from-multiple-angles"
+    },
+    {
+      "face": "top",
+      "component": "factory labels",
+      "expectedCount": 2,
+      "standardObserved": 2,
+      "webObserved": 2,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Top",
+      "status": "PASS",
+      "confidence": "verified"
+    },
+    {
+      "face": "inside",
+      "component": "cooling fans",
+      "expectedCount": 4,
+      "standardObserved": 4,
+      "webObserved": 4,
+      "mode": "NODE_REGEX:^Internal_Cabled_Fan_\\d+_Housing$",
+      "status": "PASS",
+      "confidence": "verified"
+    },
+    {
+      "face": "bottom",
+      "component": "conservative fallback sheet",
+      "expectedCount": 1,
+      "standardObserved": 1,
+      "webObserved": 1,
+      "mode": "SOURCE_LOCKED_FACE_AND_MATCHED_CAMERA:Texture_Bottom",
+      "status": "PASS",
+      "confidence": "GENERIC_BOTTOM_FALLBACK"
+    }
+  ],
+  "hardConfigurationGates": [
+    {
+      "label": "installed fixed AC PSU",
+      "regex": "^AC_PSU_Fixed_Body$",
+      "expected": 1,
+      "standardObserved": 1,
+      "webObserved": 1,
+      "status": "PASS"
+    },
+    {
+      "label": "internal cabled fan housings",
+      "regex": "^Internal_Cabled_Fan_\\d+_Housing$",
+      "expected": 4,
+      "standardObserved": 4,
+      "webObserved": 4,
+      "status": "PASS"
+    },
+    {
+      "label": "front-only ears",
+      "regex": "^Front_.*Ear$",
+      "expected": 2,
+      "standardObserved": 2,
+      "webObserved": 2,
+      "status": "PASS"
+    },
+    {
+      "label": "synthetic logo planes",
+      "regex": "logo",
+      "expected": 0,
+      "standardObserved": 0,
+      "webObserved": 0,
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "errorCount": 0,
+  "status": "PASS"
+}

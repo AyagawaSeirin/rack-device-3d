@@ -243,7 +243,9 @@ function cylinderGeometry(segments = 28) {
   }
   for (let i = 0; i < segments; i++) {
     const base = i * 2;
-    indices.push(base, base + 1, base + 3, base, base + 3, base + 2);
+    // Reverse the side-wall winding so it agrees with the outward radial
+    // normals. The prior order produced inward/negative-volume cylinders.
+    indices.push(base, base + 3, base + 1, base, base + 2, base + 3);
   }
   const front = positions.length / 3;
   positions.push(0, 0, 0.5); normals.push(0, 0, 1); uvs.push(0.5, 0.5);
@@ -304,15 +306,19 @@ function buildVariant(textureDir, outputName, variant) {
     b.addNode(name, cylinder(material), position, scale, extras);
 
   // Closed enclosure, separate cover/deck, and all six independent source-locked faces.
-  box('Closed_Chassis_Body', mat.silver, [0,0,0], [D.bodyWidth,0.040,D.bodyDepth], { category:'closed-shell' });
-  box('Top_Cover_Stamped_Panel', mat.silver, [0,0.0209,-0.006], [0.428,0.0010,0.498], { category:'top-cover' });
-  box('Bottom_Deck_Panel', mat.silver, [0,-0.0209,0], [D.bodyWidth,0.0010,D.bodyDepth], { category:'bottom-deck', bottomMode:'conservative-fallback' });
-  b.addNode('Texture_Front', plane('front',mat.frontTex), [0,0,D.frontMostZ], [D.overallWidth,D.height,1], { face:'front', sourceLocked:true });
-  b.addNode('Texture_Rear', plane('rear',mat.rearTex), [0,0,D.rearMostZ], [D.bodyWidth,D.height,1], { face:'rear', sourceLocked:true });
-  b.addNode('Texture_Right', plane('right',mat.rightTex), [D.bodyWidth/2+0.00008,0,0], [1,D.height,D.bodyDepth], { face:'right', sourceLocked:true, independentlyGenerated:true });
-  b.addNode('Texture_Left', plane('left',mat.leftTex), [-D.bodyWidth/2-0.00008,0,0], [1,D.height,D.bodyDepth], { face:'left', sourceLocked:true, independentlyGenerated:true });
-  b.addNode('Texture_Top', plane('top',mat.topTex), [0,D.height/2,0], [D.bodyWidth,1,D.bodyDepth], { face:'top', sourceLocked:true });
-  b.addNode('Texture_Bottom', plane('bottom',mat.bottomTex), [0,-D.height/2,0], [D.bodyWidth,1,D.bodyDepth], { face:'bottom', sourceLocked:true, productionMode:'GENERIC_BOTTOM_FALLBACK' });
+  // The opaque structural core is deliberately inset from the six appearance
+  // skins. The pre-review build put the top/bottom skins exactly on solid faces,
+  // so the depth buffer alternated between the photograph and flat metal while
+  // orbiting. These fixed separations preserve the published outer envelope.
+  box('Closed_Chassis_Body', mat.silver, [0,0,0], [D.bodyWidth-0.0008,0.0392,D.bodyDepth-0.0008], { category:'closed-shell', appearanceSkinClearanceMm:0.4 });
+  box('Top_Cover_Stamped_Panel', mat.silver, [0,0.02015,-0.006], [0.428,0.0005,0.498], { category:'top-cover', belowAppearanceSkin:true });
+  box('Bottom_Deck_Panel', mat.silver, [0,-0.02015,0], [D.bodyWidth-0.0008,0.0005,D.bodyDepth-0.0008], { category:'bottom-deck', bottomMode:'conservative-fallback', belowAppearanceSkin:true });
+  b.addNode('Texture_Front', plane('front',mat.frontTex), [0,0,D.frontMostZ-0.0008], [D.overallWidth,D.height,1], { face:'front', sourceLocked:true, layer:'appearance-skin' });
+  b.addNode('Texture_Rear', plane('rear',mat.rearTex), [0,0,D.rearMostZ+0.0008], [D.bodyWidth,D.height,1], { face:'rear', sourceLocked:true, layer:'appearance-skin' });
+  b.addNode('Texture_Right', plane('right',mat.rightTex), [D.bodyWidth/2,0,0], [1,D.height,D.bodyDepth], { face:'right', sourceLocked:true, independentlyGenerated:true, layer:'appearance-skin' });
+  b.addNode('Texture_Left', plane('left',mat.leftTex), [-D.bodyWidth/2,0,0], [1,D.height,D.bodyDepth], { face:'left', sourceLocked:true, independentlyGenerated:true, layer:'appearance-skin' });
+  b.addNode('Texture_Top', plane('top',mat.topTex), [0,D.height/2-0.0005,0], [D.bodyWidth,1,D.bodyDepth], { face:'top', sourceLocked:true, layer:'appearance-skin' });
+  b.addNode('Texture_Bottom', plane('bottom',mat.bottomTex), [0,-D.height/2+0.0004,0], [D.bodyWidth,1,D.bodyDepth], { face:'bottom', sourceLocked:true, productionMode:'GENERIC_BOTTOM_FALLBACK', layer:'appearance-skin' });
 
   // Front rack ears supply the 482 mm verified overall width.
   b.addNode('Front_Left_Rack_Ear', plane('front',mat.graphite), [-0.229,0,0.2889], [0.024,D.height,1], { category:'rack-ear', frontFacingOnly:true });
@@ -367,7 +373,7 @@ function buildVariant(textureDir, outputName, variant) {
   for (let col = 0; col < 4; col++) for (let row = 0; row < 3; row++) {
     box(`AC_PSU_Exhaust_${col+1}_${row+1}`, mat.black, [-0.205+col*0.010,-0.012+row*0.010,-0.2827], [0.0062,0.0062,0.0030], { category:'PSU-exhaust-cell' });
   }
-  box('AC_PSU_Cable_Retention_Strap', mat.graphite, [-0.215,-0.0044,-0.27935], [0.008,0.034,0.0096], { category:'PSU-cable-retention' });
+  box('AC_PSU_Cable_Retention_Strap', mat.graphite, [-0.215,-0.0042,-0.27935], [0.008,0.0336,0.0096], { category:'PSU-cable-retention', nonCoplanarWithPsuBody:true });
   b.addEmptyNode('Second_AC_PSU_ABSENT', { category:'configuration-lock', installed:false, reason:'PowerEdge R240 supports one fixed cabled non-redundant PSU only' });
 
   // Physical left and right side details are independent, asymmetric nodes.
@@ -377,9 +383,9 @@ function buildVariant(textureDir, outputName, variant) {
   leftDetails.forEach((item,index) => box(`Left_Side_Rail_Feature_${index+1}`, index === 4 ? mat.graphite : mat.black, [-0.21745,item[1],item[0]], [0.0008,0.005,item[2]], { category:'left-side-rail-feature' }));
 
   // Verified top service latch and rear ventilation band relief.
-  box('Top_Service_Latch', mat.graphite, [0,0.0209,0.105], [0.030,0.0010,0.068], { category:'top-cover-latch', visibleSurfaceAtTop:true });
+  box('Top_Service_Latch', mat.graphite, [0,0.0212,0.105], [0.030,0.0004,0.068], { category:'top-cover-latch', visibleSurfaceAtTop:true, appearanceSkinClearanceMm:0.3 });
   for (let i = 0; i < 18; i++) {
-    box(`Top_Rear_Vent_Cell_${String(i+1).padStart(2,'0')}`, mat.black, [-0.160+i*0.019,0.0209,-0.217], [0.011,0.0010,0.020], { category:'top-rear-vent-cell' });
+    box(`Top_Rear_Vent_Cell_${String(i+1).padStart(2,'0')}`, mat.black, [-0.160+i*0.019,0.02065,-0.217], [0.011,0.0002,0.020], { category:'top-rear-vent-depth-backing', belowSourceLockedPerforation:true });
   }
 
   // Four single-rotor cabled fans are source-verified. They remain below the
@@ -401,7 +407,7 @@ function buildVariant(textureDir, outputName, variant) {
     },
     coordinateConvention: '+X device right from front; +Y up; +Z front',
     bottomStatus: 'GENERIC_BOTTOM_FALLBACK',
-    faceTextureEmbedding: 'All six materials OPAQUE; six canonical transparent PNGs remain in ../views.',
+    faceTextureEmbedding: 'All six materials OPAQUE; card/core/relief layers have deterministic positive clearance; six canonical transparent PNGs remain in ../views.',
     textureVariant: variant,
     sourceManifest: '../source/identity-manifest.md',
     featureInventory: '../source/feature-inventory.csv',
