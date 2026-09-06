@@ -1,6 +1,8 @@
-# Cisco N9K-C9336C-FX2 独立建模会话入口
+# Cisco N9K-C9336C-FX2 资产与资料
 
-本次交付是**可独立执行的完整建模提示词、Dell经验总结和官方资料核验入口**。此目录尚未开始Cisco模型制作，没有把提示词或资料链接当成已生成模型。
+当前模型版本：[v001说明](v001/README.md) · [离线审阅](v001/REVIEW.html) · [Blender主文件](v001/model/CISCO-Nexus-N9K-C9336C-FX2.blend) · [GLB](v001/model/CISCO-Nexus-N9K-C9336C-FX2.glb)。资料、生成参考、阶段模型、真实桌面检查和QA证据均保留在v001。
+
+以下是原始准备阶段的**独立建模提示词、Dell经验总结和官方资料核验入口**，作为历史与复现资料保留。
 
 在新会话发送：
 
@@ -18,4 +20,4 @@
 - [Cisco官方事实与资料访问状态](SOURCE-SEED.md)
 - [资料入口机器可读索引](source-seed/index.json)
 
-型号规范PID为N9K-C9336C-FX2；目录按用户指定使用Cisco-N9KC9336C-FX2。后续模型放本目录的新版本子目录，保留本次提示词资料。当前.gitattributes已限定在本设备目录管理大型模型文件的Git LFS属性。
+型号规范PID为N9K-C9336C-FX2；目录按用户指定使用Cisco-N9KC9336C-FX2。后续修订请另建版本子目录，保留现有v001及提示词资料。当前.gitattributes已限定在本设备目录管理大型模型文件的Git LFS属性。

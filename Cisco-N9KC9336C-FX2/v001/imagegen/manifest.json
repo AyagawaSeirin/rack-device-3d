@@ -1,0 +1,1112 @@
+[
+  {
+    "id": "01-front-v1",
+    "prompt": "Use case: product-mockup. Asset: independent FRONT orthographic reference for a faithful editable 3D reconstruction of Cisco Nexus N9K-C9336C-FX2. Use the three attached real photos strictly as physical references. Image 1 is the rear/top of the same switch; image 2 is front/top with its THREE removed fan modules and TWO removed AC PSUs on the lid; image 3 is the exact left front brand, controls, empty QSFP28 cages and mounting ear. Generate ONE complete front elevation only, looking horizontally straight at the port face, camera on -Y, screen-right +X. Preserve precisely 18 columns with TWO vertically stacked empty QSFP28 ports in each column = exactly 36 dark open sockets; thin metal cages, central perforated separator bands, internal guide depth, no optics, no caps, no cables. Silver 1RU chassis, 439.42mm wide and 43.688mm high; matching left and right silver bent rack ears, each with THREE horizontal obround through-holes vertically stacked, opaque metal with visible hole walls and real empty background. At far left preserve the Cisco bridge mark, Cisco Nexus N9K-C9336C-FX2 label, BCN STS ENV indicators, 1-4 lane indicators and circular LS button. Port numbers odd above upper, even for lower, no invented extra ports. No USB or management ports on this face. All modules fully installed at rear, consistent blue port-side-exhaust fans NXA-FAN-65CFM-PE and two NXA-PAC-1100W-PE2 AC PSUs, hidden from this front view. Exclude merchant plaques and items placed on lid. White seamless background, soft neutral studio light, minimal shadow, high resolution engineering product photography, low distortion, full object with a modest margin. No collage, no dimensional labels, no artistic or toy stylization. This is an AI working reference, not evidence; preserve actual photographed structure rather than improving it.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-1.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-2.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-3.jpg"
+    ],
+    "output": "rejected/01-front-v1-19-columns.png",
+    "review": "REJECTED: 19 columns, 38 ports",
+    "selected": false,
+    "image_size": [
+      2172,
+      724
+    ],
+    "sha256": "a6a1eac63795b9c0b9668214389bd977c19ce39f78e4cc3d19c7c47a7bc3d7ae",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "sources/third_party/nwr-1.jpg",
+      "sources/third_party/nwr-2.jpg",
+      "sources/third_party/nwr-3.jpg"
+    ]
+  },
+  {
+    "id": "01-front-v2",
+    "prompt": "Use case: product-mockup. Asset: independent FRONT orthographic reference for a faithful editable 3D reconstruction of Cisco Nexus N9K-C9336C-FX2. Use the three attached real photos strictly as physical references. Image 1 is the rear/top of the same switch; image 2 is front/top with its THREE removed fan modules and TWO removed AC PSUs on the lid; image 3 is the exact left front brand, controls, empty QSFP28 cages and mounting ear. Generate ONE complete front elevation only, looking horizontally straight at the port face, camera on -Y, screen-right +X. Preserve precisely 18 columns with TWO vertically stacked empty QSFP28 ports in each column = exactly 36 dark open sockets; thin metal cages, central perforated separator bands, internal guide depth, no optics, no caps, no cables. Silver 1RU chassis, 439.42mm wide and 43.688mm high; matching left and right silver bent rack ears, each with THREE horizontal obround through-holes vertically stacked, opaque metal with visible hole walls and real empty background. At far left preserve the Cisco bridge mark, Cisco Nexus N9K-C9336C-FX2 label, BCN STS ENV indicators, 1-4 lane indicators and circular LS button. Port numbers odd above upper, even for lower, no invented extra ports. No USB or management ports on this face. All modules fully installed at rear, consistent blue port-side-exhaust fans NXA-FAN-65CFM-PE and two NXA-PAC-1100W-PE2 AC PSUs, hidden from this front view. Exclude merchant plaques and items placed on lid. White seamless background, soft neutral studio light, minimal shadow, high resolution engineering product photography, low distortion, full object with a modest margin. No collage, no dimensional labels, no artistic or toy stylization. This is an AI working reference, not evidence; preserve actual photographed structure rather than improving it. CORRECTION: The previous attempt incorrectly produced 19 paired columns. This must be exactly EIGHTEEN double-cage columns. Enumerate the 18 unique pairs once: (1,2),(3,4),(5,6),(7,8),(9,10),(11,12),(13,14),(15,16),(17,18),(19,20),(21,22),(23,24),(25,26),(27,28),(29,30),(31,32),(33,34),(35,36). Stop after that single last column. Widen each cage sufficiently to fill the span using only 18. Match the original front photograph. Oval ear holes must be horizontally elongated, width approximately 1.5 times height.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/abacus-1.webp",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-2.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-3.jpg"
+    ],
+    "output": "rejected/01-front-v2-17-columns.png",
+    "review": "REJECTED: 17 columns, 34 ports",
+    "selected": false,
+    "image_size": [
+      2203,
+      714
+    ],
+    "sha256": "19ed64020029fcbee7fbaecbfee806beb82a14759d6e68f9c686f27fce50f594",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "sources/third_party/abacus-1.webp",
+      "sources/third_party/nwr-2.jpg",
+      "sources/third_party/nwr-3.jpg"
+    ]
+  },
+  {
+    "id": "01-front-v3",
+    "prompt": "Edit the supplied REAL photo into one independent front elevation. Crop away the surroundings, bags and lid; correct only the perspective of the existing front panel so every vertical is vertical and horizontal is horizontal, against a clean white background. Preserve the actual photographed panel pixel content, brand, controls, BOTH ears and ALL EIGHTEEN double cages. There are 18 columns each with an upper and a lower socket: 36 ports total. Do not remove, invent, redraw or duplicate any columns. Final output is just the full silver Cisco N9K-C9336C-FX2 front face with ears in a straight orthographic photograph, no visible top, no environment or dealer branding. This is a faithful product photo rectification, not a switch redesign. Each ear has three horizontally elongated oval through-holes; preserve these and the metal thickness. Preserve unoccupied metal sockets. The sequence across the image is 1/2 3/4 5/6 7/8 9/10 11/12 13/14 15/16 17/18 19/20 21/22 23/24 25/26 27/28 29/30 31/32 33/34 35/36. 18 columns exactly. All 36 openings must remain.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/abacus-1.webp"
+    ],
+    "output": "outputs/01-front-v3.png",
+    "review": "18 columns/36 ports confirmed; small text and ear aspect wrong, pending local regeneration",
+    "selected": false,
+    "image_size": [
+      2143,
+      734
+    ],
+    "sha256": "4f76d5fc6ff897e236589f90398a430511b12b7bef994775eced7b6f7da72062",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "sources/third_party/abacus-1.webp"
+    ]
+  },
+  {
+    "id": "02-rear-v1",
+    "prompt": "Use case: product-mockup. Generate one strict orthographic REAR elevation of the exact Cisco N9K-C9336C-FX2 in reference image 1, using image 2 as corroboration. Photorealistic neutral studio white backdrop, full device unobstructed, view horizontal at half chassis height from +Y; screen-right is -X. Preserve exact photographed left-to-right order: one narrow AC PSU with black IEC C14 inlet silver U handle and blue latch, three wide fan modules with black recessed honeycomb intake grilles and dark grey trapezoidal pull handles and paired blue side release tabs, service panel, then second identical narrow AC PSU. Exactly THREE NXA-FAN-65CFM-PE modules (two rotors in depth per module, not 6 module faces). Exactly TWO NXA-PAC-1100W-PE2 PSUs, one at each extreme. Service panel immediately left of right PSU has upper console RJ45, lower management RJ45, one management SFP cage at bottom beside it, one vertically oriented USB-A at far right, two tiny indicator windows below. Keep these real connector shapes. No extra ports. No cables connected; only short PSU cable retainers. Silver sheet metal chassis 439.42mm across, 43.688mm height, rear handles protrude toward camera. No extra rack ears at rear; photographed ears are at the far port end and invisible here. No lid area in this straight elevation. Keep factory module marking where visible, never invent serial text. No merchant logos, no montage, no black rectangle imitation of grilles, do not rearrange components. Working AI reference only; source photos remain geometry authority.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-1.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/abacus-3.webp"
+    ],
+    "output": "outputs/02-rear-v1.png",
+    "review": "SELECTED for module arrangement and connector layout; three fans two PSUs, consistent blue. AI microprint never used.",
+    "selected": true,
+    "image_size": [
+      1905,
+      826
+    ],
+    "sha256": "458081ed26d9e19291b965b93fcdf1b18922ff48838a496b8856e7ea3d92f8eb",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "sources/third_party/nwr-1.jpg",
+      "sources/third_party/abacus-3.webp"
+    ]
+  },
+  {
+    "id": "03-left",
+    "prompt": "Use case: product-mockup. One independent photorealistic engineering working reference of Cisco Nexus N9K-C9336C-FX2, based on the attached REAL device photographs and official schematic. Exact locked assembly: silver 1RU body W439.42mm H43.688mm, overall depth INCLUDING REAR HANDLES 622.30mm, approximate bare shell depth 590mm. Port face is -Y, service face +Y, front-view right +X. Front: exactly 18 columns x 2 empty QSFP28 sockets = 36, no optics or caps, thin metal cages and perforated central separator. Rear left-to-right when facing rear: PSU1, THREE wide black honeycomb fan modules with dark trapezoidal pull handles and paired blue release tabs, small management panel, PSU2. Two matching AC NXA-PAC-1100W-PE2, blue exhaust; three NXA-FAN-65CFM-PE (two counterrotating rotors in depth in each). Rear service panel upper console RJ45, lower management RJ45, one management SFP and vertical USB-A. Traditional N3K-C3064-ACC-KIT ears at PORT END: each opaque zinc-steel front flange has THREE horizontally obround through-holes stacked vertically, side arm fixed with four screws. No additional round holes between the three rack slots. Sidewall mostly plain, mounting screw groups and small grounding pair near ends; no invented extensive side ventilation. Lid: broad perforated band near port end, grey/yellow factory label at front-left as seen from port face, small fasteners and restrained stamped seams near rear. No dealer plaques, no labels added for appearance, no loose parts on lid, no external rails, no attached cables. Unpowered. Soft neutral studio lighting, white background, no strong shadows, sharp hole walls and folded sheet metal, no toy styling. Any unseen construction is a conservative working hypothesis, never source evidence. No invented manufacturer dimensions or legible fake serials. Strict LEFT orthographic view from -X, camera horizontal, front port end on image LEFT and rear PSU handles on RIGHT. Entire long low sidewall visible with front mounting ear side arm. No visible front or rear face beyond edge profile. Not a horizontally mirrored right view.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-1.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-2.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-3.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/serverlama-angledside.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/official/overview-501591.jpg"
+    ],
+    "review": "REJECTED: elevation not orthographic; side bracket and label errors",
+    "output": "outputs/03-left-v1.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-d2f1ae11-12bc-4867-ad63-8ec9be297978.png",
+    "selected": false,
+    "image_size": [
+      1774,
+      887
+    ],
+    "sha256": "000ba406f69daa7c7b6c14c4d3e8c309ab8fe6feb231f35fe32adeb17e277e35",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "sources/third_party/nwr-1.jpg",
+      "sources/third_party/nwr-2.jpg",
+      "sources/third_party/nwr-3.jpg",
+      "sources/third_party/serverlama-angledside.jpg",
+      "sources/official/overview-501591.jpg"
+    ]
+  },
+  {
+    "id": "04-right",
+    "prompt": "Use case: product-mockup. One independent photorealistic engineering working reference of Cisco Nexus N9K-C9336C-FX2, based on the attached REAL device photographs and official schematic. Exact locked assembly: silver 1RU body W439.42mm H43.688mm, overall depth INCLUDING REAR HANDLES 622.30mm, approximate bare shell depth 590mm. Port face is -Y, service face +Y, front-view right +X. Front: exactly 18 columns x 2 empty QSFP28 sockets = 36, no optics or caps, thin metal cages and perforated central separator. Rear left-to-right when facing rear: PSU1, THREE wide black honeycomb fan modules with dark trapezoidal pull handles and paired blue release tabs, small management panel, PSU2. Two matching AC NXA-PAC-1100W-PE2, blue exhaust; three NXA-FAN-65CFM-PE (two counterrotating rotors in depth in each). Rear service panel upper console RJ45, lower management RJ45, one management SFP and vertical USB-A. Traditional N3K-C3064-ACC-KIT ears at PORT END: each opaque zinc-steel front flange has THREE horizontally obround through-holes stacked vertically, side arm fixed with four screws. No additional round holes between the three rack slots. Sidewall mostly plain, mounting screw groups and small grounding pair near ends; no invented extensive side ventilation. Lid: broad perforated band near port end, grey/yellow factory label at front-left as seen from port face, small fasteners and restrained stamped seams near rear. No dealer plaques, no labels added for appearance, no loose parts on lid, no external rails, no attached cables. Unpowered. Soft neutral studio lighting, white background, no strong shadows, sharp hole walls and folded sheet metal, no toy styling. Any unseen construction is a conservative working hypothesis, never source evidence. No invented manufacturer dimensions or legible fake serials. Strict RIGHT orthographic view from +X, camera horizontal, front port end on image RIGHT and rear PSU handles on LEFT. Show the right-side six mounting screw group positions near ends, small grounding lug provisions as official right-side figure. Entire sidewall and front ear side arm visible. Do not invent grille arrays. Not a mirrored left image.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-1.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-2.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-3.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/serverlama-angledside.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/official/overview-501591.jpg"
+    ],
+    "review": "REJECTED: elevation not orthographic; side bracket and label errors",
+    "output": "outputs/04-right-v1.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-a2a7ed90-f18a-437d-823d-f5fc0ed0d614.png",
+    "selected": false,
+    "image_size": [
+      1835,
+      857
+    ],
+    "sha256": "27857a59d8b138f41988a4da993f229af45c08540d66aa85516983aba0a50792",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "sources/third_party/nwr-1.jpg",
+      "sources/third_party/nwr-2.jpg",
+      "sources/third_party/nwr-3.jpg",
+      "sources/third_party/serverlama-angledside.jpg",
+      "sources/official/overview-501591.jpg"
+    ]
+  },
+  {
+    "id": "05-top",
+    "prompt": "Use case: product-mockup. One independent photorealistic engineering working reference of Cisco Nexus N9K-C9336C-FX2, based on the attached REAL device photographs and official schematic. Exact locked assembly: silver 1RU body W439.42mm H43.688mm, overall depth INCLUDING REAR HANDLES 622.30mm, approximate bare shell depth 590mm. Port face is -Y, service face +Y, front-view right +X. Front: exactly 18 columns x 2 empty QSFP28 sockets = 36, no optics or caps, thin metal cages and perforated central separator. Rear left-to-right when facing rear: PSU1, THREE wide black honeycomb fan modules with dark trapezoidal pull handles and paired blue release tabs, small management panel, PSU2. Two matching AC NXA-PAC-1100W-PE2, blue exhaust; three NXA-FAN-65CFM-PE (two counterrotating rotors in depth in each). Rear service panel upper console RJ45, lower management RJ45, one management SFP and vertical USB-A. Traditional N3K-C3064-ACC-KIT ears at PORT END: each opaque zinc-steel front flange has THREE horizontally obround through-holes stacked vertically, side arm fixed with four screws. No additional round holes between the three rack slots. Sidewall mostly plain, mounting screw groups and small grounding pair near ends; no invented extensive side ventilation. Lid: broad perforated band near port end, grey/yellow factory label at front-left as seen from port face, small fasteners and restrained stamped seams near rear. No dealer plaques, no labels added for appearance, no loose parts on lid, no external rails, no attached cables. Unpowered. Soft neutral studio lighting, white background, no strong shadows, sharp hole walls and folded sheet metal, no toy styling. Any unseen construction is a conservative working hypothesis, never source evidence. No invented manufacturer dimensions or legible fake serials. Strict TOP orthographic plan from +Z looking down. Image-right +X and image-top +Y (REAR at TOP, PORT END at BOTTOM). Complete body fills frame with correct depth/width ratio about 1.4, three installed fan handles/two PSU handles at top; ears at bottom. Long vent band across width near bottom; factory yellow/grey label at lower-left. Lid is unobstructed. No front/rear faces visible in this plan. Retain subtle rear stamped seams and screws. No dealer stock labels.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-1.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-2.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/serverlama-angledtop.jpg"
+    ],
+    "review": "SELECTED only for lid layout; microprint excluded; mild perspective noted",
+    "output": "outputs/05-top-v1.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-b3401e60-23db-44a5-8991-13e7d7f264b3.png",
+    "selected": true,
+    "image_size": [
+      1049,
+      1499
+    ],
+    "sha256": "ff61188be32540dbb02af55a76694b993e27d7488c53329a2974d3d14569bf23",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "sources/third_party/nwr-1.jpg",
+      "sources/third_party/nwr-2.jpg",
+      "sources/third_party/serverlama-angledtop.jpg"
+    ]
+  },
+  {
+    "id": "03-left-v2",
+    "prompt": "Correct this image to a STRICT LEVEL LEFT SIDE ORTHOGRAPHIC elevation. Camera exactly horizontal at middle of the 43.688mm-high body, parallel projection from the left. Thus ZERO TOP SURFACE IS VISIBLE, absolutely no lid or top labels visible. Long body depth 590mm, height 43.688mm: side silhouette is a very thin horizontal rectangle, approximately 13.5 times wider than tall. Port end on image-left, rear handles on image-right. Ear FRONT flange is perpendicular to the side, so it appears EDGE-ON; its three rack slots are NOT seen as three face-on holes from this exact side. Preserve main side arm and four attachment screws near front, small six-hole bracket group near rear, subtle seams. No additional holes or designs. White background. It is Cisco N9K-C9336C-FX2, matching the second reference official side geometry. One view only.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/03-left-v1.png",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/official/overview-501591.jpg"
+    ],
+    "output": "outputs/04-right-coordinate-reviewed.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-c4e61e77-9257-48c5-8573-ab71ae6e12a4.png",
+    "review": "SELECTED for side silhouette/material; hole coordinates estimated from official diagram, not generated pixels; coordinate review corrected nominal left/right label; independent image bytes unchanged, no mirroring.",
+    "selected": true,
+    "image_size": [
+      2172,
+      724
+    ],
+    "sha256": "4326ff196c95e002c20cd77f00adea1cdcf6d1e909ad814adf287247eb1db4c9",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "imagegen/outputs/03-left-v1.png",
+      "sources/official/overview-501591.jpg"
+    ],
+    "original_nominal_output": "outputs/03-left-v2.png",
+    "actual_view": "RIGHT (+X), front end at image left"
+  },
+  {
+    "id": "04-right-v2",
+    "prompt": "Correct this image to a STRICT LEVEL RIGHT SIDE ORTHOGRAPHIC elevation. Camera exactly horizontal at middle of the 43.688mm-high body, parallel projection from the right. Thus ZERO TOP SURFACE IS VISIBLE, absolutely no lid or top labels visible. Long body depth 590mm, height 43.688mm: side silhouette is a very thin horizontal rectangle, approximately 13.5 times wider than tall. Port end on image-right, rear handles on image-left. Ear FRONT flange is perpendicular to the side, so it appears EDGE-ON; its three rack slots are NOT seen as three face-on holes. Preserve main side arm with four attachment screws near front and six-hole bracket group near rear, small grounding pair and subtle seams. No additional holes or designs. White background. Exact Cisco N9K-C9336C-FX2. One view only.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/04-right-v1.png",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/serverlama-angledside.jpg"
+    ],
+    "output": "outputs/04-right-v2.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-5b9013c9-a5ad-4c34-ab31-ae120cd56506.png",
+    "review": "REJECTED: three screws on side arm instead of four",
+    "selected": false,
+    "image_size": [
+      2056,
+      765
+    ],
+    "sha256": "d2cb576dd1fcbffba9d3fdc0f7a6b2da049029c44a3d0438509e3c4fc80d10b6",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "imagegen/outputs/04-right-v1.png",
+      "sources/third_party/serverlama-angledside.jpg"
+    ]
+  },
+  {
+    "id": "06-bottom-INFERRED",
+    "prompt": "Use case: product-mockup. One independent photorealistic engineering working reference of Cisco Nexus N9K-C9336C-FX2, based on the attached REAL device photographs and official schematic. Exact locked assembly: silver 1RU body W439.42mm H43.688mm, overall depth INCLUDING REAR HANDLES 622.30mm, approximate bare shell depth 590mm. Port face is -Y, service face +Y, front-view right +X. Front: exactly 18 columns x 2 empty QSFP28 sockets = 36, no optics or caps, thin metal cages and perforated central separator. Rear left-to-right when facing rear: PSU1, THREE wide black honeycomb fan modules with dark trapezoidal pull handles and paired blue release tabs, small management panel, PSU2. Two matching AC NXA-PAC-1100W-PE2, blue exhaust; three NXA-FAN-65CFM-PE (two counterrotating rotors in depth in each). Rear service panel upper console RJ45, lower management RJ45, one management SFP and vertical USB-A. Traditional N3K-C3064-ACC-KIT ears at PORT END: each opaque zinc-steel front flange has THREE horizontally obround through-holes stacked vertically, side arm fixed with four screws. No additional round holes between the three rack slots. Sidewall mostly plain, mounting screw groups and small grounding pair near ends; no invented extensive side ventilation. Lid: broad perforated band near port end, grey/yellow factory label at front-left as seen from port face, small fasteners and restrained stamped seams near rear. No dealer plaques, no labels added for appearance, no loose parts on lid, no external rails, no attached cables. Unpowered. Soft neutral studio lighting, white background, no strong shadows, sharp hole walls and folded sheet metal, no toy styling. Any unseen construction is a conservative working hypothesis, never source evidence. No invented manufacturer dimensions or legible fake serials. Strict BOTTOM orthographic from -Z, image-right -X and image-top +Y. Full underside is a conservative INFERRED sheet-metal bottom, plain closed silver folded sheet with few countersunk assembly fasteners and slight perimeter seam, no invented circuitry or ventilation or huge logo. Rear handles at top, front ears at bottom. Mark small caption outside object 'INFERRED BOTTOM — NOT PHOTOGRAPHIC EVIDENCE'. Do not put warning caption on metal.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-1.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-2.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-3.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/serverlama-angledside.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/official/overview-501591.jpg"
+    ],
+    "review": "REJECTED: impossible simultaneous front/rear face visibility in bottom plan",
+    "output": "outputs/06-bottom-INFERRED-v1.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-acd92db5-149b-4538-94ac-8ff77f72dac9.png",
+    "selected": false,
+    "image_size": [
+      1122,
+      1402
+    ],
+    "sha256": "3861796cdec45253e3631cc3f745a9d3c70055234ba8a4eb4d2a79b8e3be8ae7",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "sources/third_party/nwr-1.jpg",
+      "sources/third_party/nwr-2.jpg",
+      "sources/third_party/nwr-3.jpg",
+      "sources/third_party/serverlama-angledside.jpg",
+      "sources/official/overview-501591.jpg"
+    ]
+  },
+  {
+    "id": "01-front-v4",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/01-front-v3.png",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-3.jpg"
+    ],
+    "output": "outputs/01-front-v4.png",
+    "prompt": "Edit ONLY the TWO end mounting ears of image1. Preserve all 18 double port columns and all 36 sockets at exactly the same positions. Correct the THREE rack holes in each ear from circles to HORIZONTALLY ELONGATED OBROUND slots matching the real close-up in image2: width/height 1.5, horizontal straight middle edges and semicircular ends. No intermediate round holes. Do not change front panel, port count, layout or camera. White background, full isolated front elevation. Image2 is just the hole-shape reference; do not copy its camera or crop. Keep the 18 columns absolutely unchanged.",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-ce4e37a5-82e9-4c67-a9ee-22be54fe64ba.png",
+    "review": "SELECTED for structural working reference; all generated text excluded from model; bottom inferred where named",
+    "selected": true,
+    "image_size": [
+      2137,
+      736
+    ],
+    "sha256": "ea897f655d98802a6352ee5fe1e01f29ffad0ceabc5acc1c0d0f541f912956c8",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "imagegen/outputs/01-front-v3.png",
+      "sources/third_party/nwr-3.jpg"
+    ]
+  },
+  {
+    "id": "04-right-v3",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/04-right-v2.png"
+    ],
+    "output": "outputs/03-left-coordinate-reviewed.png",
+    "prompt": "Edit ONLY the small mounting bracket side arm at the extreme RIGHT end of this strict side-elevation image. Replace its THREE vertically stacked screws with FOUR small countersunk screws in a 2 by 2 rectangular pattern (two columns and two rows) on a slightly wider short side arm. Preserve the edge-on flange at the far right. Preserve all other geometry, the flat thin side silhouette, zero visible top surface, the six main sidewall holes and rear handle at left. No extra holes, no labels, no perspective.",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-47f5ed7b-fd2b-446a-bcb1-e493cf9bf872.png",
+    "review": "SELECTED for structural working reference; all generated text excluded from model; bottom inferred where named; coordinate review corrected nominal left/right label; independent image bytes unchanged, no mirroring.",
+    "selected": true,
+    "image_size": [
+      2062,
+      763
+    ],
+    "sha256": "9ffc6a28502880a97409b467fcdeb4677e17cc9103de04a4f166fbdfa37d8e2d",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "imagegen/outputs/04-right-v2.png"
+    ],
+    "original_nominal_output": "outputs/04-right-v3.png",
+    "actual_view": "LEFT (-X), front end at image right"
+  },
+  {
+    "id": "06-bottom-INFERRED-v2",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/06-bottom-INFERRED-v1.png"
+    ],
+    "output": "outputs/06-bottom-INFERRED-v2.png",
+    "prompt": "Correct this inferred underside reference to a physically possible STRICT ORTHOGRAPHIC BOTTOM PLAN. Keep the plain silver underside rectangle and conservative screws. Camera directly below -Z, image-top +Y, image-right -X. The front and rear VERTICAL FACES MUST NOT be visible: remove all face-on port openings at the bottom edge and all face-on grilles/management at the top edge. Only narrow edge profiles and protruding handle undersides may project beyond the sheet. The ear front flanges are also EDGE-ON in this plan. No top lid perforation or labels. Preserve caption outside 'INFERRED BOTTOM — NOT PHOTOGRAPHIC EVIDENCE'. One view.",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-192fee82-95e2-4843-aa95-347273b3b927.png",
+    "review": "SELECTED for structural working reference; all generated text excluded from model; bottom inferred where named",
+    "selected": true,
+    "image_size": [
+      1122,
+      1402
+    ],
+    "sha256": "427dc2a64e4cb5b4972893cf7baa7f77b348b744e3a9f5609ac7504afdfb0811",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "imagegen/outputs/06-bottom-INFERRED-v1.png"
+    ]
+  },
+  {
+    "id": "07-front-left",
+    "prompt": "Use case: product-mockup. One independent photorealistic engineering working reference of Cisco Nexus N9K-C9336C-FX2, based on the attached REAL device photographs and official schematic. Exact locked assembly: silver 1RU body W439.42mm H43.688mm, overall depth INCLUDING REAR HANDLES 622.30mm, approximate bare shell depth 590mm. Port face is -Y, service face +Y, front-view right +X. Front: exactly 18 columns x 2 empty QSFP28 sockets = 36, no optics or caps, thin metal cages and perforated central separator. Rear left-to-right when facing rear: PSU1, THREE wide black honeycomb fan modules with dark trapezoidal pull handles and paired blue release tabs, small management panel, PSU2. Two matching AC NXA-PAC-1100W-PE2, blue exhaust; three NXA-FAN-65CFM-PE (two counterrotating rotors in depth in each). Rear service panel upper console RJ45, lower management RJ45, one management SFP and vertical USB-A. Traditional N3K-C3064-ACC-KIT ears at PORT END: each opaque zinc-steel front flange has THREE horizontally obround through-holes stacked vertically, side arm fixed with four screws. No additional round holes between the three rack slots. Sidewall mostly plain, mounting screw groups and small grounding pair near ends; no invented extensive side ventilation. Lid: broad perforated band near port end, grey/yellow factory label at front-left as seen from port face, small fasteners and restrained stamped seams near rear. No dealer plaques, no labels added for appearance, no loose parts on lid, no external rails, no attached cables. Unpowered. Soft neutral studio lighting, white background, no strong shadows, sharp hole walls and folded sheet metal, no toy styling. Any unseen construction is a conservative working hypothesis, never source evidence. No invented manufacturer dimensions or legible fake serials. FRONT LEFT oblique, camera (-X,-Y,+Z) at modest 25-degree elevation. Complete assembled body, port face and LEFT side and lid all visible. 18 double cages exactly, all visible. Realistic full-depth low 1RU proportions. Do not mirror text.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-1.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-2.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-3.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/serverlama-angledside.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/official/overview-501591.jpg"
+    ],
+    "review": "REJECTED: 16 columns and alternative five-hole ears",
+    "output": "outputs/07-front-left-v1.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-8500592d-9fcf-447a-8c84-bf3fc1ea9de5.png",
+    "selected": false,
+    "image_size": [
+      1536,
+      1024
+    ],
+    "sha256": "f13c9e5495d61f4d5bac31637f05945e575bd5c17d8a58d764a3e2e726c398de",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "sources/third_party/nwr-1.jpg",
+      "sources/third_party/nwr-2.jpg",
+      "sources/third_party/nwr-3.jpg",
+      "sources/third_party/serverlama-angledside.jpg",
+      "sources/official/overview-501591.jpg"
+    ]
+  },
+  {
+    "id": "08-front-right",
+    "prompt": "Use case: product-mockup. One independent photorealistic engineering working reference of Cisco Nexus N9K-C9336C-FX2, based on the attached REAL device photographs and official schematic. Exact locked assembly: silver 1RU body W439.42mm H43.688mm, overall depth INCLUDING REAR HANDLES 622.30mm, approximate bare shell depth 590mm. Port face is -Y, service face +Y, front-view right +X. Front: exactly 18 columns x 2 empty QSFP28 sockets = 36, no optics or caps, thin metal cages and perforated central separator. Rear left-to-right when facing rear: PSU1, THREE wide black honeycomb fan modules with dark trapezoidal pull handles and paired blue release tabs, small management panel, PSU2. Two matching AC NXA-PAC-1100W-PE2, blue exhaust; three NXA-FAN-65CFM-PE (two counterrotating rotors in depth in each). Rear service panel upper console RJ45, lower management RJ45, one management SFP and vertical USB-A. Traditional N3K-C3064-ACC-KIT ears at PORT END: each opaque zinc-steel front flange has THREE horizontally obround through-holes stacked vertically, side arm fixed with four screws. No additional round holes between the three rack slots. Sidewall mostly plain, mounting screw groups and small grounding pair near ends; no invented extensive side ventilation. Lid: broad perforated band near port end, grey/yellow factory label at front-left as seen from port face, small fasteners and restrained stamped seams near rear. No dealer plaques, no labels added for appearance, no loose parts on lid, no external rails, no attached cables. Unpowered. Soft neutral studio lighting, white background, no strong shadows, sharp hole walls and folded sheet metal, no toy styling. Any unseen construction is a conservative working hypothesis, never source evidence. No invented manufacturer dimensions or legible fake serials. FRONT RIGHT oblique, camera (+X,-Y,+Z) at 25-degree elevation. Complete assembled body, port face and RIGHT side and lid visible. Exactly 18 double cages visible, all 36 sockets, no extra. Genuine port-end ears.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-1.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-2.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-3.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/serverlama-angledside.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/official/overview-501591.jpg"
+    ],
+    "review": "REJECTED: wrong side shown, lid label too far rear",
+    "output": "outputs/08-front-right-v1.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-0d1bf5ca-f1bb-4b81-a3bd-53ad331e0269.png",
+    "selected": false,
+    "image_size": [
+      1536,
+      1024
+    ],
+    "sha256": "b4fb2a37a6b0938d1db6dca7a2224174d4ab82b0d33d93789b53b6636901f67a",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "sources/third_party/nwr-1.jpg",
+      "sources/third_party/nwr-2.jpg",
+      "sources/third_party/nwr-3.jpg",
+      "sources/third_party/serverlama-angledside.jpg",
+      "sources/official/overview-501591.jpg"
+    ]
+  },
+  {
+    "id": "09-rear-left",
+    "prompt": "Use case: product-mockup. One independent photorealistic engineering working reference of Cisco Nexus N9K-C9336C-FX2, based on the attached REAL device photographs and official schematic. Exact locked assembly: silver 1RU body W439.42mm H43.688mm, overall depth INCLUDING REAR HANDLES 622.30mm, approximate bare shell depth 590mm. Port face is -Y, service face +Y, front-view right +X. Front: exactly 18 columns x 2 empty QSFP28 sockets = 36, no optics or caps, thin metal cages and perforated central separator. Rear left-to-right when facing rear: PSU1, THREE wide black honeycomb fan modules with dark trapezoidal pull handles and paired blue release tabs, small management panel, PSU2. Two matching AC NXA-PAC-1100W-PE2, blue exhaust; three NXA-FAN-65CFM-PE (two counterrotating rotors in depth in each). Rear service panel upper console RJ45, lower management RJ45, one management SFP and vertical USB-A. Traditional N3K-C3064-ACC-KIT ears at PORT END: each opaque zinc-steel front flange has THREE horizontally obround through-holes stacked vertically, side arm fixed with four screws. No additional round holes between the three rack slots. Sidewall mostly plain, mounting screw groups and small grounding pair near ends; no invented extensive side ventilation. Lid: broad perforated band near port end, grey/yellow factory label at front-left as seen from port face, small fasteners and restrained stamped seams near rear. No dealer plaques, no labels added for appearance, no loose parts on lid, no external rails, no attached cables. Unpowered. Soft neutral studio lighting, white background, no strong shadows, sharp hole walls and folded sheet metal, no toy styling. Any unseen construction is a conservative working hypothesis, never source evidence. No invented manufacturer dimensions or legible fake serials. REAR LEFT oblique, camera (-X,+Y,+Z) at 25-degree elevation. Show service face and physical LEFT side and lid; management block remains between third fan and PSU2 on rear-view right. Front ears far end. Exactly three fan trays and two end PSUs.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-1.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-2.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-3.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/serverlama-angledside.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/official/overview-501591.jpg"
+    ],
+    "review": "REJECTED: invented rear lid vent, label wrong end, one PSU handle missing",
+    "output": "outputs/09-rear-left-v1.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-25278b15-d9ee-403c-962e-63d67acc6a9b.png",
+    "selected": false,
+    "image_size": [
+      1536,
+      1024
+    ],
+    "sha256": "4f91b6fed296e3b4a5583bf215073014e1132e2292e6ae5da1733be0f17966fe",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "sources/third_party/nwr-1.jpg",
+      "sources/third_party/nwr-2.jpg",
+      "sources/third_party/nwr-3.jpg",
+      "sources/third_party/serverlama-angledside.jpg",
+      "sources/official/overview-501591.jpg"
+    ]
+  },
+  {
+    "id": "10-rear-right",
+    "prompt": "Use case: product-mockup. One independent photorealistic engineering working reference of Cisco Nexus N9K-C9336C-FX2, based on the attached REAL device photographs and official schematic. Exact locked assembly: silver 1RU body W439.42mm H43.688mm, overall depth INCLUDING REAR HANDLES 622.30mm, approximate bare shell depth 590mm. Port face is -Y, service face +Y, front-view right +X. Front: exactly 18 columns x 2 empty QSFP28 sockets = 36, no optics or caps, thin metal cages and perforated central separator. Rear left-to-right when facing rear: PSU1, THREE wide black honeycomb fan modules with dark trapezoidal pull handles and paired blue release tabs, small management panel, PSU2. Two matching AC NXA-PAC-1100W-PE2, blue exhaust; three NXA-FAN-65CFM-PE (two counterrotating rotors in depth in each). Rear service panel upper console RJ45, lower management RJ45, one management SFP and vertical USB-A. Traditional N3K-C3064-ACC-KIT ears at PORT END: each opaque zinc-steel front flange has THREE horizontally obround through-holes stacked vertically, side arm fixed with four screws. No additional round holes between the three rack slots. Sidewall mostly plain, mounting screw groups and small grounding pair near ends; no invented extensive side ventilation. Lid: broad perforated band near port end, grey/yellow factory label at front-left as seen from port face, small fasteners and restrained stamped seams near rear. No dealer plaques, no labels added for appearance, no loose parts on lid, no external rails, no attached cables. Unpowered. Soft neutral studio lighting, white background, no strong shadows, sharp hole walls and folded sheet metal, no toy styling. Any unseen construction is a conservative working hypothesis, never source evidence. No invented manufacturer dimensions or legible fake serials. REAR RIGHT oblique, camera (+X,+Y,+Z) at 25-degree elevation. Show service face and physical RIGHT side and lid, all three fan trays and both PSUs. Management block just left of right PSU as viewed from rear. No front ports visible.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-1.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-2.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-3.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/serverlama-angledside.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/official/overview-501591.jpg"
+    ],
+    "review": "REJECTED: wrong side shown; invented rear lid vent and label wrong end",
+    "output": "outputs/10-rear-right-v1.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-eb74b731-a4c8-41f4-97af-82da50a5e611.png",
+    "selected": false,
+    "image_size": [
+      1536,
+      1024
+    ],
+    "sha256": "59d688c7033851e3345857d6be480b1bac3ff16629b79a5550e385058683d578",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "sources/third_party/nwr-1.jpg",
+      "sources/third_party/nwr-2.jpg",
+      "sources/third_party/nwr-3.jpg",
+      "sources/third_party/serverlama-angledside.jpg",
+      "sources/official/overview-501591.jpg"
+    ]
+  },
+  {
+    "id": "07-front-left-v2",
+    "prompt": "Edit the first supplied switch image. It already has exactly 18 paired columns = 36 ports; keep every port unchanged. Keep its FRONT LEFT camera and full body framing. Correct ONLY: (1) MOVE grey/yellow lid label from the far rear-left corner to the NEAR FRONT-LEFT region of the lid, immediately behind the near-edge perforation strip beside the left mounting ear. See real image2 for actual placement. Remove original far label leaving plain silver. (2) Each front ear's three holes must be horizontal obround slots, aspect 1.5, not round. Do not add any holes or parts. Neutral silver realistic industrial product. Preserve exactly 18 port columns, four side bracket screws, front labels orientation. No other changes.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/08-front-right-v1.png",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-2.jpg"
+    ],
+    "output": "outputs/07-front-left-v2.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-f0d6f7bf-96cc-4892-8fcb-623ceeef8d40.png",
+    "review": "REJECTED: middle ear slots missing",
+    "selected": false,
+    "image_size": [
+      1536,
+      1024
+    ],
+    "sha256": "fd740efc9252fe8263ed4fbeb7d0b3f585f9b00f9f46592783df9f9516a24471",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "imagegen/outputs/08-front-right-v1.png",
+      "sources/third_party/nwr-2.jpg"
+    ]
+  },
+  {
+    "id": "08-front-right-v2",
+    "prompt": "Create a faithful FRONT RIGHT three-quarter product photo of this exact Cisco N9K-C9336C-FX2. Use image1 as the CAMERA direction and body/port geometry reference: visible right side extends toward UPPER-RIGHT of picture. Image2 is the exact front panel with 18 paired columns. Preserve all 18 double cages, 36 empty sockets, don't change count. Image3 supplies the traditional LEFT and RIGHT ear shapes: three horizontal obround slots each, install the two ears at the near PORT end. Full thin 1RU deep silver body, width439.42 depth622.3 incl rear handles height43.688mm. Keep broad top perforation ONLY at port end, grey/yellow label on lid near PORT END at its left. Entire device visible, medium 25deg elevation, soft light white background. Opposite viewpoint to front-left: long RIGHT side clearly on screen-right. No loose modules or dealer plaques. Exactly eighteen doubled cage columns.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/serverlama-angledside.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/01-front-v4.png",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-3.jpg"
+    ],
+    "output": "outputs/08-front-right-v2.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-e9de6502-9b70-419e-aaba-cad274004d82.png",
+    "review": "REJECTED: 17 columns and right ear missing",
+    "selected": false,
+    "image_size": [
+      1536,
+      1024
+    ],
+    "sha256": "2c9d4531d8100faf0c6d1689c2e6108f1de7f28879683dc74ff6d9f429e77ee4",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "sources/third_party/serverlama-angledside.jpg",
+      "imagegen/outputs/01-front-v4.png",
+      "sources/third_party/nwr-3.jpg"
+    ]
+  },
+  {
+    "id": "09-rear-left-v2",
+    "prompt": "Edit only the LID of image1; keep the rear face, both PSUs, all three fans, management and camera exactly unchanged. Correct lid according to actual photo2: remove the invented perforation band next to the NEAR REAR/service edge; instead the ONLY top ventilation band belongs at the FAR PORT edge next to distant mounting ears. Move grey/yellow label from near left to FAR RIGHT of picture on lid just inboard of FAR vent strip. Correct label orientation using real rear photo: when viewed from rear it is rotated 180deg compared with a front-view label. Main rear lid should have just subtle long narrow pressed grooves and countersunk screws, not perforation. Do not alter counts, handles, blue tabs, proportions or lighting.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/10-rear-right-v1.png",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-1.jpg"
+    ],
+    "output": "outputs/09-rear-left-v2.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-933a4ce7-f219-4efc-aef4-178f063d89d2.png",
+    "review": "SELECTED: three fans two PSUs, corrected lid/label; microprint excluded",
+    "selected": true,
+    "image_size": [
+      1536,
+      1024
+    ],
+    "sha256": "43f025139879fe31e8318710dcec0004b198a9600a85015d580a1f7fd4487e41",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "imagegen/outputs/10-rear-right-v1.png",
+      "sources/third_party/nwr-1.jpg"
+    ]
+  },
+  {
+    "id": "10-rear-right-v2",
+    "prompt": "Photorealistic rear THREE-QUARTER view of the exact switch in supplied photo. Camera must move to the LEFT OF THIS REAR FACE, so the visible long side panel is on the LEFT of the image and extends toward UPPER-LEFT. Rear face near edge angles back upward toward screen-right. Do NOT horizontally mirror rear components: left-to-right on rear remains PSU, three wide fan trays, management panel, PSU. Exactly THREE blue-tabbed dark-grey-handled fan trays and TWO silver-U-handled AC PSUs; small management just left of right PSU, with two stacked RJ45, single SFP and vertical USB. The top lid has NO NEAR-REAR perforation. ONLY far PORT edge has perforated band and distant two traditional three-obround-slot ears. Factory grey/yellow label belongs at FAR RIGHT on lid near PORT edge, not near service edge. Full long low 1RU chassis, high fidelity neutral silver metal, white studio. No new ports or parts. Preserve visible factory design. View physical RIGHT side, seen on image LEFT when viewing from rear.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-1.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/02-rear-v1.png"
+    ],
+    "output": "outputs/10-rear-right-v2.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-1d095432-004a-4088-ade7-86857a56b357.png",
+    "review": "REJECTED: far-ear middle slot missing",
+    "selected": false,
+    "image_size": [
+      1448,
+      1086
+    ],
+    "sha256": "cd1f231c71a89ed7c30472c32d6eb91f3c7e5ba962df53d2d92f6883163039af",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "sources/third_party/nwr-1.jpg",
+      "imagegen/outputs/02-rear-v1.png"
+    ]
+  },
+  {
+    "id": "11-high-oblique",
+    "prompt": "Create one high FRONT RIGHT oblique product photograph of the exact switch defined by front elevation image1 and top plan image2; image3 is the real metal/material evidence only, ignore the loose modules on its lid. Preserve all EIGHTEEN two-socket columns on the front, 36 total, no omitted or repeated column. Full assembled 1RU body, camera 60 degrees above, physical right side visible on screen-right, deep low silver sheet metal. Both port-end ears have three horizontal obround rack slots. Two rear PSUs and three fan modules stay fully installed and mostly occluded by lid. Lid label remains near front-left, perforation band at front only. White studio background. No montage, no loose parts, no duplicate vents, no fake extra ports.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/01-front-v4.png",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/05-top-v1.png",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-2.jpg"
+    ],
+    "review": "REJECTED: 17 paired columns; repair required",
+    "output": "outputs/11-high-oblique-v1.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-dbc98797-19b7-49f1-9fda-7a434b33c166.png",
+    "selected": false,
+    "image_size": [
+      1746,
+      901
+    ],
+    "sha256": "f298d90e3d8e18bd5dffeab009872d8174be912dd70201d1cd722c8869d56b5c",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "imagegen/outputs/01-front-v4.png",
+      "imagegen/outputs/05-top-v1.png",
+      "sources/third_party/nwr-2.jpg"
+    ]
+  },
+  {
+    "id": "12-low-oblique-INFERRED",
+    "prompt": "Create one LOW FRONT LEFT oblique view of the same full switch. Use image1 for the exact entire front face, 18 columns and 2 vertically stacked empty sockets each = 36 ports. Preserve all 18 columns and both three-obround-hole ears. Image2 supplies conservative INFERRED underside. Camera is below the device at 20 degrees below bottom plane, left of front, so the front face and plain underside extend toward UPPER-LEFT of image. Floating on white with neutral lighting. Do not show the top lid. Unpowered, no cables. Silver 1RU body width439.42mm height43.688mm depth622.3 including rear handles. Caption outside object: 'UNDERSIDE INFERRED'. No invented fans or bottom circuitry.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/01-front-v4.png",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/06-bottom-INFERRED-v2.png"
+    ],
+    "review": "SELECTED: 18 paired columns and three slots per ear; conservative inferred underside; ink excluded",
+    "output": "outputs/12-low-oblique-INFERRED-v1.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-f3fefb1c-29f2-4503-8cfc-45e77eb87644.png",
+    "selected": true,
+    "image_size": [
+      1944,
+      809
+    ],
+    "sha256": "d76296dc60c5eef0367c2a639cb192ac46e1ee8aca2fb7bde9dbc5167a750773",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "imagegen/outputs/01-front-v4.png",
+      "imagegen/outputs/06-bottom-INFERRED-v2.png"
+    ]
+  },
+  {
+    "id": "07-front-left-v3",
+    "prompt": "Add exactly ONE new horizontal obround through-slot at mid-height in EACH of the two rack ears in this photo. Each ear currently shows just two holes at top/bottom; it must show THREE holes, evenly stacked vertically, top middle bottom. Match shape of existing slots, opaque metal, background through new slots. Preserve all other pixels and parts, all EIGHTEEN paired port columns, label, camera and body completely unchanged. Do not remove existing holes. Only add the missing middle slot to both ears.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/07-front-left-v2.png"
+    ],
+    "output": "outputs/07-front-left-v3.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-489b92e1-b528-4cd5-b9d4-e4297c46eec2.png",
+    "review": "SELECTED: 18 columns, corrected three-slot ears and label near port end; ink excluded",
+    "selected": true,
+    "image_size": [
+      1536,
+      1024
+    ],
+    "sha256": "4085bc9cc707c11c4e7b8a780ad9b22826bb2c03d462e96a8f3822f8fc2fd782",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "imagegen/outputs/07-front-left-v2.png"
+    ]
+  },
+  {
+    "id": "08-front-right-v3",
+    "prompt": "Repair TWO omissions in this Cisco N9K-C9336C-FX2 photo, keeping this exact front-right viewpoint. (1) It has 17 double port columns; insert the ONE missing paired column between pairs 9/10 and 13/14 to make exactly EIGHTEEN double columns and 36 empty openings. Slightly compress all columns horizontally if necessary. Preserve every other existing port pair. The sequence is 1/2,3/4,5/6,7/8,9/10,11/12,13/14,15/16,17/18,19/20,21/22,23/24,25/26,27/28,29/30,31/32,33/34,35/36. (2) Add the missing silver mounting ear on the RIGHT end of the port face, matching the existing LEFT ear: folded metal, exactly THREE horizontal obround through-slots in a vertical row. Four attachment screws on its short right side arm. Both ears must be present. Preserve body, camera, label and front-only lid vent. No extra modifications.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/08-front-right-v2.png"
+    ],
+    "output": "outputs/08-front-right-v3.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-d066fcad-a865-412c-84ed-6457819613f4.png",
+    "review": "REJECTED: still 17 paired columns despite adding right ear",
+    "selected": false,
+    "image_size": [
+      1536,
+      1024
+    ],
+    "sha256": "1d0dca881d36e2abb79c111455aaf4cd9db771752be576dfd8b7e9e9810e6164",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "imagegen/outputs/08-front-right-v2.png"
+    ]
+  },
+  {
+    "id": "10-rear-right-v3",
+    "prompt": "Edit only the distant mounting ear visible at the far UPPER-LEFT corner of this switch. It currently shows only two horizontal oval slots. ADD the missing third horizontal obround through-slot at mid-height, so this ear has three vertically stacked rack slots. Keep top and bottom slots. Preserve whole chassis, viewpoint, three fan trays, two PSUs, management connectors, lid label and all lighting completely unchanged.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/10-rear-right-v2.png"
+    ],
+    "output": "outputs/10-rear-right-v3.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-43444004-2f83-4de3-8c89-12d9036e97fd.png",
+    "review": "SELECTED: three fans, two PSUs, correct side, corrected far ear, lid and label",
+    "selected": true,
+    "image_size": [
+      1448,
+      1086
+    ],
+    "sha256": "1c6234d2c13a20179676e903c7cecf9cbdf00da02b6f14974e585e1a3c7a2645",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "imagegen/outputs/10-rear-right-v2.png"
+    ]
+  },
+  {
+    "id": "13-structure-sketch",
+    "prompt": "Use case: product-mockup. One independent photorealistic engineering working reference of Cisco Nexus N9K-C9336C-FX2, based on the attached REAL device photographs and official schematic. Exact locked assembly: silver 1RU body W439.42mm H43.688mm, overall depth INCLUDING REAR HANDLES 622.30mm, approximate bare shell depth 590mm. Port face is -Y, service face +Y, front-view right +X. Front: exactly 18 columns x 2 empty QSFP28 sockets = 36, no optics or caps, thin metal cages and perforated central separator. Rear left-to-right when facing rear: PSU1, THREE wide black honeycomb fan modules with dark trapezoidal pull handles and paired blue release tabs, small management panel, PSU2. Two matching AC NXA-PAC-1100W-PE2, blue exhaust; three NXA-FAN-65CFM-PE (two counterrotating rotors in depth in each). Rear service panel upper console RJ45, lower management RJ45, one management SFP and vertical USB-A. Traditional N3K-C3064-ACC-KIT ears at PORT END: each opaque zinc-steel front flange has THREE horizontally obround through-holes stacked vertically, side arm fixed with four screws. No additional round holes between the three rack slots. Sidewall mostly plain, mounting screw groups and small grounding pair near ends; no invented extensive side ventilation. Lid: broad perforated band near port end, grey/yellow factory label at front-left as seen from port face, small fasteners and restrained stamped seams near rear. No dealer plaques, no labels added for appearance, no loose parts on lid, no external rails, no attached cables. Unpowered. Soft neutral studio lighting, white background, no strong shadows, sharp hole walls and folded sheet metal, no toy styling. Any unseen construction is a conservative working hypothesis, never source evidence. No invented manufacturer dimensions or legible fake serials. Use case: scientific-educational. One technical pencil/ink STRUCTURAL SKETCH sheet with aligned front, right side and top views of this exact locked device, restrained grey shading. Label only 'FRONT -Y', 'RIGHT +X', 'TOP +Z', 'AI working sketch; not a dimension source'. Show exact 18 paired port columns, long low chassis, port-end ears. No fabricated dimension numerals.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/01-front-v4.png",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/04-right-v3.png",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/05-top-v1.png"
+    ],
+    "review": "REJECTED: extraneous whole-device photo panels and misleading simplification/section.",
+    "output": "outputs/13-structure-sketch-v1.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-51a37820-6bca-4d14-94e0-93f443299f10.png",
+    "selected": false,
+    "image_size": [
+      1536,
+      1024
+    ],
+    "sha256": "72989003d9cc8f85b5b68f80cb0661ae85ef6d1d212e6c5c956091e1061a31b0",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "imagegen/outputs/01-front-v4.png",
+      "imagegen/outputs/04-right-v3.png",
+      "imagegen/outputs/05-top-v1.png"
+    ]
+  },
+  {
+    "id": "14-assembly-sketch",
+    "prompt": "Use case: product-mockup. One independent photorealistic engineering working reference of Cisco Nexus N9K-C9336C-FX2, based on the attached REAL device photographs and official schematic. Exact locked assembly: silver 1RU body W439.42mm H43.688mm, overall depth INCLUDING REAR HANDLES 622.30mm, approximate bare shell depth 590mm. Port face is -Y, service face +Y, front-view right +X. Front: exactly 18 columns x 2 empty QSFP28 sockets = 36, no optics or caps, thin metal cages and perforated central separator. Rear left-to-right when facing rear: PSU1, THREE wide black honeycomb fan modules with dark trapezoidal pull handles and paired blue release tabs, small management panel, PSU2. Two matching AC NXA-PAC-1100W-PE2, blue exhaust; three NXA-FAN-65CFM-PE (two counterrotating rotors in depth in each). Rear service panel upper console RJ45, lower management RJ45, one management SFP and vertical USB-A. Traditional N3K-C3064-ACC-KIT ears at PORT END: each opaque zinc-steel front flange has THREE horizontally obround through-holes stacked vertically, side arm fixed with four screws. No additional round holes between the three rack slots. Sidewall mostly plain, mounting screw groups and small grounding pair near ends; no invented extensive side ventilation. Lid: broad perforated band near port end, grey/yellow factory label at front-left as seen from port face, small fasteners and restrained stamped seams near rear. No dealer plaques, no labels added for appearance, no loose parts on lid, no external rails, no attached cables. Unpowered. Soft neutral studio lighting, white background, no strong shadows, sharp hole walls and folded sheet metal, no toy styling. Any unseen construction is a conservative working hypothesis, never source evidence. No invented manufacturer dimensions or legible fake serials. Use case: scientific-educational. One exploded ASSEMBLY SKETCH: separate silver lid, closed lower shell, front face with 18 paired QSFP28 cages, TWO port-end bent rack ears, THREE fan modules removed rearward and TWO slim AC PSUs at left/right. Exactly three fan modules, no six independent trays. No speculative PCB. Use restrained technical ink/grey, simple leader labels, no dimensions. Show connection relationships.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-2.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-1.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/official/install-501768.jpg"
+    ],
+    "review": "REJECTED: extraneous whole-device photo panels and misleading simplification/section.",
+    "output": "outputs/14-assembly-sketch-v1.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-d6673498-9f68-4bf0-b7ab-83fe8bb6ff0d.png",
+    "selected": false,
+    "image_size": [
+      1536,
+      1024
+    ],
+    "sha256": "ecbe5d56f80b4e5eaa251de03af35ef4782cc3eab1cbf1ecd22efd473536d382",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "sources/third_party/nwr-2.jpg",
+      "sources/third_party/nwr-1.jpg",
+      "sources/official/install-501768.jpg"
+    ]
+  },
+  {
+    "id": "15-section-sketch",
+    "prompt": "Use case: product-mockup. One independent photorealistic engineering working reference of Cisco Nexus N9K-C9336C-FX2, based on the attached REAL device photographs and official schematic. Exact locked assembly: silver 1RU body W439.42mm H43.688mm, overall depth INCLUDING REAR HANDLES 622.30mm, approximate bare shell depth 590mm. Port face is -Y, service face +Y, front-view right +X. Front: exactly 18 columns x 2 empty QSFP28 sockets = 36, no optics or caps, thin metal cages and perforated central separator. Rear left-to-right when facing rear: PSU1, THREE wide black honeycomb fan modules with dark trapezoidal pull handles and paired blue release tabs, small management panel, PSU2. Two matching AC NXA-PAC-1100W-PE2, blue exhaust; three NXA-FAN-65CFM-PE (two counterrotating rotors in depth in each). Rear service panel upper console RJ45, lower management RJ45, one management SFP and vertical USB-A. Traditional N3K-C3064-ACC-KIT ears at PORT END: each opaque zinc-steel front flange has THREE horizontally obround through-holes stacked vertically, side arm fixed with four screws. No additional round holes between the three rack slots. Sidewall mostly plain, mounting screw groups and small grounding pair near ends; no invented extensive side ventilation. Lid: broad perforated band near port end, grey/yellow factory label at front-left as seen from port face, small fasteners and restrained stamped seams near rear. No dealer plaques, no labels added for appearance, no loose parts on lid, no external rails, no attached cables. Unpowered. Soft neutral studio lighting, white background, no strong shadows, sharp hole walls and folded sheet metal, no toy styling. Any unseen construction is a conservative working hypothesis, never source evidence. No invented manufacturer dimensions or legible fake serials. Use case: scientific-educational. One clear cross-section/plate-thickness engineering working SKETCH. Large cutaway through a traditional rack ear horizontal obround hole: solid opaque folded metal, continuous wall joining front/back surfaces, bevel on hole rim, empty bore. Additional small QSFP cage section shows thin outer cage, guide rails, recessed dark connector stop. Label 'ESTIMATED THICKNESS — NOT MANUFACTURING DRAWING', no precise dimension numbers. Do not draw transparent metal.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-3.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/official/install-501768.jpg"
+    ],
+    "review": "REJECTED: extraneous whole-device photo panels and misleading simplification/section.",
+    "output": "outputs/15-section-sketch-v1.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-e9408e8c-b835-46df-9bbb-f90616addebb.png",
+    "selected": false,
+    "image_size": [
+      1536,
+      1024
+    ],
+    "sha256": "e8b09f51402d479d37d607d068643a7435a9567aa2bb3f5cb57656c27ab47c74",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "sources/third_party/nwr-3.jpg",
+      "sources/official/install-501768.jpg"
+    ]
+  },
+  {
+    "id": "16-brand-controls",
+    "prompt": "Use the attached real Cisco N9K-C9336C-FX2 photographs strictly as evidence. Produce ONE independent photorealistic detail reference on a neutral white studio background. Sharp true solid sheet-metal thickness and deep openings, subtle realistic reflection, no candy/toy styling. Lock blue port-side exhaust NXA-FAN-65CFM-PE / NXA-PAC-1100W-PE2 parts when relevant; traditional N3K-C3064-ACC-KIT three-obround-hole ear version. This is AI working reference, not exact dimension or microprint evidence. MACRO of FRONT LEFT BRAND AND CONTROL AREA only, preserve exact actual Cisco bridge logo and 'Cisco', 'Cisco Nexus N9K-C9336C-FX2', BCN STS ENV, lane 1 2 3 4 indicators and LS round selector. Include edge of first double cage and nearby left ear three horizontal obround holes with real hole walls. Faithful lens-level straight photo, all text oriented correctly; do not improve or add indicators.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-3.jpg"
+    ],
+    "review": "SELECTED: correct 3 chassis +4 lane indicators, LS, PID/Cisco bridge placement, 3 ear slots and double cage. Generated ink not used.",
+    "output": "outputs/16-brand-controls-v1.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-6389405c-9bc3-4f87-85a7-f3edd04adc9b.png",
+    "selected": true,
+    "image_size": [
+      1536,
+      1024
+    ],
+    "sha256": "1a46aa98f622c9e43513005166325f1e922ce1aa18ae71b615275aecbef28253",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "sources/third_party/nwr-3.jpg"
+    ]
+  },
+  {
+    "id": "17-qsfp28",
+    "prompt": "Use the attached real Cisco N9K-C9336C-FX2 photographs strictly as evidence. Produce ONE independent photorealistic detail reference on a neutral white studio background. Sharp true solid sheet-metal thickness and deep openings, subtle realistic reflection, no candy/toy styling. Lock blue port-side exhaust NXA-FAN-65CFM-PE / NXA-PAC-1100W-PE2 parts when relevant; traditional N3K-C3064-ACC-KIT three-obround-hole ear version. This is AI working reference, not exact dimension or microprint evidence. MACRO of one empty DOUBLE QSFP28 cage and adjacent fragment, directly from original close photo. Two stacked rectangular sockets in one thin metal cage; perforated metal separator between upper/lower with 2 rows of 4 small rounded slots plus end triangles. Internal metal guide rails, subtle rear contacts far inside, deep dark cavity that does not see through machine. No fiber transceiver, no black flat plugs. Make folded rim and cage thickness clear.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-3.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-2.jpg"
+    ],
+    "review": "SELECTED for paired open cage/guide depth/separator; ink and LED shape outside macro scope excluded",
+    "output": "outputs/17-qsfp28-v1.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-14db999e-a330-47d1-a87f-7108de7d490f.png",
+    "selected": true,
+    "image_size": [
+      1448,
+      1086
+    ],
+    "sha256": "69890e237eaa6526c92deb12a3e2b5816d006dcea82e24576b530b9afad5ac80",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "sources/third_party/nwr-3.jpg",
+      "sources/third_party/nwr-2.jpg"
+    ]
+  },
+  {
+    "id": "18-rear-management",
+    "prompt": "Use the attached real Cisco N9K-C9336C-FX2 photographs strictly as evidence. Produce ONE independent photorealistic detail reference on a neutral white studio background. Sharp true solid sheet-metal thickness and deep openings, subtle realistic reflection, no candy/toy styling. Lock blue port-side exhaust NXA-FAN-65CFM-PE / NXA-PAC-1100W-PE2 parts when relevant; traditional N3K-C3064-ACC-KIT three-obround-hole ear version. This is AI working reference, not exact dimension or microprint evidence. MACRO of rear management/service interface block only, with sliver of fan3 on left and PSU2 on right. Upper console RJ45 and lower management RJ45 at left, empty single SFP cage next to lower RJ45, one vertical USB-A to its right, small BCN/STS indicators at bottom. Preserve exact photo positions and connector shapes, RJ45 key geometry visible, no DB9, VGA, extra USB or ethernet ports.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-1.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/abacus-3.webp"
+    ],
+    "review": "REJECTED: management SFP drawn too square/RJ45-like, USB internals distorted",
+    "output": "outputs/18-rear-management-v1.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-c62b3273-3e67-420e-8c19-6aba5fb7a6f3.png",
+    "selected": false,
+    "image_size": [
+      1448,
+      1086
+    ],
+    "sha256": "b49860de8f98b201e6f860425e33b92ca7266a0cabf068e2f566c3017818d963",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "sources/third_party/nwr-1.jpg",
+      "sources/third_party/abacus-3.webp"
+    ]
+  },
+  {
+    "id": "19-ear-left-front",
+    "prompt": "Use the attached real Cisco N9K-C9336C-FX2 photographs strictly as evidence. Produce ONE independent photorealistic detail reference on a neutral white studio background. Sharp true solid sheet-metal thickness and deep openings, subtle realistic reflection, no candy/toy styling. Lock blue port-side exhaust NXA-FAN-65CFM-PE / NXA-PAC-1100W-PE2 parts when relevant; traditional N3K-C3064-ACC-KIT three-obround-hole ear version. This is AI working reference, not exact dimension or microprint evidence. MACRO of LEFT port-end bent rack ear from front 3/4. Traditional zinc plated opaque steel, three vertically stacked HORIZONTAL OBROUND THROUGH-HOLES each approx 1.5 width/height, continuous thin hole walls and real metal thickness. Clearly visible white background through all three unoccupied rack holes. L-shaped side arm attached to chassis with four screws. No black fake hole discs, no transparency on metal. Preserve original shape and understated bend radius.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-3.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/official/install-501768.jpg"
+    ],
+    "review": "REJECTED: invented screw strip on front flange",
+    "output": "outputs/19-ear-left-front-v1.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-b9d6eefc-2343-4771-bcbd-4b7ef08ef3df.png",
+    "selected": false,
+    "image_size": [
+      1448,
+      1086
+    ],
+    "sha256": "c6893488dcd6f154ed301e0687dd0c5928b98fd08b6fc13d6e91087a6de4ef36",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "sources/third_party/nwr-3.jpg",
+      "sources/official/install-501768.jpg"
+    ]
+  },
+  {
+    "id": "20-ear-right-back",
+    "prompt": "Use the attached real Cisco N9K-C9336C-FX2 photographs strictly as evidence. Produce ONE independent photorealistic detail reference on a neutral white studio background. Sharp true solid sheet-metal thickness and deep openings, subtle realistic reflection, no candy/toy styling. Lock blue port-side exhaust NXA-FAN-65CFM-PE / NXA-PAC-1100W-PE2 parts when relevant; traditional N3K-C3064-ACC-KIT three-obround-hole ear version. This is AI working reference, not exact dimension or microprint evidence. MACRO of RIGHT port-end rack ear viewed from BEHIND and outside side at grazing angle, temporary isolated ear to make holes inspectable. Reverse of left-hand traditional bracket, zinc opaque steel folded side arm with four mounting screw seats. Three horizontal obround rack holes stacked vertically, continuous real bore walls visible. White background through unoccupied holes. No embossed lettering, no transparent metal. This is geometry interpretation of official bracket and original front macro, not unseen surface evidence.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-3.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/official/install-501768.jpg"
+    ],
+    "review": "REJECTED: five side-arm holes rather than four",
+    "output": "outputs/20-ear-right-back-v1.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-b02328ac-9009-4f1a-a353-396ce695cf70.png",
+    "selected": false,
+    "image_size": [
+      1448,
+      1086
+    ],
+    "sha256": "daefbb0563e34789534d96a452ac673eb8a1febfa8ada034490748b327bee450",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "sources/third_party/nwr-3.jpg",
+      "sources/official/install-501768.jpg"
+    ]
+  },
+  {
+    "id": "21-fan",
+    "prompt": "Use the attached real Cisco N9K-C9336C-FX2 photographs strictly as evidence. Produce ONE independent photorealistic detail reference on a neutral white studio background. Sharp true solid sheet-metal thickness and deep openings, subtle realistic reflection, no candy/toy styling. Lock blue port-side exhaust NXA-FAN-65CFM-PE / NXA-PAC-1100W-PE2 parts when relevant; traditional N3K-C3064-ACC-KIT three-obround-hole ear version. This is AI working reference, not exact dimension or microprint evidence. MACRO individual NXA-FAN-65CFM-PE fan module placed alone in front/top three-quarter view, use original removed modules on lid to reconstruct. One wide module with black honeycomb front, grey trapezoid pull handle, paired blue side releases, two counterrotating rotors IN DEPTH within single tray. Black upper housing and stamped metal retention details. No new slots or six little fans. Preserve actual proportions.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-2.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-1.jpg"
+    ],
+    "review": "SELECTED: single blue PE tray, paired tabs, dark trapezoid handle; fine rotor/label information from official/real",
+    "output": "outputs/21-fan-v1.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-53616e98-7bb2-4275-a54c-0a8983068777.png",
+    "selected": true,
+    "image_size": [
+      1448,
+      1086
+    ],
+    "sha256": "3bf0eb73196d6b9e84518781e7d91134fee5b32a84ac102c04eba87161020722",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "sources/third_party/nwr-2.jpg",
+      "sources/third_party/nwr-1.jpg"
+    ]
+  },
+  {
+    "id": "22-psu",
+    "prompt": "Use the attached real Cisco N9K-C9336C-FX2 photographs strictly as evidence. Produce ONE independent photorealistic detail reference on a neutral white studio background. Sharp true solid sheet-metal thickness and deep openings, subtle realistic reflection, no candy/toy styling. Lock blue port-side exhaust NXA-FAN-65CFM-PE / NXA-PAC-1100W-PE2 parts when relevant; traditional N3K-C3064-ACC-KIT three-obround-hole ear version. This is AI working reference, not exact dimension or microprint evidence. MACRO individual NXA-PAC-1100W-PE2 AC PSU in rear/top three-quarter view. Match assembled NWR unit front face: black IEC C14 inlet, silver narrow honeycomb vent, silver U pull handle, blue release latch, black adjustable cord retainer, long slim zinc-metal body. Small original top label stays restrained and not invented readable serial. No DC terminals. One single module only.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-2.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-1.jpg"
+    ],
+    "review": "SELECTED: silver body, AC inlet, handle, blue latch/retainer; no generated label used",
+    "output": "outputs/22-psu-v1.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-f14b8737-cd5e-4727-bdae-3941ad8ec592.png",
+    "selected": true,
+    "image_size": [
+      1448,
+      1086
+    ],
+    "sha256": "e4828fa1c83d64f1e68391418ea1581151b87ae2a81bd9ea0041bb99cadef904",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "sources/third_party/nwr-2.jpg",
+      "sources/third_party/nwr-1.jpg"
+    ]
+  },
+  {
+    "id": "23-ventilation",
+    "prompt": "Use the attached real Cisco N9K-C9336C-FX2 photographs strictly as evidence. Produce ONE independent photorealistic detail reference on a neutral white studio background. Sharp true solid sheet-metal thickness and deep openings, subtle realistic reflection, no candy/toy styling. Lock blue port-side exhaust NXA-FAN-65CFM-PE / NXA-PAC-1100W-PE2 parts when relevant; traditional N3K-C3064-ACC-KIT three-obround-hole ear version. This is AI working reference, not exact dimension or microprint evidence. MACRO top port-end ventilation band and its folded transition to port face. Many small real round staggered holes punched through opaque silver sheet, small hole walls visible, dark shallow interior beneath. Show subtle large-plane normals, small clean edge fold and mounting screw; avoid granite metal texture, enormous honeycomb holes or transparent panel. Use original top photograph, no dealer plaque.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-2.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/serverlama-angledtop.jpg"
+    ],
+    "review": "SELECTED ONLY top perforation band/formed edge; lower port-face printing/perforation not adopted",
+    "output": "outputs/23-ventilation-v1.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-9698bc6f-742a-47d1-bec8-0df3a22379ec.png",
+    "selected": true,
+    "image_size": [
+      1402,
+      1122
+    ],
+    "sha256": "2396e2ac0ccee532a366cff97664930ee4ac3a146c841cb9486076c83c641719",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "sources/third_party/nwr-2.jpg",
+      "sources/third_party/serverlama-angledtop.jpg"
+    ]
+  },
+  {
+    "id": "13-structure-sketch-v2",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/01-front-v4.png",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/04-right-v3.png",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/05-top-v1.png"
+    ],
+    "output": "outputs/13-structure-sketch-v2.png",
+    "prompt": "Create ONE pure technical LINE SKETCH sheet, no product photographs. Three correctly arranged and labelled orthographic structural projections of Cisco N9K-C9336C-FX2: FRONT (-Y), RIGHT (+X), TOP (+Z), using the three provided elevation references respectively. Keep shell proportions: front W:H about10:1, right D:H about13.5:1, top D:W about1.35:1. Front has port-end two folded ears with 3 horizontal obround holes each, a small left control region and a long repeated-port REGION labelled '36 QSFP28 — 18 paired cages'. To avoid misleading detail, draw ONLY ONE exemplary upper/lower cage with a BREAK MARK and dashed repetition region, explicitly label 'repeat x18; omitted detail', do not draw a wrong smaller number of actual full ports. Top long perforated band by port end, factory label at front-left, 3 fan module footprints /2 PSU footprints at rear. Right side front ear arm and rear handles, four arm screws. Precise thin ink lines, sparse grey section fill, plain white page, no photographic panels, no false dimensional numbers. Footer 'Schematic only; dimensions and counts verified separately from real sources'.",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-cd3e5884-da6c-4825-9808-7237b28f9d17.png",
+    "review": "REJECTED: four flange holes/front aspect and side direction wrong",
+    "selected": false,
+    "image_size": [
+      1055,
+      1491
+    ],
+    "sha256": "e7fbe8f52a03797890d35cb8d8d93c2c1086e92b2b63b6e71b5c33e50700519a",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "imagegen/outputs/01-front-v4.png",
+      "imagegen/outputs/04-right-v3.png",
+      "imagegen/outputs/05-top-v1.png"
+    ]
+  },
+  {
+    "id": "14-assembly-sketch-v2",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-2.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/official/install-501768.jpg"
+    ],
+    "output": "outputs/14-assembly-sketch-v2.png",
+    "prompt": "Create ONE clean exploded assembly LINE DRAWING of Cisco N9K-C9336C-FX2. NO product photo anywhere. Lid floated above an open-top folded lower shell with closed bottom. Front port panel floats forward and TWO three-obround-hole bent mounting ears float left/right. The port panel's repetitive cages are intentionally shown as ONE exemplary double-cage plus a broken-line repetition field labelled '18 identical paired cages = 36 QSFP28', NOT a wrong count of fully drawn cages. At rear, THREE individual wide fan modules separated out and TWO slender AC PSUs (one each outside edge) aligned rearward; use original photo for module shapes. Add service-panel rectangle at rear between fan3 and right PSU with two RJ45/SFP/USB symbols. Light dashed assembly leaders; no invented motherboard, no dimensions, no extra assemblies or 6 independent fan trays. Label groups clearly, solid sheet metal folds visible. Schematic white page, black linework and restrained grey shading. Caption 'Working exploded schematic; not a manufacturing drawing'.",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-330abc92-322b-421a-8129-689ff4e77486.png",
+    "review": "REJECTED: merchant plaque copied, service RJ45 missing, example cage ambiguity",
+    "selected": false,
+    "image_size": [
+      1536,
+      1024
+    ],
+    "sha256": "194b15a26402e94245a4de51c47e4146c4745a8bb3f1eb59a71fb8728169b3af",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "sources/third_party/nwr-2.jpg",
+      "sources/official/install-501768.jpg"
+    ]
+  },
+  {
+    "id": "15-section-sketch-v2",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-3.jpg"
+    ],
+    "output": "outputs/15-section-sketch-v2.png",
+    "prompt": "Create ONE pure mechanical CROSS-SECTION SKETCH page. Do NOT include any whole switch photographs or elevation panels. Main subject: a bent opaque metal rack ear with a horizontal obround through-hole, based on reference. Show a small perspective detail with the open slot and true bore wall. Large central diagram is a CUT THROUGH THE CENTRE OF THE SLOT: two disjoint hatched METAL lands left and right; in between is a completely BLANK OPEN GAP through the entire sheet thickness, labelled 'AIR / OPEN THROUGH BORE'. The bore must NOT be filled with hatching, a metal bridge, glass, black disc or transparent plate. Opposite metal surfaces joined around bore by continuous wall, small bevel at lips, dimension arrows only labelled 'estimated plate thickness' with no numerical value. Secondary sketch: longitudinal QSFP28 metal cage section, open mouth at LEFT, guide rails upper/lower, recessed connector STOP deep at RIGHT, a blocked rear wall preventing view through whole chassis. Thin ink line drawing, clear grey metal hatching, white empty cavities, easily understood cutting plane. Footer 'Illustrative section; inferred thickness, not a manufacturing drawing'.",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-230d3d9b-c6bf-4f0d-9261-e22a63aa5746.png",
+    "review": "REJECTED: over-shaped bore section; needs straight lands and explicit air path",
+    "selected": false,
+    "image_size": [
+      1149,
+      1369
+    ],
+    "sha256": "7981f0acaf563b95cab1a8e89e26afce78b8a735f645e7abca751a492d420988",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "sources/third_party/nwr-3.jpg"
+    ]
+  },
+  {
+    "id": "08-front-right-v4",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/08-front-right-v3.png",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/01-front-v4.png"
+    ],
+    "output": "outputs/08-front-right-v4.png",
+    "prompt": "Image1 has the correct front-right camera, lid and ears, but its port bank incorrectly has 17 paired columns. Image2 has the CORRECT 18-column front face. Replace ONLY image1's front PORT BANK with a perspective-projected copy of the ENTIRE port bank from image2, preserving ALL eighteen double cages once. There are two openings per cage =36. Do not omit a cage to keep width; shrink the eighteen equally to fit. Do not simply relabel the existing seventeen; actual geometry must gain a paired cage. Both ears, lid label, right-side panel and camera unchanged. Numbered complete pairs 1/2 through 35/36 once. Correctness of exactly18 columns is the purpose of this edit; no artistic redesign.",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-a1555e72-f611-4ced-af92-956a9a369beb.png",
+    "review": "SELECTED:18 paired columns counted, two three-slot ears, right side and lid placement correct; all printing excluded",
+    "selected": true,
+    "image_size": [
+      1536,
+      1024
+    ],
+    "sha256": "9078f0f9a68846706f1af5c375cfd24e7cf54e8b7099088b401036533c63c2a7",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "imagegen/outputs/08-front-right-v3.png",
+      "imagegen/outputs/01-front-v4.png"
+    ]
+  },
+  {
+    "id": "11-high-oblique-v2",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/11-high-oblique-v1.png",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/01-front-v4.png"
+    ],
+    "output": "outputs/11-high-oblique-v2.png",
+    "prompt": "Image1 is missing one double cage: it incorrectly contains17 columns, image2 contains18. Replace ONLY the front port bank of image1 with the FULL 18-column front bank from image2, properly perspective projected, all18 upper/lower paired cages present once =36 sockets. Specifically preserve pairs 11/12,13/14,15/16,17/18 as FOUR distinct columns, never merge13–16 into one. Keep high camera/lid/ears/label/lighting unchanged. Do not just alter text: add the missing physical double cage. Shrink each cage uniformly if needed to fit exactly18, not17 or19.",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-faa31dc2-cdb2-4ac7-88ca-4637ea15e192.png",
+    "review": "REJECTED: remains17 columns",
+    "selected": false,
+    "image_size": [
+      1746,
+      901
+    ],
+    "sha256": "076582d25fd636b7fd6e6aec9e2b37a31d4ecae544dfb213ccc4c92de7b449b6",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "imagegen/outputs/11-high-oblique-v1.png",
+      "imagegen/outputs/01-front-v4.png"
+    ]
+  },
+  {
+    "id": "18-rear-management-v2",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/02-rear-v1.png",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-1.jpg"
+    ],
+    "output": "outputs/18-rear-management-v2.png",
+    "prompt": "Generate one tightly framed closeup of ONLY the rear SERVICE PANEL in these matching images, with a small strip of fan3 at left and PSU2 at right. Preserve exact source geometry: TWO stacked RJ45 sockets at left, upper CONSOLE lower MANAGEMENT. To the right of lower RJ45 is ONE horizontal RECTANGULAR SFP MANAGEMENT metal cage, width about1.5 times height, dark deep opening with narrow metal walls and no RJ45 plastic key notch or ethernet contacts. To the right is ONE VERTICAL USB TYPE A socket, a thin rectangular metal frame with black central tongue and four fine contacts, NOT DB9. Tiny BCN/STS windows below, neutralsilver thinpanel. No extra ports. Use original photo only for actual markings; avoid invented legible identifiers. Sharp product macro on white, actual solid connector lips and interior depth.",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-e9833994-922d-48c4-8718-685abd46362d.png",
+    "review": "SELECTED for described local part shape/count; surface grain amplitudes, printing and hidden details not adopted",
+    "selected": true,
+    "image_size": [
+      1672,
+      941
+    ],
+    "sha256": "3297eb933b69240bbc6079825edc45509dcdb30bb5065069d090f927314eaac2",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "imagegen/outputs/02-rear-v1.png",
+      "sources/third_party/nwr-1.jpg"
+    ]
+  },
+  {
+    "id": "19-ear-left-front-v2",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/19-ear-left-front-v1.png",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-3.jpg"
+    ],
+    "output": "outputs/19-ear-left-front-v2.png",
+    "prompt": "Correct ONLY the fake vertical screw strip in image1. Real source image2 has NO front-facing screws on that narrow bent area beside the three rack slots. REMOVE the invented three screws and extra vertical screw strip from the FRONT of the ear, leaving the smooth continuous metal bend of the actual photographed ear. Preserve its THREE horizontal obround through-holes and visible bore walls, realistic opaque metal, body/controls unchanged. Actual four attachment screws belong on the SIDE arm hidden behind the flange, not along the front. Do not add or move other features.",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-8ae2e811-2b25-4ca8-9bb3-bc14dfd37b1c.png",
+    "review": "SELECTED for described local part shape/count; surface grain amplitudes, printing and hidden details not adopted",
+    "selected": true,
+    "image_size": [
+      1448,
+      1086
+    ],
+    "sha256": "b07a74b0d1d8bdf69dfa89347a3949bfe179df1aeef7242783a6fa61328ba915",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "imagegen/outputs/19-ear-left-front-v1.png",
+      "sources/third_party/nwr-3.jpg"
+    ]
+  },
+  {
+    "id": "20-ear-right-back-v2",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/20-ear-right-back-v1.png"
+    ],
+    "output": "outputs/20-ear-right-back-v2.png",
+    "prompt": "This isolated bent ear image shows FIVE circular screw holes in the SIDE ARM. Correct ONLY that count: remove the MIDDLE circular side-arm hole immediately beside the bend (the hole at middle-height on the right edge of the side arm), fill it with matching opaque metal. Keep the other FOUR side-arm holes, top/bottom at each side. Preserve all THREE horizontal obround rack slots in the front flange, continuous through-hole walls, plate thickness, reflections, camera and white background. Do not remove any rack slot. Final side arm exactly four holes, front flange exactly three slots.",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-769d5cf3-8e25-4326-9801-3647f2d8d0b8.png",
+    "review": "SELECTED for described local part shape/count; surface grain amplitudes, printing and hidden details not adopted",
+    "selected": true,
+    "image_size": [
+      1448,
+      1086
+    ],
+    "sha256": "444f920ef93aa04564b9053b8679ce8d3d736c5c0c81870ca5bee33c9c2b4a4b",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "imagegen/outputs/20-ear-right-back-v1.png"
+    ]
+  },
+  {
+    "id": "13-structure-sketch-v3",
+    "prompt": "Correct only the FRONT and SIDE panels of this structural sheet. FRONT: make the whole front device rectangle about TEN TIMES wider than high (thin1RU). Both ears must have THREE slots not four; remove the lowest slot each and evenly space the remaining three. Replace the complicated example port diagram at left with ONLY TWO empty simple rectangles stacked vertically, caption 'ONE paired cage'. Keep the large broken-out repetition field labelled18 paired cages=36 QSFP28. SIDE: replace the entire wrong side diagram with a thin plain rectangle about13.5:1, port end at RIGHT with a short arm four screw circles in2x2 and edge-on flange, rear handle a SINGLE loop at LEFT. No face-on rack holes in side view. Keep heading 'RIGHT (+X)'. TOP panel stays as is, but remove the narrow visible port openings along lower edge (not visible in exact plan). No new photos, no added logos.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/13-structure-sketch-v2.png"
+    ],
+    "output": "outputs/13-structure-sketch-v3.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-c0b10a44-6ed6-4df3-80fb-b778d424890e.png",
+    "review": "SELECTED: explicitly simplified structural schematic; no numeric dimensions/printing or detailed manufacturing geometry adopted",
+    "selected": true,
+    "image_size": [
+      1055,
+      1491
+    ],
+    "sha256": "d3359c2cf7e2ed8f69562cac6f6245618449063164fcd0162d44b44476e06b41",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "imagegen/outputs/13-structure-sketch-v2.png"
+    ]
+  },
+  {
+    "id": "14-assembly-sketch-v3",
+    "prompt": "Edit this exploded schematic and change ONLY three mistakes. REMOVE the NW REMARKETING merchant plaque from lid, restore the perforation underneath. On SERVICE PANEL replace current single RJ45 symbol with TWO small vertically stacked RJ45 symbols, label top 'CONSOLE' bottom 'MGMT'; preserve adjacent SFP and USB symbols. In port panel replace the little example port area with ONE narrow double cage drawn as TWO empty rectangles stacked vertically, no side-by-side duplicates; preserve label '18 IDENTICAL PAIRED CAGES = 36 QSFP28' and dashed repetition field. Keep exactly THREE fan modules, TWO PSUs, TWO ears and all other exploded relationships unchanged. This is pure structural line sketch; not a photograph.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/14-assembly-sketch-v2.png"
+    ],
+    "output": "outputs/14-assembly-sketch-v3.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-a003d058-403c-448c-8fda-ae49415ec897.png",
+    "review": "SELECTED: explicitly simplified structural schematic; no numeric dimensions/printing or detailed manufacturing geometry adopted",
+    "selected": true,
+    "image_size": [
+      1536,
+      1024
+    ],
+    "sha256": "924953f1e0de00b4ade454b602a05f2d54b3f20ac0a265ebeeba6a3beca3b550",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "imagegen/outputs/14-assembly-sketch-v2.png"
+    ]
+  },
+  {
+    "id": "15-section-sketch-v3",
+    "prompt": "Edit ONLY the large middle section diagram on this page. Replace the two thick U-shaped hatched blocks with TWO THIN STRAIGHT RECTANGULAR HATCHED METAL LANDS at identical height, one left and one right, separated by a white open gap. Each land is wide horizontally and only about one fifth as high. This is a transverse cut through the centre of an obround hole: top and bottom edges of each metal land are PARALLEL STRAIGHT lines, and the hole-facing edge is a STRAIGHT VERTICAL wall with just a tiny chamfer at top/bottom. There is NO curved U-shaped undercut or curled lip. The entire vertical air path between the two separated lands remains empty white, label 'AIR: OPEN THROUGH SHEET'. One vertical dimension line spans only the thin land height, label 'plate thickness (estimated)'. Preserve the small perspective ear and lower QSFP cage longitudinal sketch; do not add full switch views.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/15-section-sketch-v2.png"
+    ],
+    "output": "outputs/15-section-sketch-v3.png",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-ae3151ec-c594-47cd-be9b-ed49cbd8fc0f.png",
+    "review": "SELECTED: explicitly simplified structural schematic; no numeric dimensions/printing or detailed manufacturing geometry adopted",
+    "selected": true,
+    "image_size": [
+      1149,
+      1369
+    ],
+    "sha256": "896748e3eac3d01dc896dd111fc3264ac1128a8b3d862d583fbb400dbeb2b762",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "imagegen/outputs/15-section-sketch-v2.png"
+    ]
+  },
+  {
+    "id": "11-high-oblique-v3",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/08-front-right-v4.png"
+    ],
+    "output": "outputs/11-high-oblique-v3.png",
+    "prompt": "Make a second independent elevated oblique reference from this EXACT eighteen-column Cisco switch image. Change ONLY the camera elevation by a small amount: raise from about25 degrees to about35 degrees, keeping the SAME front-right azimuth. Preserve EVERY ONE of its EIGHTEEN paired QSFP28 metal cages (36 sockets) and both three-slot ears; no port disappears or merges. Do not reconstruct the port bank from a generic switch; use this exact18-column bank unchanged except its perspective projection. Lid silver finish, front-only vent band, label front-left, no loose parts. White studio. Entire device visible, slightly more of lid seen than original. This is a mild camera-elevation variation only. Count eighteen paired columns before finishing.",
+    "original_output": "/root/.codex/generated_images/01a07829-3c24-7303-8615-cab0cd18499c/exec-1c5d314d-d036-4db7-b584-9aebc17a31aa.png",
+    "review": "SELECTED: 18 paired columns counted; elevated 35-degree working view",
+    "selected": true,
+    "image_size": [
+      1536,
+      1024
+    ],
+    "sha256": "318940938d233288c61ef1a98fa8f22afa53e70f2da4268272ff512182d45954",
+    "local_output_exists": true,
+    "input_paths_relative": [
+      "imagegen/outputs/08-front-right-v4.png"
+    ]
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "13-structure-sketch-v3",
+    "prompt": "Correct only the FRONT and SIDE panels of this structural sheet. FRONT: make the whole front device rectangle about TEN TIMES wider than high (thin1RU). Both ears must have THREE slots not four; remove the lowest slot each and evenly space the remaining three. Replace the complicated example port diagram at left with ONLY TWO empty simple rectangles stacked vertically, caption 'ONE paired cage'. Keep the large broken-out repetition field labelled18 paired cages=36 QSFP28. SIDE: replace the entire wrong side diagram with a thin plain rectangle about13.5:1, port end at RIGHT with a short arm four screw circles in2x2 and edge-on flange, rear handle a SINGLE loop at LEFT. No face-on rack holes in side view. Keep heading 'RIGHT (+X)'. TOP panel stays as is, but remove the narrow visible port openings along lower edge (not visible in exact plan). No new photos, no added logos.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/13-structure-sketch-v2.png"
+    ],
+    "output": "outputs/13-structure-sketch-v3.png"
+  },
+  {
+    "id": "14-assembly-sketch-v3",
+    "prompt": "Edit this exploded schematic and change ONLY three mistakes. REMOVE the NW REMARKETING merchant plaque from lid, restore the perforation underneath. On SERVICE PANEL replace current single RJ45 symbol with TWO small vertically stacked RJ45 symbols, label top 'CONSOLE' bottom 'MGMT'; preserve adjacent SFP and USB symbols. In port panel replace the little example port area with ONE narrow double cage drawn as TWO empty rectangles stacked vertically, no side-by-side duplicates; preserve label '18 IDENTICAL PAIRED CAGES = 36 QSFP28' and dashed repetition field. Keep exactly THREE fan modules, TWO PSUs, TWO ears and all other exploded relationships unchanged. This is pure structural line sketch; not a photograph.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/14-assembly-sketch-v2.png"
+    ],
+    "output": "outputs/14-assembly-sketch-v3.png"
+  },
+  {
+    "id": "15-section-sketch-v3",
+    "prompt": "Edit ONLY the large middle section diagram on this page. Replace the two thick U-shaped hatched blocks with TWO THIN STRAIGHT RECTANGULAR HATCHED METAL LANDS at identical height, one left and one right, separated by a white open gap. Each land is wide horizontally and only about one fifth as high. This is a transverse cut through the centre of an obround hole: top and bottom edges of each metal land are PARALLEL STRAIGHT lines, and the hole-facing edge is a STRAIGHT VERTICAL wall with just a tiny chamfer at top/bottom. There is NO curved U-shaped undercut or curled lip. The entire vertical air path between the two separated lands remains empty white, label 'AIR: OPEN THROUGH SHEET'. One vertical dimension line spans only the thin land height, label 'plate thickness (estimated)'. Preserve the small perspective ear and lower QSFP cage longitudinal sketch; do not add full switch views.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/15-section-sketch-v2.png"
+    ],
+    "output": "outputs/15-section-sketch-v3.png"
+  }
+]

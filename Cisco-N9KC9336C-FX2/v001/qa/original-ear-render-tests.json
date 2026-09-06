@@ -1,0 +1,717 @@
+{
+  "pass": true,
+  "renders": [
+    {
+      "view": "front",
+      "mode": "checker",
+      "path": "qa/original-ear-front-checker.png",
+      "sha256": "6993ca464be5657e7a55d1ba908d62750a2292f2da15581c3f1b60b413fa27e5",
+      "samples": []
+    },
+    {
+      "view": "front",
+      "mode": "alpha",
+      "path": "qa/original-ear-front-alpha.png",
+      "sha256": "3b87fe8173dc0f5fc83651aaf872e9fd4f82ba63c272f40b4b3ed57ac8c1e009",
+      "samples": [
+        {
+          "kind": "hole",
+          "world_point": [
+            -0.2326,
+            -0.2941,
+            0.005969
+          ],
+          "pixel": [
+            134,
+            124
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            -0.2326,
+            -0.2941,
+            0.021844
+          ],
+          "pixel": [
+            134,
+            190
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            -0.2326,
+            -0.2941,
+            0.037719
+          ],
+          "pixel": [
+            134,
+            255
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "metal",
+          "world_point": [
+            -0.2248,
+            -0.2941,
+            0.021844
+          ],
+          "pixel": [
+            166,
+            190
+          ],
+          "expected_alpha": 1,
+          "actual_mean_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            0.2326,
+            -0.2941,
+            0.005969
+          ],
+          "pixel": [
+            2065,
+            124
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            0.2326,
+            -0.2941,
+            0.021844
+          ],
+          "pixel": [
+            2065,
+            190
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            0.2326,
+            -0.2941,
+            0.037719
+          ],
+          "pixel": [
+            2065,
+            255
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "metal",
+          "world_point": [
+            0.2248,
+            -0.2941,
+            0.021844
+          ],
+          "pixel": [
+            2033,
+            190
+          ],
+          "expected_alpha": 1,
+          "actual_mean_alpha": 1.0,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "view": "back",
+      "mode": "checker",
+      "path": "qa/original-ear-back-checker.png",
+      "sha256": "dbd63df690de26b46c7a086a0ae5d520ba644ecabeb8caa1c3113572b2f84103",
+      "samples": []
+    },
+    {
+      "view": "back",
+      "mode": "alpha",
+      "path": "qa/original-ear-back-alpha.png",
+      "sha256": "174953f4c8866c8b751c8daef5f9aa647ba5edcdd46be9532aa4fbd5aabd113c",
+      "samples": [
+        {
+          "kind": "hole",
+          "world_point": [
+            -0.2326,
+            -0.2941,
+            0.005969
+          ],
+          "pixel": [
+            2065,
+            124
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            -0.2326,
+            -0.2941,
+            0.021844
+          ],
+          "pixel": [
+            2065,
+            190
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            -0.2326,
+            -0.2941,
+            0.037719
+          ],
+          "pixel": [
+            2065,
+            255
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "metal",
+          "world_point": [
+            -0.2248,
+            -0.2941,
+            0.021844
+          ],
+          "pixel": [
+            2033,
+            190
+          ],
+          "expected_alpha": 1,
+          "actual_mean_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            0.2326,
+            -0.2941,
+            0.005969
+          ],
+          "pixel": [
+            134,
+            124
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            0.2326,
+            -0.2941,
+            0.021844
+          ],
+          "pixel": [
+            134,
+            190
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            0.2326,
+            -0.2941,
+            0.037719
+          ],
+          "pixel": [
+            134,
+            255
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "metal",
+          "world_point": [
+            0.2248,
+            -0.2941,
+            0.021844
+          ],
+          "pixel": [
+            166,
+            190
+          ],
+          "expected_alpha": 1,
+          "actual_mean_alpha": 1.0,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "view": "right-side",
+      "mode": "checker",
+      "path": "qa/original-ear-right-side-checker.png",
+      "sha256": "3c28baa9dd9bf00af27c14bd292cc467f7c227c9a08f8747f0587c340b1a37b8",
+      "samples": []
+    },
+    {
+      "view": "right-side",
+      "mode": "alpha",
+      "path": "qa/original-ear-right-side-alpha.png",
+      "sha256": "e2787a74ebfcdf3a68cec358fb32540e5a2a024acd233a89d45ab2498393b2bf",
+      "samples": [
+        {
+          "kind": "hole",
+          "world_point": [
+            0.22086,
+            -0.284,
+            0.0108
+          ],
+          "pixel": [
+            324,
+            261
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            0.22086,
+            -0.284,
+            0.0328
+          ],
+          "pixel": [
+            324,
+            536
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            0.22086,
+            -0.27,
+            0.0108
+          ],
+          "pixel": [
+            499,
+            261
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            0.22086,
+            -0.27,
+            0.0328
+          ],
+          "pixel": [
+            499,
+            536
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            0.22086,
+            -0.256,
+            0.0108
+          ],
+          "pixel": [
+            674,
+            261
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            0.22086,
+            -0.256,
+            0.0328
+          ],
+          "pixel": [
+            674,
+            536
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            0.22086,
+            -0.242,
+            0.0108
+          ],
+          "pixel": [
+            849,
+            261
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            0.22086,
+            -0.242,
+            0.0328
+          ],
+          "pixel": [
+            849,
+            536
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            0.22086,
+            -0.228,
+            0.0108
+          ],
+          "pixel": [
+            1024,
+            261
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            0.22086,
+            -0.228,
+            0.0328
+          ],
+          "pixel": [
+            1024,
+            536
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            0.22086,
+            -0.214,
+            0.0108
+          ],
+          "pixel": [
+            1199,
+            261
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            0.22086,
+            -0.214,
+            0.0328
+          ],
+          "pixel": [
+            1199,
+            536
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "metal",
+          "world_point": [
+            0.22086,
+            -0.25,
+            0.022
+          ],
+          "pixel": [
+            749,
+            401
+          ],
+          "expected_alpha": 1,
+          "actual_mean_alpha": 1.0,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "view": "left-side",
+      "mode": "checker",
+      "path": "qa/original-ear-left-side-checker.png",
+      "sha256": "ad6959b1be9ff316fce1be434245924d8421231a332f417f3aca72878f64c74f",
+      "samples": []
+    },
+    {
+      "view": "left-side",
+      "mode": "alpha",
+      "path": "qa/original-ear-left-side-alpha.png",
+      "sha256": "e5c89212d18ddd8342a9fe0f458a1cfb408f19d01f992049740677109bd990cf",
+      "samples": [
+        {
+          "kind": "hole",
+          "world_point": [
+            -0.22086,
+            -0.284,
+            0.0108
+          ],
+          "pixel": [
+            1175,
+            261
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            -0.22086,
+            -0.284,
+            0.0328
+          ],
+          "pixel": [
+            1175,
+            536
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            -0.22086,
+            -0.27,
+            0.0108
+          ],
+          "pixel": [
+            1000,
+            261
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            -0.22086,
+            -0.27,
+            0.0328
+          ],
+          "pixel": [
+            1000,
+            536
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            -0.22086,
+            -0.256,
+            0.0108
+          ],
+          "pixel": [
+            825,
+            261
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            -0.22086,
+            -0.256,
+            0.0328
+          ],
+          "pixel": [
+            825,
+            536
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            -0.22086,
+            -0.242,
+            0.0108
+          ],
+          "pixel": [
+            650,
+            261
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            -0.22086,
+            -0.242,
+            0.0328
+          ],
+          "pixel": [
+            650,
+            536
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            -0.22086,
+            -0.228,
+            0.0108
+          ],
+          "pixel": [
+            475,
+            261
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            -0.22086,
+            -0.228,
+            0.0328
+          ],
+          "pixel": [
+            475,
+            536
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            -0.22086,
+            -0.214,
+            0.0108
+          ],
+          "pixel": [
+            300,
+            261
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "hole",
+          "world_point": [
+            -0.22086,
+            -0.214,
+            0.0328
+          ],
+          "pixel": [
+            300,
+            536
+          ],
+          "expected_alpha": 0,
+          "actual_mean_alpha": 0.0,
+          "pass": true
+        },
+        {
+          "kind": "metal",
+          "world_point": [
+            -0.22086,
+            -0.25,
+            0.022
+          ],
+          "pixel": [
+            750,
+            401
+          ],
+          "expected_alpha": 1,
+          "actual_mean_alpha": 1.0,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "view": "front-oblique",
+      "mode": "checker",
+      "path": "qa/original-ear-front-oblique-checker.png",
+      "sha256": "43d363d883017b0c853b285d27e5b7fafb3781c1f2ecd69fc64b4a3b831df906",
+      "samples": []
+    },
+    {
+      "view": "back-oblique",
+      "mode": "checker",
+      "path": "qa/original-ear-back-oblique-checker.png",
+      "sha256": "462d60b4ffdfe562df2e68082bf39618646fe47491273974053dc7cc3d7cc514",
+      "samples": []
+    },
+    {
+      "view": "grazing",
+      "mode": "checker",
+      "path": "qa/original-ear-grazing-checker.png",
+      "sha256": "139bcdab990e75e5c9833a83d75cd8d6434ebf6c992f2cc4de6e887aafc6c72d",
+      "samples": []
+    }
+  ],
+  "note": "Only isolated unobstructed holes expected transparent; AA edge pixels not sampled."
+}

@@ -1,0 +1,376 @@
+{
+  "pass": true,
+  "master_file": "model/CISCO-Nexus-N9K-C9336C-FX2.blend",
+  "master_sha256": "d5e6e3cac8e87797ddd24e56a6eabca70b5fc09817b1ce435995ff012db547f4",
+  "scene": "CISCO_N9K_C9336C_FX2_V001",
+  "scene_count": 1,
+  "images": {
+    "chassis-satin-nickel-roughness": {
+      "packed": true,
+      "relative_path": "//../textures/chassis-satin-nickel-roughness.png",
+      "size": [
+        512,
+        512
+      ],
+      "colorspace": "Non-Color"
+    },
+    "metal-micro-normal": {
+      "packed": true,
+      "relative_path": "//../textures/metal-micro-normal.png",
+      "size": [
+        512,
+        512
+      ],
+      "colorspace": "Non-Color"
+    },
+    "fastener-steel-roughness": {
+      "packed": true,
+      "relative_path": "//../textures/fastener-steel-roughness.png",
+      "size": [
+        512,
+        512
+      ],
+      "colorspace": "Non-Color"
+    },
+    "zinc-plated-brackets-roughness": {
+      "packed": true,
+      "relative_path": "//../textures/zinc-plated-brackets-roughness.png",
+      "size": [
+        512,
+        512
+      ],
+      "colorspace": "Non-Color"
+    },
+    "cage-stainless-steel-roughness": {
+      "packed": true,
+      "relative_path": "//../textures/cage-stainless-steel-roughness.png",
+      "size": [
+        512,
+        512
+      ],
+      "colorspace": "Non-Color"
+    },
+    "dark-grille-metal-roughness": {
+      "packed": true,
+      "relative_path": "//../textures/dark-grille-metal-roughness.png",
+      "size": [
+        512,
+        512
+      ],
+      "colorspace": "Non-Color"
+    },
+    "NWR_original_chassis_label_baked": {
+      "packed": true,
+      "relative_path": "//../textures/original-chassis-label-512x768.png",
+      "size": [
+        512,
+        768
+      ],
+      "colorspace": "sRGB"
+    }
+  },
+  "packed_font_objects": 58,
+  "font_resources": [
+    {
+      "object": "SOURCE_TEXT_Fan1_known_PID",
+      "font": "Liberation Sans Bold",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_Fan2_known_PID",
+      "font": "Liberation Sans Bold.001",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_Fan3_known_PID",
+      "font": "Liberation Sans Bold.002",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PSU1_FAIL_legend",
+      "font": "Liberation Sans Bold.003",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PSU1_OK_legend",
+      "font": "Liberation Sans Bold.004",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PSU2_FAIL_legend",
+      "font": "Liberation Sans Bold.005",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PSU2_OK_legend",
+      "font": "Liberation Sans Bold.006",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_REAR_BCN_legend",
+      "font": "Liberation Sans Bold.007",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_REAR_STS_legend",
+      "font": "Liberation Sans Bold.008",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_Rear_P2_arrow_legend",
+      "font": "Liberation Sans Bold.009",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_FRONT_BCN_legend",
+      "font": "Liberation Sans Bold.010",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_FRONT_STS_legend",
+      "font": "Liberation Sans Bold.011",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_FRONT_ENV_legend",
+      "font": "Liberation Sans Bold.012",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_FRONT_1_legend",
+      "font": "Liberation Sans Bold.013",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_FRONT_2_legend",
+      "font": "Liberation Sans Bold.014",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_FRONT_3_legend",
+      "font": "Liberation Sans Bold.015",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_FRONT_4_legend",
+      "font": "Liberation Sans Bold.016",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_LS_selector_text",
+      "font": "Liberation Sans Bold.017",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_Cisco_brand_wordmark",
+      "font": "Liberation Sans Bold.018",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_Cisco_product_family_line_1",
+      "font": "Liberation Sans Bold.019",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_Cisco_product_family_line_2",
+      "font": "Liberation Sans Bold.020",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_Correct_factory_PID",
+      "font": "Liberation Sans Bold.021",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_01",
+      "font": "Liberation Sans Bold.022",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_02",
+      "font": "Liberation Sans Bold.023",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_03",
+      "font": "Liberation Sans Bold.024",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_04",
+      "font": "Liberation Sans Bold.025",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_05",
+      "font": "Liberation Sans Bold.026",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_06",
+      "font": "Liberation Sans Bold.027",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_07",
+      "font": "Liberation Sans Bold.028",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_08",
+      "font": "Liberation Sans Bold.029",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_09",
+      "font": "Liberation Sans Bold.030",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_10",
+      "font": "Liberation Sans Bold.031",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_11",
+      "font": "Liberation Sans Bold.032",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_12",
+      "font": "Liberation Sans Bold.033",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_13",
+      "font": "Liberation Sans Bold.034",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_14",
+      "font": "Liberation Sans Bold.035",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_15",
+      "font": "Liberation Sans Bold.036",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_16",
+      "font": "Liberation Sans Bold.037",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_17",
+      "font": "Liberation Sans Bold.038",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_18",
+      "font": "Liberation Sans Bold.039",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_19",
+      "font": "Liberation Sans Bold.040",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_20",
+      "font": "Liberation Sans Bold.041",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_21",
+      "font": "Liberation Sans Bold.042",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_22",
+      "font": "Liberation Sans Bold.043",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_23",
+      "font": "Liberation Sans Bold.044",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_24",
+      "font": "Liberation Sans Bold.045",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_25",
+      "font": "Liberation Sans Bold.046",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_26",
+      "font": "Liberation Sans Bold.047",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_27",
+      "font": "Liberation Sans Bold.048",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_28",
+      "font": "Liberation Sans Bold.049",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_29",
+      "font": "Liberation Sans Bold.050",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_30",
+      "font": "Liberation Sans Bold.051",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_31",
+      "font": "Liberation Sans Bold.052",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_32",
+      "font": "Liberation Sans Bold.053",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_33",
+      "font": "Liberation Sans Bold.054",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_34",
+      "font": "Liberation Sans Bold.055",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_35",
+      "font": "Liberation Sans Bold.056",
+      "packed": true
+    },
+    {
+      "object": "SOURCE_TEXT_PORT_NUMBER_36",
+      "font": "Liberation Sans Bold.057",
+      "packed": true
+    }
+  ],
+  "uv_bindings_checked_after_reopen": 1019,
+  "default_pose_delta_degrees": 0.0,
+  "mode": "MATERIAL",
+  "scene_world": true,
+  "scene_lights": true,
+  "clip_m": [
+    0.009999999776482582,
+    10.0
+  ],
+  "animation_playing": false,
+  "failures": []
+}

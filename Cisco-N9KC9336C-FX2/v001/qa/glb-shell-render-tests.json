@@ -1,0 +1,543 @@
+{
+  "pass": true,
+  "renders": [
+    {
+      "view": "top",
+      "transparent": "qa/glb-shell-top-transparent.png",
+      "sha256": "18506c89dd55a5d04dd40e8e85368259ec943a3fa43a4237dd15489edb29c568",
+      "samples": [
+        {
+          "point_m": [
+            -0.08,
+            -0.15,
+            0.043688
+          ],
+          "pixel": [
+            385,
+            310
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            -0.08,
+            0,
+            0.043688
+          ],
+          "pixel": [
+            385,
+            525
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            -0.08,
+            0.15,
+            0.043688
+          ],
+          "pixel": [
+            385,
+            739
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            0,
+            -0.15,
+            0.043688
+          ],
+          "pixel": [
+            500,
+            310
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            0,
+            0,
+            0.043688
+          ],
+          "pixel": [
+            500,
+            525
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            0,
+            0.15,
+            0.043688
+          ],
+          "pixel": [
+            500,
+            739
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            0.1,
+            -0.15,
+            0.043688
+          ],
+          "pixel": [
+            642,
+            310
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            0.1,
+            0,
+            0.043688
+          ],
+          "pixel": [
+            642,
+            525
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            0.1,
+            0.15,
+            0.043688
+          ],
+          "pixel": [
+            642,
+            739
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        }
+      ],
+      "background_composites": {
+        "light": {
+          "path": "qa/glb-shell-top-light.png",
+          "sha256": "b5299885ae084e710b6cf98e664d31cac7a969187f320c420579bbb090401888"
+        },
+        "dark": {
+          "path": "qa/glb-shell-top-dark.png",
+          "sha256": "f303035a39cedf672668241a5693e1dee28eaf820bf2b979bca42658b34bcc1d"
+        }
+      }
+    },
+    {
+      "view": "bottom-INFERRED",
+      "transparent": "qa/glb-shell-bottom-INFERRED-transparent.png",
+      "sha256": "76f39e535da3a8453995de7b9d1f549ab87a2550bb18da42b245b9192391ac18",
+      "samples": [
+        {
+          "point_m": [
+            -0.08,
+            -0.15,
+            0
+          ],
+          "pixel": [
+            614,
+            310
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            -0.08,
+            0,
+            0
+          ],
+          "pixel": [
+            614,
+            525
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            -0.08,
+            0.15,
+            0
+          ],
+          "pixel": [
+            614,
+            739
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            0,
+            -0.15,
+            0
+          ],
+          "pixel": [
+            499,
+            310
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            0,
+            0,
+            0
+          ],
+          "pixel": [
+            499,
+            525
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            0,
+            0.15,
+            0
+          ],
+          "pixel": [
+            499,
+            739
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            0.1,
+            -0.15,
+            0
+          ],
+          "pixel": [
+            357,
+            310
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            0.1,
+            0,
+            0
+          ],
+          "pixel": [
+            357,
+            525
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            0.1,
+            0.15,
+            0
+          ],
+          "pixel": [
+            357,
+            739
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        }
+      ],
+      "background_composites": {
+        "light": {
+          "path": "qa/glb-shell-bottom-INFERRED-light.png",
+          "sha256": "5cacbcf87e252dbb838e7a76ea7006b4ba424ce9887149df8d83fb5671933a44"
+        },
+        "dark": {
+          "path": "qa/glb-shell-bottom-INFERRED-dark.png",
+          "sha256": "bff8f44143519aafbea3e5e1ad9abeea8968d7f6191b28ec77ada251da4dff2f"
+        }
+      }
+    },
+    {
+      "view": "left",
+      "transparent": "qa/glb-shell-left-transparent.png",
+      "sha256": "64949ba3c3bb432f376e848c008c192cf4841280b11923b6fc12f90c941ed900",
+      "samples": [
+        {
+          "point_m": [
+            -0.21971,
+            -0.12,
+            0.01
+          ],
+          "pixel": [
+            671,
+            83
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            -0.21971,
+            -0.12,
+            0.021
+          ],
+          "pixel": [
+            671,
+            98
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            -0.21971,
+            -0.12,
+            0.032
+          ],
+          "pixel": [
+            671,
+            114
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            -0.21971,
+            0,
+            0.01
+          ],
+          "pixel": [
+            500,
+            83
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            -0.21971,
+            0,
+            0.021
+          ],
+          "pixel": [
+            500,
+            98
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            -0.21971,
+            0,
+            0.032
+          ],
+          "pixel": [
+            500,
+            114
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            -0.21971,
+            0.12,
+            0.01
+          ],
+          "pixel": [
+            328,
+            83
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            -0.21971,
+            0.12,
+            0.021
+          ],
+          "pixel": [
+            328,
+            98
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            -0.21971,
+            0.12,
+            0.032
+          ],
+          "pixel": [
+            328,
+            114
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        }
+      ],
+      "background_composites": {
+        "light": {
+          "path": "qa/glb-shell-left-light.png",
+          "sha256": "3cd7638b405a45372964e8af5f43a25e0b8819fdbfa9742b5066699ca796055b"
+        },
+        "dark": {
+          "path": "qa/glb-shell-left-dark.png",
+          "sha256": "250efcc199a6e9c65a4c45399672a22e9e86852397ac4f29c7ef1d8abbbfe0ff"
+        }
+      }
+    },
+    {
+      "view": "right",
+      "transparent": "qa/glb-shell-right-transparent.png",
+      "sha256": "dcd809cb0464503a231600a4ad4681559a9b3bb97f834b6a3fe166a94fd01a8d",
+      "samples": [
+        {
+          "point_m": [
+            0.21971,
+            -0.12,
+            0.01
+          ],
+          "pixel": [
+            328,
+            83
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            0.21971,
+            -0.12,
+            0.021
+          ],
+          "pixel": [
+            328,
+            98
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            0.21971,
+            -0.12,
+            0.032
+          ],
+          "pixel": [
+            328,
+            114
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            0.21971,
+            0,
+            0.01
+          ],
+          "pixel": [
+            499,
+            83
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            0.21971,
+            0,
+            0.021
+          ],
+          "pixel": [
+            499,
+            98
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            0.21971,
+            0,
+            0.032
+          ],
+          "pixel": [
+            499,
+            114
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            0.21971,
+            0.12,
+            0.01
+          ],
+          "pixel": [
+            671,
+            83
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            0.21971,
+            0.12,
+            0.021
+          ],
+          "pixel": [
+            671,
+            98
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        },
+        {
+          "point_m": [
+            0.21971,
+            0.12,
+            0.032
+          ],
+          "pixel": [
+            671,
+            114
+          ],
+          "min_3x3_alpha": 1.0,
+          "pass": true
+        }
+      ],
+      "background_composites": {
+        "light": {
+          "path": "qa/glb-shell-right-light.png",
+          "sha256": "825aade612f94eee963b5fe13fb32d6e9319a630aa525095fe6485a3402edafb"
+        },
+        "dark": {
+          "path": "qa/glb-shell-right-dark.png",
+          "sha256": "3d804c3091caf810bf459041b6c25daa2ef0aee3122fb2f3f966deeabf6664e7"
+        }
+      }
+    }
+  ],
+  "coverage": "36 dispersed closed-surface sample patches; actual ventilation and AA edges excluded",
+  "background_method": "Exact displayed RGBA result alpha-composited over light/dark background; object lighting and alpha unchanged. These are QA composites, not new photographs or imagegen references."
+}

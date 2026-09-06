@@ -1,0 +1,39 @@
+[
+  {
+    "id": "07-front-left-v2",
+    "prompt": "Edit the first supplied switch image. It already has exactly 18 paired columns = 36 ports; keep every port unchanged. Keep its FRONT LEFT camera and full body framing. Correct ONLY: (1) MOVE grey/yellow lid label from the far rear-left corner to the NEAR FRONT-LEFT region of the lid, immediately behind the near-edge perforation strip beside the left mounting ear. See real image2 for actual placement. Remove original far label leaving plain silver. (2) Each front ear's three holes must be horizontal obround slots, aspect 1.5, not round. Do not add any holes or parts. Neutral silver realistic industrial product. Preserve exactly 18 port columns, four side bracket screws, front labels orientation. No other changes.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/08-front-right-v1.png",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-2.jpg"
+    ],
+    "output": "outputs/07-front-left-v2.png"
+  },
+  {
+    "id": "08-front-right-v2",
+    "prompt": "Create a faithful FRONT RIGHT three-quarter product photo of this exact Cisco N9K-C9336C-FX2. Use image1 as the CAMERA direction and body/port geometry reference: visible right side extends toward UPPER-RIGHT of picture. Image2 is the exact front panel with 18 paired columns. Preserve all 18 double cages, 36 empty sockets, don't change count. Image3 supplies the traditional LEFT and RIGHT ear shapes: three horizontal obround slots each, install the two ears at the near PORT end. Full thin 1RU deep silver body, width439.42 depth622.3 incl rear handles height43.688mm. Keep broad top perforation ONLY at port end, grey/yellow label on lid near PORT END at its left. Entire device visible, medium 25deg elevation, soft light white background. Opposite viewpoint to front-left: long RIGHT side clearly on screen-right. No loose modules or dealer plaques. Exactly eighteen doubled cage columns.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/serverlama-angledside.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/01-front-v4.png",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-3.jpg"
+    ],
+    "output": "outputs/08-front-right-v2.png"
+  },
+  {
+    "id": "09-rear-left-v2",
+    "prompt": "Edit only the LID of image1; keep the rear face, both PSUs, all three fans, management and camera exactly unchanged. Correct lid according to actual photo2: remove the invented perforation band next to the NEAR REAR/service edge; instead the ONLY top ventilation band belongs at the FAR PORT edge next to distant mounting ears. Move grey/yellow label from near left to FAR RIGHT of picture on lid just inboard of FAR vent strip. Correct label orientation using real rear photo: when viewed from rear it is rotated 180deg compared with a front-view label. Main rear lid should have just subtle long narrow pressed grooves and countersunk screws, not perforation. Do not alter counts, handles, blue tabs, proportions or lighting.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/10-rear-right-v1.png",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-1.jpg"
+    ],
+    "output": "outputs/09-rear-left-v2.png"
+  },
+  {
+    "id": "10-rear-right-v2",
+    "prompt": "Photorealistic rear THREE-QUARTER view of the exact switch in supplied photo. Camera must move to the LEFT OF THIS REAR FACE, so the visible long side panel is on the LEFT of the image and extends toward UPPER-LEFT. Rear face near edge angles back upward toward screen-right. Do NOT horizontally mirror rear components: left-to-right on rear remains PSU, three wide fan trays, management panel, PSU. Exactly THREE blue-tabbed dark-grey-handled fan trays and TWO silver-U-handled AC PSUs; small management just left of right PSU, with two stacked RJ45, single SFP and vertical USB. The top lid has NO NEAR-REAR perforation. ONLY far PORT edge has perforated band and distant two traditional three-obround-slot ears. Factory grey/yellow label belongs at FAR RIGHT on lid near PORT edge, not near service edge. Full long low 1RU chassis, high fidelity neutral silver metal, white studio. No new ports or parts. Preserve visible factory design. View physical RIGHT side, seen on image LEFT when viewing from rear.",
+    "inputs": [
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/sources/third_party/nwr-1.jpg",
+      "/root/Project/rack-device-3d/Cisco-N9KC9336C-FX2/v001/imagegen/outputs/02-rear-v1.png"
+    ],
+    "output": "outputs/10-rear-right-v2.png"
+  }
+]

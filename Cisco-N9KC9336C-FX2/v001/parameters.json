@@ -1,0 +1,50 @@
+{
+  "pid": "N9K-C9336C-FX2",
+  "units": "mm",
+  "blender_units_per_metre": 1,
+  "axes": {
+    "port_face": "-Y",
+    "service_face": "+Y",
+    "front_view_right": "+X",
+    "bottom": "Z=0"
+  },
+  "official_in": {
+    "width": 17.3,
+    "depth_with_handles": 24.5,
+    "height": 1.72
+  },
+  "official_cm": {
+    "width": 43.9,
+    "depth_with_handles": 62.3,
+    "height": 4.4
+  },
+  "width": 439.42,
+  "depth_with_handles": 622.3,
+  "height": 43.688,
+  "shell_depth_estimate": 590.0,
+  "handle_projection_estimate": 32.3,
+  "ear_span_estimate": 482.6,
+  "ear_thickness_estimate": 1.8,
+  "shell_thickness_estimate": 1.0,
+  "ear_hole_width_estimate": 9.8,
+  "ear_hole_height_estimate": 6.5,
+  "port_columns": 18,
+  "ports_per_column": 2,
+  "business_ports": 36,
+  "port_pitch_estimate": 22.5,
+  "cage_width_estimate": 20.8,
+  "fan_modules": 3,
+  "rotors_per_fan_module": 2,
+  "psu_modules": 2,
+  "fan_pid": "NXA-FAN-65CFM-PE",
+  "psu_pid": "NXA-PAC-1100W-PE2",
+  "airflow": "port-side-exhaust",
+  "airflow_color": "blue",
+  "bottom_evidence": "INFERRED",
+  "geometry_numeric_tolerance_mm": 0.01,
+  "source": "sources/official/hardware-guide.pdf",
+  "pdf_physical_page": 55,
+  "pdf_printed_page": 49,
+  "cage_height_estimate": 26.52,
+  "cage_aspect_evidence": "NWR real macro ratio; generic stacked QSFP literature contextual only"
+}
