@@ -1,4 +1,0 @@
-from pathlib import Path
-import struct,json,hashlib
-p=Path('/root/Project/rack-device-3d/Dell-C6420-2.5inch/v002');b=(p/'model/DELL-PowerEdge-C6420-4N-24SFF.glb').read_bytes();n,t=struct.unpack_from('<II',b,12);g=json.loads(b[20:20+n]);m=g['materials'];r={'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest(),'gltf_version':g['asset']['version'],'nodes':len(g['nodes']),'unique_meshes':len(g['meshes']),'materials':len(m),'images':len(g['images']),'all_images_embedded':all('bufferView' in i for i in g['images']),'alpha_modes':list({x.get('alphaMode','OPAQUE') for x in m}),'double_sided_materials':[x['name'] for x in m if x.get('doubleSided',False)],'transmission_materials':[x['name'] for x in m if 'KHR_materials_transmission' in x.get('extensions',{})],'extensions':g.get('extensionsUsed',[]),'normal_map_scales':{x['name']:x['normalTexture'].get('scale',1) for x in m if 'normalTexture'in x}}
-(p/'qa/glb-container-audit.json').write_text(json.dumps(r,indent=2));print(r)

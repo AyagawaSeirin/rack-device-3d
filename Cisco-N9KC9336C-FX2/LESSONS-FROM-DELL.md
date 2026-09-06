@@ -25,6 +25,6 @@
 
 挂耳的“透明空洞”应进一步明确：几何上切穿并有孔壁，金属本体OPAQUE；背景是否可见取决于孔后真实遮挡。隔离挂耳时可期待空孔Alpha=0，正常装配有螺钉/机身时则应正确遮挡。不能把所有孔中心一律设透明，也不能用双面渲染隐藏反法线。
 
-Dell的具体证据可查：[最终QA](../Dell-C6420-2.5inch/v002/QA.md)、[孔板法线修正](../Dell-C6420-2.5inch/v002/qa/cheek-normal-correction.json)、[标签UV修复](../Dell-C6420-2.5inch/v002/qa/label-uv-repair.json)、[最终GLB旋转闭合](../Dell-C6420-2.5inch/v002/qa/glb-final-orbit-closure.json)、[路径迁移说明](../Dell-C6420-2.5inch/REPOSITORY-NOTES.md)。
+Dell的制作证据已从当前成品目录清理，可在历史提交中查看：[最终QA](https://github.com/AyagawaSeirin/rack-device-3d/blob/6df2fc4321f1bb9a02452a01e77bc4d812108193/Dell-C6420-2.5inch/v002/QA.md)、[孔板法线修正](https://github.com/AyagawaSeirin/rack-device-3d/blob/6df2fc4321f1bb9a02452a01e77bc4d812108193/Dell-C6420-2.5inch/v002/qa/cheek-normal-correction.json)、[标签UV修复](https://github.com/AyagawaSeirin/rack-device-3d/blob/6df2fc4321f1bb9a02452a01e77bc4d812108193/Dell-C6420-2.5inch/v002/qa/label-uv-repair.json)、[最终GLB旋转闭合](https://github.com/AyagawaSeirin/rack-device-3d/blob/6df2fc4321f1bb9a02452a01e77bc4d812108193/Dell-C6420-2.5inch/v002/qa/glb-final-orbit-closure.json)、[路径迁移说明](https://github.com/AyagawaSeirin/rack-device-3d/blob/6df2fc4321f1bb9a02452a01e77bc4d812108193/Dell-C6420-2.5inch/REPOSITORY-NOTES.md)。
 
 Dell使用过的间距、板厚、面数或材质值不是Cisco的固定参数；这里迁移的是核验方法，不是把另一台设备的数据直接套过去。
