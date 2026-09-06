@@ -1,0 +1,2794 @@
+Dell EMC PowerEdge C6420
+Installation and Service Manual
+Regulatory Model: E43S Series
+Regulatory Type: E43S001
+December 2021
+Rev. A15
+Notes, cautions, and warnings
+NOTE: A NOTE indicates important information that helps you make better use of your product.
+CAUTION: A CAUTION indicates either potential damage to hardware or loss of data and tells you how to avoid
+the problem.
+WARNING: A WARNING indicates a potential for property damage, personal injury, or death.
+© 2017 - 2021 Dell Inc. or its subsidiaries. All rights reserved. Dell, EMC, and other trademarks are trademarks of Dell Inc. or its subsidiaries.
+Other trademarks may be trademarks of their respective owners.
+Chapter 1: Dell EMC PowerEdge C6420 overview.......................................................................... 6
+Supported configurations.................................................................................................................................................. 6
+Back view of the PowerEdge C6420 sled..................................................................................................................... 8
+Network ports indicator codes.........................................................................................................................................9
+Sled to hard drive mapping...............................................................................................................................................11
+Expander zoning..................................................................................................................................................................11
+Locating the Service Tag of your system.................................................................................................................... 13
+System information label..................................................................................................................................................14
+Chapter 2: Initial system setup and configuration........................................................................ 17
+Setting up your system.....................................................................................................................................................17
+iDRAC configuration.......................................................................................................................................................... 17
+Options to set up iDRAC IP address........................................................................................................................17
+Log in to iDRAC............................................................................................................................................................ 18
+Options to install the operating system........................................................................................................................18
+Methods to download firmware and drivers..........................................................................................................18
+Downloading drivers and firmware...........................................................................................................................19
+Chapter 3: Installing and removing enclosure components.......................................................... 20
+Safety instructions............................................................................................................................................................20
+Before working inside your system...............................................................................................................................20
+After working inside your system...................................................................................................................................21
+Recommended tools..........................................................................................................................................................21
+Dell EMC PowerEdge C6420 sled..................................................................................................................................21
+Sled Installation Guidelines.........................................................................................................................................21
+Removing a sled ..........................................................................................................................................................22
+Installing a sled ............................................................................................................................................................24
+PERC battery..................................................................................................................................................................... 26
+Removing the PERC battery.................................................................................................................................... 26
+Installing the PERC battery.......................................................................................................................................27
+Air shroud............................................................................................................................................................................28
+Removing the air shroud............................................................................................................................................28
+Installing the air shroud .............................................................................................................................................29
+System memory.................................................................................................................................................................30
+System memory guidelines........................................................................................................................................30
+General memory module installation guidelines.....................................................................................................31
+Removing a memory module.....................................................................................................................................33
+Installing a memory module.......................................................................................................................................34
+Support bracket.................................................................................................................................................................35
+Removing the support bracket................................................................................................................................ 35
+Installing the support bracket...................................................................................................................................36
+Linking board and PCIe cable......................................................................................................................................... 37
+Removing the linking board and PCIe cables........................................................................................................37
+Installing the linking board and PCIe cables..........................................................................................................38
+Contents
+Contents
+3
+Processor and heat sink module....................................................................................................................................39
+Removing a processor and heat sink module....................................................................................................... 40
+Installing a processor and heat sink module.......................................................................................................... 41
+Removing the fabric processor from the processor heat sink module...........................................................43
+Installing the fabric processor into the processor heat sink module.............................................................. 44
+Removing the non-fabric processor from the processor and heat sink module..........................................46
+Installing the non-fabric processor into a processor and heat sink module..................................................49
+Removing the fabric and sideband cables..............................................................................................................51
+Installing the fabric and sideband cables...............................................................................................................52
+Expansion cards.................................................................................................................................................................53
+PCIe slot priority .........................................................................................................................................................53
+Removing the expansion card riser assembly.......................................................................................................56
+Installing the expansion card riser assembly.........................................................................................................56
+Removing an expansion card.................................................................................................................................... 57
+Installing an expansion card......................................................................................................................................59
+Removing the riser card............................................................................................................................................ 60
+Installing the riser card................................................................................................................................................61
+Removing the M.2 SATA x16 riser...........................................................................................................................62
+Installing the M.2 SATA x16 riser.............................................................................................................................63
+Removing the M.2 SATA card..................................................................................................................................64
+Installing the M.2 SATA card....................................................................................................................................65
+M.2 SSD module................................................................................................................................................................66
+Removing the M.2 SATA x16 riser...........................................................................................................................67
+Installing the M.2 SATA x16 riser.............................................................................................................................67
+Removing the M.2 SATA card..................................................................................................................................68
+Installing the M.2 SATA card....................................................................................................................................69
+Mezzanine and OCP cards...............................................................................................................................................71
+Removing a mezzanine card......................................................................................................................................71
+Installing a mezzanine card....................................................................................................................................... 72
+Removing the mezzanine card bridge board ....................................................................................................... 73
+Installing the mezzanine card bridge board...........................................................................................................74
+Removing the OCP card............................................................................................................................................ 75
+Installing the OCP card.............................................................................................................................................. 75
+System battery...................................................................................................................................................................76
+Replacing system battery.......................................................................................................................................... 76
+Installing the system battery.....................................................................................................................................77
+System board......................................................................................................................................................................78
+Removing the system board..................................................................................................................................... 78
+Installing system board ..............................................................................................................................................79
+Trusted Platform Module.................................................................................................................................................81
+Upgrading the Trusted Platform Module................................................................................................................81
+Initializing TPM for BitLocker users........................................................................................................................82
+Initializing the TPM 1.2 for TXT users.................................................................................................................... 83
+Initializing the TPM 2.0 for TXT users................................................................................................................... 83
+Chapter 4: System diagnostics....................................................................................................84
+Dell Embedded System Diagnostics..............................................................................................................................84
+Running the Embedded System Diagnostics from Boot Manager.................................................................. 84
+Running the Embedded System Diagnostics from the Dell Lifecycle Controller......................................... 84
+System diagnostic controls.......................................................................................................................................84
+4
+Contents
+Chapter 5: Jumpers and connectors ........................................................................................... 86
+System board jumper settings....................................................................................................................................... 86
+System board connectors............................................................................................................................................... 86
+Disabling forgotten password.........................................................................................................................................87
+Chapter 6: Getting help...............................................................................................................88
+Contacting Dell EMC........................................................................................................................................................88
+Documentation feedback................................................................................................................................................ 88
+Accessing system information by using QRL............................................................................................................. 88
+Quick Resource Locator for C6400 and C6420 systems..................................................................................89
+Receiving automated support with SupportAssist .................................................................................................. 89
+Recycling or End-of-Life service information............................................................................................................ 89
+Chapter 7: Documentation resources...........................................................................................90
+Contents
+5
+Dell EMC PowerEdge C6420 overview
+The PowerEdge C6420 sled supports up to two Intel Xeon Scalable processors with 28 cores per processor. The sled also
+supports dedicated mezzanine, PCIe and Open Compute Project (OCP) adapters for expansion and connectivity.
+NOTE: The Intel Xeon Scalable processor with fabric connector is also known as Native Omnipath.
+Topics:
+•
+Supported configurations
+•
+Back view of the PowerEdge C6420 sled
+•
+Network ports indicator codes
+•
+Sled to hard drive mapping
+•
+Expander zoning
+•
+Locating the Service Tag of your system
+•
+System information label
+Supported configurations
+The PowerEdge C6420 system supports the following configurations:
+1
+6
+Dell EMC PowerEdge C6420 overview
+Figure 1. Supported configurations for PowerEdge C6420
+Chassis configuration summary table
+Table 1. Chassis configuration summary table 
+PE C6400 Chassis Config.
+PEC6420 support
+PEC6520 support
+24 x 2.5" SAS/SATA Backplane
+Yes
+Yes
+8 x 2.5" NVME + 16 X 2.5" SAS/SATA
+backplane
+Yes
+Yes
+12 x 3.5" SAS/SATA Backplane
+Yes
+Yes
+Diskless No backplane
+Yes
+Yes
+Expander Backplane
+Yes
+No
+24 x 2.5" All/PURE NVME backplane
+No
+Yes
+Dell EMC PowerEdge C6420 overview
+7
+Back view of the PowerEdge C6420 sled
+Figure 2. Back view of the PowerEdge C6420 sled
+Table 2. Back panel features 
+Item
+Indicator, button, or
+connector
+Icon
+Description
+1
+Mezzanine card slot
+N/A
+Enables you to connect
+mezzanine expansion cards.
+For more information, see the
+Dell EMC PowerEdge C6420
+Technical Specifications on
+the product documentation
+page.
+2
+Sled release handle
+N/A
+Enables you to remove the
+sled from the enclosure.
+3
+Low Profile PCIe card slot
+N/A
+Enables you to connect PCI
+Express expansion cards. For
+more information, see the
+Dell EMC PowerEdge C6420
+Technical Specifications on
+the product documentation
+page.
+4
+Sled release lock
+N/A
+Enables you to remove the
+sled from the enclosure.
+5
+Rear power button
+N/A
+Enables you to power on the
+sled while accessing it from
+the rear.
+6
+iDRAC or NIC port
+Enables you to remotely
+access iDRAC. For more
+information, see the
+Integrated Dell Remote
+Access Controller User's
+Guide at www.dell.com/
+idracmanuals
+7
+Mini display port
+Enables you to connect a
+display device to the system.
+For more information, see the
+Dell EMC PowerEdge C6420
+8
+Dell EMC PowerEdge C6420 overview
+Table 2. Back panel features (continued)
+Item
+Indicator, button, or
+connector
+Icon
+Description
+Technical Specifications on
+the product documentation
+page.
+8
+iDRAC Direct micro USB port
+Enables you to connect a
+portable device to the sled.
+9
+OCP or OPA card slot
+N/A
+Enables you to connect
+Open Compute Project (OCP)
+or Omni-Path Architecture
+(OPA) expansion cards. For
+more information, see the
+Dell EMC PowerEdge C6420
+Technical Specifications on
+the product documentation
+page.
+10
+EST pull out tab
+N/A
+This tab has the unique
+Express Service Code,
+Service Tag, and MAC
+address labels.
+11
+System id indicator
+The System Identification(ID)
+LED is available on the back
+of the system. Press the
+system ID button on the front
+of the enclosure to identify a
+system in a rack.
+12
+USB 3.0 port (2)
+The USB ports are 9-pin and
+3.0-compliant. These ports
+enable you to connect USB
+devices to the system.
+Network ports indicator codes
+Figure 3. LAN indicators on the QSFP OCP card
+1.
+Link indicator
+2. Activity indicator
+Dell EMC PowerEdge C6420 overview
+9
+Table 3. QSFP port on OCP card indicator codes 
+Connection State
+QSFP Upper green LED
+QSFP Lower green LED
+No link/Not Connected
+Off
+Off
+InfiniBand Physical Link - No Logical Link
+Green
+Off
+InfiniBand Logical Link - No Traffic
+Green
+Green
+InfiniBand Logical Link - Traffic
+Green
+Blink
+InfiniBand Physical Link Issue
+Blink
+Green
+Ethernet Link - No Traffic
+Green
+Green
+Ethernet - Traffic
+Green
+Blink
+NOTE: The LED blink speed varies according to the traffic bandwidth.
+Figure 4. Ethernet port indicator codes
+1.
+Speed indicator
+2. Link and activity indicator
+Table 4. Ethernet port indicator codes 
+Convention
+Status
+Condition
+A
+Link and activity indicators are off
+The NIC is not connected to the network.
+B
+Link indicator is green
+The NIC is connected to a valid network at its maximum port speed.
+C
+Link indicator is amber
+The NIC is connected to a valid network at less than its maximum port
+speed.
+D
+Activity indicator is flashing green
+Network data is being sent or received.
+10
+Dell EMC PowerEdge C6420 overview
+Sled to hard drive mapping
+Figure 5. Sled to drive mapping for 24 x 2.5-inch drive configuration
+1.
+Drives 0–5 mapped to sled 1
+2. Drives 6–11 mapped to sled 2
+3. Drives 12–17 mapped to sled 3
+4. Drives 18–23 mapped to sled 4
+5. (Optional) NVMe hard drive location
+Figure 6. Sled to drive mapping for 12 x 3.5-inch drive configuration
+1.
+Drives 0–2 mapped to sled 1
+2. Drives 3–5 mapped to sled 2
+3. Drives 6–8 mapped to sled 3
+4. Drives 9–11 mapped to sled 4
+NOTE: The warranty of the drives are linked to the Service Tag of the corresponding sled.
+Expander zoning
+A SAS expander board allows higher, single-volume hard drive configurations. An integrated expander device expands each sleds
+hard drive footprint.
+The Dell EMC PowerEdge C6400 enclosure supports four sled access to a single expander controller at the same time. The
+enclosure provides two expander zoning options:
+●
+Up to 6 SAS/SATA device of each sled in Split Mode (6+6+6+6)
+Dell EMC PowerEdge C6420 overview
+11
+●
+Up to 12 SAS/SATA device of sled 1 and sled 3 in Zoning Mode (12+12)
+NOTE:
+●
+Install expander firmware 2.07 or later to support these configurations
+●
+The expander mode works only with a PERC card, and is not supported by the onboard SATA controller.
+12
+Dell EMC PowerEdge C6420 overview
+Locating the Service Tag of your system
+Your system is identified by a unique Express Service Code and Service Tag number. The Express Service Code and Service
+Tag are found on the back of the sled by pulling out the EST tag. This information is used by Dell to route support calls to the
+appropriate personnel.
+Figure 7. Locating the Service Tag of your system
+1.
+information tag (top view)
+2. Express Service Tag label
+3. information tag (bottom view)
+4. network MAC address information label
+5. iDRAC MAC address information label
+Dell EMC PowerEdge C6420 overview
+13
+System information label
+System board information
+Figure 8. System board connections
+14
+Dell EMC PowerEdge C6420 overview
+Mechanical overview
+Figure 9. Mechanical overview
+Memory information
+Figure 10. Memory information
+Dell EMC PowerEdge C6420 overview
+15
+Jumper settings
+Figure 11. Jumper settings
+16
+Dell EMC PowerEdge C6420 overview
+Initial system setup and configuration
+Topics:
+•
+Setting up your system
+•
+iDRAC configuration
+•
+Options to install the operating system
+Setting up your system
+Perform the following steps to set up your system:
+Steps
+1.
+Unpack the system.
+2. Install the system into the rack. For more information about installing the system into the rack, see the Rail Installation Guide
+at www.dell.com/poweredgemanuals.
+3. Connect the peripherals to the system.
+4. Connect the system to its electrical outlet.
+5. Power on the system by pressing the power button or by using iDRAC.
+6. Power on the attached peripherals.
+For more information about setting up your system, see the Getting Started Guide that shipped with your system.
+For information on how to manage basic settings and features of the system, see the Dell EMC PowerEdge C6420 BIOS and
+UEFI Reference Guide on the product documentation page.
+iDRAC configuration
+The Integrated Dell Remote Access Controller (iDRAC) is designed to make system administrators more productive and improve
+the overall availability of Dell systems. iDRAC alerts administrators about system issues and enables them to perform remote
+system management. This reduces the need for physical access to the system.
+Options to set up iDRAC IP address
+To enable communication between your system and iDRAC, you must first configure the network settings based on your
+network infrastructure.
+NOTE: For static IP configuration, you must request for it at the time of purchase.
+This option is set to DHCP by Default. You can set up the IP address by using one of the following interfaces:
+Interfaces
+Document/Section
+iDRAC Settings
+utility
+Dell Integrated Dell Remote Access Controller User's Guide at www.dell.com/poweredgemanuals
+Dell Deployment
+Toolkit
+Dell Deployment Toolkit User’s Guide at www.dell.com/openmanagemanuals > OpenManage Deployment
+Toolkit
+Dell Lifecycle
+Controller
+Dell Lifecycle Controller User’s Guide at www.dell.com/poweredgemanuals
+2
+Initial system setup and configuration
+17
+Interfaces
+Document/Section
+iDRAC Direct and
+Quick Sync 2
+(optional)
+See Dell Integrated Dell Remote Access Controller User's Guide at www.dell.com/poweredgemanuals
+NOTE: To access iDRAC, ensure that you connect the ethernet cable to the iDRAC9 dedicated network port. You can also
+access iDRAC through the shared LOM mode, if you have opted for a system that has the shared LOM mode enabled.
+Log in to iDRAC
+You can log in to iDRAC as:
+●
+iDRAC user
+●
+Microsoft Active Directory user
+●
+Lightweight Directory Access Protocol (LDAP) user
+The default user name and password are root and calvin.
+NOTE: You must have the iDRAC credentials to log in to iDRAC.
+NOTE: Ensure that you change the default username and password after setting up the iDRAC IP address.
+For more information about logging in to the iDRAC and iDRAC licenses, see the latest Integrated Dell Remote Access Controller
+User's Guide at www.dell.com/poweredgemanuals.
+You can also access iDRAC by using RACADM. For more information, see the RACADM Command Line Interface Reference
+Guide at www.dell.com/poweredgemanuals.
+Options to install the operating system
+If the system is shipped without an operating system, install a supported operating system by using one of the following
+resources:
+Table 5. Resources to install the operating system 
+Resources
+Location
+iDRAC
+www.dell.com/idracmanuals
+Lifecycle Controller
+www.dell.com/idracmanuals > Lifecycle Controller
+OpenManage Deployment Toolkit
+www.dell.com/openmanagemanuals > OpenManage
+Deployment Toolkit
+Dell certified VMware ESXi
+www.dell.com/virtualizationsolutions
+Installation and How-to videos for supported operating
+systems on PowerEdge systems
+Supported Operating Systems for Dell EMC PowerEdge
+systems
+Methods to download firmware and drivers
+You can download the firmware and drivers by using any of the following methods:
+Table 6. Firmware and drivers 
+Methods
+Location
+From the Dell EMC support site
+www.dell.com/support/home
+Using Dell Remote Access Controller Lifecycle Controller
+(iDRAC with LC)
+www.dell.com/idracmanuals
+Using Dell Repository Manager (DRM)
+www.dell.com/openmanagemanuals > Repository Manager
+18
+Initial system setup and configuration
+Table 6. Firmware and drivers (continued)
+Methods
+Location
+Using Dell OpenManage Essentials
+www.dell.com/openmanagemanuals > OpenManage Essentials
+Using Dell OpenManage Enterprise
+www.dell.com/openmanagemanuals > OpenManage
+Enterprise
+Using Dell Server Update Utility (SUU)
+www.dell.com/openmanagemanuals > Server Update Utility
+Using Dell OpenManage Deployment Toolkit (DTK)
+www.dell.com/openmanagemanuals > OpenManage
+Deployment Toolkit
+Using iDRAC virtual media
+www.dell.com/idracmanuals
+Downloading drivers and firmware
+Dell EMC recommends that you download and install the latest BIOS, drivers, and systems management firmware on your
+system.
+Prerequisites
+Ensure that you clear the web browser cache before downloading the drivers and firmware.
+Steps
+1.
+Go to www.dell.com/support/home.
+2. In the Drivers & Downloads section, type the Service Tag of your system in the Enter a Service Tag or product ID box,
+and then click Submit.
+NOTE: If you do not have the Service Tag, select Detect Product to allow the system to automatically detect the
+Service Tag, or click View products, and navigate to your product.
+3. Click Drivers & Downloads.
+The drivers that are applicable to your system are displayed.
+4. Download the drivers to a USB drive, CD, or DVD.
+Initial system setup and configuration
+19
+Installing and removing enclosure
+components
+Topics:
+•
+Safety instructions
+•
+Before working inside your system
+•
+After working inside your system
+•
+Recommended tools
+•
+Dell EMC PowerEdge C6420 sled
+•
+PERC battery
+•
+Air shroud
+•
+System memory
+•
+Support bracket
+•
+Linking board and PCIe cable
+•
+Processor and heat sink module
+•
+Expansion cards
+•
+M.2 SSD module
+•
+Mezzanine and OCP cards
+•
+System battery
+•
+System board
+•
+Trusted Platform Module
+Safety instructions
+NOTE: Whenever you need to lift the system, get others to assist you. To avoid injury, do not attempt to lift the system by
+yourself.
+WARNING: Opening or removing the system cover while the system is powered on may expose you to a risk of
+electric shock.
+CAUTION: Do not operate the system without the cover for a duration exceeding five minutes. Operating the
+system without the system cover can result in component damage.
+CAUTION: Many repairs may only be done by a certified service technician. You should only perform
+troubleshooting and simple repairs as authorized in your product documentation, or as directed by the online or
+telephone service and support team. Damage due to servicing that is not authorized by Dell is not covered by
+your warranty. Read and follow the safety instructions that are shipped with your product.
+NOTE: It is recommended that you always use an antistatic mat and antistatic strap while working on components inside
+the system.
+CAUTION: To ensure proper operation and cooling, all bays in the system and system fans must be always
+populated with a component or a blank.
+Before working inside your system
+Prerequisites
+Follow the safety guidelines listed in Safety instructions.
+3
+20
+Installing and removing enclosure components
+Steps
+1.
+Power off the system, including all attached peripherals.
+2. Disconnect the system from the electrical outlet and disconnect the peripherals.
+After working inside your system
+Prerequisites
+Follow the safety guidelines listed in Safety instructions.
+Steps
+1.
+Install the sled into the enclosure.
+2. Reconnect the peripherals and connect the system to the electrical outlet.
+3. Power on the attached peripherals and then power on the system.
+Recommended tools
+You need the following tools to perform the removal and installation procedures:
+●
+Phillips #1 screwdriver
+●
+Phillips #2 screwdriver
+●
+1/4 inch flat head screwdriver
+●
+Wrist grounding strap
+●
+ESD mat
+Dell EMC PowerEdge C6420 sled
+Sled Installation Guidelines
+NOTE: Ensure to install a sled blank in all the empty slots. Operating the enclosure without a blank results in overheating.
+NOTE: For optimized thermal operation, ensure to follow the sled population sequence mentioned below:
+Installing and removing enclosure components
+21
+Figure 12. Sled Installation Guidelines
+Removing a sled
+Prerequisites
+1.
+Follow the safety guidelines listed in Safety Instructions.
+NOTE: For optimized thermal performance, see Sled installation guidelines.
+NOTE: The procedure to remove a sled blank or a sled are the same.
+Steps
+Press the retaining latch and using the sled pull handle, slide the sled out of the enclosure horizontally.
+CAUTION: Ensure that the sled is supported with both hands while it is being slid out.
+22
+Installing and removing enclosure components
+Figure 13. Removing a sled
+CAUTION: If you are permanently removing the sled, install a sled blank promptly. Operating the enclosure
+without a blank, for an extended time can result in overheating.
+Figure 14. Removing a sled blank
+Installing and removing enclosure components
+23
+Next steps
+1.
+Install the sled or Install a sled blank.
+Installing a sled
+Prerequisites
+1.
+Follow the safety guidelines listed in Safety Instructions.
+NOTE: For optimized thermal performance, see Sled installation guidelines.
+Steps
+1.
+Align the sled to the enclosure horizontally to insert the sled into the enclosure.
+Figure 15. Installing a sled
+24
+Installing and removing enclosure components
+Figure 16. Installing a sled blank
+2. Push the blue retention latch to slide the sled into the enclosure, and stop the sled at a distance of 20-30 mm before
+complete insertion of the sled as shown in the image below.
+CAUTION: To avoid any damages to the pins on the sled, do not force the sled into the enclosure. Follow the
+two-position insertion and gently slide the sled into the enclosure.
+Installing and removing enclosure components
+25
+Figure 17. Stop the sled at a distance of 20-30 mm before complete insertion
+3. Slide the blue retention latch gently, until the sled locks into the place.
+Next steps
+1.
+Follow the procedure listed in After working inside your enclosure.
+NOTE: To add the Service Tag of the system board to match the Service Tag of the physical node, contact Dell
+Technical Support.
+PERC battery
+Removing the PERC battery
+Prerequisites
+1.
+Follow the safety guidelines listed in Safety instructions.
+2. Follow the procedure listed in Before working inside your system.
+3. Remove the sled from the enclosure.
+4. If applicable, disconnect the battery cable from the PERC card.
+CAUTION: Do not hold the battery cable and lift the battery out.
+Steps
+Holding the cable end of the battery, lift the battery out of the air shroud.
+26
+Installing and removing enclosure components
+Figure 18. Removing the PERC battery
+Next steps
+1.
+Install the PERC battery.
+Installing the PERC battery
+Prerequisites
+1.
+Follow the safety guidelines listed in Safety instructions.
+2. Follow the procedure listed in After working inside your system.
+3. Install the sled from the enclosure.
+4. If applicable, connect the battery cable from the PERC card.
+Steps
+1.
+Align and insert the non cable end of the PERC battery into the battery slot on the air shroud.
+2. Press the battery until it locks into place.
+Installing and removing enclosure components
+27
+Figure 19. Installing the PERC battery
+Next steps
+1.
+If disconnected, connect the battery cable to the PERC card.
+2. Follow the procedure listed in After working inside your system.
+Air shroud
+Removing the air shroud
+Prerequisites
+1.
+Follow the safety guidelines listed in Safety instructions.
+2. Follow the procedure listed in Before working inside your system.
+3. If applicable, disconnect the battery cable from the PERC card.
+Steps
+1.
+Press the clip on the air shroud to release the shroud from the sled.
+2. Remove the shroud by rotating the shroud and releasing the hinge from the slot on the system.
+28
+Installing and removing enclosure components
+Figure 20. Removing the air shroud
+Next steps
+1.
+Install the air shroud.
+Installing the air shroud
+Prerequisites
+1.
+Follow the safety guidelines listed in Safety instructions.
+Steps
+1.
+Insert the air shroud into the sled, aligning the shroud hinge with slot on the sled.
+NOTE: Ensure that both the SATA cables are routed through the air shroud cable guide slot behind the air shroud
+latches.
+NOTE: Ensure that neither of the cables are pinched or pressed under the air shroud.
+2. Press the air shroud until the locks click into place.
+Installing and removing enclosure components
+29
+Figure 21. Installing the air shroud
+Next steps
+1.
+If disconnected, connect the battery cable to the PERC card.
+2. Follow the procedure listed in After working inside your system.
+System memory
+System memory guidelines
+The PowerEdge system supports DDR4 registered DIMMs (RDIMMs) and Load Reduced DIMMs (LRDIMMs). System memory
+holds the instructions that are executed by the processor.
+Your system contains 16 memory sockets that are split into two sets of 8 sockets, one set per processor. Each 8-socket set is
+organized into channels. In each channel, the release tabs of the first socket are marked white, the second socket black.
+Figure 22. Memory socket locations
+Memory channels are organized as follows:
+Table 7. Memory channels 
+Processor
+Channel 0
+Channel 1
+Channel 2
+Channel 3
+Channel 4
+Channel 5
+Processor 1
+Slots A1 and A7
+Slots A2
+Slots A3
+Slots A8 and A4
+Slots A5
+Slots A6
+30
+Installing and removing enclosure components
+Table 7. Memory channels (continued)
+Processor
+Channel 0
+Channel 1
+Channel 2
+Channel 3
+Channel 4
+Channel 5
+Processor 2
+Slots B1 and B7
+Slots B2
+Slots B3
+Slots B8 and B4
+Slots B5
+Slots B6
+General memory module installation guidelines
+To ensure optimal performance of your system, observe the following general guidelines when configuring your system memory.
+If your system's memory configurations fail to observe these guidelines, your system might not boot, stop responding during
+memory configuration, or operate with reduced memory.
+The memory bus may operate at frequencies 2933 MT/s, 2666 MT/s, 2400 MT/s, or 2133 MT/s depending on the following
+factors:
+●
+System profile selected (for example, Performance Optimized, or Custom [can be run at high speed or lower])
+●
+Maximum supported DIMM speed of the processors. For memory frequency of 2933 MT/s, one DIMM per channel is
+supported.
+●
+Maximum supported DIMM speed of the processors.
+●
+Maximum supported speed of the DIMMs
+NOTE: MT/s indicates DIMM speed in MegaTransfers per second.
+The system supports Flexible Memory Configuration, enabling the system to be configured and run in any valid chipset
+architectural configuration. The following are the recommended guidelines for installing memory modules:
+●
+All DIMMs must be DDR4.
+●
+RDIMMs and LRDIMMs must not be mixed.
+●
+64 GB LRDIMMs that are DDP (Dual Die Package) LRDIMMs must not be mixed with 128 GB LRDIMMs that are TSV
+(Through Silicon Via/3DS) LRDIMMs.
+●
+x4 and x8 DRAM based memory modules can be mixed.
+●
+Up to two RDIMMs can be populated per channel regardless of rank count.
+●
+Up to two LRDIMMs can be populated per channel regardless of rank count.
+●
+A maximum of two different ranked DIMMs can be populated in a channel regardless of rank count.
+●
+If memory modules with different speeds are installed, they will operate at the speed of the slowest installed memory
+module(s).
+●
+Populate memory module sockets only if a processor is installed.
+○
+For single-processor systems, sockets A1 to A8 are available.
+○
+For dual-processor systems, sockets A1 to A8 and sockets B1 to B8 are available.
+●
+Populate all the sockets with white release tabs first, followed by the black release tabs.
+●
+When mixing memory modules with different capacities, populate the sockets with memory modules with the highest
+capacity first.
+NOTE: For example, if you want to mix 8 GB and 16 GB memory modules, populate 16 GB memory modules in the
+sockets with white release tabs and 8 GB memory modules in the sockets with black release tabs.
+●
+Memory modules of different capacities can be mixed provided other memory population rules are followed.
+NOTE: For example, 8 GB and 16 GB memory modules can be mixed.
+●
+In a dual-processor configuration, the memory configuration for each processor must be identical.
+NOTE: For example, if you populate socket A1 for processor 1, then populate socket B1 for processor 2, and so on.
+●
+Mixing of more than two memory module capacities in one system is not supported.
+●
+Unbalanced memory configurations will result in a performance loss so always populate memory channels identically with
+identical DIMMs for best performance.
+●
+Populate six identical memory modules per processor (one DIMM per channel) at a time to maximize performance.
+DIMM population update for Performance Optimized mode with quantity of 4 and 8 DIMMs per processor.
+●
+When the DIMM quantity is 4 per processor, the population is slot 1, 2, 4, 5.
+●
+When the DIMM quantity is 8 per processor, the population is slot 1, 2, 3, 4, 5, 6, 7, 8.
+Mode-specific guidelines
+The configurations allowed depend on the memory mode selected in the System BIOS.
+Installing and removing enclosure components
+31
+Table 8. Memory operating modes 
+Memory Operating Mode
+Description
+Optimizer Mode
+The Optimizer Mode if enabled, the DRAM controllers operate independently in the
+64-bit mode and provide optimized memory performance.
+Mirror Mode
+The Mirror Mode if enabled, the system maintains two identical copies of data in
+memory, and the total available system memory is one half of the total installed physical
+memory. Half of the installed memory is used to mirror the active memory modules.
+This feature provides maximum reliability and enables the system to continue running
+even during a catastrophic memory failure by switching over to the mirrored copy.
+The installation guidelines to enable Mirror Mode require that the memory modules be
+identical in size, speed, and technology, and they must be populated in sets of 6 per
+processor.
+Single Rank Spare Mode
+Single Rank Spare Mode allocates one rank per channel as a spare. If excessive
+correctable errors occur in a rank or channel, while the operating system is running, they
+are moved to the spare area to prevent errors from causing an uncorrectable failure.
+Requires two or more ranks to be populated in each channel.
+Multi Rank Spare Mode
+Multi Rank Spare Mode allocates two ranks per channel as a spare. If excessive
+correctable errors occur in a rank or channel, while the operating system is running, they
+are moved to the spare area to prevent errors from causing an uncorrectable failure.
+Requires three or more ranks to be populated in each channel.
+With single rank memory sparing enabled, the system
+memory available to the operating system is reduced by one
+rank per channel.
+For example, in a dual-processor configuration with sixteen 16 GB single-rank memory
+modules, the available system memory is: 3/4 (ranks/channel) × 16 (memory modules)
+× 16 GB = 192 GB, and not 16 (memory modules) × 16 GB = 256 GB. For multi rank
+sparing, the multiplier changes to 1/2 (ranks/channel).
+NOTE: To use memory sparing, this feature must be enabled in the BIOS menu of
+System Setup.
+NOTE: Memory sparing does not offer protection against a multi-bit uncorrectable
+error.
+Dell Fault Resilient Mode
+The Dell Fault Resilient Mode if enabled, the BIOS creates an area of memory that is
+fault resilient. This mode can be used by an OS that supports the feature to load critical
+applications or enables the OS kernel to maximize system availability.
+NOTE: This feature is only supported in Gold and Platinum Intel processors.
+NOTE: Memory configuration has to be of same size DIMM, speed, and rank.
+Optimizer Mode
+This mode supports Single Device Data Correction (SDDC) only for memory modules that use x4 device width. It does not
+impose any specific slot population requirements.
+●
+Dual processor: Populate the slots in round robin sequence starting with processor 1.
+NOTE: Processor 1 and processor 2 population should match.
+Table 9. Memory population rules 
+Processor
+Configuration
+Memory population
+Memory population information
+Single processor
+Optimizer (Independent
+channel) population order
+1, 2, 4, 5
+Odd amount of DIMMs per
+processor allowed.
+Mirror population order
+{1, 2, 3, 4, 5, 6}
+Mirroring is supported with 6
+DIMMs per processor
+32
+Installing and removing enclosure components
+Table 9. Memory population rules (continued)
+Processor
+Configuration
+Memory population
+Memory population information
+Single rank sparing population
+order
+1, 2, 3, 4, 5, 6, 7, 8
+Populate in this order, odd amount
+per processor allowed. Requires
+two ranks or more per channel.
+Multi rank sparing population
+order
+1, 2, 3, 4, 5, 6, 7, 8
+Populate in this order, odd amount
+per processor allowed. Requires
+three ranks or more per channel.
+Fault resilient population order
+{1, 2, 3, 4, 5, 6}
+Supported with 6 DIMMs per
+processor.
+Dual processor (Start
+with processor1.
+processor1 and
+processor 2
+population should
+match)
+Optimized (Independent
+channel) population order
+A{1}, B{1}, A{2}, B{2}, A{4},
+B{4}, A{5}, B{5}
+Odd amount of DIMMs per
+processor allowed.
+Mirroring population order
+A{1,2,3,4,5,6},
+B{1,2,3,4,5,6}
+Mirroring is supported with 6
+DIMMs per processor.
+Single rank sparing population
+order
+A{1}, B{1}, A{2}, B{2}, A{3},
+B{3}…
+Populate in this order, odd amount
+per processor allowed. Requires
+two ranks or more per channel.
+Multi rank spare population
+order
+A{1}, B{1}, A{2}, B{2}, A{3},
+B{3}…
+Populate in this order, odd amount
+per processor allowed. Requires
+three ranks or more per channel.
+Fault resilient population order
+A{1,2,3,4,5,6},
+B{1,2,3,4,5,6}
+Supported with 6 DIMMs per
+processor.
+Removing a memory module
+The procedure for removing a DIMM module and an NVDIMM-N module is identical.
+Prerequisites
+1.
+Follow the safety guidelines listed in Safety instructions.
+2. Follow the procedure listed in Before working inside your system.
+CAUTION: To prevent data loss and potential damage to your system, ensure that your system, LEDs on
+system, LEDs on NVDIMM-N and LEDs on NVDIMM-N battery are turned off before removing the NVDIMM-N
+battery.
+3. Remove the air shroud.
+WARNING: Allow the memory modules to cool after you power off the system. Handle the memory modules by
+the card edges and avoid touching the components or metallic contacts on the memory module.
+CAUTION: To ensure proper system cooling, memory module blanks must be installed in any memory socket that
+is not occupied. Remove memory module blanks only if you intend to install memory modules in those sockets.
+Steps
+1.
+Locate the appropriate memory module socket.
+CAUTION: Handle each memory module only by the card edges, ensuring not to touch the middle of the
+memory module or metallic contacts.
+2. Push the ejectors outward on both ends of the memory module socket to release the memory module from the socket.
+3. Lift and remove the memory module from the system.
+Installing and removing enclosure components
+33
+Figure 23. Removing a memory module
+Next steps
+1.
+Install the memory module.
+CAUTION: If you are removing the memory module permanently, install a memory module blank. The
+procedure to install a memory module blank is similar to that of the memory module.
+Installing a memory module
+Prerequisites
+1.
+Follow the safety guidelines listed in Safety instructions.
+Steps
+1.
+Locate the appropriate memory module socket.
+CAUTION: Handle each memory module only by the edges, ensuring not to touch the middle of the memory
+module or metallic contacts.
+CAUTION: To prevent damage to the memory module or the memory module socket during installation, do
+not bend or flex the memory module. You must insert both ends of the memory module simultaneously.
+2. Open the ejectors on the memory module socket outward to allow the memory module to be inserted into the socket.
+3. Align the edge connector of the memory module with the alignment key of the memory module socket, and insert the
+memory module in the socket.
+CAUTION: Do not apply pressure at the center of the memory module; apply pressure at both ends of the
+memory module evenly.
+NOTE: The memory module socket has an alignment key that enables you to install the memory module in the socket in
+only one orientation.
+4. Press the memory module with your thumbs until the socket levers firmly click into place.
+34
+Installing and removing enclosure components
+Figure 24. Installing a memory module
+Next steps
+1.
+Install the air shroud.
+2. Follow the procedure listed in After working inside your system.
+3. To verify if the memory module has been installed properly, press F2 and navigate to System Setup Main Menu > System
+BIOS > Memory Settings. In the Memory Settings screen, the System Memory Size must reflect the updated capacity of
+the installed memory.
+4. If the value is incorrect, one or more of the memory modules may not be installed properly. Ensure that the memory module
+is firmly seated in the memory module socket.
+5. Run the system memory test in system diagnostics.
+Support bracket
+Removing the support bracket
+Prerequisites
+1.
+Follow the safety guidelines listed in Safety instructions.
+2. Follow the procedure listed in Before working inside your system.
+Steps
+Using the Phillips #1 screwdriver, remove the screws that secure the support bracket and lift the bracket away from the sled.
+Installing and removing enclosure components
+35
+Figure 25. Removing the support bracket
+Next steps
+1.
+Install the support bracket.
+Installing the support bracket
+Prerequisites
+1.
+Follow the safety guidelines listed in Safety instructions.
+Steps
+1.
+Place the support bracket in the sled.
+2. Using a Phillips #1 screwdriver, replace the screws to secure the bracket in place.
+36
+Installing and removing enclosure components
+Figure 26. Installing the support bracket
+Next steps
+1.
+Install the sled into the enclosure.
+2. Follow the procedure listed in After working inside your system.
+Linking board and PCIe cable
+Removing the linking board and PCIe cables
+Prerequisites
+NOTE: Observe the routing of the cable as you remove it from the sled. Route the cable properly when you replace it to
+prevent the cable from being pinched or crimped.
+1.
+Follow the safety guidelines listed in Safety instructions.
+2. Follow the procedure listed in Before working inside your system.
+3. Remove the air shroud.
+4. Remove the support bracket.
+Steps
+1.
+Press the release clip on the PCIe_A cable connector to disconnect the cable. See the System board connector for more
+information.
+2. Press the release clip on the PCIe_B cable connector to disconnect the cable. See the System board connector for more
+information.
+3. If connected, disconnect the SATA cable from the x16 M.2 riser.
+4. Using the Phillips #1 screwdriver, loosen the captive screws on the linking board and lift the board up along with the cables.
+Installing and removing enclosure components
+37
+Figure 27. Removing the linking board and SATA cable
+Next steps
+1.
+Install the linking board and PCIe cables.
+Installing the linking board and PCIe cables
+Prerequisites
+NOTE: Observe the routing of the cable as you remove it from the sled. Route the cable properly when you replace it to
+prevent the cable from being pinched or crimped.
+1.
+Follow the safety guidelines listed in Safety instructions.
+Steps
+1.
+Insert the PCIe_A connector into the connector on the system board, press the connector until it locks into place.
+2. Insert and press the PCIe_B connector into the connector on the system board, press the connector until it locks into place.
+3. If disconnected, reconnect the SATA cable to the x16 M.2 riser.
+4. Using the Phillips #1 screwdriver, tighten the captive screws on the linking board to secure the board to the sled.
+38
+Installing and removing enclosure components
+Figure 28. Installing the linking board and SATA cable
+Next steps
+1.
+Install the support bracket.
+2. Install the air shroud.
+3. Follow the procedure listed in After working inside your system.
+Processor and heat sink module
+CAUTION: This is a Field Replaceable Unit (FRU). Removal and installation procedures must be performed only
+by Dell certified service technicians.
+NOTE: In a sled which has been configured with mixed CPUs – a fabric processor installed in the CPU2 socket and a
+non-fabric processor installed in the CPU1 socket, you must connect the external Omnipath link cables to Port 2 on the
+OCP carrier card.
+Use the following procedure when:
+●
+Removing and installing a heat sink
+●
+Replacing a processor
+Table 10. Supported heat sinks 
+Heat sink
+Dimensions
+Design
+CPU 1, standard heat sink
+Length =108 mm (4.25 inches),
+Width =88 mm (3.46 inches),
+Height =24.8 mm (0.97 inches)
+2 heat pipes
+CPU 1, extended heat sink
+Length =108 mm (4.25 inches),
+Width =96 mm (3.77 inches),
+Height =24.8 mm (0.97 inches)
+2 heat pipes
+CPU 2, standard heat sink
+Length =108 mm (4.25 inches),
+Width =88 mm (3.46 inches),
+Height =24.8 mm (0.97 inches)
+3 heat pipes
+Installing and removing enclosure components
+39
+Removing a processor and heat sink module
+Prerequisites
+WARNING: The heat sink may be hot to touch for some time after the system is powered off. Allow the heat sink
+to cool before removing it.
+1.
+Follow the safety guidelines listed in Safety instructions.
+2. Follow the procedure listed in After working inside your system.
+3. Remove the sled from the enclosure.
+4. Remove the air shroud.
+5. If installed, disconnect the fabric cable from the fabric processor.
+NOTE: The process to remove a processor heat sink module (PHM) is identical for a fabric and a nonfabric processor.
+Steps
+1.
+Using a Torx #T30 screwdriver, loosen the screws on the heat sink in the order mentioned below:
+a.
+Loosen the first screw three turns.
+b. Loosen the second screw completely.
+c.
+Return to the first screw and loosen it completely.
+2. Pushing both blue retention clips simultaneously, lift the PHM processor and heat sink module
+3. Set the PHM aside with the processor side facing up.
+40
+Installing and removing enclosure components
+Figure 29. Removing the processor and heat sink module
+Next steps
+1.
+Install the processor and heat sink module.
+Installing a processor and heat sink module
+Prerequisites
+CAUTION: Never remove the heat sink from a processor unless you intend to replace the processor. The heat
+sink is necessary to maintain proper thermal conditions.
+1.
+Follow the safety guidelines listed in Safety instructions..
+2. If installed, remove the CPU dust cover.
+Steps
+1.
+Align the pin 1 indicator of the heat sink to the system board and then place the processor and heat sink module (PHM) on
+the processor socket.
+CAUTION: To avoid damaging the fins on the heat sink, do not press down on the heat sink fins.
+NOTE: Ensure that the PHM is held parallel to the system board to prevent damaging the components.
+Installing and removing enclosure components
+41
+2. Push the blue retention clips inward to allow the heat sink to drop into place.
+3. Using the Torx #T30 screwdriver, tighten the screws on the heat sink in the order below:
+a.
+Partially tighten the first screw (approximately 3 turns).
+b. Tighten the second screw completely.
+c.
+Return to the first screw and tighten it completely.
+If the PHM slips off the blue retention clips when the screws are partially tightened, follow these steps to secure the PHM:
+a.
+Loosen both the heat sink screws completely.
+b. Lower the PHM on to the blue retention clips, following the procedure described in step 2.
+c.
+Secure the PHM to the system board, following the replacement instructions listed in this step above. 4.
+NOTE: The processor and heat sink module retention screws should not be tightened to more than 0.13 kgf-m (1.35
+N.m or 12 in-lbf).
+Figure 30. Installing a processor and heat sink module
+Next steps
+1.
+Install the air shroud.
+2. Connect the fabric cable to the fabric processor.
+3. Follow the procedure listed in After working inside your system.
+42
+Installing and removing enclosure components
+Removing the fabric processor from the processor heat sink
+module
+Prerequisites
+WARNING: The heat sink may be hot to touch for some time after the system has been powered off. Allow the
+heat sink to cool before removing it.
+NOTE: This procedure is only for replacing a heat sink or a processor. This procedure should not be followed while replacing
+a system board.
+1.
+Follow the safety guidelines listed in Safety instructions.
+2. Follow the procedure listed in Before working inside your system.
+3. Remove the air shroud.
+4. Remove the fabric cable from the processor.
+5. Remove the processor and heat sink module.
+Steps
+1.
+Place the heat sink with the processor contact side facing up.
+2. Insert the flat blade screwdriver into the release slot and twist (do not pry) the screwdriver to break the seal created by the
+thermal paste.
+3. Push the retaining clips on the processor bracket to unlock the bracket from the heat sink.
+4. Lift the bracket and the processor away from the heat sink, and place the processor side down on the processor tray.
+5. Flex the outer edges of the bracket close to the fabric connector to release the bracket from the processor.
+Figure 31. Loosening the processor bracket
+Installing and removing enclosure components
+43
+Figure 32. Removing the processor bracket
+Next steps
+1.
+Install the fabric processor into the processor heat sink module.
+Installing the fabric processor into the processor heat sink module
+Prerequisites
+NOTE: In a sled which has been configured with mixed CPUs – a fabric processor installed in the CPU2 socket and a
+non-fabric processor installed in the CPU1 socket, you must connect the external Omnipath link cables to Port 2 on the
+OCP carrier card.
+Follow the safety guidelines listed in Safety instructions.
+Steps
+1.
+Ensure that the processor is in the CPU tray.
+NOTE: Ensure that pin 1 indicator on the CPU tray is aligned with the pin 1 indicator on the processor.
+2. Flex the outer edges of the bracket around the processor, close to the fabric connector, ensuring that the processor is
+locked into the clips on the bracket.
+3. Press the other end of the bracket to ensure that the clip is locked on to the processor.
+NOTE: Ensure that the pin 1 indicator on the bracket is aligned with the pin 1 indicator on the processor before placing
+the bracket on the processor.
+44
+Installing and removing enclosure components
+Figure 33. Installing the processor bracket
+4. If you are using an existing heat sink, remove the thermal grease from the heat sink by using a clean lint-free cloth.
+CAUTION: Applying too much thermal grease can result in excess grease coming in contact with and
+contaminating the processor socket.
+5. Use the thermal grease syringe included with your processor kit to apply the grease in a quadrilateral design on the top of
+the processor.
+NOTE: The thermal grease syringe is intended for single use only. Dispose the syringe after you use it.
+Figure 34. Applying thermal grease on top of the processor
+Installing and removing enclosure components
+45
+6. Place the heat sink on the processor and push down until the bracket locks onto the heat sink.
+NOTE:
+●
+Ensure that the two guide pin holes on the bracket match the guide holes on the heat sink.
+●
+Ensure that the pin 1 indicator on the heat sink is aligned with the pin 1 indicator on the bracket before placing the
+heat sink on the processor and bracket.
+Figure 35. Installing the heat sink onto the processor
+Next steps
+1.
+Install the processor and heat sink module.
+2. Follow the procedure listed in After working inside your system.
+Removing the non-fabric processor from the processor and heat
+sink module
+Prerequisites
+NOTE: Only remove the processor from the processor and heat sink module if you are replacing the processor or heat sink.
+This procedure is not required when replacing a system board.
+1.
+Follow the safety guidelines listed in Safety instructions.
+2. Follow the procedure listed in Before working inside your system.
+3. Remove the air shroud.
+4. Remove the processor and heat sink module.
+Steps
+1.
+Place the heat sink with the processor side facing up.
+2. Insert a flat blade screwdriver into the release slot marked with a yellow label. Twist (do not pry) the screwdriver to break
+the thermal paste seal.
+3. Push the retaining clips on the processor bracket to unlock the bracket from the heat sink.
+46
+Installing and removing enclosure components
+Figure 36. Loosening the processor bracket
+Figure 37. Loosening the processor bracket
+Installing and removing enclosure components
+47
+Figure 38. Loosening the processor bracket
+4. Lift the bracket and the processor away from the heat sink, and place the processor connector side down on the processor
+tray.
+5. Flex the outer edges of the bracket to release the bracket from the processor.
+NOTE: Ensure that the processor and the bracket are placed in the tray after you remove the heat sink.
+Figure 39. Removing the processor bracket
+Next steps
+1.
+Install the processor into the processor and heat sink module..
+2. Install the non-fabric processor into the processor and heat sink module.
+48
+Installing and removing enclosure components
+Installing the non-fabric processor into a processor and heat sink
+module
+Prerequisites
+NOTE: In a sled which has been configured with mixed CPUs – a fabric processor installed in the CPU2 socket and a
+non-fabric processor installed in the CPU1 socket, you must connect the external Omnipath link cables to Port 2 on the
+OCP carrier card.
+Follow the safety guidelines listed in Safety instructions.
+Steps
+1.
+Place the processor in the processor tray.
+NOTE: Ensure that the pin 1 indicator on the processor tray is aligned with the pin 1 indicator on the processor.
+2. Flex the outer edges of the bracket around the processor ensuring that the processor is locked into the clips on the bracket.
+NOTE: Ensure that the pin 1 indicator on the bracket is aligned with the pin 1 indicator on the processor before placing
+the bracket on the processor.
+NOTE: Ensure that the processor and the bracket are placed in the tray before you install the heat sink.
+Figure 40. Installing the processor bracket
+3. If you are using an existing heat sink, remove the thermal grease from the heat sink by using a clean lint-free cloth.
+4. Use the thermal grease syringe included with your processor kit to apply the grease in a quadrilateral design on the top of
+the processor.
+CAUTION: Applying too much thermal grease can result in excess grease coming in contact with and
+contaminating the processor socket.
+NOTE: The thermal grease syringe is intended for single use only. Dispose the syringe after you use it.
+Installing and removing enclosure components
+49
+Figure 41. Applying thermal grease on top of the processor
+5. Place the heat sink on the processor and push down on the base of the heat sink until the bracket locks onto the heat sink.
+NOTE:
+●
+Ensure that the two guide pin holes on the bracket match the guide holes on the heat sink.
+●
+Do not press on the heat sink fins.
+●
+Ensure that the pin 1 indicator on the heat sink is aligned with the pin 1 indicator on the bracket before placing the
+heat sink onto the processor and bracket.
+50
+Installing and removing enclosure components
+Figure 42. Installing the heat sink onto the processor
+Next steps
+1.
+Install the processor and heat sink module.
+2. Install the air shroud.
+3. Follow the procedure listed in After working inside your system.
+Removing the fabric and sideband cables
+Prerequisites
+NOTE: The procedure to remove the carrier card is similar to removing an OCP card.
+NOTE: Route the fabric cable for CPU 2 under the heat sink of CPU1.
+1.
+Follow the safety guidelines listed in Safety instructions.
+2. Follow the procedure listed in Before working inside your system.
+3. Remove the air shroud.
+Steps
+1.
+Pull the blue pull tab on the locking bar up to release the connector from the lock on the processor base plate.
+Installing and removing enclosure components
+51
+2. To disengage and release the fabric connector, pull the connector away from the processor.
+3. Pressing the connector clips, release the side band cable from the connector and lift the cable away.
+Figure 43. Removing the fabric and sideband cables
+Next steps
+1.
+Install the fabric and sideband cables.
+Installing the fabric and sideband cables
+Prerequisites
+NOTE: In a sled which has been configured with mixed CPUs – a fabric processor installed in the CPU2 socket and a
+non-fabric processor installed in the CPU1 socket, you must connect the external Omnipath link cables to Port 2 on the
+OCP carrier card.
+NOTE: The procedure to install the carrier card is similar to installing an OCP card.
+NOTE: Route the fabric cable for CPU2 under the heat sink of CPU1.
+1.
+Follow the safety guidelines listed in Safety instructions.
+Steps
+1.
+Align the notches on the fabric connector with the guide pins on the processor base plate.
+2. Push the connector toward the processor, until the connector is engaged with the edge connector on the processor.
+3. Push the locking bar down to secure the fabric connector in place.
+4. Insert the side band cable into the respective connector, and press down to lock the connector.
+52
+Installing and removing enclosure components
+Figure 44. Installing the fabric and sideband cables
+Next steps
+1.
+Install the air shroud.
+2. Follow the procedure listed in After working inside your system.
+Expansion cards
+NOTE: A missing or an unsupported expansion card riser logs an System Event Log (SEL) event. This does not prevent
+your system from powering on and no BIOS, POST messages or F1 or F2 pause is displayed.
+PCIe slot priority
+Table 11. Supported expansion options 
+Riser
+Slot
+number
+Form
+Factor
+Controlling
+processor
+Slot's Electrical Bandwidth/
+Physical Connector
+Power
+LP PCIE Slot
+(Slot 4)
+1
+Low profile
+Processor 1
+SKL/SKL-F/CLX
+PCIe Gen3 x16
+(x16 connector)
+75 W
+Storage Slot
+(DCS Mezz Slot)
+(Slot 1)
+1
+Mezzanine
+Processor 1
+SKL/SKL-F/CLX
+PCIe Gen3 x8
+(Through Bridge Board)
+25 W
+OCP Mezz Slot
+(Slot 3)
+1
+Mezzanine
+Processor 1
+SKL/CLX
+PCIe Gen3 x16
+25 W
+OCP Mezz Slot
+(Slot 3)
+1
+Mezzanine
+Processor 1
+SKL-F
+OCP MEZZ
+occupied by SKL-F QSFP carrier card
+25 W
+NOTE: For the expansion bus specification see the PowerEdge C6420 Technical Specs at
+Installing and removing enclosure components
+53
+www.dell.com/poweredgemanuals
+.
+Table 12. Supported expansion cards 
+Card type
+Form
+factor
+Link
+width
+Slot
+priority
+Maximum number of cards
+Intel-Kerby Flat mezzanine network
+card
+Mezzanine
+x8
+3
+1
+Broadcom 25G SFP network card
+Mezzanine
+x8
+3
+1
+H730P Mini controller card
+Mezzanine
+x8
+1
+1
+H330 SAS controller adapter
+Mezzanine
+x8
+1
+1
+HBA330 MINI controller adapter
+Mezzanine
+x8
+1
+1
+12-GB SAS LPF HBA controller adapter
+LP
+x8
+4
+1
+HBA355e HBA external adapter
+LP
+x8
+4
+1
+PM1725 1.6 HHHL NVME controller
+card
+LP
+x8
+4
+1
+PM1725A 3.2 HHHL NVME controller
+card
+LP
+x8
+4
+1
+PM1725A 6.4 HHHL NVME controller
+card
+LP
+x8
+4
+1
+Mellanox dual port EDR PCIE network
+card
+LP
+x16
+4
+1
+Mellanox 100G dual port QSF network
+card
+LP
+x16
+4
+1
+Mellanox single port EDR PCIE network
+card
+LP
+x16
+4
+1
+Mellanox single port FDR PCIE network
+card
+LP
+x8
+4
+1
+Intel X16 OPA network card
+LP
+x16
+4
+1
+Mellanox 100G dual port QSF network
+card
+LP
+x16
+4
+1
+Intel 40G dual port QSFP network card
+LP
+x8
+4
+1
+Intel 10G Base-T dual port network
+card
+LP
+x4
+4
+1
+Intel 10GBTV2 network card
+LP
+x4
+4
+1
+57414 25G dual port PCIE network
+card
+LP
+x8
+4
+1
+Intel 10G dual port FVL SFP+ network
+card
+LP
+x8
+4
+1
+57402 10G dual port PCIE network
+card
+LP
+x8
+4
+1
+57406 10G dual port PCIE network
+card
+LP
+x8
+4
+1
+QLogic 25G dual port SFP network
+card
+LP
+x8
+4
+1
+Mellanox 25G dual port SFP network
+card
+LP
+x8
+4
+1
+54
+Installing and removing enclosure components
+Table 12. Supported expansion cards (continued)
+Card type
+Form
+factor
+Link
+width
+Slot
+priority
+Maximum number of cards
+Mellanox 10G dual port SFP network
+card
+LP
+x8
+4
+1
+Mellanox 40G dual port QSF network
+card
+LP
+x8
+4
+1
+SF80X 10G dual port network card
+LP
+x8
+4
+1
+Intel 10G Base-T quad port network
+card
+LP
+x8
+4
+1
+Intel 1-GB dual port V3 network card
+LP
+x4
+4
+1
+Intel 10G dual port SFP+ V2 network
+card
+LP
+x8
+4
+1
+Broadcom 1G dual port network card
+LP
+x1
+4
+1
+QLogic 10G dual port network card
+LP
+x8
+4
+1
+QLogic 10G dual port V2 network card
+LP
+x8
+4
+1
+QLogic 10G dual port SFP network
+card
+LP
+x8
+4
+1
+QLogic 10G dual port SFP V2 network
+card
+LP
+x8
+4
+1
+QLogic 25G quad port network card
+LP
+x8
+4
+1
+QLogic 25G dual port SFP network
+card
+LP
+x8
+4
+1
+QLogic dual port SFP V2 network card
+LP
+x8
+4
+1
+BOSS card
+LP
+x8
+5
+1
+Intel 25G dual port SFP network card
+LP
+x8
+4
+1
+Mellanox single port PCIE network card
+LP
+x8
+4
+1
+Intel 10G dual port FVL SFP+ network
+card
+(CRD,NTWK,10G,SFP+,DP FVL,LP,V2)
+LP
+x8
+4
+1
+Broadcom, 25G,PCIE,Dual port ,
+card,Network
+CRD,NTWK,PCIE,DP,25G,57414,LP2
+LP
+x8
+4
+1
+SATA X8 M.2 card
+N/A
+X8 PCIe Adapter (PCIe Bus Reserve for ESI)
+SATA X16 M.2 card
+N/A
+X16 PCIe Adapter (PCIe Bus Reserve for ESI)
+Intel 60-W FPGA card
+LP
+x16
+4
+1
+Intel 70-W FPGA card
+LP
+x16
+4
+1
+PM1725B 1.6 HHHL NVME card
+LP
+x8
+4
+1
+PM1725B 3.2 HHHL NVME card
+LP
+x8
+4
+1
+PM1725B 6.4 HHHL NVME card
+LP
+x8
+4
+1
+P4800X 750GB HHHL PCIE card
+LP
+x8
+4
+1
+Installing and removing enclosure components
+55
+Removing the expansion card riser assembly
+Prerequisites
+NOTE: Install an expansion card filler bracket over an empty expansion slot to maintain Federal Communications
+Commission (FCC) certification of the system. The brackets also keep dust and dirt out of the system and aid in proper
+cooling and airflow inside the system.
+1.
+Follow the safety guidelines listed in Safety instructions.
+2. Follow the procedure listed in Before working inside your system.
+Steps
+1.
+Remove the screws that secure the expansion card riser assembly.
+2. Lift the expansion card riser assembly out of the sled.
+Figure 45. Removing the expansion card riser assembly
+Next steps
+1.
+Install the expansion card riser assembly.
+Installing the expansion card riser assembly
+Prerequisites
+NOTE: You must install an expansion card filler bracket over an empty expansion slot to maintain Federal Communications
+Commission (FCC) certification of the system. The brackets also keep dust and dirt out of the system and aid in proper
+cooling and airflow inside the system.
+1.
+Follow the safety guidelines listed in Safety instructions..
+Steps
+1.
+Place the expansion card assembly into the system board assembly.
+2. Align the riser card connector with the connector on the system board, and press the expansion card riser assembly into
+place.
+3. Using the Phillips #2 screwdriver, tighten the screws that secure the expansion card riser assembly.
+56
+Installing and removing enclosure components
+Figure 46. Installing the expansion card riser assembly
+Next steps
+1.
+Follow the procedure listed in After working inside your system.
+Removing an expansion card
+Prerequisites
+1.
+Follow the safety guidelines listed in Safety instructions.
+2. Follow the procedure listed in Before working inside your system.
+3. Remove the expansion card riser assembly.
+Steps
+1.
+Remove the screw that secures the expansion card to the assembly.
+2. Hold the expansion card by its edges, and carefully remove it from the riser card.
+NOTE: Install an expansion card filler bracket over an empty expansion slot to maintain Federal Communications
+Commission (FCC) certification of the system. The brackets also keep dust and dirt out of the system and aid in proper
+cooling and airflow inside the system.
+Installing and removing enclosure components
+57
+Figure 47. Removing an expansion card
+Figure 48. Installing the expansion card filler bracket
+Next steps
+Install the expansion card or install the expansion card filler bracket.
+58
+Installing and removing enclosure components
+Installing an expansion card
+Prerequisites
+CAUTION: Expansion cards can only be installed in the slots on the expansion card riser. Do not attempt to
+install expansion cards directly into the riser connector on the system board.
+1.
+Follow the safety guidelines listed in Safety instructions.
+2. Unpack the expansion card and prepare it for installation. For instructions, see the documentation accompanying the card.
+Steps
+1.
+If installed, remove the filler bracket by performing the following steps:
+a.
+Remove the screw that secures the filler bracket.
+b. Hold the filler bracket by its edges, and carefully remove it from the riser card.
+NOTE: You must install an expansion card filler bracket over an empty expansion slot to maintain Federal
+Communications Commission (FCC) certification of the system. The brackets also keep dust and dirt out of the
+system and aid in proper cooling and airflow inside the system.
+2. Holding the card by its edges, position the card so that the card edge connector aligns with the connector on the riser card.
+3. Insert the card edge connector and push the card firmly into the riser card until the card is fully seated.
+4. Replace the screw that secures the expansion card.
+Figure 49. Removing the expansion card filler bracket
+Installing and removing enclosure components
+59
+Figure 50. Installing an expansion card
+Next steps
+1.
+Install the expansion card riser assembly.
+2. Follow the procedure listed in After working inside your system.
+Removing the riser card
+Prerequisites
+1.
+Follow the safety guidelines listed in Safety instructions.
+2. Follow the procedure listed in Before working inside your system.
+3. Remove the expansion card riser assembly.
+4. If installed, remove the expansion card.
+Steps
+1.
+Using the Phillips #2 screwdriver, remove the screws that secure the riser card to the expansion card bracket.
+2. Lift the riser card away from the expansion card bracket.
+60
+Installing and removing enclosure components
+Figure 51. Removing the riser card
+Next steps
+1.
+Install the riser card.
+Installing the riser card
+Prerequisites
+1.
+Follow the safety guidelines listed in Safety instructions.
+Steps
+1.
+Place the riser card into the expansion card bracket.
+2. Using the Phillips #2 screwdriver, tighten the screws that secure the riser card to the expansion card bracket.
+Installing and removing enclosure components
+61
+Figure 52. Installing the riser card
+Next steps
+1.
+If removed, install the expansion card.
+2. Install the expansion card riser assembly.
+3. Follow the procedure listed in After working inside your system.
+Removing the M.2 SATA x16 riser
+Prerequisites
+1.
+Follow the safety guidelines listed in Safety instructions.
+2. Follow the procedure listed in Before working inside your system.
+Steps
+1.
+Using the Phillips #1 screwdriver, loosen the screw that secures the riser to the sled.
+2. Lift the riser up to disengage the riser from the connector on the system board.
+3. Disconnect the data cable from the riser.
+62
+Installing and removing enclosure components
+Figure 53. Removing the M.2 SATA x16 riser
+Next steps
+1.
+Install the M.2 SATA x16 riser.
+Installing the M.2 SATA x16 riser
+Prerequisites
+1.
+Follow the safety guidelines listed in Safety instructions.
+Steps
+1.
+Connect the data cable to the riser.
+2. Insert the keyed end of the M.2 SATA riser into the lock on the system board.
+3. Align and insert the edge connector into the connector on the system board.
+4. Using the Phillips #2 screwdriver, tighten the screw to secure the riser to the sled.
+Installing and removing enclosure components
+63
+Figure 54. Installing the M.2 SATA x16 riser
+Next steps
+1.
+Follow the procedure listed in After working inside your system.
+Removing the M.2 SATA card
+Prerequisites
+1.
+Follow the safety guidelines listed in Safety instructions.
+2. Follow the procedure listed in Before working inside your system.
+3. If applicable, remove the expansion card riser assembly.
+4. Remove the M.2 x16 riser or install the M.2 SATA x8 mezzanine card.
+NOTE: The procedure to remove the M.2 SATA x8 mezzanine card is similar to removing a mezzanine card.
+Steps
+1.
+Using the Phillips #1 screwdriver, unscrew the screw that secures the M.2 card to the board.
+2. Pull the card out of the connector and lift the card away.
+64
+Installing and removing enclosure components
+Figure 55. Removing the M.2 SATA card from the M.2 SATA x16 riser
+Figure 56. Removing the M.2 SATA card from the x8 mezzanine card
+Next steps
+1.
+Install the M.2 SATA card
+.
+Installing the M.2 SATA card
+Prerequisites
+1.
+Follow the safety guidelines listed in Safety instructions.
+Steps
+1.
+Insert the edge connector of the M.2 SATA card into the connector on the board, and push the card in.
+2. Using the Phillips #1 screwdriver, secure the card in place.
+Installing and removing enclosure components
+65
+Figure 57. Installing the M.2 SATA card on the SATA x16 riser
+Figure 58. Installing the M.2 SATA card on the SATA x8 mezzanine card
+Next steps
+1.
+If removed, install the expansion card riser assembly.
+2. Install the M.2 x16 riser or install the M.2 SATA x8 mezzanine card.
+NOTE: The procedure to install the M.2 SATA x8 mezzanine card is similar to installing a mezzanine card.
+3. Follow the procedure listed in After working inside your system.
+M.2 SSD module
+The BOSS card is a simple RAID solution card designed specifically for booting a server's operating system. The card supports
+up to two 6 Gbps M.2 SATA drives. The BOSS adapter card has a x8 connector using PCIe gen 2.0 x2 lanes, available only in the
+low-profile and half-height form factor.
+66
+Installing and removing enclosure components
+Removing the M.2 SATA x16 riser
+Prerequisites
+1.
+Follow the safety guidelines listed in Safety instructions.
+2. Follow the procedure listed in Before working inside your system.
+3. Remove the sled from the enclosure.
+Steps
+1.
+Using the Phillips #1 screwdriver, loosen the screw that secures the riser to the sled.
+2. Lift the riser up to disengage the riser from the connector on the system board.
+3. Disconnect the data cable from the riser.
+Figure 59. Removing the M.2 SATA x16 riser
+Next steps
+Install the M.2 SATA x16 riser.
+Installing the M.2 SATA x16 riser
+Prerequisites
+1.
+Follow the safety guidelines listed in Safety instructions.
+Steps
+1.
+Connect the data cable to the riser.
+2. Insert the keyed end of the M.2 SATA riser into the lock on the system board.
+3. Align and insert the edge connector into the connector on the system board.
+4. Using the Phillips #2 screwdriver, tighten the screw to secure the riser to the sled.
+Installing and removing enclosure components
+67
+Figure 60. Installing the M.2 SATA x16 riser
+Next steps
+1.
+Install the sled into the enclosure.
+2. Follow the procedure listed in After working inside your system.
+Removing the M.2 SATA card
+Prerequisites
+1.
+Follow the safety guidelines listed in Safety instructions..
+2. Follow the procedure listed in Before working inside your system.
+3. Remove the sled from the enclosure.
+4. If applicable, remove the expansion card riser assembly.
+5. Remove the M.2 x16 riser or the M.2 SATA x8 mezzanine card.
+NOTE: The procedure to remove the M.2 SATA x8 mezzanine card is similar to removing a mezzanine card.
+Steps
+1.
+Using the Phillips #1 screwdriver, unscrew the screw that secures the M.2 card to the board.
+2. Pull the card out of the connector and lift the card away.
+68
+Installing and removing enclosure components
+Figure 61. Removing the M.2 SATA card from the M.2 SATA x16 riser
+Figure 62. Removing the M.2 SATA card from the x8 mezzanine card
+Next steps
+Install the M.2 SATA card.
+Installing the M.2 SATA card
+Prerequisites
+1.
+Follow the safety guidelines listed in Safety instructions.
+Steps
+1.
+Insert the edge connector of the M.2 SATA card into the connector on the board, and push the card in.
+2. Using the Phillips #1 screwdriver, secure the card in place.
+Installing and removing enclosure components
+69
+Figure 63. Installing the M.2 SATA card on the SATA x16 riser
+Figure 64. Installing the M.2 SATA card on the SATA x8 mezzanine card
+Next steps
+1.
+If removed, install the expansion card riser assembly.
+2. Install the M.2 x16 riser or the M.2 SATA x8 mezzanine card.
+NOTE: The procedure to install the M.2 SATA x8 mezzanine card is similar to removing a mezzanine card.
+3. Install the sled into the enclosure.
+4. Follow the procedure listed in After working inside your system.
+70
+Installing and removing enclosure components
+Mezzanine and OCP cards
+Removing a mezzanine card
+Prerequisites
+NOTE: The procedure to remove the mezzanine blank is similar to the removal of a mezzanine card.
+1.
+Follow the safety guidelines listed in Safety instructions.
+2. Follow the procedure listed in Before working inside your system.
+3. Remove the expansion card riser assembly.
+Steps
+1.
+Remove the screws that secure the mezzanine card to the sled.
+2. Lift the mezzanine card out of the sled.
+NOTE: Install an expansion card filler bracket over an empty expansion slot to maintain Federal Communications
+Commission (FCC) certification of the system. The brackets also keep dust and dirt out of the system and aid in proper
+cooling and airflow inside the system.
+Installing and removing enclosure components
+71
+Figure 65. Removing a mezzanine card
+Next steps
+1.
+Install the mezzanine card or install the mezzanine card filler bracket.
+Installing a mezzanine card
+Prerequisites
+NOTE: The procedure to install the mezzanine blank is similar to the removal of a mezzanine card.
+1.
+Follow the safety guidelines listed in Safety instructions.
+Steps
+1.
+Attach and secure the mezzanine card bracket to the mezzanine card.
+2. Holding the card by its edges, position the card so that the card edge connector aligns with the connector of the bridge
+board on the system board.
+3. Insert the card edge connector and push the card firmly until the card is fully seated on the bridge board.
+72
+Installing and removing enclosure components
+4. Using the Phillips #2 screwdriver, secure the mezzanine card and bracket assembly to the sled using screws.
+Figure 66. Installing a mezzanine card
+Next steps
+1.
+Install the mezzanine card or install the mezzanine card filler bracket.
+2. Install the expansion card riser assembly
+3. Follow the procedure listed in After working inside your system.
+Removing the mezzanine card bridge board
+Prerequisites
+1.
+Follow the safety guidelines listed in Safety instructions.
+2. Follow the procedure listed in Before working inside your system.
+3. Remove the expansion card riser assembly
+4. Remove the mezzanine card.
+Installing and removing enclosure components
+73
+Steps
+Pull the mezzanine card bridge board away from the mezzanine card slot on the system board.
+Figure 67. Removing the mezzanine card bridge board
+Next steps
+1.
+Install the mezzanine card board bridge.
+Installing the mezzanine card bridge board
+Prerequisites
+1.
+Follow the safety guidelines listed in Safety instructions.
+Steps
+Insert the mezzanine card bridge board into the mezzanine slot on the system board.
+Figure 68. Installing the mezzanine card bridge board
+74
+Installing and removing enclosure components
+Next steps
+1.
+Install the mezzanine card.
+2. Install the expansion card riser assembly.
+3. Follow the procedure listed in After working inside your system.
+Removing the OCP card
+Prerequisites
+NOTE: The procedure to remove the mezzanine blank is similar to the removal of a mezzanine card.
+1.
+Follow the safety guidelines listed in Safety instructions.
+2. Follow the procedure listed in Before working inside your system.
+3. Remove the mezzanine card.
+Steps
+1.
+Push the blue retention clips away on one side and release the Open Compute Project (OCP) card.
+Repeat step 1 to release the card from the clips on the other side.
+2. Slide the card toward the front of the sled to disengage the connectors from the chassis and lift the card up.
+Figure 69. Removing the OCP card
+Next steps
+1.
+Install the OCP card.
+Installing the OCP card
+Prerequisites
+1.
+Follow the safety guidelines listed in Safety instructions.
+Steps
+1.
+Insert the Open Compute Project (OCP) card into the sled, aligning the connector on the card with the connector in the
+system board.
+2. You must also align the holes on the card with the guide pins on the blue retention clips.
+Installing and removing enclosure components
+75
+3. Push down to lock the card in place.
+Figure 70. Installing the OCP card
+Next steps
+1.
+Install the mezzanine card.
+2. Follow the procedure listed in After working inside your system.
+System battery
+Replacing system battery
+Prerequisites
+WARNING: There is a danger of a new battery exploding if it is incorrectly installed. Replace the battery only
+with the same or equivalent type recommended by the manufacturer. For more information, see the safety
+information that shipped with your system.
+NOTE: Battery is a Field Replaceable Unit (FRU). Only Dell certified service technicians must remove or install system
+battery.
+1.
+Follow the safety guidelines listed in Safety instructions.
+2. Follow the procedure listed in Before working inside your system.
+3. Remove the expansion card riser assembly.
+Steps
+1.
+Locate the battery socket. For more information, see the System board connectors section.
+2. Insert a plastic scribe at the negative side of the battery connector and lever the battery up, lift the battery out of the
+socket.
+76
+Installing and removing enclosure components
+Figure 71. Removing system battery
+Next steps
+1.
+Install the system battery.
+Installing the system battery
+Prerequisites
+WARNING: There is a danger of a new battery exploding if it is incorrectly installed. Replace the battery only
+with the same or equivalent type recommended by the manufacturer. For more information, see the safety
+information that shipped with your system.
+NOTE: Battery is a Field Replaceable Unit (FRU). Removal and installation procedures are to be performed only by Dell
+certified service technicians.
+1.
+Follow the safety guidelines listed in Safety instructions.
+2. Follow the procedure listed in Before working inside your system.
+Steps
+1.
+Locate the battery socket. For more information, see the System board connectors section.
+2. Hold the battery with the "+" facing up and slide it under the securing tabs.
+3. Press the battery into the connector until it snaps into place.
+Installing and removing enclosure components
+77
+Figure 72. Installing the system battery
+Next steps
+1.
+If removed, install the expansion card riser.
+2. Follow the procedure listed in After working inside your system.
+3. While booting, press F2 to enter System Setup and ensure that the battery is operating properly.
+4. Enter the correct time and date in the System Setup Time and Date fields.
+5. Exit System Setup.
+System board
+Removing the system board
+Prerequisites
+CAUTION: Do not attempt to remove the TPM plug-in module from the system board. Once the TPM plug-in
+module is installed, it is cryptographically bound to that specific system board. Any attempt to remove an
+installed TPM plug-in module breaks the cryptographic binding, and it cannot be reinstalled or installed on
+another system board.
+CAUTION: To avoid damage to the system board, ensure that the system board does not touch the side walls of
+the sled chassis, while sliding the system board into the sled.
+1.
+Follow the safety guidelines listed in Safety instructions.
+2. Follow the procedure listed in Before working inside your system.
+3. Remove the sled from the chassis.
+4. Remove the air shroud.
+5. Remove the expansion card risers.
+6. Remove the processor heat sink module.
+7.
+Remove the memory modules.
+8. If installed, remove OCP card.
+9. If installed, remove the mezzanine card.
+10. Remove the linking board
+11. Disconnect all the cables from the system board.
+12. Keep the Phillips #1 screwdriver and #4 nut driver ready.
+Steps
+1.
+Remove the screws that secure the system board to the sled assembly.
+CAUTION: Do not lift the system board by holding a memory module slot, any other connector, or
+component.
+2. Hold the system board by the edges, and lift the system board away from the sled.
+78
+Installing and removing enclosure components
+Figure 73. Removing the system board
+Next steps
+1.
+Install the system board.
+Installing system board
+Prerequisites
+Follow the safety guidelines listed in Safety instructions
+CAUTION: To avoid damage to the system board, ensure that the system board does not touch the side walls of
+the sled chassis, while sliding the system board into the sled.
+Steps
+1.
+Holding the system board by the edges, slide the system board into the sled.
+2. Install the screws that secure the system board to the sled.
+Installing and removing enclosure components
+79
+Figure 74. Installing system board
+Next steps
+1.
+If not installed, install the Trusted Platform Module (TPM). For information about how to install the TPM, see the Installing
+the Trusted Platform Module section. For more information about the TPM, see the Trusted Platform Module section.
+NOTE: The TPM plug-in module that is once installed is attached to the system board and cannot be removed. In the
+event of a system board replacement, a TPM plug-in module is provided along with the system board for all systems that
+have a TPM.
+2. Replace the following components:
+a.
+Air shroud
+b. Expansion card risers
+c.
+Processor heat sink module
+d. Memory modules
+e.
+OCP card
+f.
+Mezzanine card
+g. Linking board
+3. Reconnect all cables to the system board.
+NOTE: Ensure that the cables inside the system are routed along the chassis wall and secured using the cable securing
+bracket.
+4. Follow the procedure that is listed in After working inside your system.
+5. Ensure that you:
+a.
+Use the Easy Restore feature to restore the Service Tag. For more information, see the Restoring the Service Tag by
+using the Easy Restore feature section.
+b. If the Service Tag is not backed up in the backup flash device, enter the Service Tag manually. For more information, see
+the Restoring the Service Tag by using the Easy Restore feature section.
+c.
+Update the BIOS and iDRAC versions.
+d. Re-enable the Trusted Platform Module (TPM). For more information, see the Upgrading the Trusted Platform Module
+section.
+6. Import your new or existing iDRAC Enterprise license.
+For more information, see iDRAC User's Guide, at www.dell.com/idracmanuals.
+Restoring the Service Tag by using the Easy Restore feature
+By using the Easy Restore feature, you can restore your Service Tag, license, UEFI configuration, and the system configuration
+data after replacing the system board. All data is automatically backed up in a backup flash device an rSPI card automatically. If
+80
+Installing and removing enclosure components
+BIOS detects a new system board and the Service Tag in the backup flash device rSPI card, BIOS prompts the user to restore
+the backup information.
+About this task
+NOTE: To enable the easy restore feature, Riser1 must be installed.
+Steps
+1.
+Turn on the system.
+If BIOS detects a new system board, and if the Service Tag is present in the backup flash devicerSPI card, BIOS displays the
+Service Tag, the status of the license, and the UEFI Diagnostics version.
+2. Perform one of the following steps:
+●
+Press Y to restore the Service Tag, license, and diagnostics information.
+●
+Press N to navigate to the Dell Lifecycle Controller based restore options.
+●
+Press F10 to restore data from a previously created Hardware Server Profile.
+After the restore process is complete, BIOS prompts to restore the system configuration data.
+3. Perform one of the following steps:
+●
+Press Y to restore the Service Tag, license, and diagnostics information.
+After the restore process is complete, BIOS prompts to restore the system configuration data.
+4. Perform one of the following steps:
+●
+Press Y to restore the system configuration data.
+●
+Press N to use the default configuration settings.
+After the restore process is complete, the system restarts.
+Entering the system Service Tag by using System Setup
+If Easy Restore fails to restore the Service Tag, use System Setup to enter the Service Tag.
+Steps
+1.
+Turn on the system.
+2. Press F2 to enter System Setup.
+3. Click Service Tag Settings.
+4. Enter the Service Tag.
+NOTE: You can enter the Service Tag only when the Service Tag field is empty. Ensure that you enter the correct
+Service Tag. After the Service Tag is entered, it cannot be updated or changed.
+5. Click OK.
+6. Import your new or existing iDRAC Enterprise license.
+For more information, see the Integrated Dell Remote Access Controller User's Guide at www.dell.com/idracmanuals.
+Trusted Platform Module
+Upgrading the Trusted Platform Module
+Prerequisites
+1.
+Follow the safety guidelines listed in Safety instructions.
+2. Follow the procedure listed in Before working inside your system.
+NOTE:
+●
+Ensure that your operating system supports the version of the TPM module being installed.
+●
+Ensure that you download and install the latest BIOS firmware on your system.
+●
+Ensure that the BIOS is configured to enable UEFI boot mode.
+Installing and removing enclosure components
+81
+About this task
+CAUTION: If you are using the Trusted Platform Module (TPM) with an encryption key, you may be prompted
+to create a recovery key during program or System Setup. Work with the customer to create and safely store
+this recovery key. When replacing this system board, you must supply the recovery key when you restart your
+system or program before you can access the encrypted data on your hard drives.
+CAUTION: Once the TPM plug-in module is installed, it is cryptographically bound to that specific system board.
+Any attempt to remove an installed TPM plug-in module breaks the cryptographic binding, the removed TPM
+cannot be reinstalled or installed on another system board.
+Removing the TPM
+Steps
+1.
+Locate the TPM connector on the system board.
+2. Press to hold the module down and remove the screw using the security Torx 8-bit shipped with the TPM module.
+3. Slide the TPM module out from its connector.
+4. Push the plastic rivet away from the TPM connector and rotate it 90° counterclockwise to release it from the system board.
+5. Pull the plastic rivet out of its slot on the system board.
+Installing the TPM
+Steps
+1.
+To install the TPM, align the edge connectors on the TPM with the slot on the TPM connector.
+2. Insert the TPM into the TPM connector such that the plastic rivet aligns with the slot on the system board.
+3. Press the plastic rivet until the rivet snaps into place.
+Figure 75. Installing the TPM
+4. Replace the screw that secures the TPM to the system board.
+Next steps
+1.
+Install the system board.
+2. Follow the procedure listed in After working inside your system.
+Initializing TPM for BitLocker users
+Steps
+Initialize the TPM.
+For more information, see initializing the TPM for Intel TXT users.
+82
+Installing and removing enclosure components
+The TPM Status changes to Enabled, Activated.
+Initializing the TPM 1.2 for TXT users
+Steps
+1.
+While booting your system, press F2 to enter System Setup.
+2. On the System Setup Main Menu screen, click System BIOS > System Security Settings.
+3. From the TPM Security option, select On with Pre-boot Measurements.
+4. From the TPM Command option, select Activate.
+5. Save the settings.
+6. Restart your system.
+7.
+Enter System Setup again.
+8. On the System Setup Main Menu screen, click System BIOS > System Security Settings.
+9. From the Intel TXT option, select On.
+Initializing the TPM 2.0 for TXT users
+Steps
+1.
+While booting your system, press F2 to enter System Setup.
+2. On the System Setup Main Menu screen, click System BIOS > System Security Settings.
+3. From the TPM Security option, select On.
+4. Save the settings.
+5. Restart your system.
+6. Enter System Setup again.
+7.
+On the System Setup Main Menu screen, click System BIOS > System Security Settings.
+8. Select the TPM Advanced Settings option.
+9. From the TPM2 Algorithm Selection option, select SHA256, then go back to System Security Settings screen.
+10. On the System Security Settings screen, from the Intel TXT option, select On.
+11. Save the settings.
+12. Restart your system.
+Installing and removing enclosure components
+83
+System diagnostics
+If you experience a problem with your system, run the system diagnostics before contacting Dell for technical assistance. The
+purpose of running system diagnostics is to test your system hardware without using additional equipment or risking data loss. If
+you are unable to fix the problem yourself, service and support personnel can use the diagnostics results to help you solve the
+problem.
+Topics:
+•
+Dell Embedded System Diagnostics
+Dell Embedded System Diagnostics
+NOTE: The Dell Embedded System Diagnostics is also known as Enhanced Pre-boot System Assessment (ePSA)
+diagnostics.
+The Embedded System Diagnostics provides a set of options for particular device groups or devices allowing you to:
+●
+Run tests automatically or in an interactive mode
+●
+Repeat tests
+●
+Display or save test results
+●
+Run thorough tests to introduce additional test options to provide extra information about the failed device(s)
+●
+View status messages that inform you if tests are completed successfully
+●
+View error messages that inform you of problems encountered during testing
+Running the Embedded System Diagnostics from Boot Manager
+Run the Embedded System Diagnostics (ePSA) if your system does not boot.
+Steps
+1.
+When the system is booting, press F11.
+2. Use the up arrow and down arrow keys to select System Utilities > Launch Diagnostics.
+3. Alternatively, when the system is booting, press F10, select Hardware Diagnostics > Run Hardware Diagnostics.
+The ePSA Pre-boot System Assessment window is displayed, listing all devices detected in the system. The diagnostics
+starts executing the tests on all the detected devices.
+Running the Embedded System Diagnostics from the Dell Lifecycle
+Controller
+Steps
+1.
+As the system boots, press F10.
+2. Select Hardware Diagnostics → Run Hardware Diagnostics.
+The ePSA Pre-boot System Assessment window is displayed, listing all devices detected in the system. The diagnostics
+starts executing the tests on all the detected devices.
+System diagnostic controls
+Menu
+Description
+Configuration
+Displays the configuration and status information of all detected devices.
+4
+84
+System diagnostics
+Menu
+Description
+Results
+Displays the results of all tests that are run.
+System health
+Provides the current overview of the system performance.
+Event log
+Displays a time-stamped log of the results of all tests run on the system. This is displayed if at least one
+event description is recorded.
+System diagnostics
+85
+Jumpers and connectors
+This topic provides specific information about the jumpers. It also provides some basic information about jumpers and switches
+and describes the connectors on the various boards in the system. Jumpers on the system board help to disable the system and
+setup passwords. You must know the connectors on the system board to install components and cables correctly.
+Topics:
+•
+System board jumper settings
+•
+System board connectors
+•
+Disabling forgotten password
+System board jumper settings
+For information on resetting the password jumper to disable a password, see the Disabling a forgotten password section.
+System board connectors
+Figure 76. PowerEdge C6420 system board connectors
+Table 13. System Board Connectors and Description 
+Item
+Connector
+Description
+1
+PCIe B
+NVMe B connector
+2
+PCIe A
+NVMe A connector
+3
+PCIe Slot 5
+Slot 5: x16 PCIe Gen3 from CPU 2
+4
+DIMM sockets (4)
+DIMM B8, DIMM B4, DIMM B5, DIMM
+B6
+5
+DIMM sockets (4)
+DIMM A8, DIMM A4, DIMM A5, DIMM
+A6
+6
+HFI_SB_1
+Side band cable 1 for OCP
+7
+HFI_SB_2
+Side band cable 2 for OCP
+5
+86
+Jumpers and connectors
+Table 13. System Board Connectors and Description (continued)
+Item
+Connector
+Description
+8
+LEDs (7)
+System board diagnostic LED indicators
+9
+PCIe Slot 4
+Slot 4: x16 PCIe Gen3 CPU 1
+10
+Batt
+System battery
+11
+PWDCLR
+Password clear jumper
+12
+NVRAMCLR
+NVRAM clear jumper
+13
+PCIe Slot 3
+Slot 3: x8 PCIe Gen3 from CPU 1
+14
+TPM
+TPM connector
+15
+PCIe Slot 1
+Slot 1: x8 PCIe Gen3 from CPU 1
+16
+PCIe Slot 2
+Slot 2: x8 PCIe Gen3 from CPU 1
+17
+SATA_A
+SATA cable connector
+18
+DIMM sockets (4)
+DIMM A7, DIMM A1, DIMM A2, DIMM A3
+19
+CPU 1
+CPU socket 1
+20
+DIMM sockets (4)
+DIMM B7, DIMM B1, DIMM B2, DIMM B3
+21
+CPU 2
+CPU socket 2 (with a dust cover)
+Disabling forgotten password
+The software security features of the system include a system password and a setup password. The password jumper enables or
+disables password features and clears any password(s) currently in use.
+Prerequisites
+CAUTION: Many repairs may only be done by a certified service technician. You should only perform
+troubleshooting and simple repairs as authorized in your product documentation, or as directed by the online or
+telephone service and support team. Damage due to servicing that is not authorized by Dell is not covered by
+your warranty. Read and follow the safety instructions that are shipped with your product.
+Steps
+1.
+Power off the system, including any attached peripherals, and disconnect the system from the electrical outlet.
+2. Remove the system cover.
+3. Move the jumper on the system board jumper from pins 2 and 4 to pins 4 and 6.
+4. Install the system cover.
+The existing passwords are not disabled (erased) until the system boots with the jumper on pins 4 and 6. However, before
+you assign a new system and/or setup password, you must move the jumper back to pins 2 and 4.
+NOTE: If you assign a new system and/or setup password with the jumper on pins 4 and 6, the system disables the new
+password(s) the next time it boots.
+5. Reconnect the system to its electrical outlet and power on the system, including any attached peripherals.
+6. Power off the system, including any attached peripherals, and disconnect the system from the electrical outlet.
+7.
+Remove the system cover.
+8. Move the jumper on the system board jumper from pins 4 and 6 to pins 2 and 4.
+9. Install the system cover.
+10. Reconnect the system to its electrical outlet and power on the system, including any attached peripherals.
+11. Assign a new system and/or setup password.
+Jumpers and connectors
+87
+Getting help
+Topics:
+•
+Contacting Dell EMC
+•
+Documentation feedback
+•
+Accessing system information by using QRL
+•
+Receiving automated support with SupportAssist
+•
+Recycling or End-of-Life service information
+Contacting Dell EMC
+Dell EMC provides several online and telephone based support and service options. If you do not have an active internet
+connection, you can find contact information about your purchase invoice, packing slip, bill, or Dell EMC product catalog.
+Availability varies by country and product, and some services may not be available in your area. To contact Dell EMC for sales,
+technical assistance, or customer service issues:
+Steps
+1.
+Go to www.dell.com/support/home.
+2. Select your country from the drop-down menu on the lower right corner of the page.
+3. For customized support:
+a.
+Enter your system Service Tag in the Enter your Service Tag field.
+b. Click Submit.
+The support page that lists the various support categories is displayed.
+4. For general support:
+a.
+Select your product category.
+b. Select your product segment.
+c.
+Select your product.
+The support page that lists the various support categories is displayed.
+5. For contact details of Dell EMC Global Technical Support:
+a.
+Click Contact Technical Support.
+b. Enter your system Service Tag in the Enter your Service Tag field on the Contact Us webpage.
+Documentation feedback
+You can rate the documentation or write your feedback on any of our Dell EMC documentation pages and click Send Feedback
+to send your feedback.
+Accessing system information by using QRL
+You can use the Quick Resource Locator (QRL) located on the information tag in the front of the system, to access the
+information about the PowerEdge system.
+Prerequisites
+Ensure that your smartphone or tablet has the QR code scanner installed.
+The QRL includes the following information about your system:
+●
+How-to videos
+6
+88
+Getting help
+●
+Reference materials, including the Installtion and Service Manual, and mechanical overview
+●
+Your system service tag to quickly access your specific hardware configuration and warranty information
+●
+A direct link to Dell to contact technical assistance and sales teams
+Steps
+1.
+Go to www.dell.com/qrl and navigate to your specific product or
+2. Use your smartphone or tablet to scan the model-specific Quick Resource (QR) code on your system or in the Quick
+Resource Locator section.
+Quick Resource Locator for C6400 and C6420 systems
+Figure 77. Quick Resource Locator for PowerEdge C6400 and C6420 systems
+Receiving automated support with SupportAssist
+Dell EMC SupportAssist is an optional Dell EMC Services offering that automates technical support for your Dell EMC server,
+storage, and networking devices. By installing and setting up a SupportAssist application in your IT environment, you can receive
+the following benefits:
+●
+Automated issue detection — SupportAssist monitors your Dell EMC devices and automatically detects hardware issues,
+both proactively and predictively.
+●
+Automated case creation — When an issue is detected, SupportAssist automatically opens a support case with Dell EMC
+Technical Support.
+●
+Automated diagnostic collection — SupportAssist automatically collects system state information from your devices and
+uploads it securely to Dell EMC. This information is used by Dell EMC Technical Support to troubleshoot the issue.
+●
+Proactive contact — A Dell EMC Technical Support agent contacts you about the support case and helps you resolve the
+issue.
+The available benefits vary depending on the Dell EMC Service entitlement purchased for your device. For more information
+about SupportAssist, go to www.dell.com/supportassist.
+Recycling or End-of-Life service information
+Take back and recycling services are offered for this product in certain countries. If you want to dispose of system components,
+visit www.dell.com/recyclingworldwide and select the relevant country.
+Getting help
+89
+Documentation resources
+This section provides information about the documentation resources for your system.
+To view the document that is listed in the documentation resources table:
+●
+From the Dell EMC support site:
+1.
+Click the documentation link that is provided in the Location column in the table.
+2. Click the required product or product version.
+NOTE: To locate the product name and model, see the front of your system.
+3. On the Product Support page, click Manuals & documents.
+●
+Using search engines:
+○
+Type the name and version of the document in the search box.
+Table 14. Documentation resources 
+Task
+Document
+Location
+Setting up your
+system
+For more information about installing and
+securing the system into a rack, see the
+Rail Installation Guide included with your
+rack solution.
+For information about setting up your
+system, see the Getting Started Guide
+document that is shipped with your
+system.
+https://www.dell.com/
+poweredgemanuals
+Configuring your
+system
+For information about the iDRAC
+features, configuring and logging in
+to iDRAC, and managing your system
+remotely, see the Integrated Dell Remote
+Access Controller User's Guide.
+For information about understanding
+Remote Access Controller Admin
+(RACADM) subcommands and
+supported RACADM interfaces, see the
+RACADM CLI Guide for iDRAC.
+For information about Redfish and its
+protocol, supported schema, and Redfish
+Eventing implemented in iDRAC, see the
+Redfish API Guide.
+For information about iDRAC property
+database group and object descriptions,
+see the Attribute Registry Guide.
+For information about Intel QuickAssist
+Technology, see the Integrated Dell
+Remote Access Controller User's Guide.
+https://www.dell.com/
+poweredgemanuals
+For information about earlier versions of
+the iDRAC documents.
+To identify the version of iDRAC
+available on your system, on the iDRAC
+web interface, click ? > About.
+https://www.dell.com/idracmanuals
+7
+90
+Documentation resources
+Table 14. Documentation resources (continued)
+Task
+Document
+Location
+For information about installing the
+operating system, see the operating
+system documentation.
+https://www.dell.com/
+operatingsystemmanuals
+Managing your system
+For information about system
+management software offered by Dell,
+see the Dell OpenManage Systems
+Management Overview Guide.
+https://
+www.dell.com/
+poweredgemanuals
+For information
+about setting
+up, using, and
+troubleshooting
+OpenManage,
+see the
+Dell OpenManage
+Server
+Administrator
+User’s Guide.
+www.dell.com/openmanagemanuals >
+OpenManage Server Administrator
+For information
+about installing,
+using, and
+troubleshooting
+Dell OpenManage
+Enterprise, see the
+Dell OpenManage
+Enterprise User’s
+Guide.
+https://www.dell.com/
+openmanagemanuals
+For information
+about installing
+and using
+Dell SupportAssist,
+see the Dell
+EMC SupportAssist
+Enterprise User’s
+Guide.
+https://www.dell.com/
+serviceabilitytools
+For information
+about partner
+programs
+enterprise systems
+management, see
+the OpenManage
+Connections
+Enterprise Systems
+Management
+documents.
+https://www.dell.com/
+openmanagemanuals
+Working with the
+Dell PowerEdge
+RAID controllers
+For information about understanding
+the features of the Dell PowerEdge
+RAID controllers (PERC), Software RAID
+controllers, or BOSS card and deploying
+the cards, see the Storage controller
+documentation.
+www.dell.com/storagecontrollermanuals
+Understanding
+event and error
+messages
+For information about the event and
+error messages generated by the system
+firmware and agents that monitor
+system components, go to qrl.dell.com >
+Look Up > Error Code, type the error
+code, and then click Look it up.
+www.dell.com/qrl
+Documentation resources
+91
+Table 14. Documentation resources (continued)
+Task
+Document
+Location
+Troubleshooting
+your system
+For information about identifying and
+troubleshooting the PowerEdge server
+issues, see the Server Troubleshooting
+Guide.
+https://www.dell.com/
+poweredgemanuals
+92
+Documentation resources

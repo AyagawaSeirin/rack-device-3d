@@ -1,0 +1,2813 @@
+Dell EMC PowerEdge C6420 and C6400
+Technical Guide
+Regulatory Model: E43S Series
+Regulatory Type: E43S001
+Notes, cautions, and warnings
+NOTE: A NOTE indicates important information that helps you make better use of your product.
+CAUTION: A CAUTION indicates either potential damage to hardware or loss of data and tells you how to avoid the
+problem.
+WARNING: A WARNING indicates a potential for property damage, personal injury, or death.
+© 2017 - 2020 Dell Inc. or its subsidiaries. All rights reserved. Dell, EMC, and other trademarks are trademarks of Dell Inc. or its
+subsidiaries. Other trademarks may be trademarks of their respective owners.
+2020 - 02
+Rev. A02
+1 System overview.......................................................................................................................... 5
+Introduction............................................................................................................................................................................ 5
+2 System features...........................................................................................................................6
+Product comparison..............................................................................................................................................................6
+Specifications......................................................................................................................................................................... 7
+3 Chassis views and features........................................................................................................... 9
+Chassis views.........................................................................................................................................................................9
+Back view........................................................................................................................................................................ 10
+Internal view of the system................................................................................................................................................. 11
+Locating the information tag of your system................................................................................................................... 12
+4 Processor...................................................................................................................................14
+Processor Features..............................................................................................................................................................14
+Supported processors......................................................................................................................................................... 15
+Chipset...................................................................................................................................................................................16
+5 Memory..................................................................................................................................... 17
+Supported memory.............................................................................................................................................................. 17
+Memory speed......................................................................................................................................................................17
+6 Storage......................................................................................................................................18
+Supported drives..................................................................................................................................................................18
+Storage controller specifications........................................................................................................................................21
+Optical Drives........................................................................................................................................................................21
+Tape drive..............................................................................................................................................................................21
+Internal storage.....................................................................................................................................................................21
+7 Networking and PCIe.................................................................................................................. 23
+8 Direct contact liquid cooling (DCLC)............................................................................................25
+9 Power, thermal and acoustics......................................................................................................27
+Power....................................................................................................................................................................................27
+Acoustics.............................................................................................................................................................................. 28
+10 Supported operating systems.................................................................................................... 30
+11 Dell EMC OpenManage systems management...............................................................................31
+Server and Chassis Managers........................................................................................................................................... 32
+Dell EMC consoles...............................................................................................................................................................32
+Automation Enablers...........................................................................................................................................................32
+Contents
+Contents
+3
+Integration with third-party consoles................................................................................................................................32
+Connections for third-party consoles............................................................................................................................... 32
+Dell EMC Update Utilities................................................................................................................................................... 32
+Dell resources.......................................................................................................................................................................32
+12 Appendix A. Additional specifications..........................................................................................34
+Chassis dimensions..............................................................................................................................................................34
+Chassis weight.....................................................................................................................................................................34
+Video..................................................................................................................................................................................... 35
+USB....................................................................................................................................................................................... 36
+Environmental specifications............................................................................................................................................. 36
+13 Appendix B. Standards compliance............................................................................................. 37
+14 Appendix C Additional resources................................................................................................ 38
+15 Appendix D. Support and deployment services............................................................................ 39
+ProDeploy Enterprise Suite and Residency Services......................................................................................................39
+ProDeploy Plus...............................................................................................................................................................39
+ProDeploy....................................................................................................................................................................... 39
+Basic Deployment..........................................................................................................................................................39
+Residency Services........................................................................................................................................................40
+Deployment services...........................................................................................................................................................40
+Remote Consulting Services..............................................................................................................................................40
+Data Migration Service....................................................................................................................................................... 40
+ProSupport Enterprise Suite..............................................................................................................................................40
+ProSupport Plus................................................................................................................................................................... 41
+ProSupport............................................................................................................................................................................41
+ProSupport One for Data Center.......................................................................................................................................41
+ProSupport One for Data Center......................................................................................................................................42
+Support Technologies......................................................................................................................................................... 42
+Additional professional services.........................................................................................................................................43
+Dell Education Services.......................................................................................................................................................43
+Dell EMC Global Infrastructure Consulting Services.......................................................................................................43
+Dell EMC Managed Services..............................................................................................................................................43
+4
+Contents
+System overview
+Introduction
+The PowerEdge C6420 optimizes compute, processors, memory and large volume local storage for an IT services platform that can be
+efficiently and predictably scaled, while drastically reducing complexity. With up to 4 independent hot-swappable 2-socket servers in a
+very dense 2U chassis, servers can be easily repurposed as workloads change. Numerous options for compute, storage, connectivity and
+chassis offerings provide flexibility to configure servers for your specific workloads.
+•
+High Performance Computing (HPC)
+•
+High Performance Data Analytics (HPDA)
+•
+Web Scale Applications / Software as a Service (SaaS) / Infrastructure as a Service (IaaS)
+•
+Financial Modeling and High Frequency Trading (HFT)
+•
+Render nodes for Visual Effects Rendering (VFX)
+•
+Private Cloud Infrastructure
+•
+Hyper-converged Infrastructure (HCI)
+The PowerEdge C6420, with its flexible configurations, hyper-scale capabilities and overall efficiency, is ideal for modern hyper-converged
+infrastructures including validated, pre-bundled Dell EMC HPC solutions, VxRail and VxRack, the Dell EMC XC Series.
+•
+Features latest generation Intel® Xeon® SP family processors and up to 56 cores per node
+•
+With an M SKU CPU, each socket can support up to 1.5TB of memory (3TB per node). With non-M SKU CPU, 1.5TB per node
+•
+Offers flexible I/O options including, low-latency InfiniBand™ and next-generation Intel Omni-Path
+•
+Provides new Direct Liquid Cooling options for improved power efficiency
+Dell EMC automation and intelligent management means you spend less time on routine maintenance and more focusing on bigger
+priorities.
+•
+Maximize uptime with proactive diagnostics and automated remediation that is 90% faster.
+•
+Leverage existing consoles with easy integrations for VMware® vSphere®, Microsoft® System Center, and Nagios®.
+•
+Improve productivity with agent-free Dell EMC iDRAC9 improved usability making automated, efficient management part of your
+routine IT practice.
+•
+Simplify deployment with Dell EMC OpenManage next-generation console and server profiles to fully configure and prep servers in
+rapid, scalable fashion
+Dell EMC provides a comprehensive, cyber-resilient architecture guarding PowerEdge servers from malicious attacks. Security is
+embedded into every server to prevent unauthorized changes and protect your data.
+•
+Prevent unauthorized configuration changes or malicious firmware attacks with new Configuration Lock-down
+•
+Eliminate unauthorized firmware updates with embedded authentication so only properly signed firmware updates can run.
+•
+Securely repurpose or retire servers with system erase of local storage to ensure data privacy
+•
+Automate updates that check file dependencies and proper update sequence, before deploying them independently from OS/
+hypervisor
+1
+System overview
+5
+System features
+Product comparison
+The following table shows the comparison between the PowerEdge C6320 and PowerEdge C6420 per sled:
+Table 1. Product comparison with predecessor
+Feature
+PowerEdge C6320
+Dell EMC PowerEdge C6420
+Processor
+Intel® Xeon® E5-2600v3 and v4 Series
+Intel® Xeon® Scalable Family Processor
+Series
+Front Side Bus
+Intel® QuickPath Interconnect (QPI)
+2x Intel® Ultra Path Interconnect (UPI)
+Sockets
+2
+2
+Cores
+4, 6, 8, 10, 12, 14, 16, 18, 20, 22 core
+4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 28 core
+L2/L3 Cache
+10MB, 15MB, 20MB, 25MB, 30MB, 35MB,
+40MB, or 45MB
+8, 11, 16, 16.5, 19, 19.25, 22, 27 20, 22, 24.75.
+25, 2730, 33, 36, or 38MB
+Chipset
+Intel® C612 chipset
+Intel® C621 Chipset (Lewisburg)
+DIMMs
+16 x DDR4 1600MHz/1866/2133MHz/
+2400MHz
+•
+2933MT/s memory available in
+16/32/64GB DIMMs
+•
+2666MT/s in 8/128GB for Cascade
+Lake
+•
+16x DDR4
+Min/Max RAM
+4GB / 512GB
+•
+up to 3TB per node when using an M
+SKU CPU
+•
+1.5TB for all others
+•
+8GB / 2048GB
+Hard Drive Bays
+4-node: Up to 6 x 2.5-in or 3 x 3.5-in Hot-
+swap HDDs
+4-node: Up to 6 x 2.5-in or 3 x 3.5-in Hot-
+swap HDDs
+Hard Drive Types
+SAS/SATA
+SAS/SATA/NVMe
+External Drive Bay
+None
+None
+Internal Boot Drive
+SATA DOM (64GB) or 1.8" SSD options
+•
+1 x 120/240GB M.2 RI SSD Drive
+•
+2 x 120/240GB M.2 RI SSD Drives in
+RAID 1
+Embedded Hard Drive Controller
+Chipset-based SATA
+Chipset-based SATA
+Optional Storage Controller
+•
+Non HW RAID: Intel C612
+•
+RAID: All at 6Gbs - LSI 2008 Mezzanine,
+PERC H330, PERC H730
+•
+Non HW RAID: Intel C621, HBA330
+Mezz, 12Gb SAS PCIe LP HBA
+•
+RAID: PERC H330 Mezz, PERC H730p
+Mezz
+Availability
+Hot-plug HDD and PSU; Redundant PSU
+Hot-plug HDD and PSU; Redundant PSU
+Server Management
+iDRAC8 (Express, Enterprise) editions
+BMC (including virtual media and console),
+iDRAC9 Enterprise
+I/O Slots
+1U sled: 1 x PCIe x16 Gen3 (half height, half
+length)+ 1 x PCIe x8 Gen3 (mezzanine)
+1U sled: 1 x PCIe x16 Gen3 (half height, half
+length)+ 1 x PCIe x16 Gen3 OCP 2.0
+Mezzanine + 1 PCIe x8 Mezz (for storage
+controller)
+2
+6
+System features
+Feature
+PowerEdge C6320
+Dell EMC PowerEdge C6420
+NIC/LOM
+2x Intel® 82599ES 10GbE (SFP+)
+1 x 1Gb Intel® i350 Ethernet RJ45
+USB
+1 rear per server
+2 x USB 3.0 ports per C6420
+Power Supplies
+Hot-Swap Redundant, 1400W (80+
+Platinum) Redundant, 1600W (80+
+Platinum)
+Hot-Swap Fault Tolerant Redundant and
+Non Redundant, 1600W (80+ Platinum),
+Fault Tolerant Redundant 2000W/2400W
+Fans
+4 x 60mm, Non-redundant, non-hot
+Swappable
+4x6056 dual-rotor redundant, non-hot
+swappable fans
+Form Factor
+2U Rack
+2U Rack
+Dimension (HxWxD)
+(D) 790mm x (H) 86.8mm x (W)448mm
+(D) 790mm x (H) 86.8mm x (W)448mm
+Maximum Weight
+Max: 41 Kg
+•
+3.5" Chassis:43.62kg
+•
+2.5" Chassis:41.46kg
+•
+No BP Chassis :34.56kg
+Specifications
+Table 2. Technical Specifications
+Feature
+Specification
+Servers per chassis
+One to four 2-socket C6420 servers per C6400 chassis
+Processor
+Intel® Xeon® Scalable Processor Family series
+Front side bus
+2 x Intel® Ultra Path Interconnect (UPI)
+Number of processors
+1 or 2
+Number of cores
+Up to 28 cores
+Chipset
+Intel C621 chipset
+Memory
+•
+16 x DDR4
+•
+2933MT/s memory available in 16/32/64GB DIMMs
+•
+2666MT/s in 8/128GB for Cascade Lake
+Min/max RAM
+•
+up to 3TB per node when using an M SKU CPU
+•
+1.5TB for all others
+•
+8GB / 2048GB
+Chassis Configurations
+•
+24 x 2.5” Direct Backplane with up to 6 SAS/SATA drives per C6420 sled
+•
+24 x 2.5” Expander Backplane with up to 12 SAS/SATA drives per C6420 sled and 2 C6420 sleds per
+C6400 chassis
+•
+24 x 2.5" NVMe Backplane with up to 2 SAS/SATA/NVMe drives and 4 SAS/SATA drives per
+C6420 sled
+•
+12 x 3.5” Direct Backplane with up to 3 SAS/SATA drives per C6420 sled
+•
+No Backplane option with no external drives per C6420 sled
+Drive types
+SAS, SATA, SSD, NVMe SSDs
+Onboard drive controllers
+Intel C621: SATA HDD / SATA SSD Drives Only
+Boot Drive options
+•
+1x M.2 120GB/240GB RI SSD drive
+•
+2x M.2 120/240GB RI SSD drives in RAID 1
+Storage Controllers
+•
+S140 Software RAID
+•
+PERC H330 x8 Mezz Card
+•
+PERC H730p x8 Mezz Card
+•
+SAS HBA330
+•
+12Gb SAS HBA x16 PCIe Adapter
+System features
+7
+Feature
+Specification
+Availability
+•
+Hot-plug hard drives
+•
+Hot-plug redundant power
+•
+ECC memory
+•
+Single device data correction (SDDC)
+Server management
+•
+BMC or iDRAC9 Enterprise with 1 x 1Gbps RJ45 connector
+•
+Intel Node Manager 3.0 compliant
+I/O slots
+•
+1 x16 PCIe Gen 3 LP HH riser slot
+•
+1 x16 OCP 2.0 Mezz slot (for network controller)
+•
+1 x8 Mezz slot (for storage controller)
+•
+1 x16 PCIe Gen 3 buried slot (for M.2 Boot device)
+I/O adapter options
+•
+1 Gb Ethernet
+•
+10/25/40/100Gb Ethernet
+•
+FDR/EDR InfiniBand
+•
+Omni-Path
+Embedded NIC
+One 1Gb Ethernet for Systems Management and Host Traffic or dedicated for Systems Management
+Security
+PowerEdge Secure Boot, System Erase, System Lockdown, Drift Detection, BIOS and OS Recovery,
+Active Directory/LDAP, two-factor authentication (TFA), SSH with Public Key Authentication (PKA),
+TLS 1.2, SNMP v3, Self-Encrypting and Instant Secure Erase (ISE) Drives, FIPS /TCG; TPM 1.2/2.0,
+TPM 2.0 China
+Video
+1 x Mini Display Port
+USB
+2 x USB 3.0 ports, 1x micro USB CONN type-AB for iDRAC direct
+Power supplies
+•
+Dual hot-plug non-redundant high-efficiency 1600W PSU
+•
+Dual hot-plug fault tolerant redundant high-efficiency 1600W/2000W/2400W PSUs
+Cooling
+•
+Shared cooling with quick-disconnect 4 x 6056 dual rotor redundant fan modules with detectable
+with PWM control
+•
+Direct Contact Liquid Cooling (DCLC)
+Chassis
+C6400 2U rack-mounted
+Rails
+Static rails for C6000 family
+Chassis Dimensions
+(D) 790mm x (H) 86.8mm x (W)482.6mm
+Weight
+•
+3.5" Chassis:43.62kg
+•
+2.5" Chassis:41.46kg
+•
+No BP Chassis:34.56kg
+8
+System features
+Chassis views and features
+The C6420 chassis is an ultra-dense 2U enclosure that supports up to four independent two-socket (2S) sleds connected to a direct
+backplane.
+Topics:
+•
+Chassis views
+•
+Internal view of the system
+•
+Locating the information tag of your system
+Chassis views
+Front panel view and features
+The C6420 chassis offers four sled options.
+Figure 1. Front panel features and indicators of the 24 x 2.5 inch hard drive enclosure
+1.
+left control panel
+2.
+drive bay
+3.
+right control panel
+4.
+information tag
+Figure 2. Front panel features and indicators of the 12 x 3.5 inch hard drive enclosure
+1.
+left control panel
+2.
+drive bay
+3.
+right control panel
+4.
+information tag
+System sled enumeration
+The enumeration for the motherboards is:
+3
+Chassis views and features
+9
+Figure 3. System sled enumeration
+1U sled are shipped from the factory in:
+•
+1- node, 2- node, 3- node, and 4- node configurations only with 2.5 inch backplanes, 2.5 inch with NVMe backplanes and 3.5 inch
+backplanes.
+•
+Only 1- node, and 3-node applies to the 2.5 inch expander backplane.
+•
+The empty slots in 1- node, 2- node, and 3- node configurations are filled with the dummy or blank sleds.
+Back view
+Figure 4. Back view of the PowerEdge C6400 sled
+Table 3. Back panel features
+Item
+Indicator, button, or
+connector
+Icon
+Description
+1
+mezzanine card slot
+N/A
+Enables you to connect
+mezzanine expansion cards. For
+more information, see the
+Technical specifications section.
+2
+sled release handle
+N/A
+Enables you to remove the sled
+from the enclosure.
+3
+Low Profile PCIe card slot
+N/A
+Enables you to connect PCI
+Express expansion cards. For
+more information, see the
+Technical specifications section.
+4
+sled release lock
+N/A
+Enables you to remove the sled
+from the enclosure.
+10
+Chassis views and features
+Item
+Indicator, button, or
+connector
+Icon
+Description
+5
+rear power button
+N/A
+Enables you to power on the
+sled while accessing it from the
+rear.
+6
+iDRAC or NIC port
+Enables you to remotely access
+iDRAC. For more information,
+see the iDRAC User’s Guide at
+www.dell.com/
+poweredgemanuals.
+7
+mini display port
+Enables you to connect a display
+device to the system. For more
+information, see the Technical
+specifications section.
+8
+iDRAC Direct micro USB port
+Enables you to connect a
+portable device to the sled.
+9
+OCP or OPA card slot
+N/A
+Enables you to connect Open
+Compute Project (OCP) or
+Omni-Path Architecture (OPA)
+expansion cards. For more
+information, see the Technical
+specifications section.
+10
+EST pull out tab
+N/A
+This tab has the unique Express
+Service Code, Service Tag, and
+MAC address labels.
+11
+system id indicator and button
+The System Identification (ID)
+button is available on the front
+and back of the systems. Press
+the button to identify a system
+in a rack by turning on the
+system ID button. You can also
+use the system ID button to
+reset iDRAC and to access BIOS
+using the step through mode.
+12
+USB 3.0 port (2)
+The USB ports are 9-pin and
+3.0-compliant. These ports
+enable you to connect USB
+devices to the system.
+Internal view of the system
+CAUTION: This system must be operated with the system cover installed to ensure proper cooling.
+Chassis views and features
+11
+Figure 5. Inside the PowerEdge C6400 enclosure
+1.
+sled
+2.
+right midplane
+3.
+fan cage (2)
+4.
+fan (4)
+5. right linking board
+6. backplane
+7.
+drive cage
+8. expander board
+9. left midplane
+10. left linking board
+11. chassis management board
+12. power interposer board
+Figure 6. Inside the PowerEdge C6420 sled
+1.
+sled pull handle
+2.
+mezzanine card
+3.
+SATA connector
+4.
+memory slot (4)
+5. CPU1 processor heat sink module
+6. CPU2 processor heat sink module socket
+7.
+supporting bracket
+8. M.2 SATA riser
+9. memory slot (4)
+10. PCIe expansion card riser assembly
+Locating the information tag of your system
+You can identify your system using the unique Express Service Code and Service Tag. Pull out the information tag in front of the system
+to view the Express Service Code and Service Tag. Alternatively, the information may be on a sticker on the back of the system chassis.
+12
+Chassis views and features
+The mini Enterprise Service Tag (EST) is found on the back of the system chassis. This information is used by Dell to route support calls to
+the appropriate personnel.
+Figure 7. Locating the information tag of your system
+1.
+Information tag (Top view)
+2.
+Information tag (Bottom view)
+3.
+OpenManage Mobile (OMM) label
+4.
+iDRAC MAC address and iDRAC secure password label
+NOTE: If you have opted for secure default access to iDRAC, the iDRAC secure default password is available on the
+back of the system Information tag. This label will be blank, if you have not opted for secure default access to
+iDRAC, then the default user name and password are root and calvin.
+5. Service Tag
+Chassis views and features
+13
+Processor
+Processor Features
+Based on the Intel® 14nm fabrication technology, the Intel® Xeon® processor family introduced a new micro-architecture that provides
+significant performance advantages and new features targeted for a range of workloads such as: High Performance Computing (HPC),
+Enterprise applications, Cloud service providers, storage, network applications, Internet of Things (IoT), and many more. The following
+table summarizes key features of the processor family.
+Table 4. Processor Features
+Category
+Feature
+Function
+Compute
+More Cores
+Up to 28C
+Intel® AVX-512
+512-bit instructions
+MLC Optimization
+Acceleration of enterprise-class and HPC
+workloads
+Heterogeneous support with converged
+programming environment
+Higher 'private-local' ratio in cache
+Lower power
+Intel® Ultra Path Interconnect (UPI)
+(replaces QPI)
+Increases bandwidth: up to 10.4 GT/s
+Intel AVX-512 VNNI
+512-bit instructions to improve Deep
+Learning performance
+Memory & Security
+Memory Capacity and Bandwidth increase
+Up to DDR4 2933 MT/s (11% increase)
+Up to 6 channels (50% increase)
+MPX (Memory Protection Extensions)
+Prevents buffer overflow
+I/O
+Fabric Integration
+On package integration of next-generation
+Intel® Omni-Path Fabric controller
+PCIe Bandwidth
+Up to 48 PCIe lanes; 3.0 speed 79 GB/s bi-
+directional pipeline (from 53 GB/s on BDW)
+Separate Reference with Independent
+Spread Spectrum Clocking (SRIS)
+Eliminates clock in PCIe cables
+MCTP Scaling
+256 PCIe buses, up to 8 segments
+Storage
+Non-Transparent Bridge (NTB)
+Enhancements
+3 full-duplex NTBs and 32 MSI-X vectors
+Crystal Beach DMA (CBDMA)
+Adds MMIO -> mem transfer support
+2X performance increase vs. prior gen
+platform
+Intel® Volume Management Device (Intel®
+VMD)
+Manages CPU attached PCIe NVMe SSDs:
+Provides robust hot-plug capability
+Enclosure Management and Error isolation
+4
+14
+Processor
+Supported processors
+Table 5. Supported processors for the PowerEdge C6420
+Family
+Model
+Cores
+Clock speed
+(GHz)
+TDP
+Maximum
+memory
+frequency
+(GHz)
+Maximum
+frequency
+(GHz)
+Maximum
+memory (Per
+CPU)
+Platinum
+8280
+28
+2.6
+205
+2933
+2.6
+1 TB
+Platinum
+8276M
+28
+2.2
+165
+2933
+2.2
+2 TB
+Platinum
+8276
+28
+2.2
+165
+2933
+2.2
+1 TB
+Platinum
+8270
+26
+2.6
+205
+2933
+2.7
+1 TB
+Platinum
+8268
+24
+2.9
+205
+2933
+2.9
+1 TB
+Platinum
+8260M
+24
+2.3
+165
+2933
+2.3
+2 TB
+Platinum
+8260
+24
+2.3
+165
+2933
+2.3
+1 TB
+Platinum
+8253
+16
+2.2
+125
+2933
+2.2
+1 TB
+Gold
+6262V
+24
+1.9
+135
+2400
+1.9
+1 TB
+Gold
+6254
+18
+3.1
+200
+2933
+3.1
+1 TB
+Gold
+6252N
+24
+2.7
+150
+2933
+2.7
+1 TB
+Gold
+6252
+24
+2.1
+150
+2933
+2.1
+1 TB
+Gold
+6246
+12
+3.3
+165
+2933
+3.3
+1 TB
+Gold
+6244
+8
+3.7
+150
+2933
+3.7
+1 TB
+Gold
+6240R
+24
+2.4
+165
+2933
+2.6
+1 TB
+Gold
+6240M
+18
+2.6
+150
+2933
+2.6
+2 TB
+Gold
+6240
+18
+2.6
+150
+2933
+2.6
+1 TB
+Gold
+6238R
+28
+2.2
+165
+2933
+1.9
+1 TB
+Gold
+6238M
+22
+2.1
+140
+2933
+2.1
+2 TB
+Gold
+6238
+22
+2.1
+140
+2933
+2.1
+1 TB
+Gold
+6234
+8
+3.3
+130
+2933
+3.3
+1 TB
+Gold
+6230R
+26
+2.1
+150
+2933
+2.1
+1 TB
+Gold
+6230
+20
+2.1
+125
+2933
+2.1
+1 TB
+Gold
+6226R
+16
+2.9
+150
+2933
+2.9
+1 TB
+Gold
+6226
+12
+2.7
+125
+2933
+2.7
+1 TB
+Gold
+6230N
+18
+2.6
+150
+2933
+2.6
+1 TB
+Gold
+6222V
+20
+1.8
+115
+2933
+1.8
+1 TB
+Gold
+5220R
+24
+2.2
+150
+2933
+2.2
+1 TB
+Gold
+5220S
+18
+2.7
+125
+2667
+2.7
+1 TB
+Gold
+5220
+18
+2.2
+125
+2667
+2.2
+1 TB
+Gold
+5218R
+20
+2.1
+125
+2933
+2.1
+1 TB
+Gold
+5218N
+16
+2.3
+110
+2667
+2.3
+1 TB
+Gold
+5218
+16
+2.3
+105
+2667
+2.3
+1 TB
+Gold
+6248
+20
+2.5
+150
+2933
+2.5
+1 TB
+Processor
+15
+Family
+Model
+Cores
+Clock speed
+(GHz)
+TDP
+Maximum
+memory
+frequency
+(GHz)
+Maximum
+frequency
+(GHz)
+Maximum
+memory (Per
+CPU)
+Gold
+6242
+16
+2.8
+150
+2933
+2.8
+1 TB
+Gold
+5222
+4
+3.8
+105
+2666
+3.8
+1 TB
+Gold
+5217
+8
+3
+85
+2666
+3
+1 TB
+Gold
+5215
+10
+2.5
+85
+2666
+2.5
+1 TB
+Gold
+5215M
+10
+2.6
+85
+2666
+2.6
+2 TB
+Gold
+5215L
+10
+2.6
+85
+2666
+2.6
+4.5 TB
+Silver
+4216
+16
+2.1
+100
+2666
+2.1
+1 TB
+Silver
+4215R
+8
+3.2
+130
+2400
+3.2
+1 TB
+Silver
+4215
+8
+2.5
+85
+2666
+2.5
+1 TB
+Silver
+4214
+12
+2.2
+85
+2666
+2.2
+1 TB
+Silver
+4214R
+12
+2.4
+100
+2400
+2.4
+1 TB
+Silver
+4210R
+10
+2.4
+100
+2400
+2.4
+1 TB
+Silver
+4210
+10
+2.2
+85
+2666
+2.2
+1 TB
+Silver
+4208
+8
+2.1
+85
+2666
+2.1
+1 TB
+Bronze
+3206R
+8
+1.9
+85
+2400
+1.9
+1 TB
+Bronze
+3204
+6
+1.9
+85
+2666
+1.7
+1 TB
+NOTE: For more information about Intel Xeon Scalable Processors, see www.intel.com.
+Chipset
+The PowerEdge C6420 server incorporates the Intel C621 chipset for processor interfacing and for I/O.
+16
+Processor
+Memory
+The C6420 supports up to 16 DIMMs, with speeds of up to 2666MT/s. The system supports registered (RDIMMs) and load reduced
+DIMMs (LRDIMMs) which use a buffer to reduce memory loading and provide greater density, allowing for the maximum platform memory
+capacity. Unbuffered DIMMs (UDIMMs) are not supported.
+The maximum system population is 2TB (16 DIMM slots x128 GB DDR4 LRDIMM), however for best performance the system should be
+populated to achieve a balanced configuration by populating 1 DIMM per channel. In a balanced configuration with maximum capacity, 12
+DIMM slots are populated for a total of 1.5TB memory using 128GB DIMMs.
+Topics:
+•
+Supported memory
+•
+Memory speed
+Supported memory
+The following table list the supported memory for the PowerEdge C6420 when using Cascade Lake processor:
+Table 6. Memory configuration
+Availability
+Density
+DIMM Type
+Dell PN
+Configuration
+DRAM
+Package
+type
+DIMM max speed
+Rated
+voltage
+Yes
+8GB
+RDIMM
+1VRGY
+1Rx8
+8Gb
+SDP
+2666MT/s in Cascade
+Lake processor
+1.2V
+Yes
+16GB
+RDIMM
+TFYHP
+2Rx8
+8Gb
+SDP
+2933MT/s
+1.2V
+Yes
+32GB
+RDIMM
+8WKDY
+2RX4
+8Gb
+SDP
+2933MT/s
+1.2V
+Yes
+64GB
+RDIMM
+W403Y
+4Rx4
+8Gb
+DDP
+2933MT/s
+1.2V
+Yes
+128GB
+LRDIMM
+917VK
+8Rx4
+8Gb
+TSV
+2666MT/s in Cascade
+Lake processor
+1.2V
+Memory speed
+The PowerEdge C6420 system supports memory speeds of 2933MT/s, 2666MT/s, 2400MT/s, 2133MT/s, and 1866MT/s depending on
+the DIMM types installed and the configuration. All memory on all processors and channels run at the same speed and voltage. By default,
+this speed will be the highest speed supported by the CPU and the DIMMs. For example both DIMMs and CPUs must be capable of
+running at 2666MT/s in order for memory to run at 2666MT/s (specific CPU / DIMM configuration required). CPU SKUs in the Platinum
+category support up to 2666MT/s memory speed while CPU SKUs in Gold and Silver category support up to 2400 MT/s memory speed.
+The operating speed of the memory is also determined by the maximum speed supported by the processor, the speed settings in the
+BIOS, and the operating voltage of the system.
+The table below lists the memory configuration and performance details for the C6420, based on the quantity and type of DIMMs per
+memory channel.
+Table 7. Memory configuration
+DIMM type
+DIMM ranking
+Capacity
+DIMM rated voltage,
+speed
+1 DPC
+RDIMM
+1R / 2R
+8GB, 16GB, 32GB
+DDR4 (1.2V), 2666
+D: 2666
+LRDIMM
+4R
+64GB
+DDR4 (1.2V), 2666
+D: 2666
+LRDIMM
+8R
+128GB
+DDR4 (1.2V), 2666
+D: 2666
+5
+Memory
+17
+Storage
+The system enables multiple storage configurations to tune the system configuration for a wide variety of workloads. The C6400 chassis is
+available in the following configuration types:
+•
+No hard drives in a No-Backplane Configuration
+•
+24 x 2.5" Direct Backplane configuration with up to 6 SAS/SATA drives per node
+•
+24 x 2.5" Expander Backplane configuration with up to 12 SAS/SATA drives per node and two nodes per chassis
+•
+24 x 2.5" NVMe Backplane configuration with up to 6 drives per node out of which two drives can be NVMe drives
+•
+12 x 3.5" Direct Backplane configuration with up to 3 SAS/SATA drives per node
+Topics:
+•
+Supported drives
+•
+Storage controller specifications
+•
+Optical Drives
+•
+Tape drive
+•
+Internal storage
+Supported drives
+The PowerEdge C6420 system supports up to 24 x 2.5” hard disk drives per server node and up to 12 x 3.5” hard disk drives per server
+node depending on the number of installed nodes and backplane type (max 6 x 2.5” HDDs using 2.5”direct backplane; max 3 x 3.5” HDDs
+using 3.5" direct backplane).
+•
+Support for 7.2K, 10K and 15K RPM 2.5-inch and 3.5-inch SAS drives
+•
+Support for 7.2K RPM Enterprise 2.5-inch and 3.5-inch SATA
+NOTE: For the latest list of drives available on C6420, please always refer to the options available in quoting and
+ordering tools. This list may not accurately reflect the comprehensive list of all drives available on the C6420 platform.
+The following table list the supported NVMe drives:
+Table 8. Supported NVMe drives
+Description
+Interface
+Capacity
+DPN
+Type
+SSDR,800G,NVMEPCIE,
+2.5,PM1725A
+PCIe
+800GB
+KWH83
+MU
+SSDR,1.6T,NVMEPCIE,2.
+5,PM1725A
+PCIe
+1.6TB
+JD6CH
+MU
+SSDR,3.2,NVMEPCIE,2.5
+,PM1725A
+PCIe
+3.2TB
+JDMHM
+MU
+SSDR,3.2,NVME,PCIE,2.
+5,PM1725
+PCIe
+3.2TB
+99JNC
+MU
+SSDR,6.4,NVMEPCIE,2.5
+,PM1725A
+PCIe
+6.4TB
+Y3XT2
+MU
+The following table shows the supported SSD drives:
+Table 9. Supported SSD drives
+Description
+Interface
+Class
+Capacity
+120GB SSD SATA Boot 6Gbps 512n 2.5in Hot-plug Drive, 1
+DWPD, 219 TBW
+SATA
+RI
+120GB
+6
+18
+Storage
+Description
+Interface
+Class
+Capacity
+240GB SSD SATA Mix Use 6Gbps 512n 2.5in Hot-plug Drive,
+SM863a,3 DWPD,1314 TBW
+SATA
+MU
+240GB
+400GB SSD SAS Mix Use 12Gbps 512e 2.5in Hot-plug Drive,
+PM1635a,3 DWPD,2190 TBW
+SAS
+MU
+400GB
+400GB SSD SAS Write Intensive 12Gbps 512n 2.5in Hot-plug
+Drive, PX05SM,10 DWPD,7300 TBW
+SAS
+WIG
+400GB
+480GB SSD SAS Mix Use 12Gbps 512n 2.5in Hot-plug Drive,
+PX05SV,3 DWPD,2628 TBW
+SAS
+MU
+480GB
+480GB SSD SATA Read Intensive 6Gbps 512n 2.5in Hot-plug
+Drive, S3520, 1 DWPD, 945 TBW
+SATA
+RI
+480GB
+480GB SSD SATA Mix Use 6Gbps 512n 2.5in Hot-plug Drive,
+SM863a,3 DWPD,2628 TBW
+SATA
+MU
+480GB
+800GB SSD SAS Write Intensive 12Gb 512n 2.5in Hot-plug
+Drive, PX05SM,10 DWPD,14600 TBW
+SAS
+WIG
+800GB
+960GB SSD SAS Read Intensive 12Gbps 512n 2.5in Hot-plug
+Drive, PX05SR,1 DWPD,1752 TBW
+SAS
+RI
+960GB
+960GB SSD SAS Read Intensive 12Gbps 512e 2.5in Hot-plug
+Drive, PM1633a,1 DWPD,1752 TBW
+SAS
+RI
+960GB
+960GB SSD SAS Mix Use 12Gbps 512n 2.5in Hot-plug Drive,
+PX05SV,3 DWPD,5256 TBW
+SAS
+MU
+960GB
+960GB SSD SATA Read Intensive 6Gbps 512n 2.5in Hot-plug
+Drive, S3520, 1 DWPD, 1750 TBW
+SATA
+RI
+960GB
+960GB SSD SATA Mix Use 6Gbps 512n 2.5in Hot-plug Drive,
+SM863a,3 DWPD,5256 TBW
+SATA
+MU
+960GB
+1.6TB SSD SAS Mix Use 12Gbps 512e 2.5in Hot-plug Drive,
+PM1635a,3 DWPD,8760 TBW
+SAS
+MU
+1.6TB
+1.6TB SSD SAS Write Intensive 12Gbps 512n 2.5in Hot-plug
+Drive, PX05SM,10 DWPD,29200 TBW
+SAS
+WIG
+1.6TB
+1.92TB SSD SAS Read Intensive 12Gbps 512n 2.5in Hot-plug
+Drive, PX05SR,1 DWPD,3504 TBW
+SAS
+RI
+1.92TB
+1.92TB SSD SAS Read Intensive 12Gb 512e 2.5in Hot-plug
+Drive, PM1633a,1 DWPD,3504 TBW
+SAS
+RI
+1.92TB
+1.92TB SSD SAS Mix Use 12Gbps 512n 2.5in Hot-plug Drive,
+PX05SV,3 DWPD,10512 TBW
+SAS
+MU
+1.92TB
+1.92TB SSD SATA Mix Use 6Gbps 512n 2.5in Hot-plug Drive,
+SM863a,3 DWPD,10512 TBW
+SATA
+MU
+1.92TB
+1.92TB SSD SATA Read Intensive 6Gpbs 512n 2.5in Hot-plug
+Drive, PM863a,1 DWPD,3504 TBW
+SATA
+RI
+1.92TB
+3.84TB SSD SAS Mix Use 12Gbps 512n 2.5in Hot-plug Drive,
+PX05SV,3 DWPD,10512 TBW
+SAS
+MU
+3.84TB
+3.84TB SSD SAS Read Intensive 12Gbps 512n 2.5in Hot-plug
+Drive, PX05SR,1 DWPD,7008 TBW
+SAS
+RI
+3.84TB
+3.84TB SSD SAS Read Intensive 12Gb 512n 2.5in Hot-plug
+Drive, PM1633a,1 DWPD,7008 TBW
+SAS
+RI
+3.84TB
+3.84TB SSD SATA Read Intensive 6Gbps 512n 2.5in Hot-plug
+Drive, PM863a,1 DWPD,7008 TBW
+SATA
+RI
+3.84TB
+The following table list the supported hard drives:
+Storage
+19
+Table 10. Supported hard drives
+Description
+Form Factor
+Interface
+Class
+Capacity
+300GB 10K RPM SAS 12Gbps 512n 2.5in Hot-plug Hard
+Drive
+2.5"
+10K
+SAS
+300GB
+300GB 15K RPM SAS 12Gbps 512n 2.5in Hot-plug Hard
+Drive
+2.5"
+15K
+SAS
+300GB
+600GB 10K RPM SAS 12Gbps 512n 2.5in Hot-plug Hard
+Drive
+2.5"
+10K
+SAS
+600GB
+600GB 15K RPM SAS 12Gbps 512n 2.5in Hot-plug Hard
+Drive
+2.5"
+15K
+SAS
+600GB
+900GB 15K RPM SAS 12Gbps 512n 2.5in Hot-plug Hard
+Drive
+2.5"
+15K
+SAS
+900GB
+900GB 15K RPM SAS 12Gbps 512e TurboBoost
+Enhanced Cache 2.5in Hot-plug Hard Drive
+2.5"
+15K
+SAS
+900GB
+900GB 15K RPM SAS 12Gbps 4Kn 2.5in Hot-plug Hard
+Drive
+2.5"
+15K
+SAS
+900GB
+900GB 15K RPM Self-Encrypting SAS 12Gbps 512n
+2.5in Hot-plug Hard Drive, FIPS140
+2.5"
+15K
+SAS
+900GB
+1TB 7.2K RPM NLSAS 12Gbps 512n 2.5in Hot-plug Hard
+Drive
+2.5"
+7.2K
+NLSAS
+1TB
+1TB 7.2K RPM SATA 6Gbps 512n 2.5in Hot-plug Hard
+Drive
+2.5"
+7.2K
+SATA
+1TB
+1.2TB 10K RPM SAS 12Gbps 512n 2.5in Hot-plug Hard
+Drive
+2.5"
+10K
+SAS
+1.2TB
+1.2TB 10K RPM Self-Encrypting SAS 12Gbps 512n 2.5in
+Hot-plug Hard Drive, FIPS140
+2.5"
+10K
+SAS
+1.2TB
+1.8TB 10K RPM SAS 12Gbps 512e 2.5in Hot-plug Hard
+Drive
+2.5"
+10K
+SAS
+1.8TB
+2TB 7.2K RPM NLSAS 12Gbps 512n 2.5in Hot-plug
+Hard Drive
+2.5"
+7.2K
+NLSAS
+2TB
+2TB 7.2K RPM SATA 6Gbps 512n 2.5in Hot-plug Hard
+Drive
+2.5"
+7.2K
+SATA
+2TB
+2TB 7.2K RPM Self-Encrypting NLSAS 12Gbps 512n
+2.5in Hot-plug Hard Drive, FIPS140
+2.5"
+7.2K
+NLSAS
+2TB
+1TB 7.2K RPM SATA 6Gbps 512n 3.5in Hot-plug Hard
+Drive
+3.5"
+7.2K
+SATA
+1TB
+2TB 7.2K RPM NLSAS 12Gbps 512n 3.5in Hot-Plug
+Hard Drive
+3.5"
+7.2K
+NLSAS
+2TB
+2TB 7.2K RPM SATA 6Gbps 512n 3.5in Hot-plug Hard
+Drive
+3.5"
+7.2K
+SATA
+4TB
+4TB 7.2K RPM NLSAS 12Gbps 512n 3.5in Hot-plug
+Hard Drive
+3.5"
+7.2K
+NLSAS
+4TB
+4TB 7.2K RPM SATA 6Gbps 512n 3.5in Hot-plug Hard
+Drive
+3.5"
+7.2K
+SATA
+4TB
+4TB 7.2K RPM Self-Encrypting NLSAS 12Gbps 512n
+3.5in Hot-plug Hard Drive, FIPS140
+3.5"
+7.2K
+NLSAS
+4TB
+8TB 7.2K RPM NLSAS 12Gbps 512e 3.5in Hot-plug
+Hard Drive
+3.5"
+7.2K
+NLSAS
+8TB
+8TB 7.2K RPM NLSAS 12Gbps 4Kn 3.5in Hot-Plug Hard
+Drive
+3.5"
+7.2K
+NLSAS
+8TB
+20
+Storage
+Description
+Form Factor
+Interface
+Class
+Capacity
+8TB 7.2K RPM SATA 6Gbps 512e 3.5in Hot-plug Hard
+Drive
+3.5"
+7.2K
+SATA
+8TB
+8TB 7.2K RPM Self-Encrypting NLSAS 12Gbps 512e
+3.5in Hot-plug Hard Drive, FIPS140
+3.5"
+7.2K
+NLSAS
+8TB
+10TB 7.2K RPM NLSAS 12Gbps 512e 3.5in Hot-plug
+Hard Drive
+3.5"
+7.2K
+NLSAS
+10TB
+10TB 7.2K RPM SATA 6Gbps 512e 3.5in Hot-plug Hard
+Drive
+3.5"
+7.2K
+SATA
+10TB
+Storage controller specifications
+RAID configurations are supported for the PowerEdge C6420 with SAS and SATA Drives. See the available RAID options outlined below.
+Table 11. Storage controller specifications
+Storage Controller
+Supported RAID Levels
+Embedded C621 chipset
+RAID 0, 1, 10, 5
+PERC H330 Mezz
+RAID 0, 1, 5, 10, 50
+PERC H730p Mezz
+RAID 0, 1, 5, 6, 10, 50, 60
+Optical Drives
+The PowerEdge C6400 chassis does not support optical drives. If needed, any external USB 3.0 compliant drive can be used, although no
+specific vendors have been qualified.
+Tape drive
+The PowerEdge C6420 does not support an internal tape drive. External storage peripherals are not directly validated with PowerEdge
+C6420, but customers can use any supported network-based storage options validated with our network and fabric card matrix.
+Internal storage
+M.2 boot storage
+PowerEdge C6420 introduces support for internal boot storage using the M.2 boot device. Following two options are available for M.2
+boot devices:
+•
+Single M.2 Boot Drive connected using SATA : A single M.2 boot drive can be configured for each C6420 node. The boot device
+uses a PCIe riser which uses the x16 PCIe buried riser. Note that the M.2 boot device is not a PCIe device, but a SATA device and
+connects to the SATA port. The SATA port comes from the PCH chipset. This SATA connected M.2 device can work with a single or
+dual CPU configurations. M.2 capacities available: 240GB
+•
+Modular BOSS-S1: Dual M.2 Boot Drives with HW RAID connected using PCIe : Dual M.2 boot drives in RAID 1 can be
+configured for each C6420 node. The boot device uses a PCIe riser which uses the x16 PCIe buried riser. A hardware RAID controller
+on the M.2 card configures the two drives in RAID 1. M.2 capacities available: 2x240GB and 2x480GB
+Since the M.2 RAID card utilizes PCIe connectivity from CPU2, the M.2 RAID card is only available with dual CPU C6420 configurations.
+The following table compares the two M.2 boot options:
+Table 12. Internal storage configuration
+Features
+Single M.2 without SW and HW RAID
+Modular BOSS-S1: Dual M.2 Drives with HW
+RAID
+HW RAID
+No
+Yes
+Storage
+21
+Features
+Single M.2 without SW and HW RAID
+Modular BOSS-S1: Dual M.2 Drives with HW
+RAID
+RAID Mode
+NA
+RAID 1 from factory Can be configured to No-RAID
+by the customer
+Number of Drives
+1
+2
+CPU 1 Needed
+Yes
+Yes
+CPU 2 Needed
+No
+Yes
+22
+Storage
+Networking and PCIe
+On the PowerEdge C6420, the iDRAC dedicated port and Intel® i350 LOM Media Dependent Interface (MDI) pins are mixed to a single
+RJ45 on the back of the system. In a dedicated mode, the RJ45 port is dedicated to iDRAC only. In the shared or i350 mode, the port is
+available for both iDRAC and host communication. Only one port may be enabled at a given time. By default, each system is configured for
+i350 LOM mode which means that the physical port is shared for host and iDRAC communication.
+Network Card-Side Band Interface is also multiplexed between the x16 OCP Mezz Card and the x8 Mezz card slot. Since a network card
+such as the Intel® x710 OCP Mezz card can be populated in the x16 OCP Mezz slot, iDRAC management can be configured to utilize the
+ports (e.g. LOM 2 and LOM 3) on the OCP Mezz card.
+The following table shows the supported network adapters for the PowerEdge C6420:
+Table 13. Network adapters
+Description
+Type
+Speed
+DPN
+Form Factor Connectivity
+Intel X710 Dual Port 10Gb SFP+ OCP Mezzanine Adapter
+Ethernet
+10Gbps
+T44PH
+OCP
+Mezzanine
+SFP+
+Intel i350 1Gb Dual Port Ethernet LP PCIe Adapter
+Ethernet
+1Gbps
+8WWC9
+LP PCIe
+Adapter
+BASE-T
+Broadcom 5720 1Gb Dual Port Ethernet LP PCIe Adapter
+Ethernet
+1Gbps
+557M9
+LP PCIe
+Adapter
+BASE-T
+Intel Dual Port 10Gb SFP+ LP PCIe Adapter
+Ethernet
+10Gbps
+5N7Y5
+LP PCIe
+Adapter
+SFP+
+Intel X520 Dual Port 10Gb SFP+ LP PCIe Adapter
+Ethernet
+10Gbps
+942V6
+LP PCIe
+Adapter
+SFP+
+Intel X550 Dual Port 10Gb BASE-T LP PCIe Adapter
+Ethernet
+10Gbps
+HWWN0
+LP PCIe
+Adapter
+BASE-T
+Intel X710 Dual Port 10Gb BASE-T LP PCIe Adapter
+Ethernet
+10Gbps
+5N7Y5
+LP PCIe
+Adapter
+SFP+
+Intel X710 Quad Port 10Gb BASE-T LP PCIe Adapter
+Ethernet
+10Gbps
+08XJ7
+LP PCIe
+Adapter
+BASE-T
+Broadcom 57402 10Gb SFP+ LP PCIe Adapter
+Ethernet
+10Gbps
+YR0VV
+LP PCIe
+Adapter
+SFP+
+Broadcom 57414 Dual Port 25Gb LP PCIe Adapter
+Ethernet
+25Gbps
+F4P93
+LP PCIe
+Adapter
+SFP28
+Broadcom 57416 10Gb BASE-T LP PCIe Adapter
+Ethernet
+10Gbps
+NC5VD
+LP PCIe
+Adapter
+BASE-T
+SolarFlare SFN8002F Dual Port 10Gb SFP+ LP PCIe
+Adapter
+Ethernet
+10Gbps
+332MM
+LP PCIe
+Adapter
+SFP+
+Mellanox 10Gb Dual Port ConnectX-3 LP PCIe Adapter
+Ethernet
+10Gbps
+YHTD6
+LP PCIe
+Adapter
+QSFP+
+Intel(R) 25GBE 2P XXV710 Adapter
+Ethernet
+25Gbps
+00M95
+LP PCIe
+Adapter
+QSFP+
+Broadcom Dual Port 25Gbps SFP PCIe Adapter
+Ethernet
+25Gbps
+24GFD
+LP PCIe
+Adapter
+QSFP+
+QLogic Dual Port 25Gbps SFP LP PCIe Adapter
+Ethernet
+25Gbps
+XV3MV
+LP PCIe
+Adapter
+QSFP+
+Mellanox Dual Port 25Gbps SFP LP PCIe Adapter
+Ethernet
+25Gbps
+20NJD
+LP PCIe
+Adapter
+QSFP+
+7
+Networking and PCIe
+23
+Description
+Type
+Speed
+DPN
+Form Factor Connectivity
+Mellanox Dual Port 40Gbps QSFP LP PCIe Adapter
+Ethernet
+40Gbps
+R3F0N
+LP PCIe
+Adapter
+QSFP+
+Intel Dual Port 40Gbps QSFP LP PCIe Adapter
+Ethernet
+40Gbps
+8DKFV
+LP PCIe
+Adapter
+QSFP+
+Mellanox ConnectX-4 Dual Port 100Gb QSFP28 LP PCIe
+Adapter
+Ethernet
+100Gbps
+HWTYK
+LP PCIe
+Adapter
+QSFP28
+Mellanox ConnectX3 VPI QSFP+ Single Port FDR LP PCIe
+Adapter
+InfiniBand
+56Gbps
+79DJ3
+LP PCIe
+Adapter
+QSFP+
+Mellanox ConnectX-4 Single Port VPI QSFP28 EDR LP
+PCIe Adapter
+InfiniBand/
+Ethernet
+100Gb
+JJN39
+LP PCIe
+Adapter
+QSFP28
+Mellanox ConnectX-4 Dual Port VPI QSFP28 EDR LP PCIe
+Adapter
+InfiniBand/
+Ethernet
+100Gb
+NNJ2M
+LP PCIe
+Adapter
+QSFP28
+ConnectX-5 Single Port VPI EDR QSFP28 Adapter
+InfiniBand/
+Ethernet
+100Gb
+6FKDT
+LP PCIe
+Adapter
+QSFP28
+Intel Omni-Path Single Port Host Fabric Adapter 100 Series
+LP PCIe Adapter
+OmniPath
+100Gb
+N64D3
+LP PCIe
+Adapter
+QSFP28
+PCIe slots
+The PowerEdge C6420 compute sled provides flexible options for IO and storage connectivity using the PCIe slots. The table below
+summarizes various options available and the standard usage of each slot.
+Table 14. PCIe slots
+Slot
+Description
+Fed by CPU
+Standard Usage
+x8 Mezz PCI-e Riser
+One x8 PCIe Gen3 for Mezz (x8
+lanes)
+CPU 1
+Storage Controller
+x16 (x8+x8) OCP Mezz Riser
+X8 + X8 PCIe Gen3 for OCP
+Mezz (x16 lanes max)
+CPU 1
+Network card for host
+x16 PCI-e Main Riser (plug-
+in)
+One x16 PCIe Gen3 for LP from
+CPU 1 (x16 lanes)
+CPU 1
+Half Height Low Profile PCIe
+Adapter
+x16 buried PCI-e Riser
+One x16 PCIe Gen3 for specific
+form factor (x16 lanes)
+CPU 2
+M.2 SATA Boot Device /
+Modular BOSS
+24
+Networking and PCIe
+Direct contact liquid cooling (DCLC)
+The PowerEdge C6420 introduces Direct Contact Liquid Cooling (DCLC) support with our partner CoolIT Systems. DCLC offers
+customers multiple advantages over air cooling:
+•
+Improves overall data center Power Utilization Efficiency (PUE)
+•
+Improves power efficiency of servers and eliminates need for costly cooling infrastructure such as chillers and CRAC units, thus
+lowering overall cost and improving TCO
+•
+Improves life of IT infrastructure
+NOTE:
+•
+DCLC is available in select countries with C6420 launch.
+•
+DCLC orders must be entered into the LOT tool. DCLC orders will have an extended lead time of about 4-6 weeks.
+The following table describes the three key components of the DCLC:
+Table 15. Direct contact liquid cooling (DCLC) key components
+Components
+Description
+Figure 8. CPU cold plate loop
+The CoolIT Systems cold plates, specifically designed for use with
+Intel Xeon, are passive CPU Cooling solutions managed by
+centralized pumping architectures. These passive cold plate
+assemblies replace heatsinks and are purpose-designed to
+accommodate C6420 compute sleds. For C6420 DCLC solution,
+the cold plates are sold and supported by Dell EMC.
+Figure 9. Rack Manifold
+Coolant tubes come out of each sled and connect to a manifold
+unit. Made with reliable stainless steel and 100% non-drip quick
+disconnects, Rack Manifolds can be arranged horizontally or
+vertically for a manual connection at the front or back of the rack.
+For C6420 DCLC solution, the manifolds are sold (via S&P) and
+supported by CoolIT or Authorized Service Provider.
+Figure 10. Heat Exchanger
+While Server Modules and Manifold Modules are installed with each
+system and are local to the rack, the appropriate heat rejection
+method may vary. CoolIT Systems Rack DCLC product line offers a
+variety of Heat Exchange Modules depending on load requirements
+and availability of facility water, including CHx (Liquid-to-Liquid),
+AHx (Liquid-to-Air) and custom options. For C6420 DCLC solution,
+the heat exchangers are sold (via S&P) and supported by CoolIT or
+Authorized Service Provider.
+8
+Direct contact liquid cooling (DCLC)
+25
+Liquid cooled sled
+A PowerEdge C6420 sled can be configured from the factory to use Liquid Cooling instead of Air Cooling. Processor Thermal
+Configuration Option can be configured in the ordering tools to select Direct Liquid Cooling. CPU Cold Plates are installed in the factory
+and the system is shipped with cold plates installed in each sled, with each sled placed in the chassis. Dell EMC provides support and
+warranty for Cold Plates.
+Figure 11. Front view of the C6420 liquid cooled sled
+Figure 12. Back view of the C6420 liquid cooled sled
+26
+Direct contact liquid cooling (DCLC)
+Power, thermal and acoustics
+Power
+Energy Smart power supplies have intelligent features, such as the ability to dynamically optimize efficiency while maintaining availability
+and redundancy. Also featured are enhanced power- consumption reduction technologies, such as high- efficiency power conversion and
+advanced thermal- management techniques, and embedded power- management features, including high- accuracy power monitoring.
+The PowerEdge C6400 chassis power supply subsystem is formed with two AC-DC redundant power supplies. The power supply provides
++12V and +12Vaux for redundant design. There are several voltage regulators in the system to supply different voltage levels needed by
+different logic devices.
+The following Power Supply configuration options are available on C6400 chassis:
+•
+Dual, Hot-plug Fault Tolerant Redundant Power Supply(1+1),1600W, 250Volt
+•
+Dual, Hot-plug Fault Tolerant Redundant Power Supply, 2000W
+•
+Dual, Hot-plug Fault Tolerant Redundant Power Supply , 2400W
+•
+Dual, Hot-plug Fully Redundant Power Supply(1+1),1600W, 250Volt
+•
+Dual, Hot-plug Fully Redundant Power Supply, 2000W
+•
+Dual, Hot-plug Fully Redundant Power Supply , 2400W
+The following tables shows the power supply specifications and power efficiency.
+Table 16. 1600W PSU Specification
+Attribute
+Value
+Configuration Options
+1+1 Fault Tolerant Redundant (from factory) 2+0 Non Redundant
+(customer configurable)
+80 Plus
+Platinum
+Power Factor Correction
+Active
+FCC Classification
+Class A
+Max Output Current
+131.15A (180-264Vac)
+65.57A (90-140Vac)
+Input Voltage Range
+90-264V AC, 47-63Hz
+Iin 100 - 240VAC for rating on safety label
+10.0 Amps
+Initial Inrush Current
+25 Amps (peak)
+Secondary Inrush Current
+25 Amps (peak)
+Table 17. 1600W PSU Efficiency
+10% Load
+20% Load
+50% Load
+100% Load
+Power Supply
+efficiency at 115Vac
+N/A
+85%
+88%
+90%
+Power Supply
+efficiency at 230Vac
+87%
+90%
+94%
+91%
+Table 18. 2000W PSU Specifications
+Attribute
+Value
+Configuration Options
+1+1 Fault Tolerant Redundant
+80 Plus
+Platinum
+9
+Power, thermal and acoustics
+27
+Attribute
+Value
+Power Factor Correction
+Active
+FCC Classification
+Class A
+Max Output Current
+163.93A (180-264Vac)
+81.97A (90-140Vac)
+Input Voltage Range
+90-264V AC, 47-63Hz
+Iin 100 - 240VAC for rating on safety label
+11.5 Amps
+Initial Inrush Current
+25 Amps (peak)
+Secondary Inrush Current
+45 Amps (peak)
+Table 19. 2000W PSU Efficiency
+10% Load
+20% Load
+50% Load
+100% Load
+Power Supply
+efficiency at 115Vac
+N/A
+88%
+92%
+91%
+Power Supply
+efficiency at 230Vac
+89%
+93%
+94%
+91%
+Table 20. 2400W PSU Specifications
+Attribute
+Value
+Configuration Options
+1+1 Fault Tolerant Redundant
+80 Plus
+Platinum
+Power Factor Correction
+Active
+FCC Classification
+Class A
+Max Output Current
+196.72A (180-264Vac)
+114.75A (90-140Vac)
+Input Voltage Range
+90-264V AC, 47-63Hz
+Iin 100 - 240VAC for rating on safety label
+16.0 Amps
+Initial Inrush Current
+35 Amps (peak)
+Secondary Inrush Current
+45 Amps (peak)
+Table 21. 2400W PSU Efficiency
+10% Load
+20% Load
+50% Load
+100% Load
+Power Supply
+efficiency at 115Vac
+82%
+88%
+92%
+91%
+Power Supply
+efficiency at 230Vac
+89%
+93%
+94%
+91.50%
+Acoustics
+The PowerEdge C6420 has been tested in two typical configurations. The following tables summarizes the configuration and acoustical
+performance of the C6420. Each configuration has been tested according to Dell EMC acoustical standards for rack-mounted servers.
+Table 22. Acoustical Performance of C6420
+Configuration
+Typical
+Typical
+CPU
+Intel® Xeon® Gold 6130
+Intel® Xeon® Gold
+CPU
+125 W
+105 W
+28
+Power, thermal and acoustics
+Configuration
+Typical
+Typical
+CPU Quantity per
+2
+2
+Memory
+16GB, 2667MHz,
+8GB, 2667MHz,
+DIMM Quantity per
+12
+12
+Backplane
+2.5" x 24
+3.5" x 12
+HDD
+10K RPM SAS
+7.2K RPM SAS
+HDD Quantity per host chassis
+8
+16
+PSU
+1600 W
+1600 W
+PSU Quantity per host chassis
+2
+2
+PERC
+H330 Mini
+H330 Mini
+PCI
+Dual Port 10Gbe
+Single port EDR IB
+Table 23. Acoustical Performance: Idle/ Operating at 25 °C Ambient
+Configuration
+Typical
+Typical
+LwA-UL
+Idle
+7.2
+7.2
+Operating
+7.3
+7.2
+LpA (dBA)
+Idle
+58
+58
+Operating
+58
+58
+Not objectionable tones under conditions above
+LwA-UL (Bels)
+8.5
+8.5
+LpA
+71
+71
+Table 24. Acoustical Performance: Max. Loading at 35 °C Ambient
+Configuration
+Typical
+Typical
+LwA-UL (Bels)
+9.0
+9.0
+LpA
+75
+75
+Power, thermal and acoustics
+29
+Supported operating systems
+The following lists the supported operating systems for the PowerEdge C6420:
+•
+RedHat Enterprise Linux 6.9 Server x86_64
+•
+RedHat Enterprise Linux 7.3 Server x86_64
+•
+Novell SuSE Linux Enterprise Server 11 (with PLDP) SP4 x86_64
+•
+Novell SuSE Linux Enterprise Server 12 SP2 x86_64
+•
+Microsoft Windows Server 2016, Server 2012 R2
+•
+Ubuntu 16.04 LTS
+•
+VMware vSphere 2016 U1 (ESXi 6.5 U1), 2015 U3 (ESXi 6.0 U3)
+•
+Citrix Xen Server 7.1.x
+NOTE: The C6420 does not provide factory install options for any operating system.
+10
+30
+Supported operating systems
+Dell EMC OpenManage systems management
+Figure 13. Dell EMC OpenManage Portfolio
+Dell EMC delivers management solutions that help IT Administrators effectively deploy, update, monitor, and manage IT assets.
+OpenManage solutions and tools enable you to quickly respond to problems by helping them to manage Dell EMC servers effectively and
+efficiently; in physical, virtual, local, and remote environments, operating in-band, and out-of-band (agent-free). The OpenManage
+portfolio includes innovative embedded management tools such as the integrated Dell Remote Access Controller (iDRAC), Chassis
+Management Controller and Consoles like OpenManage Enterprise, OpenManage Power Manager plug in, and tools like Repository
+Manager.
+Dell EMC has developed comprehensive systems management solutions based on open standards and has integrated with management
+consoles that can perform advanced management of Dell hardware. Dell EMC has connected or integrated the advanced management
+capabilities of Dell hardware into offerings from the industry's top systems management vendors and frameworks such as Ansible, thus
+making Dell EMC platforms easy to deploy, update, monitor, and manage.
+The key tools for managing Dell EMC PowerEdge servers are iDRAC and the one-to-many OpenManage Enterprise console. OpenManage
+Enterprise helps the system administrators in complete lifecycle management of multiple generations of PowerEdge servers. Other tools
+such as Repository Manager, which enables simple yet comprehensive change management.
+OpenManage tools integrate with systems management framework from other vendors such as VMware, Microsoft, Ansible, and
+ServiceNow. This enables you to use the skills of the IT staff to efficiently manage Dell EMC PowerEdge servers.
+Topics:
+•
+Server and Chassis Managers
+•
+Dell EMC consoles
+•
+Automation Enablers
+•
+Integration with third-party consoles
+•
+Connections for third-party consoles
+•
+Dell EMC Update Utilities
+•
+Dell resources
+11
+Dell EMC OpenManage systems management
+31
+Server and Chassis Managers
+•
+Integrated Dell Remote Access Controller (iDRAC)
+•
+iDRAC Service Module (iSM)
+Dell EMC consoles
+•
+Dell EMC OpenManage Enterprise
+•
+Dell EMC Repository Manager (DRM)
+•
+Dell EMC OpenManage Enterprise Power Manager plugin to OpenManage Enterprise
+•
+Dell EMC OpenManage Mobile (OMM)
+Automation Enablers
+•
+OpenManage Ansible Modules
+•
+iDRAC RESTful APIs (Redfish)
+•
+Standards-based APIs (Python, PowerShell)
+•
+RACADM Command Line Interface (CLI)
+•
+GitHub Scripting Libraries
+Integration with third-party consoles
+•
+Dell EMC OpenManage Integrations with Microsoft System Center
+•
+Dell EMC OpenManage Integration for VMware vCenter (OMIVV)
+•
+Dell EMC OpenManage Ansible Modules
+•
+Dell EMC OpenManage Integration with ServiceNow
+Connections for third-party consoles
+•
+Micro Focus and other HPE tools
+•
+OpenManage Connection for IBM Tivoli
+•
+OpenManage Plug-in for Nagios Core and XI
+Dell EMC Update Utilities
+•
+Dell System Update (DSU)
+•
+Dell EMC Repository Manager (DRM)
+•
+Dell EMC Update Packages (DUP)
+•
+Dell EMC Server Update Utility (SUU)
+•
+Dell EMC Platform Specific Bootable ISO (PSBI)
+Dell resources
+For additional information about white papers, videos, blogs, forums, technical material, tools, usage examples, and other information, go
+to the OpenManage page at www.dell.com/openmanagemanuals or the following product pages:
+Table 25. Dell resources
+Resource
+Location
+Integrated Dell Remote Access Controller (iDRAC)
+www.dell.com/idracmanuals
+iDRAC Service Module (iSM)
+www.dell.com/support/article/sln310557
+OpenManage Ansible Modules
+www.dell.com/support/article/sln310720
+OpenManage Essentials (OME)
+www.dell.com/support/article/sln310714
+32
+Dell EMC OpenManage systems management
+Resource
+Location
+OpenManage Mobile (OMM)
+www.dell.com/support/article/sln310980
+OpenManage Integration for VMware vCenter (OMIVV)
+www.dell.com/support/article/sln311238
+OpenManage Integration for Microsoft System Center
+(OMIMSSC)
+www.dell.com/support/article/sln312177
+Dell EMC Repository Manager (DRM)
+www.dell.com/support/article/sln312652
+Dell EMC System Update (DSU)
+www.dell.com/support/article/sln310654
+Dell EMC Platform Specific Bootable ISO (PSBI)
+Dell.com/support/article/sln296511
+OpenManage Connections for Partner Consoles
+www.dell.com/support/article/sln312320
+OpenManage Enterprise Power Manager
+www.dellemc.com/solutions/openmanage/power-
+management.htm
+OpenManage Integration with ServiceNow (OMISNOW)
+Dell.com/support/article/sln317784
+NOTE: Features may vary by server. Please refer to the product page on www.dell.com/manuals for details.
+Dell EMC OpenManage systems management
+33
+Appendix A. Additional specifications
+Chassis dimensions
+Figure 14. Chassis dimension of the PowerEdge C6420
+Table 26. Chassis dimension of the PowerEdge C6420
+Description
+Dimension
+Depth
+790mm
+Height
+86.8mm
+Width
+448mm
+Chassis weight
+This section describes the weight of the system.
+Table 27. Chassis weight
+Configuration
+Weight description
+Weight (maximum configuration)
+•
+3.5" Direct Backplane Chassis: 43.62 Kg
+•
+2.5" Direct/Expander/NVMe Backplane Chassis: 41.46 Kg
+•
+No Backplane Chassis: 34.56 Kg
+Weight (empty)
+Chassis – 5.58 Kg / 12.31 lbs
+12
+34
+Appendix A. Additional specifications
+Video
+PowerEdge C6420 system Integrated Dell Remote Access Controller (iDRAC) incorporates an integrated video subsystem, connected to
+the south bridge via PCI Express and internal PCIe Switch and PCIe to PCI Bridge. The graphics controller is the 2D Matrox G200. The
+video frame buffer (16MB) is contained within the iDRAC RAM (256MB) device.
+PowerEdge C6420 supports the following 2D graphics video modes:
+Table 28. Video modes
+Operating system
+Driver
+Hot plug support
+Supported
+Resolutions
+Color Depth (bits)
+Frequencies (Hz)
+Windows
+Matrox Driver
+Yes
+640x480
+8, 16, 24
+60, 72
+800x600
+8, 16, 24
+60, 75, 85
+1024x768
+8, 16, 24
+60, 75, 85
+1152x864
+8, 16, 24
+60, 75, 85
+1280x1024
+8, 16, 24
+60, 75
+Windows
+Windows Native
+Driver
+No
+640x480
+8, 16, 24
+60, 72
+800x600
+8, 16, 24
+60, 75, 85
+1024x768
+8, 16, 24
+60, 75, 85
+1152x864
+8, 16, 24
+60, 75, 85
+1280x1024
+8, 16, 24
+60, 75
+Windows
+Matrox Driver
+No
+640x480
+8, 16, 24
+60, 72
+800x600
+8, 16, 24
+60, 75, 85
+1024x768
+8, 16, 24
+60, 75, 85
+1152x864
+8, 16, 24
+60, 75, 85
+1280x1024
+8, 16, 24
+60, 75
+Linux
+Linux Native
+Driver
+No
+640x480
+8, 16, 24
+60, 72
+800x600
+8, 16, 24
+60, 75, 85
+1024x768
+8, 16, 24
+60, 75, 85
+1152x864
+8, 16, 24
+60, 75, 85
+1280x1024
+8, 16, 24
+60, 75
+Avocent integrated
+vKVM
+N/A
+N/A
+640x480
+8, 16, 24
+N/A
+800x600
+8, 16, 24
+N/A
+1024x768
+8, 16, 24
+N/A
+1152x864
+8, 16, 24
+N/A
+1280x1024
+8, 16, 24
+N/A
+BIOS
+N/A
+No
+640x480
+8
+60
+UEFI Graphical
+Mode
+Matrox UEFI
+No
+640x480
+8, 16, 24
+60, 72
+800x600
+8, 16, 24
+60, 75, 85
+1024x768
+8, 16, 24
+60, 75, 85
+UEFI Text Mode
+Matrox UEFI
+No
+640x480
+8, 16, 24
+60, 72
+800x600
+8, 16, 24
+60, 75, 85
+1024x768
+8, 16, 24
+60, 75, 85
+Appendix A. Additional specifications
+35
+USB
+The PowerEdge C6420 supports the following USB 3.0 compliant devices via its two rear ports:
+•
+DVD (bootable)
+•
+USB key (bootable)
+•
+•
+Keyboard (only one USB keyboard is supported)
+•
+Mouse (only one USB mouse is supported
+Environmental specifications
+Please refer to the Environmental Specifications for detailed information.
+Acoustics
+Please refer to the Acoustics section for more information.
+Temperature specifications
+The following table shows the temperature specifications:
+Table 29. Temperature specifications
+Temperature
+Specifications
+Storage
+-40°C to 65°C (-40°F to 149°F)
+Continuous operation (for altitude less than 950 m or 3117
+ft)
+10°C to 35°C (50°F to 95°F) with no direct sunlight on the
+equipment.
+Fresh air
+For information about fresh air, see Expanded Operating
+Temperature section.
+Maximum temperature gradient (operating and storage)
+20°C/h (36°F/h)
+36
+Appendix A. Additional specifications
+Appendix B. Standards compliance
+The system conforms to the following industry standards.
+Table 30. Industry standard documents
+Standard
+URL for information and specifications
+ACPI Advance Configuration and Power Interface Specification,
+v2.0c
+https://uefi.org/specsandtesttools
+Ethernet IEEE 802.3-2005
+https://standards.ieee.org/
+HDG Hardware Design Guide Version 3.0 for Microsoft Windows
+Server
+microsoft.com/whdc/system/platform/pcdesign/desguide/
+serverdg.mspx
+IPMI Intelligent Platform Management Interface, v2.0
+intel.com/design/servers/ipmi
+DDR4 Memory DDR4 SDRAM Specification
+jedec.org/standards-documents/docs/jesd79-4.pdf
+PCI Express PCI Express Base Specification Rev. 2.0 and 3.0
+pcisig.com/specifications/pciexpress
+PMBus Power System Management Protocol Specification, v1.2
+http://pmbus.org/Assets/PDFS/Public/
+PMBus_Specification_Part_I_Rev_1-1_20070205.pdf
+SAS Serial Attached SCSI, v1.1
+http://www.t10.org/
+SATA Serial ATA Rev. 2.6; SATA II, SATA 1.0a Extensions, Rev. 1.2
+sata-io.org
+SMBIOS System Management BIOS Reference Specification, v2.7
+dmtf.org/standards/smbios
+TPM Trusted Platform Module Specification, v1.2 and v2.0
+trustedcomputinggroup.org
+UEFI Unified Extensible Firmware Interface Specification, v2.1
+uefi.org/specifications
+USB Universal Serial Bus Specification, Rev. 2.0
+usb.org/developers/docs
+13
+Appendix B. Standards compliance
+37
+Appendix C Additional resources
+Table 31. Additional resources
+Resource
+Description of contents
+Location
+Installation and Service Manual
+This manual, available in PDF format, provides the following
+information:
+•
+Chassis features
+•
+System Setup program
+•
+System messages
+•
+System codes and indicators
+•
+System BIOS
+•
+Remove and replace procedures
+•
+Troubleshooting
+•
+Diagnostics
+•
+Jumpers and connectors
+Dell.com/Support/Manuals
+Getting Started Guide
+This guide ships with the system, and is also available in PDF
+format. This guide provides the following information:
+•
+Initial setup steps
+•
+Key system features
+•
+Technical specifications
+Dell.com/Support/Manuals
+Rack Installation Instructions
+This document ships with the rack kits, and provides instructions
+for installing a server in a rack.
+Dell.com/Support/Manuals
+Information Update
+This document ships with the system, is also available in PDF
+format online, and provides information on system updates.
+Dell.com/Support/Manuals
+System Information Label
+The system information label documents the system board layout
+and system jumper settings. Text is minimized due to space
+limitations and translation considerations. The label size is
+standardized across platforms.
+Inside the system chassis cover
+Quick Resource Locator (QRL)
+This code on the chassis can be scanned by a phone application
+to access additional information and resources for the server,
+including videos, reference materials, service tag information, and
+Dell EMC contact information.
+Inside the system chassis cover
+Energy Smart Solution Advisor
+(ESSA)
+The Dell EMC online ESSA enables easier and more meaningful
+estimates to help you determine the most efficient configuration
+possible. Use ESSA to calculate the power consumption of your
+hardware, power infrastructure, and storage.
+Dell.com/calc
+14
+38
+Appendix C Additional resources
+Appendix D. Support and deployment services
+ProDeploy Enterprise Suite and Residency
+Services
+ProDeploy Enterprise Suite gets your server out of the box and into optimized production—fast. Our elite deployment engineers with
+broad and deep experience utilizing best-in-class processes along with our established global scale can help you around the clock and
+around the globe. From simple to the most complex server installations and software integration, we take the guess work and risk out of
+deploying your new server technology.
+Figure 15. ProDeploy Enterprise Suite capabilities
+NOTE: Hardware installation not applicable on selected software products.
+ProDeploy Plus
+From beginning to end, ProDeploy Plus provides the skill and scale needed to successfully execute demanding deployments in today's
+complex IT environments. Certified Dell EMC experts start with extensive environmental assessments and detailed migration planning and
+recommendations. Software installation includes set up of most versions of Dell EMC SupportAssist and OpenManage system
+management utilities. Post-deployment configuration assistance, testing, and product orientation services are also available.
+ProDeploy
+ProDeploy provides full service installation and configuration of both server hardware and system software by certified deployment
+engineers including set up of leading operating systems and hypervisors as well as most versions of Dell EMC SupportAssist and
+OpenManage system management utilities. To prepare for the deployment, we conduct a site readiness review and implementation
+planning exercise. System testing, validation, and full project documentation with knowledge transfer complete the process.
+Basic Deployment
+Basic Deployment delivers worry-free professional installation by experienced technicians who know Dell EMC servers inside and out.
+15
+Appendix D. Support and deployment services
+39
+Residency Services
+Residency Services helps customers transition to new capabilities quickly with the assistance of on-site or remote Dell EMC experts
+whose priorities and time you control. Residency experts can provide post implementation management and knowledge transfer related to
+a new technology acquisition or day-to-day operational management of the IT infrastructure.
+Deployment services
+Deployment services details and exceptions can be found in service description documents at the Enterprise Configuration and
+Deployment pageon Dell.com.
+Remote Consulting Services
+When you are in the final stages of your PowerEdge server implementation, you can rely on Dell EMC Remote Consulting Services, and
+our certified technical experts to help you optimize your configuration with best practices for your software, virtualization, server, storage,
+networking, and systems management.
+Data Migration Service
+Protect your business and data with our single point of contact to manage your data migration project. Your project manager will work
+with our experienced team of experts to create a plan using industry-leading tools and proven processes based on global best practices to
+migrate your existing files and data so your business system get up and running quickly and smoothly.
+ProSupport Enterprise Suite
+With Dell EMC ProSupport Services, we can help you keep your operation running smoothly, so you can focus on running your business.
+We will help you maintain peak performance and availability of your most essential workloads. Dell EMC ProSupport is a suite of support
+services that enable you to build the solution that is right for your organization. Choose support models based on how you use technology
+and where you want to allocate resources. From the desktop to the data center, address everyday IT challenges, such as unplanned
+downtime, mission-critical needs, data and asset protection, support planning, resource allocation, software application management and
+more. Optimize your IT resources by choosing the right support model.
+Figure 16. ProSupport Enterprise Suite
+40
+Appendix D. Support and deployment services
+ProSupport Plus
+When you purchase PowerEdge servers, we recommend ProSupport Plus, our proactive and preventative support, for business-critical
+systems. ProSupport Plus provides all the benefits of ProSupport, plus the following:
+•
+An assigned Technology Service Manager who knows your business and your environment
+•
+Access to senior ProSupport engineers for faster issue resolution
+•
+Personalized, preventive recommendations based on analysis of support trends and best practices from across the Dell EMC customer
+base to reduce support issues and improve performance
+•
+Predictive analysis for issue prevention and optimization enabled by SupportAssist
+•
+Proactive monitoring, issue detection, notification and automated case creation for accelerated issue resolution enabled by
+SupportAssist
+•
+On-demand reporting and analytics-based recommendations enabled by SupportAssist and TechDirect
+ProSupport
+Our ProSupport service offers highly trained experts around the clock and around the globe to address your IT needs. We will help you
+minimize disruptions and maximize availability of your PowerEdge server workloads with:
+•
+24x7x365 access to certified hardware and software experts
+•
+Collaborative 3rd party support
+•
+Hypervisor and OS support
+•
+Consistent level of support available for Dell EMC hardware, software and solutions
+•
+Onsite parts and labor response options including next business day or four-hour mission critical
+ProSupport One for Data Center
+ProSupport One for Data Center offers flexible site-wide support for large and distributed data centers with more than 1,000 assets. This
+offering is built on standard ProSupport components that leverage our global scale but are tailored to your company's needs. While not for
+everyone, it offers a truly unique solution for Dell EMC's largest customers with the most complex environments.
+•
+Team of assigned Technology Services Managers with remote, on-site options
+•
+Assigned ProSupport One technical and field engineers who are trained on your environment and configurations
+•
+On-demand reporting and analytics-based recommendations enabled by SupportAssist and TechDirect
+•
+Flexible on-site support and parts options that fit your operational model
+•
+A tailored support plan and training for your operations staff
+Figure 17. ProSupport One for Data Center model
+Appendix D. Support and deployment services
+41
+ProSupport One for Data Center
+ProSupport One for Data Center offers flexible site-wide support for large and distributed data centers with more than 1,000 assets. This
+offering is built on standard ProSupport components that leverage our global scale but are tailored to your company's needs. While not for
+everyone, it offers a truly unique solution for Dell EMC's largest customers with the most complex environments.
+•
+Team of assigned Technology Services Managers with remote, on-site options
+•
+Assigned ProSupport One technical and field engineers who are trained on your environment and configurations
+•
+On-demand reporting and analytics-based recommendations enabled by SupportAssist and TechDirect
+•
+Flexible on-site support and parts options that fit your operational model
+•
+A tailored support plan and training for your operations staff
+Figure 18. Enterprise Support feature comparison
+Support Technologies
+Powering your support experience with predictive, data-driven technologies.
+SupportAssist
+The best time to solve a problem is before it happens. The automated proactive and predictive technology SupportAssist* helps reduce
+steps and time to resolution, often detecting issues before they become a crisis. Benefits include:
+•
+Value - SupportAssist is available to all customers at no additional charge.
+•
+Improve productivity - replace manual, high-effort routines with automated support.
+•
+Accelerate time to resolution - receive issue alerts, automatic case creation and proactive contact from Dell EMC experts.
+•
+Gain insight and control - optimize enterprise devices with on-demand ProSupport Plus reporting in TechDirect and get predictive
+issue detection before the problem starts.
+SupportAssist is included with all support plans but features vary based on service level agreement.
+Figure 19. SupportAssist model
+Get started at Dell.com/SupportAssist
+42
+Appendix D. Support and deployment services
+TechDirect
+Boost your IT teams productivity when supporting Dell EMC systems. With over 1.4 million self-dispatches processed each year,
+TechDirect has proven its effectiveness as a support tool. You can:
+•
+Self-dispatch replacement parts
+•
+Request technical support
+•
+Integrate APIs into your help desk
+Or, access all your Dell EMC certification and authorization needs. Train your staff on Dell EMC products as TechDirect allows you to:
+•
+Download study guides
+•
+Schedule certification and authorization exams
+•
+View transcripts of completed courses and exams
+Register at techdirect.dell.com
+Additional professional services
+Dell Education Services
+Dell Education Services offers the PowerEdge server training courses designed to help you achieve more with your hardware investment.
+The curriculum is designed in conjunction with the server development team, as well as Dell EMC’s technical support team, to ensure that
+the training delivers the information and practical, hands-on skills you and your team need to confidently manage and maintain your Dell
+EMC server solution. To learn more or register for a class today, visit LearnDell.com/Server.
+Dell EMC Global Infrastructure Consulting
+Services
+Dell EMC Global Infrastructure Consulting Services use skilled solution architects, innovative tools, automated analysis and Dell EMC’s
+intellectual property to give rapid insight into the root causes of unnecessary complexity. We seek better answers than traditional service
+models, and our strategy is to help quickly identify high-impact, short-duration projects that deliver return on investment (ROI) and free
+up resources. The results are practical, action-oriented plans with specific, predictable, measurable outcomes. From data center
+optimization to server virtualization to systems management, our consulting services can help build a more efficient enterprise.
+Dell EMC Managed Services
+Dell EMC Managed Services are a modular set of lifecycle services designed to help you automate and centrally configure, deploy, and
+manage your day-to-day data center operations. These services extend your existing on-premise IT infrastructure with off-premise cloud
+services designed to better address challenges with mobility, highly distributed organizations, security, compliance, business continuity,
+and disaster preparedness.
+Appendix D. Support and deployment services
+43

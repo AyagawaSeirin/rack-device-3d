@@ -1,0 +1,511 @@
+[
+  {
+    "file": "references/imagegen/01-front-normal-carriers-v3.png",
+    "selected": false,
+    "pixels": [
+      1947,
+      808
+    ],
+    "sha256": "abb187b702a6f2a18c769e86128aa4087cacde2a25e2209617cc4ec16d74d093",
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "prompt": "references/prompts/01-front-normal-carriers-v3.txt",
+    "review": "退回：分别出现22个盘架/4个拉手开窗/4开窗及错误按钮符号，未作为模型依据。"
+  },
+  {
+    "file": "references/imagegen/01-front-v2.png",
+    "sha256": "1a4531b0d6b9797611738f0b5da6a5a7c787f7bb1d85e2c0afa86c67527b12ad",
+    "pixels": [
+      1898,
+      829
+    ],
+    "selected": false,
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "origin": "built-in imagegen v002",
+    "prompt": "references/prompts/01-front-v2.txt",
+    "review": "用户纠正后废止塑料填充件方案；不用于最终正常盘架模型。"
+  },
+  {
+    "file": "references/imagegen/01-front-v3-normal-reused.png",
+    "selected": true,
+    "pixels": [
+      1798,
+      875
+    ],
+    "sha256": "865e7b8305a99b4fa30e6fdb63745a0f5ba65d726b4a114e0a6d9011cb6db9c4",
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "prompt": "references/prompts/01-front-v3-normal-reused.txt",
+    "review": "用户明确要求正常盘架后重新采用已生成的24SFF正常托架参考；不采用已退回模型几何。盘数/形态对照官方与Bargain实拍，微小文字仍用真实资产。"
+  },
+  {
+    "file": "references/imagegen/02-rear-v1.png",
+    "sha256": "127136bf2e890d46a98c3b48d3b479552008fba1e1965a91a559b378f19c17e8",
+    "pixels": [
+      1536,
+      1024
+    ],
+    "selected": true,
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "origin": "retained v001 imagegen",
+    "prompt": "references/prompts/02-rear-v1.txt",
+    "review": "Four nodes,2stackedcentralPSUs, inletleft/fanright rear-observer; no mirrored nodes."
+  },
+  {
+    "file": "references/imagegen/03-left-v1.png",
+    "sha256": "b4e34e978bc2eada594b615b4225e9781a6041c07566127362302bb270c4dd66",
+    "pixels": [
+      2033,
+      774
+    ],
+    "selected": true,
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "origin": "retained v001 imagegen",
+    "prompt": "references/prompts/03-left-v1.txt",
+    "review": "Left side extrapolation; macro hardware locations from evidence/estimates, not AI."
+  },
+  {
+    "file": "references/imagegen/04-right-v2.png",
+    "sha256": "4ff2da6fb585e8df44dc1a5eb984f4e9c95574085f85a341f002112ddb5e2ad1",
+    "pixels": [
+      2025,
+      776
+    ],
+    "selected": true,
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "origin": "retained v001 imagegen",
+    "prompt": "references/prompts/04-right-v2.txt",
+    "review": "Right side directioncorrect; details not measured from AI."
+  },
+  {
+    "file": "references/imagegen/05-top-reused-v001-v2.png",
+    "sha256": "5b5028832ed68ce7b967deb08c9a957c57afa8053a82701e4e4e4deb392c10ad",
+    "pixels": [
+      959,
+      1640
+    ],
+    "selected": true,
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "origin": "retained v001 imagegen",
+    "prompt": "references/prompts/05-top-reused-v001-v2.txt",
+    "review": "Reused true overhead portrait v001 reference. Top orthogonal direction suitable; sticker words and small stamp geometry are AI approximations and excluded from model. Actual stickers use original NSL photo UV."
+  },
+  {
+    "file": "references/imagegen/05-top-v2.png",
+    "sha256": "6ea8128b2d2267fbf11d958af86fd5ba685c7e0231ba2905876938fd6750f616",
+    "pixels": [
+      1022,
+      1539
+    ],
+    "selected": false,
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "origin": "retained v001 imagegen",
+    "prompt": "references/prompts/05-top-v2.txt",
+    "review": "FAIL front unfolded into top."
+  },
+  {
+    "file": "references/imagegen/05-top-v3.png",
+    "sha256": "5e0e2e4e38f2ea8863ccdaf8605fc3a110ff4df51984a56a5c128daa25163241",
+    "pixels": [
+      1635,
+      962
+    ],
+    "selected": false,
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "origin": "built-in imagegen v002",
+    "prompt": "references/prompts/05-top-v3.txt",
+    "review": "FAIL overall top aspectratio; preserved as rejected stamp discussion only."
+  },
+  {
+    "file": "references/imagegen/06-bottom-inferred-v1.png",
+    "sha256": "a53173f8be4a5d00c9b67bc71a77dccc3c76f47fefc2897b6bfdb82f1d780464",
+    "pixels": [
+      961,
+      1637
+    ],
+    "selected": true,
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "origin": "retained v001 imagegen",
+    "prompt": "references/prompts/06-bottom-inferred-v1.txt",
+    "review": "Explicit AI inferred underside, no real bottom photos."
+  },
+  {
+    "file": "references/imagegen/07-front-left-v1-normal-reused.png",
+    "selected": true,
+    "pixels": [
+      1774,
+      887
+    ],
+    "sha256": "71891ef57b37f158188b2f65d3483824374c48ea137436225041e804bf8fb4dd",
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "prompt": "references/prompts/07-front-left-v1-normal-reused.txt",
+    "review": "用户明确要求正常盘架后重新采用已生成的24SFF正常托架参考；不采用已退回模型几何。盘数/形态对照官方与Bargain实拍，微小文字仍用真实资产。"
+  },
+  {
+    "file": "references/imagegen/07-front-left-v2.png",
+    "sha256": "29ea0649d0c2540addb96b07b811855f16efb426cdb965713b909e6b9eacc91d",
+    "pixels": [
+      1695,
+      928
+    ],
+    "selected": false,
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "origin": "built-in imagegen v002",
+    "prompt": "references/prompts/07-front-left-v2.txt",
+    "review": "用户纠正后废止塑料填充件方案；不用于最终正常盘架模型。"
+  },
+  {
+    "file": "references/imagegen/08-front-right-v1-normal-reused.png",
+    "selected": true,
+    "pixels": [
+      1760,
+      894
+    ],
+    "sha256": "84f21a8120bb095644fa33786046f13e57dcda2b2d91851407a931129f054982",
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "prompt": "references/prompts/08-front-right-v1-normal-reused.txt",
+    "review": "用户明确要求正常盘架后重新采用已生成的24SFF正常托架参考；不采用已退回模型几何。盘数/形态对照官方与Bargain实拍，微小文字仍用真实资产。"
+  },
+  {
+    "file": "references/imagegen/08-front-right-v2.png",
+    "sha256": "2798a488a8d91785351466469027f3b15729e3248424a1cff8ea131d29834d23",
+    "pixels": [
+      1817,
+      866
+    ],
+    "selected": false,
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "origin": "built-in imagegen v002",
+    "prompt": "references/prompts/08-front-right-v2.txt",
+    "review": "用户纠正后废止塑料填充件方案；不用于最终正常盘架模型。"
+  },
+  {
+    "file": "references/imagegen/09-rear-left-v1.png",
+    "sha256": "12f4a95614fac6921513a14eaa1af2657e3d165e9f898682b1a0c7e723ce7bdf",
+    "pixels": [
+      1672,
+      941
+    ],
+    "selected": true,
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "origin": "retained v001 imagegen",
+    "prompt": "references/prompts/09-rear-left-v1.txt",
+    "review": "Rearleft;4nodes2PSUs; original photos remain authoritative."
+  },
+  {
+    "file": "references/imagegen/10-rear-right-v1.png",
+    "sha256": "3055bb8f874030e9ed072c5c914f0c36f9aabb876fd2c05912df98cf98a65570",
+    "pixels": [
+      1804,
+      872
+    ],
+    "selected": true,
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "origin": "retained v001 imagegen",
+    "prompt": "references/prompts/10-rear-right-v1.txt",
+    "review": "Rearright;same rear handedness; side estimate."
+  },
+  {
+    "file": "references/imagegen/11-high-oblique-v2-normal-reused.png",
+    "selected": true,
+    "pixels": [
+      1536,
+      1024
+    ],
+    "sha256": "91a586781405bd3e37c061e105a56d301868048ba9ad7fac1bf16d9275958f64",
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "prompt": "references/prompts/11-high-oblique-v2-normal-reused.txt",
+    "review": "用户明确要求正常盘架后重新采用已生成的24SFF正常托架参考；不采用已退回模型几何。盘数/形态对照官方与Bargain实拍，微小文字仍用真实资产。"
+  },
+  {
+    "file": "references/imagegen/11-high-oblique-v2.png",
+    "sha256": "99daeb2e5837a6f7a246d1d511e0039333bc4f0b36480bb90c55dc4cd02f65f0",
+    "pixels": [
+      1823,
+      863
+    ],
+    "selected": false,
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "origin": "built-in imagegen v002",
+    "prompt": "references/prompts/11-high-oblique-v2.txt",
+    "review": "用户纠正后废止塑料填充件方案；不用于最终正常盘架模型。"
+  },
+  {
+    "file": "references/imagegen/12-low-rear-inferred-v3.png",
+    "sha256": "cb97c3d2a087cc32afa2fdb2b5dbd4db2356b4222dda7386264219a772aface0",
+    "pixels": [
+      1558,
+      1010
+    ],
+    "selected": true,
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "origin": "retained v001 imagegen",
+    "prompt": "references/prompts/12-low-rear-inferred-v3.txt",
+    "review": "Low rearLEFT, despite original requested opposite. Correct view named inmanifest. Bottominferred."
+  },
+  {
+    "file": "references/imagegen/13-structural-sketch-v2.png",
+    "sha256": "4a01ad055fe171fc2464ab1c373e57c3fdd6a94203b64ce4a13402a2388e88bf",
+    "pixels": [
+      1536,
+      1024
+    ],
+    "selected": false,
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "origin": "built-in imagegen v002",
+    "prompt": "references/prompts/13-structural-sketch-v2.txt",
+    "review": "FAIL geometry/projection and bay count uncertain."
+  },
+  {
+    "file": "references/imagegen/13-structural-sketch-v3.png",
+    "sha256": "ca181a9c7b453dbc1b7f9637e3b1ff5c95789ba49657a2a181cf0d27cdf56bd8",
+    "pixels": [
+      1329,
+      1183
+    ],
+    "selected": false,
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "origin": "built-in imagegen v002",
+    "prompt": "references/prompts/13-structural-sketch-v3.txt",
+    "review": "FAIL28bays vs24."
+  },
+  {
+    "file": "references/imagegen/13-structural-sketch-v4.png",
+    "sha256": "367163890998e16a8bbcd5c71af56d8256edbd558221233306e17f5487ea0a43",
+    "pixels": [
+      1536,
+      1024
+    ],
+    "selected": true,
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "origin": "built-in imagegen v002",
+    "prompt": "references/prompts/13-structural-sketch-v4.txt",
+    "review": "Corrected schematic4banks x6bays, letteringcorrect; deliberately simple allocation sketch, no exact geometry implied."
+  },
+  {
+    "file": "references/imagegen/14-assembly-sketch-v2-normal-reused.png",
+    "selected": true,
+    "pixels": [
+      1536,
+      1024
+    ],
+    "sha256": "212f367947f94c5ca98bbdc1a73086f5ce075fb893e7ebea353611840bbe39ae",
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "prompt": "references/prompts/14-assembly-sketch-v2-normal-reused.txt",
+    "review": "用户明确要求正常盘架后重新采用已生成的24SFF正常托架参考；不采用已退回模型几何。盘数/形态对照官方与Bargain实拍，微小文字仍用真实资产。"
+  },
+  {
+    "file": "references/imagegen/14-assembly-sketch-v2.png",
+    "sha256": "7bed0823792628979721b3ee1729ae2f4836843eb40dacdb82c239d60d515ff4",
+    "pixels": [
+      1536,
+      1024
+    ],
+    "selected": false,
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "origin": "built-in imagegen v002",
+    "prompt": "references/prompts/14-assembly-sketch-v2.txt",
+    "review": "FAIL rearIO facesfront."
+  },
+  {
+    "file": "references/imagegen/14-assembly-sketch-v3.png",
+    "sha256": "161bb403aaac233bd91d95568c54c8206b1442f4c6e0b94daf81fe1945e78573",
+    "pixels": [
+      1536,
+      1024
+    ],
+    "selected": false,
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "origin": "built-in imagegen v002",
+    "prompt": "references/prompts/14-assembly-sketch-v3.txt",
+    "review": "FAIL PSUghosts misplaced ahead ofnodes."
+  },
+  {
+    "file": "references/imagegen/14-assembly-sketch-v4.png",
+    "sha256": "2d53a6483913c5ac8d284dd72375254210eddd9b048c08a312757341a406bde8",
+    "pixels": [
+      1536,
+      1024
+    ],
+    "selected": false,
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "origin": "built-in imagegen v002",
+    "prompt": "references/prompts/14-assembly-sketch-v4.txt",
+    "review": "用户纠正后废止塑料填充件方案；不用于最终正常盘架模型。"
+  },
+  {
+    "file": "references/imagegen/15-sections-sketch-v1-normal-reused.png",
+    "selected": true,
+    "pixels": [
+      1536,
+      1024
+    ],
+    "sha256": "ee392517268ffdb668a403ce294743ecd47db2b22a5dcce4336a7e6619d275e7",
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "prompt": "references/prompts/15-sections-sketch-v1-normal-reused.txt",
+    "review": "用户明确要求正常盘架后重新采用已生成的24SFF正常托架参考；不采用已退回模型几何。盘数/形态对照官方与Bargain实拍，微小文字仍用真实资产。"
+  },
+  {
+    "file": "references/imagegen/15-sections-sketch-v2.png",
+    "sha256": "70b052fbe9da9f380e3eef931e4d70f979e317c8b099f509c5941b215f566b1e",
+    "pixels": [
+      1024,
+      1536
+    ],
+    "selected": false,
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "origin": "built-in imagegen v002",
+    "prompt": "references/prompts/15-sections-sketch-v2.txt",
+    "review": "用户纠正后废止塑料填充件方案；不用于最终正常盘架模型。"
+  },
+  {
+    "file": "references/imagegen/16-brand-detail-v2.png",
+    "sha256": "daaa5fee93675890e519bc21c9c51b85fd67a64b44d5330cb745ecb38da63d6d",
+    "pixels": [
+      941,
+      1672
+    ],
+    "selected": true,
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "origin": "built-in imagegen v002",
+    "prompt": "references/prompts/16-brand-detail-v2.txt",
+    "review": "DELL EMC/C6400 and1/2/3/4 directioncorrect, poweroff. ONLY brand/control arrangement adopted; illustrated mountingflange not used. Brand textures areofficial realasset."
+  },
+  {
+    "file": "references/imagegen/17-carrier-detail-v1-normal-reused.png",
+    "selected": true,
+    "pixels": [
+      1024,
+      1536
+    ],
+    "sha256": "b566638cd26376e5c1e2f3da767cb62948a53c5f525007d35aeb4c21fb7c9d3d",
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "prompt": "references/prompts/17-carrier-detail-v1-normal-reused.txt",
+    "review": "用户明确要求正常盘架后重新采用已生成的24SFF正常托架参考；不采用已退回模型几何。盘数/形态对照官方与Bargain实拍，微小文字仍用真实资产。"
+  },
+  {
+    "file": "references/imagegen/17-filler-detail-v2.png",
+    "sha256": "45c2dab3cf0cb711e9423326a2ace13d6494382748a5620faca6788d3766b993",
+    "pixels": [
+      1536,
+      1024
+    ],
+    "selected": false,
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "origin": "built-in imagegen v002",
+    "prompt": "references/prompts/17-filler-detail-v2.txt",
+    "review": "用户纠正后废止塑料填充件方案；不用于最终正常盘架模型。"
+  },
+  {
+    "file": "references/imagegen/17-filler-detail-v3.png",
+    "sha256": "0edaacf662066b587e117f0316ada14aade9ec1c02e791e048c6c189c940d3af",
+    "pixels": [
+      1024,
+      1536
+    ],
+    "selected": false,
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "origin": "built-in imagegen v002",
+    "prompt": "references/prompts/17-filler-detail-v3.txt",
+    "review": "用户纠正后废止塑料填充件方案；不用于最终正常盘架模型。"
+  },
+  {
+    "file": "references/imagegen/17-normal-carrier-detail-v3.png",
+    "selected": false,
+    "pixels": [
+      860,
+      1828
+    ],
+    "sha256": "19a4b475f2ac0ea4e601ab5ee6706fe2ad7d0cc5f3f69bf90830fdeb6aed17ea",
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "prompt": "references/prompts/17-normal-carrier-detail-v3.txt",
+    "review": "退回：分别出现22个盘架/4个拉手开窗/4开窗及错误按钮符号，未作为模型依据。"
+  },
+  {
+    "file": "references/imagegen/18-control-area-detail-v2.png",
+    "sha256": "3d1ff684ce578a3319e4a0ea23ee21ab5694b7827920ef8ef0b03a11f47a242d",
+    "pixels": [
+      1536,
+      1024
+    ],
+    "selected": false,
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "origin": "built-in imagegen v002",
+    "prompt": "references/prompts/18-control-area-detail-v2.txt",
+    "review": "Left controlandadjacentblackfillers;photoreal grain reference. NoAIprintedglyphtexture."
+  },
+  {
+    "file": "references/imagegen/18-control-normal-carrier-detail-v3.png",
+    "selected": false,
+    "pixels": [
+      1710,
+      919
+    ],
+    "sha256": "fe6cff705ef1f362985ff0c2f01440d405ff288329b5319fc6f0566e08c16794",
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "prompt": "references/prompts/18-control-normal-carrier-detail-v3.txt",
+    "review": "退回：分别出现22个盘架/4个拉手开窗/4开窗及错误按钮符号，未作为模型依据。"
+  },
+  {
+    "file": "references/imagegen/18-left-control-only-v4.png",
+    "selected": true,
+    "pixels": [
+      941,
+      1672
+    ],
+    "sha256": "23c142d86107d970b5e8cde0067d90fb563a131dc2bcea8c3495a51ca78b0e1d",
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "prompt": "references/prompts/18-left-control-only-v4.txt",
+    "review": "单独左控制区：DELL EMC/1/2及4按钮方向正确；照片/官方原图决定最终字形。"
+  },
+  {
+    "file": "references/imagegen/19-rear-ports-detail-v1.png",
+    "sha256": "13d4a6b2f50cfba62c6e94916e8839707af806d68a363e83f858070b8c571323",
+    "pixels": [
+      1873,
+      840
+    ],
+    "selected": true,
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "origin": "retained v001 imagegen",
+    "prompt": "references/prompts/19-rear-ports-detail-v1.txt",
+    "review": "Same nodeport handedness; text and exactapertures readfromreal1800pxrear, not AI."
+  },
+  {
+    "file": "references/imagegen/20-node-latch-detail-v2.png",
+    "sha256": "4f34154bfdcb2f5945205923a3a351bbb02faed6400a13cc64f1726409bc0f24",
+    "pixels": [
+      1536,
+      1024
+    ],
+    "selected": true,
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "origin": "built-in imagegen v002",
+    "prompt": "references/prompts/20-node-latch-detail-v2.txt",
+    "review": "Plainbluepaddle/blacklonggrip selected. Neighborpowerlens looks screwlike; EXCLUDED from adoption, actual circularpowerlens used fromphoto. Microprint excluded."
+  },
+  {
+    "file": "references/imagegen/21-psu-detail-v1.png",
+    "sha256": "ce5889b87aee6d2e314a10a7887114e5c3f9a8ae2a9c6e0bd583a6e8cdb827f9",
+    "pixels": [
+      1536,
+      1024
+    ],
+    "selected": true,
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "origin": "retained v001 imagegen",
+    "prompt": "references/prompts/21-psu-detail-v1.txt",
+    "review": "Correct2400W fan/inlet side and wovenstrap. Label texture comesfromactualphoto."
+  },
+  {
+    "file": "references/imagegen/22-vent-detail-v2.png",
+    "sha256": "624ecec7bda4a5c863b091f034da65281b36289acbdebfd7607f676c81e9193d",
+    "pixels": [
+      1536,
+      1024
+    ],
+    "selected": true,
+    "role": "AI辅助建模参考；不是实拍、尺寸依据或纹理源",
+    "origin": "built-in imagegen v002",
+    "prompt": "references/prompts/22-vent-detail-v2.txt",
+    "review": "Roundedpunches,foldthickness andcutedge only. Generator simplifiedloweraperturelayout; notusedasnodeportlayout. Exactrearplate tracesrealphoto."
+  }
+]
